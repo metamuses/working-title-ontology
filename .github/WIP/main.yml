@@ -1,0 +1,48 @@
+name: main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install rapper
+        run: sudo apt-get update && sudo apt-get install -y raptor2-utils
+      - name: Validate ontology TTL
+        run: rapper -i turtle ontology/ontology.ttl -c
+      - name: Validate data TTL
+        run: rapper -i turtle ontology/data.ttl -c
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.repository == 'metamuses/final-name'
+    steps:
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+      - name: Update remote deploy directory
+        run: |
+          ssh -p${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            'cd "${{ secrets.SSH_WORKING_DIR }}" && \
+            git fetch --tags --prune && \
+            git reset --hard @{upstream} && \
+            git clean -d --force' && \
+            source .venv/bin/activate && \
+            pip install -r requirements.txt && \
+            mkdocs build --strict
+      - name: Generate versioned ontology files
+        run: |
+          ssh -p${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
+            'cd "${{ secrets.SSH_WORKING_DIR }}" && \
+            for tag in $(git tag --sort=version:refname); do
+              mkdir -p "ontology/$tag"
+              git show "$tag:ontology/ontology.ttl" > "ontology/$tag/ontology.ttl"
+              git show "$tag:ontology/data.ttl" > "ontology/$tag/data.ttl"
+            done'
