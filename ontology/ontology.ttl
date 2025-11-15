@@ -1,0 +1,70 @@
+@prefix exmpl: <https://example.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.metamuses.org/ontology> a owl:Ontology ;
+  dcterms:title "Example ontology"@en ;
+  dcterms:description "An ontology example to understand how ontology are done."@en ;
+  dcterms:creator "Tommaso Barbato",
+    "Nicol D'Amelio" ,
+    "Martina Uccheddu" ,
+    "Maryam Dadras" ;
+  owl:versionInfo "1.0" ;
+  owl:versionIRI <https://example.metamuses.org/v1.0/ontology.ttl> ;
+  dcterms:issued "2025-12-31"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "A longer comment about the ontology and its purposes, components and else."@en ;
+  rdfs:seeAlso <https://example.metamuses.org>,
+    <https://github.com/metamuses/example> .
+
+# ===== ANNOTATION PROPERTIES ============
+exmpl:inspiredBy a owl:AnnotationProperty ;
+  rdfs:label "inspired by"@en ;
+  rdfs:comment "Indicates the source of inspiration for a creative work, such as a person, story, or event."@en ;
+  rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
+  dcterms:creator "Martina Uccheddu" ;
+  dcterms:date "2025-12-31"^^xsd:date .
+
+# ===== CLASSES ==========================
+exmpl:Story a owl:Class ;
+  rdfs:label "Story"@en ;
+  rdfs:comment "A fictional or narrative work created by Gianni Rodari or inspired by his style."@en ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
+  dcterms:creator "Martina Uccheddu" ;
+  dcterms:date "2025-12-31"^^xsd:date ;
+  dcterms:source <https://en.wikipedia.org/wiki/Gianni_Rodari> .
+
+# ===== OBJECT PROPERTIES ================
+exmpl:hasCharacter a owl:ObjectProperty ;
+  rdfs:label "has character"@en ;
+  rdfs:comment "Relates a story to one of its fictional characters."@en ;
+  owl:inverseOf exmpl:isCharacterOf ;
+  rdfs:domain exmpl:Story ;
+  rdfs:range exmpl:Character ;
+  rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
+  dcterms:creator "Nicol D'Amelio" ;
+  dcterms:date "2025-12-31"^^xsd:date .
+
+exmpl:isCharacterOf a owl:ObjectProperty ;
+  rdfs:label "is character of"@en ;
+  rdfs:comment "Indicates the story to which a character belongs."@en ;
+  owl:inverseOf exmpl:hasCharacter ;
+  rdfs:domain exmpl:Character ;
+  rdfs:range exmpl:Story ;
+  rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
+  dcterms:creator "Maryam Dadras" ;
+  dcterms:date "2025-12-31"^^xsd:date .
+
+# ===== DATA PROPERTIES ==================
+exmpl:storyTitle a owl:DatatypeProperty ;
+  rdfs:label "story title"@en ;
+  rdfs:comment "The official title of a story as published or recognized in literary works."@en ;
+  rdfs:domain exmpl:Story ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <https://example.metamuses.org/ontology> ;
+  dcterms:creator "Tommaso Barbato" ;
+  dcterms:date "2025-12-31"^^xsd:date .
