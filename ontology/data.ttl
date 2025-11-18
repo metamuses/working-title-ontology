@@ -1,0 +1,30 @@
+@base <https://example.metamuses.org/data/> .
+@prefix exmpl: <https://example.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.metamuses.org/data/> a void:Dataset ;
+  dcterms:title "The dataset of the example ontology"@en ;
+  dcterms:description "A dataset containing instantiations of classes and properties."@en ;
+  dcterms:creator "Tommaso Barbato",
+    "Nicol D'Amelio" ,
+    "Martina Uccheddu" ,
+    "Maryam Dadras" ;
+  void:vocabulary <https://example.metamuses.org/ontology> ;
+  void:dataDump <https://example.metamuses.org/v1.0/data.ttl> ;
+  dcterms:issued "2025-12-31"^^xsd:date ;
+  dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "A longer comment about the dataset and its purposes, components and else."@en ;
+  rdfs:seeAlso <https://example.metamuses.org>,
+    <https://github.com/metamuses/example> .
+
+<item/exampleItem> a exmpl:Item ;
+  rdfs:label "An example item."@en ;
+  rdfs:comment "A longer comment about the item and its purposes, components and else."@en ;
+  exmpl:createdBy <org/examplePerson> .
+
+<org/examplePerson> a exmpl:Person ;
+  rdfs:label "An example person."@en ;
+  rdfs:comment "A longer comment about the person and its purposes, components and else."@en .
