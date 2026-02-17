@@ -9,8 +9,8 @@
   dcterms:description "An ontology example to understand how ontology are done."@en ;
   dcterms:creator "Tommaso Barbato",
     "Nicol D'Amelio" ,
-    "Martina Uccheddu" ,
-    "Maryam Dadras" ;
+    "Maryam Dadras" ,
+    "Martina Uccheddu" ;
   owl:versionInfo "1.0" ;
   owl:versionIRI <https://example.metamuses.org/v1.0/ontology.ttl> ;
   dcterms:issued "2025-12-31"^^xsd:date ;
