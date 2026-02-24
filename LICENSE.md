@@ -3,11 +3,15 @@
 This project uses two different licenses to cover the software code and the
 structured data (ontology and knowledge graph) separately.
 
+**Code** (including scripts, configuration files, and software components) is
+licensed under the [MIT License](#mit-license).
+
+**Structured data** (including datasets, schemas, and data files) is licensed
+under the [Creative Commons Attribution 4.0 International License](#cc-by-40).
+
 ---
 
-## 1. Software License: MIT
-
-**The following license applies to all source code and executable scripts.**
+## MIT License
 
 Copyright (c) 2026 Tommaso Barbato, Nicol D'Amelio, Maryam Dadras, Martina Uccheddu
 
@@ -31,20 +35,30 @@ SOFTWARE.
 
 ---
 
-## 2. Data License: Open Data Commons Attribution License (ODC-By)
+## CC-BY-4.0
 
-**The following license applies to all datasets, databases, and ontology files.**
+Creative Commons Attribution 4.0 International
 
-This data is made available under the 
-**Open Data Commons Attribution License (ODC-By) v1.0**. 
+Copyright (c) 2026 Tommaso Barbato, Nicol D'Amelio, Maryam Dadras, Martina Uccheddu
 
-### Attribution Instructions:
-You are free to share, create, and adapt the data as long as you provide
-attribution. When using the data or ontology from this repository, please
-include the following notice:
+This work is licensed under the Creative Commons Attribution 4.0 International
+License. To view a copy of this license, visit
+<https://creativecommons.org/licenses/by/4.0/> or send a letter to Creative
+Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-> "Contains information from working-title-ontology made available under the Open Data
-> Commons Attribution License (ODC-By) v1.0."
+You are free to:
 
-The full legal text of the ODC-By license can be found at:
-[https://opendatacommons.org/licenses/by/1-0/](https://opendatacommons.org/licenses/by/1-0/)
+- **Share** — copy and redistribute the material in any medium or format for
+  any purpose, including commercially.
+- **Adapt** — remix, transform, and build upon the material for any purpose,
+  including commercially.
+
+Under the following terms:
+
+- **Attribution** — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+No additional restrictions — You may not apply legal terms or technological
+measures that legally restrict others from doing anything the license permits.
