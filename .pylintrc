@@ -1,0 +1,15 @@
+[MASTER]
+ignore=.venv,venv,build,dist
+
+[MESSAGES CONTROL]
+disable=
+    C0103, # variable name style
+    C0114, # missing-module-docstring
+    C0115, # missing-class-docstring
+    C0116  # missing-function-docstring
+
+[FORMAT]
+max-line-length=120
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,id

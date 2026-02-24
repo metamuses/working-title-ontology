@@ -1,12 +1,12 @@
 # License
 
 This project uses two different licenses to cover the software code and the
-structured data (ontology and knowledge graph) separately.
+structured data separately.
 
 **Code** (including scripts, configuration files, and software components) is
 licensed under the [MIT License](#mit-license).
 
-**Structured data** (including datasets, schemas, and data files) is licensed
+**Structured data** (including ontologies, schemas, and datasets) is licensed
 under the [Creative Commons Attribution 4.0 International License](#cc-by-40).
 
 ---
