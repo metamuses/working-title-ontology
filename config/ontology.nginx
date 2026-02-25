@@ -1,5 +1,6 @@
 server {
     listen 443 ssl http2;
+    listen [::]:443 ssl http2;
 
     server_name example.metamuses.org;
 
@@ -40,7 +41,7 @@ server {
        return 404;
     }
 
-    # serve versioned ontology files with local hosting
+    # serve versioned ontology file with local hosting
     location ~ ^/([0-9]+\.[0-9]+)/ontology\.ttl$ {
         add_header Access-Control-Allow-Origin *;
         add_header Cache-Control "public, max-age=7776000";
@@ -58,36 +59,36 @@ server {
         try_files /ontology/ontology.ttl =404;
     }
 
-    # ===== DATA =============================
-    # redirect /data to /data/
-    location = /data {
-      return 301 /data/;
+    # ===== GRAPH ============================
+    # redirect /graph to /graph/
+    location = /graph {
+      return 301 /graph/;
     }
 
-    # redirect all /data/* to /data/ with 303 See Other
-    location ^~ /data/ {
+    # redirect all /graph/* to /graph/ with 303 See Other
+    location ^~ /graph/ {
         add_header Access-Control-Allow-Origin *;
         default_type text/turtle;
 
-        return 303 /data/;
+        return 303 /graph/;
     }
 
-    # serve versioned data files with local hosting
-    location ~ ^/([0-9]+\.[0-9]+)/data\.ttl$ {
+    # serve versioned graph file with local hosting
+    location ~ ^/([0-9]+\.[0-9]+)/graph\.ttl$ {
         add_header Access-Control-Allow-Origin *;
         add_header Cache-Control "public, max-age=7776000";
         default_type text/turtle;
 
-        rewrite ^/([0-9]+\.[0-9]+)/data\.ttl$ /ontology/v$1/data.ttl break;
+        rewrite ^/([0-9]+\.[0-9]+)/graph\.ttl$ /ontology/v$1/graph.ttl break;
     }
 
-    # serve main data endpoint
-    location = /data/ {
+    # serve main graph endpoint
+    location = /graph/ {
         add_header Access-Control-Allow-Origin *;
         add_header Cache-Control "public, max-age=3600";
         default_type text/turtle;
 
-        try_files /ontology/data.ttl =404;
+        try_files /ontology/graph.ttl =404;
     }
 
     # ===== WEBSITE ==========================
