@@ -13,6 +13,7 @@
         "Nicol D'Amelio" ,
         "Maryam Dadras" ,
         "Martina Uccheddu" ;
+    dcterms:conformsTo <https://example.metamuses.org/ontology> ;
     void:vocabulary <https://example.metamuses.org/ontology> ;
     void:dataDump <https://example.metamuses.org/1.0/graph.ttl> ;
     dcterms:created "2025-12-31"^^xsd:date ;
