@@ -1,4 +1,4 @@
-# Working Title Ontology
+# The Monomyth Ontology
 
 Group project for the Knowledge Representation and Extraction 2024/25 course.
 
@@ -11,7 +11,4 @@ Group project for the Knowledge Representation and Extraction 2024/25 course.
 
 ## License
 
-This project is licensed under **MIT** for code and **CC-BY-4.0** for
-structured data.  
-Please see the [LICENSE](LICENSE.md) file for full legal texts and attribution
-requirements.
+This work is licensed under CC-BY-4.0. See the [LICENSE](LICENSE.txt) for details.
