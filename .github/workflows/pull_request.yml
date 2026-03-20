@@ -1,0 +1,17 @@
+name: pull_request
+
+on:
+  pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Install rapper
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends raptor2-utils
+      - name: Validate ontology TTL
+        run: rapper -i turtle ontology/ontology.ttl -c
+      - name: Validate knowledge graph TTL
+        run: rapper -i turtle ontology/graph.ttl -c
