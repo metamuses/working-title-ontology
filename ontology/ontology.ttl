@@ -114,13 +114,12 @@ monomyth:isHeroOf a owl:ObjectProperty ;
 are the hero."""@en ;
     owl:inverseOf monomyth:hasHero .
 
-monomyth:hasStageRealizations a owl:ObjectProperty ;
-    rdfs:label "has stage realizations"@en ;
-    rdfs:comment """Associates a monomyth expression with an ordered list of
-stage realizations that instantiate the monomyth stages within the specific
-narrative."""@en ;
+monomyth:hasStageRealization a owl:ObjectProperty ;
+    rdfs:label "has stage realization"@en ;
+    rdfs:comment """Associates a monomyth expression with the specific stage
+realizations that compose its structure."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
-    rdfs:range rdf:List .
+    rdfs:range monomyth:StageRealization .
 
 monomyth:belongsToAct a owl:ObjectProperty ;
     rdfs:label "belongs to act"@en ;
