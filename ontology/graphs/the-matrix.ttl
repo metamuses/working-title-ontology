@@ -1,0 +1,165 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# =============================================================================
+# THE MATRIX (Movie, 1999)
+# =============================================================================
+
+<the-matrix> a monomyth:NarrativeWork,
+        schema:Movie ;
+    rdfs:label "The Matrix"@en ;
+    dcterms:title "The Matrix"@en ;
+    dcterms:created "1999"^^xsd:gYear ;
+    dcterms:creator "Lana Wachowski" ,
+        "Lilly Wachowski" ;
+    schema:genre "Science Fiction"@en , "Action"@en , "Cyberpunk"@en ;
+    owl:sameAs wd:Q83495 ;
+    monomyth:interpretedBy <the-matrix/monomyths/neo> ;
+    rdfs:comment """A 1999 science fiction film in which a computer hacker
+discovers that reality as he knows it is a simulated world created by machines
+to subjugate humanity."""@en .
+
+# --- Monomyth Expression --------------
+
+<the-matrix/monomyths/neo> a monomyth:MonomythExpression ;
+    rdfs:label "Neo's Hero's Journey in The Matrix"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is
+realized in the narrative of 'The Matrix', focusing on the character Neo's
+journey."""@en ;
+    monomyth:interprets <the-matrix> ;
+    monomyth:hasHero <the-matrix/characters/neo> ;
+    monomyth:hasStageRealization <the-matrix/stages/follow-the-white-rabbit> ,
+        <the-matrix/stages/i-cant-do-this> ,
+        <the-matrix/stages/let-me-tell-you-why-youre-here> ,
+        <the-matrix/stages/the-red-pill> ,
+        <the-matrix/stages/welcome-to-the-real-world> ,
+        <the-matrix/stages/the-road-of-trials> ,
+        <the-matrix/stages/the-meeting-with-the-goddess> ,
+        <the-matrix/stages/woman-as-the-temptress> ,
+        <the-matrix/stages/atonement-with-the-father> ,
+        <the-matrix/stages/apotheosis> ,
+        <the-matrix/stages/the-ultimate-boon> ,
+        <the-matrix/stages/refusal-of-the-return> ,
+        <the-matrix/stages/the-magic-flight> ,
+        <the-matrix/stages/rescue-from-without> ,
+        <the-matrix/stages/the-crossing-of-the-return-threshold> ,
+        <the-matrix/stages/master-of-the-two-worlds> ,
+        <the-matrix/stages/freedom-to-live> .
+
+# --- Characters -----------------------
+
+<the-matrix/characters/neo> a monomyth:Character ;
+    rdfs:label "Neo (Thomas A. Anderson)"@en ;
+    rdfs:comment """A hacker who is revealed to be 'the One', the prophesied
+figure capable of manipulating the Matrix and liberating humanity."""@en ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    monomyth:isHeroOf <the-matrix/monomyth> ;
+    owl:sameAs wd:Q247120 .
+
+<the-matrix/characters/trinity> a monomyth:Character ;
+    rdfs:label "Trinity"@en ;
+    rdfs:comment """A skilled hacker and member of the human resistance who
+becomes Neo's love interest."""@en ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:Herald ;
+    owl:sameAs wd:Q246835 .
+
+<the-matrix/characters/morpheus> a monomyth:Character ;
+    rdfs:label "Morpheus"@en ;
+    rdfs:comment """The leader of the human resistance who believes Neo is the
+prophesied 'One' capable of liberating humanity."""@en ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q1750842 .
+
+<the-matrix/characters/agent-smith> a monomyth:Character ;
+    rdfs:label "Agent Smith"@en ;
+    rdfs:comment """An antagonist in the form of a sentient program within the
+Matrix, who seeks to eliminate Neo and maintain control over the simulated
+reality."""@en ;
+    monomyth:embodiesArchetype monomyth:Shadow,
+        monomyth:ThresholdGuardian ;
+    owl:sameAs wd:Q2085488 .
+
+<the-matrix/characters/the-oracle> a monomyth:Character ;
+    rdfs:label "The Oracle"@en ;
+    rdfs:comment """A prophetic figure within the Matrix who provides guidance
+to Neo and other characters, often speaking in riddles."""@en ;
+    monomyth:embodiesArchetype monomyth:Herald,
+        monomyth:Mentor ;
+    owl:sameAs wd:Q246870 .
+
+<the-matrix/characters/cypher> a monomyth:Character ;
+    rdfs:label "Cypher"@en ;
+    rdfs:comment """A member of the human resistance who becomes disillusioned
+with the harsh reality outside the Matrix and betrays his comrades in an attempt
+to return to the simulated world."""@en ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter,
+        monomyth:Shadow ;
+    owl:sameAs wd:Q1963886 .
+
+# --- Stage Realizations ---------------
+
+<the-matrix/stages/follow-the-white-rabbit> a monomyth:StageRealization ;
+    rdfs:label "Follow the white rabbit"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/trinity> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Neo's computer screen displays the message
+'Wake up, Neo... The Matrix has you... Follow the white rabbit.' He then follows
+a woman with a white rabbit tattoo to a club, where Trinity tells him she knows
+the answer to the question driving his life."""@en .
+
+<the-matrix/stages/i-cant-do-this> a monomyth:StageRealization ;
+    rdfs:label "I can't do this"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Morpheus guides Neo by phone to escape via a building ledge.
+Neo looks down, says 'I can't do this,' and retreats inside, choosing the
+familiar world. He is immediately captured by Agent Smith, interrogated, and
+implanted with a tracking bug."""@en .
+
+<the-matrix/stages/let-me-tell-you-why-youre-here> a monomyth:StageRealization ;
+    rdfs:label "Let me tell you why you're here"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:narrativeDescription """Morpheus serves as the supernatural mentor: he has sought Neo,
+believes in him as the One, and offers him the pivotal choice. Trinity and
+the crew give Neo another chance at understanding his destiny, bringing him to Morpheus."""@en .
+
+<the-matrix/stages/the-red-pill> a monomyth:StageRealization ;
+    rdfs:label "The red pill"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+        <the-matrix/characters/morpheus> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Morpheus presents two pills: blue for return to ignorance,
+red for the truth. Neo takes the red pill. Reality disintegrates, the mirror
+liquefies and crawls up his arm, and he wakes in a pod in the real world.
+There is no going back."""@en .
+
+<the-matrix/stages/welcome-to-the-real-world> a monomyth:StageRealization ;
+    rdfs:label "Welcome to the real world"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <the-matrix/characters/neo> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:narrativeDescription """Neo awakens in an amniotic pod, hairless, atrophied, plugged
+into the machine infrastructure, surrounded by an infinite tower of sleeping
+humans. He is flushed through a tube into dark water and rescued by the
+Nebuchadnezzar crew. The old Thomas Anderson dies in the pod; Neo is reborn
+fragile and overwhelmed."""@en .
+
+# --- Narrative Divergences ------------
