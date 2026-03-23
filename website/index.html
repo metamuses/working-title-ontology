@@ -158,7 +158,7 @@
       font-style: italic;
       font-weight: 300;
       font-size: clamp(0.62rem, 1.8vw, 0.8rem);
-      letter-spacing: 0.3em;
+      letter-spacing: 0.25em;
       text-transform: lowercase;
       color: var(--muted);
       opacity: 0;
@@ -175,6 +175,35 @@
 
     @keyframes appear {
       to { opacity: 1; }
+    }
+
+    /* GitHub link */
+    .github-link {
+      position: absolute;
+      bottom: 14%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 6;
+      opacity: 0;
+      animation: appear 1.4s ease forwards;
+      animation-delay: 2.8s;
+      color: var(--muted);
+      text-decoration: none;
+      transition: opacity 0.4s ease, color 0.4s ease;
+    }
+
+    .github-link svg {
+      display: block;
+      width: 15px;
+      height: 15px;
+      opacity: 0.22;
+      stroke: var(--gold);
+      fill: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .github-link:hover svg {
+      opacity: 0.55;
     }
   </style>
 </head>
@@ -223,6 +252,13 @@
 
       </g>
     </svg>
+
+    <!-- GitHub link -->
+    <a class="github-link" href="https://github.com/metamuses/monomyth" aria-label="GitHub repository">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+      </svg>
+    </a>
 
     <!-- Centered text -->
     <div class="content">
