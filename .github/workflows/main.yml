@@ -42,8 +42,8 @@ jobs:
         run: |
           ssh -p${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
             "cd ${{ secrets.SSH_WORKING_DIR }} && \
-            for tag in $(git tag --sort=version:refname); do
-              mkdir -p ontology/$tag
-              git show $tag:ontology/ontology.ttl > ontology/$tag/ontology.ttl
-              git show $tag:ontology/graph.ttl > ontology/$tag/graph.ttl
+            for tag in \$(git tag --sort=version:refname); do
+              mkdir -p ontology/\$tag
+              git show \$tag:ontology/ontology.ttl > ontology/\$tag/ontology.ttl
+              git show \$tag:ontology/graph.ttl > ontology/\$tag/graph.ttl
             done"

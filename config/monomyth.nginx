@@ -94,6 +94,7 @@ server {
     # ===== WEBSITE ==========================
     location / {
         alias /var/www/monomyth.metamuses.org/website/;
+
         try_files $uri $uri/ =404;
     }
 }
