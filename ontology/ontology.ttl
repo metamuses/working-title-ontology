@@ -216,16 +216,16 @@ monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range monomyth:Stage .
 
-monomyth:isHeroOf a owl:ObjectProperty ;
-    rdfs:label "is hero of"@en ;
+monomyth:heroOf a owl:ObjectProperty ;
+    rdfs:label "hero of"@en ;
     rdfs:comment """Links a character to the monomyth expression in which they
 are the hero."""@en ;
     owl:inverseOf monomyth:hasHero ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:MonomythExpression .
 
-monomyth:isCharacterOf a owl:ObjectProperty ;
-    rdfs:label "is character of"@en ;
+monomyth:characterOf a owl:ObjectProperty ;
+    rdfs:label "character of"@en ;
     rdfs:comment """Links a character to the monomyth expression in which they
 are involved."""@en ;
     owl:inverseOf monomyth:hasCharacter ;
