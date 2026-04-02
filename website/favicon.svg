@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8a6a1a"/>
+      <stop offset="100%" stop-color="#5a3c08"/>
+    </linearGradient>
+  </defs>
+  <!-- Parchment ground -->
+  <rect width="32" height="32" rx="6" fill="#f0e8d0"/>
+  <!-- Outer journey circle — broken to suggest departure/return -->
+  <circle cx="16" cy="16" r="10.5" fill="none" stroke="url(#g)" stroke-width="2.2"
+          stroke-dasharray="52 14" stroke-linecap="round"/>
+  <!-- Inner threshold dot — the abyss / transformation point -->
+  <circle cx="16" cy="16" r="2.4" fill="#7a5c14"/>
+</svg>

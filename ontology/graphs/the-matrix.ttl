@@ -316,7 +316,7 @@ survives."""@en .
 <the-matrix/stages/i-can-feel-you-now> a monomyth:StageRealization ;
     rdfs:label "I can feel you now"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:involvesCharacter <the-matrix/characters/neo>
+    monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:realizationDescription """In the film's compressed finale, Neo re-enters the Matrix no
@@ -329,7 +329,7 @@ effectively dissolved as he's now free to move between both realms at will."""@e
 <the-matrix/stages/i-came-here-to-tell-you-how-its-going-to-begin> a monomyth:StageRealization ;
     rdfs:label "I came here to tell you how it's going to begin"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
-    monomyth:involvesCharacter <the-matrix/characters/neo>
+    monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizationDescription """Neo has become illegible to the categories that once
@@ -343,7 +343,7 @@ the film only gestures toward it in the closing moments rather than depicting it
 <the-matrix/stages/where-we-go-from-there-is-a-choice-i-leave-to-you> a monomyth:StageRealization ;
     rdfs:label "Where we go from there is a choice I leave to you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
-    monomyth:involvesCharacter <the-matrix/characters/neo>
+    monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizationDescription """The film ends on liberated possibility. Neo flies into the
@@ -409,7 +409,8 @@ oversight."""@en .
     monomyth:divergenceRationale """Campbell's model assumes the hero crosses back from the special
 world into the ordinary one. The Matrix inverts this: Neo re-enters the special world (the
 simulation) as its sovereign, dissolving the ontological hierarchy between worlds rather than
-crossing a boundary. This divergence transforms the return threshold from a spatial crossing into an epistemological claim: the hero's return is not a physical transit but a redefinition of what "real"
+crossing a boundary. This divergence transforms the return threshold from a spatial crossing into an
+epistemological claim: the hero's return is not a physical transit but a redefinition of what "real"
 means. It reflects the film's Baudrillardian foundation: if simulation and reality are ontologically
 entangled, the threshold itself is the illusion."""@en .
 

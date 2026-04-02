@@ -21,8 +21,8 @@ and media."""@en ;
     dcterms:conformsTo <https://monomyth.metamuses.org/ontology> ;
     void:vocabulary <https://monomyth.metamuses.org/ontology> ;
     void:dataDump <https://monomyth.metamuses.org/1.0/graph.ttl> ;
-    dcterms:created "2026-04-13"^^xsd:date ;
-    dcterms:modified "2026-04-13"^^xsd:date ;
+    dcterms:created "2026-05-13"^^xsd:date ;
+    dcterms:modified "2026-05-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:seeAlso <https://monomyth.metamuses.org>,

@@ -8,17 +8,16 @@
 
 <https://monomyth.metamuses.org/ontology> a owl:Ontology ;
     dcterms:title "The Monomyth Ontology"@en ;
-    dcterms:description """An ontology for representing the Monomyth narrative
-structure and related concepts based on 'The Hero with a Thousand Faces' by
-Joseph Campbell."""@en ;
+    dcterms:description """An ontology for representing the Monomyth narrative structure and related
+concepts based on "The Hero with a Thousand Faces" by Joseph Campbell."""@en ;
     dcterms:creator "Tommaso Barbato",
         "Nicol D'Amelio" ,
         "Maryam Dadras" ,
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
-    dcterms:created "2026-04-13"^^xsd:date ;
-    dcterms:modified "2026-04-13"^^xsd:date ;
+    dcterms:created "2026-05-13"^^xsd:date ;
+    dcterms:modified "2026-05-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:seeAlso <https://monomyth.metamuses.org>,
@@ -31,23 +30,23 @@ Joseph Campbell."""@en ;
 monomyth:NarrativeWork a owl:Class ;
     rdfs:subClassOf creon:CreativeProduct ;
     rdfs:label "Narrative Work"@en ;
-    rdfs:comment """A story, novel, epic, film, or other narrative that can be
-analyzed through the monomyth framework."""@en .
+    rdfs:comment """A story, novel, epic, film, or other narrative that can be analyzed through the
+monomyth framework."""@en .
 
 monomyth:MonomythExpression a owl:Class ;
     rdfs:label "Monomyth Expression"@en ;
-    rdfs:comment """A specific realization of the monomyth structure within a
-particular narrative work."""@en .
+    rdfs:comment """A specific realization of the monomyth structure within a particular narrative
+work."""@en .
 
 monomyth:Act a owl:Class ;
     rdfs:label "Act"@en ;
-    rdfs:comment """One of the three major phases of the monomyth, based on
-Joseph Campbell's framework."""@en .
+    rdfs:comment """One of the three major phases of the monomyth, based on Joseph Campbell's
+framework."""@en .
 
 monomyth:Stage a owl:Class ;
     rdfs:label "Stage"@en ;
-    rdfs:comment """One of the seventeen stages of the monomyth, based on Joseph
-Campbell's framework."""@en .
+    rdfs:comment """One of the seventeen stages of the monomyth, based on Joseph Campbell's
+framework."""@en .
 
 monomyth:Character a owl:Class ;
     rdfs:label "Character"@en ;
@@ -55,112 +54,94 @@ monomyth:Character a owl:Class ;
 
 monomyth:Archetype a owl:Class ;
     rdfs:label "Archetype"@en ;
-    rdfs:comment """A recurring character role in the monomyth structure, based
-on Christopher Vogler's adaptation of Campbell's framework."""@en .
+    rdfs:comment """A recurring character role in the monomyth structure, based on Christopher
+Vogler's adaptation of Campbell's framework."""@en .
 
 monomyth:StageRealization a owl:Class ;
     rdfs:label "Stage Realization"@en ;
-    rdfs:comment """The concrete manifestation of a monomyth stage within a
-specific narrative work. Links a stage archetype to its particular narrative
-content."""@en .
+    rdfs:comment """The concrete manifestation of a monomyth stage within a specific narrative work.
+Links a stage archetype to its particular narrative content."""@en .
 
 monomyth:FitQuality a owl:Class ;
     rdfs:label "Fit Quality"@en ;
-    rdfs:comment """An assessment of how well a narrative stage maps onto the
-monomyth archetype."""@en .
+    rdfs:comment """An assessment of how well a narrative stage maps onto the monomyth archetype."""@en .
 
 monomyth:NarrativeDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
     rdfs:label "Narrative Divergence"@en ;
-    rdfs:comment """A creative departure from the expected monomyth pattern at a
-given stage, concerning the quality, presence, or structural role of the stage's
-manifestation within a specific narrative work. Narrative divergence formalizes
-the insight that imperfect alignments between a narrative and the monomyth
-template are not failures of fit but potential acts of deliberate artistic
-choice.
+    rdfs:comment """A creative departure from the expected monomyth pattern at a given stage,
+concerning the quality, presence, or structural role of the stage's manifestation within a specific
+narrative work. Narrative divergence formalizes the insight that imperfect alignments between a
+narrative and the monomyth template are not failures of fit but potential acts of deliberate
+artistic choice.
 
-The monomyth ontology assesses every stage realization through a fit quality
-scale ranging from perfect alignment to complete absence or inversion.
-Narrative divergence operates in the space below perfect fit: when a stage
-is absent, the narrative has chosen silence where Campbell expects action;
-when a stage is inverted, the narrative has deliberately reversed the
-archetype's expected meaning; when a stage is weak or moderate, the
-narrative may have dispersed the stage's function across multiple moments,
-compressed it into a subordinate beat, merged it with an adjacent stage,
-or otherwise reshaped its dramatic weight. Each of these departures carries
-creative intent and thematic significance that a numeric fit score alone
-cannot capture.
+The monomyth ontology assesses every stage realization through a fit quality scale ranging from
+perfect alignment to complete absence or inversion. Narrative divergence operates in the space below
+perfect fit: when a stage is absent, the narrative has chosen silence where Campbell expects action;
+when a stage is inverted, the narrative has deliberately reversed the archetype's expected meaning;
+when a stage is weak or moderate, the narrative may have dispersed the stage's function across
+multiple moments, compressed it into a subordinate beat, merged it with an adjacent stage, or
+otherwise reshaped its dramatic weight. Each of these departures carries creative intent and
+thematic significance that a numeric fit score alone cannot capture.
 
-Where sequential divergence concerns when a stage occurs in the narrative's
-order, and semiotic divergence concerns the conceptual vocabulary through which
-it is expressed, narrative divergence concerns what actually happens: whether
-the stage is present at all, whether it fulfills or subverts its archetypal
-function, and how the narrative's specific dramatic choices depart from the
-pattern Campbell describes. By explicitly modeling these departures as
-first-class entities linked to the stage realizations they characterize, the
-ontology enables richer analysis than fit scoring alone. It allows the
-documentation of why a narrative diverges, what artistic or thematic purpose the
-divergence serves, and how patterns of divergence cluster across works, genres,
-and periods, distinguishing narratives that systematically subvert specific acts
-or stages from those that faithfully preserve them, and capturing the creative
-rationale behind each departure."""@en .
+Where sequential divergence concerns when a stage occurs in the narrative's order, and semiotic
+divergence concerns the conceptual vocabulary through which it is expressed, narrative divergence
+concerns what actually happens: whether the stage is present at all, whether it fulfills or subverts
+its archetypal function, and how the narrative's specific dramatic choices depart from the pattern
+Campbell describes. By explicitly modeling these departures as first-class entities linked to the
+stage realizations they characterize, the ontology enables richer analysis than fit scoring alone.
+It allows the documentation of why a narrative diverges, what artistic or thematic purpose the
+divergence serves, and how patterns of divergence cluster across works, genres, and periods,
+distinguishing narratives that systematically subvert specific acts or stages from those that
+faithfully preserve them, and capturing the creative rationale behind each departure."""@en .
 
 monomyth:SequentialDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
     rdfs:label "Sequential Divergence"@en ;
-    rdfs:comment """A structural departure from the expected ordering of
-monomyth stages, occurring when a narrative realizes a stage earlier or later
-than its canonical position in Campbell's seventeen-stage sequence.
+    rdfs:comment """A structural departure from the expected ordering of monomyth stages, occurring
+when a narrative realizes a stage earlier or later than its canonical position in Campbell's
+seventeen-stage sequence.
 
-Where narrative divergence concerns the quality of a stage's manifestation,
-sequential divergence concerns its placement within the temporal architecture
-of the story. Campbell's model implies a fixed progression and a determinate
-order within each act, but many narratives rearrange this sequence for dramatic,
-thematic, or structural reasons: an Apotheosis may occur as the penultimate
-event rather than at the midpoint of Initiation, or a Refusal of the Call may
-surface retroactively through flashback rather than immediately following
-the Call to Adventure.
+Where narrative divergence concerns the quality of a stage's manifestation, sequential divergence
+concerns its placement within the temporal architecture of the story. Campbell's model implies a
+fixed progression and a determinate order within each act, but many narratives rearrange this
+sequence for dramatic, thematic, or structural reasons: an Apotheosis may occur as the penultimate
+event rather than at the midpoint of Initiation, or a Refusal of the Call may surface retroactively
+through flashback rather than immediately following the Call to Adventure.
 
-By modeling sequential divergences as first-class entities rather than silent
-deviations from stage numbering, the ontology captures a dimension of narrative
-craft that pure fit quality assessment cannot express. A stage may be a Perfect
-Fit in content yet significantly displaced in sequence; conversely, a stage in
-its canonical position may diverge narratively. The two divergence types are
-orthogonal and composable on the same stage realization, enriching the
-ontology's analytical power beyond what a single fit score could provide and
-thus making explicit the distinction between what a narrative says at each stage
-and when it chooses to say it."""@en .
+By modeling sequential divergences as first-class entities rather than silent deviations from stage
+numbering, the ontology captures a dimension of narrative craft that pure fit quality assessment
+cannot express. A stage may be a Perfect Fit in content yet significantly displaced in sequence;
+conversely, a stage in its canonical position may diverge narratively. The two divergence types are
+orthogonal and composable on the same stage realization, enriching the ontology's analytical power
+beyond what a single fit score could provide and thus making explicit the distinction between what a
+narrative says at each stage and when it chooses to say it."""@en .
 
 monomyth:SemioticDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
     rdfs:label "Semiotic Divergence"@en ;
-    rdfs:comment """A divergence in the sign system through which a monomyth
-stage is expressed, occurring when the cultural, ontological, or figurative
-vehicle of a stage changes while its structural function within the hero's
-journey is preserved. Campbell's stage names encode specific semiotic
-assumptions rooted in comparative mythology and mid-twentieth-century cosmology:
-they presuppose particular kinds of agents (divine, patriarchal, gendered),
-particular ontological registers (the sacred, the supernatural, the numinous),
-and particular directions of force (external threat, external aid, external
-authority).
+    rdfs:comment """A divergence in the sign system through which a monomyth stage is expressed,
+occurring when the cultural, ontological, or figurative vehicle of a stage changes while its
+structural function within the hero's journey is preserved. Campbell's stage names encode specific
+semiotic assumptions rooted in comparative mythology and mid-twentieth-century cosmology: they
+presuppose particular kinds of agents (divine, patriarchal, gendered), particular ontological
+registers (the sacred, the supernatural, the numinous), and particular directions of force (external
+threat, external aid, external authority).
 
-As narratives evolve across cultures, periods, and media, these signifiers are
-systematically replaced while the signified, the dramatic function each stage
-performs in the transformation of the hero, endures. Sacred agents become
-secular ones, external forces become internal states, gendered roles are recast
-or dissolved, and cosmological frameworks shift from the mythic to the
+As narratives evolve across cultures, periods, and media, these signifiers are systematically
+replaced while the signified, the dramatic function each stage performs in the transformation of the
+hero, endures. Sacred agents become secular ones, external forces become internal states, gendered
+roles are recast or dissolved, and cosmological frameworks shift from the mythic to the
 psychological, the political, or the technological.
 
-Where narrative divergence concerns what happens at a stage, and sequential
-divergence concerns when it happens, semiotic divergence concerns the conceptual
-vocabulary through which it happens, the signs a narrative selects to encode the
-archetypal structure. By modeling these sign-level departures as first-class
-entities, the ontology captures a dimension of narrative evolution that neither
-fit quality nor structural reordering can express: the gradual, culturally
-determined drift in how stories signify the same underlying transformative
-pattern. This enables comparative queries across works and periods, tracing how
-the semiotic content of any given stage shifts across centuries of storytelling,
-and making explicit the distinction between the monomyth's deep grammar and the
+Where narrative divergence concerns what happens at a stage, and sequential divergence concerns when
+it happens, semiotic divergence concerns the conceptual vocabulary through which it happens, the
+signs a narrative selects to encode the archetypal structure. By modeling these sign-level
+departures as first-class entities, the ontology captures a dimension of narrative evolution that
+neither fit quality nor structural reordering can express: the gradual, culturally determined drift
+in how stories signify the same underlying transformative pattern. This enables comparative queries
+across works and periods, tracing how the semiotic content of any given stage shifts across centuries
+of storytelling, and making explicit the distinction between the monomyth's deep grammar and the
 surface language each narrative speaks."""@en .
 
 # ==============================================================================
@@ -169,37 +150,33 @@ surface language each narrative speaks."""@en .
 
 monomyth:interpretedBy a owl:ObjectProperty ;
     rdfs:label "interpreted by"@en ;
-    rdfs:comment """Links a narrative work to the monomyth expression that
-interprets it."""@en ;
+    rdfs:comment """Links a narrative work to the monomyth expression that interprets it."""@en ;
     owl:inverseOf monomyth:interprets ;
     rdfs:domain monomyth:NarrativeWork ;
     rdfs:range monomyth:MonomythExpression .
 
 monomyth:interprets a owl:ObjectProperty ;
     rdfs:label "interprets"@en ;
-    rdfs:comment """Links a monomyth expression to the narrative work it
-interprets."""@en ;
+    rdfs:comment """Links a monomyth expression to the narrative work it interprets."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:NarrativeWork .
 
 monomyth:hasHero a owl:ObjectProperty ;
     rdfs:label "has hero"@en ;
-    rdfs:comment """The character whose journey is being traced through the
-monomyth."""@en ;
+    rdfs:comment """The character whose journey is being traced through the monomyth."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:Character .
 
 monomyth:hasCharacter a owl:ObjectProperty ;
     rdfs:label "has character"@en ;
-    rdfs:comment """Links a monomyth expression to any character involved in the
-narrative."""@en ;
+    rdfs:comment """Links a monomyth expression to any character involved in the narrative."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:Character .
 
 monomyth:hasStageRealization a owl:ObjectProperty ;
     rdfs:label "has stage realization"@en ;
-    rdfs:comment """Associates a monomyth expression with the specific stage
-realizations that compose its structure."""@en ;
+    rdfs:comment """Associates a monomyth expression with the specific stage realizations that
+compose its structure."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:StageRealization .
 
@@ -211,86 +188,80 @@ monomyth:belongsToAct a owl:ObjectProperty ;
 
 monomyth:followsStage a owl:ObjectProperty ;
     rdfs:label "follows stage"@en ;
-    rdfs:comment """Indicates the sequential ordering of stages within the
-monomyth."""@en ;
+    rdfs:comment """Indicates the sequential ordering of stages within the monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range monomyth:Stage .
 
 monomyth:heroOf a owl:ObjectProperty ;
     rdfs:label "hero of"@en ;
-    rdfs:comment """Links a character to the monomyth expression in which they
-are the hero."""@en ;
+    rdfs:comment """Links a character to the monomyth expression in which they are the hero."""@en ;
     owl:inverseOf monomyth:hasHero ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:MonomythExpression .
 
 monomyth:characterOf a owl:ObjectProperty ;
     rdfs:label "character of"@en ;
-    rdfs:comment """Links a character to the monomyth expression in which they
-are involved."""@en ;
+    rdfs:comment """Links a character to the monomyth expression in which they are involved."""@en ;
     owl:inverseOf monomyth:hasCharacter ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:MonomythExpression .
 
 monomyth:embodiesArchetype a owl:ObjectProperty ;
     rdfs:label "embodies archetype"@en ;
-    rdfs:comment """Links a character to the archetype they embody in a
-narrative."""@en ;
+    rdfs:comment """Links a character to the archetype they embody in a narrative."""@en ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:Archetype .
 
 monomyth:realizesStage a owl:ObjectProperty ;
     rdfs:label "realizes stage"@en ;
-    rdfs:comment """Links a concrete narrative moment to the abstract monomyth
-stage it instantiates."""@en ;
+    rdfs:comment """Links a concrete narrative moment to the abstract monomyth stage it
+instantiates."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:Stage .
 
 monomyth:involvesCharacter a owl:ObjectProperty ;
     rdfs:label "involves character"@en ;
-    rdfs:comment """Indicates the particular character(s) involved in the
-realization of a monomyth stage."""@en ;
+    rdfs:comment """Indicates the particular character(s) involved in the realization of a monomyth
+stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:Character .
 
 monomyth:hasFitQuality a owl:ObjectProperty ;
     rdfs:label "has fit quality"@en ;
-    rdfs:comment """Associates a stage realization with an evaluation of how
-well it fits the corresponding monomyth stage."""@en ;
+    rdfs:comment """Associates a stage realization with an evaluation of how well it fits the
+corresponding monomyth stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:FitQuality .
 
 monomyth:hasDivergence a owl:ObjectProperty ;
     rdfs:label "has divergence"@en ;
-    rdfs:comment """Generic superproperty linking a stage realization to any
-divergence. The specific subproperties can be used for typed queries."""@en ;
+    rdfs:comment """Generic superproperty linking a stage realization to any divergence. The
+specific subproperties can be used for typed queries."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range creon:ProductDivergence .
 
 monomyth:hasNarrativeDivergence a owl:ObjectProperty ;
     rdfs:subPropertyOf monomyth:hasDivergence ;
     rdfs:label "has narrative divergence"@en ;
-    rdfs:comment """Links a stage realization to a narrative divergence
-describing how the narrative departs from the expected monomyth pattern in
-content, quality, or structure at this stage."""@en ;
+    rdfs:comment """Links a stage realization to a narrative divergence describing how the narrative
+departs from the expected monomyth pattern in content, quality, or structure at this stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:NarrativeDivergence .
 
 monomyth:hasSequentialDivergence a owl:ObjectProperty ;
     rdfs:subPropertyOf monomyth:hasDivergence ;
     rdfs:label "has sequential divergence"@en ;
-    rdfs:comment """Links a stage realization to a sequential divergence
-describing how the stage occurs out of its canonical monomyth
-ordering."""@en ;
+    rdfs:comment """Links a stage realization to a sequential divergence describing how the stage
+occurs out of its canonical monomyth ordering."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:SequentialDivergence .
 
 monomyth:hasSemioticDivergence a owl:ObjectProperty ;
     rdfs:subPropertyOf monomyth:hasDivergence ;
     rdfs:label "has semiotic divergence"@en ;
-    rdfs:comment """Links a stage realization to a semiotic divergence
-describing how the narrative departs from the expected monomyth pattern in its
-choice of signs and symbols to express the stage."""@en ;
+    rdfs:comment """Links a stage realization to a semiotic divergence describing how the narrative
+departs from the expected monomyth pattern in its choice of signs and symbols to express the
+stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:SemioticDivergence .
 
@@ -302,8 +273,7 @@ monomyth:divergesFrom a owl:ObjectProperty ;
 
 monomyth:divergenceOf a owl:ObjectProperty ;
     rdfs:label "divergence of"@en ;
-    rdfs:comment """Links any divergence to the stage realization where the
-departure occurs."""@en ;
+    rdfs:comment """Links a divergence to the stage realization where the departure occurs."""@en ;
     owl:inverseOf monomyth:hasDivergence ;
     rdfs:domain creon:ProductDivergence ;
     rdfs:range monomyth:StageRealization .
@@ -314,8 +284,7 @@ departure occurs."""@en ;
 
 monomyth:actOrder a owl:DatatypeProperty ;
     rdfs:label "act order"@en ;
-    rdfs:comment """The sequential position of an act in the three-act structure
-(1-3)."""@en ;
+    rdfs:comment """The sequential position of an act in the three-act structure (1-3)."""@en ;
     rdfs:domain monomyth:Act ;
     rdfs:range [
         a rdfs:Datatype ;
@@ -328,8 +297,7 @@ monomyth:actOrder a owl:DatatypeProperty ;
 
 monomyth:stageOrder a owl:DatatypeProperty ;
     rdfs:label "stage order"@en ;
-    rdfs:comment """The sequential position of a stage in the seventeen-stage
-monomyth (1-17)."""@en ;
+    rdfs:comment """The sequential position of a stage in the seventeen-stage monomyth (1-17)."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range [
         a rdfs:Datatype ;
@@ -342,8 +310,8 @@ monomyth (1-17)."""@en ;
 
 monomyth:fitScore a owl:DatatypeProperty ;
     rdfs:label "fit score"@en ;
-    rdfs:comment """Numeric score for fit quality (-1 = inverted, 0 = absent,
-1 = weak, 2 = moderate, 3 = strong, 4 = perfect)."""@en ;
+    rdfs:comment """Numeric score for fit quality (-1 = inverted, 0 = absent, 1 = weak, 2 = moderate,
+3 = strong, 4 = perfect)."""@en ;
     rdfs:domain monomyth:FitQuality ;
     rdfs:range [
         a rdfs:Datatype ;
@@ -356,54 +324,48 @@ monomyth:fitScore a owl:DatatypeProperty ;
 
 monomyth:fitNote a owl:DatatypeProperty ;
     rdfs:label "fit note"@en ;
-    rdfs:comment """An annotation explaining nuances, tensions, or interpretive
-choices in the stage mapping."""@en ;
+    rdfs:comment """An annotation explaining nuances, tensions, or interpretive choices in the stage
+mapping."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
 monomyth:realizationDescription a owl:DatatypeProperty ;
     rdfs:label "realization description"@en ;
-    rdfs:comment """A prose description of how a stage is realized in a specific
-narrative."""@en ;
+    rdfs:comment """A prose description of how a stage is realized in a specific narrative."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
 monomyth:stageRealizationOrder a owl:DatatypeProperty ;
     rdfs:label "stage realization order"@en ;
-    rdfs:comment """The position at which this stage realization factually
-occurs in the narrative's own sequence. Expressed as a positive integer
-starting from 1, forming a continuous sequence across all realizations
-in a MonomythInstance.
+    rdfs:comment """The position at which this stage realization factually occurs in the narrative's
+own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across
+all realizations in a MonomythInstance.
 
-The canonical monomyth defines 17 stages ordered 1-17 via :stageOrder on Stage
-individuals. When a narrative realizes each stage exactly once in canonical
-order, :stageRealizationOrder values will mirror :stageOrder forming a complete
-parallel sequence to the monomyth framework.
-When they differ, a SequentialDivergence instance should be attached via
-:hasSequentialDivergence to document the rationale for the displacement.
+The canonical monomyth defines 17 stages ordered 1-17 via :stageOrder on Stage individuals. When a
+narrative realizes each stage exactly once in canonical order, :stageRealizationOrder values will
+mirror :stageOrder forming a complete parallel sequence to the monomyth framework.
+When they differ, a SequentialDivergence instance should be attached via :hasSequentialDivergence to
+document the rationale for the displacement.
 
-The sequence may extend beyond 17 when a narrative realizes the same stage more
-than once, whether as isolated repeated moments or as entire recurring blocks of
-consecutive stages. Each repetition is a separate StageRealization instance with
-its own :stageRealizationOrder value, :hasFitQuality assessment, and
-:realizationDescription. This allows the ontology to capture cyclical,
-recursive, or episodic narrative structures without conflating distinct dramatic
-moments that instantiate the same archetypal stage.
+The sequence may extend beyond 17 when a narrative realizes the same stage more than once, whether
+as isolated repeated moments or as entire recurring blocks of consecutive stages. Each repetition is
+a separate StageRealization instance with its own :stageRealizationOrder value, :hasFitQuality
+assessment, and :realizationDescription. This allows the ontology to capture cyclical, recursive, or
+episodic narrative structures without conflating distinct dramatic moments that instantiate the same
+archetypal stage.
 
-For stages assessed as Absent (FitQuality), the :stageRealizationOrder still
-records the position in the narrative's sequence where the absent stage would
-structurally belong, preserving continuity. This ensures that the full narrative
-ordering is always reconstructible from :stageRealizationOrder values alone,
-without gaps."""@en ;
+For stages assessed as Absent (FitQuality), the :stageRealizationOrder still records the position in
+the narrative's sequence where the absent stage would structurally belong, preserving continuity.
+This ensures that the full narrative ordering is always reconstructible from :stageRealizationOrder
+values alone, without gaps."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:positiveInteger .
 
 monomyth:divergenceRationale a owl:DatatypeProperty ;
     rdfs:label "divergence rationale"@en ;
-    rdfs:comment """A prose description of the artistic, thematic, structural,
-or sequential purpose behind a divergence from the monomyth template.
-Complements a fit note on a stage realization by focusing specifically on the
-motivation for the departure."""@en ;
+    rdfs:comment """A prose description of the artistic, thematic, structural, or sequential purpose
+behind a divergence from the monomyth template. Complements a fit note on a stage realization by
+focusing specifically on the motivation for the departure."""@en ;
     rdfs:domain creon:ProductDivergence ;
     rdfs:range xsd:string .
 
@@ -420,166 +382,154 @@ monomyth:Departure a monomyth:Act ;
 
 monomyth:Initiation a monomyth:Act ;
     rdfs:label "Initiation"@en ;
-    rdfs:comment """The second act: the hero undergoes trials and transformation
-in the special world."""@en ;
+    rdfs:comment """The second act: the hero undergoes trials and transformation in the special
+world."""@en ;
     monomyth:actOrder 2 .
 
 monomyth:Return a monomyth:Act ;
     rdfs:label "Return"@en ;
-    rdfs:comment """The third act: the hero returns to the ordinary world,
-transformed."""@en ;
+    rdfs:comment """The third act: the hero returns to the ordinary world, transformed."""@en ;
     monomyth:actOrder 3 .
 
 # --- The Seventeen Stages -------------
 
 monomyth:TheCallToAdventure a monomyth:Stage ;
     rdfs:label "The Call to Adventure"@en ;
-    rdfs:comment """The hero receives a summons through a sign, messenger, or
-sudden rupture in the ordinary world that signals the beginning of a journey
-toward an as-yet-unknown transformation."""@en ;
+    rdfs:comment """The hero receives a summons through a sign, messenger, or sudden rupture in the
+ordinary world that signals the beginning of a journey toward an as-yet-unknown transformation."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 1 .
 
 monomyth:RefusalOfTheCall a monomyth:Stage ;
     rdfs:label "Refusal of the Call"@en ;
-    rdfs:comment """Faced with the enormity of the journey ahead, the hero
-hesitates or outright refuses the summons, revealing the weight of what must be
-sacrificed to cross into the unknown."""@en ;
+    rdfs:comment """Faced with the enormity of the journey ahead, the hero hesitates or outright
+refuses the summons, revealing the weight of what must be sacrificed to cross into the unknown."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 2 ;
     monomyth:followsStage monomyth:TheCallToAdventure .
 
 monomyth:SupernaturalAid a monomyth:Stage ;
     rdfs:label "Supernatural Aid"@en ;
-    rdfs:comment """A protective figure such as a wizard, crone, ferryman, or
-divine messenger appears to equip the hero with talismans, wisdom, or assurance
-before the threshold is crossed."""@en ;
+    rdfs:comment """A protective figure such as a wizard, crone, ferryman, or divine messenger
+appears to equip the hero with talismans, wisdom, or assurance before the threshold is crossed."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 3 ;
     monomyth:followsStage monomyth:RefusalOfTheCall .
 
 monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage ;
     rdfs:label "The Crossing of the First Threshold"@en ;
-    rdfs:comment """The hero commits to the adventure and passes beyond the
-familiar boundary of the known world, entering a sphere of magnified power where
-the ordinary rules no longer apply."""@en ;
+    rdfs:comment """The hero commits to the adventure and passes beyond the familiar boundary of the
+known world, entering a sphere of magnified power where the ordinary rules no longer apply."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 4 ;
     monomyth:followsStage monomyth:SupernaturalAid .
 
 monomyth:TheBellyOfTheWhale a monomyth:Stage ;
     rdfs:label "The Belly of the Whale"@en ;
-    rdfs:comment """The hero is swallowed into an unknown darkness as a symbolic
-death of the former self, from which, if survived, a new and transformed
-identity begins to emerge."""@en ;
+    rdfs:comment """The hero is swallowed into an unknown darkness as a symbolic death of the former
+self, from which, if survived, a new and transformed identity begins to emerge."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 5 ;
     monomyth:followsStage monomyth:TheCrossingOfTheFirstThreshold .
 
 monomyth:TheRoadOfTrials a monomyth:Stage ;
     rdfs:label "The Road of Trials"@en ;
-    rdfs:comment """The hero undergoes a series of tests, ordeals, and
-encounters that progressively strip away illusions and forge the strength,
-wisdom, and character required for the supreme ordeal ahead."""@en ;
+    rdfs:comment """The hero undergoes a series of tests, ordeals, and encounters that progressively
+strip away illusions and forge the strength, wisdom, and character required for the supreme ordeal
+ahead."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 6 ;
     monomyth:followsStage monomyth:TheBellyOfTheWhale .
 
 monomyth:TheMeetingWithTheGoddess a monomyth:Stage ;
     rdfs:label "The Meeting with the Goddess"@en ;
-    rdfs:comment """The hero encounters an embodiment of totality in its fullest
-and most nurturing dimension, whose unconditional love reveals the deepest
-ground of existence itself."""@en ;
+    rdfs:comment """The hero encounters an embodiment of totality in its fullest and most nurturing
+dimension, whose unconditional love reveals the deepest ground of existence itself."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 7 ;
     monomyth:followsStage monomyth:TheRoadOfTrials .
 
 monomyth:WomanAsTheTemptress a monomyth:Stage ;
     rdfs:label "Woman as the Temptress"@en ;
-    rdfs:comment """Confronted with desire, comfort, or worldly attachment, the
-hero faces a seduction that threatens to arrest the journey and bind
-consciousness to the transient rather than the transcendent."""@en ;
+    rdfs:comment """Confronted with desire, comfort, or worldly attachment, the hero faces a
+seduction that threatens to arrest the journey and bind consciousness to the transient rather than
+the transcendent."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 8 ;
     monomyth:followsStage monomyth:TheMeetingWithTheGoddess .
 
 monomyth:AtonementWithTheFather a monomyth:Stage ;
     rdfs:label "Atonement with the Father"@en ;
-    rdfs:comment """The hero confronts the ultimate authority of the inner world
-in the father-figure who both judges and initiates, and must be annihilated and
-reborn in the crucible of that encounter."""@en ;
+    rdfs:comment """The hero confronts the ultimate authority of the inner world in the
+father-figure who both judges and initiates, and must be annihilated and reborn in the crucible of
+that encounter."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 9 ;
     monomyth:followsStage monomyth:WomanAsTheTemptress .
 
 monomyth:Apotheosis a monomyth:Stage ;
     rdfs:label "Apotheosis"@en ;
-    rdfs:comment """Stripped of all ego-bound limitation, the hero achieves a
-state of divine knowledge or blissful rest beyond all categories of being,
-dwelling momentarily in the eternal before returning."""@en ;
+    rdfs:comment """Stripped of all ego-bound limitation, the hero achieves a state of divine
+knowledge or blissful rest beyond all categories of being, dwelling momentarily in the eternal
+before returning."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 10 ;
     monomyth:followsStage monomyth:AtonementWithTheFather .
 
 monomyth:TheUltimateBoon a monomyth:Stage ;
     rdfs:label "The Ultimate Boon"@en ;
-    rdfs:comment """The hero attains the supreme goal of the quest in the form
-of an elixir, grail, fire, or wisdom that holds the power to restore life,
-fertility, or illumination to the world left behind."""@en ;
+    rdfs:comment """The hero attains the supreme goal of the quest in the form of an elixir, grail,
+fire, or wisdom that holds the power to restore life, fertility, or illumination to the world left
+behind."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 11 ;
     monomyth:followsStage monomyth:Apotheosis .
 
 monomyth:RefusalOfTheReturn a monomyth:Stage ;
     rdfs:label "Refusal of the Return"@en ;
-    rdfs:comment """Having tasted transcendence or bliss, the hero is reluctant
-to re-enter the mundane world, clinging to the realm of discovery rather than
-bearing its fruits back to humanity."""@en ;
+    rdfs:comment """Having tasted transcendence or bliss, the hero is reluctant to re-enter the
+mundane world, clinging to the realm of discovery rather than bearing its fruits back to humanity."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 12 ;
     monomyth:followsStage monomyth:TheUltimateBoon .
 
 monomyth:TheMagicFlight a monomyth:Stage ;
     rdfs:label "The Magic Flight"@en ;
-    rdfs:comment """The hero escapes from the inner world, sometimes aided and
-sometimes pursued, navigating a perilous retreat that itself becomes a test of
-the transformation newly won."""@en ;
+    rdfs:comment """The hero escapes from the inner world, sometimes aided and sometimes pursued,
+navigating a perilous retreat that itself becomes a test of the transformation newly won."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 13 ;
     monomyth:followsStage monomyth:RefusalOfTheReturn .
 
 monomyth:RescueFromWithout a monomyth:Stage ;
     rdfs:label "Rescue from Without"@en ;
-    rdfs:comment """When the hero cannot return alone, a guide or community from
-the ordinary world reaches across the threshold to draw the exhausted or
-reluctant traveller back into human society."""@en ;
+    rdfs:comment """When the hero cannot return alone, a guide or community from the ordinary world
+reaches across the threshold to draw the exhausted or reluctant traveller back into human society."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 14 ;
     monomyth:followsStage monomyth:TheMagicFlight .
 
 monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage ;
     rdfs:label "The Crossing of the Return Threshold"@en ;
-    rdfs:comment """The hero must re-enter the world of common day and find a
-way to translate the wisdom of the deep experience into terms that a community
-bound by time and form can receive."""@en ;
+    rdfs:comment """The hero must re-enter the world of common day and find a way to translate the
+wisdom of the deep experience into terms that a community bound by time and form can receive."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 15 ;
     monomyth:followsStage monomyth:RescueFromWithout .
 
 monomyth:MasterOfTheTwoWorlds a monomyth:Stage ;
     rdfs:label "Master of the Two Worlds"@en ;
-    rdfs:comment """Having moved freely between the mortal and divine, the hero
-achieves the equilibrium to hold both realms simultaneously, neither clinging to
-the transcendent nor enslaved by the mundane."""@en ;
+    rdfs:comment """Having moved freely between the mortal and divine, the hero achieves the
+equilibrium to hold both realms simultaneously, neither clinging to the transcendent nor enslaved by
+the mundane."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 16 ;
     monomyth:followsStage monomyth:TheCrossingOfTheReturnThreshold .
 
 monomyth:FreedomToLive a monomyth:Stage ;
     rdfs:label "Freedom to Live"@en ;
-    rdfs:comment """Released from fear of death and attachment to outcome, the
-hero lives fully in the present moment as a conduit of the life-force who
-neither clings to nor flees from existence."""@en ;
+    rdfs:comment """Released from fear of death and attachment to outcome, the hero lives fully in
+the present moment as a conduit of the life-force who neither clings to nor flees from existence."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 17 ;
     monomyth:followsStage monomyth:MasterOfTheTwoWorlds .
@@ -588,50 +538,42 @@ neither clings to nor flees from existence."""@en ;
 
 monomyth:Hero a monomyth:Archetype ;
     rdfs:label "Hero"@en ;
-    rdfs:comment """The protagonist who undergoes the journey and
-transformation."""@en .
+    rdfs:comment """The protagonist who undergoes the journey and transformation."""@en .
 
 monomyth:Mentor a monomyth:Archetype ;
     rdfs:label "Mentor"@en ;
-    rdfs:comment """The guide or teacher who provides the hero with knowledge,
-tools, or confidence."""@en .
+    rdfs:comment """The guide or teacher who provides the hero with knowledge, tools, or confidence."""@en .
 
 monomyth:ThresholdGuardian a monomyth:Archetype ;
     rdfs:label "Threshold Guardian"@en ;
-    rdfs:comment """A figure who tests the hero at the boundary of a new world
-or stage."""@en .
+    rdfs:comment """A figure who tests the hero at the boundary of a new world or stage."""@en .
 
 monomyth:Herald a monomyth:Archetype ;
     rdfs:label "Herald"@en ;
-    rdfs:comment """The figure or force that announces the call to the
-adventure."""@en .
+    rdfs:comment """The figure or force that announces the call to the adventure."""@en .
 
 monomyth:Shapeshifter a monomyth:Archetype ;
     rdfs:label "Shapeshifter"@en ;
-    rdfs:comment """A figure whose loyalty or nature is ambiguous and
-shifting."""@en .
+    rdfs:comment """A figure whose loyalty or nature is ambiguous and shifting."""@en .
 
 monomyth:Shadow a monomyth:Archetype ;
     rdfs:label "Shadow"@en ;
-    rdfs:comment """The antagonist or dark mirror of the hero, representing
-repressed qualities or external opposition."""@en .
+    rdfs:comment """The antagonist or dark mirror of the hero, representing repressed qualities or
+external opposition."""@en .
 
 monomyth:Trickster a monomyth:Archetype ;
     rdfs:label "Trickster"@en ;
-    rdfs:comment """A figure who provides comic relief, disruption, or catalytic
-chaos."""@en .
+    rdfs:comment """A figure who provides comic relief, disruption, or catalytic chaos."""@en .
 
 monomyth:Ally a monomyth:Archetype ;
     rdfs:label "Ally"@en ;
-    rdfs:comment """A companion who supports the hero through the
-journey."""@en .
+    rdfs:comment """A companion who supports the hero through the journey."""@en .
 
 # --- Fit Quality Values ---------------
 
 monomyth:PerfectFit a monomyth:FitQuality ;
     rdfs:label "Perfect Fit"@en ;
-    rdfs:comment """The narrative maps onto the monomyth stage with
-precision."""@en ;
+    rdfs:comment """The narrative maps onto the monomyth stage with precision."""@en ;
     owl:differentFrom monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
@@ -641,8 +583,7 @@ precision."""@en ;
 
 monomyth:StrongFit a monomyth:FitQuality ;
     rdfs:label "Strong Fit"@en ;
-    rdfs:comment """The narrative clearly manifests the stage with minor
-variations."""@en ;
+    rdfs:comment """The narrative clearly manifests the stage with minor variations."""@en ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
@@ -652,8 +593,7 @@ variations."""@en ;
 
 monomyth:ModerateFit a monomyth:FitQuality ;
     rdfs:label "Moderate Fit"@en ;
-    rdfs:comment """The stage is recognizable but requires some interpretive
-reframing."""@en ;
+    rdfs:comment """The stage is recognizable but requires some interpretive reframing."""@en ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:WeakFit,
@@ -673,8 +613,7 @@ monomyth:WeakFit a monomyth:FitQuality ;
 
 monomyth:AbsentFit a monomyth:FitQuality ;
     rdfs:label "Absent Fit"@en ;
-    rdfs:comment """The stage is not meaningfully present in the
-narrative."""@en ;
+    rdfs:comment """The stage is not meaningfully present in the narrative."""@en ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
@@ -684,8 +623,7 @@ narrative."""@en ;
 
 monomyth:InvertedFit a monomyth:FitQuality ;
     rdfs:label "Inverted Fit"@en ;
-    rdfs:comment """The stage is present but deliberately reversed or
-subverted."""@en ;
+    rdfs:comment """The stage is present but deliberately reversed or subverted."""@en ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
