@@ -11,8 +11,8 @@
     dcterms:description """An ontology for representing the Monomyth narrative structure and related
 concepts based on "The Hero with a Thousand Faces" by Joseph Campbell."""@en ;
     dcterms:creator "Tommaso Barbato",
-        "Nicol D'Amelio" ,
-        "Maryam Dadras" ,
+        "Nicol D'Amelio",
+        "Maryam Dadras",
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
@@ -88,10 +88,10 @@ Where sequential divergence concerns when a stage occurs in the narrative's orde
 divergence concerns the conceptual vocabulary through which it is expressed, narrative divergence
 concerns what actually happens: whether the stage is present at all, whether it fulfills or subverts
 its archetypal function, and how the narrative's specific dramatic choices depart from the pattern
-Campbell describes. By explicitly modeling these departures as first-class entities linked to the
-stage realizations they characterize, the ontology enables richer analysis than fit scoring alone.
-It allows the documentation of why a narrative diverges, what artistic or thematic purpose the
-divergence serves, and how patterns of divergence cluster across works, genres, and periods,
+Campbell describes. By explicitly modeling all three departure types as first-class entities linked
+to the stage realizations they characterize, the ontology enables richer analysis than fit scoring
+alone. It allows the documentation of why a narrative diverges, what artistic or thematic purpose
+the divergence serves, and how patterns of divergence cluster across works, genres, and periods,
 distinguishing narratives that systematically subvert specific acts or stages from those that
 faithfully preserve them, and capturing the creative rationale behind each departure."""@en .
 
@@ -109,13 +109,12 @@ sequence for dramatic, thematic, or structural reasons: an Apotheosis may occur 
 event rather than at the midpoint of Initiation, or a Refusal of the Call may surface retroactively
 through flashback rather than immediately following the Call to Adventure.
 
-By modeling sequential divergences as first-class entities rather than silent deviations from stage
-numbering, the ontology captures a dimension of narrative craft that pure fit quality assessment
-cannot express. A stage may be a Perfect Fit in content yet significantly displaced in sequence;
-conversely, a stage in its canonical position may diverge narratively. The two divergence types are
-orthogonal and composable on the same stage realization, enriching the ontology's analytical power
-beyond what a single fit score could provide and thus making explicit the distinction between what a
-narrative says at each stage and when it chooses to say it."""@en .
+A stage may be a Perfect Fit in content, faithful in its semiotic register, yet significantly
+displaced in sequence; conversely, a stage in its canonical position may diverge narratively or
+semiotically. The three divergence types are orthogonal and composable on the same stage
+realization, each capturing a dimension of narrative craft that the other two cannot express, and
+together making explicit the distinction between what a narrative says at each stage, the signs
+through which it says it, and when it chooses to say it."""@en .
 
 monomyth:SemioticDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -135,14 +134,12 @@ roles are recast or dissolved, and cosmological frameworks shift from the mythic
 psychological, the political, or the technological.
 
 Where narrative divergence concerns what happens at a stage, and sequential divergence concerns when
-it happens, semiotic divergence concerns the conceptual vocabulary through which it happens, the
-signs a narrative selects to encode the archetypal structure. By modeling these sign-level
-departures as first-class entities, the ontology captures a dimension of narrative evolution that
-neither fit quality nor structural reordering can express: the gradual, culturally determined drift
-in how stories signify the same underlying transformative pattern. This enables comparative queries
-across works and periods, tracing how the semiotic content of any given stage shifts across centuries
-of storytelling, and making explicit the distinction between the monomyth's deep grammar and the
-surface language each narrative speaks."""@en .
+it happens, semiotic divergence concerns the conceptual vocabulary through which it happens: the
+signs a narrative selects to encode the archetypal structure. This captures a dimension of narrative
+evolution that neither fit quality nor structural reordering can express: the gradual, culturally
+determined drift in how stories signify the same underlying transformative pattern, making explicit
+the distinction between the monomyth's deep grammar and the surface language each narrative
+speaks."""@en .
 
 # ==============================================================================
 # OBJECT PROPERTIES
@@ -341,22 +338,22 @@ monomyth:stageRealizationOrder a owl:DatatypeProperty ;
 own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across
 all realizations in a MonomythInstance.
 
-The canonical monomyth defines 17 stages ordered 1-17 via :stageOrder on Stage individuals. When a
-narrative realizes each stage exactly once in canonical order, :stageRealizationOrder values will
-mirror :stageOrder forming a complete parallel sequence to the monomyth framework.
-When they differ, a SequentialDivergence instance should be attached via :hasSequentialDivergence to
+The canonical monomyth defines 17 stages ordered 1-17 via stageOrder on Stage individuals. When a
+narrative realizes each stage exactly once in canonical order, stageRealizationOrder values will
+mirror stageOrder forming a complete parallel sequence to the monomyth framework.
+When they differ, a SequentialDivergence instance should be attached via hasSequentialDivergence to
 document the rationale for the displacement.
 
 The sequence may extend beyond 17 when a narrative realizes the same stage more than once, whether
 as isolated repeated moments or as entire recurring blocks of consecutive stages. Each repetition is
-a separate StageRealization instance with its own :stageRealizationOrder value, :hasFitQuality
-assessment, and :realizationDescription. This allows the ontology to capture cyclical, recursive, or
+a separate StageRealization instance with its own stageRealizationOrder value, hasFitQuality
+assessment, and realizationDescription. This allows the ontology to capture cyclical, recursive, or
 episodic narrative structures without conflating distinct dramatic moments that instantiate the same
 archetypal stage.
 
-For stages assessed as Absent (FitQuality), the :stageRealizationOrder still records the position in
+For stages assessed as Absent (FitQuality), the stageRealizationOrder still records the position in
 the narrative's sequence where the absent stage would structurally belong, preserving continuity.
-This ensures that the full narrative ordering is always reconstructible from :stageRealizationOrder
+This ensures that the full narrative ordering is always reconstructible from stageRealizationOrder
 values alone, without gaps."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:positiveInteger .

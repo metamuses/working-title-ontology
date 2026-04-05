@@ -11,12 +11,11 @@
 
 <https://monomyth.metamuses.org/graph/> a void:Dataset ;
     dcterms:title "The Monomyth Knowledge Graph"@en ;
-    dcterms:description """A dataset representing the monomyth structure as it
-is realized in various narrative works across different time periods, cultures,
-and media."""@en ;
+    dcterms:description """A dataset representing the monomyth structure as it is realized in
+various narrative works across different time periods, cultures, and media."""@en ;
     dcterms:creator "Tommaso Barbato",
-        "Nicol D'Amelio" ,
-        "Maryam Dadras" ,
+        "Nicol D'Amelio",
+        "Maryam Dadras",
         "Martina Uccheddu" ;
     dcterms:conformsTo <https://monomyth.metamuses.org/ontology> ;
     void:vocabulary <https://monomyth.metamuses.org/ontology> ;

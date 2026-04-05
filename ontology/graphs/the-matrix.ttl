@@ -18,10 +18,10 @@
     rdfs:label "The Matrix"@en ;
     dcterms:title "The Matrix"@en ;
     dcterms:created "1999"^^xsd:gYear ;
-    dcterms:creator "Lana Wachowski" ,
+    dcterms:creator "Lana Wachowski",
         "Lilly Wachowski" ;
-    schema:genre "Science Fiction"@en ,
-        "Action"@en ,
+    schema:genre "Science Fiction"@en,
+        "Action"@en,
         "Cyberpunk"@en ;
     owl:sameAs wd:Q83495 ;
     monomyth:interpretedBy <the-matrix/monomyths/neo-journey> ;
@@ -36,29 +36,29 @@ he knows it is a simulated world created by machines to subjugate humanity."""@e
 narrative of 'The Matrix', focusing on the character Neo's journey."""@en ;
     monomyth:interprets <the-matrix> ;
     monomyth:hasHero <the-matrix/characters/neo> ;
-    monomyth:hasCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/trinity> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/agent-smith> ,
-        <the-matrix/characters/the-oracle> ,
-        <the-matrix/characters/cypher> ,
+    monomyth:hasCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/trinity>,
+        <the-matrix/characters/morpheus>,
+        <the-matrix/characters/agent-smith>,
+        <the-matrix/characters/the-oracle>,
+        <the-matrix/characters/cypher>,
         <the-matrix/characters/tank> ;
-    monomyth:hasStageRealization <the-matrix/stages/follow-the-white-rabbit> ,
-        <the-matrix/stages/i-cant-do-this> ,
-        <the-matrix/stages/let-me-tell-you-why-youre-here> ,
-        <the-matrix/stages/all-im-offering-is-the-truth> ,
-        <the-matrix/stages/welcome-to-the-real-world> ,
-        <the-matrix/stages/fear-doubt-and-disbelief> ,
-        <the-matrix/stages/the-oracle-will-see-you-now> ,
-        <the-matrix/stages/ignorance-is-bliss> ,
-        <the-matrix/stages/there-is-no-spoon> ,
-        <the-matrix/stages/hes-beginning-to-believe> ,
-        <the-matrix/stages/mr-wizard-get-me-out-of-here> ,
-        <the-matrix/stages/the-man-i-loved-would-be-the-one> ,
-        <the-matrix/stages/he-is-the-one> ,
-        <the-matrix/stages/system-failure> ,
-        <the-matrix/stages/i-can-feel-you-now> ,
-        <the-matrix/stages/i-came-here-to-tell-you-how-its-going-to-begin> ,
+    monomyth:hasStageRealization <the-matrix/stages/follow-the-white-rabbit>,
+        <the-matrix/stages/i-cant-do-this>,
+        <the-matrix/stages/let-me-tell-you-why-youre-here>,
+        <the-matrix/stages/all-im-offering-is-the-truth>,
+        <the-matrix/stages/welcome-to-the-real-world>,
+        <the-matrix/stages/fear-doubt-and-disbelief>,
+        <the-matrix/stages/the-oracle-will-see-you-now>,
+        <the-matrix/stages/ignorance-is-bliss>,
+        <the-matrix/stages/there-is-no-spoon>,
+        <the-matrix/stages/hes-beginning-to-believe>,
+        <the-matrix/stages/mr-wizard-get-me-out-of-here>,
+        <the-matrix/stages/the-man-i-loved-would-be-the-one>,
+        <the-matrix/stages/he-is-the-one>,
+        <the-matrix/stages/system-failure>,
+        <the-matrix/stages/i-can-feel-you-now>,
+        <the-matrix/stages/i-came-here-to-tell-you-how-its-going-to-begin>,
         <the-matrix/stages/where-we-go-from-there-is-a-choice-i-leave-to-you> .
 
 # --- Characters -----------------------
@@ -130,7 +130,7 @@ Nebuchadnezzar, providing support to Neo and others during their missions."""@en
 <the-matrix/stages/follow-the-white-rabbit> a monomyth:StageRealization ;
     rdfs:label "Follow the white rabbit"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -141,8 +141,8 @@ to a club, where Trinity tells him she knows the answer to the question driving 
 <the-matrix/stages/i-cant-do-this> a monomyth:StageRealization ;
     rdfs:label "I can't do this"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/morpheus>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -153,8 +153,8 @@ immediately captured by Agent Smith, interrogated, and implanted with a tracking
 <the-matrix/stages/let-me-tell-you-why-youre-here> a monomyth:StageRealization ;
     rdfs:label "Let me tell you why you're here"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/morpheus>,
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -166,7 +166,7 @@ another chance at understanding his destiny, bringing him to Morpheus."""@en ;
 <the-matrix/stages/all-im-offering-is-the-truth> a monomyth:StageRealization ;
     rdfs:label "All I'm offering is the truth"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -188,8 +188,8 @@ in the pod; Neo is reborn fragile and overwhelmed."""@en .
 <the-matrix/stages/fear-doubt-and-disbelief> a monomyth:StageRealization ;
     rdfs:label "Fear, doubt, and disbelief"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/morpheus>,
         <the-matrix/characters/tank> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 6 ;
@@ -202,8 +202,8 @@ him."""@en .
 <the-matrix/stages/the-oracle-will-see-you-now> a monomyth:StageRealization ;
     rdfs:label "The Oracle will see you now"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/the-oracle> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/the-oracle>,
         <the-matrix/characters/morpheus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 7 ;
@@ -216,7 +216,7 @@ through sacrifice and choice."""@en .
 <the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
     rdfs:label "Ignorance is bliss"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:involvesCharacter <the-matrix/characters/cypher> ,
+    monomyth:involvesCharacter <the-matrix/characters/cypher>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 8 ;
@@ -234,9 +234,9 @@ rather than a direct seduction of the hero."""@en ;
 <the-matrix/stages/there-is-no-spoon> a monomyth:StageRealization ;
     rdfs:label "There is no spoon"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
-        <the-matrix/characters/morpheus> ,
-        <the-matrix/characters/trinity> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
+        <the-matrix/characters/morpheus>,
+        <the-matrix/characters/trinity>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -248,7 +248,7 @@ discipleship, claiming autonomous authority not against Morpheus but through loy
 <the-matrix/stages/hes-beginning-to-believe> a monomyth:StageRealization ;
     rdfs:label "He's beginning to believe"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -263,7 +263,7 @@ ready for another one and hence must escape for now."""@en ;
 <the-matrix/stages/mr-wizard-get-me-out-of-here> a monomyth:StageRealization ;
     rdfs:label "Mr. Wizard, get me out of here!"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/tank> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 11 ;
@@ -278,7 +278,7 @@ that even emergent power requires external support to translate into survival.""
 <the-matrix/stages/the-man-i-loved-would-be-the-one> a monomyth:StageRealization ;
     rdfs:label "The man I loved would be the One"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -294,7 +294,7 @@ being believed in before one can fully believe."""@en ;
 <the-matrix/stages/he-is-the-one> a monomyth:StageRealization ;
     rdfs:label "He is the One"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
-    monomyth:involvesCharacter <the-matrix/characters/neo> ,
+    monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 13 ;
