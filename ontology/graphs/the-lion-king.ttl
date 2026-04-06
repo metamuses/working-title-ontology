@@ -1,0 +1,542 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# THE LION KING (Animated Film, 1994)
+# ==============================================================================
+
+<the-lion-king> a monomyth:NarrativeWork,
+        schema:Movie ;
+    rdfs:label "The Lion King"@en ;
+    dcterms:title "The Lion King"@en ;
+    dcterms:created "1994"^^xsd:gYear ;
+    dcterms:creator "Roger Allers",
+        "Rob Minkoff" ;
+    schema:genre "Animation"@en,
+        "Drama"@en,
+        "Musical"@en ;
+    owl:sameAs wd:Q36479 ;
+    monomyth:interpretedBy <the-lion-king/monomyths/simba-journey> ;
+    rdfs:comment """A 1994 animated film in which a young lion prince, exiled by guilt and deception
+after the murder of his father, must reclaim his identity and his kingdom from the uncle who
+usurped them both."""@en .
+
+# --- Monomyth Expression --------------
+
+<the-lion-king/monomyths/simba-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Simba's Hero's Journey in The Lion King"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'The Lion King', focusing on the character Simba's journey from exiled prince to
+sovereign king."""@en ;
+    monomyth:interprets <the-lion-king> ;
+    monomyth:hasHero <the-lion-king/characters/simba> ;
+    monomyth:hasCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/mufasa>,
+        <the-lion-king/characters/scar>,
+        <the-lion-king/characters/nala>,
+        <the-lion-king/characters/rafiki>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa> ;
+    monomyth:hasStageRealization <the-lion-king/stages/everything-the-light-touches>,
+        <the-lion-king/stages/what-have-you-done>,
+        <the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you>,
+        <the-lion-king/stages/run-away-and-never-return>,
+        <the-lion-king/stages/youre-an-outcast-thats-great-so-are-we>,
+        <the-lion-king/stages/hakuna-matata>,
+        <the-lion-king/stages/can-you-feel-the-love-tonight>,
+        <the-lion-king/stages/youre-not-the-simba-i-remember>,
+        <the-lion-king/stages/i-cant-go-back>,
+        <the-lion-king/stages/remember-who-you-are>,
+        <the-lion-king/stages/i-know-what-i-have-to-do>,
+        <the-lion-king/stages/were-going-to-fight-your-uncle-for-this>,
+        <the-lion-king/stages/simba-you-have-to-help-us>,
+        <the-lion-king/stages/tell-them-the-truth>,
+        <the-lion-king/stages/it-is-time>,
+        <the-lion-king/stages/a-kings-time-rises-and-falls-like-the-sun>,
+        <the-lion-king/stages/the-circle-of-life> .
+
+# --- Characters -----------------------
+
+<the-lion-king/characters/simba> a monomyth:Character ;
+    rdfs:label "Simba"@en ;
+    rdfs:comment """A lion prince who is manipulated into believing he caused his father's death,
+lives in self-imposed exile for years, and ultimately reclaims the throne of Pride Rock."""@en ;
+    monomyth:heroOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    owl:sameAs wd:Q844814 .
+
+<the-lion-king/characters/mufasa> a monomyth:Character ;
+    rdfs:label "Mufasa"@en ;
+    rdfs:comment """The king of the Pride Lands and Simba's father, whose teachings persist beyond
+death as the moral and spiritual compass of the hero's journey."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q2629271 .
+
+<the-lion-king/characters/scar> a monomyth:Character ;
+    rdfs:label "Scar"@en ;
+    rdfs:comment """Mufasa's brother and Simba's uncle, who orchestrates the king's assassination and
+manipulates the prince into exile in order to seize the throne for himself."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow,
+        monomyth:Shapeshifter ;
+    owl:sameAs wd:Q2270030 .
+
+<the-lion-king/characters/nala> a monomyth:Character ;
+    rdfs:label "Nala"@en ;
+    rdfs:comment """Simba's childhood friend who, as an adult, locates him in exile and calls him
+back to his responsibilities as the rightful king."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:Herald ;
+    owl:sameAs wd:Q1652455 .
+
+<the-lion-king/characters/rafiki> a monomyth:Character ;
+    rdfs:label "Rafiki"@en ;
+    rdfs:comment """A mandrill shaman who serves as the spiritual intermediary of the Pride Lands,
+guiding Simba toward the vision that restores his identity."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor,
+        monomyth:Trickster ;
+    owl:sameAs wd:Q3414064 .
+
+<the-lion-king/characters/timon> a monomyth:Character ;
+    rdfs:label "Timon"@en ;
+    rdfs:comment """A meerkat who, together with Pumbaa, adopts the exiled Simba and raises him
+under the carefree philosophy of Hakuna Matata."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Trickster,
+        monomyth:Ally ;
+    owl:sameAs wd:Q2364440 .
+
+<the-lion-king/characters/pumbaa> a monomyth:Character ;
+    rdfs:label "Pumbaa"@en ;
+    rdfs:comment """A warthog who, together with Timon, provides Simba with companionship and an
+alternative way of life during his years in exile."""@en ;
+    monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:Trickster ;
+    owl:sameAs wd:Q2583222 .
+
+# --- Stage Realizations ---------------
+
+<the-lion-king/stages/everything-the-light-touches> a monomyth:StageRealization ;
+    rdfs:label "Everything the light touches"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/mufasa> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Mufasa leads the young Simba to the summit of Pride Rock at
+dawn and reveals the kingdom spread before them, declaring that everything the light touches belongs
+to their domain and will one day pass to Simba as king. The call is not a rupture in the ordinary
+world but a formal investiture of destiny delivered by the reigning authority himself, framing the
+hero's journey as the assumption of an inherited obligation rather than the pursuit of an unknown
+summons."""@en .
+
+<the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
+    rdfs:label "What have you done"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/scar>,
+        <the-lion-king/characters/mufasa> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """Scar orchestrates Mufasa's death in the wildebeest stampede
+and immediately turns to the traumatized cub with a calculated accusation: what has Simba done?
+The prince, who had been lured into the gorge as bait, internalizes the guilt completely and accepts
+that he is responsible for his father's death. The refusal of the call is not the hero's independent
+hesitation before the unknown but a manufactured psychic wound imposed by the Shadow, converting
+Simba's eagerness into shame and his birthright into a burden he believes he has forfeited."""@en ;
+    monomyth:hasNarrativeDivergence <the-lion-king/divergences/narrative/manufactured-exile> .
+
+<the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> a monomyth:StageRealization ;
+    rdfs:label "The great kings will always be there to guide you"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/mufasa> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """On the evening before the stampede, Mufasa tells Simba that
+the great kings of the past look down from the stars and will always be there to guide him. The
+lesson is intimate and tender, embedded in a father-son conversation about bravery rather than
+delivered as a ritual endowment of magical instruments. Its full significance lies dormant throughout
+the hero's exile, activating only when Rafiki leads Simba to the reflecting pool and the ghostly
+vision that completes the circuit between mortal teaching and ancestral intervention."""@en ;
+    monomyth:fitNote """The supernatural aid is split across two temporal moments: the planting of
+the cosmological framework (here, before the crisis) and its activation through Rafiki's shamanic
+mediation and Mufasa's ghost (at stage 10, Atonement with the Father). The seed and the
+flowering are separated by the entire arc of exile."""@en ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/ancestral-cosmology> .
+
+<the-lion-king/stages/run-away-and-never-return> a monomyth:StageRealization ;
+    rdfs:label "Run away and never return"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/scar> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Scar commands the grief-stricken cub to flee the Pride Lands
+and never return, then dispatches the hyenas to ensure the exile is permanent. Simba runs blindly
+through thornbush and scrubland until the grasslands give way to open desert. The crossing is not a
+heroic commitment to adventure but a panicked flight driven by manufactured guilt, and the threshold
+itself is marked not by a guardian's challenge but by the landscape's indifference: the Pride Lands
+simply end, and the emptiness beyond offers no welcome and no promise."""@en .
+
+<the-lion-king/stages/youre-an-outcast-thats-great-so-are-we> a monomyth:StageRealization ;
+    rdfs:label "You're an outcast, that's great, so are we"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """Simba collapses in the desert and is discovered near death by
+Timon and Pumbaa, who revive him and recognize in his exile a mirror of their own marginality.
+The prince who was to inherit a kingdom is swallowed whole by anonymity: his royal identity is
+irrelevant in the jungle, his past is actively suppressed, and the community that adopts him values
+him precisely for what he no longer claims to be. The symbolic death of the former self is achieved
+not through violence or containment but through the gentler annihilation of simply being
+forgotten."""@en .
+
+<the-lion-king/stages/hakuna-matata> a monomyth:StageRealization ;
+    rdfs:label "Hakuna Matata"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """The film compresses Simba's entire adolescence and early
+adulthood into a musical montage of carefree indulgence: eating grubs, sleeping in the open,
+swimming in waterfalls, growing from cub to full-maned lion without crisis or conflict. The road
+of trials is inverted into a road of pleasures, where the ordeal is not suffering but the absence
+of it, and the danger lies in the progressive erosion of purpose that comfort produces. Each
+year of untroubled contentment deepens Simba's distance from his identity and makes the eventual
+return more difficult, not less."""@en ;
+    monomyth:hasNarrativeDivergence <the-lion-king/divergences/narrative/idyll-as-ordeal> .
+
+<the-lion-king/stages/can-you-feel-the-love-tonight> a monomyth:StageRealization ;
+    rdfs:label "Can you feel the love tonight"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """Nala arrives in the jungle unexpectedly, and the reunion
+between the two childhood friends unfolds into romantic recognition over the course of a single
+evening. The encounter restores something Simba had lost access to: a witness to his real identity
+who knew him before exile redefined him. Nala embodies the nurturing totality Campbell describes not
+through divine abstraction but through the concrete insistence that Simba is still the lion she
+grew up with, and that the kingdom he abandoned still needs him."""@en .
+
+<the-lion-king/stages/youre-not-the-simba-i-remember> a monomyth:StageRealization ;
+    rdfs:label "You're not the Simba I remember"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """Nala confronts Simba with the devastation Scar has wrought
+on the Pride Lands and demands he return to reclaim the throne. The temptation the hero faces is not
+a seductive figure but the entire worldview he has internalized during exile: Hakuna Matata, the
+philosophy of no worries and no responsibility, which now functions as an ideology of avoidance
+dressed in the language of liberation. Simba's resistance to Nala's plea reveals how deeply the
+years of comfortable denial have rooted, making the temptation structural rather than personal and
+the seduction a matter of identity rather than desire."""@en ;
+    monomyth:fitNote """The temptress function is distributed between the Hakuna Matata philosophy
+that Timon and Pumbaa embody and the specific confrontation with Nala that forces the choice into
+the open. No single character seduces the hero; the entire exile ecosystem tempts him to remain
+where he is."""@en ;
+    monomyth:hasNarrativeDivergence <the-lion-king/divergences/narrative/philosophy-as-seduction> ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/temptation-as-worldview> .
+
+<the-lion-king/stages/i-cant-go-back> a monomyth:StageRealization ;
+    rdfs:label "I can't go back"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """Simba tells Nala plainly that he cannot go back, and the
+refusal is not the reluctance of a hero who has tasted transcendence and prefers to linger in bliss,
+but the paralysis of one who believes himself complicit in the catastrophe he would need to repair.
+The weight holding him in place is guilt rather than contentment, and the paradise he clings to is
+not the special world's reward but a shelter from the ordinary world's judgment. His refusal is
+genuine and deeply felt, rooted in a lie he has carried since childhood."""@en ;
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/early-refusal-of-return> .
+
+<the-lion-king/stages/remember-who-you-are> a monomyth:StageRealization ;
+    rdfs:label "Remember who you are"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/mufasa>,
+        <the-lion-king/characters/rafiki> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription """Rafiki leads Simba to a reflecting pool where Mufasa's face
+appears in the water, and then the sky itself opens to reveal the ghostly figure of the dead king
+among the clouds. Mufasa speaks directly to his son: you have forgotten who you are, and so have
+forgotten me; look inside yourself; you are more than what you have become; remember who you are.
+The encounter literalizes Campbell's archetype with extraordinary precision: the father is both
+judge and initiator, the confrontation demands that the hero surrender the false self that exile has
+constructed, and the annihilation of the ego that Scar's guilt imposed is reversed by the father's
+insistence that the son already possesses what he believes he has lost. Of all seventeen stages in
+this realization, this is the one where the archetypal structure and the narrative vehicle converge
+most completely."""@en .
+
+<the-lion-king/stages/i-know-what-i-have-to-do> a monomyth:StageRealization ;
+    rdfs:label "I know what I have to do"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/rafiki> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:realizationDescription """Simba tells Rafiki that he knows what he must do, but
+acknowledges that going back means facing his past. Rafiki strikes him over the head with his stick
+and asks what it matters, since it is in the past. The moment of divine knowledge is rendered as a
+sudden, visceral clarity rather than a sustained state of blissful rest: Simba does not transcend
+the categories of his existence so much as he finally accepts them, recognizing that the pain he has
+been fleeing is the very ground on which he must build. He turns toward the Pride Lands and begins
+to run."""@en .
+
+<the-lion-king/stages/were-going-to-fight-your-uncle-for-this> a monomyth:StageRealization ;
+    rdfs:label "We're going to fight your uncle for this?"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:realizationDescription """Simba races across the savanna toward the Pride Lands with
+Nala, Timon, and Pumbaa joining the charge. The journey inverts the canonical magic flight: the hero
+does not flee the special world carrying a prize, but rather hurtles toward the site of his
+unresolved trauma carrying nothing but recovered intention. The devastation he encounters on arrival
+confirms the urgency: the Pride Lands under Scar's reign have become a wasteland of stripped earth
+and bleached bone, the kingdom's decay a visible measure of how long the hero's absence has
+lasted."""@en ;
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/flight-toward-danger> .
+
+<the-lion-king/stages/simba-you-have-to-help-us> a monomyth:StageRealization ;
+    rdfs:label "Simba, you have to help us"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala>,
+        <the-lion-king/characters/timon>,
+        <the-lion-king/characters/pumbaa>,
+        <the-lion-king/characters/rafiki> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription """The battle for Pride Rock becomes a collective effort. Timon
+and Pumbaa create a diversionary hula dance to scatter the hyena sentries. Nala leads the lionesses
+into open combat. Rafiki dispatches opponents with his ceremonial staff. The rescue is not an
+extraction of the hero from peril but the convergence of every community that shaped him, exile
+companions and natal pride alike, fighting together on his behalf. The hero who had once been told
+he was alone in his guilt discovers that he has never been without allies, and that the two worlds
+of his divided life are willing to unite behind his cause."""@en .
+
+<the-lion-king/stages/tell-them-the-truth> a monomyth:StageRealization ;
+    rdfs:label "Tell them the truth"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/scar> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Scar corners Simba at the edge of Pride Rock and forces him
+to confess before the pride that he killed Mufasa, savoring the repetition of his original
+manipulation. But when Simba dangles over the flames and Scar whispers the truth, that he himself
+killed Mufasa, the revelation shatters the psychic architecture that has held the hero captive since
+childhood. Simba surges back and forces the public confession that liberates him. The ultimate boon
+is not an object or a power but a truth: the hero's innocence, restored to him in the same instant
+that the kingdom's betrayal is made visible to all."""@en ;
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/boon-during-return> .
+
+<the-lion-king/stages/it-is-time> a monomyth:StageRealization ;
+    rdfs:label "It is time"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/rafiki> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription """With Scar defeated and cast from Pride Rock, Rafiki
+approaches Simba and gestures toward the summit with three quiet words: it is time. Simba ascends
+the rain-slicked promontory alone, each step a visible integration of the exile's hard-won
+self-knowledge with the prince's inherited obligation. At the peak he roars into the storm, and the
+assembled pride roars in answer. The threshold is not a boundary between two worlds but a vertical
+axis between earth and sky, and crossing it requires the hero to stand where his father once stood,
+claiming the place not as an inheritor but as one who has earned it through suffering, loss, and
+return."""@en .
+
+<the-lion-king/stages/a-kings-time-rises-and-falls-like-the-sun> a monomyth:StageRealization ;
+    rdfs:label "A king's time rises and falls like the sun"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription """The rain falls on the scorched Pride Lands and green begins to
+return, the landscape itself responding to the restoration of rightful sovereignty. Simba now holds
+both registers of his experience simultaneously: the carefree wisdom of the jungle years, which
+taught him that not everything requires gravity, and the weight of the crown, which demands that
+some things do. Mufasa's early teaching that a king's time rises and falls like the sun is no longer
+an abstraction but a lived truth. The hero who fled one world and was absorbed by another has
+returned as the equilibrium point between them, neither denying his exile nor being defined
+by it."""@en .
+
+<the-lion-king/stages/the-circle-of-life> a monomyth:StageRealization ;
+    rdfs:label "The Circle of Life"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/nala>,
+        <the-lion-king/characters/rafiki> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription """The film closes by returning to its opening image: Rafiki
+lifts a newborn cub above the assembled kingdom at the summit of Pride Rock as the sun rises and the
+animals gather below in recognition. The circle of life has completed one full revolution. Simba
+stands where Mufasa once stood, no longer fearing the cycle of succession that once seemed to demand
+his father's erasure. The freedom the hero has attained is not freedom from mortality or obligation
+but freedom within them: the capacity to occupy his place in the cycle without clinging to it,
+knowing that his own time too will rise and fall, and that the pattern will hold."""@en .
+
+# --- Narrative Divergences ------------
+
+<the-lion-king/divergences/narrative/manufactured-exile> a monomyth:NarrativeDivergence ;
+    rdfs:label "Manufactured exile divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/what-have-you-done> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheCall ;
+    monomyth:divergenceRationale """Campbell's refusal typically originates in the hero's own
+psyche: fear, attachment, inadequacy, or simple inertia. The Lion King externalizes the mechanism
+entirely. Scar engineers both the trauma (Mufasa's murder) and the interpretive frame (Simba's
+guilt), manufacturing a refusal that the hero experiences as authentic self-judgment but that is in
+fact an act of narrative sabotage by the Shadow. This produces a refusal that is at once more
+absolute and more fragile than the canonical form: absolute because Simba's guilt is total and
+unquestioned for years, fragile because it rests on a factual lie that, once exposed, dissolves
+the refusal entirely. The divergence reflects the film's investment in deception as a structural
+engine: the hero's journey is arrested not by his own limitations but by a false story imposed
+upon him."""@en .
+
+<the-lion-king/divergences/narrative/idyll-as-ordeal> a monomyth:NarrativeDivergence ;
+    rdfs:label "Idyll as ordeal divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/hakuna-matata> ;
+    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
+    monomyth:divergenceRationale """Campbell's road of trials strips the hero of illusions through
+suffering, failure, and encounter with forces greater than the self. The Lion King replaces this
+gauntlet with an extended paradise: years of ease, friendship, and philosophical contentment that
+never once test Simba's physical courage. The ordeal is hidden inside the comfort, operating as
+a slow anaesthetic that numbs the hero's sense of purpose and identity without his awareness.
+The film suggests that the most dangerous trial is not the one that breaks the hero but the one
+that never arrives, leaving the hero intact but hollow, capable but unmotivated, and progressively
+less able to recognize the difference between peace and avoidance."""@en .
+
+<the-lion-king/divergences/narrative/philosophy-as-seduction> a monomyth:NarrativeDivergence ;
+    rdfs:label "Philosophy as seduction divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/youre-not-the-simba-i-remember> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """The temptation that arrests Simba's journey is not embodied in
+a seductive figure but in a comprehensive worldview. Hakuna Matata functions as a complete ethical
+system that reframes irresponsibility as wisdom and disengagement as enlightenment, offering the
+hero not momentary pleasure but a permanent alternative identity. The seduction is therefore
+structural rather than episodic: Simba does not resist a single encounter but must reject an entire
+way of being that he has practiced for years and that his closest companions sincerely endorse.
+This makes the temptation both more insidious and more sympathetic than Campbell's archetype
+typically allows, because the philosophy is not malicious. It is simply insufficient for someone
+whose obligations extend beyond himself."""@en .
+
+<the-lion-king/divergences/narrative/boon-deferred-to-return> a monomyth:NarrativeDivergence ;
+    rdfs:label "Boon deferred to return divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/tell-them-the-truth> ;
+    monomyth:divergesFrom monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """In Campbell's model, the hero achieves the boon at the
+culmination of Initiation and then carries it back across the return threshold. The Lion King
+defers the boon until the hero is already deep within the Return sequence: Simba must race home,
+rally allies, and confront Scar before the truth that constitutes his ultimate prize is revealed.
+The narrative logic is that Simba's boon, his own innocence and the public exposure of Scar's
+treachery, cannot exist outside the confrontation that produces it. It is not a grail to be seized
+and transported but a revelation that can only occur in the presence of the deceiver, before the
+community that was deceived. The displacement reflects a narrative in which the object of the quest
+and the site of the return are the same place."""@en .
+
+# --- Sequential Divergences -----------
+
+<the-lion-king/divergences/sequential/early-refusal-of-return> a monomyth:SequentialDivergence ;
+    rdfs:label "Early refusal of return divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/i-cant-go-back> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """The Refusal of the Return is canonically the twelfth stage,
+occurring after the hero has obtained the Ultimate Boon and must decide whether to bring it back.
+In The Lion King, the refusal surfaces at narrative position nine, before the Atonement with the
+Father and the Apotheosis, embedded within the Initiation act rather than opening the Return. This
+displacement reflects the film's particular architecture of guilt: Simba's reluctance to return
+does not stem from having achieved transcendence and preferring to remain in bliss, but from having
+never completed the Initiation at all. His refusal is a symptom of arrested development rather than
+post-transformative reluctance, and it must be overcome before the remaining Initiation stages can
+proceed. The displacement has a cascading effect, shifting the Atonement and Apotheosis each one
+position forward in the narrative sequence."""@en .
+
+<the-lion-king/divergences/sequential/flight-toward-danger> a monomyth:SequentialDivergence ;
+    rdfs:label "Flight toward danger divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/were-going-to-fight-your-uncle-for-this> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """Campbell's magic flight describes the hero's escape from the
+special world, often pursued by its guardians, after claiming the boon. The Lion King inverts the
+directionality entirely: the hero has not yet claimed his boon and races toward the source of danger
+rather than away from it. The flight occurs at narrative position twelve, one position before its
+canonical placement, and its function shifts from perilous retreat to perilous advance. This
+inversion is structurally necessary because the boon itself awaits at the destination: Simba cannot
+flee with what he does not yet possess."""@en .
+
+<the-lion-king/divergences/sequential/boon-during-return> a monomyth:SequentialDivergence ;
+    rdfs:label "Boon during return divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/tell-them-the-truth> ;
+    monomyth:divergesFrom monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """The Ultimate Boon is canonically the eleventh stage, closing the
+Initiation act. In The Lion King it occupies narrative position fourteen, arriving after the Magic
+Flight and the Rescue from Without have already begun the Return sequence. This displacement of
+three positions is the most significant sequential divergence in the film's monomyth realization.
+The Initiation's climactic achievement is deferred into the Return because the boon, Simba's
+innocence and the public unmasking of Scar, is locationally and socially bound: it can only be
+obtained at Pride Rock, before the assembled pride, in the presence of the villain whose confession
+produces it. The narrative thus braids the end of Initiation into the middle of Return, collapsing
+the two acts into a single dramatic sequence."""@en .
+
+# --- Semiotic Divergences -------------
+
+<the-lion-king/divergences/semiotic/ancestral-cosmology> a monomyth:SemioticDivergence ;
+    rdfs:label "Ancestral cosmology divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale """Campbell's supernatural aid typically takes the form of a wizard,
+crone, ferryman, or divine messenger who equips the hero with specific talismans or wisdom before
+the threshold is crossed. The Lion King replaces this Western mythological inventory with an African
+cosmological framework in which the dead persist as ancestral presences embedded in the natural
+world itself, watching from the stars and accessible through shamanic mediation. The aid is not a
+discrete gift bestowed by a singular figure but a continuous spiritual infrastructure that the hero
+must learn to perceive and trust. The semiotic shift from individual magical helper to communal
+ancestral network reframes the supernatural as relational rather than transactional, and the aid
+as something the hero must grow into rather than simply receive."""@en .
+
+<the-lion-king/divergences/semiotic/temptation-as-worldview> a monomyth:SemioticDivergence ;
+    rdfs:label "Temptation as worldview divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/youre-not-the-simba-i-remember> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """Campbell encodes the temptation stage through a gendered
+semiotic register: the feminine as the locus of desire, attachment, and worldly entanglement that
+threatens to bind the hero to the flesh rather than the spirit. The Lion King dissolves the gendered
+sign entirely and replaces it with a philosophical system, Hakuna Matata, that operates as a
+complete counter-narrative to the hero's destiny. The temptation is semiotic in the deepest sense:
+it is not a person, an object, or even a moment, but a language for interpreting experience that
+renders responsibility invisible and contentment self-justifying. The shift from feminine figure to
+impersonal philosophy reflects both the film's investment in ideology as a narrative force and its
+departure from the gendered cosmology that Campbell's comparative mythology inherits."""@en .
