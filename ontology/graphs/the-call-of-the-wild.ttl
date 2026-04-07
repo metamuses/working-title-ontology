@@ -20,7 +20,8 @@
     dcterms:created "1903"^^xsd:gYear ;
     dcterms:creator "Jack London" ;
     schema:genre "Adventure"@en,
-        "Naturalism"@en ;
+        "Nature"@en,
+        "Survival"@en ;
     owl:sameAs wd:Q476871 ;
     monomyth:interpretedBy <the-call-of-the-wild/monomyths/buck-journey> ;
     rdfs:comment """A 1903 novel in which a domesticated dog is stolen from a California estate
