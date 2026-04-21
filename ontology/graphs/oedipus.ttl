@@ -1,0 +1,199 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# OEDIPUS THE KING (Greek Mythology)
+# ==============================================================================
+
+<oedipus-myth> a monomyth:NarrativeWork,
+        schema:CreativeWork ;
+    rdfs:label "The Myth of Oedipus"@en ;
+    dcterms:title "Oedipus Rex / Oedipus at Colonus"@en ;
+    dcterms:creator "Sophocles" ;
+    schema:genre "Greek Tragedy"@en,
+        "Mythology"@en ;
+    owl:sameAs wd:Q130235 ;
+    monomyth:interpretedBy <oedipus-myth/monomyths/oedipus-journey> ;
+    rdfs:comment """A classic Greek myth detailing the life of Oedipus, who is fated to kill his 
+father and marry his mother, and his subsequent journey toward exile and spiritual 
+transformation."""@en .
+
+# --- Monomyth Expression --------------
+
+<oedipus-myth/monomyths/oedipus-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Oedipus's Hero's Journey"@en ;
+    monomyth:interprets <oedipus-myth> ;
+    monomyth:hasHero <oedipus-myth/characters/oedipus> ;
+    monomyth:hasCharacter <oedipus-myth/characters/oedipus>,
+        <oedipus-myth/characters/jocasta>,
+        <oedipus-myth/characters/laius>,
+        <oedipus-myth/characters/teiresias>,
+        <oedipus-myth/characters/the-sphinx>,
+        <oedipus-myth/characters/creon>,
+        <oedipus-myth/characters/antigone> ;
+    monomyth:hasStageRealization <oedipus-myth/stages/the-oracle-prophecy>,
+        <oedipus-myth/stages/fleeing-corinth>,
+        <oedipus-myth/stages/meeting-the-blind-seer>,
+        <oedipus-myth/stages/the-triple-crossroads>,
+        <oedipus-myth/stages/riddle-of-the-sphinx>,
+        <oedipus-myth/stages/the-plague-of-thebes>,
+        <oedipus-myth/stages/marriage-to-the-queen>,
+        <oedipus-myth/stages/jocastas-plea>,
+        <oedipus-myth/stages/the-herdsmans-revelation>,
+        <oedipus-myth/stages/the-self-blinding>,
+        <oedipus-myth/stages/lifting-the-plague>,
+        <oedipus-myth/stages/the-guiding-daughter>,
+        <oedipus-myth/stages/the-sacred-grove>,
+        <oedipus-myth/stages/transformation-at-colonus> .
+
+# --- Characters -----------------------
+
+<oedipus-myth/characters/oedipus> a monomyth:Character ;
+    rdfs:label "Oedipus"@en ;
+    monomyth:heroOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    owl:sameAs wd:Q130235 .
+
+<oedipus-myth/characters/jocasta> a monomyth:Character ;
+    rdfs:label "Jocasta"@en ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter ; # Shifts from mother to wife
+    owl:sameAs wd:Q131445 .
+
+<oedipus-myth/characters/laius> a monomyth:Character ;
+    rdfs:label "Laius"@en ;
+    monomyth:embodiesArchetype monomyth:Shadow, monomyth:ThresholdGuardian ;
+    owl:sameAs wd:Q466838 .
+
+<oedipus-myth/characters/teiresias> a monomyth:Character ;
+    rdfs:label "Teiresias"@en ;
+    monomyth:embodiesArchetype monomyth:Mentor, monomyth:Herald ;
+    owl:sameAs wd:Q30764 .
+
+<oedipus-myth/characters/the-sphinx> a monomyth:Character ;
+    rdfs:label "The Sphinx"@en ;
+    monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
+    owl:sameAs wd:Q150217 .
+
+<oedipus-myth/characters/antigone> a monomyth:Character ;
+    rdfs:label "Antigone"@en ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q131351 .
+
+# --- Stage Realizations ---------------
+
+<oedipus-myth/stages/the-oracle-prophecy> a monomyth:StageRealization ;
+    rdfs:label "The Oracle's Prophecy"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Oedipus hears from the Oracle at Delphi that he is 
+destined to kill his father and wed his mother."""@en .
+
+<oedipus-myth/stages/fleeing-corinth> a monomyth:StageRealization ;
+    rdfs:label "Fleeing Corinth"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """Oedipus leaves Corinth to avoid the prophecy. In 
+trying to 'refuse' the fate, he actually sets out on the path to fulfill it."""@en ;
+    monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/proactive-refusal> .
+
+<oedipus-myth/stages/meeting-the-blind-seer> a monomyth:StageRealization ;
+    rdfs:label "Meeting the Blind Seer"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <oedipus-myth/characters/teiresias> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """Teiresias provides the 'truth' as a form of aid, 
+though Oedipus initially rejects the wisdom because it is too painful to bear."""@en .
+
+<oedipus-myth/stages/the-triple-crossroads> a monomyth:StageRealization ;
+    rdfs:label "The Triple Crossroads"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <oedipus-myth/characters/laius> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Oedipus kills a traveler (Laius) at a crossroads. 
+This violent act is his crossing into the tragic world of his destiny."""@en .
+
+<oedipus-myth/stages/riddle-of-the-sphinx> a monomyth:StageRealization ;
+    rdfs:label "Riddle of the Sphinx"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <oedipus-myth/characters/the-sphinx> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """Oedipus confronts the Sphinx. By solving the 
+riddle, he 'dies' as a wandering traveler and is 'reborn' as the King of Thebes."""@en .
+
+<oedipus-myth/stages/marriage-to-the-queen> a monomyth:StageRealization ;
+    rdfs:label "Marriage to the Queen"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <oedipus-myth/characters/jocasta> ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """The 'Goddess' (Queen) is his own mother. The 
+union brings power and status but is the ultimate source of his corruption."""@en ;
+    monomyth:hasSemioticDivergence <oedipus-myth/divergences/semiotic/incestuous-goddess> .
+
+<oedipus-myth/stages/jocastas-plea> a monomyth:StageRealization ;
+    rdfs:label "Jocasta's Plea"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <oedipus-myth/characters/jocasta> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """Jocasta begs Oedipus to stop seeking the truth. 
+She represents the temptation to remain in comfortable, powerful ignorance."""@en .
+
+<oedipus-myth/stages/the-herdsmans-revelation> a monomyth:StageRealization ;
+    rdfs:label "The Herdsman's Revelation"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <oedipus-myth/characters/laius> ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """Oedipus realizes he has already 'atoned' with 
+the father by killing him. The reconciliation is replaced by total psychic collapse."""@en .
+
+<oedipus-myth/stages/the-self-blinding> a monomyth:StageRealization ;
+    rdfs:label "The Self-Blinding"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription """Oedipus blinds himself. In losing his physical 
+sight, he gains 'inner sight' or prophetic clarity, transcending mortal hubris."""@en .
+
+<oedipus-myth/stages/the-guiding-daughter> a monomyth:StageRealization ;
+    rdfs:label "The Guiding Daughter"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <oedipus-myth/characters/antigone> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Antigone guides the blind, broken Oedipus 
+through the wilderness to his final resting place."""@en .
+
+# --- Narrative Divergences ------------
+
+<oedipus-myth/divergences/narrative/proactive-refusal> a monomyth:NarrativeDivergence ;
+    rdfs:label "Proactive Refusal divergence"@en ;
+    monomyth:divergenceOf <oedipus-myth/stages/fleeing-corinth> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheCall ;
+    monomyth:divergenceRationale """In the Oedipus myth, refusal is not an act of 
+cowardice but a proactive attempt to outrun fate. This creates the 'Tragic Irony' 
+where the act of refusal is the very engine of the journey's fulfillment."""@en .
+
+# --- Semiotic Divergences -------------
+
+<oedipus-myth/divergences/semiotic/incestuous-goddess> a monomyth:SemioticDivergence ;
+    rdfs:label "Incestuous Goddess divergence"@en ;
+    monomyth:divergenceOf <oedipus-myth/stages/marriage-to-the-queen> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """The 'Goddess' figure is semiotically shifted 
+from a figure of divine grace to one of biological and social taboo. The marriage 
+represents the hero's reward in the 'Ordinary World' (Thebes), but its semiotic 
+charge is negative and destructive."""@en .
