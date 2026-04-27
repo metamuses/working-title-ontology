@@ -23,10 +23,13 @@ for file in "${SUBGRAPH_FILES[@]}"; do
 
   echo "Appending ${filepath#$ROOT_DIR/}"
 
-  # Append the file content, skipping the prefixes header (first 10 lines)
-  tail -n +11 "$filepath" >> "$MAIN_GRAPH"
+  # Add an extra blank line before each individual graph contents
+  echo >> "$MAIN_GRAPH"
 
-  # Add an extra blank line between individual graph contents
+  # Append the file content, skipping the headers up to the first blank line
+  sed '1,/^$/d' "$filepath" >> "$MAIN_GRAPH"
+
+  # Add an extra blank line after each individual graph contents
   echo >> "$MAIN_GRAPH"
 done
 
