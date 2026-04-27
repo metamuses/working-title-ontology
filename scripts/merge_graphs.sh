@@ -12,6 +12,7 @@ MAIN_GRAPH="$ROOT_DIR/ontology/graph.ttl"
 SUBGRAPHS_DIR="$ROOT_DIR/ontology/graphs"
 SUBGRAPH_FILES=(
   the-matrix.ttl
+  the-lion-king.ttl
 )
 
 # Ensure the main graph file exists before attempting to append to it
