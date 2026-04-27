@@ -13,7 +13,7 @@
 # ==============================================================================
 
 <batman-year-one> a monomyth:NarrativeWork,
-        schema:CreativeWork ;
+        schema:ComicStory ;
     rdfs:label "Batman: Year One"@en ;
     dcterms:title "Batman: Year One"@en ;
     dcterms:created "1987"^^xsd:gYear ;
@@ -27,7 +27,7 @@
     rdfs:comment """A landmark comic book arc that reimagines Bruce Wayne's first year as 
 Batman and Jim Gordon's first year with the GCPD in a decaying Gotham City."""@en .
 
-# --- Monomyth Expression --------------
+# --- Bruce Wayne's Monomyth Expression --------------
 
 <batman-year-one/monomyths/bruce-wayne-journey> a monomyth:MonomythExpression ;
     rdfs:label "Bruce Wayne's Hero's Journey in Batman: Year One"@en ;
@@ -40,19 +40,23 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
         <batman-year-one/characters/selina-kyle>,
         <batman-year-one/characters/carmine-falcone>,
         <batman-year-one/characters/commissioner-loeb>,
-        <batman-year-one/characters/harvey-dent>,
-        <batman-year-one/characters/alfred-pennyworth> ;
-    monomyth:hasStageRealization <batman-year-one/stages/the-train-to-gotham>, #4 Gennaio
-        <batman-year-one/stages/i-am-not-ready>, #11 Marzo 
-        <batman-year-one/stages/the-bat-at-the-window>, # 11 Marzo post fallimentare uscita
-        <batman-year-one/stages/the-first-night-out>, #9 Aprile, 19 maggio, 6 giugno 
-        <batman-year-one/stages/tenement-siege>, #6 Giugno
-        <batman-year-one/stages/dismantling-the-mob>,
-        <batman-year-one/stages/the-cat-and-the-bat>,
-        <batman-year-one/stages/dinner-party-confrontation>,
+    monomyth:hasStageRealization <batman-year-one/stages/the-train-to-gotham>, 
+        <batman-year-one/stages/i-am-not-ready>, 
+        <batman-year-one/stages/the-bat-at-the-window>, 
+        <batman-year-one/stages/the-dinner-party-ambush>, 
+        <batman-year-one/stages/the-tenement-siege>,
+        <batman-year-one/stages/the-distributed-trials>, 
+        <batman-year-one/stages/encounter-with-selina>,
+        <batman-year-one/stages/the-absent-temptation>,
+        <batman-year-one/stages/the-absent-atonement>,
+        <batman-year-one/stages/the-absent-apotheosis>,
         <batman-year-one/stages/the-bridge-rescue>,
-        <batman-year-one/stages/gordons-silent-partnership>,
-        <batman-year-one/stages/bruce-wayne-and-the-batman> .
+        <batman-year-one/stages/refusal-of-the-return>,
+        <batman-year-one/stages/the-magic-flight>,
+        <batman-year-one/stages/rescue-from-without>, 
+        <batman-year-one/stages/crossing-the-return-threshold>,
+        <batman-year-one/stages/master-of-two-worlds>,
+        <batman-year-one/stages/freedom-to-live> .
 
 # --- Characters -----------------------
 
@@ -434,3 +438,29 @@ corruption, and tactical reality where 'divine knowledge' has no place."""@en .
     monomyth:divergenceRationale """The Return act is logically impossible within the scope of an origin story. 
 The narrative ends precisely at the moment the hero achieves his identity, serving as a prologue rather than a full monomythic cycle. 
 There is no 'return' because the story is a beginning."""@en .
+
+
+# --- Jim Gordon's Monomyth Expression --------------
+<batman-year-one/monomyths/jim-gordon-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Jim Gordon's Hero's Journey in Batman: Year One"@en ;
+    rdfs:comment """An interpretation of the monomyth structure as realized through Jim Gordon, 
+whose grounded, deeply human arc serves as a counter-narrative to Bruce Wayne's semiotic dehumanization."""@en ;
+    monomyth:interprets <batman-year-one> ;
+    monomyth:hasHero <batman-year-one/characters/jim-gordon> ;
+    monomyth:hasCharacter <batman-year-one/characters/jim-gordon>,
+        <batman-year-one/characters/barbara-gordon>,
+        <batman-year-one/characters/detective-flass>,
+        <batman-year-one/characters/commissioner-loeb>,
+        <batman-year-one/characters/sarah-essen>,
+        <batman-year-one/characters/officer-merkel>,
+        <batman-year-one/characters/jefferson-skeevers>,
+        <batman-year-one/characters/bruce-wayne> ;
+    monomyth:hasStageRealization <batman-year-one/stages/gordon/arrival-in-gotham>,
+        <batman-year-one/stages/gordon/waiting-to-report>,
+        <batman-year-one/stages/gordon/beating-flass>,
+        <batman-year-one/stages/gordon/the-honest-cop-trials>,
+        <batman-year-one/stages/gordon/the-intellectual-equal>,
+        <batman-year-one/stages/gordon/the-extramarital-affair>,
+        <batman-year-one/stages/gordon/confession-to-barbara>,
+        <batman-year-one/stages/gordon/the-bridge-alliance>,
+        <batman-year-one/stages/gordon/the-rooftop-equilibrium> .
