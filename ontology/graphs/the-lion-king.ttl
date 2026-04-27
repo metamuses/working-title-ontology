@@ -114,8 +114,8 @@ guiding Simba toward the vision that restores his identity."""@en ;
     rdfs:comment """A meerkat who, together with Pumbaa, adopts the exiled Simba and raises him
 under the carefree philosophy of Hakuna Matata."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
-    monomyth:embodiesArchetype monomyth:Trickster,
-        monomyth:Ally ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:Trickster ;
     owl:sameAs wd:Q2691406 .
 
 <the-lion-king/characters/pumbaa> a monomyth:Character ;
@@ -144,7 +144,7 @@ hero's journey as the assumption of an inherited obligation rather than the purs
 summons."""@en .
 
 <the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
-    rdfs:label "What have you done"@en ;
+    rdfs:label "What have you done?"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar>,
@@ -169,9 +169,9 @@ Simba's eagerness into shame and his birthright into a burden he believes he has
     monomyth:realizationDescription """On the evening before the stampede, Mufasa tells Simba that
 the great kings of the past look down from the stars and will always be there to guide him. The
 lesson is intimate and tender, embedded in a father-son conversation about bravery rather than
-delivered as a ritual endowment of magical instruments. Its full significance lies dormant throughout
-the hero's exile, activating only when Rafiki leads Simba to the reflecting pool and the ghostly
-vision that completes the circuit between mortal teaching and ancestral intervention."""@en ;
+delivered as a ritual endowment of magical instruments. Its full significance lies dormant
+throughout the hero's exile, activating only when Rafiki leads Simba to the reflecting pool and the
+ghostly vision that completes the circuit between mortal teaching and ancestral intervention."""@en ;
     monomyth:fitNote """The supernatural aid is split across two temporal moments: the planting of
 the cosmological framework (here, before the crisis) and its activation through Rafiki's shamanic
 mediation and Mufasa's ghost (at stage 10, Atonement with the Father). The seed and the
@@ -285,16 +285,21 @@ genuine and deeply felt, rooted in a lie he has carried since childhood."""@en ;
         <the-lion-king/characters/rafiki> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 10 ;
-    monomyth:realizationDescription """Rafiki leads Simba to a reflecting pool where Mufasa's face
-appears in the water, and then the sky itself opens to reveal the ghostly figure of the dead king
-among the clouds. Mufasa speaks directly to his son: you have forgotten who you are, and so have
-forgotten me; look inside yourself; you are more than what you have become; remember who you are.
-The encounter literalizes Campbell's archetype with extraordinary precision: the father is both
-judge and initiator, the confrontation demands that the hero surrender the false self that exile has
-constructed, and the annihilation of the ego that Scar's guilt imposed is reversed by the father's
-insistence that the son already possesses what he believes he has lost. Of all seventeen stages in
-this realization, this is the one where the archetypal structure and the narrative vehicle converge
-most completely."""@en .
+    monomyth:realizationDescription """Rafiki tracks Simba into the wilderness after his refusal of
+Nala's plea and leads him to the edge of a still pool, where an invitation to look harder at his
+own reflection yields not his face but his father's. The vision does not stop there: the sky cracks
+open and Mufasa's ghostly form fills the clouds above him, calling down to his son across the
+boundary that death has placed between them. The dead king does not console, instead he names what
+the years of exile have cost: the slow dissolution of identity that comfort and avoidance have
+accomplished and the distance between the lion Simba has become and the one he actually is, closing
+with a charge that is simultaneously a command, a recognition, and an act of love, demanding that
+Simba recover the self he has abandoned."""@en ;
+    monomyth:fitNote """The encounter literalizes Campbell's archetype with extraordinary precision:
+the father is both judge and initiator, the confrontation demands that the hero surrender the false
+self that exile has constructed, and the annihilation of the ego that Scar's guilt imposed is
+reversed by the father's insistence that the son already possesses what he believes he has lost.
+Of all seventeen stages in this realization, this is the one where the archetypal structure and the
+narrative vehicle converge most completely. """@en .
 
 <the-lion-king/stages/i-know-what-i-have-to-do> a monomyth:StageRealization ;
     rdfs:label "I know what I have to do"@en ;
@@ -385,14 +390,13 @@ return."""@en .
     monomyth:involvesCharacter <the-lion-king/characters/simba> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
-    monomyth:realizationDescription """The rain falls on the scorched Pride Lands and green begins to
-return, the landscape itself responding to the restoration of rightful sovereignty. Simba now holds
-both registers of his experience simultaneously: the carefree wisdom of the jungle years, which
-taught him that not everything requires gravity, and the weight of the crown, which demands that
-some things do. Mufasa's early teaching that a king's time rises and falls like the sun is no longer
-an abstraction but a lived truth. The hero who fled one world and was absorbed by another has
-returned as the equilibrium point between them, neither denying his exile nor being defined
-by it."""@en .
+    monomyth:realizationDescription """The rain falls on the scorched Pride Lands and green begins
+to return, the landscape itself responding to the restoration of rightful sovereignty. Simba now
+holds both registers of his experience simultaneously: the carefree wisdom of the jungle years,
+which taught him that not everything requires gravity, and the weight of the crown, which demands
+that some things do. Mufasa's early teaching that a king's time rises and falls like the sun is no
+longer an abstraction but a lived truth. The hero who fled one world and was absorbed by another has
+returned as the equilibrium point between them, neither denying his exile nor being defined by it."""@en .
 
 <the-lion-king/stages/the-circle-of-life> a monomyth:StageRealization ;
     rdfs:label "The Circle of Life"@en ;
