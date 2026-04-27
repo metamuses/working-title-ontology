@@ -26,8 +26,8 @@
     owl:sameAs wd:Q36479 ;
     monomyth:interpretedBy <the-lion-king/monomyths/simba-journey> ;
     rdfs:comment """A 1994 animated film in which a young lion prince, exiled by guilt and deception
-after the murder of his father, must reclaim his identity and his kingdom from the uncle who
-usurped them both."""@en .
+after the murder of his father, must reclaim his identity and his kingdom from the uncle who usurped
+them both."""@en .
 
 # --- Monomyth Expression --------------
 
@@ -72,7 +72,7 @@ lives in self-imposed exile for years, and ultimately reclaims the throne of Pri
     monomyth:heroOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
-    owl:sameAs wd:Q844814 .
+    owl:sameAs wd:Q1649583 .
 
 <the-lion-king/characters/mufasa> a monomyth:Character ;
     rdfs:label "Mufasa"@en ;
@@ -80,16 +80,16 @@ lives in self-imposed exile for years, and ultimately reclaims the throne of Pri
 death as the moral and spiritual compass of the hero's journey."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor ;
-    owl:sameAs wd:Q2629271 .
+    owl:sameAs wd:Q2287748 .
 
 <the-lion-king/characters/scar> a monomyth:Character ;
     rdfs:label "Scar"@en ;
-    rdfs:comment """Mufasa's brother and Simba's uncle, who orchestrates the king's assassination and
-manipulates the prince into exile in order to seize the throne for himself."""@en ;
+    rdfs:comment """Mufasa's brother and Simba's uncle, who orchestrates the king's assassination
+and manipulates the prince into exile in order to seize the throne for himself."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:Shapeshifter ;
-    owl:sameAs wd:Q2270030 .
+    owl:sameAs wd:Q1977325 .
 
 <the-lion-king/characters/nala> a monomyth:Character ;
     rdfs:label "Nala"@en ;
@@ -98,7 +98,7 @@ back to his responsibilities as the rightful king."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Herald ;
-    owl:sameAs wd:Q1652455 .
+    owl:sameAs wd:Q2365445 .
 
 <the-lion-king/characters/rafiki> a monomyth:Character ;
     rdfs:label "Rafiki"@en ;
@@ -107,7 +107,7 @@ guiding Simba toward the vision that restores his identity."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Trickster ;
-    owl:sameAs wd:Q3414064 .
+    owl:sameAs wd:Q326075 .
 
 <the-lion-king/characters/timon> a monomyth:Character ;
     rdfs:label "Timon"@en ;
@@ -116,7 +116,7 @@ under the carefree philosophy of Hakuna Matata."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Trickster,
         monomyth:Ally ;
-    owl:sameAs wd:Q2364440 .
+    owl:sameAs wd:Q2691406 .
 
 <the-lion-king/characters/pumbaa> a monomyth:Character ;
     rdfs:label "Pumbaa"@en ;
@@ -125,7 +125,7 @@ alternative way of life during his years in exile."""@en ;
     monomyth:characterOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Trickster ;
-    owl:sameAs wd:Q2583222 .
+    owl:sameAs wd:Q2469812 .
 
 # --- Stage Realizations ---------------
 
@@ -134,7 +134,7 @@ alternative way of life during his years in exile."""@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa> ;
-    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizationDescription """Mufasa leads the young Simba to the summit of Pride Rock at
 dawn and reveals the kingdom spread before them, declaring that everything the light touches belongs
@@ -418,13 +418,13 @@ knowing that his own time too will rise and fall, and that the pattern will hold
     monomyth:divergesFrom monomyth:RefusalOfTheCall ;
     monomyth:divergenceRationale """Campbell's refusal typically originates in the hero's own
 psyche: fear, attachment, inadequacy, or simple inertia. The Lion King externalizes the mechanism
-entirely. Scar engineers both the trauma (Mufasa's murder) and the interpretive frame (Simba's
+entirely: Scar engineers both the trauma (Mufasa's murder) and the interpretive frame (Simba's
 guilt), manufacturing a refusal that the hero experiences as authentic self-judgment but that is in
 fact an act of narrative sabotage by the Shadow. This produces a refusal that is at once more
 absolute and more fragile than the canonical form: absolute because Simba's guilt is total and
 unquestioned for years, fragile because it rests on a factual lie that, once exposed, dissolves
 the refusal entirely. The divergence reflects the film's investment in deception as a structural
-engine: the hero's journey is arrested not by his own limitations but by a false story imposed
+engine, where the hero's journey is arrested not by his own limitations but by a false story imposed
 upon him."""@en .
 
 <the-lion-king/divergences/narrative/idyll-as-ordeal> a monomyth:NarrativeDivergence ;
@@ -534,7 +534,7 @@ as something the hero must grow into rather than simply receive."""@en .
     monomyth:divergenceRationale """Campbell encodes the temptation stage through a gendered
 semiotic register: the feminine as the locus of desire, attachment, and worldly entanglement that
 threatens to bind the hero to the flesh rather than the spirit. The Lion King dissolves the gendered
-sign entirely and replaces it with a philosophical system, Hakuna Matata, that operates as a
+sign entirely and replaces it with a philosophical system, "Hakuna Matata", that operates as a
 complete counter-narrative to the hero's destiny. The temptation is semiotic in the deepest sense:
 it is not a person, an object, or even a moment, but a language for interpreting experience that
 renders responsibility invisible and contentment self-justifying. The shift from feminine figure to
