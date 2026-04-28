@@ -18,7 +18,7 @@
     dcterms:title "Rostam and the Seven Labors"@en ;
     dcterms:creator "Ferdowsi" ;
     schema:genre "Epic"@en, "Mythology"@en ;
-    owl:sameAs wd:Q5637126 ;
+    owl:sameAs wd:Q4119480 ;
     monomyth:interpretedBy <rostam-haft-khan/monomyths/rostam-journey> ;
     rdfs:comment """A central episode in the Shahnameh where Rostam undertakes seven labors to rescue King Kay Kavus from the White Demon."""@en .
 
@@ -54,33 +54,35 @@
     monomyth:heroOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
-    owl:sameAs wd:Q215165 .
+    owl:sameAs wd:Q60062 .
 
 <rostam-haft-khan/characters/rakhsh> a monomyth:Character ;
     rdfs:label "Rakhsh"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;
-    owl:sameAs wd:Q2036731 .
+    owl:sameAs wd:Q19943974 .
 
 <rostam-haft-khan/characters/zal> a monomyth:Character ;
     rdfs:label "Zal"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    monomyth:embodiesArchetype monomyth:Mentor .
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q144903 .
 
 <rostam-haft-khan/characters/kay-kavus> a monomyth:Character ;
     rdfs:label "Kay Kavus"@en ;
-    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> .
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
+    owl:sameAs wd:Q1338913.
 
 <rostam-haft-khan/characters/white-demon> a monomyth:Character ;
     rdfs:label "White Demon (Div-e Sepid)"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow ;
-    owl:sameAs wd:Q4118749 .
+    owl:sameAs wd:Q1632732 .
 
 <rostam-haft-khan/characters/olad> a monomyth:Character ;
     rdfs:label "Olad"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald .
+    monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald ;
 
 <rostam-haft-khan/characters/enchantress> a monomyth:Character ;
     rdfs:label "The Enchantress"@en ;
