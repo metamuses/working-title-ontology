@@ -507,14 +507,13 @@ flee with what he does not yet possess."""@en .
     monomyth:divergenceOf <the-lion-king/stages/tell-them-the-truth> ;
     monomyth:divergesFrom monomyth:TheUltimateBoon ;
     monomyth:divergenceRationale """The Ultimate Boon is canonically the eleventh stage, closing the
-Initiation act. In The Lion King it occupies narrative position fourteen, arriving after the Magic
-Flight and the Rescue from Without have already begun the Return sequence. This displacement of
-three positions is the most significant sequential divergence in the film's monomyth realization.
-The Initiation's climactic achievement is deferred into the Return because the boon, Simba's
-innocence and the public unmasking of Scar, is locationally and socially bound: it can only be
-obtained at Pride Rock, before the assembled pride, in the presence of the villain whose confession
-produces it. The narrative thus braids the end of Initiation into the middle of Return, collapsing
-the two acts into a single dramatic sequence."""@en .
+Initiation act. In The Lion King it arrives after the Magic Flight and the Rescue from Without
+have already begun the Return sequence. This displacement of three positions is the most significant
+sequential divergence in the film's monomyth realization. The Initiation's climactic achievement is
+deferred into the Return because the boon, Simba's innocence and the public unmasking of Scar, is
+locationally and socially bound: it can only be obtained at Pride Rock, before the assembled pride,
+in the presence of the villain whose confession produces it. The narrative thus braids the end of
+Initiation into the middle of Return, collapsing the two acts into a single dramatic sequence."""@en .
 
 # --- Semiotic Divergences -------------
 
