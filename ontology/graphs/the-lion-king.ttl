@@ -324,16 +324,16 @@ to run."""@en .
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:realizationDescription """Simba races across the savanna toward the Pride Lands with
-Nala, Timon, and Pumbaa joining the charge. The journey inverts the canonical magic flight: the hero
-does not flee the special world carrying a prize, but rather hurtles toward the site of his
-unresolved trauma carrying nothing but recovered intention. The devastation he encounters on arrival
-confirms the urgency: the Pride Lands under Scar's reign have become a wasteland of stripped earth
-and bleached bone, the kingdom's decay a visible measure of how long the hero's absence has
-lasted."""@en ;
-    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/flight-toward-danger> .
+Nala, Timon, and Pumbaa joining the charge. The journey inverts the canonical flight: the hero does
+not flee the special world carrying a prize, but rather hurtles toward the site of his unresolved
+trauma carrying nothing but recovered intention. The devastation he encounters on arrival confirms
+the urgency: the Pride Lands under Scar's reign have become a wasteland of stripped earth and
+bleached bone, the kingdom's decay a visible measure of how long the hero's absence has lasted."""@en ;
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/flight-toward-danger> ;
+    monomyth:hasNarrativeDivergence <the-lion-king/divergences/narrative/flight-as-advance> .
 
 <the-lion-king/stages/simba-you-have-to-help-us> a monomyth:StageRealization ;
     rdfs:label "Simba, you have to help us"@en ;
@@ -367,7 +367,8 @@ killed Mufasa, the revelation shatters the psychic architecture that has held th
 childhood. Simba surges back and forces the public confession that liberates him. The ultimate boon
 is not an object or a power but a truth: the hero's innocence, restored to him in the same instant
 that the kingdom's betrayal is made visible to all."""@en ;
-    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/boon-during-return> .
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/boon-during-return> ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/boon-as-public-revelation> .
 
 <the-lion-king/stages/it-is-time> a monomyth:StageRealization ;
     rdfs:label "It is time"@en ;
@@ -459,19 +460,17 @@ This makes the temptation both more insidious and more sympathetic than Campbell
 typically allows, because the philosophy is not malicious. It is simply insufficient for someone
 whose obligations extend beyond himself."""@en .
 
-<the-lion-king/divergences/narrative/boon-deferred-to-return> a monomyth:NarrativeDivergence ;
-    rdfs:label "Boon deferred to return divergence"@en ;
-    monomyth:divergenceOf <the-lion-king/stages/tell-them-the-truth> ;
-    monomyth:divergesFrom monomyth:TheUltimateBoon ;
-    monomyth:divergenceRationale """In Campbell's model, the hero achieves the boon at the
-culmination of Initiation and then carries it back across the return threshold. The Lion King
-defers the boon until the hero is already deep within the Return sequence: Simba must race home,
-rally allies, and confront Scar before the truth that constitutes his ultimate prize is revealed.
-The narrative logic is that Simba's boon, his own innocence and the public exposure of Scar's
-treachery, cannot exist outside the confrontation that produces it. It is not a grail to be seized
-and transported but a revelation that can only occur in the presence of the deceiver, before the
-community that was deceived. The displacement reflects a narrative in which the object of the quest
-and the site of the return are the same place."""@en .
+<the-lion-king/divergences/narrative/flight-as-advance> a monomyth:NarrativeDivergence ;
+    rdfs:label "Flight as advance divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/were-going-to-fight-your-uncle-for-this> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """The hero advances toward the source of his unresolved trauma
+rather than fleeing from it, empty-handed and unpursued. The canonical figure escapes the special
+world bearing a stolen prize with the guardians of the inner realm at his heels; here the
+directional logic is reversed at every register. The peril lies at the destination rather than in
+what trails behind, and the propelling force is the gravity of confrontation rather than of escape.
+The traversal between worlds is preserved, but its tension is redistributed from the space being
+left to the space being entered."""@en .
 
 # --- Sequential Divergences -----------
 
@@ -494,13 +493,12 @@ position forward in the narrative sequence."""@en .
     rdfs:label "Flight toward danger divergence"@en ;
     monomyth:divergenceOf <the-lion-king/stages/were-going-to-fight-your-uncle-for-this> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
-    monomyth:divergenceRationale """Campbell's magic flight describes the hero's escape from the
-special world, often pursued by its guardians, after claiming the boon. The Lion King inverts the
-directionality entirely: the hero has not yet claimed his boon and races toward the source of danger
-rather than away from it. The flight occurs at narrative position twelve, one position before its
-canonical placement, and its function shifts from perilous retreat to perilous advance. This
-inversion is structurally necessary because the boon itself awaits at the destination: Simba cannot
-flee with what he does not yet possess."""@en .
+    monomyth:divergenceRationale """The stage is pulled earlier than its canonical placement,
+arriving before the climactic prize is won rather than after. The displacement belongs to a broader
+compression where the prize itself is deferred toward the journey's end, forcing the surrounding
+stages to contract and rearrange. The traversal thus enters a region where the conventional order
+has been folded into a single integrated push toward confrontation and recovery, rather than
+preserved as a discrete movement following the achievement of the quest."""@en .
 
 <the-lion-king/divergences/sequential/boon-during-return> a monomyth:SequentialDivergence ;
     rdfs:label "Boon during return divergence"@en ;
@@ -574,3 +572,15 @@ it is not a person, an object, or even a moment, but a language for interpreting
 renders responsibility invisible and contentment self-justifying. The shift from feminine figure to
 impersonal philosophy reflects both the film's investment in ideology as a narrative force and its
 departure from the gendered cosmology that Campbell's comparative mythology inherits."""@en .
+
+<the-lion-king/divergences/semiotic/boon-as-public-revelation> a monomyth:SemioticDivergence ;
+    rdfs:label "Boon as public revelation divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/tell-them-the-truth> ;
+    monomyth:divergesFrom monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """The prize takes the form of a truth that exists only in the
+moment of its public utterance, with no being apart from the audience and adversary at whose
+meeting it is spoken into existence. The canonical archetype imagines this acquisition as a
+portable artifact, a grail, an elixir, a fire, that the hero seizes within the special world and
+carries back to the community left behind. The shift is from material relic to performative
+disclosure, from a thing brought home to a thing brought into being, available only at the
+threshold where it is said."""@en .
