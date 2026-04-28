@@ -140,7 +140,8 @@ dawn and reveals the kingdom spread before them, declaring that everything the l
 to their domain and will one day pass to Simba as king. The call is not a rupture in the ordinary
 world but a formal investiture of destiny delivered by the reigning authority himself, framing the
 hero's journey as the assumption of an inherited obligation rather than the pursuit of an unknown
-summons."""@en .
+summons."""@en ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/investiture-as-call> .
 
 <the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
     rdfs:label "What have you done?"@en ;
@@ -516,6 +517,21 @@ produces it. The narrative thus braids the end of Initiation into the middle of 
 the two acts into a single dramatic sequence."""@en .
 
 # --- Semiotic Divergences -------------
+
+<the-lion-king/divergences/semiotic/investiture-as-call> a monomyth:SemioticDivergence ;
+    rdfs:label "Investiture as call divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/everything-the-light-touches> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ;
+    monomyth:divergenceRationale """Campbell's call to adventure is frequently marked by rupture:
+an intrusion, summons, or destabilizing event that tears the hero from the ordinary world toward
+an unknown domain. The Lion King reframes this sign-system as dynastic investiture rather than
+disruption. Mufasa's lesson on Pride Rock functions as a ceremonial transmission of sovereignty,
+where destiny is formally named within the existing social order rather than announced from outside
+it. The semiotic center of the call shifts from external interruption to institutional designation:
+the hero is not recruited away from home but positioned within a lineage, a territory, and a law of
+responsibility that already precedes him. The divergence preserves Campbell's structural function,
+initiating the journey through binding obligation, while relocating its meaning from adventurous
+departure to inherited vocation."""@en .
 
 <the-lion-king/divergences/semiotic/ancestral-cosmology> a monomyth:SemioticDivergence ;
     rdfs:label "Ancestral cosmology divergence"@en ;
