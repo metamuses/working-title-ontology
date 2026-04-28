@@ -213,7 +213,7 @@ forgotten."""@en .
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizationDescription """The film compresses Simba's entire adolescence and early
 adulthood into a musical montage of carefree indulgence: eating grubs, sleeping in the open,
@@ -233,7 +233,7 @@ return more difficult, not less."""@en ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizationDescription """Nala arrives in the jungle unexpectedly, and the reunion
 between the two childhood friends unfolds into romantic recognition over the course of a single
-evening. The encounter restores something Simba had lost access to: a witness to his real identity
+evening. The encounter restores something Simba had lost access to, a witness to his real identity
 who knew him before exile redefined him. Nala embodies the nurturing totality Campbell describes not
 through divine abstraction but through the concrete insistence that Simba is still the lion she
 grew up with, and that the kingdom he abandoned still needs him."""@en .
