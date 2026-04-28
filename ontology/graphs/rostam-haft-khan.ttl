@@ -88,7 +88,6 @@
     rdfs:label "The Enchantress"@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter, monomyth:Shadow .
-    
 
 # --- Stage Realizations -------------------------------------------------------
 
@@ -97,65 +96,75 @@
     monomyth:realizesStage monomyth:TheCallToAdventure ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 1 .
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """King Kay Kavus, driven by arrogance, invades Mazandaran and is defeated, captured, and blinded by demonic sorcery. His fall destabilizes the Iranian world and becomes the catalyst that summons Rostam to act as restorer of order."""@en .
 
 <rostam-haft-khan/stages/the-wisdom-of-zal> a monomyth:StageRealization ;
     rdfs:label "The Wisdom of Zal"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:involvesCharacter <rostam-haft-khan/characters/zal> ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/zal>, <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 2 .
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """Zal prepares Rostam with weapons, armor, and knowledge of Mazandaran, equipping him to face a world governed by illusion and demonic forces rather than ordinary reality."""@en .
 
 <rostam-haft-khan/stages/choosing-the-perilous-path> a monomyth:StageRealization ;
     rdfs:label "Choosing the Perilous Path"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 3 .
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """Rostam chooses the dangerous shortcut to Mazandaran, consciously abandoning safety and entering a liminal realm of intensified danger and supernatural distortion."""@en .
 
 <rostam-haft-khan/stages/the-road-of-trials> a monomyth:StageRealization ;
     rdfs:label "The Seven Labors"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
-    monomyth:involvesCharacter 
-        <rostam-haft-khan/characters/rostam>,
-        <rostam-haft-khan/characters/rakhsh> ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 4 .
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Rostam undergoes a sequence of escalating trials: Rakhsh kills a lion while Rostam sleeps, a deadly desert nearly kills him before divine aid provides water, and a dragon attacks repeatedly in darkness until Rostam defeats it. These trials dismantle the illusion of solitary heroism and reveal the necessity of endurance, divine favor, and companionship."""@en .
 
 <rostam-haft-khan/stages/the-enchantress> a monomyth:StageRealization ;
     rdfs:label "The Enchantress"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:involvesCharacter <rostam-haft-khan/characters/enchantress> ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/enchantress> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """Rostam encounters a deceptive banquet and a beautiful woman who is revealed as a demon when he invokes God’s name, exposing illusion as false reality."""@en ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/divine-word-as-truth> .
 
 <rostam-haft-khan/stages/atonement-with-the-father> a monomyth:StageRealization ;
     rdfs:label "Restoring the Shah"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
-    monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus> ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 6 .
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """Rostam reaches the blinded Shah and assumes responsibility for restoring him, transforming royal authority by demonstrating that legitimacy must be actively defended rather than passively held."""@en .
 
 <rostam-haft-khan/stages/apotheosis-white-demon> a monomyth:StageRealization ;
     rdfs:label "Slaying the White Demon"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
-    monomyth:involvesCharacter <rostam-haft-khan/characters/white-demon> ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/white-demon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 7 .
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """Rostam kills the White Demon in its cave, destroying the source of Mazandaran’s sorcery and elevating himself into a figure capable of restoring order at a systemic level."""@en .
 
 <rostam-haft-khan/stages/the-blood-elixir> a monomyth:StageRealization ;
     rdfs:label "The Blood Elixir"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 8 .
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """The blood of the White Demon restores the Shah’s sight, functioning as a literal and symbolic elixir that re-establishes order, perception, and sovereignty."""@en .
 
 <rostam-haft-khan/stages/return-with-elixir> a monomyth:StageRealization ;
     rdfs:label "Return and Restoration"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 9 .
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """Rostam returns from Mazandaran having restored order, emerging not merely as a hero but as the guarantor of Iran’s stability and future."""@en .
 
-# --- Divergences --------------------------------------------------------------
+# --- Divergence --------------------------------------------------------------
 
 <rostam-haft-khan/divergences/semiotic/divine-word-as-truth> a monomyth:SemioticDivergence ;
     rdfs:label "Divine Word as Truth divergence"@en ;
