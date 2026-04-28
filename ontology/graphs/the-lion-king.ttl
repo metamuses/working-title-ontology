@@ -236,7 +236,8 @@ between the two childhood friends unfolds into romantic recognition over the cou
 evening. The encounter restores something Simba had lost access to, a witness to his real identity
 who knew him before exile redefined him. Nala embodies the nurturing totality Campbell describes not
 through divine abstraction but through the concrete insistence that Simba is still the lion she
-grew up with, and that the kingdom he abandoned still needs him."""@en .
+grew up with, and that the kingdom he abandoned still needs him."""@en ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/goddess-as-relational-recognition> .
 
 <the-lion-king/stages/youre-not-the-simba-i-remember> a monomyth:StageRealization ;
     rdfs:label "You're not the Simba I remember"@en ;
@@ -298,7 +299,7 @@ the father is both judge and initiator, the confrontation demands that the hero 
 self that exile has constructed, and the annihilation of the ego that Scar's guilt imposed is
 reversed by the father's insistence that the son already possesses what he believes he has lost.
 Of all seventeen stages in this realization, this is the one where the archetypal structure and the
-narrative vehicle converge most completely. """@en .
+narrative vehicle converge most completely."""@en .
 
 <the-lion-king/stages/i-know-what-i-have-to-do> a monomyth:StageRealization ;
     rdfs:label "I know what I have to do"@en ;
@@ -529,6 +530,21 @@ discrete gift bestowed by a singular figure but a continuous spiritual infrastru
 must learn to perceive and trust. The semiotic shift from individual magical helper to communal
 ancestral network reframes the supernatural as relational rather than transactional, and the aid
 as something the hero must grow into rather than simply receive."""@en .
+
+<the-lion-king/divergences/semiotic/goddess-as-relational-recognition> a monomyth:SemioticDivergence ;
+    rdfs:label "Goddess as relational recognition divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/can-you-feel-the-love-tonight> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """Campbell's meeting with the goddess is often coded through a
+mythic or numinous feminine figure who mediates totality, unconditional affirmation, and a glimpse
+of ontological wholeness. The Lion King preserves that structural function but translates its sign
+system from divine apparition to relational recognition: Nala is not a supernatural goddess, but a
+historical witness who knows Simba before, during, and against the identity fracture produced by
+exile. Her significance is goddess-like in effect rather than in ontology. She restores to the hero
+an image of himself that neither guilt nor self-erasure can fully destroy, and she binds eros,
+memory, and ethical vocation into one encounter. The semiotic shift is from transcendental feminine
+symbol to intersubjective recognition, retaining Campbell's integrative meaning while grounding it
+in social relation, political responsibility, and the concrete world of the Pride Lands."""@en .
 
 <the-lion-king/divergences/semiotic/temptation-as-worldview> a monomyth:SemioticDivergence ;
     rdfs:label "Temptation as worldview divergence"@en ;
