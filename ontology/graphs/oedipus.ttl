@@ -5,31 +5,47 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
-# OEDIPUS THE KING (Greek Mythology)
+# OEDIPUS REX & OEDIPUS AT COLONUS (Greek Tragedies)
 # ==============================================================================
 
-<oedipus-myth> a monomyth:NarrativeWork,
-        schema:CreativeWork ;
-    rdfs:label "The Myth of Oedipus"@en ;
-    dcterms:title "Oedipus Rex / Oedipus at Colonus"@en ;
+<oedipus-myth/oedipus-rex> a monomyth:NarrativeWork,
+        schema:Play ;
+    rdfs:label "Oedipus Rex"@en ;
+    dcterms:title "Oedipus Rex"@en ;
+    dcterms:created "430-420 BCE"^^xsd:gYear ;
     dcterms:creator "Sophocles" ;
     schema:genre "Greek Tragedy"@en,
         "Mythology"@en ;
-    owl:sameAs wd:Q130235 ;
+    owl:sameAs wd:Q148643 ;
     monomyth:interpretedBy <oedipus-myth/monomyths/oedipus-journey> ;
-    rdfs:comment """A classic Greek myth detailing the life of Oedipus, who is fated to kill his 
-father and marry his mother, and his subsequent journey toward exile and spiritual 
-transformation."""@en .
+    rdfs:comment """A classic Greek tragedy detailing the life of Oedipus, who is fated to kill his 
+father and marry his mother, resulting in his tragic downfall and self-inflicted blindness."""@en .
+
+<oedipus-myth/oedipus-at-colonus> a monomyth:NarrativeWork,
+        schema:Play ;
+    rdfs:label "Oedipus at Colonus"@en ;
+    dcterms:title "Oedipus at Colonus"@en ;
+    dcterms:created "401 BCE"^^xsd:gYear ;
+    dcterms:creator "Sophocles" ;
+    schema:genre "Greek Tragedy"@en,
+        "Mythology"@en ;
+    owl:sameAs wd:Q294001 ;
+    monomyth:interpretedBy <oedipus-myth/monomyths/oedipus-journey> ;
+    rdfs:comment """A classic Greek tragedy that serves as the conclusion to the tragic arc of Oedipus. 
+    The blind and exiled Oedipus arrives at a sacred grove in Colonus to seek a final resting place and divine release from his lifelong suffering."""@en .
 
 # --- Monomyth Expression --------------
 
 <oedipus-myth/monomyths/oedipus-journey> a monomyth:MonomythExpression ;
     rdfs:label "Oedipus's Hero's Journey"@en ;
-    monomyth:interprets <oedipus-myth> ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'Oedipus Rex' and 'Oedipus at Colonus', focusing on the character Oedipus's journey."""@en ;
+    monomyth:interprets <oedipus-myth/oedipus-rex>, <oedipus-myth/oedipus-at-colonus> ;
     monomyth:hasHero <oedipus-myth/characters/oedipus> ;
     monomyth:hasCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/jocasta>,
@@ -38,6 +54,9 @@ transformation."""@en .
         <oedipus-myth/characters/the-sphinx>,
         <oedipus-myth/characters/creon>,
         <oedipus-myth/characters/antigone> ;
+        <oedipus-myth/characters/old-servant> ;
+        <oedipus-myth/characters/ismene> ;
+        <oedipus-myth/characters/theseus> ;
     monomyth:hasStageRealization <oedipus-myth/stages/the-oracle-prophecy>,
         <oedipus-myth/stages/fleeing-corinth>,
         <oedipus-myth/stages/meeting-the-blind-seer>,
@@ -63,7 +82,7 @@ transformation."""@en .
 
 <oedipus-myth/characters/jocasta> a monomyth:Character ;
     rdfs:label "Jocasta"@en ;
-    monomyth:embodiesArchetype monomyth:Shapeshifter ; # Shifts from mother to wife
+    monomyth:embodiesArchetype monomyth:Shapeshifter ; # Shifts from mother to wife??
     owl:sameAs wd:Q131445 .
 
 <oedipus-myth/characters/laius> a monomyth:Character ;
@@ -197,3 +216,28 @@ where the act of refusal is the very engine of the journey's fulfillment."""@en 
 from a figure of divine grace to one of biological and social taboo. The marriage 
 represents the hero's reward in the 'Ordinary World' (Thebes), but its semiotic 
 charge is negative and destructive."""@en .
+
+
+
+
+
+
+
+
+<the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
+    rdfs:label "Ignorance is bliss"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <the-matrix/characters/cypher>,
+        <the-matrix/characters/agent-smith> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """Cypher embodies the temptation to abandon truth for comfort.
+Over a steak dinner negotiated with Agent Smith, he chooses to betray the crew in exchange for
+reinsertion into the Matrix, preferring pleasurable illusion to the bleak real world. His betrayal
+externalizes the doubt lurking within every freed mind: that ignorance might be preferable to
+painful knowledge."""@en ;
+    monomyth:fitNote """No single character serves as a sustained narrative temptress for Neo
+personally. The temptation is structural, embodied by Cypher's choice as a shadow alternative,
+rather than a direct seduction of the hero."""@en ;
+    monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/dispersed-temptation> ;
+    monomyth:hasSemioticDivergence <the-matrix/divergences/semiotic/woman-as-ignorance> .
