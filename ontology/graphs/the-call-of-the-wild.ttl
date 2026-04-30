@@ -57,7 +57,7 @@ companion to wild sovereign."""@en ;
         <the-call-of-the-wild/stages/the-trail-runs-only-forward>,
         <the-call-of-the-wild/stages/no-voice-calls-him-back>,
         <the-call-of-the-wild/stages/the-ghost-dog>,
-        <the-call-of-the-wild/stages/fear-and-mystery>,
+        <the-call-of-the-wild/stages/a-spectral-beast-of-enormous-size>,
         <the-call-of-the-wild/stages/running-at-the-head-of-the-pack> .
 
 # --- Characters -----------------------
@@ -321,7 +321,7 @@ permanently beyond the boundary that separates them, re-entering the ordinary wo
 phantom, a rumour, a figure of dread."""@en ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/inverted-return> .
 
-<the-call-of-the-wild/stages/fear-and-mystery> a monomyth:StageRealization ;
+<the-call-of-the-wild/stages/a-spectral-beast-of-enormous-size> a monomyth:StageRealization ;
     rdfs:label "Fear and mystery"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
@@ -433,7 +433,7 @@ freedom, London insists, lies in completing the crossing rather than reversing i
 
 <the-call-of-the-wild/divergences/narrative/mastery-without-consciousness> a monomyth:NarrativeDivergence ;
     rdfs:label "Mastery without consciousness divergence"@en ;
-    monomyth:divergenceOf <the-call-of-the-wild/stages/fear-and-mystery> ;
+    monomyth:divergenceOf <the-call-of-the-wild/stages/a-spectral-beast-of-enormous-size> ;
     monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
     monomyth:divergenceRationale """Buck inhabits both worlds simultaneously but without awareness
 or intention: he is sovereign of the wolf pack in one and a figure of dread woven into Yeehat oral
