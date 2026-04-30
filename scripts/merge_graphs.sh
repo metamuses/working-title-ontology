@@ -11,6 +11,7 @@ MAIN_GRAPH="$ROOT_DIR/ontology/graph.ttl"
 
 SUBGRAPHS_DIR="$ROOT_DIR/ontology/graphs"
 SUBGRAPH_FILES=(
+  the-call-of-the-wild.ttl
   the-matrix.ttl
 )
 
