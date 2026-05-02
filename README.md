@@ -4,12 +4,14 @@ Group project for the Knowledge Representation and Extraction 2024/25 course.
 
 The **Monomyth Ontology** is an RDF/OWL ontology for modeling narrative works
 through **Joseph Campbell**'s theory of the hero's journey, developed in *The
-Hero with a Thousand Faces* within the broader field of comparative mythology.
-The monomyth describes a **recurring narrative pattern** in which a hero leaves
-the ordinary world, enters a realm of trials and transformation, gains some form
-of knowledge or power, and returns changed. This project uses that framework to
-study how different works **repeat, adapt, or challenge** inherited mythic
-structures across cultures, genres, and historical periods.
+Hero with a Thousand Faces* (1949) within the broader field of comparative
+mythology. The monomyth describes a **recurring narrative pattern** in which a
+hero leaves the ordinary world, enters a realm of trials and transformation,
+gains some form of knowledge or power, and returns changed. This project uses
+that framework to study how different works **repeat, adapt, or challenge**
+inherited mythic structures across cultures, genres, and historical periods.
+
+The site of the project is live at [monomyth.metamuses.org](https://monomyth.metamuses.org).
 
 ## Ontology design
 
@@ -19,6 +21,8 @@ abstract pattern of the hero's journey from the concrete way that pattern
 appears in a specific story. This makes it possible to compare narratives
 without reducing them to the same template: each work can follow, adapt, weaken,
 invert, displace, or omit parts of the Campbellian structure.
+
+The ontology is available at [monomyth.metamuses.org/ontology](https://monomyth.metamuses.org/ontology).
 
 The most important components are:
 
@@ -52,6 +56,8 @@ a story realizes, adapts, displaces, or resists the stages of the hero's
 journey. These examples are intended both as case studies in comparative
 narrative analysis and as practical models for creating new graphs with the
 ontology.
+
+The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
 
 Analyzed works include:
 
