@@ -83,7 +83,9 @@
 
 <oedipus-myth/characters/oedipus> a monomyth:Character ;
     rdfs:label "Oedipus"@en ;
-    rdfs:comment """ """@en ;
+    rdfs:comment """The brilliant but cursed King of Thebes who saves his city by solving the Sphinx's riddle, 
+    only to later blind himself upon discovering he unknowingly killed his father and married his mother; 
+    he eventually finds redemption and spiritual transfiguration in Colonus."""@en ;
     monomyth:heroOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
@@ -91,41 +93,88 @@
 
 <oedipus-myth/characters/jocasta> a monomyth:Character ;
     rdfs:label "Jocasta"@en ;
-    rdfs:comment """ """@en ;
+    rdfs:comment """The grief-stricken Queen of Thebes who unknowingly marries her own son and, 
+    upon realizing the horrifying truth of their incestuous union, desperately tries to stop the 
+    investigation before hanging herself in despair."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
-    monomyth:embodiesArchetype monomyth:Shadow ; #????
+    monomyth:embodiesArchetype monomyth:Shapeshifter ; 
     owl:sameAs wd:Q131445 .
 
 <oedipus-myth/characters/laius> a monomyth:Character ;
     rdfs:label "Laius"@en ;
-    rdfs:comment """ """@en ;
+    rdfs:comment """The former King of Thebes who attempts to evade a terrible prophecy by exposing 
+    his infant son on a mountain, only to be slain years later by that same son 
+    in a violent dispute at a three-way crossroads."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ; 
     owl:sameAs wd:Q463898 .
 
 <oedipus-myth/characters/oracle-of-delphi> a monomyth:Character ;
     rdfs:label "Oracle of Delphi"@en ;
-    rdfs:comment """ accenno a Pizia come vaticinatrice """@en ; #!!
+    rdfs:comment """The divine voice of Apollo at Delphi whose terrifying prophecies of parricide, incest, 
+    and the ultimate resting place of the cursed king set the tragic events in motion."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Herald ; 
     owl:sameAs wd:Q220344 .
 
 <oedipus-myth/characters/teiresias> a monomyth:Character ;
     rdfs:label "Teiresias"@en ;
-    rdfs:comment """ """@en ;
+    rdfs:comment """The blind, clairvoyant prophet of Apollo who reluctantly reveals the dark truth of Oedipus's 
+    true parentage and later warns the exiled king of the impending struggles over his burial site."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally ;  #??? arrivati fin qui incluso + add all comments
+    monomyth:embodiesArchetype monomyth:Mentor ;  
     owl:sameAs wd:Q656881 .
 
 <oedipus-myth/characters/the-sphinx> a monomyth:Character ;
     rdfs:label "The Sphinx"@en ;
-    monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    owl:sameAs wd:Q150217 .
+    rdfs:comment """A merciless, winged monster terrorizing Thebes with her fatal riddle; her defeat by 
+    Oedipus elevates him to the throne but inadvertently binds him to his tragic fate."""@en ;
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow,
+        monomyth:ThresholdGuardian . 
+
+<oedipus-myth/characters/creon> a monomyth:Character ;
+    rdfs:label "Creon"@en ;
+    rdfs:comment """Jocasta’s pragmatic brother who initially defends his loyalty in Thebes, 
+    but later seizes power as regent and ruthlessly attempts to kidnap Oedipus and his daughters 
+    to secure the political blessing of the old king's burial."""@en ; 
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter,
+        monomyth:Shadow ; 
+    owl:sameAs wd:Q732066 .
+
+<oedipus-myth/characters/old-servant> a monomyth:Character ;
+    rdfs:label "Old Servant"@en ;
+    rdfs:comment """The loyal shepherd of Laius who spared the infant Oedipus out of pity and, 
+    as the sole survivor of the crossroads slaughter, provides the final, 
+    devastating testimony that confirms the prophecy's fulfillment."""@en ; 
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor .  
 
 <oedipus-myth/characters/antigone> a monomyth:Character ;
     rdfs:label "Antigone"@en ;
-    monomyth:embodiesArchetype monomyth:Ally ;
+    rdfs:comment """Oedipus’s fiercely devoted daughter who sacrifices her own youth to guide her blind, 
+    exiled father through his wanderings and defends his honor against Creon's schemes at Colonus."""@en ; 
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;  
     owl:sameAs wd:Q131351 .
+
+<oedipus-myth/characters/ismene> a monomyth:Character ;
+    rdfs:label "Ismene"@en ;
+    rdfs:comment """Oedipus’s compassionate daughter who remains in Thebes to gather intelligence, 
+    eventually traveling to Colonus to warn her father about the civil war between her brothers and Creon's plots."""@en ; 
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;  
+    owl:sameAs wd:Q753902 .
+
+<oedipus-myth/characters/theseus> a monomyth:Character ;
+    rdfs:label "Theseus"@en ;
+    rdfs:comment """The noble and just King of Athens who offers the outcast Oedipus unconditional sanctuary, 
+    rescues his daughters from kidnapping, and is the only person permitted to witness the old king's mysterious, divine passing."""@en ; 
+    monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:ThresholdGuardian ;  
+    owl:sameAs wd:Q1320718 .
 
 # --- Stage Realizations ---------------
 
