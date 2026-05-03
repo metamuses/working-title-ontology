@@ -2,12 +2,15 @@
 @prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
-# THE SECRET LIFE OF WALTER MITTY (2013)
+# THE SECRET LIFE OF WALTER MITTY (Movie, 2013)
 # ==============================================================================
 
 <walter-mitty> a monomyth:NarrativeWork, schema:CreativeWork ;
@@ -16,42 +19,45 @@
     dcterms:creator "Ben Stiller" ;
     schema:genre "Adventure"@en, "Drama"@en ;
     owl:sameAs wd:Q3522637 ;
-    monomyth:interpretedBy <walter-mitty/monomyths/mitty-journey> ;
-    rdfs:comment """A modern narrative in which an introverted man escapes into elaborate fantasies before undertaking a real-world journey that transforms his identity."""@en .
+    monomyth:interpretedBy <walter-mitty/monomyths/walters-journey> ;
+    rdfs:comment """A 2013 film where a negative assets manager at Life magazine, prone to 
+    vivid daydreams, embarks on a global quest to find a missing photograph, ultimately 
+    discovering his own courage and identity."""@en .
 
 # --- Monomyth Expression -------------------------------------------------------
 
-# --- Monomyth Expression -------------------------------------------------------
-
-<walter-mitty/monomyths/mitty-journey> a monomyth:MonomythExpression ;
-    rdfs:label "Walter Mitty's Psychological Hero Journey"@en ;
+<walter-mitty/monomyths/walters-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Walter Mitty's Hero's Journey"@en ;
     monomyth:interprets <walter-mitty> ;
     monomyth:hasHero <walter-mitty/characters/walter> ;
-    monomyth:hasCharacter 
-        <walter-mitty/characters/walter>,
-        <walter-mitty/characters/cheryl>,
+    monomyth:hasCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean>,
-        <walter-mitty/characters/ted> ;
-    monomyth:hasStageRealization 
-        <walter-mitty/stages/call>,
-        <walter-mitty/stages/refusal>,
-        <walter-mitty/stages/supernatural-aid>,
-        <walter-mitty/stages/threshold>,
-        <walter-mitty/stages/belly-of-the-whale>,
-        <walter-mitty/stages/trials>,
-        <walter-mitty/stages/goddess>,
-        <walter-mitty/stages/temptress>,
-        <walter-mitty/stages/atonement>,
-        <walter-mitty/stages/apotheosis>,
-        <walter-mitty/stages/boon>,
-        <walter-mitty/stages/refusal-of-the-return>, 
-        <walter-mitty/stages/magic-flight>,          
-        <walter-mitty/stages/rescue-from-without>,   
-        <walter-mitty/stages/crossing-return-threshold>, 
-        <walter-mitty/stages/master-of-two-worlds>,  
-        <walter-mitty/stages/freedom-to-live> .     
+        <walter-mitty/characters/cheryl>,
+        <walter-mitty/characters/ted>,
+        <walter-mitty/characters/mother>,
+        <walter-mitty/characters/todd> ;
+    monomyth:hasStageRealization <walter-mitty/stages/negative-25-missing>,
+        <walter-mitty/stages/daydream-retreat>,
+        <walter-mitty/stages/clues-and-encouragement>,
+        <walter-mitty/stages/flight-to-greenland>,
+        <walter-mitty/stages/the-helicopter-leap>,
+        <walter-mitty/stages/iceland-trek>,
+        <walter-mitty/stages/absent-meeting-with-goddess>,
+        <walter-mitty/stages/volcanic-retreat>,
+        <walter-mitty/stages/fired-and-defeated>,
+        <walter-mitty/stages/discarded-wallet>,
+        <walter-mitty/stages/mothers-clue>,
+        <walter-mitty/stages/himalayan-trek>,
+        <walter-mitty/stages/the-ghost-cat>,
+        <walter-mitty/stages/leopard-lesson>,
+        <walter-mitty/stages/conceptual-boon>,
+        <walter-mitty/stages/airport-security>,
+        <walter-mitty/stages/recovery-of-the-physical-boon>,
+        <walter-mitty/stages/return-to-life>,
+        <walter-mitty/stages/quintessence-of-life>,
+        <walter-mitty/stages/walking-with-cheryl> .
 
-# --- Characters ---------------------------------------------------------------
+# --- Characters -----------------------
 
 <walter-mitty/characters/walter> a monomyth:Character ;
     rdfs:label "Walter Mitty"@en ;
@@ -63,264 +69,259 @@
 
 <walter-mitty/characters/cheryl> a monomyth:Character ;
     rdfs:label "Cheryl Melhoff"@en ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally, monomyth:Mentor .
 
 <walter-mitty/characters/ted> a monomyth:Character ;
     rdfs:label "Ted Hendricks"@en ;
-    monomyth:embodiesArchetype monomyth:Shadow .
+    monomyth:embodiesArchetype monomyth:Shadow, monomyth:ThresholdGuardian .
 
-# --- Stage Realizations -------------------------------------------------------
+<walter-mitty/characters/mother> a monomyth:Character ;
+    rdfs:label "Edna Mitty"@en ;
+    monomyth:embodiesArchetype monomyth:Ally, monomyth:Herald .
+<walter-mitty/characters/todd> a monomyth:Character ;
+    rdfs:label "Todd Maher"@en ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    rdfs:comment "The eHarmony representative who provides external encouragement."@en .
 
-<walter-mitty/stages/call> a monomyth:StageRealization ;
-    rdfs:label "Missing Negative 25"@en ;
+# --- Stage Realizations ---------------
+
+<walter-mitty/stages/negative-25-missing> a monomyth:StageRealization ;
+    rdfs:label "Negative 25 is missing"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription """Walter Mitty is tasked with locating the missing negative 25, intended for the final cover of Life magazine. 
-    This demand disrupts his passive routine and forces him into a situation where inaction is no longer viable."""@en .
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/call-as-professional-crisis> ;
+    monomyth:realizationDescription """Despite the Walter’s routine at Life, daydreaming, incomplete eHarmony 
+profile, and passive life ,The discovery that the 'quintessence' negative is missing 
+and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
 
-<walter-mitty/stages/refusal> a monomyth:StageRealization ;
-    rdfs:label "Retreat into Fantasy"@en ;
+<walter-mitty/stages/daydream-retreat> a monomyth:StageRealization ;
+    rdfs:label "Daydream retreat"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 2 ;
-    monomyth:realizationDescription """Rather than immediately acting, Walter retreats into elaborate daydreams in which he performs heroic feats. 
-    These fantasies replace action with imagined competence, delaying engagement with reality."""@en .
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/internalized-refusal> ;
+    monomyth:realizationDescription """Walter avoids action and stalls by retreating into elaborate 
+    fantasies instead of engaging with the threat to his job."""@en .
 
-<walter-mitty/stages/supernatural-aid> a monomyth:StageRealization ;
-    rdfs:label "Absent Mentor Figure"@en ;
+<walter-mitty/stages/clues-and-encouragement> a monomyth:StageRealization ;
+    rdfs:label "Clues and encouragement"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription """No direct mentor intervenes to guide Walter. Sean O’Connell exists only indirectly through photographs and reputation, 
-    offering no explicit instruction or magical aid. The guidance typical of this stage is structurally missing."""@en ;
-    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-mentor> .
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/corporate-aid> ;
+    monomyth:realizationDescription """Sean's gift wallet and Cheryl's encouragement act as the 
+    catalyst and 'magical' support needed to move forward."""@en .
 
-<walter-mitty/stages/threshold> a monomyth:StageRealization ;
-    rdfs:label "Departure to Greenland"@en ;
+<walter-mitty/stages/flight-to-greenland> a monomyth:StageRealization ;
+    rdfs:label "Flight to Greenland"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 4 ;
-    monomyth:realizationDescription """Walter leaves New York and travels to Greenland, marking his first decisive break from passive existence into active engagement with the external world."""@en ;
-    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/imagination-as-world> ;
-    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/soft-threshold> .
-
-<walter-mitty/stages/belly-of-the-whale> a monomyth:StageRealization ;
-    rdfs:label "Belly of the Whale (Internalized Condition)"@en ;
-    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:WeakFit ;
-    monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription """Walter Mitty’s 'belly of the whale' is not a discrete event but an ongoing condition of existential enclosure. 
-    At the beginning of the narrative, he exists in a state of social invisibility, passivity, and psychological retreat, 
-    where daydreams replace action and identity is suspended rather than expressed. 
-    This condition functions as a symbolic engulfment: Walter is effectively 'swallowed' by his own un-lived life, 
-    cut off from agency and authentic experience. 
-
-    Unlike the classical monomyth, where the hero enters the belly after crossing the threshold, 
-    Walter begins the story already inside it. The journey that follows is therefore not a descent into darkness 
-    but an emergence from it, reversing the traditional structure of symbolic death and rebirth."""@en ;
-    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/preexisting-engulfment> ;
-    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/reversed-whale-order> .
-
-<walter-mitty/stages/trials> a monomyth:StageRealization ;
-    rdfs:label "Real-World Challenges"@en ;
-    monomyth:realizesStage monomyth:TheRoadOfTrials ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription """Walter undergoes a sequence of real-world challenges, including jumping into the ocean from a helicopter, navigating unfamiliar landscapes, and traveling across continents. 
-    These experiences replace imagined heroism with lived action."""@en .
-
-<walter-mitty/stages/goddess> a monomyth:StageRealization ;
-    rdfs:label "Connection with Cheryl"@en ;
-    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
-    monomyth:hasFitQuality monomyth:WeakFit ;
-    monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """Cheryl represents emotional grounding and authentic connection. However, she does not function as a transcendent or mythic figure, 
-    making this stage a grounded reinterpretation of the archetype."""@en .
-
-<walter-mitty/stages/temptress> a monomyth:StageRealization ;
-    rdfs:label "Temptation of Fantasy"@en ;
-    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:hasFitQuality monomyth:WeakFit ;
-    monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """Temptation appears not as a person but as Walter’s tendency to retreat into fantasy. 
-    The danger lies in disengagement from reality rather than sensual distraction."""@en .
-
-<walter-mitty/stages/atonement> a monomyth:StageRealization ;
-    rdfs:label "Encounter with Sean"@en ;
-    monomyth:realizesStage monomyth:AtonementWithTheFather ;
-    monomyth:hasFitQuality monomyth:WeakFit ;
-    monomyth:stageRealizationOrder 9 ;
-    monomyth:realizationDescription """Walter meets Sean O’Connell, who affirms his value. This interaction lacks hierarchy or authority, 
-    functioning instead as recognition rather than submission."""@en .
-
-<walter-mitty/stages/apotheosis> a monomyth:StageRealization ;
-    rdfs:label "Moment of Understanding"@en ;
-    monomyth:realizesStage monomyth:Apotheosis ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 10 ;
-    monomyth:realizationDescription """Walter abandons the need to capture the perfect photograph and instead experiences the moment directly, 
-    achieving a shift in perception and self-understanding."""@en .
-
-<walter-mitty/stages/boon> a monomyth:StageRealization ;
-    rdfs:label "Walter as the Photograph"@en ;
-    monomyth:realizesStage monomyth:TheUltimateBoon ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 11 ;
-    monomyth:realizationDescription """The missing photograph is revealed to be an image of Walter himself, symbolizing recognition of his own value."""@en ;
-    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/self-as-boon> .
+    monomyth:realizationDescription """Walter finally takes physical action, flying to Greenland 
+    to track Sean O'Connell."""@en .
 
-
-<walter-mitty/stages/refusal-of-the-return> a monomyth:StageRealization ;
-    rdfs:label "No Refusal of the Return"@en ;
-    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 12 ;
-    monomyth:realizationDescription """Walter Mitty does not resist returning from the extraordinary world because his journey does not produce a transcendent realm separate from ordinary life. 
-    Unlike classical heroes who hesitate to leave enlightenment or bliss, Walter’s transformation is oriented toward reintegration from the outset. 
-    The experiences he gains—confidence, presence, and agency—are meaningful precisely because they belong in his everyday life. 
-    There is no tension between worlds, and therefore no reluctance to return."""@en ;
-    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/no-transcendent-realm> .
-
-<walter-mitty/stages/magic-flight> a monomyth:StageRealization ;
-    rdfs:label "No Magic Flight"@en ;
-    monomyth:realizesStage monomyth:TheMagicFlight ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 13 ;
-    monomyth:realizationDescription """There is no dramatic escape or pursuit following the attainment of the boon. 
-    Walter’s journey lacks a climactic flight because the narrative avoids constructing the extraordinary world as hostile or something to escape from. 
-    His return unfolds naturally through travel rather than conflict, and the absence of pursuit reflects the film’s grounding in realism and internal transformation rather than mythic antagonism."""@en ;
-    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/no-escape-structure> .
-
-<walter-mitty/stages/rescue-from-without> a monomyth:StageRealization ;
-    rdfs:label "No Rescue from Without"@en ;
-    monomyth:realizesStage monomyth:RescueFromWithout ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 14 ;
-    monomyth:realizationDescription """Walter is not brought back by an external force or guide because his transformation is self-driven. 
-    Classical heroes often require assistance to return from the threshold, symbolizing dependence on community or divine aid. 
-    In contrast, Walter’s arc emphasizes autonomy: the same individual who was once passive now actively navigates his return, 
-    eliminating the need for rescue and reinforcing the narrative’s focus on self-actualization."""@en ;
-    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/self-driven-return> .
-
-<walter-mitty/stages/crossing-return-threshold> a monomyth:StageRealization ;
-    rdfs:label "Crossing the Return Threshold (Internalized)"@en ;
-    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:WeakFit ;
-    monomyth:stageRealizationOrder 15 ;
-    monomyth:realizationDescription """Walter’s return to New York and his workplace constitutes a subdued version of the return threshold. 
-    Rather than struggling to translate mystical knowledge into social terms, he re-enters the same environment transformed in attitude rather than status. 
-    The challenge is not communication of cosmic truth but quiet behavioral change—confidence, decisiveness, and presence. 
-    The threshold is therefore internal rather than structural, marking a shift in being rather than a confrontation between incompatible worlds."""@en ;
-    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/internalized-threshold> .
-
-<walter-mitty/stages/master-of-two-worlds> a monomyth:StageRealization ;
-    rdfs:label "Collapse of Two Worlds"@en ;
-    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 16 ;
-    monomyth:realizationDescription """Walter does not become a master of two distinct worlds because the film dissolves the boundary between them. 
-    His initial “inner world” of fantasy is not a sacred or transcendent realm but a symptom of disconnection from reality. 
-    As he transforms, imagination and reality are integrated rather than balanced as separate domains. 
-    The classical duality collapses into a single, unified mode of being grounded in presence."""@en ;
-    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/world-collapse> .
-
-<walter-mitty/stages/freedom-to-live> a monomyth:StageRealization ;
-    rdfs:label "Freedom to Live"@en ;
-    monomyth:realizesStage monomyth:FreedomToLive ;
-    monomyth:involvesCharacter <walter-mitty/characters/walter> ;
+<walter-mitty/stages/the-helicopter-leap> a monomyth:StageRealization ;
+    rdfs:label "The Helicopter Leap"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOrder 5 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/atlantic-belly> ;
+    monomyth:realizationDescription """Inspired by an imagined Cheryl singing 'Space Oddity', Walter 
+    leaps into a helicopter and then into the freezing ocean, surviving a shark attack."""@en .
+
+<walter-mitty/stages/iceland-trek> a monomyth:StageRealization ;
+    rdfs:label "Iceland trek"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """The pursuit of Sean leads Walter across Iceland via longboard 
+    and grueling travel."""@en .
+
+<walter-mitty/stages/absent-meeting-with-goddess> a monomyth:StageRealization ;
+    rdfs:label "Absent Meeting with the Goddess"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:realizationDescription """The narrative lacks a literal 'Goddess' meeting, focusing instead 
+    on Walter's internal awakening and his pursuit of the Father figure."""@en ;
+    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> .
+
+<walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
+    rdfs:label "Volcanic retreat"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:hasFitQuality monomyth:WeakFit ;
+    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/premature-return> ;
+    monomyth:realizationDescription """A volcanic eruption forces Walter to retreat to New York 
+    without the negative."""@en .
+
+<walter-mitty/stages/fired-and-defeated> a monomyth:StageRealization ;
+    rdfs:label "Fired and defeated"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/temptation-of-despair> ;
+    monomyth:realizationDescription """Fired by Ted and seeing Cheryl’s ex-husband, Walter withdraws 
+    into despair—the temptation to abandon his growth."""@en .
+
+<walter-mitty/stages/discarded-wallet> a monomyth:StageRealization ;
+    rdfs:label "Discarding the wallet"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/early-refusal-of-life> ;
+    monomyth:realizationDescription """Walter throws away Sean's wallet, symbolically rejecting the 
+    journey's fruits."""@en .
+
+<walter-mitty/stages/mothers-clue> a monomyth:StageRealization ;
+    rdfs:label "Mother's clue"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/domestic-guide> ;
+    monomyth:realizationDescription """His mother reveals she met Sean and shows a photo clue."""@en .
+
+<walter-mitty/stages/himalayan-trek> a monomyth:StageRealization ;
+    rdfs:label "Himalayan trek"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """A second, more intense road of trials as Walter treks through 
+the Himalayas."""@en .
+
+<walter-mitty/stages/the-ghost-cat> a monomyth:StageRealization ;
+    rdfs:label "The Ghost Cat"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/artist-as-father> ;
+    monomyth:realizationDescription """Walter finds Sean. Sean reveals the negative was inside the 
+wallet the whole time."""@en .
+
+<walter-mitty/stages/leopard-lesson> a monomyth:StageRealization ;
+    rdfs:label "Leopard lesson"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """Sean explains that 'Beautiful things don't ask for attention.'"""@en .
+
+<walter-mitty/stages/conceptual-boon> a monomyth:StageRealization ;
+    rdfs:label "Conceptual Boon"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """Walter realizes his new identity and courage are the true 
+    rewards."""@en .
+
+<walter-mitty/stages/airport-security> a monomyth:StageRealization ;
+    rdfs:label "Airport security"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:involvesCharacter <walter-mitty/characters/todd> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/bureaucratic-flight> ;
+    monomyth:realizationDescription """The return journey involving airport security and a phone call with Todd Maher."""@en .
+
+<walter-mitty/stages/recovery-of-the-physical-boon> a monomyth:StageRealization ;
+    rdfs:label "Recovery of the Negative"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:realizationDescription """Walter achieves a grounded version of freedom to live, expressed through presence, courage, and acceptance of uncertainty. 
-    His transformation is not mystical but existential: he no longer escapes into fantasy or avoids risk, 
-    but engages directly with life as it unfolds. This freedom is quiet and continuous rather than triumphant, 
-    aligning the monomyth’s final stage with modern psychological realism."""@en .
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/delayed-physical-attainment> ;
+    monomyth:realizationDescription """Walter's mother retrieves the wallet from the trash, finally 
+    providing the physical negative #25."""@en .
 
-# --- Divergences for Return Arc -----------------------------------------------
+<walter-mitty/stages/return-to-life> a monomyth:StageRealization ;
+    rdfs:label "Return to Life"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOrder 18 ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """Walter delivers the negative and stands up to Ted Hendricks."""@en .
 
-<walter-mitty/divergences/narrative/no-transcendent-realm> a monomyth:NarrativeDivergence ;
-    rdfs:label "No Transcendent Realm divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/refusal-of-the-return> ;
-    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
-    monomyth:divergenceRationale """The narrative does not construct a separate transcendent realm that the hero must leave behind. 
-    Walter’s journey unfolds within the real world, and transformation occurs through engagement rather than escape. 
-    Without a distinct sacred space, the structural basis for refusing the return disappears entirely."""@en .
+<walter-mitty/stages/quintessence-of-life> a monomyth:StageRealization ;
+    rdfs:label "Quintessence of Life"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOrder 19 ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """The final cover is revealed to be Walter himself."""@en .
 
-<walter-mitty/divergences/sequential/no-escape-structure> a monomyth:SequentialDivergence ;
-    rdfs:label "No Escape Structure divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/magic-flight> ;
+<walter-mitty/stages/walking-with-cheryl> a monomyth:StageRealization ;
+    rdfs:label "Walking with Cheryl"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOrder 20 ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """Walter walks away with Cheryl, fully present in the moment."""@en .
+
+# --- Narrative Divergences ------------
+
+<walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> a monomyth:NarrativeDivergence ;
+    rdfs:label "Absent Goddess divergence"@en ;
+    monomyth:divergenceOf <walter-mitty/stages/absent-meeting-with-goddess> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """The narrative omits a literal meeting with a maternal or divine 
+    goddess to prioritize Walter's grounded romantic connection and his search for an elusive mentor."""@en .
+
+<walter-mitty/divergences/narrative/internalized-refusal> a monomyth:NarrativeDivergence ;
+    rdfs:label "Internalized Refusal divergence"@en ;
+    monomyth:divergenceOf <walter-mitty/stages/daydream-retreat> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheCall ;
+    monomyth:divergenceRationale """The refusal is psychological escapism rather than a literal 
+    rejection of the call."""@en .
+
+<walter-mitty/divergences/narrative/atlantic-belly> a monomyth:NarrativeDivergence ;
+    rdfs:label "Atlantic Belly divergence"@en ;
+    monomyth:divergenceOf <walter-mitty/stages/the-helicopter-leap> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
+    monomyth:divergenceRationale """The 'Whale' is the North Atlantic ocean, representing a literal and symbolic death of the old self."""@en .
+
+<walter-mitty/divergences/narrative/temptation-of-despair> a monomyth:NarrativeDivergence ;
+    rdfs:label "Temptation of Despair divergence"@en ;
+    monomyth:divergenceOf <walter-mitty/stages/fired-and-defeated> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """The temptation is the hero's own insecurity and the urge to 
+    remain in a safe, defeated state."""@en .
+
+# --- Sequential Divergences -----------
+
+<walter-mitty/divergences/sequential/premature-return> a monomyth:SequentialDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/volcanic-retreat> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
-    monomyth:divergenceRationale """The narrative eliminates the escape-and-pursuit structure typical of the magic flight. 
-    Instead of fleeing with the boon, Walter simply travels back, reflecting a shift from mythic danger to experiential continuity."""@en .
+    monomyth:divergenceRationale """A physical return occurs halfway through the journey due to external failure, interrupting the canonical sequence."""@en .
 
-<walter-mitty/divergences/narrative/self-driven-return> a monomyth:NarrativeDivergence ;
-    rdfs:label "Self-Driven Return divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/rescue-from-without> ;
-    monomyth:divergesFrom monomyth:RescueFromWithout ;
-    monomyth:divergenceRationale """The return is entirely self-motivated, removing the need for external rescue. 
-    This reflects a modern narrative emphasis on individual agency rather than dependence on external saviors or guides."""@en .
+<walter-mitty/divergences/sequential/early-refusal-of-life> a monomyth:SequentialDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/discarded-wallet> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """The hero refuses his new identity early because he perceives his first attempt as a failure."""@en .
 
-<walter-mitty/divergences/semiotic/internalized-threshold> a monomyth:SemioticDivergence ;
-    rdfs:label "Internalized Threshold divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/crossing-return-threshold> ;
-    monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:divergenceRationale """The threshold is no longer a boundary between incompatible worlds but a psychological shift within the same world. 
-    Meaning is internalized rather than translated across ontological domains."""@en .
-
-<walter-mitty/divergences/semiotic/world-collapse> a monomyth:SemioticDivergence ;
-    rdfs:label "Collapse of Worlds divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/master-of-two-worlds> ;
-    monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
-    monomyth:divergenceRationale """The distinction between ordinary and extraordinary worlds collapses entirely. 
-    Instead of mastering two realms, the hero integrates imagination into reality, eliminating the dual structure assumed by the monomyth."""@en .
-
-# --- Semiotic Divergences -----------------------------------------------------
-
-<walter-mitty/divergences/semiotic/imagination-as-world> a monomyth:SemioticDivergence ;
-    rdfs:label "Imagination as Proto-World divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/threshold> ; # Added missing link
-    monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:divergenceRationale """The 'special world' initially exists as fantasy rather than geography, reversing the traditional structure."""@en .
-
-<walter-mitty/divergences/semiotic/self-as-boon> a monomyth:SemioticDivergence ;
-    rdfs:label "Self as Boon divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/boon> ; # Added missing link
+<walter-mitty/divergences/sequential/delayed-physical-attainment> a monomyth:SequentialDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/recovery-of-the-physical-boon> ;
     monomyth:divergesFrom monomyth:TheUltimateBoon ;
-    monomyth:divergenceRationale """The boon is not an external object but recognition of the self as meaningful."""@en .
+    monomyth:divergenceRationale """The physical Boon is retrieved after the internal transformation is complete, reversing the typical acquisition sequence."""@en .
 
-<walter-mitty/divergences/semiotic/preexisting-engulfment> a monomyth:SemioticDivergence ;
-    rdfs:label "Preexisting Engulfment divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/belly-of-the-whale> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
-    monomyth:divergenceRationale """The 'whale' is not a physical or mythic space but an existential condition of alienation and passivity. 
-    Engulfment is psychological and social rather than spatial, transforming the stage into a metaphor for an unactualized life."""@en .
+# --- Semiotic Divergences -------------
 
-# --- Narrative Divergences ----------------------------------------------------
+<walter-mitty/divergences/semiotic/call-as-professional-crisis> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/negative-25-missing> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ;
+    monomyth:divergenceRationale """The call is expressed through a corporate crisis involving the transition from print to digital media."""@en .
 
-<walter-mitty/divergences/narrative/absent-mentor> a monomyth:NarrativeDivergence ;
-    rdfs:label "Absent Mentor divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/supernatural-aid> ; # Added missing link
+<walter-mitty/divergences/semiotic/corporate-aid> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/clues-and-encouragement> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
-    monomyth:divergenceRationale """Guidance is indirect and constructed by the hero rather than delivered by a mentor."""@en .
+    monomyth:divergenceRationale """A corporate gift replaces traditional mythic talismans."""@en .
 
-# --- Sequential Divergence ----------------------------------------------------
+<walter-mitty/divergences/semiotic/domestic-guide> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/mothers-clue> ;
+    monomyth:divergesFrom monomyth:RescueFromWithout ;
+    monomyth:divergenceRationale """The guide is the hero's mother using domestic artifacts as clues."""@en .
 
-<walter-mitty/divergences/sequential/soft-threshold> a monomyth:SequentialDivergence ;
-    rdfs:label "Soft Threshold divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/threshold> ; # Added missing link
-    monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:divergenceRationale """The transition into the special world is gradual rather than abrupt."""@en .
+<walter-mitty/divergences/semiotic/artist-as-father> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/the-ghost-cat> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """The Father is a secular artist; atonement is achieved through shared professional respect."""@en .
 
-<walter-mitty/divergences/sequential/reversed-whale-order> a monomyth:SequentialDivergence ;
-    rdfs:label "Reversed Whale Order divergence"@en ;
-    monomyth:divergenceOf <walter-mitty/stages/belly-of-the-whale> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
-    monomyth:divergenceRationale """In the classical monomyth, the belly of the whale follows the crossing of the threshold and marks entry into the unknown. 
-    In Walter Mitty, the hero begins the narrative already in a state of symbolic engulfment, 
-    making the journey an emergence rather than a descent. This reverses the structural function of the stage."""@en .
+<walter-mitty/divergences/semiotic/bureaucratic-flight> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <walter-mitty/stages/airport-security> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """The Magic Flight is expressed through the modern struggle of airport bureaucracy."""@en .
