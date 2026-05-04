@@ -1,0 +1,231 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# LADY BIRD (Movie, 2017)
+# ==============================================================================
+
+<lady-bird> a monomyth:NarrativeWork, 
+        schema:Movie ;
+    rdfs:label "Lady Bird"@en ;
+    dcterms:title "Lady Bird"@en ;
+    dcterms:created "2017"^^xsd:gYear ;
+    dcterms:creator "Greta Gerwig" ;
+    schema:genre "Coming-of-age"@en, 
+        "Comedy-Drama"@en ;
+    owl:sameAs wd:Q27480769 ;
+    monomyth:interpretedBy <lady-bird/monomyths/christine-journey> ;
+    rdfs:comment "A 2017 coming-of-age film in which a strong-willed high school senior navigates a 
+turbulent relationship with her mother and her hometown while seeking a new identity through her 
+dream of attending an East Coast university."@en .
+
+# --- Monomyth Expression -----------------
+
+<lady-bird/monomyths/christine-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Christine's Heroine's Journey in Lady Bird"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'Lady Bird', focusing on the character Christine's journey."""@en ;
+    monomyth:interprets <lady-bird> ;
+    monomyth:hasHero <lady-bird/characters/lady-bird> ;
+    monomyth:hasCharacter <lady-bird/characters/lady-bird>,
+        <lady-bird/characters/marion>,
+        <lady-bird/characters/larry>,
+        <lady-bird/characters/julie>,
+        <lady-bird/characters/danny>,
+        <lady-bird/characters/kyle>,
+        <lady-bird/characters/jenna> ;
+    monomyth:hasStageRealization 
+        <lady-bird/stages/i-hate-california>,
+        <lady-bird/stages/my-name-is-lady-bird>,
+        <lady-bird/stages/scholarships-aid>,
+        <lady-bird/stages/applying-to-east-coast>,
+        <lady-bird/stages/ill-figure-it-out>,
+        <lady-bird/stages/danny-kyle-trials>,
+        <lady-bird/stages/unconditional-scholarship>,
+        <lady-bird/stages/never-enough>,
+        <lady-bird/stages/added-to-waiting-list>,
+        <lady-bird/stages/im-18>,
+        <lady-bird/stages/moving-to-nyc>,
+        <lady-bird/stages/i-wish-you-liked-me>,
+        <lady-bird/stages/my-name-is-christine>,
+        <lady-bird/stages/sunday-mess>,
+        <lady-bird/stages/calling-home>,
+        <lady-bird/stages/emotional-sacramento>,
+        <lady-bird/stages/thank-you> .
+
+# --- Characters -----------------------
+
+<lady-bird/characters/lady-bird> a monomyth:Character ;
+    rdfs:label "Christine 'Lady Bird' McPherson"@en ;
+    rdfs:comment """A fiercely independent teenager who undergoes a transformative journey from a 
+restless adolescent seeking to escape her roots to a self-aware adult who finds reconciliation and 
+gratitude in the identity she once tried to shed."""@en ;
+    monomyth:heroOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero .
+
+<lady-bird/characters/marion> a monomyth:Character ;
+    rdfs:label "Marion McPherson"@en ;
+    rdfs:comment """A compassionate yet overbearing mother who serves as the primary obstacle to her 
+daughter's ambitions, using pragmatic criticism and emotional silence to mask her deep-seated fears 
+regarding her family's financial instability and her daughter's future."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow,
+        monomyth:Shapeshifter .
+    
+#QUI! finisci modeling personaggi e poi stages, con mia scaletta data a gemini x divergence e description finale
+<lady-bird/characters/larry> a monomyth:Character ;
+    rdfs:label "Larry McPherson"@en ;
+    monomyth:embodies monomyth:Ally, monomyth:Mentor .
+
+# --- Stage Realizations ---------------
+
+<lady-bird/stages/i-hate-california> a monomyth:StageRealization ;
+    rdfs:label "I hate California"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription "The protagonist expresses a visceral disdain for her Sacramento context, viewing it as a cultural desert. She vocalizes her desire to move to the East Coast, where she believes 'culture is,' by applying to prestigious universities. This setting of an external goal marks the beginning of her quest for a life beyond her current socioeconomic and geographic boundaries."@en .
+
+<lady-bird/stages/my-name-is-lady-bird> a monomyth:StageRealization ;
+    rdfs:label "My name is Lady Bird"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription "Instead of hesitating, Christine rebrands herself as 'Lady Bird,' a name she gave herself. This act of self-naming is an aggressive embrace of her own transformation. She does not refuse the journey; she forces it into existence by shedding her given identity and demanding to be recognized as the person she intends to become."@en ;
+    monomyth:hasNarrativeDivergence <lady-bird/divergences/narrative/inverted-refusal-identity> .
+
+<lady-bird/stages/scholarships-aid> a monomyth:StageRealization ;
+    rdfs:label "Scholarships as Aid"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription "In this secular coming-of-age narrative, the 'supernatural' is replaced by the bureaucratic hope of financial aid. Lady Bird identifies scholarships as the only mechanism that can transcend her family's financial limitations, acting as the 'magic' required to bridge the gap between her reality and her dreams of New York."@en ;
+    monomyth:hasSemioticDivergence <lady-bird/divergences/semiotic/bureaucratic-magic> .
+
+<lady-bird/stages/applying-to-east-coast> a monomyth:StageRealization ;
+    rdfs:label "Crossing the First Threshold"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription "Lady Bird officially crosses into a new world of social and artistic exploration by joining the school theater program. Here, she adopts her new persona in a public space, begins to navigate the complexities of rehearsals and social hierarchies, and submits the applications that represent her commitment to leaving home."@en .
+
+<lady-bird/stages/ill-figure-it-out> a monomyth:StageRealization ;
+    rdfs:label "I'll figure it out"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription "This stage represents an internal immersion into the unknown aspects of her character. She grapples with her lack of a clear 'talent' or direction, existing in a state of flux where the old self is gone but the new adult self is not yet formed. She is 'in the whale,' processing the uncertainty of her future and her capabilities."@en .
+
+<lady-bird/stages/danny-kyle-trials> a monomyth:StageRealization ;
+    rdfs:label "The Road of Trials"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription "A series of grueling emotional tests: her first boyfriend Danny is revealed to be gay, her father loses his job (threatening her financial path), and her pursuit of the 'cool' guy Kyle leads to her losing her virginity in an unfulfilling way. She also betrays her best friend Julie for Jenna, experiencing the trials of social climbing and the subsequent guilt of losing her moral compass."@en .
+
+<lady-bird/stages/unconditional-scholarship> a monomyth:StageRealization ;
+    rdfs:label "The Father's Sacrifice"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription "Despite his own clinical depression and unemployment, Larry McPherson helps Lady Bird secure financial aid. This scene functions as the 'Goddess' encounter—a moment of unconditional, selfless love that provides the hero with the support needed to continue, proving that she is valued beyond her own achievements."@en .
+
+<lady-bird/stages/never-enough> a monomyth:StageRealization ;
+    rdfs:label "Whatever we give you is never enough"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription "In a heated confrontation, Marion McPherson discovers Lady Bird's secret applications to East Coast schools. Marion acts as the 'temptress' of the status quo, using shame and financial reality to tempt Lady Bird into believing she is incapable, ungrateful, and destined for failure if she tries to move beyond her station."@en .
+
+<lady-bird/stages/added-to-waiting-list> a monomyth:StageRealization ;
+    rdfs:label "Apotheosis"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:hasSequentialDivergence <lady-bird/divergences/sequential/premature-peace> ;
+    monomyth:realizationDescription "Lady Bird experiences a moment of temporary rest and elevation. She is placed on a waitlist for a New York university, her brother finds work, and most importantly, she reconciles with Julie. This represents a return to her 'true' self, shedding the rebellious pretenses and reaching a state of relative clarity before the final transition."@en .
+
+<lady-bird/stages/im-18> a monomyth:StageRealization ;
+    rdfs:label "I'm 18!"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription "The goal is achieved: Lady Bird graduates, passes her driving test (a symbol of autonomy), and receives the news that she has been accepted into a university in New York City. The boon is the physical and legal freedom to leave Sacramento and enter the adult world she has sought since the beginning."@en .
+
+<lady-bird/stages/moving-to-nyc> a monomyth:StageRealization ;
+    rdfs:label "The Flight to New York"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:hasSequentialDivergence <lady-bird/divergences/sequential/flight-pre-refusal> ;
+    monomyth:realizationDescription "Lady Bird physically departs for New York. This flight is marked by a heavy emotional atmosphere at the airport, where her mother refuses to say goodbye. The 'flight' is the literal crossing of the country to the new world, leaving the ordinary world of Sacramento behind."@en .
+
+<lady-bird/stages/i-wish-you-liked-me> a monomyth:StageRealization ;
+    rdfs:label "I'm sorry I wanted more"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:hasSemioticDivergence <lady-bird/divergences/semiotic/maternal-atonement> ;
+    monomyth:realizationDescription "In NYC, Lady Bird finds unsent letters from her mother in her luggage, written by Marion but saved by her father. This provides a retroactive reconciliation. She understands her mother’s harshness was born of fear and love, allowing her to forgive and be 'at one' with the maternal authority figure she fought."@en .
+
+<lady-bird/stages/my-name-is-christine> a monomyth:StageRealization ;
+    rdfs:label "My name is Christine"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription "This stage is inverted because she doesn't refuse to go back; she refuses the 'Lady Bird' persona. She introduces herself as Christine, signaling a desire to return to her true roots and her family's heritage, now that she has achieved the distance she thought she needed."@en ;
+    monomyth:hasNarrativeDivergence <lady-bird/divergences/narrative/inverted-identity-return> .
+
+<lady-bird/stages/sunday-mess> a monomyth:StageRealization ;
+    rdfs:label "Sunday Mess in NYC"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription "After a night of excess, Christine wanders into a church and hears a choir. This sensory experience—echoing her Sacramento upbringing—acts as the 'rescue' that pulls her out of her New York isolation and reconnects her to her history, giving her the strength to finally reach out to home."@en .
+
+<lady-bird/stages/calling-home> a monomyth:StageRealization ;
+    rdfs:label "Leaving a message"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription "Christine picks up the phone and calls home, leaving a voice message for her parents. This is the moment she bridges the gap between her new world (NYC) and her old world (Sacramento), crossing the threshold back into a relationship with her family on her own terms as an adult."@en .
+
+<lady-bird/stages/emotional-sacramento> a monomyth:StageRealization ;
+    rdfs:label "Driving in Sacramento"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription "She reflects on driving through Sacramento for the first time. She now holds both worlds—the New York of her aspirations and the Sacramento of her identity—simultaneously. She realizes that the place she hated is the foundation of who she is, achieving an equilibrium between her two identities."@en .
+
+<lady-bird/stages/thank-you> a monomyth:StageRealization ;
+    rdfs:label "Gratefulness"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription "The journey concludes with a simple 'Thank you.' Christine has moved from adolescent ungratefulness to adult awareness. She is free to live her life in New York because she has finally acknowledged and accepted the sacrifices of her parents and the value of her home."@en .
+
+# --- Divergences ----------------------
+
+<lady-bird/divergences/narrative/inverted-refusal-identity> a monomyth:NarrativeDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/my-name-is-lady-bird> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheCall ;
+    monomyth:divergenceRationale "The divergence is narrative and inverted. While the monomyth expects a hero to shrink from the call, Lady Bird over-identifies with it. Her refusal is not of the journey, but of her current self. By self-naming, she attempts to leapfrog over the trials directly into the transformation, making her 'refusal' a proactive rejection of her ordinary world identity rather than a hesitation to leave it."@en .
+
+<lady-bird/divergences/semiotic/bureaucratic-magic> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/scholarships-aid> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale "The divergence is semiotic. In a realistic, modern setting, the signified (external help that allows the hero to achieve the impossible) remains, but the signifier shifts from magical items or wizards to financial aid and university scholarships. This emphasizes that in the modern world, socioeconomic mobility is the 'supernatural' force required for a hero to cross thresholds."@en .
+
+<lady-bird/divergences/sequential/premature-peace> a monomyth:SequentialDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/added-to-waiting-list> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale "The divergence is sequential. Apotheosis—a state of rest and clarity—usually follows the Atonement with the Father. Here, Lady Bird finds peace with her friends and her status in Sacramento *before* she undergoes the final emotional reckoning with her mother in New York. This suggests her internal growth began before her geographic arrival at the 'goal.'"@en .
+
+<lady-bird/divergences/semiotic/maternal-atonement> a monomyth:SemioticDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/i-wish-you-liked-me> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale "The divergence is semiotic and gender-shifted. The structural role of the 'Father' as the ultimate judge and authority is filled by the Mother (Marion). The atonement is mediated through the father (Larry) via the letters, but the emotional reconciliation is with the maternal figure, reflecting the film's focus on the mother-daughter bond as the central axis of authority and growth."@en .
+
+<lady-bird/divergences/narrative/inverted-identity-return> a monomyth:NarrativeDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/my-name-is-christine> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale "The divergence is narrative and inverted. Usually, the hero is reluctant to return to the ordinary world's values. Here, Lady Bird's 'Refusal' is a refusal of the rebellion itself. She sheds the 'Lady Bird' mask to return to being 'Christine.' She isn't staying in the special world out of bliss, but using the special world (NYC) as a space to finally accept and embrace her ordinary world identity."@en .
+
+<lady-bird/divergences/sequential/flight-pre-refusal> a monomyth:SequentialDivergence ;
+    monomyth:divergenceOf <lady-bird/stages/moving-to-nyc> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale "The divergence is sequential. The physical Flight (moving to NYC) occurs before the psychological Refusal of the Return (reclaiming her name) and the Atonement. In this coming-of-age arc, the hero must physically leave to create the space necessary for the internal, archetypal resolutions to take place."@en .
