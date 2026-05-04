@@ -29,7 +29,7 @@
         "Mythology"@en ;
     owl:sameAs wd:Q148643 ;
     rdfs:comment """A classic Greek tragedy detailing the life of Oedipus, who is fated to kill his 
-    father and marry his mother, resulting in his tragic downfall and self-inflicted blindness."""@en .
+father and marry his mother, resulting in his tragic downfall and self-inflicted blindness."""@en .
 
 <oedipus-myth/oedipus-at-colonus> a monomyth:NarrativeWork,
         schema:Play ;
@@ -42,15 +42,15 @@
         "Mythology"@en ;
     owl:sameAs wd:Q294001 ;
     rdfs:comment """A classic Greek tragedy that serves as the conclusion to the tragic arc of Oedipus. 
-    The blind and exiled Oedipus arrives at a sacred grove in Colonus to seek a final resting 
-    place and divine release from his lifelong suffering."""@en .
+The blind and exiled Oedipus arrives at a sacred grove in Colonus to seek a final resting place and 
+divine release from his lifelong suffering."""@en .
 
 # --- Monomyth Expression --------------
 
 <oedipus-myth/monomyths/oedipus-journey> a monomyth:MonomythExpression ;
     rdfs:label "Oedipus's Hero's Journey"@en ;
     rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
-    narrative of 'Oedipus Rex' and 'Oedipus at Colonus', focusing on the character Oedipus's journey."""@en ;
+narrative of 'Oedipus Rex' and 'Oedipus at Colonus', focusing on the character Oedipus's journey."""@en ;
     monomyth:interprets <oedipus-myth> ;
     monomyth:hasHero <oedipus-myth/characters/oedipus> ;
     monomyth:hasCharacter <oedipus-myth/characters/oedipus>,
@@ -88,9 +88,9 @@
 
 <oedipus-myth/characters/oedipus> a monomyth:Character ;
     rdfs:label "Oedipus"@en ;
-    rdfs:comment """The brilliant but cursed King of Thebes who saves his city by solving the Sphinx's riddle, 
-    only to later blind himself upon discovering he unknowingly killed his father and married his mother; 
-    he eventually finds redemption and spiritual transfiguration in Colonus."""@en ;
+    rdfs:comment """The brilliant but cursed King of Thebes who saves his city by solving the Sphinx's 
+riddle, only to later blind himself upon discovering he unknowingly killed his father and married his 
+mother; he eventually finds redemption and spiritual transfiguration in Colonus."""@en ;
     monomyth:heroOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
@@ -99,9 +99,9 @@
 <oedipus-myth/characters/jocasta> a monomyth:Character ;
     rdfs:label "Jocasta"@en ;
     rdfs:comment """The grief-stricken Queen of Thebes who unknowingly marries her own son. She 
-    displays a shifting nature, moving from a comforting partner to a persuasive voice urging Oedipus to abandon 
-    his investigation — acting in good faith — before her final transformation into a tragic figure who takes her 
-    own life upon the revelation of the truth."""@en ; 
+displays a shifting nature, moving from a comforting partner to a persuasive voice urging Oedipus to 
+abandon his investigation — acting in good faith — before her final transformation into a tragic 
+figure who takes her own life upon the revelation of the truth."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter ; 
     owl:sameAs wd:Q131445 .
@@ -109,41 +109,42 @@
 <oedipus-myth/characters/laius> a monomyth:Character ;
     rdfs:label "Laius"@en ;
     rdfs:comment """The former King of Thebes who attempts to evade a terrible prophecy by exposing 
-    his infant son on a mountain, only to be slain years later by that same son 
-    in a violent dispute at a three-way crossroads."""@en ;
+his infant son on a mountain, only to be slain years later by that same son in a violent dispute at 
+a three-way crossroads."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ; 
     owl:sameAs wd:Q463898 .
 
 <oedipus-myth/characters/oracle-of-delphi> a monomyth:Character ;
     rdfs:label "Oracle of Delphi"@en ;
-    rdfs:comment """The divine voice of Apollo at Delphi whose terrifying prophecies of parricide, incest, 
-    and the ultimate resting place of the cursed king set the tragic events in motion."""@en ; 
+    rdfs:comment """The divine voice of Apollo at Delphi whose terrifying prophecies of parricide, 
+incest, and the ultimate resting place of the cursed king set the tragic events in motion."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Herald ; 
     owl:sameAs wd:Q220344 .
 
 <oedipus-myth/characters/teiresias> a monomyth:Character ;
     rdfs:label "Teiresias"@en ;
-    rdfs:comment """The blind, clairvoyant prophet of Apollo who reluctantly reveals the dark truth of Oedipus's 
-    true parentage and later warns the exiled king of the impending struggles over his burial site."""@en ;
+    rdfs:comment """The blind, clairvoyant prophet of Apollo who reluctantly reveals the dark truth 
+of Oedipus's true parentage and later warns the exiled king of the impending struggles over his 
+burial site."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor ;  
     owl:sameAs wd:Q656881 .
 
 <oedipus-myth/characters/the-sphinx> a monomyth:Character ;
     rdfs:label "The Sphinx"@en ;
-    rdfs:comment """A merciless, winged monster terrorizing Thebes with her fatal riddle; her defeat by 
-    Oedipus elevates him to the throne but inadvertently binds him to his tragic fate."""@en ;
+    rdfs:comment """A merciless, winged monster terrorizing Thebes with her fatal riddle; her defeat
+by Oedipus elevates him to the throne but inadvertently binds him to his tragic fate."""@en ;
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:ThresholdGuardian . 
 
 <oedipus-myth/characters/creon> a monomyth:Character ;
     rdfs:label "Creon"@en ;
-    rdfs:comment """Jocasta’s pragmatic brother who initially defends his loyalty in Thebes, 
-    but later seizes power as regent and ruthlessly attempts to kidnap Oedipus and his daughters 
-    to secure the political blessing of the old king's burial."""@en ; 
+    rdfs:comment """Jocasta’s pragmatic brother who initially defends his loyalty in Thebes, but 
+later seizes power as regent and ruthlessly attempts to kidnap Oedipus and his daughters to secure 
+the political blessing of the old king's burial."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter,
         monomyth:Shadow ; 
@@ -151,16 +152,16 @@
 
 <oedipus-myth/characters/old-servant> a monomyth:Character ;
     rdfs:label "Old Servant"@en ;
-    rdfs:comment """The loyal shepherd of Laius who spared the infant Oedipus out of pity and, 
-    as the sole survivor of the crossroads slaughter, provides the final, 
-    devastating testimony that confirms the prophecy's fulfillment."""@en ; 
+    rdfs:comment """The loyal shepherd of Laius who spared the infant Oedipus out of pity and, as the 
+sole survivor of the crossroads slaughter, provides the final, devastating testimony that confirms 
+the prophecy's fulfillment."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor .  
 
 <oedipus-myth/characters/antigone> a monomyth:Character ;
     rdfs:label "Antigone"@en ;
-    rdfs:comment """Oedipus’s fiercely devoted daughter who sacrifices her own youth to guide her blind, 
-    exiled father through his wanderings and defends his honor against Creon's schemes at Colonus."""@en ; 
+    rdfs:comment """Oedipus’s fiercely devoted daughter who sacrifices her own youth to guide her 
+blind, exiled father through his wanderings and defends his honor against Creon's schemes at Colonus."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;  
     owl:sameAs wd:Q131351 .
@@ -168,15 +169,17 @@
 <oedipus-myth/characters/ismene> a monomyth:Character ;
     rdfs:label "Ismene"@en ;
     rdfs:comment """Oedipus’s compassionate daughter who remains in Thebes to gather intelligence, 
-    eventually traveling to Colonus to warn her father about the civil war between her brothers and Creon's plots."""@en ; 
+eventually traveling to Colonus to warn her father about the civil war between her brothers and 
+Creon's plots."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;  
     owl:sameAs wd:Q753902 .
 
 <oedipus-myth/characters/theseus> a monomyth:Character ;
     rdfs:label "Theseus"@en ;
-    rdfs:comment """The noble and just King of Athens who offers the outcast Oedipus unconditional sanctuary, 
-    rescues his daughters from kidnapping, and is the only person permitted to witness the old king's mysterious, divine passing."""@en ; 
+    rdfs:comment """The noble and just King of Athens who offers the outcast Oedipus unconditional 
+sanctuary, rescues his daughters from kidnapping, and is the only person permitted to witness the 
+old king's mysterious, divine passing."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:ThresholdGuardian ;  
@@ -185,9 +188,8 @@
 <oedipus-myth/characters/polyneices> a monomyth:Character ;
     rdfs:label "Polyneices"@en ;
     rdfs:comment """Oedipus's eldest son, whose presence in Colonus brings the heavy weight of 
-    unresolved familial betrayal. He is a silent witness to his father’s shaming and expulsion 
-    from Thebes and then shifts to a tearful supplicant when driven by the desperation of the 
-    coming civil war."""@en ; 
+unresolved familial betrayal. He is a silent witness to his father’s shaming and expulsion from Thebes 
+and then shifts to a tearful supplicant when driven by the desperation of the coming civil war."""@en ; 
     monomyth:characterOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter ; 
     owl:sameAs wd:Q334817 .
@@ -201,10 +203,11 @@
         <oedipus-myth/characters/oracle-of-delphi> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription """The Call to Adventure manifests when a young Oedipus, troubled by a drunkard's claims 
-    in Corinth that he is not the true son of King Polybus and Queen Merope, travels to the Oracle at Delphi seeking the truth 
-    about his parentage. Instead of answering his questions, the Pythia delivers a terrifying prophecy: he is destined to slay 
-    his own father and lie with his own mother. This horrifying revelation shatters his secure world, setting the tragic journey in motion."""@en .
+    monomyth:realizationDescription """The Call to Adventure manifests when a young Oedipus, troubled 
+by a drunkard's claims in Corinth that he is not the true son of King Polybus and Queen Merope, travels 
+to the Oracle at Delphi seeking the truth about his parentage. Instead of answering his questions, the 
+Pythia delivers a terrifying prophecy: he is destined to slay his own father and lie with his own 
+mother. This horrifying revelation shatters his secure world, setting the tragic journey in motion."""@en .
 
 <oedipus-myth/stages/apollos-guidance> a monomyth:StageRealization ;
     rdfs:label "Apollo's Guidance"@en ;
@@ -213,14 +216,16 @@
         <oedipus-myth/characters/oracle-of-delphi> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 2 ;
-    monomyth:realizationDescription """Through the cryptic warnings of the Delphic Oracle, Apollo provides a unique form of supernatural aid. 
-    The god anchors Oedipus's destiny with the dual nature of prophecy: along with the initial curse, Apollo weaves a distant, latent promise 
-    that Oedipus will eventually find ultimate rest and holy sanctuary in a grove dedicated to the Eumenides. This fatal assurance turns 
-    his agonizing exile into a purposeful journey toward divine transfiguration."""@en ;
-    monomyth:fitNote """Instead of providing protective talismans or proactive wisdom, the god offers the hero his own tragic fate
-    as a map for the journey. The 'aid' is found in the structural certainty of the word: by granting Oedipus the knowledge of his 
-    eventual arrival at Colonus, Apollo ensures his suffering is not a series of random misfortunes, but a teleological path leading toward 
-    a final, sacred transformation."""@en ;
+    monomyth:realizationDescription """Through the cryptic warnings of the Delphic Oracle, Apollo 
+provides a unique form of supernatural aid. The god anchors Oedipus's destiny with the dual nature of 
+prophecy: along with the initial curse, Apollo weaves a distant, latent promise that Oedipus will 
+eventually find ultimate rest and holy sanctuary in a grove dedicated to the Eumenides. This fatal 
+assurance turns his agonizing exile into a purposeful journey toward divine transfiguration."""@en ;
+    monomyth:fitNote """Instead of providing protective talismans or proactive wisdom, the god offers 
+the hero his own tragic fate as a map for the journey. The 'aid' is found in the structural certainty 
+of the word: by granting Oedipus the knowledge of his eventual arrival at Colonus, Apollo ensures his 
+suffering is not a series of random misfortunes, but a teleological path leading toward a final, 
+sacred transformation."""@en ;
     monomyth:hasSequentialDivergence <oedipus-myth/divergences/sequential/aid-before-flee> .
 
 <oedipus-myth/stages/flee-from-corinth> a monomyth:StageRealization ;
@@ -229,10 +234,11 @@
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription """Driven by intense fear and a moral desire to protect those he believe to be his parents, 
-    Oedipus flees Corinth immediately, vowing never to return. In attempting to proactively refuse the monstrous fate 
-    laid out by the Oracle, he directs his steps away from the safety of his foster home and heads toward Thebes. His desperate 
-    escape acts as an inverted refusal: the very act of fleeing is what delivers him directly into the path of the prophecy."""@en ;
+    monomyth:realizationDescription """Driven by intense fear and a moral desire to protect those he
+believes to be his parents, Oedipus flees Corinth immediately, vowing never to return. In attempting 
+to proactively refuse the monstrous fate laid out by the Oracle, he directs his steps away from the 
+safety of his foster home and heads toward Thebes. His desperate escape acts as an inverted refusal: 
+the very act of fleeing is what delivers him directly into the path of the prophecy."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/proactive-departure> . 
 
 <oedipus-myth/stages/the-triple-crossroads> a monomyth:StageRealization ;
@@ -242,23 +248,27 @@
         <oedipus-myth/characters/laius> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
-    monomyth:realizationDescription """At a place where three roads meet in Phocis, Oedipus encounters a haughty traveler 
-    traveling in a carriage. When the traveler and his retinue arrogantly attempt to force him off the road, Oedipus strikes 
-    out in a sudden, blinding rage. In the ensuing clash, he kills the old man who is unknowingly his biological father, King Laius, 
-    and all but one of his servants. This violent transgression serves as his definitive crossing into the tragic world of his 
-    destiny, as the first part of the prophecy is fulfilled"""@en .
+    monomyth:realizationDescription """At a place where three roads meet in Phocis, Oedipus encounters 
+a haughty traveler traveling in a carriage. When the traveler and his retinue arrogantly attempt to 
+force him off the road, Oedipus strikes out in a sudden, blinding rage. In the ensuing clash, he kills
+the old man who is unknowingly his biological father, King Laius, and all but one of his servants. 
+This violent transgression serves as his definitive crossing into the tragic world of his destiny, as 
+the first part of the prophecy is fulfilled"""@en .
 
 <oedipus-myth/stages/riddle-of-the-sphinx> a monomyth:StageRealization ;
     rdfs:label "Riddle of the Sphinx"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
-        <oedipus-myth/characters/the-sphinx> ;
+        <oedipus-myth/characters/the-sphinx>,
+        <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription """Upon reaching the gates of Thebes, Oedipus confronts the Sphinx, a monstrous creature terrorizing 
-    the city with a deadly riddle. By answering her puzzle about the nature of man, he defeats the monster and liberates the city. 
-    In this transformative moment, he effectively 'dies' to his previous identity as a wandering traveler and is 'reborn' as the King of 
-    Thebes, inheriting both the throne and the hand of the widowed Queen Jocasta, hence fulfilling the second part of the prophecy."""@en .
+    monomyth:realizationDescription """Upon reaching the gates of Thebes, Oedipus confronts the Sphinx,
+a monstrous creature terrorizing the city with a deadly riddle. By answering her puzzle about the 
+nature of man, he defeats the monster and liberates the city. In this transformative moment, he 
+effectively 'dies' to his previous identity as a wandering traveler and is 'reborn' as the King of 
+Thebes, inheriting both the throne and the hand of the widowed Queen Jocasta, hence fulfilling the 
+second part of the prophecy."""@en .
 
 <oedipus-myth/stages/search-for-the-regicide> a monomyth:StageRealization ;
     rdfs:label "Search for the Regicide"@en ;
@@ -266,10 +276,11 @@
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription """Years later, a devastating plague descends upon Thebes, sent by the gods due to the unpunished 
-    murder of the former king. Oedipus embarks on a relentless quest to identify and cast out Laius's killer to save his subjects. 
-    This investigation becomes a grueling test of his personal resolve and integrity, where every witness questioned and every clue 
-    uncovered brings him closer to the destructive truth of his own identity."""@en .
+    monomyth:realizationDescription """Years later, a devastating plague descends upon Thebes, sent 
+by the gods due to the unpunished murder of the former king. Oedipus embarks on a relentless quest 
+to identify and cast out Laius's killer to save his subjects. This investigation becomes a grueling 
+test of his personal resolve and integrity, where every witness questioned and every clue uncovered 
+brings him closer to the destructive truth of his own identity."""@en .
 
 <oedipus-myth/stages/reveal-it-all-to-me> a monomyth:StageRealization ;  
     rdfs:label "Reveal it all to me!"@en ;
@@ -278,10 +289,11 @@
         <oedipus-myth/characters/teiresias> ;
     monomyth:hasFitQuality monomyth:WeakFit ;  
     monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """Seeking prophetic insight, Oedipus calls the blind seer Teiresias to the palace. 
-    Teiresias, who possesses Apollo's divine sight, is reluctant to speak out of a deep, tragic pity for the king. When his 
-    silence provokes Oedipus into furious accusations of treason and conspiracy with Creon, Teiresias finally snaps and reveals 
-    the devastating truth: Oedipus himself is the polluter and murderer of Laius."""@en ;
+    monomyth:realizationDescription """Seeking prophetic insight, Oedipus calls the blind seer 
+Teiresias to the palace. Teiresias, who possesses Apollo's divine sight, is reluctant to speak out 
+of a deep, tragic pity for the king. When his silence provokes Oedipus into furious accusations of 
+treason and conspiracy with Creon, Teiresias finally snaps and reveals the devastating truth: Oedipus 
+himself is the polluter and murderer of Laius."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/protection-not-love> .
     
 <oedipus-myth/stages/dont-concearn-yourself-with-prophecies> a monomyth:StageRealization ; 
@@ -291,47 +303,60 @@
         <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """As Oedipus's dread intensifies, Jocasta intervenes, begging him to cease his investigation. 
-    In good faith, she tempts him to remain in comfortable ignorance to save their household. She attempts to discredit the divine 
-    by recalling a prophecy given to her late husband Laius - that he would be killed by his own son - which she wrongly believes went 
-    unfulfilled when they abandoned their infant on Mount Cithaeron. Her desperate plea represents the ultimate temptation for Oedipus 
-    to abandon his pursuit of truth in favor of his crown and safety."""@en ;
-    monomyth:fitNote """This temptation is offered in completely good faith, as Jocasta has not yet realized the true nature of Oedipus's 
-    identity. She is not attempting to conceal a horrifying truth she already knows; rather, she acts out of pure devotion to the hero's 
-    well-being. Seeing Oedipus deeply distressed by the unfolding investigation, her only desire is to comfort him and ease his torment;  
-    hers is therefore an innocent temptation to choose peace of mind."""@en .
+    monomyth:realizationDescription """As Oedipus's dread intensifies, Jocasta intervenes, begging 
+him to cease his investigation. In good faith, she tempts him to remain in comfortable ignorance to 
+save their household. She attempts to discredit the divine by recalling a prophecy given to her late 
+husband Laius - that he would be killed by his own son - which she wrongly believes went unfulfilled 
+when they abandoned their infant on Mount Cithaeron. Her desperate plea represents the ultimate 
+temptation for Oedipus to abandon his pursuit of truth in favor of his crown and safety."""@en ;
+    monomyth:fitNote """This temptation is offered in completely good faith, as Jocasta has not yet 
+realized the true nature of Oedipus's identity. She is not attempting to conceal a horrifying truth 
+she already knows; rather, she acts out of pure devotion to the hero's well-being. Seeing Oedipus 
+deeply distressed by the unfolding investigation, her only desire is to comfort him and ease his 
+torment; hers is therefore an innocent temptation to choose peace of mind."""@en .
 
 <oedipus-myth/stages/he-is-the-regicide> a monomyth:StageRealization ;
-    rdfs:label "The Herdsman's Revelation"@en ;
+    rdfs:label "He is the regicide"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 9 ;
-    monomyth:realizationDescription """Oedipus realizes he has killed the former king from the words of Jocasta. 
-    But the atonement is not purely with the father, as he doesnt know yet that Laius is his father, but rather with the killed man ??"""@en ;
-    monomyth:fitNote """no father ma altro"""@en .
-    # narrative div invece che fitnote? non proprio atonement with father ma prima realizzazione/ricongiunzione dei fatti
+    monomyth:realizationDescription """Upon hearing Jocasta describe the crossroads where Laius was 
+killed and the appearance of the old king, Oedipus is struck by a terrifying realization. The physical 
+facts match his own dark memory of the triple crossroads, leading him to accept that he is indeed the 
+regicide who brought the plague upon Thebes. This moment acts as a preliminary atonement where the 
+hero confronts the shadow of the man he killed, though he does not yet realize that Laius was his 
+true biological father."""@en ;
+    monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/atonement-with-the-king> .
     
 <oedipus-myth/stages/it-all-came-true> a monomyth:StageRealization ;
     rdfs:label "It all came true!"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/old-servant> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;  # o weak?
+    monomyth:hasFitQuality monomyth:WeakFit ;  
     monomyth:stageRealizationOrder 10 ;
-    monomyth:realizationDescription """With the old servant's confession, O. relizes both facts: he is Laius's murderer but also his son, 
-    given by the servant to the kmessanger of Cortinth. The prophecy has fulfilled and he realizes he has also married his mother..."""@en ;
+    monomyth:realizationDescription """The arrival of a messenger from Corinth announcing the death 
+of King Polybus initially brings relief, but it quickly shifts to horror when the messenger reveals 
+that Polybus was not Oedipus's real father. Oedipus summons the old servant - the lone survivor of 
+the crossroads and the same shepherd who saved him as an infant — who breaks down and confesses 
+everything. The truth collapses upon Oedipus: he is both the murderer of Laius and his biological son, 
+who has unknowingly shared his bed with his own mother."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/tragic-enlightenment> .
 
 <oedipus-myth/stages/the-self-blinding> a monomyth:StageRealization ;
     rdfs:label "The Self-Blinding"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;  # o weak?
+    monomyth:hasFitQuality monomyth:WeakFit ; 
     monomyth:stageRealizationOrder 11 ;
-    monomyth:realizationDescription """Oedipus blinds himself. In losing his physical 
-sight, he gains 'inner sight' or prophetic clarity, transcending mortal hubris."""@en ;
+    monomyth:realizationDescription """Upon bursting into the palace and discovering that Jocasta 
+has hanged herself, Oedipus is overcome by a violent, agonizing despair. He tears the golden brooches 
+from her robes and plunges them repeatedly into his own eyes, crying out that they should never again 
+behold the horrors he has committed or look upon the children he should never have fathered. By 
+physically destroying his sight, he isolates himself from the world he has corrupted, choosing to 
+face the darkness of his actions in an internal reckoning that he was previously blind to."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/punitive-inner-vision> .
 
 <oedipus-myth/stages/plea-for-exile> a monomyth:StageRealization ;
@@ -341,9 +366,10 @@ sight, he gains 'inner sight' or prophetic clarity, transcending mortal hubris."
         <oedipus-myth/characters/creon> ;
     monomyth:hasFitQuality monomyth:InvertedFit ; 
     monomyth:stageRealizationOrder 12 ;
-    monomyth:realizationDescription """Oedipus explicitly begs Creon to exile him from Thebes. 
-    Instead of lingering or hesitating to cross the return threshold, the hero actively forces his 
-    own expulsion from the world of his transformation."""@en ;
+    monomyth:realizationDescription """Having accepted the absolute reality of his crimes, the 
+blinded Oedipus refuses to stay in the city he once ruled. He stands before Creon and the assembled 
+citizens of Thebes, explicitly demanding his immediate expulsion,to possibly free his city from the 
+plague, as predicted by Apollo. """@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/proactive-exile> .
 
 <oedipus-myth/stages/exodus-from-thebes> a monomyth:StageRealization ;
@@ -352,24 +378,32 @@ sight, he gains 'inner sight' or prophetic clarity, transcending mortal hubris."
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 13 ;
-    monomyth:realizationDescription """Oedipus leaves Thebes and undergoes a long, arduous journey as a blind outcast. 
-    This wandering journey acts as his magic flight, leading him eventually to his fated sanctuary in Colonus. 
-    The flight doesnt act as a test but rather a moment to constantly reflect on the inner tranformation occured with grief."""@en .
+    monomyth:realizationDescription """Oedipus steps into the unknown, beginning a long, arduous 
+journey as a blind outcast. In his wandering, he is pursued not by physical monsters, but by the 
+overwhelming psychological weight of his past. For years, he roams through the wilderness, utilizing
+the solitude and hardship to reflect upon his tragic history, gradually transforming his suffering 
+into spiritual wisdom."""@en ;
+    monomyth:fitNote """The flight functions not as an escape from physical pursuit or a series 
+of active trials, but as a long internalization of his fate. Instead of being tested by the 
+outside world, Oedipus's wandering is a direct confrontation with the reality of his fulfilled 
+prophecy, using the solitude of his exile to reconcile his identity with his tragic deeds."""@en .
 
 <oedipus-myth/stages/the-guiding-daughter> a monomyth:StageRealization ;
     rdfs:label "The Guiding Daughter"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/antigone> ;
-    monomyth:hasFitQuality monomyth:StrongFit ; # o moderate?
+    monomyth:hasFitQuality monomyth:ModerateFit ; 
     monomyth:stageRealizationOrder 14 ;
-    monomyth:realizationDescription """Antigone acts as the essential support for the blind, 
-weakened Oedipus. She guides him through exile, enabling him to accept his fate and journey 
-toward the sacred grounds of Colonus."""@en ;
-    monomyth:fitNote """While the rescuer in the canonical monomyth typically comes from 
-the Ordinary World, Antigone comes from the world where Oedipus's transformation took place. 
-However, her functional role remains identical: providing essential external support to help 
-the hero navigate his transition to a new reality."""@en .
+    monomyth:realizationDescription """As Oedipus's body grows weak and frail from years of wandering, 
+his loyal daughter Antigone steps forward to serve as his primary rescuer. She walks by his side, 
+serving as his eyes and guiding him safely across the unforgiving terrains of Greece. Her unwavering 
+devotion provides the essential support that keeps him alive, allowing the shattered king to accept 
+his tragic fate and continue on his fated path toward the sacred grounds of Colonus."""@en ;
+    monomyth:fitNote """While the rescuer in the canonical monomyth typically comes from the 
+Ordinary World, Antigone comes from the world where Oedipus's transformation took place. However, her
+functional role remains identical: providing essential external support to help the hero navigate his 
+transition to a new reality."""@en .
 
 <oedipus-myth/stages/the-sacred-grove> a monomyth:StageRealization ;
     rdfs:label "Arrival at the Sacred Grove of Colonus"@en ;
@@ -378,28 +412,35 @@ the hero navigate his transition to a new reality."""@en .
         <oedipus-myth/characters/theseus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 15 ;
-    monomyth:realizationDescription """Oedipus enters the sacred grove of the Eumenides, 
-recognizing it as the place of rest promised by Apollo. By being welcomed by Theseus 
-despite his infamy, he successfully crosses back from the 'wilderness of tragedy' into 
-a structured human society that accepts his transformed state. + piu approfondito, dove sono e chi e teseo"""@en ;
-    monomyth:fitNote """This is a 'Strong Fit' because it mirrors the hero's struggle 
-to be accepted back into the world of the living after a deep transformation. Theseus 
-acts as the bridge, validating the hero's new identity as a sacred outcast."""@en .
+    monomyth:realizationDescription """Oedipus finally arrives at Colonus, entering a sacred grove 
+dedicated to the Eumenides. He recognizes this ground as the ultimate sanctuary promised to him 
+by Apollo years before. When the local elders of Athens display horror upon discovering his 
+identity, King Theseus steps forward and offers him unconditional sanctuary and protection. By 
+being accepted by the noble ruler despite his horrific reputation, Oedipus successfully crosses 
+back into a structured human society that welcomes his transformed state."""@en ;
+    monomyth:fitNote """What makes this stage slightly different from the canonical monomyth stage is
+the hero's difficulty in translating his tragic wisdom into a social good. Oedipus, burdened by his 
+own miasma, cannot reintegrate alone; he requires Theseus to act as a bridge. Theseus validates the 
+hero's transformation, turning his individual suffering into a collective blessing and providing the 
+structure necessary for the hero's return to a community."""@en .
 
 <oedipus-myth/stages/ismenes-news> a monomyth:StageRealization ;
     rdfs:label "Ismene's News from Thebes"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/ismene> ;
-    monomyth:hasFitQuality monomyth:StrongFit ; 
+    monomyth:hasFitQuality monomyth:ModerateFit ; 
     monomyth:stageRealizationOrder 16 ;
-    monomyth:realizationDescription """Ismene arrives from Thebes to provide the hero with 
-the ritual knowledge and news necessary to navigate his new status. By performing 
-sacrifices to the Eumenides on his behalf, she 'rescues' him from spiritual 
-uncertainty, enabling his transition toward becoming a Master of Two Worlds. However, 
-she also warns her father about the civil war happening in Thebes between her brothers and tells him that Creon is coming to force him to go back to Thebes."""@en ;
-    monomyth:fitNote """Ismene also comes from the world where Oedipus's transformation took place but her role as well is providing 
-    essential external support to help the hero enter the new reality."""@en ;
+    monomyth:realizationDescription """Ismene arrives in Colonus from Thebes, serving as a second 
+figure of rescue. She is willing to perform the necessary sacrifices to appease the Eumenides on 
+Oedipus's behalf, to help him achieve spiritual clarity and enter the new reality of Colonus freely. 
+However, she also brings heavy news of a catastrophic civil war brewing back home between her brothers, 
+Eteocles and Polyneices, and warns her father that Creon is heading to Colonus to seize him for 
+political gain."""@en ;
+    monomyth:fitNote """Ismene also comes from the world of the hero's past transformation - and not
+from the 'ordinary world', possibily represented by any place which has not seen the prophecy being 
+fulfilled - yet her role remains consistent: providing essential external support that allows Oedipus 
+to move securely toward his final, fated reality."""@en ;
     monomyth:hasSequentialDivergence <oedipus-myth/divergences/sequential/rescue-after-return-threshold> .
 
 <oedipus-myth/stages/trouble-from-thebes> a monomyth:StageRealization ;
@@ -413,13 +454,13 @@ she also warns her father about the civil war happening in Thebes between her br
         <oedipus-myth/characters/antigone> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:realizationDescription """The hero's attempt to reach a state of equilibrium is 
-interrupted by 'trouble from Thebes.' The arrival of Creon and Polyneices—who attempt to 
-manipulate and kidnap the hero—serves as a refusal of the world to let the hero transcend 
-his tragic identity, effectively negating his mastery of the two worlds. 
-+ creon comes to try and take edipo back home with a trick, he captures Ismene and Antigone 
-(they are then saved by Theseus) and Polinice also comes to ask edipo for forgiveness for not 
-having gone against the decision of his exile at the time of his exile.  """@en ;
+    monomyth:realizationDescription """Oedipus's fragile peace is shattered by the arrival of Creon, 
+who uses trickery and force to kidnap both Antigone and Ismene in a desperate attempt to drag the 
+blind hero back to the Theban border. Though King Theseus steps in and saves the daughters, the 
+conflict deepens when Polyneices arrives. The son weeps and pleads for his father's forgiveness for 
+his past inactions against his exile, hoping to secure Oedipus's blessing for the coming war. This 
+intrusion prevents any serene equilibrium, highlighting his status as a man who is still pulled by 
+the heavy gravity of his origins."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/denied-mastery> .
 
 <oedipus-myth/stages/transfiguration-at-colonus> a monomyth:StageRealization ;
@@ -427,16 +468,15 @@ having gone against the decision of his exile at the time of his exile.  """@en 
     monomyth:realizesStage monomyth:FreedomToLive ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>, 
         <oedipus-myth/characters/theseus> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 18 ;
-    monomyth:realizationDescription """Oedipus experiences his final release as he is called 
-by a divine voice and vanishes into the sacred earth. the only one to witness his mysterious death is Theseus.
-He achieves the ultimate freedom from the 'trouble' of the world, but this liberation is synonymous 
-with his death, transforming him into a chthonic protector of the land. + diventa qualcosa di divino?"""@en ;
+    monomyth:realizationDescription """The hero reaches the end of his mortal journey as a sudden 
+thunderclap echoes across the sky, and a divine voice calls out to him. Oedipus stands up and walks 
+unaided toward a hidden, sacred point in the grove, where he simply vanishes into the earth. King 
+Theseus is the sole witness to this mysterious passing. Through this divine death, Oedipus is finally 
+freed from the weight of his past, transforming from a cursed exile into a holy, chthonic protector 
+of the land that welcomed him."""@en ;
     monomyth:hasNarrativeDivergence <oedipus-myth/divergences/narrative/freedom-in-death> .
-
-
-
 
 # --- Narrative Divergences ------------
 
@@ -444,94 +484,120 @@ with his death, transforming him into a chthonic protector of the land. + divent
     rdfs:label "Proactive Departure divergence"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/flee-from-corinth> ;
     monomyth:divergesFrom monomyth:RefusalOfTheCall ;
-    monomyth:divergenceRationale """In the Oedipus myth, refusal is not an act of 
-cowardice but a proactive attempt to outrun fate. This creates the 'Tragic Irony' 
-where the act of refusal is the very engine of the journey's fulfillment."""@en .
+    monomyth:divergenceRationale """In the Oedipus myth, the refusal of the call is subverted through 
+a proactive moral choice. Rather than a passive retreat born of cowardice, Oedipus’s refusal is an act 
+of high-minded defiance; he flees Corinth specifically to protect those he believes are his parents. 
+This creates a profound 'Tragic Irony' where the hero's virtuous attempt to outrun his fate becomes 
+the very engine of its fulfillment. By physically moving away from the perceived danger, he unknowingly
+makes his flight both a rejection of the call and the inevitable start of the journey."""@en .
 
-<oedipus-myth/divergences/narrative/protection-not-love>
-The meeting acts as a distorted encounter with divine truth, where the seer tries to protect the hero from a fatal enlightenment.
-T. shows his love towards O. in his attempt to protect him + what more??
-love di T. è in protezione e rivela a edipo the deepest ground of his existence, è il primo a metterlo in faccia alla realtà
+<oedipus-myth/divergences/narrative/protection-not-love> a monomyth:NarrativeDivergence ;
+    rdfs:label "Protection not Love divergence"@en ;
+    monomyth:divergeOf <oedipus-myth/stages/reveal-it-all-to-me> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """This stage diverges from the traditional archetype by alterating
+the nature of the goddess's unconditional love. The meeting acts as a distorted encounter with divine 
+truth, where the seer tries to protect the hero from a fatal enlightenment. The seer's care and love
+are expressed through a desperate protective silence, intended to shield Oedipus from his own ruin. 
+When forced to break this silence, instead of offering comforting validation, the prophet provides the 
+initial, painful awakening that sets the hero's true internal transformation in motion. He is the first
+to reveal to the hero his true identity and to confront him with reality."""@en .
+
+<oedipus-myth/divergences/narrative/atonement-with-the-king> a monomyth:NarrativeDivergence ;
+    rdfs:label "Atonement with the King divergence"@en ;
+    monomyth:divergenceOf <oedipus-myth/stages/he-is-the-regicide> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """This represents a profound subversion of the traditional Atonement 
+with the Father stage. Instead of a spiritual reconciliation or submission to parental authority, the 
+'atonement' is a terrifying reckoning with a violent past. The deep irony lies in the fact that Oedipus 
+believes he is coming to terms with the murder of a total stranger to purge the city of its plague. 
+In truth, this stranger is Laius, his biological father. Consequently, the hero undergoes an accidental 
+confrontation with the ghost of his patricide before he even understands the blood bond between them, 
+reversing the typical path toward healing into a descent toward destruction."""@en .
 
 <oedipus-myth/divergences/narrative/tragic-enlightenment> a monomyth:NarrativeDivergence ;
-    rdfs:label "Tragic enlightenment divergence"@en ;
+    rdfs:label "Tragic Enlightenment divergence"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/it-all-came-true> ;
     monomyth:divergesFrom monomyth:Apotheosis ;
     monomyth:divergenceRationale """Oedipus subverts the traditional Apotheosis, which normally 
-elevates the hero to a state of blissful, divine transcendence. Instead, through the testimony 
-of the old servant, he reaches a 'tragic enlightenment.' The conquest here is purely internal; 
-he does not achieve divine rest but rather a profound, shattering knowledge of his true self 
-and the irrevocable realization of his fated doom."""@en .
+elevates the hero to a state of blissful, divine transcendence. Instead, through the testimony of the 
+old servant, he reaches a 'tragic enlightenment.' The conquest here is purely internal; he does not 
+achieve divine rest but rather a profound, shattering knowledge of his true self and the irrevocable 
+realization of his fated doom."""@en .
 
 <oedipus-myth/divergences/narrative/punitive-inner-vision> a monomyth:NarrativeDivergence ;
-    rdfs:label "Punitive inner vision divergence"@en ;
+    rdfs:label "Punitive Inner Vision divergence"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/the-self-blinding> ;
     monomyth:divergesFrom monomyth:TheUltimateBoon ;
-    monomyth:divergenceRationale """The ultimate boon in the myth of Oedpis is far from a restorative elixir for the 
-community, as it consists in a severe, self-inflicted punishment. By blinding himself, the hero destroys his 
-physical perception of the world to acquire a solitary 'inner sight.' Rather than bringing 
-life or illumination to the world he leaves behind, this boon is entirely internal, solitary, and 
-unshared."""@en .
+    monomyth:divergenceRationale """The ultimate boon in the myth of Oedpis is far from a restorative 
+elixir for the community, as it consists in a severe, self-inflicted punishment. By blinding himself, 
+the hero destroys his physical perception of the world to acquire a solitary 'inner sight.' Rather 
+than bringing life or illumination to the world he leaves behind, this boon is entirely internal, 
+solitary, and unshared."""@en .
 
 <oedipus-myth/divergences/narrative/proactive-exile> a monomyth:NarrativeDivergence ;
-    rdfs:label "Proactive exile divergence"@en ;
+    rdfs:label "Proactive Exile divergence"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/plea-for-exile> ;
     monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
     monomyth:divergenceRationale """The hero’s departure acts as an inverted Refusal of the Return. 
-Instead of a passive or reluctant attitude toward crossing the return threshold, Oedipus takes 
-full initiative to leave. By begging Creon for exile, he proactively drives himself out of the 
-world in which his internal transformation has happened and chooses to wander the wilderness. 
-+ link plague Thebes, profezia apollo esiliare o uccidere regicide"""@en .
+Instead of a passive or reluctant attitude toward crossing the return threshold, Oedipus takes full 
+initiative to leave. By begging Creon for exile, he proactively drives himself out of the world in 
+which his internal transformation has happened and chooses to wander the wilderness. This choice is 
+also driven by the urgent need to fulfill Apollo’s prophecy, which predicted that, to save Thebes from 
+the plague, the regicide would have had to be exiled or killed."""@en .
 
 <oedipus-myth/divergences/narrative/denied-mastery> a monomyth:NarrativeDivergence ;
     rdfs:label "Denied Mastery"@en ;
     monomyth:divergenceOf <oedipus-myth/stages/trouble-from-thebes> ;
     monomyth:divergesFrom monomyth:MasterOfTwoWorlds ;
-    monomyth:divergenceRationale """In the Monomyth, Mastery implies a transpersonal state where 
-the hero is at home in both worlds. Here, the 'Mastery' is negated: the Ordinary World 
-(Theban politics) aggressively seeks to weaponize the hero’s spiritual status, while the hero 
-responds with fury rather than balance. This divergence shows that the hero remains a 
-prisoner of his tragic history until the moment of death."""@en .
+    monomyth:divergenceRationale """In the Monomyth, Mastery implies a transpersonal state where the 
+hero is at home in both worlds. Here, the 'Mastery' is negated: the world where the hero's 
+transformation has happened, hence Thebes and its politics, aggressively seeks to weaponize the hero’s 
+spiritual status and his integration in the new 'ordinary' world, while the hero responds with fury 
+rather than balance. This divergence shows that the hero remains a prisoner of his tragic history 
+and of the Theban dynamics until the moment of death."""@en .
 
-<oedipus-myth/divergences/narrative/freedom-in-death>
+<oedipus-myth/divergences/narrative/freedom-in-death> a monomyth:NarrativeDivergence ;
+    rdfs:label "Freedom in Death divergence"@en ;
+    monomyth:divergeOf <oedipus-myth/stages/transfiguration-at-colonus> ;
+    monomyth:divergesFrom monomyth:FreedomToLive ;
+    monomyth:divergenceRationale """This represents an 'Inverted Fit' of the final monomyth stage. 
+While 'Freedom to Live' traditionally suggests the hero’s ability to exist in the ordinary world without 
+the fear of death, Oedipus achieves this freedom only through the act of passing away. His release from 
+the burden of his past and the pollution of his crimes is synchronized with his physical disappearance. 
+The irony lies in the fact that his 'freedom' is a transition from mortal suffering to a chthonic, 
+immortal state, as he becomes free from life itself to serve as a sacred protector of the land."""@en .
 
 # --- Sequential Divergences -------------
 
-<oedipus-myth/divergences/sequential/aid-before-flee> 
-<oedipus-myth/divergences/sequential/rescue-after-return-threshold>
+<oedipus-myth/divergences/sequential/aid-before-flee> a monomyth:SequentialDivergence ;
+    rdfs:label "Aid before Flee divergence"@en ;
+    monomyth:divergenceOf <oedipus-myth/stages/apollos-guidance> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale """In the canonical monomyth, Supernatural Aid typically occurs as 
+the third stage, appearing after the hero's hesitation to provide the necessary tools or assurance 
+for the journey. In the myth of Oedipus, this sequence is displaced: the 'Aid' of Apollo's prophecy 
+is granted at the very outset, preceding the hero's Inverted Refusal (his flight from Corinth). This 
+displacement is critical to the tragic structure, as the divine guidance does not resolve the hero's 
+hesitation but instead serves as the direct catalyst for his attempt to outrun his fate."""@en .
 
-# --- Semiotic Divergences -------------
-
-<oedipus-myth/divergences/semiotic/incestuous-goddess> a monomyth:SemioticDivergence ;
-    rdfs:label "Incestuous Goddess divergence"@en ;
-    monomyth:divergenceOf <oedipus-myth/stages/marriage-to-the-queen> ;
-    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
-    monomyth:divergenceRationale """The 'Goddess' figure is semiotically shifted 
-from a figure of divine grace to one of biological and social taboo. The marriage 
-represents the hero's reward in the 'Ordinary World' (Thebes), but its semiotic 
-charge is negative and destructive."""@en .
-
-
-
-
+<oedipus-myth/divergences/sequential/rescue-after-return-threshold> a monomyth:SequentialDivergence ;
+    rdfs:label "Rescue after Return Threshold divergence"@en ;
+    monomyth:divergenceOf <oedipus-myth/stages/ismenes-news> ;
+    monomyth:divergesFrom monomyth:RescueFromWithout ;
+    monomyth:divergenceRationale """This stage represents a structural repetition and displacement of 
+the 'Rescue from Without' archetype. While Antigone provided the initial rescue in its canonical 
+position to sustain Oedipus during his exile, Ismene’s arrival occurs retroactively after the hero 
+has already crossed the return threshold of Colonus. Her appearance serves a dual purpose: she provides 
+the specific ritual aid needed to navigate his new environment and introduces the 'news from Thebes' 
+regarding the civil war. This information acts as the final narrative engine, setting into motion the 
+conflict with Creon and Polyneices that ultimately facilitates Oedipus's transition from a mortal 
+outcast to a divinized, sacred protector."""@en .
 
 
 
 
-<the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
-    rdfs:label "Ignorance is bliss"@en ;
-    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:involvesCharacter <the-matrix/characters/cypher>,
-        <the-matrix/characters/agent-smith> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
-    monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """Cypher embodies the temptation to abandon truth for comfort.
-Over a steak dinner negotiated with Agent Smith, he chooses to betray the crew in exchange for
-reinsertion into the Matrix, preferring pleasurable illusion to the bleak real world. His betrayal
-externalizes the doubt lurking within every freed mind: that ignorance might be preferable to
-painful knowledge."""@en ;
-    monomyth:fitNote """No single character serves as a sustained narrative temptress for Neo
-personally. The temptation is structural, embodied by Cypher's choice as a shadow alternative,
-rather than a direct seduction of the hero."""@en ;
-    monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/dispersed-temptation> ;
-    monomyth:hasSemioticDivergence <the-matrix/divergences/semiotic/woman-as-ignorance> .
+
+
+
+
