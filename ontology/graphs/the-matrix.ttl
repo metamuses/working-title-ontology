@@ -28,7 +28,7 @@
     rdfs:comment """A 1999 science fiction film in which a computer hacker discovers that reality as
 he knows it is a simulated world created by machines to subjugate humanity."""@en .
 
-# --- Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <the-matrix/monomyths/neo-journey> a monomyth:MonomythExpression ;
     rdfs:label "Neo's Hero's Journey in The Matrix"@en ;
@@ -418,7 +418,7 @@ entangled, the threshold itself is the illusion."""@en .
 
 <the-matrix/divergences/sequential/escape-after-apotheosis> a monomyth:SequentialDivergence ;
     rdfs:label "Escape after apotheosis divergence"@en ;
-    monomyth:divergenceOf <the-matrix/stages/hes-beginning-to-believe> ;
+    monomyth:divergenceOf <the-matrix/stages/mr-wizard-get-me-out-of-here> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
     monomyth:divergenceRationale """In The Matrix, Neo's apotheosis happens in two distinct phases.
 The first one, when "he's beginning to believe" and challenge Agent Smith, is not complete and it is
