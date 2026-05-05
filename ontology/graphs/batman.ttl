@@ -69,6 +69,7 @@ narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey.
         <batman-year-one/characters/detective-flass>,
         <batman-year-one/characters/commissioner-loeb>,
         <batman-year-one/characters/sarah-essen>,
+        <batman-year-one/characters/barbara-gordon>,
         <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasStageRealization <batman-year-one/stages/arrival-in-gotham>,
         <batman-year-one/stages/waiting-to-report>,
@@ -466,28 +467,28 @@ cycle of new life and love, only to willingly return to the 'suffering world' of
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
 <batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
     rdfs:label "Absent Magic Flight"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
 <batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
     rdfs:label "Absent Rescue from Without"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
 <batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
     rdfs:label "Absent Crossing of the Return Threshold"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 15 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
 <batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Absent Master of Two Worlds"@en ;
@@ -495,16 +496,17 @@ cycle of new life and love, only to willingly return to the 'suffering world' of
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
+
 <batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
     rdfs:label "Absent Freedom to Live"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
 # --- Sequential Divergences ----------------------
 
-<batman-year-one/divergences/distributed-sequence> a monomyth:SequentialDivergence ;
+<batman-year-one/divergences/sequential/distributed-sequence> a monomyth:SequentialDivergence ;
     rdfs:label "Distributed Road of Trials"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-distributed-trials> ;
     monomyth:divergesFrom monomyth:TheRoadOfTrials ;
@@ -512,17 +514,17 @@ cycle of new life and love, only to willingly return to the 'suffering world' of
 rather than a single linear stage following the Departure. This sequential overlap allows the trials to
 act as the catalyst for the hero's transformation while simultaneously serving as the initiatory tests of his new identity."""@en .
 
-<batman-year-one/divergences/gordon/belly-before-threshold> a monomyth:SequentialDivergence ;
+<batman-year-one/divergences/sequential/belly-before-threshold> a monomyth:SequentialDivergence ;
     rdfs:label "Belly of the Whale as Catalyst"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/the-beating> ;
+    monomyth:divergenceOf <batman-year-one/stages/the-beating> ;
     monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
     monomyth:divergenceRationale """In Campbell's framework, the Belly of the Whale typically occurs after crossing the threshold. 
 In Gordon's Neo-Noir journey, the order is inverted: the symbolic death and 'swallowing' by the corrupt system happens first. 
 The trauma of the Belly acts as the necessary catalyst that forces the hero to confront the threshold."""@en .
 
-<batman-year-one/divergences/gordon/threshold-after-belly> a monomyth:SequentialDivergence ;
+<batman-year-one/divergences/sequential/threshold-after-belly> a monomyth:SequentialDivergence ;
     rdfs:label "Threshold Crossing as Rebirth"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/beating-flass> ;
+    monomyth:divergenceOf <batman-year-one/stages/beating-flass> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:divergenceRationale """Because the Belly of the Whale happens first, crossing the threshold becomes the act of 
 rebirth itself. Gordon's decision to cross the threshold and destroy the Guardian (Flass) is the exact moment his new, 
@@ -607,18 +609,18 @@ generation—from the Roman’s influence, representing a systemic victory over 
 ordinary world he left behind no longer exists for him, there is no place for the hero to return to. 
 He is a 'Master' of only one world: the mythic darkness of his crusade."""@en .
 
-<batman-year-one/divergences/gordon/mundane-temptation> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/mundane-temptation> a monomyth:SemioticDivergence ;
     rdfs:label "The Mundane Temptress"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/semiotic/the-extramarital-affair> ;
+    monomyth:divergenceOf <batman-year-one/stages/the-extramarital-affair> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
     monomyth:divergenceRationale """Semiotically, the Temptress is not a supernatural seductress 
 or a malicious agent, but a genuinely good, intellectual equal. The 'temptation' is simply the human 
 desire for comfort and connection in a dark environment. This anchors the archetype entirely in psychological 
 realism while preserving its structural threat to the hero's integrity."""@en .
 
-<batman-year-one/divergences/gordon/secular-atonement> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/secular-atonement> a monomyth:SemioticDivergence ;
     rdfs:label "Secular Atonement Divergence"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/confession-to-barbara> ;
+    monomyth:divergenceOf <batman-year-one/stages/confession-to-barbara> ;
     monomyth:divergesFrom monomyth:AtonementWithTheFather ;
     monomyth:divergenceRationale """In classical mythology, the shedding of the ego dissolves the Ogre to 
 reveal a divine, cosmic Father with whom the hero achieves 'at-one-ment' (mystical union). In Miller's Neo-Noir 
@@ -629,7 +631,7 @@ therefore shifted from a cosmic reconciliation to a strictly secular, internal m
 
 # --- Narrative Divergences ----------------------
 
-<batman-year-one/divergences/premature-start-refusal> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/premature-start-refusal> a monomyth:NarrativeDivergence ;
     rdfs:label "Premature Start as Refusal"@en ;
     monomyth:divergenceOf <batman-year-one/stages/i-am-not-ready> ;
     monomyth:divergesFrom monomyth:RefusalOfTheCall ;
@@ -641,7 +643,7 @@ brutal physical defeat. This reshapes the dramatic weight of the stage from a te
 methodology: the hero must fail his first attempt in order to realize that, despite his absolute commitment, 
 something vital is missing from his approach."""@en .
 
-<batman-year-one/divergences/the-proactive-plunge> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/the-proactive-plunge> a monomyth:NarrativeDivergence ;
     rdfs:label "The Hero as Aggressor"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-dinner-party-ambush> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
@@ -650,7 +652,7 @@ boundary and wait for the hero. In a narrative reversal, Batman does not wait to
 (unlike hesitant heroes like Neo), he proactively hunts the guardians (Falcone and Loeb) in their 'inmost cave.' 
 He doesn't seek to bypass these 'watching powers' but to dominate them, ensuring there is no turning back from his mission."""@en .
 
-<batman-year-one/divergences/the-unwanted-peer> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/the-unwanted-peer> a monomyth:NarrativeDivergence ;
     rdfs:label "Goddess as Operational Interference"@en ;
     monomyth:divergenceOf <batman-year-one/stages/encounter-with-selina> ;
     monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
@@ -660,7 +662,7 @@ love or mastery; she offers a messy, rival version of his own mission. The diver
 does not seek to 'know' or 'merge' with this figure, but rather to manage her as a tactical anomaly that threatens the purity of his sign."""@en .
 #maybe is only narrative! semiotic= through which the stage is expressed but in this case IS NOT expressed at all!
 
-<batman-year-one/divergences/temptation-displacement> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/temptation-displacement> a monomyth:NarrativeDivergence ;
     rdfs:label "Archetypal Displacement to the Co-Protagonist"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-absent-temptation> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
@@ -670,7 +672,7 @@ the 'taint of the flesh.' The 'fleshly' burden of temptation is displaced onto J
 his affair with Sarah Essen, leaving Batman as an incorruptible sign. This displacement allows the story to satisfy the archetype while protecting the hero's status as a pure, 
 transcendental agent of justice."""@en .
 
-<batman-year-one/divergences/the-orphan-sovereignty> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/the-orphan-sovereignty> a monomyth:NarrativeDivergence ;
     rdfs:label "Sovereignty through Loss"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-absent-atonement> ;
     monomyth:divergesFrom monomyth:AtonementWithTheFather ;
@@ -678,7 +680,7 @@ transcendental agent of justice."""@en .
 absence of a father-figure makes 'at-one-ment' structurally impossible. Bruce is a 'sovereign orphan' 
 who answers to no one but his own trauma."""@en .
 
-<batman-year-one/divergences/noir-materialism> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/noir-materialism> a monomyth:NarrativeDivergence ;
     rdfs:label "Noir Materialism Divergence"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-absent-apotheosis> ;
     monomyth:divergesFrom monomyth:Apotheosis ;
@@ -687,7 +689,7 @@ framework, the hero’s ego (his trauma and his mission) is the source of his po
 the Batman. The narrative intentionally avoids transcendence, keeping the hero grounded in a material world of pain, 
 corruption, and tactical reality where 'divine knowledge' has no place."""@en .
 
-<batman-year-one/divergences/origin-as-stasis> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/origin-as-stasis> a monomyth:NarrativeDivergence ;
     rdfs:label "Origin Narrative Constraint"@en ;
     monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return> , 
         <batman-year-one/stages/the-magic-flight> ,
@@ -705,9 +707,9 @@ corruption, and tactical reality where 'divine knowledge' has no place."""@en .
 The narrative ends precisely at the moment the hero achieves his identity, serving as a prologue rather than a full monomythic cycle. 
 There is no 'return' because the story is a beginning."""@en .
 
-<batman-year-one/divergences/gordon/neo-noir-isolation> a monomyth:NarrativeDivergence ;
+<batman-year-one/divergences/narrative/neo-noir-isolation> a monomyth:NarrativeDivergence ;
     rdfs:label "Neo-Noir Isolation Divergence"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/the-absent-aid> ;
+    monomyth:divergenceOf <batman-year-one/stages/the-absent-aid> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
     monomyth:divergenceRationale """In classical myth, the hero is reassured by a protective universe (the helper). 
 In the Neo-Noir paradigm, the universe is indifferent or actively malignant. The narrative strips away the 'Supernatural Aid' 
