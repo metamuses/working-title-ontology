@@ -668,12 +668,21 @@ body::before {
   justify-content: space-between;
 }
 
+.kg-card .meta-title {
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(122, 92, 20, 0.12);
+}
+
 .kg-card .meta-row {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(122, 92, 20, 0.12);
+  margin-top: 3px;
 }
 
 .kg-card .meta-item {
