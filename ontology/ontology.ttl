@@ -12,7 +12,7 @@
 concepts based on "The Hero with a Thousand Faces" by Joseph Campbell."""@en ;
     dcterms:creator "Tommaso Barbato",
         "Nicol D'Amelio",
-        "Maryam Dadras",
+        "Maryam Dadrasrazi",
         "Martina Uccheddu" ;
     owl:versionInfo "1.0" ;
     owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
