@@ -85,117 +85,179 @@
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:realizationDescription """Consumed by hubris, King Kay Kavus invades Mazandaran and is blinded/imprisoned by the White Demon. His desperate letter to Zal serves as the call for Rostam."""@en .
+    monomyth:realizationDescription """After the death of King Kay Qobad, the greedy King Kay Kavus 
+takes the throne. A demon singer sent by Ahriman lulls him with songs of Mazandaran's beauty, 
+prompting Kavus to invade. The invasion ends in disaster when the White Demon rains stones 
+on the army and strikes them blind with sorcery. Imprisoned in a pit, Kavus smuggles a 
+letter to Zal, begging for Rostam to come and save the army and the crown."""@en .
 
 <rostam-haft-khan/stages/02-refusal> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """The 'Short Path' is described as a seven-day journey filled with supernatural death traps, necessitating a moment of choice and psychological preparation for Rostam."""@en .
-
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:realizationDescription """The narrative contains no hesitation or refusal. 
+Rostam, already a fully realized epic hero, responds immediately to the Shah's plea. 
+His choice of the more dangerous 'Short Path' reinforces that the story prioritizes heroic duty and action over psychological conflict, making refusal structurally incompatible with the narrative."""@en .
+    
 <rostam-haft-khan/stages/03-aid> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/autonomous-ally-rakhsh> ;
-    monomyth:realizationDescription """Zal provides weapons and armor, while Rakhsh serves as the autonomous supernatural ally who protects the hero even when he is unconscious."""@en .
+    monomyth:realizationDescription """Zal provides Rostam with his heavy mace and leopard-skin 
+armor (Babr-e Bayan) which is invulnerable to fire and water. Most importantly, Rostam 
+is aided by his legendary steed, Rakhsh, a horse of incredible strength and intelligence 
+who can kill lions and fight alongside his master."""@en .
 
 <rostam-haft-khan/stages/04-threshold> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:realizationDescription """Rostam definitively crosses the threshold into the realm of sorcery by choosing the perilous 'Short Path' and mounting Rakhsh."""@en .
+    monomyth:realizationDescription """Rostam leaves the Iranian court and enters the borderlands 
+of Mazandaran. By choosing the 'Short Path' beset with baleful things, he moves away 
+from the safe world into a land of sorcery. Rakhsh gallops so fast that the ground 
+vanishes beneath them, covering a two-day journey in twelve hours."""@en .
 
 <rostam-haft-khan/stages/05-whale> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/vulnerability-sleep> ;
-    monomyth:realizationDescription """Rostam falls into a deep sleep in the reeds, a state of vulnerability that represents his entry into the life-threatening darkness of Mazandaran."""@en .
+    monomyth:realizationDescription Exhausted, Rostam makes a couch among the reeds to sleep, 
+unaware that he has laid down in the lair of a fierce lion. This moment of deep, 
+unprotected slumber in the heart of enemy territory represents his total immersion 
+in the danger of Mazandaran, where his human awareness is completely suspended."""@en .
 
 <rostam-haft-khan/stages/06-trials-123> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/divine-sign-ram> ;
-    monomyth:realizationDescription """Khans 1, 2, and 3: Rakhsh slays a lion; God provides a wild ram to lead a dehydrated Rostam to water; Rostam decapitates an eighty-foot dragon."""@en .
+    monomyth:realizationDescription """Labor 1: While Rostam sleeps, a lion attacks. Rakhsh 
+independently fights and kills the beast by stomping its head and biting its neck. 
+Labor 2: Rostam collapses in the desert from thirst; after he prays, a fat wild ram 
+appears, and he follows it to a hidden spring. Labor 3: An eighty-foot dragon attacks 
+his camp thrice. Initially invisible, God eventually grants Rostam light to see the 
+beast, allowing him to decapitate it while Rakhsh bites its scales."""@en .
 
 <rostam-haft-khan/stages/07-goddess-absent> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """The narrative lacks a nurturing feminine figure, focusing instead on the aggressive sorcery of the land."""@en .
+    monomyth:realizationDescription """The narrative not only lacks a nurturing feminine figure but actively inverts the archetype. The only prominent feminine presence is a demonic sorceress who deceives and attacks Rostam. This replaces the 'Goddess' as a source of unity or wisdom with a figure of illusion and danger, reflecting the epic’s moral polarity rather than symbolic integration."""
 
 <rostam-haft-khan/stages/08-temptress> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/divine-name-revelation> ;
-    monomyth:realizationDescription """Khan 4: Rostam finds a magical banquet. He sings to a lute before a sorceress appears. She is revealed and slain only when Rostam toasts to the Name of God."""@en .
+    monomyth:realizationDescription """Labor 4: Rostam finds a magical banquet with wine and a 
+lyre. He plays and sings of his wanderings. A sorceress disguised as a beautiful damsel 
+joins him. However, when Rostam offers her wine in the name of the Creator (Ormuzd), 
+the holy name forces her to reveal her true, hideous form. Rostam lassos the demon-witch 
+and cleaves her in half with his sword."""@en .
 
 <rostam-haft-khan/stages/09-trials-olad> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/olad> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSequentialDivergence <rostam-haft-khan/divergences/sequential/distributed-trials> ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/captive-guide-olad> ;
-    monomyth:realizationDescription """Khan 5: Rostam conquers Olad Deev, tearing off a keeper's ears and binding the champion to force him into service as a guide."""@en .
+    monomyth:realizationDescription Labor 5: After Rostam lets Rakhsh graze in a field, the 
+keeper beats Rostam's feet with a stick. Rostam wakes and tears the man's ears off. 
+The champion Olad (Aulad) arrives with an army to avenge the keeper. Rostam routs the 
+army single-handedly, lassos Olad, and binds him, promising him the throne of Mazandaran 
+if he acts as a guide to find the White Demon's cave."""@en .
 
 <rostam-haft-khan/stages/10-trials-arzhang> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
-    monomyth:realizationDescription """Khan 6: Rostam slays Arzhang Div, the general of the demons, by pulling his hair and tearing his head off, causing 12,000 demons to flee."""@en .
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:realizationDescription """Labor 6: Olad leads Rostam to the camp of the demon general 
+Arzhang. Rostam lets out a roar that shakes the mountains, gallops to Arzhang's tent, 
+tears the demon out by his hair, and rips his head from his shoulders. He hurls the 
+severed head at the demon army, causing 12,000 demons to flee in panic."""@en .
 
 <rostam-haft-khan/stages/11-atonement> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 11 ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/folly-of-the-father> ;
-    monomyth:realizationDescription """Rostam enters the pit of the blind King. The King commands the hero to harvest the White Demon's liver, setting the terms for atonement and restoration."""@en .
+    monomyth:realizationDescription """Rostam enters the pit and finds the blind King Kay Kavus. 
+The King, now desperate and repentant, explains that the only cure for their blindness 
+is the blood from the heart and liver of the White Demon. Rostam accepts this final 
+command from his sovereign, setting the stage for the final confrontation."""@en .
 
 <rostam-haft-khan/stages/12-apotheosis> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:realizesStage monomyth:Apotheosis ;
-    monomyth:realizationDescription """Khan 7: Rostam descends into the pitch-black cave of the White Demon, a space of literal and symbolic transcendence where human and demon engage in a titanic struggle."""@en .
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """Labor 7: Rostam enters the pitch-black cave of the White 
+Demon at noon when the demons sleep. He awakens the mountain-sized giant and they 
+wrestle with such force that blood and sweat run like rivers. Rostam prays to God 
+for strength, lifts the demon, and slams him down, cutting out his liver and heart."""@en .
 
 <rostam-haft-khan/stages/13-boon> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
-    monomyth:realizationDescription """Rostam slams the White Demon and cuts out its liver. The blood is the ultimate elixir that restores the sight of the King and his army."""@en .
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """Rostam returns to the blind Shah and his lords. He 
+drops the blood of the White Demon's liver into their eyes. Instantly, the sorcery 
+is broken, and the sight of the King and the entire Iranian army is restored, 
+granting them the 'elixir' of vision and life."""@en .
 
 <rostam-haft-khan/stages/14-refusal-return-absent> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """Rostam shows no hesitation in returning; his duty to Iran and the King necessitates an immediate exit from the demon realm."""@en .
+    monomyth:realizationDescription """Rostam shows no hesitation in returning; he views the demon realm of Mazanderan as a land of filth and sorcery. 
+His duty to Iran and the King necessitates an immediate exit to restore the legitimate order at home, leaving no room for a desire to stay in the supernatural realm."""@en .
 
 <rostam-haft-khan/stages/15-flight-final-war> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/king-stone-war> ;
-    monomyth:realizationDescription """The 'Magic Flight' is delayed by a final war. Rostam defeats the King of Mazandaran even after the king transforms himself into an unbreakable stone."""@en .
+    monomyth:realizationDescription """The King of Mazandaran refuses to yield and challenges 
+Rostam. During their duel, the King uses magic to turn his body into an unbreakable 
+stone. Rostam simply picks up the 'King-Stone' and carries it to camp, threatening 
+to grind it to dust with his mace until the King is forced to revert to human form."""@en .
 
 <rostam-haft-khan/stages/16-rescue-absent> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """As the world-champion, Rostam is the source of rescue; he cannot be rescued by an external force."""@en .
+    monomyth:realizationDescription """As the 'World-Champion,' Rostam is the source of rescue for everyone else; 
+he is so powerful that there is no external force capable of rescuing him. 
+His journey out of Mazanderan is secured through his own military might and dominance over the demons."""@en .
 
 <rostam-haft-khan/stages/17-return-threshold> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:realizationDescription """Rostam and the King return to the capital, Estakhr, where the populace celebrates by throwing gold and wine."""@en .
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """Rostam and King Kay Kavus return to the Iranian capital, Estakhr. 
+The crossing of the threshold back into the 'Ordinary World' is a grand celebration; 
+the populace fills the streets, throwing gold and wine over the heroes to welcome the restoration of the rightful Shah and the return of their champion."""@en .
 
 <rostam-haft-khan/stages/18-master-worlds> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 18 ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/sovereignty-protector> ;
-    monomyth:realizationDescription """By appointing Olad as King of Mazandaran and returning to Iran, Rostam demonstrates mastery over both the supernatural and political orders."""@en .
+    monomyth:realizationDescription """Rostam fulfills his promise to Olad, giving him the 
+crown of Mazandaran. By doing so, he establishes order in the land of demons while 
+returning to Iran as its savior, having mastered the supernatural perils of 
+Mazandaran and the political duties of the Iranian court."""@en .
 
 <rostam-haft-khan/stages/19-freedom> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 19 ;
     monomyth:realizesStage monomyth:FreedomToLive ;
-    monomyth:realizationDescription """Order is restored and sight is returned, though the King’s folly remains an existential warning for the future of the land."""@en .
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:realizationDescription """The Shah and Rostam return to the capital, Estakhr, 
+to a hero's welcome of gold and wine. The land is at peace, and Rostam returns 
+to Sistan, having restored the freedom of his nation and the sight of its King."""@en .
 
 # --- Divergences --------------------------------------------------------------
 
