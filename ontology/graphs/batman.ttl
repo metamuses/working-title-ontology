@@ -23,11 +23,12 @@
         "Superhero"@en,
         "Neo-Noir"@en ;
     owl:sameAs wd:Q383811 ;
-    monomyth:interpretedBy <batman-year-one/monomyths/bruce-wayne-journey> ;
+    monomyth:interpretedBy <batman-year-one/monomyths/bruce-wayne-journey>, 
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     rdfs:comment """A landmark comic book arc that reimagines Bruce Wayne's first year as 
 Batman and Jim Gordon's first year with the GCPD in a decaying Gotham City."""@en .
 
-# --- Bruce Wayne's Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <batman-year-one/monomyths/bruce-wayne-journey> a monomyth:MonomythExpression ;
     rdfs:label "Bruce Wayne's Hero's Journey in Batman: Year One"@en ;
@@ -58,22 +59,58 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
         <batman-year-one/stages/master-of-two-worlds>,
         <batman-year-one/stages/freedom-to-live> .
 
+<batman-year-one/monomyths/jim-gordon-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Jim Gordon's Hero's Journey in Batman: Year One"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey."""@en ;
+    monomyth:interprets <batman-year-one> ;
+    monomyth:hasHero <batman-year-one/characters/jim-gordon> ;
+    monomyth:hasCharacter <batman-year-one/characters/jim-gordon>,
+        <batman-year-one/characters/detective-flass>,
+        <batman-year-one/characters/commissioner-loeb>,
+        <batman-year-one/characters/sarah-essen>,
+        <batman-year-one/characters/bruce-wayne> ;
+    monomyth:hasStageRealization <batman-year-one/stages/arrival-in-gotham>,
+        <batman-year-one/stages/waiting-to-report>,
+        <batman-year-one/stages/the-absent-aid>
+        <batman-year-one/stages/the-beating>
+        <batman-year-one/stages/beating-flass>,
+        <batman-year-one/stages/the-honest-cop-trials>,
+        <batman-year-one/stages/the-intellectual-equal>,
+        <batman-year-one/stages/the-extramarital-affair>,
+        <batman-year-one/stages/confession-to-barbara>,
+        <batman-year-one/stages/family-man>,
+        <batman-year-one/stages/the-bridge-alliance>, 
+        <batman-year-one/stages/refusal-of-the-return>,
+        <batman-year-one/stages/the-magic-flight>,
+        <batman-year-one/stages/rescue-from-without>, 
+        <batman-year-one/stages/crossing-the-return-threshold>,
+        <batman-year-one/stages/master-of-two-worlds>,
+        <batman-year-one/stages/freedom-to-live> .
+
 # --- Characters -----------------------
 
 <batman-year-one/characters/bruce-wayne> a monomyth:Character ;
     rdfs:label "Bruce Wayne / Batman"@en ;
     monomyth:heroOf <batman-year-one/monomyths/bruce-wayne-journey> ;
-    monomyth:embodiesArchetype monomyth:Hero ;
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero , monomyth:Ally ; 
+    rdfs:comment "The billionaire vigilante who returns to Gotham City and adopts the fearsome persona of Batman to fight crime, serving as the primary hero and an eventual ally to Jim Gordon."@en ;
     owl:sameAs wd:Q2695156 .
 
 <batman-year-one/characters/jim-gordon> a monomyth:Character ;
     rdfs:label "James Gordon"@en ;
-    monomyth:embodiesArchetype monomyth:Ally ;
+    monomyth:heroOf <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally , monomuyth:Hero ;
     rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en ;
     owl:sameAs wd:Q116113 .
 
 <batman-year-one/characters/selina-kyle> a monomyth:Character ;
     rdfs:label "Selina Kyle"@en ;
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter ;
     rdfs:comment "A dominatrix who is inspired by Batman to become Catwoman."@en ;
     owl:sameAs wd:Q158952 .
@@ -81,14 +118,37 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
 <batman-year-one/characters/commissioner-loeb> a monomyth:Character ;
     rdfs:label "Commissioner Loeb"@en ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey> ,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     rdfs:comment "The head of the corrupt GCPD infrastructure."@en ;
     owl:sameAs wd:Q3000468 .
 
 <batman-year-one/characters/carmine-falcone> a monomyth:Character ;
-    rdfs:label "Carmine Falcone" @en;
+    rdfs:label "Carmine Falcone"@en ;
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    rdfs:comment "Gotham City's untouchable mob boss." @en ;
+    rdfs:comment "Gotham City's untouchable mob boss."@en ;
     owl:sameAs wd:Q2663956 .
+
+<batman-year-one/characters/detective-flass> a monomyth:Character ;
+    rdfs:label "Detective Arnold Flass"@en ;
+    monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
+    rdfs:comment "A corrupt cop who acts as the violent enforcer of the GCPD's status quo."@en .
+
+<batman-year-one/characters/sarah-essen> a monomyth:Character ;
+    rdfs:label "Sarah Essen"@en ;
+    monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:embodiesArchetype monomyth:Goddess ;
+    rdfs:comment "Gordon's intellectual equal and partner, who becomes the source of his temptation."@en ;
+    owl:sameAs wd:Q3950326 .
+
+<batman-year-one/characters/barbara-gordon> a monomyth:Character;
+    rdfs:label "Barbara Eileen Gordon"@en ;
+    monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor , monomyth:Ally ;
+    rdfs:comment "Jim Gordon's wife and moral compass, providing him the emotional wisdom and forgiveness."@en ;
+    owl:sameAs wd:Q48893069 .
 
 # --- Stage Realizations ---------------
 
@@ -100,7 +160,7 @@ narrative of 'Batman: Year One', focusing on the character Bruce Wayne's journey
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizationDescription """Bruce returns to Gotham after years abroad. His 'summons' 
 is internal: the trauma of his parents' death and the decaying state of the city."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/internal-herald> .
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/internal-herald> .
 
 <batman-year-one/stages/i-am-not-ready> a monomyth:StageRealization ; 
     rdfs:label "Disastrous East End Surveillance Mission"@en ;
@@ -114,19 +174,18 @@ drives him to attempt a plainclothes serveillance mission in the East End. The e
 is disastrous: he fights a pimp, is stabbed, shot by the police, and barely escapes. Bleeding in 
 his study, his initial hesitation is violently validated. He admits he is 'not ready' because 
 he lacks the proper method to strike fear into his enemies."""@en ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/premature-start-refusal> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/premature-start-refusal> .
 
 <batman-year-one/stages/the-bat-at-the-window> a monomyth:StageRealization ;
     rdfs:label "The Bat"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """As Bruce bleeds out in his study pleading to his father's memory 
 for guidance, a massive bat crashes through the window. He interprets this violent natural event as a 'sign,' 
 providing the psychological epiphany and the specific 'wisdom' needed to assume his vigilante identity."""@en ;
     monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/supernatural-as-totemic> .
-#TO REVISE: maybe a perfect fit honestly even though it has a semiotic divergence
 
 <batman-year-one/stages/the-dinner-party-ambush> a monomyth:StageRealization ;
     rdfs:label "The Dinner Party Ambush"@en ;
@@ -141,8 +200,8 @@ a dinner party for Gotham's corrupt elite. This act represents a form of 'self-a
 kills off his former status as a harmless socialite to plunge into the mystery of his crusade. 
 By confronting the city's power brokers, he proves he has the 'competence and courage' to operate in a zone of 
 magnified power where ordinary rules are suspended."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/institutional-horizon> ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/the-proactive-plunge> .
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/institutional-horizon> ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/the-proactive-plunge> .
 
 
 <batman-year-one/stages/the-tenement-siege> a monomyth:StageRealization ;
@@ -156,7 +215,7 @@ magnified power where ordinary rules are suspended."""@en ;
 a 'plunge into an unknown darkness.' As the building collapses and Commissioner Loeb presumes him dead, Bruce experiences 
 the symbolic death of his former self. By surviving the inferno and summoning a swarm of bats to mask his exit, he allows a new, 
 transformed identity—the urban myth of the Batman—to emerge from the rubble."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/urban-womb> .
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/urban-womb> .
 
 <batman-year-one/stages/the-distributed-trials> a monomyth:StageRealization ;
     rdfs:label "The Distributed Road of Trials"@en ;
@@ -171,8 +230,7 @@ the climb up the crime ladder, the Mayor's house ambush, and the tenement siege�
 he discovers the 'benign, protecting power' of Jim Gordon. Following the tenement siege, 
 Bruce realizes that his survival was aided by the presence of a moral equal within the system, 
 transforming Gordon from a target into the essential ally needed to survive the trials ahead."""@en ;
-    monomyth:hasSequentialDivergence <batman-year-one/divergences/distributed-sequence> .
-#TO REVISE: also semiotic for how gordon is an ally?
+    monomyth:hasSequentialDivergence <batman-year-one/divergences/sequential/distributed-sequence> .
 
 <batman-year-one/stages/encounter-with-selina> a monomyth:StageRealization ;
     rdfs:label "The Encounter with Selina Kyle"@en ;
@@ -185,32 +243,32 @@ transforming Gordon from a target into the essential ally needed to survive the 
 she would represent the 'Goddess'—the totality of what can be known. However, the fit is weak: Batman views 
 her not as a mystical union or a source of bliss, but as a tactical anomaly. She 'ruins the moment' rather 
 than bestowing mastery, proving that Bruce’s gentle heart is reserved for his mission, not for a person."""@en ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/the-unwanted-peer> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/the-unwanted-peer> .
 
 <batman-year-one/stages/the-absent-temptation> a monomyth:StageRealization ;
     rdfs:label "The Absent Temptation of the Symbol"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic-dehumanization> ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/temptation-displacement> .
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/semiotic-dehumanization> ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/temptation-displacement> .
 
 <batman-year-one/stages/the-absent-atonement> a monomyth:StageRealization ;
     rdfs:label "The Absent Atonement of the Orphan"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 9 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/the-orphan-sovereignty> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/the-orphan-sovereignty> .
 
 <batman-year-one/stages/the-absent-apotheosis> a monomyth:StageRealization ;
     rdfs:label "The Absent Apotheosis"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 10 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/noir-materialism> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/noir-materialism> .
 
 <batman-year-one/stages/the-bridge-rescue> a monomyth:StageRealization ;
-    rdfs:label "The bridge rescue"@en ;
+    rdfs:label "The Bridge Rescue"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/jim-gordon>;
@@ -221,55 +279,228 @@ Batman saves the life of Gordon’s infant son, James Jr., literally 'restoring 
 future of Gotham. This act of selflessness secures the 'Ultimate Boon': a clandestine alliance 
 with Jim Gordon. This partnership is the 'elixir' that brings a spark of illumination to a 
 corrupt city, ensuring that the hero's mission can now truly begin with the support of the law."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-human-elixir> .
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-human-elixir> .
 
 <batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
     rdfs:label "Absent Refusal of the Return"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
 
 <batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
     rdfs:label "Absent Magic Flight"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
 
 <batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
     rdfs:label "Absent Rescue from Without"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
 
 <batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
     rdfs:label "Absent Crossing of the Return Threshold"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 15 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
 
 <batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Absent Master of Two Worlds"@en ;
     monomyth:realizesStage monomyth:MasterOfTwoWorlds ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 16 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
 
 <batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
     rdfs:label "Absent Freedom to Live"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/the-permanent-mask> .
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/the-permanent-mask> .
+
+<batman-year-one/stages/arrival-in-gotham> a monomyth:StageRealization ;
+    rdfs:label "Arrival in Gotham"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/detective-flass>, 
+        <batman-year-one/characters/commissioner-loeb> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Gordon arrives in Gotham, viewing the transfer as a punishment. He 
+is immediately summoned into the 'special world' of systemic corruption, meeting Commissioner Loeb 
+and witnessing Detective Flass brutalize a teenager."""@en .
+
+<batman-year-one/stages/waiting-to-report> a monomyth:StageRealization ;
+    rdfs:label "Waiting to Report"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/detective-flass> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """Gordon hesitates to act against the corruption. 
+He rationalizes his inaction by telling himself it is 'better to wait' before reporting colleagues. 
+Flass tells him to relax and adapt to the system, summarizing Gordon's passive survival strategy."""@en .
+
+<batman-year-one/stages/the-absent-aid> a monomyth:StageRealization ;
+    rdfs:label "The Absent Supernatural Aid"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 3 ; 
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/neo-noir-isolation> .
+
+<batman-year-one/stages/the-beating> a monomyth:StageRealization ;
+    rdfs:label "The Beating"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/detective-flass> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Gordon is ambushed and beaten by Flass and his masked men. 
+This serves as the 'Belly of the Whale'—a plunge into a life-and-death 'black moment' where Gordon 
+is completely swallowed by the 'monster' of systemic police corruption. During this brutal ordeal, 
+his former self (the passive, rule-abiding cop trying to survive quietly) undergoes a symbolic death 
+and self-annihilation, setting the stage for his metamorphosis."""@en ;
+    monomyth:hasSequentialDivergence <batman-year-one/divergences/sequential/belly-before-threshold> .
+
+<batman-year-one/stages/beating-flass> a monomyth:StageRealization ;
+    rdfs:label "Beating Flass"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/detective-flass> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """After surviving the beating, Gordon refuses to retreat. 
+Instead of going home, he ambushes Flass in the snow, beats him, and strips him of his weapon. 
+By doing this, Gordon crosses the threshold from passive observer to active combatant. He leaves behind the familiar 
+safety of playing by the rules and fully enters the brutal world of Gotham's reality."""@en ;
+    monomyth:hasSequentialDivergence <batman-year-one/divergences/sequential/threshold-after-belly> .
+
+<batman-year-one/stages/the-honest-cop-trials> a monomyth:StageRealization ;
+    rdfs:label "The Honest Cop Trials"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """Gordon navigates a gauntlet of trials that test his integrity and 
+physical courage: entering a hostage situation unarmed, clashing with the violent Branden, and 
+navigating Loeb's orders to hunt down the vigilante Batman."""@en .
+
+<batman-year-one/stages/the-intellectual-equal> a monomyth:StageRealization ;
+    rdfs:label "Meeting Sarah Essen"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/sarah-essen> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """Gordon meets Sarah Essen, who functions as his operational 
+and intellectual equal. She is the first to suggest Bruce Wayne might be Batman. Their connection 
+represents a nurturing, understanding force in a city that otherwise alienates him. Within the secular, 
+gritty confines of Gotham, Sarah Essen functions as the Neo-Noir equivalent of the 'Queen Goddess of 
+the World.' For Gordon, who is alienated by the corrupt department, she represents the 'reply to all desire'
+—providing the intellectual parity, moral support, and emotional understanding he desperately lacks."""@en .
+
+<batman-year-one/stages/the-extramarital-affair> a monomyth:StageRealization ;
+    rdfs:label "The Affair and Blackmail"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/sarah-essen>, 
+        <batman-year-one/characters/commissioner-loeb> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """The connection with Essen transforms into an extramarital affair, 
+fulfilling the archetype of the Temptress. It is a worldly attachment that threatens to arrest the journey, 
+filling Gordon with guilt regarding his pregnant wife and giving Commissioner Loeb the leverage needed 
+to blackmail him."""@en ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/mundane-temptation> .
+
+<batman-year-one/stages/confession-to-barbara> a monomyth:StageRealization ;
+    rdfs:label "Confession and Atonement"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/barbara-gordon>, 
+        <batman-year-one/characters/commissioner-loeb> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """Commissioner Loeb acts as the 'corrupt Father' of the GCPD, judging and threatening Gordon. 
+To survive the crisis and 'abandon his attachment to his own ego', Gordon confesses his affair to his wife Barbara. By destroying his own secret, 
+he strips the 'Father' of his power and undergoes a moral rebirth."""@en ;
+    monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/secular-atonement> .
+
+<batman-year-one/stages/family-man> a monomyth:StageRealization ;
+    rdfs:label "The family man"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/barbara-gordon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription """Finally free from his guilt, Gordon's son is born and for a brief moment we see him 
+dwelling momentarily in the peaceful stage of new found fatherhood and family bliss."""@en .
+
+<batman-year-one/stages/the-bridge-alliance> a monomyth:StageRealization ;
+    rdfs:label "The Bridge Alliance"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
+        <batman-year-one/characters/bruce-wayne> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:realizationDescription """Following his confession and the 'death' of his ego, Gordon's child is born. 
+In the bleak context of Gotham, this quiet domestic scene of Gordon caring for his newborn family functions as his Apotheosis. 
+Stripped of his ego-bound limitations and the blackmail that haunted him, Gordon achieves a fleeting state of 'blissful rest.' 
+The family unit becomes a sanctuary that temporarily transcends the dark dualities of Gotham's streets. Gordon experiences the 'eternal'
+cycle of new life and love, only to willingly return to the 'suffering world' of his police work to serve as a protector."""@en .
+
+<batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
+    rdfs:label "Absent Refusal of the Return"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+
+<batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
+    rdfs:label "Absent Magic Flight"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+
+<batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
+    rdfs:label "Absent Rescue from Without"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+
+<batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
+    rdfs:label "Absent Crossing of the Return Threshold"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
+
+<batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
+    rdfs:label "Absent Master of Two Worlds"@en ;
+    monomyth:realizesStage monomyth:MasterOfTwoWorlds ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
+<batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
+    rdfs:label "Absent Freedom to Live"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
 
 # --- Sequential Divergences ----------------------
 
@@ -281,9 +512,25 @@ corrupt city, ensuring that the hero's mission can now truly begin with the supp
 rather than a single linear stage following the Departure. This sequential overlap allows the trials to
 act as the catalyst for the hero's transformation while simultaneously serving as the initiatory tests of his new identity."""@en .
 
+<batman-year-one/divergences/gordon/belly-before-threshold> a monomyth:SequentialDivergence ;
+    rdfs:label "Belly of the Whale as Catalyst"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/gordon/the-beating> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
+    monomyth:divergenceRationale """In Campbell's framework, the Belly of the Whale typically occurs after crossing the threshold. 
+In Gordon's Neo-Noir journey, the order is inverted: the symbolic death and 'swallowing' by the corrupt system happens first. 
+The trauma of the Belly acts as the necessary catalyst that forces the hero to confront the threshold."""@en .
+
+<batman-year-one/divergences/gordon/threshold-after-belly> a monomyth:SequentialDivergence ;
+    rdfs:label "Threshold Crossing as Rebirth"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/gordon/beating-flass> ;
+    monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:divergenceRationale """Because the Belly of the Whale happens first, crossing the threshold becomes the act of 
+rebirth itself. Gordon's decision to cross the threshold and destroy the Guardian (Flass) is the exact moment his new, 
+hardened identity emerges from the darkness."""@en .
+
 # --- Semiotic Divergences ----------------------
 
-<batman-year-one/divergences/internal-herald> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/internal-herald> a monomyth:SemioticDivergence ;
     rdfs:label "The Internal Herald"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham> ;
     monomyth:divergesFrom monomyth:TheCallToAdventure ;
@@ -294,7 +541,7 @@ Gotham City after twelve years abroad, having trained for his eventual one-man w
 he receives no outside summons. Instead, his 'call' is a psychological compulsion born of past 
 trauma: an inescapable need to confront the very street crime that killed his parents."""@en .
 
-<batman-year-one/divergences/supernatural-as-totemic> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/supernatural-as-totemic> a monomyth:SemioticDivergence ;
     rdfs:label "Supernatural as Totemic Divergence"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-bat-at-the-window> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
@@ -305,16 +552,16 @@ in the sign system: instead of a literal wizard handing over a magical object, t
 translates a violent natural event into a conceptual talisman (the symbol of the Bat), providing 
 internalized direction and psychological grounding."""@en .
 
-<batman-year-one/divergences/institutional-horizon> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/institutional-horizon> a monomyth:SemioticDivergence ;
     rdfs:label "Institutional Life Horizon"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-crossing> ;
+    monomyth:divergenceOf <batman-year-one/stages/the-dinner-party-ambush> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:divergenceRationale """Campbell describes the threshold as the absolute limit of the hero's 
 'life horizon.' Semiotically, this narrative translates a literal geographic boundary into a social and political one. 
 The 'unknown' is not a far-off land, but the dark, systemic corruption of Gotham's leadership. 
 Batman enters this new realm not by traveling, but by shattering the legal and social boundaries that previously protected the elite."""@en .
 
-<batman-year-one/divergences/urban-womb> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/urban-womb> a monomyth:SemioticDivergence ;
     rdfs:label "Urban Tenement as World Womb"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-tenement-siege> ;
     monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
@@ -323,7 +570,7 @@ like a 'snake its slough.' Semiotically, this narrative replaces the mythic mons
 tomb: a bombed-out tenement. Despite the secular signifiers, the function is preserved: the hero is swallowed by a darkness that 
 facilitates the symbolic death of his social identity, allowing the mythic vigilante to emerge in its place."""@en .
 
-<batman-year-one/divergences/semiotic-dehumanization> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/semiotic-dehumanization> a monomyth:SemioticDivergence ;
     rdfs:label "The Symbol as an Immune Agent"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-absent-temptation> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
@@ -333,7 +580,7 @@ all the archetypal traits of a Temptress, Bruce is immune because he has split h
 device, not a man, and symbols cannot be tempted. By constituting himself as a non-negotiable sign (Batman) rather than a person, he makes the category of temptation 'malformed.' 
 You cannot seduce a symbol that has no negotiable interiority."""@en .
 
-<batman-year-one/divergences/the-human-elixir> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/the-human-elixir> a monomyth:SemioticDivergence ;
     rdfs:label "Alliance as the Ultimate Boon"@en ;
     monomyth:divergenceOf <batman-year-one/stages/the-bridge-rescue> ;
     monomyth:divergesFrom monomyth:TheUltimateBoon ;
@@ -342,7 +589,7 @@ In this grounded noir setting, the 'Grail' is semiotically shifted to a social c
 Batman and Gordon. The 'power to restore fertility' is literalized as saving a child—the city's next 
 generation—from the Roman’s influence, representing a systemic victory over corruption rather than a magical one."""@en .
 
-<batman-year-one/divergences/the-permanent-mask> a monomyth:SemioticDivergence ;
+<batman-year-one/divergences/semiotic/the-permanent-mask> a monomyth:SemioticDivergence ;
     rdfs:label "The Non-Existent Ordinary World"@en ;
     monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return> , 
         <batman-year-one/stages/the-magic-flight> ,
@@ -360,6 +607,26 @@ generation—from the Roman’s influence, representing a systemic victory over 
 ordinary world he left behind no longer exists for him, there is no place for the hero to return to. 
 He is a 'Master' of only one world: the mythic darkness of his crusade."""@en .
 
+<batman-year-one/divergences/gordon/mundane-temptation> a monomyth:SemioticDivergence ;
+    rdfs:label "The Mundane Temptress"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/gordon/semiotic/the-extramarital-affair> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """Semiotically, the Temptress is not a supernatural seductress 
+or a malicious agent, but a genuinely good, intellectual equal. The 'temptation' is simply the human 
+desire for comfort and connection in a dark environment. This anchors the archetype entirely in psychological 
+realism while preserving its structural threat to the hero's integrity."""@en .
+
+<batman-year-one/divergences/gordon/secular-atonement> a monomyth:SemioticDivergence ;
+    rdfs:label "Secular Atonement Divergence"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/gordon/confession-to-barbara> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """In classical mythology, the shedding of the ego dissolves the Ogre to 
+reveal a divine, cosmic Father with whom the hero achieves 'at-one-ment' (mystical union). In Miller's Neo-Noir 
+universe, the 'Father' is stripped of divinity. When Gordon sheds his ego, he does not find a loving cosmic 
+creator beneath the Ogre; he merely exposes Loeb as a powerless, corrupt politician. The 'atonement' is 
+therefore shifted from a cosmic reconciliation to a strictly secular, internal moral cleansing."""@en .
+
+
 # --- Narrative Divergences ----------------------
 
 <batman-year-one/divergences/premature-start-refusal> a monomyth:NarrativeDivergence ;
@@ -376,7 +643,7 @@ something vital is missing from his approach."""@en .
 
 <batman-year-one/divergences/the-proactive-plunge> a monomyth:NarrativeDivergence ;
     rdfs:label "The Hero as Aggressor"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-crossing> ;
+    monomyth:divergenceOf <batman-year-one/stages/the-dinner-party-ambush> ;
     monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:divergenceRationale """Traditionally, 'threshold guardians' are dangerous custodians who defend the 
 boundary and wait for the hero. In a narrative reversal, Batman does not wait to be challenged. Possessing total commitment 
@@ -438,268 +705,6 @@ corruption, and tactical reality where 'divine knowledge' has no place."""@en .
 The narrative ends precisely at the moment the hero achieves his identity, serving as a prologue rather than a full monomythic cycle. 
 There is no 'return' because the story is a beginning."""@en .
 
-
-# --- Jim Gordon's Monomyth Expression --------------
-<batman-year-one/monomyths/jim-gordon-journey> a monomyth:MonomythExpression ;
-    rdfs:label "Jim Gordon's Hero's Journey in Batman: Year One"@en ;
-    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
-narrative of 'Batman: Year One', focusing on the character Jim Gordon's journey."""@en ;
-    monomyth:interprets <batman-year-one> ;
-    monomyth:hasHero <batman-year-one/characters/jim-gordon> ;
-    monomyth:hasCharacter <batman-year-one/characters/jim-gordon>,
-        <batman-year-one/characters/detective-flass>,
-        <batman-year-one/characters/commissioner-loeb>,
-        <batman-year-one/characters/sarah-essen>,
-        <batman-year-one/characters/bruce-wayne> ;
-    monomyth:hasStageRealization <batman-year-one/stages/gordon/arrival-in-gotham>,
-        <batman-year-one/stages/gordon/waiting-to-report>,
-        <batman-year-one/stages/gordon/beating-flass>,
-        <batman-year-one/stages/gordon/the-honest-cop-trials>,
-        <batman-year-one/stages/gordon/the-intellectual-equal>,
-        <batman-year-one/stages/gordon/the-extramarital-affair>,
-        <batman-year-one/stages/gordon/confession-to-barbara>,
-        <batman-year-one/stages/gordon/the-bridge-alliance>,
-        <batman-year-one/stages/refusal-of-the-return>,
-        <batman-year-one/stages/the-magic-flight>,
-        <batman-year-one/stages/rescue-from-without>, 
-        <batman-year-one/stages/crossing-the-return-threshold>,
-        <batman-year-one/stages/master-of-two-worlds>,
-        <batman-year-one/stages/freedom-to-live> .
-
-# --- Gordon's Expression Characters -----------------------
-
-<batman-year-one/characters/jim-gordon> a monomyth:Character ;
-    rdfs:label "James Gordon"@en ;
-    monomyth:embodiesArchetype monomyth:Hero ;
-    rdfs:comment "A corrupt-free cop who serves as a parallel hero and eventual ally."@en ;
-    owl:sameAs wd:Q116113 .
-
-<batman-year-one/characters/bruce-wayne> a monomyth:Character ;
-    rdfs:label "Bruce Wayne / Batman"@en ;
-    monomyth:heroOf <batman-year-one/monomyths/bruce-wayne-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally ;
-    owl:sameAs wd:Q2695156 .
-
-<batman-year-one/characters/detective-flass> a monomyth:Character ;
-    rdfs:label "Detective Arnold Flass"@en ;
-    monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    rdfs:comment "A corrupt cop who acts as the violent enforcer of the GCPD's status quo."@en .
-
-<batman-year-one/characters/sarah-essen> a monomyth:Character ;
-    rdfs:label "Sarah Essen"@en ;
-    monomyth:embodiesArchetype monomyth:Goddess ;
-    rdfs:comment "Gordon's intellectual equal and partner, who becomes the source of his temptation."@en ;
-    owl:sameAs wd:Q3950326 .
-
-# --- Jim's Expression Stage Realizations ---------------
-
-<batman-year-one/stages/gordon/arrival-in-gotham> a monomyth:StageRealization ;
-    rdfs:label "Arrival in Gotham"@en ;
-    monomyth:realizesStage monomyth:TheCallToAdventure ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/detective-flass>, 
-        <batman-year-one/characters/commissioner-loeb> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription """Gordon arrives in Gotham, viewing the transfer as a punishment. He 
-is immediately summoned into the 'special world' of systemic corruption, meeting Commissioner Loeb 
-and witnessing Detective Flass brutalize a teenager."""@en .
-
-<batman-year-one/stages/gordon/waiting-to-report> a monomyth:StageRealization ;
-    rdfs:label "Waiting to Report"@en ;
-    monomyth:realizesStage monomyth:RefusalOfTheCall ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/detective-flass> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 2 ;
-    monomyth:realizationDescription """Gordon hesitates to act against the corruption. 
-He rationalizes his inaction by telling himself it is 'better to wait' before reporting colleagues. 
-Flass tells him to relax and adapt to the system, summarizing Gordon's passive survival strategy."""@en .
-
-<batman-year-one/stages/gordon/the-absent-aid> a monomyth:StageRealization ;
-    rdfs:label "The Absent Supernatural Aid"@en ;
-    monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 3 ; 
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/gordon/neo-noir-isolation> .
-
-<batman-year-one/stages/gordon/the-beating> a monomyth:StageRealization ;
-    rdfs:label "The Beating"@en ;
-    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/detective-flass> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 4 ;
-    monomyth:realizationDescription """Gordon is ambushed and beaten by Flass and his masked men. 
-This serves as the 'Belly of the Whale'—a plunge into a life-and-death 'black moment' where Gordon 
-is completely swallowed by the 'monster' of systemic police corruption. During this brutal ordeal, 
-his former self (the passive, rule-abiding cop trying to survive quietly) undergoes a symbolic death 
-and self-annihilation, setting the stage for his metamorphosis."""@en ;
-    monomyth:hasSequentialDivergence <batman-year-one/divergences/gordon/belly-before-threshold> .
-
-<batman-year-one/stages/gordon/beating-flass> a monomyth:StageRealization ;
-    rdfs:label "Beating Flass"@en ;
-    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/detective-flass> ;
-    monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription """After surviving the beating, Gordon refuses to retreat. 
-Instead of going home, he ambushes Flass in the snow, beats him, and strips him of his weapon. 
-By doing this, Gordon crosses the threshold from passive observer to active combatant. He leaves behind the familiar 
-safety of playing by the rules and fully enters the brutal world of Gotham's reality."""@en ;
-    monomyth:hasSequentialDivergence <batman-year-one/divergences/gordon/threshold-after-belly> .
-
-<batman-year-one/stages/gordon/the-honest-cop-trials> a monomyth:StageRealization ;
-    rdfs:label "The Honest Cop Trials"@en ;
-    monomyth:realizesStage monomyth:TheRoadOfTrials ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/officer-merkel> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 6 ;
-    monomyth:realizationDescription """Gordon navigates a gauntlet of trials that test his integrity and 
-physical courage: entering a hostage situation unarmed, clashing with the violent Branden, and 
-navigating Loeb's orders to hunt down the vigilante Batman."""@en .
-
-<batman-year-one/stages/gordon/the-intellectual-equal> a monomyth:StageRealization ;
-    rdfs:label "Meeting Sarah Essen"@en ;
-    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/sarah-essen> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 7 ;
-    monomyth:realizationDescription """Gordon meets Sarah Essen, who functions as his operational 
-and intellectual equal. She is the first to suggest Bruce Wayne might be Batman. Their connection 
-represents a nurturing, understanding force in a city that otherwise alienates him. Within the secular, 
-gritty confines of Gotham, Sarah Essen functions as the Neo-Noir equivalent of the 'Queen Goddess of 
-the World.' For Gordon, who is alienated by the corrupt department, she represents the 'reply to all desire'
-—providing the intellectual parity, moral support, and emotional understanding he desperately lacks."""@en .
-
-<batman-year-one/stages/gordon/the-extramarital-affair> a monomyth:StageRealization ;
-    rdfs:label "The Affair and Blackmail"@en ;
-    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/sarah-essen>, 
-        <batman-year-one/characters/commissioner-loeb> ;
-    monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """The connection with Essen transforms into an extramarital affair, 
-fulfilling the archetype of the Temptress. It is a worldly attachment that threatens to arrest the journey, 
-filling Gordon with guilt regarding his pregnant wife and giving Commissioner Loeb the leverage needed 
-to blackmail him."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/gordon/mundane-temptation> .
-
-<batman-year-one/stages/gordon/confession-to-barbara> a monomyth:StageRealization ;
-    rdfs:label "Confession and Atonement"@en ;
-    monomyth:realizesStage monomyth:AtonementWithTheFather ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/barbara-gordon>, 
-        <batman-year-one/characters/commissioner-loeb> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 9 ;
-    monomyth:realizationDescription """Commissioner Loeb acts as the 'corrupt Father' of the GCPD, judging and threatening Gordon. 
-To survive the crisis and 'abandon his attachment to his own ego', Gordon confesses his affair to his wife Barbara. By destroying his own secret, 
-he strips the 'Father' of his power and undergoes a moral rebirth."""@en ;
-    monomyth:hasSemioticDivergence <batman-year-one/divergences/gordon/secular-atonement> .
-
-<batman-year-one/stages/gordon/family-man> a monomyth:StageRealization ;
-    rdfs:label "The family man"@en ;
-    monomyth:realizesStage monomyth:Apotheosis ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/barbara-gordon> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 10 ;
-    monomyth:realizationDescription """Finally free from his guilt, Gordon's son is born and for a brief moment we see him 
-dwelling momentarily in the peaceful stage of new found fatherhood and family bliss."""@en .
-
-<batman-year-one/stages/gordon/the-bridge-alliance> a monomyth:StageRealization ;
-    rdfs:label "The Bridge Rescue"@en ;
-    monomyth:realizesStage monomyth:TheUltimateBoon ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/bruce-wayne> ;
-    monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:stageRealizationOrder 11 ;
-    monomyth:realizationDescription """Following his confession and the 'death' of his ego, Gordon's child is born. 
-In the bleak context of Gotham, this quiet domestic scene of Gordon caring for his newborn family functions as his Apotheosis. 
-Stripped of his ego-bound limitations and the blackmail that haunted him, Gordon achieves a fleeting state of 'blissful rest.' 
-The family unit becomes a sanctuary that temporarily transcends the dark dualities of Gotham's streets. Gordon experiences the 'eternal'
-cycle of new life and love, only to willingly return to the 'suffering world' of his police work to serve as a protector."""@en .
-
-<batman-year-one/stages/gordon/the-rooftop-equilibrium> a monomyth:StageRealization ;
-    rdfs:label "The Rooftop Equilibrium"@en ;
-    monomyth:realizesStage monomyth:MasterOfTwoWorlds ;
-    monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>, 
-        <batman-year-one/characters/barbara-gordon>,
-        <batman-year-one/characters/bruce-wayne> ;
-    monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 12 ;
-    monomyth:realizationDescription """Gordon waits on the GCPD rooftop, demonstrating his mastery of two realms. 
-He has secured his place in the 'mortal/mundane' world: he has been promoted to Captain, Essen has left the city, 
-and he is successfully repairing his marriage through counseling. Simultaneously, he has integrated the 'divine/mythic' world: 
-he is preparing to face a new, theatrical threat (the Joker) by relying on his alliance with the Batman. 
-Gordon achieves true equilibrium, neither enslaved by the corrupt bureaucracy below nor entirely consumed by the vigilante crusade above, 
-standing firmly at the threshold between the law and the shadows."""@en ;
-    monomyth:hasSequentialDivergence <batman-year-one/divergences/gordon/origin-equilibrium-jump> .
-
-<batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
-    rdfs:label "Absent Refusal of the Return"@en ;
-    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 13 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
-
-<batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
-    rdfs:label "Absent Magic Flight"@en ;
-    monomyth:realizesStage monomyth:TheMagicFlight ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 14 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
-
-<batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
-    rdfs:label "Absent Rescue from Without"@en ;
-    monomyth:realizesStage monomyth:RescueFromWithout ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 15 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
-
-<batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
-    rdfs:label "Absent Crossing of the Return Threshold"@en ;
-    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 16 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
-
-<batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
-    rdfs:label "Absent Freedom to Live"@en ;
-    monomyth:realizesStage monomyth:FreedomToLive ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:stageRealizationOrder 17 ;
-    monomyth:hasNarrativeDivergence <batman-year-one/divergences/origin-as-stasis> .
-
-# --- Semiotic Divergences ----------------------
-
-<batman-year-one/divergences/gordon/mundane-temptation> a monomyth:SemioticDivergence ;
-    rdfs:label "The Mundane Temptress"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/the-extramarital-affair> ;
-    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """Semiotically, the Temptress is not a supernatural seductress 
-or a malicious agent, but a genuinely good, intellectual equal. The 'temptation' is simply the human 
-desire for comfort and connection in a dark environment. This anchors the archetype entirely in psychological 
-realism while preserving its structural threat to the hero's integrity."""@en .
-
-<batman-year-one/divergences/gordon/secular-atonement> a monomyth:SemioticDivergence ;
-    rdfs:label "Secular Atonement Divergence"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/confession-to-barbara> ;
-    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
-    monomyth:divergenceRationale """In classical mythology, the shedding of the ego dissolves the Ogre to 
-reveal a divine, cosmic Father with whom the hero achieves 'at-one-ment' (mystical union). In Miller's Neo-Noir 
-universe, the 'Father' is stripped of divinity. When Gordon sheds his ego, he does not find a loving cosmic 
-creator beneath the Ogre; he merely exposes Loeb as a powerless, corrupt politician. The 'atonement' is 
-therefore shifted from a cosmic reconciliation to a strictly secular, internal moral cleansing."""@en .
-
-# --- Narrative Divergences ----------------------
-
 <batman-year-one/divergences/gordon/neo-noir-isolation> a monomyth:NarrativeDivergence ;
     rdfs:label "Neo-Noir Isolation Divergence"@en ;
     monomyth:divergenceOf <batman-year-one/stages/gordon/the-absent-aid> ;
@@ -708,29 +713,3 @@ therefore shifted from a cosmic reconciliation to a strictly secular, internal m
 In the Neo-Noir paradigm, the universe is indifferent or actively malignant. The narrative strips away the 'Supernatural Aid' 
 to emphasize the hero's absolute moral and physical isolation; the honest cop must survive without a safety net."""@en .
 
-# --- Sequential Divergences ----------------------
-
-<batman-year-one/divergences/gordon/belly-before-threshold> a monomyth:SequentialDivergence ;
-    rdfs:label "Belly of the Whale as Catalyst"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/the-beating> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
-    monomyth:divergenceRationale """In Campbell's framework, the Belly of the Whale typically occurs after crossing the threshold. 
-In Gordon's Neo-Noir journey, the order is inverted: the symbolic death and 'swallowing' by the corrupt system happens first. 
-The trauma of the Belly acts as the necessary catalyst that forces the hero to confront the threshold."""@en .
-
-<batman-year-one/divergences/gordon/threshold-after-belly> a monomyth:SequentialDivergence ;
-    rdfs:label "Threshold Crossing as Rebirth"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/beating-flass> ;
-    monomyth:divergesFrom monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:divergenceRationale """Because the Belly of the Whale happens first, crossing the threshold becomes the act of 
-rebirth itself. Gordon's decision to cross the threshold and destroy the Guardian (Flass) is the exact moment his new, 
-hardened identity emerges from the darkness."""@en .
-
-<batman-year-one/divergences/gordon/origin-equilibrium-jump> a monomyth:SequentialDivergence ;
-    rdfs:label "Origin Equilibrium Jump"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/gordon/the-rooftop-equilibrium> ;
-    monomyth:divergesFrom monomyth:MasterOfTwoWorlds ;
-    monomyth:divergenceRationale """In a traditional monomyth, the hero must navigate several perilous stages of Return 
-(Refusal, Flight, Rescue, Threshold Crossing) before achieving mastery. Because this is an origin story, the narrative bypasses the 
-mechanical journey of the return entirely. Following the Ultimate Boon (the bridge rescue), the story employs a temporal jump, 
-providing a 'sneak peek' that instantly establishes the hero's permanent new equilibrium and the narrative's new status quo."""@en .
