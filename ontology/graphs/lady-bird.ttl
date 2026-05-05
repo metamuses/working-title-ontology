@@ -23,9 +23,9 @@
         "Comedy-Drama"@en ;
     owl:sameAs wd:Q27480769 ;
     monomyth:interpretedBy <lady-bird/monomyths/christine-journey> ;
-    rdfs:comment "A 2017 coming-of-age film in which a strong-willed high school senior navigates a 
+    rdfs:comment """A 2017 coming-of-age film in which a strong-willed high school senior navigates a 
 turbulent relationship with her mother and her hometown while seeking a new identity through her 
-dream of attending an East Coast university."@en .
+dream of attending an East Coast university."""@en .
 
 # --- Monomyth Expression -----------------
 
@@ -41,12 +41,13 @@ narrative of 'Lady Bird', focusing on the character Christine's journey."""@en ;
         <lady-bird/characters/julie>,
         <lady-bird/characters/danny>,
         <lady-bird/characters/kyle>,
-        <lady-bird/characters/jenna> ;
+        <lady-bird/characters/jenna>,
+        <lady-bird/characters/sister-sarah> ;
     monomyth:hasStageRealization 
         <lady-bird/stages/i-hate-california>,
         <lady-bird/stages/my-name-is-lady-bird>,
         <lady-bird/stages/scholarships-aid>,
-        <lady-bird/stages/applying-to-east-coast>,
+        <lady-bird/stages/applying-to-east-coast-schools>,
         <lady-bird/stages/ill-figure-it-out>,
         <lady-bird/stages/danny-kyle-trials>,
         <lady-bird/stages/unconditional-scholarship>,
@@ -79,51 +80,132 @@ daughter's ambitions, using pragmatic criticism and emotional silence to mask he
 regarding her family's financial instability and her daughter's future."""@en ;
     monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
-        monomyth:Shapeshifter .
+        monomyth:Mentor .
     
-#QUI! finisci modeling personaggi e poi stages, con mia scaletta data a gemini x divergence e description finale
 <lady-bird/characters/larry> a monomyth:Character ;
     rdfs:label "Larry McPherson"@en ;
-    monomyth:embodies monomyth:Ally, monomyth:Mentor .
+    rdfs:comment """A gentle and supportive father who acts as a quiet ally to his daughter, 
+balancing his own struggle with clinical depression and job loss by secretly helping her navigate 
+the financial and emotional hurdles of her journey to independence."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally,
+        monomyth:Mentor .
+
+<lady-bird/characters/julie> a monomyth:Character ;
+    rdfs:label "Julianne 'Julie' Steffans"@en ;
+    rdfs:comment """Lady Bird’s dedicated best friend and emotional anchor; though their bond is 
+tested by Lady Bird’s social climbing, Julie remains a constant presence, eventually helping the 
+hero reconnect with her true self and her roots."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally .
+
+<lady-bird/characters/danny> a monomyth:Character ;
+    rdfs:label "Daniel 'Danny' O'Neill"@en ;
+    rdfs:comment """Lady Bird’s first boyfriend and a fellow theater enthusiast who initially 
+represents the hero's ideal romantic interest; his struggle with his own identity serves as a 
+pivotal trial that teaches Lady Bird about empathy and the hidden complexities of those around her."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally, 
+        monomyth:ThresholdGuardian .
+
+<lady-bird/characters/kyle> a monomyth:Character ;
+    rdfs:label "Kyle Scheible"@en ;
+    rdfs:comment """A pseudo-intellectual and detached musician who represents the allure of the 
+'cool' outsider; his lack of genuine emotional investment serves as a harsh trial for Lady Bird, 
+forcing her to confront the emptiness of the social status she thought she wanted."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter, 
+        monomyth:ThresholdGuardian .
+    
+<lady-bird/characters/jenna> a monomyth:Character ;
+    rdfs:label "Jenna Walton"@en ;
+    rdfs:comment """A wealthy and popular student who embodies the social status Lady Bird craves; 
+she acts as a temporary 'temptress' away from the hero's true path, leading Lady Bird to abandon her 
+authentic friendships in a failed attempt to belong to a world that doesn't actually value her."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter, 
+        monomyth:ThresholdGuardian .
+
+<lady-bird/characters/sister-sarah> a monomyth:Character ;
+    rdfs:label "Sister Sarah Joan"@en ;
+    rdfs:comment """A wise and observant teacher who provides a grounded perspective on Lady Bird’s 
+growth; by offering practical support with financial aid and recognizing the love hidden within the 
+girl's local observations, she empowers Lady Bird to pursue her dreams without dismissing the value 
+of where she comes from."""@en ;
+    monomyth:characterOf <lady-bird/monomyths/christine-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally, 
+        monomyth:Mentor .
 
 # --- Stage Realizations ---------------
 
 <lady-bird/stages/i-hate-california> a monomyth:StageRealization ;
     rdfs:label "I hate California"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 1 ;
-    monomyth:realizationDescription "The protagonist expresses a visceral disdain for her Sacramento context, viewing it as a cultural desert. She vocalizes her desire to move to the East Coast, where she believes 'culture is,' by applying to prestigious universities. This setting of an external goal marks the beginning of her quest for a life beyond her current socioeconomic and geographic boundaries."@en .
+    monomyth:realizationDescription """The protagonist manifests a visceral disdain for her Sacramento 
+context, viewing it as a cultural desert. On a drive with her mother, she expresses her desire to 
+move to the East Coast, where she believes 'culture is,' by applying to prestigious universities. 
+This setting of an external goal marks the beginning of her quest for a life beyond her current 
+socioeconomic and geographic boundaries."""@en ;
+    monomyth:hasNarrativeDivergence <lady-bird/divergences/narrative/inward-call> .
 
 <lady-bird/stages/my-name-is-lady-bird> a monomyth:StageRealization ;
     rdfs:label "My name is Lady Bird"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 2 ;
-    monomyth:realizationDescription "Instead of hesitating, Christine rebrands herself as 'Lady Bird,' a name she gave herself. This act of self-naming is an aggressive embrace of her own transformation. She does not refuse the journey; she forces it into existence by shedding her given identity and demanding to be recognized as the person she intends to become."@en ;
-    monomyth:hasNarrativeDivergence <lady-bird/divergences/narrative/inverted-refusal-identity> .
+    monomyth:realizationDescription """Instead of hesitating or clinging to her past, Christine 
+aggressively rebrands herself as 'Lady Bird,' a name she proudly declares was given to her 'to me, 
+by me.' In scenes such as her audition for the school musical and her introductions to new peers, 
+she treats this self-naming as a non-negotiable decree. This act is an aggressive embrace of her own 
+transformation, where she attempts to shed her ordinary-world identity entirely before she has even 
+left her geographic home."""@en ;
+    monomyth:hasNarrativeDivergence <lady-bird/divergences/narrative/active-departure-from-identity> .
 
 <lady-bird/stages/scholarships-aid> a monomyth:StageRealization ;
-    rdfs:label "Scholarships as Aid"@en ;
+    rdfs:label "The Scholarships' Aid"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
+        <lady-bird/characters/sister-sarah> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription "In this secular coming-of-age narrative, the 'supernatural' is replaced by the bureaucratic hope of financial aid. Lady Bird identifies scholarships as the only mechanism that can transcend her family's financial limitations, acting as the 'magic' required to bridge the gap between her reality and her dreams of New York."@en ;
-    monomyth:hasSemioticDivergence <lady-bird/divergences/semiotic/bureaucratic-magic> .
+    monomyth:realizationDescription """In a meeting in Sister Sarah Joan’s office, Lady Bird 
+confesses her desire to attend a 'city' school on the East Coast. While her mother dismisses these 
+dreams as financially impossible, the nun offers a quiet form of empowerment by assuring Lady Bird 
+that financial aid and scholarships are viable paths. This conversation provides the protagonist with 
+the necessary hope of institutional support to continue her journey of self-realization."""@en ;
+    monomyth:hasSemioticDivergence <lady-bird/divergences/semiotic/bureaucratic-aid> .
 
-<lady-bird/stages/applying-to-east-coast> a monomyth:StageRealization ;
-    rdfs:label "Crossing the First Threshold"@en ;
+<lady-bird/stages/applying-to-east-coast-schools> a monomyth:StageRealization ;
+    rdfs:label "Applying to East Coast schools"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 4 ;
-    monomyth:realizationDescription "Lady Bird officially crosses into a new world of social and artistic exploration by joining the school theater program. Here, she adopts her new persona in a public space, begins to navigate the complexities of rehearsals and social hierarchies, and submits the applications that represent her commitment to leaving home."@en .
+    monomyth:realizationDescription """The threshold is crossed through the definitive act of 
+submitting her applications. After a sequence highlighting the secret collaboration with her father, 
+Lady Bird moves beyond mere dreaming to take concrete, logistical steps toward the East Coast. This 
+scene represents her formal commitment to a future of her own making; by mailing the forms, she 
+effectively leaves the safety of her mother's worldview and enters the uncertain world of her future 
+and own potential."""@en ;
+    monomyth:fitNote """There is no physical location representing the threshold in this narrative. 
+Instead, the hero crosses the boundary through pure agency, taking a logistical step forward and 
+actively deciding her own path rather than passing through a literal gate."""@en .
 
 <lady-bird/stages/ill-figure-it-out> a monomyth:StageRealization ;
     rdfs:label "I'll figure it out"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 5 ;
-    monomyth:realizationDescription "This stage represents an internal immersion into the unknown aspects of her character. She grapples with her lack of a clear 'talent' or direction, existing in a state of flux where the old self is gone but the new adult self is not yet formed. She is 'in the whale,' processing the uncertainty of her future and her capabilities."@en .
+    monomyth:realizationDescription """" ... """@en .
 
 <lady-bird/stages/danny-kyle-trials> a monomyth:StageRealization ;
     rdfs:label "The Road of Trials"@en ;
-    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ; #accenno a come tutti questi trials e oersonaggi sono thresh. guard. xk avviano e partecipano a sua crescita
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizationDescription "A series of grueling emotional tests: her first boyfriend Danny is revealed to be gay, her father loses his job (threatening her financial path), and her pursuit of the 'cool' guy Kyle leads to her losing her virginity in an unfulfilling way. She also betrays her best friend Julie for Jenna, experiencing the trials of social climbing and the subsequent guilt of losing her moral compass."@en .
 
@@ -135,7 +217,7 @@ regarding her family's financial instability and her daughter's future."""@en ;
 
 <lady-bird/stages/never-enough> a monomyth:StageRealization ;
     rdfs:label "Whatever we give you is never enough"@en ;
-    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ; #aggiungi jenna come temptress, she loves sacramento maybe she could tempt lady b. to stay there to fit into high society instead of pursuing her dream future?
     monomyth:stageRealizationOrder 8 ;
     monomyth:realizationDescription "In a heated confrontation, Marion McPherson discovers Lady Bird's secret applications to East Coast schools. Marion acts as the 'temptress' of the status quo, using shame and financial reality to tempt Lady Bird into believing she is incapable, ungrateful, and destined for failure if she tries to move beyond her station."@en .
 
@@ -198,17 +280,42 @@ regarding her family's financial instability and her daughter's future."""@en ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizationDescription "The journey concludes with a simple 'Thank you.' Christine has moved from adolescent ungratefulness to adult awareness. She is free to live her life in New York because she has finally acknowledged and accepted the sacrifices of her parents and the value of her home."@en .
 
-# --- Divergences ----------------------
+# --- Narrative Divergences ----------------------
 
-<lady-bird/divergences/narrative/inverted-refusal-identity> a monomyth:NarrativeDivergence ;
+<lady-bird/divergences/narrative/inward-call> a monomyth:NarrativeDivergence ;
+    rdfs:label "Inward Call divergence"@en ;
+    monomyth:divergenceOf <lady-bird/stages/i-hate-california> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ;
+    monomyth:divergenceRationale """In this stage, the 'call' does not originate from an external 
+herald or messenger as typically described by Campbell. Instead, it is an 'inward call' born of the 
+protagonist's own discontent and ambition. The adventure is self-initiated, shifting the heroic 
+catalyst from destiny or external necessity to personal agency and the internal desire for social and 
+cultural transformation."""@en .
+
+<lady-bird/divergences/narrative/active-departure-from-identity> a monomyth:NarrativeDivergence ;
+    rdfs:label "Active Departure from Identity divergence"@en ;
     monomyth:divergenceOf <lady-bird/stages/my-name-is-lady-bird> ;
     monomyth:divergesFrom monomyth:RefusalOfTheCall ;
-    monomyth:divergenceRationale "The divergence is narrative and inverted. While the monomyth expects a hero to shrink from the call, Lady Bird over-identifies with it. Her refusal is not of the journey, but of her current self. By self-naming, she attempts to leapfrog over the trials directly into the transformation, making her 'refusal' a proactive rejection of her ordinary world identity rather than a hesitation to leave it."@en .
+    monomyth:divergenceRationale """In the opening of the movie, Lady Bird inverts the traditional 
+hero's hesitation. She does not refuse the journey due to fear or a desire for safety; she forces the 
+journey into existence by demanding the world recognize her as the person she intends to become. Her 
+refusal is not of the journey, but of her current self and socioeconomic status. Hence, she isn't 
+afraid of the transformation; she is so desperate for it that she tries to inhabit its persona 
+prematurely to bypass the discomfort of her current reality."""@en . 
 
-<lady-bird/divergences/semiotic/bureaucratic-magic> a monomyth:SemioticDivergence ;
+# --- Semiotic Divergences ----------------------
+
+<lady-bird/divergences/semiotic/bureaucratic-aid> a monomyth:SemioticDivergence ;
+    rdfs:label "Bureaucratic Aid divergence"@en ;
     monomyth:divergenceOf <lady-bird/stages/scholarships-aid> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
-    monomyth:divergenceRationale "The divergence is semiotic. In a realistic, modern setting, the signified (external help that allows the hero to achieve the impossible) remains, but the signifier shifts from magical items or wizards to financial aid and university scholarships. This emphasizes that in the modern world, socioeconomic mobility is the 'supernatural' force required for a hero to cross thresholds."@en .
+    monomyth:divergenceRationale """In this modern coming-of-age narrative, the 'supernatural' is 
+entirely secularized and replaced by the bureaucratic hope of financial aid. The divergence lies in 
+the shift from a mystical gift to an institutional mechanism; scholarships act as the 'magic' 
+required to transcend socioeconomic boundaries. By framing a loan application or a grant as the hero's 
+supernatural assistance, the film highlights how social mobility serves as the modern equivalent of 
+divine or magical intervention."""@en .
+
 
 <lady-bird/divergences/sequential/premature-peace> a monomyth:SequentialDivergence ;
     monomyth:divergenceOf <lady-bird/stages/added-to-waiting-list> ;
@@ -229,3 +336,7 @@ regarding her family's financial instability and her daughter's future."""@en ;
     monomyth:divergenceOf <lady-bird/stages/moving-to-nyc> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
     monomyth:divergenceRationale "The divergence is sequential. The physical Flight (moving to NYC) occurs before the psychological Refusal of the Return (reclaiming her name) and the Atonement. In this coming-of-age arc, the hero must physically leave to create the space necessary for the internal, archetypal resolutions to take place."@en .
+
+
+
+# finisci modeling personaggi e poi stages, con mia scaletta data a gemini x divergence e description finale
