@@ -622,9 +622,11 @@ body::before {
   white-space: nowrap;
 }
 
-.tag-complete { color: var(--gold); border-color: var(--gold-dim); }
-.tag-prose { color: var(--accent-teal); border-color: rgba(42, 104, 88, 0.3); }
-.tag-candidate { color: var(--text-muted); border-color: rgba(138, 120, 96, 0.35); }
+.tag-movie { color: var(--gold); border-color: var(--gold-dim); }
+.tag-book { color: var(--accent-teal); border-color: rgba(42, 104, 88, 0.3); }
+.tag-play { color: var(--text-muted); border-color: rgba(138, 120, 96, 0.35); }
+.tag-comic { color: var(--text-muted); border-color: rgba(138, 120, 96, 0.35); }
+.tag-music { color: var(--text-muted); border-color: rgba(138, 120, 96, 0.35); }
 
 .kg-card .work-title {
   font-family: var(--font-display);
