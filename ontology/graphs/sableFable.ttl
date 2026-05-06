@@ -36,7 +36,6 @@ anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and ac
     monomyth:hasStageRealization <sable-fable/stages/the-intrusive-call> , 
         <sable-fable/stages/fear-of-change> ,
         <sable-fable/stages/the-violent-spree> ,
-        <sable-fable/stages/the-peaceful-love> ,
         <sable-fable/stages/the-plea-for-forgiveness> ,
         <sable-fable/stages/accepting-the-change> ,
         <sable-fable/stages/the-psychological-trials> ,
@@ -45,7 +44,12 @@ anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and ac
         <sable-fable/stages/the-temptation-to-regress> ,
         <sable-fable/stages/the-absent-father> ,
         <sable-fable/stages/the-emotional-capacity> ,
-        <sable-fable/stages/lingering-in-the-sanctuary> .
+        <sable-fable/stages/lingering-in-the-sanctuary> ,
+        <sable-fable/stages/the-perilous-retreat> ,
+        <sable-fable/stages/the-lifeline> ,
+        <sable-fable/stages/the-weight-of-the-world> ,
+        <sable-fable/stages/the-equilibrium> ,
+        <sable-fable/stages/no-more-shame> .
 
 # --- Characters -----------------------
 <sable-fable/characters/justin-vernon> a monomyth:Character ;
