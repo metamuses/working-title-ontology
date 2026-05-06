@@ -91,9 +91,8 @@
     monomyth:stageRealizationOrder 1 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/call-as-professional-crisis> ;
-    monomyth:realizationDescription """Despite the Walter’s routine at Life, daydreaming, incomplete eHarmony 
-profile, and passive life ,The discovery that the 'quintessence' negative is missing 
-and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
+    monomyth:realizationDescriptionWalter Mitty works in the basement photo department of Life magazine as the negative assets manager, carefully cataloguing and processing the work of famous photojournalists while living a deeply repetitive life defined by routine, silence, and elaborate daydreams. He quietly admires Cheryl Melhoff, a coworker in Life Magazine, in online dating profile management, but lacks the confidence even to send her a proper wink through eHarmony because his profile appears empty and unremarkable. At the same time, Life is preparing its final print issue as the company transitions to digital under the supervision of Ted Hendricks, whose restructuring threatens Walter’s department. When renowned photographer Sean O’Connell sends his final roll of negatives along with a leather wallet as a personal gift, his note identifies negative #25 as the “quintessence of life” and insists it should be the final cover image. Walter discovers the negative is missing. Ted immediately demands its production, transforming Walter’s quiet technical responsibility into a crisis that threatens both his career and the symbolic closure of the magazine."""@en .
+
 
 <walter-mitty/stages/daydream-retreat> a monomyth:StageRealization ;
     rdfs:label "Daydream retreat"@en ;
@@ -101,8 +100,7 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 2 ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/internalized-refusal> ;
-    monomyth:realizationDescription """Walter avoids action and stalls by retreating into elaborate 
-    fantasies instead of engaging with the threat to his job."""@en .
+    monomyth:realizationDescription """Faced with Ted’s pressure and unable to explain the missing image, Walter retreats into the psychological refuge that has always protected him from confrontation. Throughout the office he repeatedly dissociates into vivid heroic fantasies: imagining himself leaping through exploding buildings, confronting Ted with impossible courage, and performing acts of public confidence impossible for his ordinary self. Rather than searching actively for a solution, he delays, avoids direct answers, and lets his imagination temporarily overwrite reality. This refusal is not spoken aloud but enacted through paralysis and escapism, revealing how deeply his fantasies function as protection against action."""@en .
 
 <walter-mitty/stages/clues-and-encouragement> a monomyth:StageRealization ;
     rdfs:label "Clues and encouragement"@en ;
@@ -110,16 +108,15 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 3 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/corporate-aid> ;
-    monomyth:realizationDescription """Sean's gift wallet and Cheryl's encouragement act as the 
-    catalyst and 'magical' support needed to move forward."""@en .
+    monomyth:realizationDescription """Cheryl notices Walter’s distress and encourages him to stop viewing Sean’s photographs as isolated negatives and instead read them as clues. Together they examine the remaining images: a weathered thumb bearing a distinctive ring, a fishing vessel, fragments of landscape, and small environmental details that suggest movement across distant places. Cheryl’s confidence in Walter’s perceptiveness gives him emotional permission to act, while Sean’s gift of the wallet implies trust and recognition from someone Walter deeply admires professionally. These clues, combined with Cheryl’s quiet encouragement, transform the missing negative from a bureaucratic problem into an interpretable trail."""@en .
 
 <walter-mitty/stages/flight-to-greenland> a monomyth:StageRealization ;
     rdfs:label "Flight to Greenland"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:realizationDescription """Walter finally takes physical action, flying to Greenland 
-    to track Sean O'Connell."""@en .
+    monomyth:realizationDescription """For the first time in years, Walter abandons hesitation and physically leaves New York. Following the photographic clues, he books a flight to Greenland and enters a world of uncertainty entirely unlike the controlled routines of the Life archive room. This departure marks a literal and symbolic crossing: he moves from observation to participation, from cataloguing other people’s adventures to beginning his own."""@en .
+
 
 <walter-mitty/stages/the-helicopter-leap> a monomyth:StageRealization ;
     rdfs:label "The Helicopter Leap"@en ;
@@ -127,24 +124,22 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 5 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/atlantic-belly> ;
-    monomyth:realizationDescription """Inspired by an imagined Cheryl singing 'Space Oddity', Walter 
-    leaps into a helicopter and then into the freezing ocean, surviving a shark attack."""@en .
+    monomyth:realizationDescription """In Nuuk, Walter tracks down a helicopter pilot whose thumb matches the ring visible in Sean’s photograph. He discovers the pilot is intoxicated and preparing to deliver supplies to a ship where Sean had recently been. Terrified and standing on the dock, Walter hesitates. In this suspended moment, he imagines Cheryl appearing and singing David Bowie’s “Space Oddity,” the fantasy transforming his fear into resolve. He boards the helicopter. Mid-flight, he must jump toward the ship below but misjudges the leap and crashes into the freezing North Atlantic. Struggling in the icy water and narrowly escaping a shark, he is pulled aboard by the crew. The plunge functions as both literal survival ordeal and symbolic destruction of his former passive self."""@en .
+
 
 <walter-mitty/stages/iceland-trek> a monomyth:StageRealization ;
     rdfs:label "Iceland trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """The pursuit of Sean leads Walter across Iceland via longboard 
-    and grueling travel."""@en .
+    monomyth:realizationDescription """Although Sean is no longer on the ship, Walter discovers a clementine cake wrapper that points toward Iceland. Pursuing this new clue, he travels to Skógar and continues across increasingly dangerous terrain. To move faster, he trades the Stretch Armstrong toy that his sister had bought him for his birthday, for a skateboard owned by a local teenager. He then longboards down an immense winding road through volcanic landscapes, balancing fear and exhilaration. As he races toward what he believes is Sean’s location, he experiences something entirely new: confidence generated by action rather than fantasy. Yet despite reaching the region where Sean was seen, he remains just out of reach."""@en .
 
 <walter-mitty/stages/absent-meeting-with-goddess> a monomyth:StageRealization ;
     rdfs:label "Absent Meeting with the Goddess"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """The narrative lacks a literal 'Goddess' meeting, focusing instead 
-    on Walter's internal awakening and his pursuit of the Father figure."""@en ;
+    monomyth:realizationDescription """Although Sean is no longer on the ship, Walter discovers a clementine cake wrapper that points toward Iceland. Pursuing this new clue, he travels to Skógar and continues across increasingly dangerous terrain. To move faster, he trades the Stretch Armstrong toy that his sister had bought him for his birthday, for a skateboard owned by a local teenager. He then longboards down an immense winding road through volcanic landscapes, balancing fear and exhilaration. As he races toward what he believes is Sean’s location, he experiences something entirely new: confidence generated by action rather than fantasy. Yet despite reaching the region where Sean was seen, he remains just out of reach."""@en .
     monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> .
 
 <walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
@@ -153,8 +148,8 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 8 ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/premature-return> ;
-    monomyth:realizationDescription """A volcanic eruption forces Walter to retreat to New York 
-    without the negative."""@en .
+    monomyth:realizationDescription """As Walter closes in on Sean’s location in Iceland, a volcanic eruption destabilizes the region and interrupts his pursuit. Forced to evacuate and unable to continue, he must abandon the search and return to New York empty-handed. This interruption produces a premature collapse of the quest, not because Walter chooses retreat but because external reality imposes it, disrupting the heroic trajectory before resolution can be achieved."""@en .
+
 
 <walter-mitty/stages/fired-and-defeated> a monomyth:StageRealization ;
     rdfs:label "Fired and defeated"@en ;
@@ -162,8 +157,8 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 9 ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/temptation-of-despair> ;
-    monomyth:realizationDescription """Fired by Ted and seeing Cheryl’s ex-husband, Walter withdraws 
-    into despair—the temptation to abandon his growth."""@en .
+    monomyth:realizationDescription """Back in New York, Walter is humiliated and dismissed by Ted for failing to recover the negative. Still trying to hold onto one meaningful gesture, he visits Cheryl’s home to give the skateboard he had carried back from Iceland for her son, as he was interested in skate boarding. There he sees her ex-husband present in the house and assumes she has reconciled with him. Misreading the scene as confirmation that he has failed both professionally and personally, Walter withdraws emotionally. His despair becomes a temptation to return fully to passivity and abandon the transformation he had begun."""@en .
+
 
 <walter-mitty/stages/discarded-wallet> a monomyth:StageRealization ;
     rdfs:label "Discarding the wallet"@en ;
@@ -171,8 +166,8 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 10 ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/early-refusal-of-life> ;
-    monomyth:realizationDescription """Walter throws away Sean's wallet, symbolically rejecting the 
-    journey's fruits."""@en .
+    monomyth:realizationDescription """Convinced that his journey has accomplished nothing, Walter visits his mother feeling defeated and directionless. In frustration and self-reproach, he throws Sean’s wallet into the trash. This act symbolizes his rejection of the significance of his journey and his inability to recognize that the quest has already transformed him."""@en .
+
 
 <walter-mitty/stages/mothers-clue> a monomyth:StageRealization ;
     rdfs:label "Mother's clue"@en ;
@@ -180,15 +175,17 @@ and the subsequent pressure from Ted Hendricks triggers the journey."""@en .
     monomyth:stageRealizationOrder 11 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/domestic-guide> ;
-    monomyth:realizationDescription """His mother reveals she met Sean and shows a photo clue."""@en .
+    monomyth:realizationDescription """While going through family belongings, Walter stands in front of the piano his father had once bought for his mother—a heavy presence in the room, now a symbol of loss as the family prepares to sell it because he has been fired from Life magazine and can no longer contribute financially. The instrument feels like both a memory and a burden, marking the quiet collapse of stability at home.
+As he lingers there, Walter recalls one of Sean O’Connell’s clue photographs showing a piano in an unexpected setting. The connection clicks into place. He asks his mother whether Sean had ever been there, and she confirms that he had indeed visited their home.
+In that moment, Walter realizes he had already been given this clue before—but had overlooked it entirely, just as he often overlooks reality while lost in his own thoughts. The piano, both in the photograph and in front of him now, becomes the missing link he failed to interpret.
+Reassembling the sequence of clues, he understands that Sean’s trail leads to the Himalayas, where he is photographing the elusive snow leopard. This quiet domestic revelation becomes the turning point that pulls Walter out of defeat and sets him back into motion, reigniting the pursuit with renewed clarity and purpose."""@en .
 
 <walter-mitty/stages/himalayan-trek> a monomyth:StageRealization ;
     rdfs:label "Himalayan trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """A second, more intense road of trials as Walter treks through 
-the Himalayas."""@en .
+    monomyth:realizationDescription """Walter undertakes a second and more demanding journey, traveling through Afghanistan and trekking into the Himalayas. Unlike his earlier adventures, this passage is quieter and more deliberate. He no longer depends on fantasy for courage; he simply moves forward, demonstrating the practical confidence he has acquired through experience."""@en .
 
 <walter-mitty/stages/the-ghost-cat> a monomyth:StageRealization ;
     rdfs:label "The Ghost Cat"@en ;
@@ -196,23 +193,23 @@ the Himalayas."""@en .
     monomyth:stageRealizationOrder 13 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/artist-as-father> ;
-    monomyth:realizationDescription """Walter finds Sean. Sean reveals the negative was inside the 
-wallet the whole time."""@en .
+    monomyth:realizationDescription """Walter finally locates Sean high in the mountains as he waits silently for the appearance of the rare snow leopard known as the “ghost cat.” Their meeting lacks dramatic confrontation. Instead, it unfolds through stillness, patience, and mutual recognition. Sean treats Walter not as an anonymous employee in the photo department but as someone worthy of respect, marking a subtle but profound shift in Walter’s self-understanding."""@en .
 
 <walter-mitty/stages/leopard-lesson> a monomyth:StageRealization ;
     rdfs:label "Leopard lesson"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """Sean explains that 'Beautiful things don't ask for attention.'"""@en .
+    monomyth:realizationDescription """When the snow leopard finally emerges, Sean chooses not to photograph it. He explains that some moments are too beautiful to interrupt, telling Walter that “beautiful things don’t ask for attention.” This statement reframes Walter’s understanding of value. Meaning lies not in capturing or proving experience, but in inhabiting it fully. The lesson dissolves Walter’s need for fantasy as compensation for absence from life."""@en .
 
 <walter-mitty/stages/conceptual-boon> a monomyth:StageRealization ;
     rdfs:label "Conceptual Boon"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """Walter realizes his new identity and courage are the true 
-    rewards."""@en .
+    monomyth:realizationDescription """Sean reveals that negative #25 had been inside the wallet he gave Walter all along. When he wrote “look inside” in his letter, he meant it quite literally: the photograph was hidden within the wallet itself, unnoticed because Walter never thought to fully examine it.
+More importantly, the encounter shifts the meaning of the entire journey. The true reward is not the photograph itself, but what Walter has become through the search. In meeting Sean, he reaches a deeper understanding of himself—moving from a passive observer of life to someone who actively participates in it. He gains confidence, presence, and a sense of self-worth no longer dependent on external approval or imagined heroism. This internal change is the real outcome of the quest: the conceptual boon."""@en .
+
 
 <walter-mitty/stages/airport-security> a monomyth:StageRealization ;
     rdfs:label "Airport security"@en ;
@@ -221,7 +218,7 @@ wallet the whole time."""@en .
     monomyth:involvesCharacter <walter-mitty/characters/todd> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSemioticDivergence <walter-mitty/divergences/semiotic/bureaucratic-flight> ;
-    monomyth:realizationDescription """The return journey involving airport security and a phone call with Todd Maher."""@en .
+    monomyth:realizationDescription """Returning from the Himalayas carrying a traditional instrument gifted by local villagers, Walter is detained by airport security in Los Angeles. Unable to easily explain his situation, he calls Todd Maher, the eHarmony representative who had earlier tried to help him complete his incomplete dating profile. Todd verifies Walter’s identity and enthusiastically acknowledges the remarkable adventures Walter has now lived. The scene offers bureaucratic resistance transformed into recognition of genuine growth."""@en .
 
 <walter-mitty/stages/recovery-of-the-physical-boon> a monomyth:StageRealization ;
     rdfs:label "Recovery of the Negative"@en ;
@@ -229,29 +226,29 @@ wallet the whole time."""@en .
     monomyth:stageRealizationOrder 17 ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:hasSequentialDivergence <walter-mitty/divergences/sequential/delayed-physical-attainment> ;
-    monomyth:realizationDescription """Walter's mother retrieves the wallet from the trash, finally 
-    providing the physical negative #25."""@en .
+    monomyth:realizationDescription """Back home, Walter’s mother reveals that she retrieved the discarded wallet from the trash. Opening it carefully, Walter finally finds an envelope hidden inside containing negative #25. The object he had sought across continents had been there all along, accessible only after he had undergone the internal transformation necessary to understand its meaning."""@en .
+
 
 <walter-mitty/stages/return-to-life> a monomyth:StageRealization ;
     rdfs:label "Return to Life"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
     monomyth:stageRealizationOrder 18 ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:realizationDescription """Walter delivers the negative and stands up to Ted Hendricks."""@en .
+    monomyth:realizationDescription """Walter returns to the Life office and delivers negative #25 to the remaining staff. He directly confronts Ted Hendricks, no longer intimidated or evasive. By standing up for himself and for the dignity of the magazine’s legacy, he reintegrates into his original world as a fundamentally changed person."""@en .
 
 <walter-mitty/stages/quintessence-of-life> a monomyth:StageRealization ;
     rdfs:label "Quintessence of Life"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
     monomyth:stageRealizationOrder 19 ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:realizationDescription """The final cover is revealed to be Walter himself."""@en .
+    monomyth:realizationDescription """When the final issue is published, Walter and Cheryl, running into each other to get their last pay check, discover the cover displayed at a newsstand. The photograph is of Walter himself sitting outside the Life building, quietly absorbed in his work. Sean had recognized in Walter’s unnoticed dedication the true “quintessence of life.” The revelation validates Walter’s journey by showing that the extraordinary had always existed within the ordinary."""@en .
 
 <walter-mitty/stages/walking-with-cheryl> a monomyth:StageRealization ;
     rdfs:label "Walking with Cheryl"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
     monomyth:stageRealizationOrder 20 ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
-    monomyth:realizationDescription """Walter walks away with Cheryl, fully present in the moment."""@en .
+    monomyth:realizationDescription """In the final moments, Walter walks beside Cheryl through New York in a calm and unremarkable scene made meaningful by his complete presence within it. He no longer drifts into fantasy because he no longer needs imagined heroism. His life has become real enough to inhabit fully, and his relationship with Cheryl now begins on authentic rather than imagined terms."""@en .
 
 # --- Narrative Divergences ------------
 
