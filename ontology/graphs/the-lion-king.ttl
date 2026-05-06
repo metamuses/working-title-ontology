@@ -143,6 +143,22 @@ hero's journey as the assumption of an inherited obligation rather than the purs
 summons."""@en ;
     monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/investiture-as-call> .
 
+<the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> a monomyth:StageRealization ;
+    rdfs:label "The great kings will always be there to guide you"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <the-lion-king/characters/simba>,
+        <the-lion-king/characters/mufasa> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """On the evening before the stampede, Mufasa tells Simba that
+the great kings of the past look down from the stars and will always be there to guide him. The
+lesson is intimate and tender, embedded in a father-son conversation about bravery rather than
+delivered as a ritual endowment of magical instruments. Its full significance lies dormant
+throughout the hero's exile, activating only when Rafiki leads Simba to the reflecting pool and the
+ghostly vision that completes the circuit between mortal teaching and ancestral intervention."""@en ;
+    monomyth:hasSequentialDivergence <the-lion-king/divergences/sequential/aid-before-crisis> ;
+    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/ancestral-cosmology> .
+
 <the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
     rdfs:label "What have you done?"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
@@ -150,7 +166,7 @@ summons."""@en ;
         <the-lion-king/characters/scar>,
         <the-lion-king/characters/mufasa> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
-    monomyth:stageRealizationOrder 2 ;
+    monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """Scar orchestrates Mufasa's death in the wildebeest stampede
 and immediately turns to the traumatized cub with a calculated accusation: what has Simba done?
 The prince, who had been lured into the gorge as bait, internalizes the guilt completely and accepts
@@ -158,25 +174,6 @@ that he is responsible for his father's death. The refusal of the call is not th
 hesitation before the unknown but a manufactured psychic wound imposed by the Shadow, converting
 Simba's eagerness into shame and his birthright into a burden he believes he has forfeited."""@en ;
     monomyth:hasNarrativeDivergence <the-lion-king/divergences/narrative/manufactured-exile> .
-
-<the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> a monomyth:StageRealization ;
-    rdfs:label "The great kings will always be there to guide you"@en ;
-    monomyth:realizesStage monomyth:SupernaturalAid ;
-    monomyth:involvesCharacter <the-lion-king/characters/simba>,
-        <the-lion-king/characters/mufasa> ;
-    monomyth:hasFitQuality monomyth:ModerateFit ;
-    monomyth:stageRealizationOrder 3 ;
-    monomyth:realizationDescription """On the evening before the stampede, Mufasa tells Simba that
-the great kings of the past look down from the stars and will always be there to guide him. The
-lesson is intimate and tender, embedded in a father-son conversation about bravery rather than
-delivered as a ritual endowment of magical instruments. Its full significance lies dormant
-throughout the hero's exile, activating only when Rafiki leads Simba to the reflecting pool and the
-ghostly vision that completes the circuit between mortal teaching and ancestral intervention."""@en ;
-    monomyth:fitNote """The supernatural aid is split across two temporal moments: the planting of
-the cosmological framework (here, before the crisis) and its activation through Rafiki's shamanic
-mediation and Mufasa's ghost (at stage 10, Atonement with the Father). The seed and the
-flowering are separated by the entire arc of exile."""@en ;
-    monomyth:hasSemioticDivergence <the-lion-king/divergences/semiotic/ancestral-cosmology> .
 
 <the-lion-king/stages/run-away-and-never-return> a monomyth:StageRealization ;
     rdfs:label "Run away and never return"@en ;
@@ -473,6 +470,17 @@ The traversal between worlds is preserved, but its tension is redistributed from
 left to the space being entered."""@en .
 
 # --- Sequential Divergences -----------
+
+<the-lion-king/divergences/sequential/aid-before-crisis> a monomyth:SequentialDivergence ;
+    rdfs:label "Aid before crisis divergence"@en ;
+    monomyth:divergenceOf <the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale """Mufasa's lesson about the great kings arrives embedded in the
+ordinary world before the crisis that will shatter it, rather than appearing after the hero has
+crossed the threshold and entered the special world. The aid is further split across two temporal
+moments separated by the entire arc of exile: the cosmological framework is planted here as a quiet
+paternal intimacy, but it lies dormant for years until Rafiki's shamanic mediation and Mufasa's
+ghostly apparition activate it during the atonement."""@en .
 
 <the-lion-king/divergences/sequential/early-refusal-of-return> a monomyth:SequentialDivergence ;
     rdfs:label "Early refusal of return divergence"@en ;
