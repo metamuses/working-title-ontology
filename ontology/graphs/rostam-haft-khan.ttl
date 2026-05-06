@@ -164,7 +164,7 @@ and cleaves her in half with his sword."""@en .
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:hasSequentialDivergence <rostam-haft-khan/divergences/sequential/distributed-trials> ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/captive-guide-olad> ;
-    monomyth:realizationDescription Labor 5: After Rostam lets Rakhsh graze in a field, the 
+    monomyth:realizationDescription """Labor 5: After Rostam lets Rakhsh graze in a field, the 
 keeper beats Rostam's feet with a stick. Rostam wakes and tears the man's ears off. 
 The champion Olad (Aulad) arrives with an army to avenge the keeper. Rostam routs the 
 army single-handedly, lassos Olad, and binds him, promising him the throne of Mazandaran 
