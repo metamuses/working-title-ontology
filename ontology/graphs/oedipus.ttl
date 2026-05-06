@@ -374,7 +374,7 @@ plague, as predicted by Apollo. """@en ;
 
 <oedipus-myth/stages/exodus-from-thebes> a monomyth:StageRealization ;
     rdfs:label "Exodus from Thebes"@en ;
-    monomyth:realizesStage monomyth:MagicFlight ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 13 ;
@@ -407,7 +407,7 @@ transition to a new reality."""@en .
 
 <oedipus-myth/stages/the-sacred-grove> a monomyth:StageRealization ;
     rdfs:label "Arrival at the Sacred Grove of Colonus"@en ;
-    monomyth:realizesStage monomyth:CrossingTheReturnThreshold ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>, 
         <oedipus-myth/characters/theseus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -445,7 +445,7 @@ to move securely toward his final, fated reality."""@en ;
 
 <oedipus-myth/stages/trouble-from-thebes> a monomyth:StageRealization ;
     rdfs:label "Trouble from Thebes"@en ;
-    monomyth:realizesStage monomyth:MasterOfTwoWorlds ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>, 
         <oedipus-myth/characters/creon>,
         <oedipus-myth/characters/polyneices>,
