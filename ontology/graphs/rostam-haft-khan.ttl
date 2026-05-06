@@ -15,7 +15,7 @@
     dcterms:title "Rostam and the Seven Labors"@en ;
     dcterms:creator "Ferdowsi" ;
     schema:genre "Epic"@en, "Mythology"@en ;
-    owl:sameAs wd:Q5637126 ;
+    owl:sameAs wd:Q4119480 ;
     monomyth:interpretedBy <rostam-haft-khan/monomyths/rostam-journey> ;
     rdfs:comment """A central episode in the Shahnameh where Rostam undertakes seven extraordinary labors (Haft Khan) to rescue King Kay Kavus from the White Demon in Mazandaran."""@en .
 
@@ -47,35 +47,43 @@
 <rostam-haft-khan/characters/rostam> a monomyth:Character ;
     rdfs:label "Rostam"@en ;
     monomyth:embodiesArchetype monomyth:Hero ;
+    monomyth:heroOf <rostam-haft-khan/monomyths/rostam-journey> ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     owl:sameAs wd:Q60062 .
 
 <rostam-haft-khan/characters/rakhsh> a monomyth:Character ;
     rdfs:label "Rakhsh"@en ;
     monomyth:embodiesArchetype monomyth:Ally ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     owl:sameAs wd:Q630911 .
 
 <rostam-haft-khan/characters/zal> a monomyth:Character ;
     rdfs:label "Zal"@en ;
     monomyth:embodiesArchetype monomyth:Mentor ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     owl:sameAs wd:Q144903 .
 
 <rostam-haft-khan/characters/kay-kavus> a monomyth:Character ;
     rdfs:label "Kay Kavus"@en ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     owl:sameAs wd:Q1338913 .
 
 <rostam-haft-khan/characters/white-demon> a monomyth:Character ;
     rdfs:label "The White Demon (Div-e Sepid)"@en ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow ;
     owl:sameAs wd:Q1632732 .
 
 <rostam-haft-khan/characters/olad> a monomyth:Character ;
     rdfs:label "Olad Deev"@en ;
     monomyth:embodiesArchetype monomyth:Shapeshifter, monomyth:Ally, monomyth:Herald ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     rdfs:comment "A demon champion who transitions from Shadow to Ally after being conquered."@en .
 
 <rostam-haft-khan/characters/witch> a monomyth:Character ;
     rdfs:label "The Sorceress"@en ;
     monomyth:embodiesArchetype monomyth:Shapeshifter, monomyth:Shadow ;
+    monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     owl:sameAs wd:Q1616828 .
 
 
@@ -174,6 +182,7 @@ if he acts as a guide to find the White Demon's cave."""@en .
     monomyth:stageRealizationOrder 10 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
     monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:hasSequentialDivergence <rostam-haft-khan/divergences/sequential/distributed-trials> ;    
     monomyth:realizationDescription """Labor 6: Olad leads Rostam to the camp of the demon general 
 Arzhang. Rostam lets out a roar that shakes the mountains, gallops to Arzhang's tent, 
 tears the demon out by his hair, and rips his head from his shoulders. He hurls the 
