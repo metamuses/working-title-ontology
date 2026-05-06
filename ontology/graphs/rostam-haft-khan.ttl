@@ -123,7 +123,7 @@ vanishes beneath them, covering a two-day journey in twelve hours."""@en .
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/vulnerability-sleep> ;
-    monomyth:realizationDescription Exhausted, Rostam makes a couch among the reeds to sleep, 
+    monomyth:realizationDescription """Exhausted, Rostam makes a couch among the reeds to sleep, 
 unaware that he has laid down in the lair of a fierce lion. This moment of deep, 
 unprotected slumber in the heart of enemy territory represents his total immersion 
 in the danger of Mazandaran, where his human awareness is completely suspended."""@en .
