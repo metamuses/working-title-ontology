@@ -522,26 +522,6 @@ In this grounded noir setting, the 'Grail' is semiotically shifted to a social c
 Batman and Gordon. The 'power to restore fertility' is literalized as saving a child—the city's next 
 generation—from the Roman’s influence, representing a systemic victory over corruption rather than a magical one."""@en .
 
-<batman-year-one/divergences/semiotic/mundane-temptation> a monomyth:SemioticDivergence ;
-    rdfs:label "The Mundane Temptress"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-extramarital-affair> ;
-    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """Semiotically, the Temptress is not a supernatural seductress 
-or a malicious agent, but a genuinely good, intellectual equal. The 'temptation' is simply the human 
-desire for comfort and connection in a dark environment. This anchors the archetype entirely in psychological 
-realism while preserving its structural threat to the hero's integrity."""@en .
-
-<batman-year-one/divergences/semiotic/secular-atonement> a monomyth:SemioticDivergence ;
-    rdfs:label "Secular Atonement Divergence"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/confession-to-barbara> ;
-    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
-    monomyth:divergenceRationale """In classical mythology, the shedding of the ego dissolves the Ogre to 
-reveal a divine, cosmic Father with whom the hero achieves 'at-one-ment' (mystical union). In Miller's Neo-Noir 
-universe, the 'Father' is stripped of divinity. When Gordon sheds his ego, he does not find a loving cosmic 
-creator beneath the Ogre; he merely exposes Loeb as a powerless, corrupt politician. The 'atonement' is 
-therefore shifted from a cosmic reconciliation to a strictly secular, internal moral cleansing."""@en .
-
-
 # --- Narrative Divergences ----------------------
 
 <batman-year-one/divergences/narrative/premature-start-refusal> a monomyth:NarrativeDivergence ;
