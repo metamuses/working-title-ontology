@@ -610,6 +610,12 @@ body::before {
   line-height: 1.6;
 }
 
+.horizons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
 .horizons-card {
   padding: 24px;
   position: relative;
@@ -1224,7 +1230,8 @@ body.modal-open {
     gap: 48px;
   }
 
-  .ontology-classes {
+  .ontology-classes,
+  .horizons-grid {
     grid-template-columns: 1fr;
   }
 
