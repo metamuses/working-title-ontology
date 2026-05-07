@@ -250,7 +250,14 @@ mother."""@en ;
         <lady-bird/characters/marion> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription "In a heated confrontation, Marion McPherson discovers Lady Bird's secret applications to East Coast schools. Marion acts as the 'temptress' of the status quo, using shame and financial reality to tempt Lady Bird into believing she is incapable, ungrateful, and destined for failure if she tries to move beyond her station."@en . #aggoungi quotes film give me a number
+    monomyth:realizationDescription """In a brutal confrontation after discovering the secret 
+applications, the tension between mother and daughter peaks. When Lady Bird demands Marion to give
+her a number so she can eventually pay her back for the cost of raising her and never speak to her 
+again, Marion retorts, 'I highly doubt you'll ever get a job good enough to do that.' Fueled by a 
+mix of rage and the fear of her daughter’s ungratefulness, Marion says things she likely doesn’t 
+believe. She projects her own lower-middle-class cynicism onto Lady Bird, unconsciously trying to 
+convince her that she will never become the person she hopes to be, effectively trying to kill the 
+hero’s ambition before she can even leave."""@en . 
     #!! QUI fitnote woman/mother as underestimator  -> è narr div perche non seduce ma vuole abbassre autostima, no semiotic xk è donna ma fa qualcosa di diverso dallo stage -> model div e add real desc
 
 <lady-bird/stages/added-to-waiting-list> a monomyth:StageRealization ;
