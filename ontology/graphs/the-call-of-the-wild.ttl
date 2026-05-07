@@ -19,6 +19,7 @@
     dcterms:title "The Call of the Wild"@en ;
     dcterms:created "1903"^^xsd:gYear ;
     dcterms:creator "Jack London" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Adventure"@en,
         "Nature"@en,
         "Survival"@en ;

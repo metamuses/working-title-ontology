@@ -3,273 +3,724 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monomyth</title>
-  <meta name="description" content="Monomyth is an ontology and knowledge graph for the study of narrative structure, inspired by the work of Joseph Campbell.">
+  <title>The Monomyth Ontology — Mapping the Hero's Journey</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg: #f2e8d5;
-      --text: #1c1408;
-      --gold: #8a6420;
-      --muted: #8a7860;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    body {
-      background: radial-gradient(ellipse 80% 80% at 50% 50%, #faf3e4 0%, #ecddc4 60%, #e4d4b5 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Grain texture overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 300px 300px;
-      opacity: 0.09;
-      pointer-events: none;
-      z-index: 20;
-    }
-
-    /* Vignette */
-    body::after {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(ellipse 90% 90% at 50% 50%, transparent 20%, rgba(140, 110, 60, 0.18) 100%);
-      pointer-events: none;
-      z-index: 19;
-    }
-
-    .scene {
-      position: relative;
-      width: min(75vw, 75vh, 520px);
-      height: min(75vw, 75vh, 520px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Celestial rings — very slowly rotating */
-    .rings {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      animation: slowRotate 90s linear infinite;
-      transform-origin: center;
-    }
-
-    @keyframes slowRotate {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-
-    /* Outer circle draws in on load */
-    .c-outer {
-      stroke-dasharray: 1508;
-      stroke-dashoffset: 1508;
-      animation: drawLine 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      animation-delay: 0.2s;
-    }
-
-    /* Inner circle draws in slightly after */
-    .c-inner {
-      stroke-dasharray: 1351;
-      stroke-dashoffset: 1351;
-      animation: drawLine 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-      animation-delay: 0.6s;
-    }
-
-    @keyframes drawLine {
-      to { stroke-dashoffset: 0; }
-    }
-
-    /* Tick marks appear after rings finish */
-    .ticks {
-      opacity: 0;
-      animation: appear 1.2s ease forwards;
-      animation-delay: 3.2s;
-    }
-
-    /* Text content */
-    .content {
-      position: relative;
-      z-index: 5;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.1rem;
-    }
-
-    /* Top ornament line */
-    .orn {
-      width: 32px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity: 0;
-      animation: appear 1.2s ease forwards;
-      animation-delay: 0.8s;
-    }
-
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-weight: 400;
-      font-size: clamp(1.8rem, 7vw, 3.2rem);
-      letter-spacing: 0.6em;
-      text-indent: 0.6em; /* compensate for letter-spacing on last char */
-      color: var(--text);
-      text-transform: uppercase;
-      opacity: 0;
-      transform: translateY(10px);
-      animation: riseIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      animation-delay: 1s;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
-    }
-
-    /* Gold divider */
-    .divider {
-      width: 48px;
-      height: 1px;
-      background: rgba(106, 78, 24, 0.3);
-      opacity: 0;
-      animation: appear 1s ease forwards;
-      animation-delay: 1.8s;
-    }
-
-    .sub {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(0.62rem, 1.8vw, 0.8rem);
-      letter-spacing: 0.25em;
-      text-transform: lowercase;
-      color: var(--muted);
-      opacity: 0;
-      animation: appear 1.4s ease forwards;
-      animation-delay: 2.1s;
-    }
-
-    @keyframes riseIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes appear {
-      to { opacity: 1; }
-    }
-
-    /* GitHub link */
-    .github-link {
-      position: absolute;
-      bottom: 14%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 6;
-      opacity: 0;
-      animation: appear 1.4s ease forwards;
-      animation-delay: 2.8s;
-      color: var(--muted);
-      text-decoration: none;
-      transition: opacity 0.4s ease, color 0.4s ease;
-    }
-
-    .github-link svg {
-      display: block;
-      width: 15px;
-      height: 15px;
-      opacity: 0.22;
-      stroke: var(--gold);
-      fill: none;
-      transition: opacity 0.4s ease;
-    }
-
-    .github-link:hover svg {
-      opacity: 0.55;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="scene">
 
-    <!-- Rotating celestial rings with tick marks -->
-    <svg class="rings" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-      <!-- Outer ring (r=240, circumference≈1508) -->
-      <circle class="c-outer"
-        cx="250" cy="250" r="240"
-        stroke="#7a5c1e" stroke-width="0.7" opacity="0.5"/>
-
-      <!-- Inner ring (r=215, circumference≈1351) -->
-      <circle class="c-inner"
-        cx="250" cy="250" r="215"
-        stroke="#7a5c1e" stroke-width="0.4" opacity="0.25"/>
-
-      <!-- Tick marks — all positioned at top (y=10) and rotated around center -->
-      <g class="ticks">
-
-        <!-- Primary ticks (triquetra, 120° apart) — long -->
-        <g stroke="#6a4e18" stroke-width="0.9" opacity="0.6">
-          <line x1="250" y1="10" x2="250" y2="36"/>
-          <line x1="250" y1="10" x2="250" y2="36" transform="rotate(120 250 250)"/>
-          <line x1="250" y1="10" x2="250" y2="36" transform="rotate(240 250 250)"/>
-        </g>
-
-        <!-- Secondary ticks (bisecting, 60° offset) — shorter -->
-        <g stroke="#6a4e18" stroke-width="0.6" opacity="0.35">
-          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(60 250 250)"/>
-          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(180 250 250)"/>
-          <line x1="250" y1="10" x2="250" y2="24" transform="rotate(300 250 250)"/>
-        </g>
-
-        <!-- Small dots at remaining 30° positions -->
-        <g fill="#6a4e18" opacity="0.28">
-          <circle cx="250" cy="10" r="1.4" transform="rotate(30 250 250)"/>
-          <circle cx="250" cy="10" r="1.4" transform="rotate(90 250 250)"/>
-          <circle cx="250" cy="10" r="1.4" transform="rotate(150 250 250)"/>
-          <circle cx="250" cy="10" r="1.4" transform="rotate(210 250 250)"/>
-          <circle cx="250" cy="10" r="1.4" transform="rotate(270 250 250)"/>
-          <circle cx="250" cy="10" r="1.4" transform="rotate(330 250 250)"/>
-        </g>
-
-      </g>
-    </svg>
-
-    <!-- GitHub link -->
-    <a class="github-link" href="https://github.com/metamuses/monomyth" aria-label="GitHub repository">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-      </svg>
-    </a>
-
-    <!-- Centered text -->
-    <div class="content">
-      <div class="orn"></div>
-      <h1>Monomyth</h1>
-      <div class="divider"></div>
-      <p class="sub">coming soon</p>
+  <!-- =====================================================================
+       NAVBAR
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-brand">
+        <span class="glyph">◯</span>
+        Monomyth
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#ontology">Ontology</a></li>
+        <li><a href="#graphs">Knowledge Graphs</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
+  <!-- =====================================================================
+       HERO
+       ====================================================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-radial"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-label">A Formal OWL Ontology</div>
+      <h1 class="hero-title">The Hero with a<br><em>Thousand Graphs</em></h1>
+      <p class="hero-subtitle">
+        Mapping Joseph Campbell's monomyth as a computable knowledge structure&mdash;<br>
+        from ancient epics to modern cinema.
+      </p>
+      <a href="#about" class="hero-cta">
+        Begin the Journey
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M7 1v12M1 7l6 6 6-6"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-scroll-line"></div>
+  </section>
+
+  <!-- =====================================================================
+       ABOUT SECTION
+       ====================================================================== -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">About the Project</div>
+        <h2 class="section-title">Formalizing the <em>Hero's Journey</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="reveal reveal-delay-1">
+          <div class="section-prose">
+            <p>
+              In 1949, Joseph Campbell published <strong><em>The Hero with a Thousand Faces</em></strong>, arguing that the
+              world's myths share a single narrative skeleton&mdash;the monomyth. A hero ventures from the ordinary
+              world into a region of supernatural wonder, wins a decisive victory, and returns transformed.
+            </p>
+            <p>
+              This project takes Campbell's framework and encodes it as a <strong>formal OWL ontology</strong>
+              serialized in Turtle (TTL). Every stage, archetype, threshold, and symbolic element becomes a precisely
+              defined class or property in a machine-readable vocabulary, enabling systematic comparison across
+              thousands of years of storytelling.
+            </p>
+            <p>
+              By building <strong>knowledge graphs</strong> for individual narratives&mdash;from Gilgamesh to
+              The Matrix&mdash;we can run SPARQL queries to discover which stories fit Campbell's template
+              perfectly and where the pattern breaks down, revealing as much about narrative diversity as
+              about narrative universals.
+            </p>
+          </div>
+
+          <ol class="methodology-list">
+            <li>
+              <span class="step-num">01</span>
+              <span class="step-text"><strong>Study Campbell's framework</strong> &mdash; The 17 stages across three acts, the archetypal roles, and the spatial logic of ordinary vs. special worlds.</span>
+            </li>
+            <li>
+              <span class="step-num">02</span>
+              <span class="step-text"><strong>Design the ontology</strong> &mdash; Model classes, properties, and relationships in OWL, with reified patterns for archetype assignment and fit quality.</span>
+            </li>
+            <li>
+              <span class="step-num">03</span>
+              <span class="step-text"><strong>Instantiate knowledge graphs</strong> &mdash; For each narrative, create stage realizations with prose descriptions, fit assessments, and Wikidata links.</span>
+            </li>
+            <li>
+              <span class="step-num">04</span>
+              <span class="step-text"><strong>Query and compare</strong> &mdash; Use SPARQL to analyze patterns across works, finding universals and divergences in the monomyth structure.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="about-stat-group">
+            <div class="about-stat">
+              <div class="number">17</div>
+              <div class="label">Stages Modeled</div>
+            </div>
+            <div class="about-stat">
+              <div class="number">11</div>
+              <div class="label">Archetypes</div>
+            </div>
+            <div class="about-stat">
+              <div class="number">3</div>
+              <div class="label">Acts</div>
+            </div>
+            <div class="about-stat">
+              <div class="number">6</div>
+              <div class="label">Fit Qualities</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px; padding: 28px; background: var(--bg-card); border: 1px solid rgba(122, 92, 20, 0.15);">
+            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-dim); margin-bottom: 16px;">Technologies</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">OWL 2</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">RDF / Turtle</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SPARQL</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Wikidata</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Schema.org</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Dublin Core</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SKOS</span>
+              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ONTOLOGY SECTION
+       ====================================================================== -->
+  <section class="section ontology" id="ontology">
+    <div class="section-inner">
+      <div class="ontology-intro">
+        <div class="reveal">
+          <div class="section-label">The Ontology</div>
+          <h2 class="section-title">A Vocabulary for <em>Myth</em></h2>
+          <div class="section-divider"></div>
+          <div class="section-prose">
+            <p>
+              The ontology defines a reusable vocabulary at <code style="font-size:0.85em; color:var(--gold-dim);">monomyth#</code> that captures the deep structure of
+              Campbell's monomyth. At its heart is the <strong>StageRealization</strong> pattern&mdash;the concrete
+              manifestation of an abstract stage in a specific narrative&mdash;which enables meaningful cross-work comparison.
+            </p>
+            <p>
+              Characters are linked to archetypes through reified <strong>ArchetypeRoles</strong> that can shift across stages,
+              acknowledging that a Mentor in Act I may become a Shadow by Act III. Each stage realization carries a
+              <strong>FitQuality</strong> assessment on a six-point scale from <em>Inverted</em> to <em>Perfect Fit</em>,
+              grounding literary analysis in structured, queryable data.
+            </p>
+          </div>
+        </div>
+
+        <div class="ontology-diagram reveal reveal-delay-1">
+          <div class="journey-circle">
+            <!-- Stage dots positioned around the circle -->
+            <div class="stage-dot" style="top: 4%; left: 50%;"></div>
+            <div class="stage-dot dim" style="top: 8%; left: 67%;"></div>
+            <div class="stage-dot" style="top: 16%; left: 80%;"></div>
+            <div class="stage-dot dim" style="top: 28%; left: 90%;"></div>
+            <div class="stage-dot" style="top: 42%; left: 95%;"></div>
+            <div class="stage-dot dim" style="top: 56%; left: 94%;"></div>
+            <div class="stage-dot" style="top: 68%; left: 88%;"></div>
+            <div class="stage-dot dim" style="top: 78%; left: 78%;"></div>
+            <div class="stage-dot" style="top: 86%; left: 65%;"></div>
+            <div class="stage-dot dim" style="top: 90%; left: 50%;"></div>
+            <div class="stage-dot" style="top: 88%; left: 36%;"></div>
+            <div class="stage-dot dim" style="top: 82%; left: 22%;"></div>
+            <div class="stage-dot" style="top: 72%; left: 12%;"></div>
+            <div class="stage-dot dim" style="top: 58%; left: 5%;"></div>
+            <div class="stage-dot" style="top: 44%; left: 4%;"></div>
+            <div class="stage-dot dim" style="top: 30%; left: 9%;"></div>
+            <div class="stage-dot" style="top: 18%; left: 20%;"></div>
+
+            <div class="circle-label departure">Departure</div>
+            <div class="circle-label initiation">Initiation</div>
+            <div class="circle-label return">Return</div>
+
+            <div class="circle-center">
+              <div class="glyph">⟳</div>
+              <div class="caption">17 stages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold-dim); margin-bottom: 24px;">Core Classes</div>
+      </div>
+
+      <div class="ontology-classes">
+        <div class="class-card reveal">
+          <div class="class-prefix">monomyth:NarrativeWork</div>
+          <div class="class-name">Narrative Work</div>
+          <div class="class-desc">A story, novel, epic, film, or other narrative. Linked to external identifiers via owl:sameAs for Wikidata integration.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-1">
+          <div class="class-prefix">monomyth:MonomythInstance</div>
+          <div class="class-name">Monomyth Instance</div>
+          <div class="class-desc">A specific hero's journey within a work. One work may contain multiple instances for different characters.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-2">
+          <div class="class-prefix">monomyth:StageRealization</div>
+          <div class="class-name">Stage Realization</div>
+          <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative, with fit quality and prose description.</div>
+        </div>
+        <div class="class-card reveal">
+          <div class="class-prefix">monomyth:Character</div>
+          <div class="class-name">Character</div>
+          <div class="class-desc">A character within a narrative, linked to archetypes through reified ArchetypeRole assignments that can shift across stages.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-1">
+          <div class="class-prefix">monomyth:Archetype</div>
+          <div class="class-name">Archetype</div>
+          <div class="class-desc">A recurring character role: Hero, Mentor, Herald, Threshold Guardian, Shadow, Shapeshifter, Trickster, and more.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-2">
+          <div class="class-prefix">monomyth:FitQuality</div>
+          <div class="class-name">Fit Quality</div>
+          <div class="class-desc">A six-point scale from Inverted (0) through Absent, Weak, Moderate, Strong, to Perfect Fit (5) for assessing stage mappings.</div>
+        </div>
+        <div class="class-card reveal">
+          <div class="class-prefix">monomyth:NarrativeWorld</div>
+          <div class="class-name">Narrative World</div>
+          <div class="class-desc">A distinct realm within the story&mdash;ordinary world, special world&mdash;modeling the spatial logic of the journey.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-1">
+          <div class="class-prefix">monomyth:Threshold</div>
+          <div class="class-name">Threshold</div>
+          <div class="class-desc">A boundary between narrative worlds. Connected to worlds via connectsWorld, guarded by Threshold Guardian archetypes.</div>
+        </div>
+        <div class="class-card reveal reveal-delay-2">
+          <div class="class-prefix">monomyth:SymbolicElement</div>
+          <div class="class-name">Symbolic Element</div>
+          <div class="class-desc">Objects, places, or events carrying symbolic weight&mdash;red pills, white rabbits, golden fleeces&mdash;with annotated meanings.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       KNOWLEDGE GRAPHS SECTION
+       ====================================================================== -->
+  <section class="section knowledge-graphs" id="graphs">
+    <div class="section-inner">
+      <div class="kg-header">
+        <div class="reveal">
+          <div class="section-label">Knowledge Graphs</div>
+          <h2 class="section-title">Narratives <em>Analyzed</em></h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="section-prose">
+            <p>
+              Each narrative is instantiated as a knowledge graph following the ontology pattern: characters,
+              worlds, thresholds, symbolic elements, and all 17 stage realizations with fit quality assessments.
+              Works range from complete RDF graphs to prose breakdowns awaiting formalization.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tiles -->
+      <div class="kg-grid">
+        <div class="kg-card reveal" data-modal-target="kg-modal-matrix">
+          <div class="kg-card-inner">
+            <div class="kg-card-header">
+              <div>
+                <div class="work-title">The Matrix</div>
+                <div class="work-author">The Wachowskis, 1999</div>
+              </div>
+              <span class="tag tag-movie">Movie</span>
+            </div>
+            <div class="work-desc">Neo's awakening from simulated reality maps almost perfectly to the monomyth. 8 characters, 7 symbolic elements, 3 narrative worlds, and full Wikidata integration.</div>
+            <div class="fit-bar">
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled absent"></div>
+              <div class="segment filled inverted"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+            </div>
+            <div class="fit-label">
+              <span>17 stages mapped</span>
+              <span>1 Absent, 1 Inverted</span>
+            </div>
+            <div class="meta-title">Divergences</div>
+            <div class="meta-row">
+              <div class="meta-item">Narrative: <span>8</span></div>
+              <div class="meta-item">Sequential: <span>7</span></div>
+              <div class="meta-item">Semiotic: <span>3</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kg-card reveal reveal-delay-1" data-modal-target="kg-modal-lion-king">
+          <div class="kg-card-inner">
+            <div class="kg-card-header">
+              <div>
+                <div class="work-title">The Lion King</div>
+                <div class="work-author">Roger Allers & Rob Minkoff, 1994</div>
+              </div>
+              <span class="tag tag-movie">Animated Movie</span>
+            </div>
+            <div class="work-desc">Campbell's own primary example. Odysseus's decade-long return from Troy fits the monomyth with near-perfect precision&mdash;arguably the archetype from which the archetype was drawn.</div>
+            <div class="fit-bar">
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled inverted"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled inverted"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+            </div>
+            <div class="fit-label">
+              <span>17 stages mapped</span>
+              <span>2 Inverted</span>
+            </div>
+            <div class="meta-title">Divergences</div>
+            <div class="meta-row">
+              <div class="meta-item">Narrative: <span>4</span></div>
+              <div class="meta-item">Sequential: <span>4</span></div>
+              <div class="meta-item">Semiotic: <span>5</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kg-card reveal reveal-delay-2" data-modal-target="kg-modal-call-of-wild">
+          <div class="kg-card-inner">
+            <div class="kg-card-header">
+              <div>
+                <div class="work-title">The Call of the Wild</div>
+                <div class="work-author">Jack London, 1903</div>
+              </div>
+              <span class="tag tag-book">Novel</span>
+            </div>
+            <div class="work-desc">Arguably the purest ancient monomyth. The boon is lost so something deeper can be found&mdash;Gilgamesh returns without immortality but with wisdom, inverting the expected reward structure.</div>
+            <div class="fit-bar">
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled moderate"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled strong"></div>
+              <div class="segment filled absent"></div>
+              <div class="segment filled absent"></div>
+              <div class="segment filled inverted"></div>
+              <div class="segment filled weak"></div>
+              <div class="segment filled strong"></div>
+            </div>
+            <div class="fit-label">
+              <span>17 stages mapped</span>
+              <span>1 Weak, 1 Inverted, 2 Absent</span>
+            </div>
+            <div class="meta-title">Divergences</div>
+            <div class="meta-row">
+              <div class="meta-item">Narrative: <span>8</span></div>
+              <div class="meta-item">Sequential: <span>7</span></div>
+              <div class="meta-item">Semiotic: <span>3</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <div class="kg-modal" id="kg-modal-matrix" aria-hidden="true">
+    <div class="kg-modal-overlay" data-close-modal></div>
+    <div class="kg-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="kgModalMatrixTitle">
+      <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="kg-modal-header">
+        <div class="kg-modal-kicker">Expanded Analysis</div>
+        <h3 class="kg-modal-title" id="kgModalMatrixTitle">The Matrix</h3>
+        <div class="kg-modal-author">The Wachowskis, 1999</div>
+        <p class="kg-modal-summary">Placeholder extended analysis: this panel will eventually hold a richer scene-level synthesis of Neo's journey, with explicit links from moments to modeled stage realizations.</p>
+      </div>
+      <div class="kg-modal-grid">
+        <section class="kg-modal-section">
+          <h4>Stage Fit Profile</h4>
+          <p>Detailed placeholder interpretation per stage cluster, emphasizing the Return-act tension and one absent realization.</p>
+          <div class="fit-bar fit-bar-large">
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled inverted"></div>
+            <div class="segment filled weak"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment"></div>
+            <div class="segment filled strong"></div>
+          </div>
+          <div class="fit-label fit-label-large">
+            <span>17 stages mapped</span>
+            <span>1 absent, 1 inverted</span>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Divergence Signals</h4>
+          <p>Placeholder notes: conflict points are grouped by narrative ordering, symbolic inversion, and semantic drift from canonical expressions.</p>
+          <div class="kg-modal-meta">
+            <div class="kg-modal-meta-item">Narrative: 8</div>
+            <div class="kg-modal-meta-item">Sequential: 7</div>
+            <div class="kg-modal-meta-item">Semantic: 3</div>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Archetypal Dynamics</h4>
+          <p>Placeholder text for role volatility, especially mentor/shadow boundary conditions and staged identity shifts.</p>
+          <p>Placeholder text for evidence anchors by scene, quote, and world transition.</p>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Modeling Notes</h4>
+          <p>Placeholder text for ontology-specific assertions and unresolved mapping alternatives.</p>
+          <p>Placeholder text for next-pass graph enrichment and provenance expansion.</p>
+        </section>
+      </div>
+    </div>
   </div>
+
+  <div class="kg-modal" id="kg-modal-lion-king" aria-hidden="true">
+    <div class="kg-modal-overlay" data-close-modal></div>
+    <div class="kg-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="kgModalLionKingTitle">
+      <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="kg-modal-header">
+        <div class="kg-modal-kicker">Expanded Analysis</div>
+        <h3 class="kg-modal-title" id="kgModalLionKingTitle">The Lion King</h3>
+        <div class="kg-modal-author">Roger Allers & Rob Minkoff, 1994</div>
+        <p class="kg-modal-summary">Placeholder extended analysis: this view will hold episode-by-episode rationale for the near-perfect journey profile.</p>
+      </div>
+      <div class="kg-modal-grid">
+        <section class="kg-modal-section">
+          <h4>Stage Fit Profile</h4>
+          <p>Placeholder detail for highly coherent stage realization sequencing.</p>
+          <div class="fit-bar fit-bar-large">
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+          </div>
+          <div class="fit-label fit-label-large">
+            <span>17 stages mapped</span>
+            <span>Near-perfect fit</span>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Divergence Signals</h4>
+          <p>Placeholder divergence commentary for localized variations without structural breaks.</p>
+          <div class="kg-modal-meta">
+            <div class="kg-modal-meta-item">Narrative: low</div>
+            <div class="kg-modal-meta-item">Sequential: low</div>
+            <div class="kg-modal-meta-item">Semantic: low</div>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Archetypal Dynamics</h4>
+          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
+          <p>Placeholder text for confidence notes and citation mapping.</p>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Modeling Notes</h4>
+          <p>Placeholder data-model decisions for oral-tradition variants.</p>
+          <p>Placeholder follow-up tasks for alternate recension support.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="kg-modal" id="kg-modal-call-of-wild" aria-hidden="true">
+    <div class="kg-modal-overlay" data-close-modal></div>
+    <div class="kg-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="kgModalCallOfWildTitle">
+      <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+      <div class="kg-modal-header">
+        <div class="kg-modal-kicker">Expanded Analysis</div>
+        <h3 class="kg-modal-title" id="kgModalCallOfWildTitle">The Call of the Wild</h3>
+        <div class="kg-modal-author">Jack London, 1903</div>
+        <p class="kg-modal-summary">Placeholder extended analysis focused on the shifted boon outcome and wisdom-oriented return logic.</p>
+      </div>
+      <div class="kg-modal-grid">
+        <section class="kg-modal-section">
+          <h4>Stage Fit Profile</h4>
+          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <div class="fit-bar fit-bar-large">
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+            <div class="segment filled strong"></div>
+          </div>
+          <div class="fit-label fit-label-large">
+            <span>17 stages mapped</span>
+            <span>Strong overall fit</span>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Divergence Signals</h4>
+          <p>Placeholder observations for reward inversion and existential reframing.</p>
+          <div class="kg-modal-meta">
+            <div class="kg-modal-meta-item">Narrative: medium</div>
+            <div class="kg-modal-meta-item">Sequential: low</div>
+            <div class="kg-modal-meta-item">Semantic: medium</div>
+          </div>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Archetypal Dynamics</h4>
+          <p>Placeholder text for companion-loss as catalyst stage multiplier.</p>
+          <p>Placeholder text for role shifts in divine encounter arcs.</p>
+        </section>
+        <section class="kg-modal-section">
+          <h4>Modeling Notes</h4>
+          <p>Placeholder text for tablet-fragment uncertainty handling.</p>
+          <p>Placeholder text for provenance across scholarly translations.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       CONCLUSION SECTION
+       ====================================================================== -->
+  <section class="section conclusion" id="conclusion">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">Conclusion</div>
+        <h2 class="section-title">The Pattern <em>Persists</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="conclusion-grid">
+        <div class="reveal reveal-delay-1">
+          <div class="section-prose">
+            <p>
+              Across four millennia of storytelling&mdash;from Sumerian clay tablets to digital cinema&mdash;the
+              monomyth endures not as a rigid template but as a gravitational center. Some narratives orbit it
+              closely; others achieve their power precisely by breaking away. The ontology captures both: a
+              <strong>Perfect Fit</strong> and an <strong>Inverted</strong> score are equally informative.
+            </p>
+            <p>
+              By formalizing Campbell's framework in OWL, we gain something neither pure literary criticism nor
+              pure computer science could achieve alone: a <strong>computable humanities</strong> that respects the
+              irreducible richness of narrative while enabling systematic comparison at scale. The knowledge graphs
+              are not reductions of great stories&mdash;they are lenses, each one revealing how a particular
+              culture, era, and author navigated the same deep structure of departure, ordeal, and return.
+            </p>
+          </div>
+
+          <ul class="future-list">
+            <li>Extend the ontology with temporal properties and thematic classes</li>
+            <li>Build SPARQL endpoints for cross-work comparative queries</li>
+            <li>Create interactive visualizations of journey patterns</li>
+            <li>Formalize remaining prose breakdowns as full knowledge graphs</li>
+            <li>Link stage realizations across works with SKOS mappings</li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <blockquote class="conclusion-quote">
+            "The hero ventures forth from the world of common day into a region of supernatural wonder:
+            fabulous forces are there encountered and a decisive victory is won: the hero comes back from
+            this mysterious adventure with the power to bestow boons on his fellow man."
+            <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       TEAM SECTION
+       ====================================================================== -->
+  <section class="section team" id="team">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">The Team</div>
+        <h2 class="section-title">Behind the <em>Journey</em></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">TM</div>
+          <div class="name">Tommaso Barbato</div>
+          <div class="role">Ontology Design</div>
+          <div class="bio">Responsible for the OWL ontology architecture, class hierarchies, and property design grounding Campbell's framework in formal semantics.</div>
+        </div>
+        <div class="team-card reveal reveal-delay-1">
+          <div class="team-avatar">TM</div>
+          <div class="name">Nicol D'Amelio</div>
+          <div class="role">Knowledge Engineering</div>
+          <div class="bio">Built the knowledge graph instantiations, mapping narratives to the ontology with stage realizations, fit assessments, and Wikidata integration.</div>
+        </div>
+        <div class="team-card reveal reveal-delay-2">
+          <div class="team-avatar">TM</div>
+          <div class="name">Maryam Dadrasrazi</div>
+          <div class="role">Literary Analysis</div>
+          <div class="bio">Conducted the narrative analyses, producing 17-stage prose breakdowns and fit quality assessments for each work in the corpus.</div>
+        </div>
+        <div class="team-card reveal reveal-delay-3">
+          <div class="team-avatar">TM</div>
+          <div class="name">Martina Uccheddu</div>
+          <div class="role">Data Visualization</div>
+          <div class="bio">Designed the web presentation and interactive visualizations, translating RDF graph structures into accessible, explorable interfaces.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Monomyth Ontology Project</div>
+      <ul class="footer-links">
+        <li>
+          <a class="github-link" href="https://github.com/metamuses/monomyth" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" fill="none" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer-copy">&copy; 2026 &middot; CC BY-SA 4.0</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
 </body>
 </html>
