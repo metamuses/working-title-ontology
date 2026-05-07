@@ -854,6 +854,12 @@ body.modal-open {
   gap: 16px;
 }
 
+.kg-modal-tags {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 .kg-modal-repo-link {
   text-decoration: none;
   transition: transform 0.2s ease, filter 0.2s ease;
