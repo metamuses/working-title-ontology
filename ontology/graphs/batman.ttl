@@ -143,7 +143,7 @@ serving as the primary hero and an eventual ally to Jim Gordon."""@en ;
 <batman-year-one/characters/sarah-essen> a monomyth:Character ;
     rdfs:label "Sarah Essen"@en ;
     monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Goddess ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter ;
     rdfs:comment "Gordon's intellectual equal and partner, who becomes the source of his temptation."@en ;
     owl:sameAs wd:Q3950326 .
 
@@ -446,7 +446,7 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 
 <batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Absent Master of Two Worlds"@en ;
-    monomyth:realizesStage monomyth:MasterOfTwoWorlds ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -593,7 +593,7 @@ corruption, and tactical reality where 'divine knowledge' has no place."""@en .
         monomyth:TheMagicFlight ,
         monomyth:RescueFromWithout ,
         monomyth:TheCrossingOfTheReturnThreshold ,
-        monomyth:MasterOfTwoWorlds ,
+        monomyth:MasterOfTheTwoWorlds ,
         monomyth:FreedomToLive ;
     monomyth:divergenceRationale """The Return act is logically impossible within the scope of an origin story. 
 The narrative ends precisely at the moment the hero achieves his identity, serving as a prologue rather than a full monomythic cycle. 
