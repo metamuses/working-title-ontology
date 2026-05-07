@@ -25,6 +25,7 @@
     dcterms:title "Oedipus Rex"@en ;
     dcterms:created "-0424"^^xsd:gYear ;
     dcterms:creator "Sophocles" ;
+    schema:countryOfOrigin wd:Q41 ;
     schema:genre "Greek Tragedy"@en,
         "Mythology"@en ;
     owl:sameAs wd:Q148643 ;
@@ -38,6 +39,7 @@ father and marry his mother, resulting in his tragic downfall and self-inflicted
     dcterms:title "Oedipus at Colonus"@en ;
     dcterms:created "-0400"^^xsd:gYear ;
     dcterms:creator "Sophocles" ;
+    schema:countryOfOrigin wd:Q41 ;
     schema:genre "Greek Tragedy"@en,
         "Mythology"@en ;
     owl:sameAs wd:Q294001 ;
