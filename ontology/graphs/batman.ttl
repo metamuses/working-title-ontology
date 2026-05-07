@@ -157,6 +157,7 @@ forgiveness."""@en ;
     owl:sameAs wd:Q48893069 .
 
 # --- Stage Realizations ---------------
+
 <batman-year-one/stages/the-train-to-gotham> a monomyth:StageRealization ;
     rdfs:label "The Train to Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;

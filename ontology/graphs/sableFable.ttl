@@ -324,6 +324,7 @@ acting as a conduit for love without attachment to the guilt of his past."""@en 
     monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
 
 # --- Semiotic Divergences ----------------------
+
 <sable-fable/divergences/semiotic/psychological-internalization> a monomyth:SemioticDivergence ;
     rdfs:label "Psychological Internalization"@en ;
     monomyth:divergenceOf <sable-fable/stages/the-intrusive-call> ,
