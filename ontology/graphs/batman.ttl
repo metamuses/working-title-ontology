@@ -19,6 +19,7 @@
     dcterms:created "1987"^^xsd:gYear ;
     dcterms:creator "Frank Miller",
         "David Mazzucchelli" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Crime"@en,
         "Superhero"@en,
         "Neo-Noir"@en ;
