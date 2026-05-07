@@ -59,7 +59,7 @@ narrative of 'Lady Bird', focusing on the character Christine's journey."""@en ;
         <lady-bird/stages/my-name-is-christine>,
         <lady-bird/stages/sunday-mess>,
         <lady-bird/stages/calling-home>,
-        <lady-bird/stages/emotional-sacramento>,
+        <lady-bird/stages/emotional-in-sacramento>,
         <lady-bird/stages/thank-you> .
 
 # --- Characters -----------------------
@@ -381,9 +381,11 @@ are inseparable parts of who she has become."""@en ;
 communicative one. The hero doesn't move back into her childhood home; instead, she brings her home 
 into her new life."""@en .
 
-<lady-bird/stages/emotional-sacramento> a monomyth:StageRealization ;
-    rdfs:label "Driving in Sacramento"@en ;
+<lady-bird/stages/emotional-in-sacramento> a monomyth:StageRealization ;
+    rdfs:label "Did you feel emotional the first time you drove in Sacramento?"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizationDescription "She reflects on driving through Sacramento for the first time. She now holds both worlds—the New York of her aspirations and the Sacramento of her identity—simultaneously. She realizes that the place she hated is the foundation of who she is, achieving an equilibrium between her two identities."@en .
 
