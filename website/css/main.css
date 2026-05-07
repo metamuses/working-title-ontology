@@ -451,6 +451,27 @@ body::before {
   font-weight: 500;
 }
 
+.conclusion-quote {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  padding-left: 24px;
+  border-left: 2px solid var(--gold-dim);
+  margin-top: 16px;
+}
+
+.conclusion-quote cite {
+  display: block;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-top: 20px;
+  font-family: var(--font-body);
+}
+
 /* ========================================================================
    ONTOLOGY SECTION
    ======================================================================== */
