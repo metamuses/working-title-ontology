@@ -1,0 +1,425 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# SABLE, fABLE (Album, 2025)
+# ==============================================================================
+
+<sable-fable> a monomyth:NarrativeWork,
+        schema:MusicAlbum ;
+    rdfs:label "SABLE, fABLE"@en ;
+    dcterms:title "SABLE, fABLE"@en ;
+    dcterms:created "2025"^^xsd:gYear ;
+    dcterms:creator "Bon Iver" ;
+    schema:countryOfOrigin wd:Q30 ;
+    schema:genre "Indie Folk"@en,
+        "Art Pop"@en ;
+    owl:sameAs wd:Q132775424 ;
+    monomyth:interpretedBy <sable-fable/monomyths/justin-vernon-journey> ;
+    rdfs:comment """An autobiographical double-EP/album chronicling Justin Vernon's journey from a period of intense 
+anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and acceptance (fABLE)."""@en .
+
+# --- Monomyth Expression --------------
+
+<sable-fable/monomyths/justin-vernon-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Justin Vernon's Autobiographical Journey"@en ;
+    monomyth:interprets <sable-fable> ;
+    monomyth:hasHero <sable-fable/characters/justin-vernon> ;
+    monomyth:hasCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-reflection>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasStageRealization <sable-fable/stages/the-intrusive-call> , 
+        <sable-fable/stages/fear-of-change> ,
+        <sable-fable/stages/the-violent-spree> ,
+        <sable-fable/stages/the-plea-for-forgiveness> ,
+        <sable-fable/stages/accepting-the-change> ,
+        <sable-fable/stages/the-psychological-trials> ,
+        <sable-fable/stages/the-peaceful-love> , 
+        <sable-fable/stages/the-blissful-rest> ,
+        <sable-fable/stages/the-temptation-to-regress> ,
+        <sable-fable/stages/the-absent-father> ,
+        <sable-fable/stages/the-emotional-capacity> ,
+        <sable-fable/stages/lingering-in-the-sanctuary> ,
+        <sable-fable/stages/the-perilous-retreat> ,
+        <sable-fable/stages/the-lifeline> ,
+        <sable-fable/stages/the-weight-of-the-world> ,
+        <sable-fable/stages/the-equilibrium> ,
+        <sable-fable/stages/no-more-shame> .
+
+# --- Characters -----------------------
+<sable-fable/characters/justin-vernon> a monomyth:Character ;
+    rdfs:label "Justin Vernon"@en ;
+    rdfs:comment "The autobiographical hero of the narrative."@en ;
+    monomyth:heroOf <sable-fable/monomyths/justin-vernon-journey> ;
+    monomyth:characterOf <sable-fable/monomyths/justin-vernon-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    owl:sameAs wd:Q3432151 .
+
+<sable-fable/characters/the-reflection> a monomyth:Character ;
+    rdfs:label "The Reflection / The Competitor"@en ;
+        rdfs:comment "An internal antagonist born of anxiety and trauma."@en ;
+    monomyth:characterOf <sable-fable/monomyths/justin-vernon-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow .
+
+<sable-fable/characters/the-new-love> a monomyth:Character ;
+    rdfs:label "The Partner / The New Love"@en ;
+    rdfs:comment "The figure represents healing, unity, and a safe harbor."@en ;
+    monomyth:characterOf <sable-fable/monomyths/justin-vernon-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally .
+
+# --- Stage Realizations ---------------
+
+<sable-fable/stages/the-intrusive-call> a monomyth:StageRealization ;
+    rdfs:label "THINGS BEHIND THINGS BEHIND THINGS (Verse 1)"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-reflection> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """The Call to Adventure manifests as a psychological rupture. 
+Justin Vernon expresses a desperate desire for an anxious 'feeling' to be gone, repeating himself 
+three times in a way that reflects 'the nature of unrelenting intrusive thoughts'. 
+This state of 'anxiety and desperation' serves as the summons. When he looks in the mirror and 
+sees his reflection resembling 'some competitor', he is receiving the call to finally confront 
+his own layered trauma."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/fear-of-change> a monomyth:StageRealization ;
+    rdfs:label "THINGS BEHIND THINGS BEHIND THINGS (Verse 2)"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """The Refusal of the Call is explicitly voiced when Vernon admits, 
+'I am afraid of changing.' Faced with the 'enormity of the journey ahead'—which requires him to 
+'check and rearrange' his mental state—he hesitates ('How'm I supposed to do this now?'). 
+The weight of what must be confronted is represented by the 'rings within rings within rings', 
+symbolizing the astronomical, repeating layers of built-up trauma he must peel back to heal. 
+He realizes the journey to happiness will require him to face the very things he has been trying to ignore."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/the-violent-spree> a monomyth:StageRealization ;
+    rdfs:label "S P E Y S I D E (Verse 1-3)"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """Written during an isolating period in Key West, 
+'S P E Y S I D E' represents the deepest point of darkness. Vernon is swallowed by guilt 
+over his 'violent spree' of self-sabotage, destroying relationships and shooting himself in the foot 
+('It serves to suffer, make a hole in my foot'). This is the symbolic death of his ego, reduced to 'soot', 
+where he realizes he 'can't make good' on his own."""@en ;
+    monomyth:hasSequentialDivergence <sable-fable/divergences/sequential/healing-sequence-inversion> ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/the-plea-for-forgiveness> a monomyth:StageRealization ;
+    rdfs:label "S P E Y S I D E (Verse 4)"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """In verse 4 of 'S P E Y S I D E', the Supernatural Aid manifests 
+not as a wizard or divine messenger, but as the grounding presence of the people he loves. 
+While asking for forgiveness from this group of people he hurt, he hopes they can 'still make a man from me'. 
+This belief that his loved ones can still see the beauty in him acts as the 'talisman' and psychological assurance 
+he needs to survive the darkness and prepare for the threshold crossing."""@en ;
+    monomyth:hasSequentialDivergence <sable-fable/divergences/sequential/healing-sequence-inversion> ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-secular-anchor> .
+
+<sable-fable/stages/accepting-the-change> a monomyth:StageRealization ;
+    rdfs:label "AWARDS SEASONS"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """'AWARDS SEASON' represents the Crossing of the First Threshold. 
+The song narrates a phase of sluggish and staggering change, drawing parallels to the 'acceptance' of awards, 
+where the award is actually personal transformation and subsequent healing. By recognizing that 'Nothing 
+stays the same', Vernon commits to the adventure, crossing from the paralyzing guilt of his past into 
+the unknown sphere of acceptance and recovery."""@en ;
+    monomyth:hasSequentialDivergence <sable-fable/divergences/sequential/healing-sequence-inversion> .
+
+<sable-fable/stages/the-psychological-trials> a monomyth:StageRealization ;
+    rdfs:label "SHORT STORY"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 6 ; 
+    monomyth:realizationDescription """In 'Short Story', the Road of Trials is realized as an inward 
+psychological ordeal of processing pain and accepting vulnerability. Vernon realizes that his past 
+isolation—symbolized by the lyric 'That January ain't the whole world'—is not the entirety of his existence, 
+successfully transmuting the melancholy of his past. As he steps into the bright sunlight, he discovers 
+the presence of a 'helper' through the realization that he is 'never really, really on your own'. 
+The annotations highlight that having someone 'recognize and validate your experience' acts as a 'healing balm'. 
+Finally, the continuous ordeal of healing is accepted; the 'strain and thirst are sweet' because they represent 
+the essential, cyclical work of emotional purification ('Time heals, and then it repeats')."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/the-peaceful-love> a monomyth:StageRealization ;
+    rdfs:label "Everything Is Peaceful Love"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """In 'Everything Is Peaceful Love', the hero encounters the archetype of 
+the Goddess, representing the attainment of true bliss and unity. The song encapsulates 'pure joy and elation', 
+moving past his previous somber wallowing into a state painted with 'images of unity – peace and love'. Although 
+he initially resists the vulnerability by claiming 'I'm not slipping', he eventually surrenders with a gentle heart, 
+blinking in disbelief but admitting he is 'right at home'. The lyric mentioning a 'burning ring' perfectly symbolizes 
+the archetypal mystical marriage, completing his transition into a peaceful harbor."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-secular-anchor> .
+
+<sable-fable/stages/the-blissful-rest> a monomyth:StageRealization ;
+    rdfs:label "Walk Home"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """In 'Walk Home', the hero temporarily achieves the Apotheosis stage. 
+Stripped of his ego-bound limitations, he is invited to 'shed your earthly burdens'. He is able to 'forget and 
+share' his 'stress, anxiety and the constant motions of life', dwelling 
+momentarily in a state of 'blissful rest'. He is so 'high on this person' that the feeling mirrors the 
+'happiness, shock, and excitement' of learning to walk."""@en ;
+    monomyth:hasSequentialDivergence <sable-fable/divergences/sequential/the-pink-cloud-sequence> ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-secular-anchor> .
+
+<sable-fable/stages/the-temptation-to-regress> a monomyth:StageRealization ;
+    rdfs:label "Day One"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """In 'Day One', the hero faces the Woman as the Temptress, 
+but the seduction is entirely internal. Following the pure bliss of the Goddess stage, Vernon is confronted 
+with the exhausting reality of maintaining his healing ('unlearning lies' and shedding the things that 'rip you up'). 
+The 'temptation' that threatens to arrest his journey is the seductive pull of regression—the familiar, isolating comfort 
+of his past trauma and anxiety. It is the urge to self-sabotage and return to the 'Belly of the Whale' rather than continue the difficult, 
+transcendent work of true recovery."""@en ;
+    monomyth:hasSequentialDivergence <sable-fable/divergences/sequential/the-pink-cloud-sequence> ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-internal-temptress> .
+
+<sable-fable/stages/the-absent-father> a monomyth:StageRealization ;
+    rdfs:label "The Absent Atonement"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 10 ; 
+    monomyth:hasNarrativeDivergence <sable-fable/divergences/narrative/internalized-authority> .
+
+<sable-fable/stages/the-emotional-capacity> a monomyth:StageRealization ;
+    rdfs:label "From (Verse 1-2)"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:realizationDescription """In 'From', Vernon attains the Ultimate Boon of his psychological journey: 
+restored emotional capacity. Having survived his trials and self-sabotage, he declares, 'Nothing's really wrong so 
+/ From now on'. The 'elixir' he has gained is the ability to finally hold space for someone else, telling his partner, 
+'I got time, I can give you some' and 'Give me your worry'. This represents the power to restore illumination to 
+his world, transforming him from a person consumed by his own trauma into a source of healing for another."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/lingering-in-the-sanctuary> a monomyth:StageRealization ;
+    rdfs:label "From (Bridge and Chorus)"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:realizationDescription """Alongside the Boon, 'From' simultaneously expresses a gentle Refusal 
+of the Return. Having found a state where 'Nothing's really wrong', Vernon exhibits a reluctance to move forward 
+into the mundane world or face the inevitable changes of the future. Lyrics like 'We can just keep it here for now' 
+and 'Can I take another year?' demonstrate his desire to cling to this realm of blissful discovery and delay the 
+passage of time."""@en ;
+    monomyth:hasNarrativeDivergence <sable-fable/divergences/narrative/the-gentle-refusal> .
+
+<sable-fable/stages/the-perilous-retreat> a monomyth:StageRealization ;
+    rdfs:label "I'll be there (Verse 1-2)"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription """In the verses of 'I'll Be There', the hero navigates the Magic Flight. 
+Rather than fleeing physical pursuers, Vernon is fleeing the threat of mental regression as he attempts to return 
+to ordinary life. He actively tests his newly won transformation by coaching himself to endure: 'Don't you dare go down 
+/ Tape the polaroid to your dome / Keep the sad shit off the phone'. The command to 'get your fine ass on the road' 
+represents the active, perilous push forward to maintain his healing."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/the-lifeline> a monomyth:StageRealization ;
+    rdfs:label "I'll be there (Chorus)"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Because the hero exhibited a Refusal of the Return in the previous track, 
+he requires a Rescue from Without to pull him fully back into human society. This is structurally realized through 
+the song's chorus, sung by a guest vocalist (Danielle Haim) representing the partner. Her repeated assurances—
+'I'll be there / I won't move / Tell me more, or tell me nothing'—act as the external tether reaching across 
+the threshold, drawing the exhausted traveler safely home."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-secular-anchor> .
+
+<sable-fable/stages/the-weight-of-the-world> a monomyth:StageRealization ;
+    rdfs:label "If only i could wait"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription """'If Only I Could Wait' perfectly embodies the Crossing of the Return Threshold. 
+The hero is stepping out of his isolated, timeless sanctuary (the cabin) to re-enter the ordinary world by moving 
+to California, but he is terrified of the impact. Vernon questions his ability to survive the transition, asking, 
+'Can I incur the weight? / Am I really this afraid now?'. The duet functions as 'a bilateral crying question' 
+representing the agonizing effort to hold onto the 'boon' of their newfound love amidst the uncertainty, distance, 
+and decay of the real world ('We'll decay in other ways now')."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/the-geographical-threshold> .
+
+<sable-fable/stages/the-equilibrium> a monomyth:StageRealization ;
+    rdfs:label "There's a Rhythm (Verse 1-2)"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription """In the first two verses of 'There's A Rhythmn', Vernon achieves the Master 
+of the Two Worlds stage. The 'two worlds' are geographically and emotionally represented as his dark, isolated past in Wisconsin ('the snow') 
+and his bright, connected future in California ('a land of palm and gold'). By asking 'Or are less and more the same?' and recognizing 
+that 'There's a rhythmn to reclaim', he achieves a psychological equilibrium. He holds both realities simultaneously, 
+finding harmony ('rhythmn') between his past trauma and his present healing."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+<sable-fable/stages/no-more-shame> a monomyth:StageRealization ;
+    rdfs:label "There's a Rhythm (Verse 3)"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
+        <sable-fable/characters/the-new-love> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription """The album's lyrical climax in verse 3 perfectly embodies the Freedom to Live. 
+Released from the paralyzing anxiety and 'shame' that defined the beginning of his journey, Vernon lives fully in the 
+present moment. He declares, 'Ya know I've really no more shame / Now things really are arranged', proving he has 
+finally conquered the fear of change that initiated his Refusal of the Call. His focus shifts outward to pure connection 
+('Cause you really are a babe'), acting as a conduit for love without attachment to the guilt of his past."""@en ;
+    monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
+
+# --- Semiotic Divergences ----------------------
+<sable-fable/divergences/semiotic/psychological-internalization> a monomyth:SemioticDivergence ;
+    rdfs:label "Psychological Internalization"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-intrusive-call> ,
+        <sable-fable/stages/fear-of-change> ,
+        <sable-fable/stages/the-violent-spree> ,
+        <sable-fable/stages/the-psychological-trials> ,
+        <sable-fable/stages/the-emotional-capacity> ,
+        <sable-fable/stages/the-perilous-retreat> ,
+        <sable-fable/stages/the-equilibrium> ,
+        <sable-fable/stages/no-more-shame> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ,
+        monomyth:RefusalOfTheCall ,
+        monomyth:TheBellyOfTheWhale ,
+        monomyth:TheRoadOfTrials ,
+        monomyth:TheUltimateBoon ,
+        monomyth:TheMagicFlight ,
+        monomyth:MasterOfTheTwoWorlds ,
+        monomyth:FreedomToLive ;
+    monomyth:divergenceRationale """Across the album, traditional mythic elements involving physical threats, 
+magical realms, or external monsters are completely internalized. The 'unknown' is the hero's own mental health. 
+The Herald, the Whale, and the Magic Flight are recontextualized as battles against anxiety, intrusive thoughts, 
+and the urge to regress. The ultimate rewards—the Boon, Master of Two Worlds, and Freedom to Live—are semiotically 
+shifted from cosmic conquests to the achievement of emotional empathy, mental equilibrium, and living free from 
+the shame of past trauma."""@en .
+
+<sable-fable/divergences/semiotic/the-secular-anchor> a monomyth:SemioticDivergence ;
+    rdfs:label "The Secular Anchor (Loved Ones as Mythic Forces)"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-plea-for-forgiveness> ,
+        <sable-fable/stages/the-peaceful-love> ,
+        <sable-fable/stages/the-blissful-rest> ,
+        <sable-fable/stages/the-lifeline> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ,
+        monomyth:TheMeetingWithTheGoddess ,
+        monomyth:Apotheosis ,
+        monomyth:RescueFromWithout ;
+    monomyth:divergenceRationale """In classical mythology, the hero is aided, elevated, or rescued by supernatural 
+entities, wizards, or cosmic deities. In this autobiographical framework, these divine signifiers are secularized 
+into the grounding reality of human connection. The profound, earthly safety of a romantic partner (and the forgiveness 
+of friends) replaces magical intervention. The structural function remains intact—providing the exact 'bliss', 'aid', 
+or 'rescue' the hero needs—but the vocabulary is entirely shifted to the intimate reality of healthy relationships."""@en .
+
+<sable-fable/divergences/semiotic/the-internal-temptress> a monomyth:SemioticDivergence ;
+    rdfs:label "The Internal Temptress (Seduction of Regression)"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-temptation-to-regress> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """In classical myth, this stage is often represented by a literal female 
+figure or physical vice that tempts the hero to abandon their quest. In this psychological framework, 
+the 'Temptress' is the hero's own mind. The seduction is the allure of the familiar darkness and the 
+comfort of old, destructive habits, which threaten to bind the hero's consciousness to their past trauma 
+rather than allowing them to transcend it."""@en .
+
+<sable-fable/divergences/semiotic/the-geographical-threshold> a monomyth:SemioticDivergence ;
+    rdfs:label "The Geographical Threshold (Distance and Decay)"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-weight-of-the-world> ;
+    monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:divergenceRationale """In myth, the Return Threshold often involves crossing a physical boundary back 
+into the mortal realm, where magic fades. In this autobiographical narrative, the threshold is both geographical 
+(moving from Wisconsin to California) and relational. The 'magic' that threatens to fade is the blissful, 
+effortless love of the Goddess/Apotheosis stage, which must now survive the mundane, corrosive elements of 
+time, distance, and emotional 'decay'."""@en .
+
+# --- Sequential Divergences ----------------------
+
+<sable-fable/divergences/sequential/healing-sequence-inversion> a monomyth:SequentialDivergence ;
+    rdfs:label "The Trauma Sequence Inversion"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-violent-spree>,
+        <sable-fable/stages/the-plea-for-forgiveness>,
+        <sable-fable/stages/accepting-the-change> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale, 
+        monomyth:SupernaturalAid, 
+        monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:divergenceRationale """In Campbell's canonical framework, the hero receives 
+Supernatural Aid, Crosses the Threshold, and then is swallowed into the Belly of the Whale. 
+In this autobiographical album about mental health, the sequence is inverted. The hero is already 
+trapped in the 'Belly' of his own anxiety and guilt (S P E Y S I D E). The Supernatural Aid 
+(the forgiveness of loved ones) must arrive while he is in the abyss. 
+This aid gives him the strength to finally Cross the Threshold (AWARDS SEASON) out of his darkness 
+and into the active phase of healing."""@en .
+
+<sable-fable/divergences/sequential/the-pink-cloud-sequence> a monomyth:SequentialDivergence ;
+    rdfs:label "The 'Pink Cloud' Sequence Inversion"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-blissful-rest>,
+        <sable-fable/stages/the-temptation-to-regress> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale """In Campbell's canonical ordering, Apotheosis follows the Atonement 
+with the Father and the Temptress. In this autobiographical narrative of mental health recovery, 
+the sequence is inverted to reflect the 'Pink Cloud' phenomenon. The hero experiences a premature 
+Apotheosis immediately following the Meeting with the Goddess, soaring into a state of blissful rest 
+before he has actually done the hard work of unlearning his trauma. This premature peak makes the 
+subsequent crash into the Temptress stage ('Day One') inevitable and structurally devastating."""@en .
+
+# --- Narrative Divergences ----------------------
+
+<sable-fable/divergences/narrative/the-gentle-refusal> a monomyth:NarrativeDivergence ;
+    rdfs:label "The Gentle Refusal"@en ;
+    monomyth:divergenceOf <sable-fable/stages/lingering-in-the-sanctuary> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """Typically, the Refusal of the Return is an active rebellion against 
+returning to humanity. Here, it is a much gentler, understandable psychological reaction. After years of 
+suffering, the hero simply wants to press pause ('We can just keep it here for now') to savor his hard-won 
+peace before facing whatever comes next."""@en .
+
+<sable-fable/divergences/narrative/internalized-authority> a monomyth:NarrativeDivergence ;
+    rdfs:label "Internalized Authority Divergence"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-absent-father> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """In classical mythology, the hero's ego-death is triggered by 
+an encounter with a terrifying Father-figure. In modern psychological narratives, this external 
+projection is stripped away. The hero's battle is entirely with the Shadow (their own reflection) 
+and the Temptress (the urge to regress). Because the hero acts as their own ultimate judge and punisher 
+(as seen in the guilt of 'S P E Y S I D E'), an external 'Atonement' stage is rendered narratively obsolete; 
+reconciliation must be achieved through self-forgiveness rather than cosmic approval."""@en .

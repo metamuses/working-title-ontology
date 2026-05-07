@@ -20,6 +20,7 @@
     dcterms:created "1999"^^xsd:gYear ;
     dcterms:creator "Lana Wachowski",
         "Lilly Wachowski" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Science Fiction"@en,
         "Action"@en,
         "Cyberpunk"@en ;

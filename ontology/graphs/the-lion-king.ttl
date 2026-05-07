@@ -20,6 +20,7 @@
     dcterms:created "1994"^^xsd:gYear ;
     dcterms:creator "Roger Allers",
         "Rob Minkoff" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Animation"@en,
         "Drama"@en,
         "Musical"@en ;
