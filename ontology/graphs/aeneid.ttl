@@ -1,0 +1,850 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# THE AENEID (Epic Poem, 19 BCE)
+# ==============================================================================
+
+<aeneid> a monomyth:NarrativeWork,
+        schema:Book ;
+    rdfs:label "Aeneid"@en ;
+    dcterms:title "Aeneid"@en ;
+    dcterms:created "-0018"^^xsd:gYear ;
+    dcterms:creator "Publius Vergilius Maro" ;
+    schema:genre "Epic Poetry"@en,
+        "Mythological Literature"@en ;
+    owl:sameAs wd:Q60220 ;
+    monomyth:interpretedBy <aeneid/monomyths/aeneas-journey> ;
+    rdfs:comment """A Latin epic poem in twelve books composed in the final decade of Virgil's life,
+recounting the wanderings and wars of the Trojan exile Aeneas as he pursues the founding of the
+Roman race in Italy."""@en .
+
+# --- Monomyth Expressions --------------
+
+<aeneid/monomyths/aeneas-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Aeneas's Hero's Journey in The Aeneid"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'The Aeneid', focusing on the character Aeneas's journey from Trojan exile to founding
+patriarch of the Roman race."""@en ;
+    monomyth:interprets <aeneid> ;
+    monomyth:hasHero <aeneid/characters/aeneas> ;
+    monomyth:hasCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/venus>,
+        <aeneid/characters/anchises>,
+        <aeneid/characters/creusa>,
+        <aeneid/characters/dido>,
+        <aeneid/characters/mercury>,
+        <aeneid/characters/cumaean-sibyl>,
+        <aeneid/characters/lavinia>,
+        <aeneid/characters/latinus>,
+        <aeneid/characters/turnus>,
+        <aeneid/characters/juno>,
+        <aeneid/characters/pallas>,
+        <aeneid/characters/evander>,
+        <aeneid/characters/hector>,
+        <aeneid/characters/iulus>,
+        <aeneid/characters/tiberinus> ;
+    monomyth:hasStageRealization <aeneid/stages/the-storm-on-the-libyan-coast>,
+        <aeneid/stages/a-second-troy-rising-from-the-sand>,
+        <aeneid/stages/the-cave-and-the-pyre>,
+        <aeneid/stages/italiam-non-sponte-sequor>,
+        <aeneid/stages/loosing-the-cables>,
+        <aeneid/stages/games-and-the-helmsman-lost>,
+        <aeneid/stages/facilis-descensus-averno>,
+        <aeneid/stages/the-fields-of-mourning-and-beyond>,
+        <aeneid/stages/the-soul-fields-and-the-doctrine-of-return>,
+        <aeneid/stages/the-parade-of-roman-souls>,
+        <aeneid/stages/this-is-the-land>,
+        <aeneid/stages/the-foreign-bridegroom-foretold>,
+        <aeneid/stages/the-grief-that-stalls-the-campaign>,
+        <aeneid/stages/the-shield-and-the-etruscan-fleet>,
+        <aeneid/stages/the-mother-and-the-dittany>,
+        <aeneid/stages/the-imperium-bestowed>,
+        <aeneid/stages/the-belt-of-pallas-and-the-buried-blade> .
+
+# --- Characters -----------------------
+
+<aeneid/characters/aeneas> a monomyth:Character ;
+    rdfs:label "Aeneas"@en ;
+    rdfs:comment """A Trojan prince, son of Anchises and the goddess Venus, who escapes the sack of
+Troy bearing his father on his shoulders and his household gods in his arms, and who is fated to
+found the lineage from which Rome will arise."""@en ;
+    monomyth:heroOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero ;
+    owl:sameAs wd:Q82732 .
+
+<aeneid/characters/venus> a monomyth:Character ;
+    rdfs:label "Venus"@en ;
+    rdfs:comment """The goddess of love, mother of Aeneas, and his persistent divine protector across
+the journey, intervening at moments of mortal peril and political negotiation alike with the
+Olympian council."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q47652 .
+
+<aeneid/characters/anchises> a monomyth:Character ;
+    rdfs:label "Anchises"@en ;
+    rdfs:comment """The aged father of Aeneas, carried out of burning Troy on his son's shoulders,
+who dies in Sicily during the wanderings and is encountered again as a luminous shade in the Elysian
+fields where he discloses the future of the Roman race."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q211953 .
+
+<aeneid/characters/creusa> a monomyth:Character ;
+    rdfs:label "Creusa"@en ;
+    rdfs:comment """The first wife of Aeneas, lost in the chaos of Troy's fall and encountered as a
+ghostly apparition who releases him from their bond and prophesies the western kingdom and the royal
+bride that await him."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Herald ;
+    owl:sameAs wd:Q375174 .
+
+<aeneid/characters/dido> a monomyth:Character ;
+    rdfs:label "Dido"@en ;
+    rdfs:comment """The widowed Phoenician queen and founder of Carthage, who receives the
+shipwrecked Trojans with hospitality, falls into consuming love for Aeneas, and consigns herself to
+the pyre when he sails away under divine command."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter ;
+    owl:sameAs wd:Q905162 .
+
+<aeneid/characters/mercury> a monomyth:Character ;
+    rdfs:label "Mercury"@en ;
+    rdfs:comment """The winged messenger of Jupiter, dispatched to Carthage to deliver the
+unambiguous command that recalls Aeneas to his fated mission and severs the Carthaginian
+entanglement."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Herald ;
+    owl:sameAs wd:Q1150 .
+
+<aeneid/characters/cumaean-sibyl> a monomyth:Character ;
+    rdfs:label "Cumaean Sibyl"@en ;
+    rdfs:comment """The aged prophetess of Apollo at Cumae, who instructs Aeneas in the prerequisites
+of the catabasis, conducts him through the underworld, and mediates between the mortal traveller and
+the realm of the dead."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q762835 .
+
+<aeneid/characters/lavinia> a monomyth:Character ;
+    rdfs:label "Lavinia"@en ;
+    rdfs:comment """The daughter of King Latinus, prophesied bride of Aeneas, whose silent presence
+at the centre of the Latin war marks her as the dynastic figure through whom Trojan and Italian
+lines will be joined into the foundational Roman stock."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q1137364 .
+
+<aeneid/characters/latinus> a monomyth:Character ;
+    rdfs:label "Latinus"@en ;
+    rdfs:comment """The aging king of the Latins, who recognizes in the Trojan arrival the fulfilment
+of an oracle concerning a foreign son-in-law and offers Aeneas his daughter and the alliance that
+his queen and Turnus will violently reject."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q779406 .
+
+<aeneid/characters/turnus> a monomyth:Character ;
+    rdfs:label "Turnus"@en ;
+    rdfs:comment """The young Rutulian prince, formerly favoured suitor of Lavinia, who leads the
+Italian coalition against the Trojan settlers and meets his death at the closing moment of the poem
+by Aeneas's hand."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow ;
+    owl:sameAs wd:Q633549 .
+
+<aeneid/characters/juno> a monomyth:Character ;
+    rdfs:label "Juno"@en ;
+    rdfs:comment """The queen of the gods, whose unrelenting hostility toward the Trojan remnant
+drives the storm at sea, the Carthaginian episode, and the Italian war, functioning as the cosmic
+antagonist whose grievances structure the poem's celestial register."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow ;
+    owl:sameAs wd:Q125046 .
+
+<aeneid/characters/pallas> a monomyth:Character ;
+    rdfs:label "Pallas"@en ;
+    rdfs:comment """The young son of King Evander, entrusted to Aeneas as a fellow combatant and
+surrogate ward, whose death at the hand of Turnus propels the closing rage that ends the poem."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q2048018 .
+
+<aeneid/characters/evander> a monomyth:Character ;
+    rdfs:label "Evander"@en ;
+    rdfs:comment """The aged Arcadian king who has settled at Pallanteum on the future site of Rome,
+and who receives Aeneas with hospitality, narrates the topography's sacred prehistory, and lends his
+son Pallas to the Trojan cause."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q837699 .
+
+<aeneid/characters/hector> a monomyth:Character ;
+    rdfs:label "Hector"@en ;
+    rdfs:comment """The fallen Trojan champion, whose ghost appears to Aeneas on the final night of
+Troy, releases him from any obligation to defend the doomed city, and entrusts him with the
+household gods that must be carried to a new homeland."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Herald ;
+    owl:sameAs wd:Q159666 .
+
+<aeneid/characters/iulus> a monomyth:Character ;
+    rdfs:label "Iulus (Ascanius)"@en ;
+    rdfs:comment """The young son of Aeneas, carried out of Troy at his father's side, who serves
+throughout the journey as the dynastic stake and the embodied future for whose sake the founding
+mission is undertaken."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q655566 .
+
+<aeneid/characters/tiberinus> a monomyth:Character ;
+    rdfs:label "Tiberinus"@en ;
+    rdfs:comment """The river god of the Tiber, who appears to Aeneas in vision on the eve of the
+Latin war and confirms that the journey has reached its prophesied terminus, directing him upstream
+to the Arcadian settlement that will become his crucial ally."""@en ;
+    monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q937512 .
+
+# --- Stage Realizations ---------------
+
+<aeneid/stages/the-storm-on-the-libyan-coast> a monomyth:StageRealization ;
+    rdfs:label "The storm on the Libyan coast"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/juno> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Juno persuades Aeolus to unleash the winds upon the fleet,
+and a black squall closes over the survivors of seven years of wandering. Ships are scattered, men
+and oars float on the waves, and the wreckage of what remained of Troy is dispersed across the
+unknown sea. Aeneas is washed onto an unfamiliar African shore with a handful of companions,
+ignorant of his location, ignorant of his queen, possessed of nothing but the household gods he
+salvaged from the burning city and the bare instruction that some western kingdom is owed to him.
+The Trojan identity, already eroded by years of homelessness, is here finally extinguished as a
+public reality, and the figure who emerges from the shore is reduced to a single function: that of
+the survivor charged with a beginning he cannot yet imagine."""@en ;
+    monomyth:fitNote """The poem begins inside this stage, with all preceding journey content
+delivered analeptically through Aeneas's recollection in Books II and III. The dissolution-of-self
+function is fully present, but its precipitating events lie outside the narrated frame."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/in-medias-res-opening> .
+
+<aeneid/stages/a-second-troy-rising-from-the-sand> a monomyth:StageRealization ;
+    rdfs:label "A second Troy rising from the sand"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/dido>,
+        <aeneid/characters/iulus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:realizationDescription """In Carthage Aeneas finds a city in the act of becoming what
+his own people had been: walls rising under disciplined hands, a queen of remarkable competence,
+laws being framed at this very moment for a polity not yet finished. He is welcomed at her hearth,
+honoured at her banquet, and eventually pulled into her bed and her project. The mission westward
+recedes from view as the founding work he had been promised in Italy appears to be available,
+under different patronage, in this very harbour. He puts on Tyrian purple, oversees the construction
+of towers that are not his to raise, and lets the months accumulate without remarking on their
+accumulation. The hesitation here is not articulated as refusal but enacted as substitution, the
+fated city traded for the convenient one and the divine charge silenced beneath the daily ceremonies
+of an adopted court."""@en .
+
+<aeneid/stages/the-cave-and-the-pyre> a monomyth:StageRealization ;
+    rdfs:label "The cave and the pyre"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/dido>,
+        <aeneid/characters/juno>,
+        <aeneid/characters/venus> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """During a hunting expedition a sudden storm drives the queen
+and the Trojan into the same cave, where, with Juno presiding and Earth and the nymphs as witnesses,
+their union is consummated under conditions Dido takes to be a wedding. From that day she ceases to
+disguise the relation, calls Aeneas her husband in public, and consigns the construction of her
+city to suspension. The seduction operates at every register at once: erotic, political, dynastic,
+domestic. Aeneas is offered not merely a lover but a queen, not merely a queen but a kingdom, not
+merely a kingdom but a finished destiny that requires no further travelling. When the divine command
+finally arrives and he prepares his ships in secret, Dido moves through the stages of fury,
+supplication, and curse, ending on the pyre with the sword he had left behind, and the smoke of her
+burning is the last sight Carthage offers the departing fleet."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/temptation-precedes-call> .
+
+<aeneid/stages/italiam-non-sponte-sequor> a monomyth:StageRealization ;
+    rdfs:label "Italiam non sponte sequor"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/mercury>,
+        <aeneid/characters/dido>,
+        <aeneid/characters/iulus> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Mercury descends through the air with his caduceus and his
+winged sandals and finds Aeneas in Tyrian dress overseeing the works of a city that is not his. The
+messenger speaks plainly: the destined kingdom is Italy, the heir whose patrimony is being squandered
+is Iulus, the queen at whose side the hero stands has no claim on a man whose obligation runs to
+unborn generations and to a foundation Jupiter has already named. The command is unconditional and
+delivered in the imperative. Aeneas hears it in shock, and within the same book begins the
+preparations to sail. When confronted by Dido in the celebrated exchange that follows, his
+self-defence will be that he does not seek Italy of his own will, that the journey is required of
+him by powers he can neither refuse nor reinterpret. The summons that the entire opening had been
+gathering toward, half-named through Hector's ghost on Troy's last night, partially disclosed by
+the Penates, prefigured by Creusa, arrives here in unmistakable form."""@en ;
+    monomyth:hasNarrativeDivergence <aeneid/divergences/narrative/gathered-and-doubled-call> ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/delayed-call> .
+
+<aeneid/stages/loosing-the-cables> a monomyth:StageRealization ;
+    rdfs:label "Loosing the cables"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/dido> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """The Trojan ships are made ready under cover of preparation
+rather than under public proclamation, and at the appointed hour the cables are cut and the fleet
+slips from the Carthaginian harbour while the queen is still asleep. At dawn she sees the empty
+roadstead, hurls her final imprecation against the departing sails, and ascends the pyre. The
+crossing here is not a heroic step into a marked threshold but a quiet severing accomplished while
+the abandoned world is unconscious of the loss. Behind the ships the smoke of Dido's burning rises
+and is absorbed by the African horizon, the cost of the threshold paid in another life entirely.
+Ahead lies the open Mediterranean and the final passage toward the prophesied coast, the harbour
+not yet known but committed to without further hesitation."""@en .
+
+<aeneid/stages/games-and-the-helmsman-lost> a monomyth:StageRealization ;
+    rdfs:label "Games and the helmsman lost"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/anchises> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """The fleet returns to Sicily for the anniversary of Anchises's
+death, and Aeneas presides over funeral games of ship-races, foot-races, archery, and boxing in
+honour of the buried father, exercises in collective memory that strengthen the band of survivors
+even as Trojan women, despairing of the endless journey, are incited by Juno to set fire to the
+ships. Some are saved by Jupiter's rain, others lost; the weak and the unwilling are settled at
+Acesta and the company that continues is the company prepared to finish the crossing. On the final
+night the helmsman Palinurus is taken by Sleep and falls into the sea, the fleet's pilot drowned
+within sight of Italy, the cost of arrival paid in the body of the most experienced navigator. The
+ordeals of this stage are concentrated and incidental rather than serial and structural, the fleet
+having already exhausted most of its heroic-test material in the analeptic narration of Books II
+and III."""@en ;
+    monomyth:fitNote """The Road of Trials is largely retrospective in this poem, distributed across
+the seven years of wandering recounted analeptically by Aeneas in Carthage. The narrated trials
+in Book V function as a coda to that earlier sequence rather than as the stage's primary
+realization."""@en .
+
+<aeneid/stages/facilis-descensus-averno> a monomyth:StageRealization ;
+    rdfs:label "Facilis descensus Averno"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/cumaean-sibyl> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """At Cumae the Sibyl receives Aeneas in the cavern of the hundred
+mouths, possessed by Apollo, and lays out the conditions of the descent: the golden bough that must
+be plucked from a hidden tree if the underworld is to be entered and survived, the unburied
+companion who must be found and given proper rites before the threshold can be crossed, the
+sacrifices to Hecate that prepare the night journey. She articulates the foundational principle of
+the catabasis in the line that gives the moment its weight, that the descent to Avernus is easy and
+the return is the labour. When the bough is found and the rites completed, she takes Aeneas through
+the entrance to the underworld and walks beside him through every register of the dead, naming the
+shades, intervening with Charon and Cerberus, mediating each encounter with the precise authority of
+one who knows the geography no living traveller can know unaided. Without her presence the journey
+would be impossible at every stage of its unfolding."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/aid-after-trials> .
+
+<aeneid/stages/the-fields-of-mourning-and-beyond> a monomyth:StageRealization ;
+    rdfs:label "The fields of mourning and beyond"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/anchises>,
+        <aeneid/characters/cumaean-sibyl>,
+        <aeneid/characters/dido> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:realizationDescription """The descent winds through the regions of the dead in widening
+circuits, past the unburied at the Stygian shore, past the souls of children and the falsely
+condemned, into the fields of mourning where Dido's shade turns from him in silence and refuses to
+hear his explanation. Beyond these come the warriors, friends and enemies of Troy alike, and finally
+the gates of Tartarus glimpsed but not entered. The path opens at last into the luminous valley of
+Elysium, where Anchises stands in the green meadows surveying the souls awaiting their next
+embodiment. The reunion is not a confrontation. The father weeps with joy at the son's arrival,
+embraces a form that cannot be embraced, and welcomes Aeneas not as a delinquent who must justify
+his life but as the inheritor of the cosmological vision the dead are now in a position to share.
+Across the river of forgetfulness, surrounded by the souls of those not yet born, Anchises gathers
+his son into a teaching that the upper world has no standpoint from which to deliver."""@en ;
+    monomyth:fitNote """The encounter is structurally complete as Atonement, the paternal authority
+faced and the hero authorized, but its dramatic register is disclosive rather than judicial,
+warranting a semiotic divergence."""@en ;
+    monomyth:hasSemioticDivergence <aeneid/divergences/semiotic/atonement-as-revelation> ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/initiation-block-shift> .
+
+<aeneid/stages/the-soul-fields-and-the-doctrine-of-return> a monomyth:StageRealization ;
+    rdfs:label "The soul-fields and the doctrine of return"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/anchises> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """Standing in the meadows beyond Lethe, Anchises explains the
+cosmic order to his son: a world-soul animating sky and earth and sea, an inner fire diffused
+through every body, the encumbrance of flesh that clouds the spirit's native clarity, the long
+purification by which souls are scoured of their accumulated stains and prepared again for embodied
+life. The teaching is delivered as philosophy rather than as vision, but it functions for the hero
+as a momentary release from the categories that have governed his existence: the wandering exile
+who must reach a coast becomes briefly the participant in a metaphysical structure that includes
+his coast, his city, and his death within a single vast economy of return. The ego-bound figure who
+arrived at the underworld's mouth is, in this passage, dissolved into a cosmological standpoint
+from which his own labour appears as one element in a pattern that does not depend on him for its
+intelligibility."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/initiation-block-shift> .
+
+<aeneid/stages/the-parade-of-roman-souls> a monomyth:StageRealization ;
+    rdfs:label "The parade of Roman souls"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/anchises>,
+        <aeneid/characters/iulus> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription """Anchises leads his son to a vantage from which the procession
+of unborn souls can be reviewed, and names them one by one: the Alban kings descending from Iulus,
+Romulus the wolf-suckled founder, the Caesars, Augustus himself extending an empire that will reach
+beyond the Garamantes and the Indians, Numa with his laws, the Brutuses, the Gracchi, the Scipios,
+the long line of Roman virtue. The catalogue closes with Marcellus, the recently dead heir whose
+shade is acknowledged with a tenderness that breaks the imperial register. The boon Aeneas carries
+out of the underworld is neither object nor power but knowledge of the future for whose sake the
+present labour is undertaken: the certainty that his exile is the seed of an order that will measure
+itself against the orbits of the stars. He returns to the upper world transformed by knowing what
+his hardships are knowable as, and the journey from this point forward proceeds under that
+disclosure."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/initiation-block-shift> .
+
+<aeneid/stages/this-is-the-land> a monomyth:StageRealization ;
+    rdfs:label "This is the land"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/iulus>,
+        <aeneid/characters/tiberinus> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:realizationDescription """The fleet rounds the Italian coast and turns into the mouth
+of the Tiber, where the river runs yellow with sand and forest crowds the banks. The Trojans go
+ashore and prepare a meal on flat cakes of bread used as plates, and Iulus laughingly remarks that
+they are eating their tables. The harmless joke fulfils, in the same instant of its utterance, an
+oracle Aeneas had received and feared, that the journey would end where hunger drove the company
+to consume even the platters their food rested on. The recognition cascades immediately into the
+ceremonial gesture of arrival: Aeneas embraces the soil, calls upon the local divinities and the
+Earth itself, and acknowledges that the prophesied terminus has been reached. That night the river
+god Tiberinus rises in vision and confirms the arrival, instructing the founder upstream to seek
+the Arcadian alliance. The threshold has been crossed not into a familiar homeland but into the
+prophesied future the underworld disclosed, and the return is therefore a return to a place the
+hero has never been, recognized as home only because the gods have named it so."""@en ;
+    monomyth:fitNote """The Return Threshold here is not a re-entry into the original ordinary
+world but an arrival at the prophesied future world, a structural inversion of the canonical
+homecoming pattern that this poem shares with all foundation narratives."""@en ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/early-return-threshold> .
+
+<aeneid/stages/the-foreign-bridegroom-foretold> a monomyth:StageRealization ;
+    rdfs:label "The foreign bridegroom foretold"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/lavinia>,
+        <aeneid/characters/latinus> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:realizationDescription """At the Latin court an oracle has already declared that the
+princess Lavinia must not marry within her own people but is destined for a foreign son-in-law from
+whose line will descend a glory that will lift their name to the stars. The omen has been confirmed
+by the burning of her hair before the altar, a flame that consumed the diadem without injuring the
+girl, prophesying that she would shine in renown and bring war upon the people. When the Trojan
+embassy arrives Latinus recognizes in Aeneas the foreigner the prophecy named, and offers his
+daughter without negotiation. The bride herself never speaks. Her presence is registered through
+the gold of her hair lit by the omen-fire, through her mother's tears at the proposed match, through
+the catalogue of suitors she has refused. The encounter that fulfils the goddess function is
+therefore conducted around her rather than with her, the integrative power of the feminine carried
+by prophecy and dynastic fact rather than by the relational mediation a spoken meeting would
+provide."""@en ;
+    monomyth:fitNote """The goddess function is distributed across Venus the divine mother,
+Creusa the prophesying ghost, and Lavinia the silent dynastic figure. Lavinia carries the formal
+realization because she occupies the structural slot of the integrative feminine, but she does so
+without the relational presence the canonical stage assumes."""@en ;
+    monomyth:hasNarrativeDivergence <aeneid/divergences/narrative/dispersed-goddess> ;
+    monomyth:hasSemioticDivergence <aeneid/divergences/semiotic/goddess-as-dynastic-cipher> ;
+    monomyth:hasSequentialDivergence <aeneid/divergences/sequential/deferred-goddess> .
+
+<aeneid/stages/the-grief-that-stalls-the-campaign> a monomyth:StageRealization ;
+    rdfs:label "The grief that stalls the campaign"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/pallas>,
+        <aeneid/characters/evander> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription """The body of Pallas is laid out on a bier of oak and
+strawberry-tree boughs and sent back to Pallanteum with an honour-guard of Trojan and Etruscan
+warriors. Aeneas stands beside the youth he had taken under his protection and weeps, lifting up the
+funeral garments Dido had once woven for him as gifts and folding them over the dead boy. The grief
+is not a brief dramatic pause but a gravitational drag on the entire campaign: the foundational
+work of settling the new kingdom is suspended in mourning, and the founder who had carried his
+prophesied future out of the underworld is briefly arrested by the human cost of acquiring it. The
+language attached to him in these books takes on a heaviness incompatible with forward motion. Only
+the structural necessity of the war forces the campaign to resume, and even then the resumption
+proceeds under the shadow of an obligation to Pallas's father that the founder cannot discharge by
+founding alone."""@en ;
+    monomyth:fitNote """The Refusal here is not the canonical reluctance to leave the special
+world's bliss but a paralysis induced by the cost of the return itself, the founder weighed down by
+the bodies the founding has required."""@en ;
+    monomyth:hasNarrativeDivergence <aeneid/divergences/narrative/refusal-as-cost-of-founding> .
+
+<aeneid/stages/the-shield-and-the-etruscan-fleet> a monomyth:StageRealization ;
+    rdfs:label "The shield and the Etruscan fleet"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/venus>,
+        <aeneid/characters/evander>,
+        <aeneid/characters/pallas> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Aeneas sails up the Tiber to Pallanteum, the Arcadian
+settlement on the future site of Rome, and is received by Evander with hospitality and instruction.
+Venus delivers to him at Pallanteum the shield her husband Vulcan has forged at her request, its
+surface engraved with the entire future of the city he is fated to seed: the wolf-suckled twins,
+the Sabine women, Horatius at the bridge, Catiline in Tartarus, the battle of Actium with Augustus
+on the prow. With Pallas at his side and the shield slung at his back, Aeneas leads the Etruscan
+fleet downstream toward the besieged Trojan camp, the river journey transformed into a passage
+between two registers of his founding labour, the disclosed past-future strapped to his arm and
+the urgent present awaiting at the camp's wall. The flight here is not from a special world's
+guardians but toward the embattled camp with the means of its rescue."""@en ;
+    monomyth:hasNarrativeDivergence <aeneid/divergences/narrative/flight-as-relief-mission> .
+
+<aeneid/stages/the-mother-and-the-dittany> a monomyth:StageRealization ;
+    rdfs:label "The mother and the dittany"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/venus>,
+        <aeneid/characters/iulus> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription """In the climactic phase of the war Aeneas is struck by an
+arrow whose source remains unknown, and the wound resists every effort of the surgeon Iapyx to
+extract the iron. The campaign falters at his absence from the line, and the Italian forces press
+forward into the Trojan defences. Venus, watching from above, gathers dittany from the slopes of
+Mount Ida and infuses it secretly into the water with which the wound is being washed. The arrow
+loosens of its own accord and falls into the surgeon's hand, the pain departs, and the founder
+returns to the field with his strength restored. The intervention is not announced to him; Iapyx
+recognizes the divine signature in the unaccountable cure and tells him to take up his arms.
+Without this concealed maternal action at the moment when his body had failed, the war would have
+ended in Trojan defeat and the founding labour would have been lost in its final phase."""@en .
+
+<aeneid/stages/the-imperium-bestowed> a monomyth:StageRealization ;
+    rdfs:label "The imperium bestowed"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/latinus>,
+        <aeneid/characters/iulus>,
+        <aeneid/characters/lavinia> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription """Across the long Latin campaign the founder operates with
+authority in two registers simultaneously, the heir of fallen Troy and the father-in-waiting of an
+Italian dynasty, commanding Trojan and Etruscan and Arcadian forces under a single banner whose
+legitimacy rests on inherited destiny and on the new oracle Latinus has accepted. The treaty
+proposed before the climactic duel formalizes the dual sovereignty: if Aeneas wins, Trojans and
+Italians shall fuse, sharing rites and laws under his rule, neither absorbing the other but blended
+into a population whose name will become Roman. The shield Vulcan made for him, depicting events
+centuries beyond the founder's own life, is the visible token of this mastery, the founder carrying
+on his arm a record of the world that issues from his act, the labour at the threshold and the
+imperium beyond it held in single grasp. The integration is not yet enjoyed but it is established,
+the architecture of the dual inheritance set in place even as the final violence remains to be
+done."""@en .
+
+<aeneid/stages/the-belt-of-pallas-and-the-buried-blade> a monomyth:StageRealization ;
+    rdfs:label "The belt of Pallas and the buried blade"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <aeneid/characters/aeneas>,
+        <aeneid/characters/turnus>,
+        <aeneid/characters/pallas> ;
+    monomyth:hasFitQuality monomyth:InvertedFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription """The duel ends with Turnus disarmed, wounded in the thigh, and
+on his knees before the founder, conceding the victory and asking either to live or to be returned
+to his father in death. Aeneas hesitates. The plea is reasonable, the war is concluded, the
+prophesied marriage is secured, and for a moment the sword stays. Then his eye falls on the
+sword-belt of Pallas slung across the Rutulian's shoulder as a trophy, the gold studs and the worked
+figures of the slain bridegrooms recognizable in an instant, and the memory of the boy laid out on
+the bier of oak boughs returns with full force. The founder is described as kindled by furies and
+terrible in his anger, and he drives the sword into the chest of the kneeling man with a curse,
+the soul of Turnus fleeing groaning and indignant beneath the shades. There is no marriage, no
+city raised, no settled reign, no peace surveyed from a position of equilibrium. The closing
+gesture is of unmastered passion executing a justice that the founder's earlier conduct had
+already learned to suspect, and the silence after the killing settles over a battlefield that
+nothing in the act has finished resolving."""@en ;
+    monomyth:fitNote """The stage is fully present and dramatically central, but its content
+reverses the canonical signature of the archetype: rage rather than release, fear of betraying the
+dead rather than freedom from fear, the soul fleeing groaning rather than the soul reposed."""@en ;
+    monomyth:hasNarrativeDivergence <aeneid/divergences/narrative/freedom-as-rage> .
+
+# --- Narrative Divergences ------------
+
+<aeneid/divergences/narrative/gathered-and-doubled-call> a monomyth:NarrativeDivergence ;
+    rdfs:label "Gathered and doubled call divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/italiam-non-sponte-sequor> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ;
+    monomyth:divergenceRationale """The summons in this poem is distributed across multiple
+anticipations and only finalized late, the canonical archetype's discrete opening rupture replaced
+by a long process of accumulating mandate. Hector's ghost on Troy's last night charges Aeneas with
+carrying the household gods to a new city without naming the city; the Penates speak in dream of
+Hesperia without specifying its terms; Creusa's shade prophesies a western kingdom and a royal
+bride without binding the hero to any timetable; Helenus elaborates the geography in Book III
+without commanding obedience. Mercury's intervention in Carthage is therefore not the announcement
+of a new mission but the gathering of a long anticipatory chain into a binding directive. The
+poem's call functions partly as memory and partly as repetition, the journey having been summoned
+several times before the summons becomes unavoidable, and the hero having been told what awaits him
+long before he is told that he must unconditionally pursue it. The dramatic weight rests not on the
+novelty of the message but on the moment when its accumulated authority becomes inescapable, the
+reluctant founder finally cornered by a mandate that has been forming around him since the night
+his city fell."""@en .
+
+<aeneid/divergences/narrative/dispersed-goddess> a monomyth:NarrativeDivergence ;
+    rdfs:label "Dispersed goddess divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-foreign-bridegroom-foretold> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """No single feminine encounter in this poem performs the full
+range of mediation the canonical archetype concentrates in one figure, and the goddess function is
+instead distributed across three. Venus carries the protective and intercessory dimension as
+recurring divine mother, intervening at the storm, on the Libyan shore in disguise, before Olympus
+in advocacy, at the wound in Book XII, but never offering the sustained encounter of unconditional
+recognition the stage requires. Creusa's ghost in Book II delivers the prophecy of the western
+kingdom and the royal bride and releases Aeneas from the bond of their marriage in a moment of
+luminous tenderness, but she is recounted analeptically rather than encountered in the poem's
+present, and her function is closed before the journey proper begins. Lavinia carries the formal
+slot, the prophesied bride at whose silent centre the dynastic future is gathered, but she does not
+speak and her significance is articulated entirely through omen and prophecy. The integrative work
+of the archetype is accomplished, but only by reading the three figures together as a single
+distributed presence whose components occupy different registers of mediation."""@en .
+
+<aeneid/divergences/narrative/refusal-as-cost-of-founding> a monomyth:NarrativeDivergence ;
+    rdfs:label "Refusal as cost of founding divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-grief-that-stalls-the-campaign> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """The canonical reluctance arises from having tasted transcendence
+and preferring to remain in the special world rather than carry its boon back to the ordinary one.
+This poem locates the hesitation elsewhere entirely: in the founder's grief at the body of the
+young ally whose death has been required to advance the founding labour. Pallas's corpse, lifted
+onto the bier of oak boughs and sent back to Pallanteum with the funeral garments Dido had once
+woven, focuses the entire weight of the founding cost into a single image. The hero is not
+reluctant to leave the underworld's bliss, an experience whose transformative effect he in fact
+welcomes; he is arrested by the recognition that the prophesied future the underworld disclosed is
+being purchased at a price he had not understood when he accepted the disclosure. The Refusal here
+is not anti-transitional but conscience-bearing, the founder forced to acknowledge what the
+imperium already costs before it has even been established."""@en .
+
+<aeneid/divergences/narrative/flight-as-relief-mission> a monomyth:NarrativeDivergence ;
+    rdfs:label "Flight as relief mission divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-shield-and-the-etruscan-fleet> ;
+    monomyth:divergesFrom monomyth:TheMagicFlight ;
+    monomyth:divergenceRationale """The canonical figure escapes the special world bearing a stolen
+or won prize, often pursued by guardians who would reclaim it. The Tiber voyage with the Etruscan
+fleet inverts the directional logic at every register. The pursuit, if it can be called that,
+points the wrong way: the founder is not fleeing toward safety but advancing toward an embattled
+camp that requires his urgent return. The prize, the shield Vulcan has forged with the future of
+Rome on its surface, has been freely given by the divine mother rather than seized from any
+guardian. The companions on the voyage, Pallas at his side and the Etruscan allies in the ships
+behind, are recruits rather than pursuers, and the river itself functions as a passage of arrival
+rather than escape. What the canonical archetype reads as flight here reads as relief expedition,
+the hero traversing between two fronts of his founding labour with the disclosed pattern of his
+city's future strapped to his arm and his obligation to the besieged community pulling him forward
+into combat."""@en .
+
+<aeneid/divergences/narrative/freedom-as-rage> a monomyth:NarrativeDivergence ;
+    rdfs:label "Freedom as rage divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-belt-of-pallas-and-the-buried-blade> ;
+    monomyth:divergesFrom monomyth:FreedomToLive ;
+    monomyth:divergenceRationale """Aeneas has Turnus disarmed and kneeling, the war effectively
+concluded and the prophesied marriage secured, and the sword stays for a moment that the text
+marks as a hesitation. The decision that follows is explicitly attributed to fury kindled by the
+sight of Pallas's belt, and the closing line tracks the soul of the slain man fleeing groaning
+beneath the shades. The reversal of canonical signature is precise rather than approximate: where
+the archetypal closure releases the hero from fear of death and from attachment to outcome, this
+closure binds the founder to a debt of vengeance that overwrites every other consideration in the
+final instant. The poem knows what closure looks like, having delivered it with extraordinary
+fullness in Anchises's vision in Book VI, and the choice to end here, with this gesture, withholds
+the canonical resolution rather than failing to reach it. The reading that registers this
+withholding as inversion rather than as absence honours the deliberateness of the closural strategy,
+the founding act left visibly contaminated by the passion that completes it, and the question of
+what kind of imperium emerges from such an origin left as a structural opening rather than a
+resolved theme."""@en .
+
+# --- Sequential Divergences -----------
+
+<aeneid/divergences/sequential/in-medias-res-opening> a monomyth:SequentialDivergence ;
+    rdfs:label "In medias res opening divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-storm-on-the-libyan-coast> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
+    monomyth:divergenceRationale """The poem begins inside the swallowing-darkness stage itself, at
+narrative position one, with all preparatory content delivered analeptically through Aeneas's
+recollection in the Carthaginian books. The dissolution-of-self is presented as a starting condition
+rather than a culminating one, displaced four positions earlier than its canonical fifth-place
+location, and the cascading consequence is that the stages which should precede it must surface
+afterward, transforming the Refusal of the Call, the Temptress, the Call itself, and the First
+Threshold into a sequence delivered in scrambled order through the first six books. The opening
+choice is the foundational structural gesture from which the rest of the Departure's reordering
+follows, the Homeric inheritance of the in-medias-res protocol producing a monomyth realization
+whose canonical sequence is recoverable only by reading against the narrative grain. What the
+canonical archetype treats as a five-stage progression toward the swallowing is here treated as a
+single dissolution given immediately, with the preparatory architecture reconstructed from the
+hero's own memory rather than narrated as it occurs."""@en .
+
+<aeneid/divergences/sequential/temptation-precedes-call> a monomyth:SequentialDivergence ;
+    rdfs:label "Temptation precedes call divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-cave-and-the-pyre> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """The temptation surfaces at narrative position three, before
+the Call has been articulated as binding mandate, displacing the Temptress five positions earlier
+than its canonical mid-Initiation placement. The structural consequence is decisive: the seduction
+operates not as an obstacle late in the journey but as an alternative founding offered before the
+true founding has been firmly accepted, and the hero's vulnerability to it is intensified by the
+fact that no unambiguous summons has yet recalled him from the option Carthage represents. The
+positioning explains the unusual force the Dido episode commands within the realization. It is the
+test that nearly succeeds, the stage that almost replaces the journey rather than merely
+interrupting it, and the trauma it leaves in the hero shapes every subsequent act precisely
+because it occurred before the call had been delivered with the authority that would have made
+resistance unambiguous. Where the canonical archetype tests a hero already committed, this
+realization tests a hero not yet committed, and the dramatic asymmetry is decisive for everything
+that follows."""@en .
+
+<aeneid/divergences/sequential/delayed-call> a monomyth:SequentialDivergence ;
+    rdfs:label "Delayed call divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/italiam-non-sponte-sequor> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ;
+    monomyth:divergenceRationale """Mercury's command arrives at narrative position four, behind
+the Belly of the Whale, the Refusal of the Call, and the Temptress, three positions later than the
+canonical opening placement. The displacement is partly artefact of the in medias res opening and
+partly a substantive choice about how the founding mission's authority is constituted. By the time
+the unambiguous command is delivered, the hero has already failed the test of substitute foundation
+in Carthage, already endured the dissolution at sea, already received the prefigurative summons
+through Hector, the Penates, and Creusa. The Call therefore arrives not as an opening rupture but
+as a closure applied to a long process of attempted alternatives, the moment when the accumulated
+previous summons become suddenly binding. The displacement carries its own thematic content: the
+founding is authorized late and against resistance rather than embraced early and pursued with
+single-minded commitment, and the founder's reluctance is constitutive of the mission rather than
+an obstacle to it."""@en .
+
+<aeneid/divergences/sequential/aid-after-trials> a monomyth:SequentialDivergence ;
+    rdfs:label "Aid after trials divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/facilis-descensus-averno> ;
+    monomyth:divergesFrom monomyth:SupernaturalAid ;
+    monomyth:divergenceRationale """The Sibyl's intervention arrives at narrative position seven,
+well after the First Threshold has been crossed and the Road of Trials undertaken, and her aid is
+preparation for a specific subsequent ordeal, the catabasis, rather than an opening endowment for
+the journey at large. The displacement of four positions later than the canonical third-place
+position reflects this realization's distinctive treatment of the supernatural register: the most
+concentrated divine mediation is reserved for the central revelation rather than for the journey's
+commencement, which is supported instead by Venus's recurring intercession and by the prophetic
+voices that gather toward the Call. The Sibyl's late arrival positions her not as the equipping
+mentor of the Departure but as the threshold figure of the Initiation's deepest passage, her aid
+concentrated at the moment where the underworld's discoveries will reorganize everything that has
+come before. The canonical archetype's opening endowment is here split into the diffuse divine
+care of the early books and the precise priestly mediation of the underworld."""@en .
+
+<aeneid/divergences/sequential/initiation-block-shift> a monomyth:SequentialDivergence ;
+    rdfs:label "Initiation block shift divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-fields-of-mourning-and-beyond>,
+        <aeneid/stages/the-soul-fields-and-the-doctrine-of-return>,
+        <aeneid/stages/the-parade-of-roman-souls> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """The Atonement, Apotheosis, and Ultimate Boon arrive each one
+position earlier than their canonical placement, displaced as a unified block by the Goddess's
+deferral to the Latin court. The shift is consequential rather than incidental. By collapsing the
+three culminating stages of the Initiation into the continuous sequence of the underworld journey,
+the poem treats the catabasis as an integrated transformation rather than as three discrete
+moments separated by other stage content, and the absence of intervening material between the
+father's embrace, the cosmological teaching, and the parade of unborn souls produces the dense
+revelatory climax for which Book VI has long been read as the poem's structural centre. The
+displacement is therefore better understood as compression than as disruption, the canonical
+discrete progression here folded into a single architectural movement whose components are
+distinguishable conceptually but inseparable narratively."""@en .
+
+<aeneid/divergences/sequential/early-return-threshold> a monomyth:SequentialDivergence ;
+    rdfs:label "Early return threshold divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/this-is-the-land> ;
+    monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:divergenceRationale """The fleet rounds the Italian coast and turns into the mouth of
+the Tiber at narrative position eleven, immediately after the Ultimate Boon and well before the
+three Return-act stages that should canonically precede this threshold. The displacement of four
+positions earlier than the fifteenth-place canonical location reflects this foundation narrative's
+distinctive shape: the hero arrives at his fated terminus not after a long Return through obstacles
+but as the immediate consequence of having received the disclosed future, and the bulk of the
+canonical Return content is then replayed inside the Latin war that occupies the second half. The
+Refusal, the Magic Flight, and the Rescue all surface within Books VII to XII rather than between
+the underworld and the threshold, the architecture braiding the late-Return stages into the long
+campaign rather than placing them sequentially before arrival. The canonical sequence of Return
+preliminaries is preserved in content but folded into the post-arrival war rather than presented
+as the path that leads to it."""@en .
+
+<aeneid/divergences/sequential/deferred-goddess> a monomyth:SequentialDivergence ;
+    rdfs:label "Deferred goddess divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-foreign-bridegroom-foretold> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """The Goddess encounter arrives at narrative position twelve,
+deferred all the way to the arrival in Latium and the recognition by Latinus of the foreign
+son-in-law his oracle had named. The displacement of five positions later than the canonical
+seventh-place location is the realization's largest forward shift of any single stage, and its
+consequence is to bind the goddess function inseparably to the dynastic outcome the founding
+mission is pursuing. The integrative feminine is not encountered as a stage of personal
+transformation early in the journey but as the prophesied bride who waits at the journey's
+political terminus, and the meeting therefore functions less as a moment of inward integration
+than as the recognition that the public destiny has converged on the body through which it must
+be transmitted to the next generation. The canonical placement of the Goddess between the Road of
+Trials and the Temptress is here vacated entirely, the integrative encounter shifted forward into
+the territory where its dynastic stakes can be made fully visible."""@en .
+
+# --- Semiotic Divergences -------------
+
+<aeneid/divergences/semiotic/atonement-as-revelation> a monomyth:SemioticDivergence ;
+    rdfs:label "Atonement as revelation divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-fields-of-mourning-and-beyond> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """Anchises in the Elysian fields preserves the structural function
+of the stage with full clarity, the inner authority faced and the hero's identity reconstituted by
+that facing, but he replaces the canonical judicial register with a disclosive one. The father
+does not threaten the son, does not demand justification of his exile, does not conduct anything
+resembling a reckoning. He weeps with joy at the arrival, embraces a form that cannot be embraced,
+and gathers the son into a cosmological teaching whose authority operates through illumination
+rather than through judgment. Where the canonical archetype encodes the encounter through a
+sign-system of confrontation, threatened obliteration, and survived verdict as the precondition for
+authorized continuation, this realization recodes the patriarchal sign as pedagogical rather than
+agonistic. The encounter operates through the authority of disclosed knowledge rather than through
+the threat of withheld approval, and the founder is authorized for the work ahead by being shown
+what the work contributes to rather than by surviving paternal verdict on what he has so far
+been."""@en .
+
+<aeneid/divergences/semiotic/goddess-as-dynastic-cipher> a monomyth:SemioticDivergence ;
+    rdfs:label "Goddess as dynastic cipher divergence"@en ;
+    monomyth:divergenceOf <aeneid/stages/the-foreign-bridegroom-foretold> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """Lavinia carries the structural slot of the integrative encounter
+at the realization's twelfth position, but the sign-system has been thoroughly secularized. She is
+not a goddess but a mortal princess; her significance is articulated not through her own speech but
+through prophecy, omen, and the political calculations of her father's court; the burning of her
+hair before the altar is read as foretelling renown and war rather than as theophany. Where the
+canonical archetype encodes the integrative encounter through a numinous sign-system of divine or
+mythically charged feminine presence mediating totality and unconditional recognition, this
+realization performs the integrative function through dynastic placement, the bride functioning as
+the cipher through which Trojan and Italian lineages are joined into the foundational Roman stock.
+The shift from numinous figure to political cipher reflects this realization's broader project of
+grounding mythological structure in historical institution, the goddess function recoded as the
+genealogical instrument by which the founding labour transmits itself to the future the underworld
+disclosed."""@en .
