@@ -14,6 +14,7 @@
     rdfs:label "Rostam and the Seven Labors (Haft Khan)"@en ;
     dcterms:title "Rostam and the Seven Labors"@en ;
     dcterms:creator "Ferdowsi" ;
+    schema:countryOfOrigin wd:Q794 ;    
     schema:genre "Epic"@en, "Mythology"@en ;
     owl:sameAs wd:Q4119480 ;
     monomyth:interpretedBy <rostam-haft-khan/monomyths/rostam-journey> ;
