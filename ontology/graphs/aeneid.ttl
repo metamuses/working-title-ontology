@@ -142,7 +142,8 @@ the realm of the dead."""@en ;
 at the centre of the Latin war marks her as the dynastic figure through whom Trojan and Italian
 lines will be joined into the foundational Roman stock."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q1137364 .
 
 <aeneid/characters/latinus> a monomyth:Character ;
     rdfs:label "Latinus"@en ;
@@ -150,7 +151,8 @@ lines will be joined into the foundational Roman stock."""@en ;
 of an oracle concerning a foreign son-in-law and offers Aeneas his daughter and the alliance that
 his queen and Turnus will violently reject."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q779406 .
 
 <aeneid/characters/turnus> a monomyth:Character ;
     rdfs:label "Turnus"@en ;
@@ -158,7 +160,8 @@ his queen and Turnus will violently reject."""@en ;
 Italian coalition against the Trojan settlers and meets his death at the closing moment of the poem
 by Aeneas's hand."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Shadow .
+    monomyth:embodiesArchetype monomyth:Shadow ;
+    owl:sameAs wd:Q633549 .
 
 <aeneid/characters/juno> a monomyth:Character ;
     rdfs:label "Juno"@en ;
@@ -167,14 +170,15 @@ drives the storm at sea, the Carthaginian episode, and the Italian war, function
 antagonist whose grievances structure the poem's celestial register."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow ;
-    owl:sameAs wd:Q44384 .
+    owl:sameAs wd:Q125046 .
 
 <aeneid/characters/pallas> a monomyth:Character ;
     rdfs:label "Pallas"@en ;
     rdfs:comment """The young son of King Evander, entrusted to Aeneas as a fellow combatant and
 surrogate ward, whose death at the hand of Turnus propels the closing rage that ends the poem."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q2048018 .
 
 <aeneid/characters/evander> a monomyth:Character ;
     rdfs:label "Evander"@en ;
@@ -182,7 +186,8 @@ surrogate ward, whose death at the hand of Turnus propels the closing rage that 
 and who receives Aeneas with hospitality, narrates the topography's sacred prehistory, and lends his
 son Pallas to the Trojan cause."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q837699 .
 
 <aeneid/characters/hector> a monomyth:Character ;
     rdfs:label "Hector"@en ;
@@ -190,7 +195,8 @@ son Pallas to the Trojan cause."""@en ;
 Troy, releases him from any obligation to defend the doomed city, and entrusts him with the
 household gods that must be carried to a new homeland."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Herald .
+    monomyth:embodiesArchetype monomyth:Herald ;
+    owl:sameAs wd:Q159666 .
 
 <aeneid/characters/iulus> a monomyth:Character ;
     rdfs:label "Iulus (Ascanius)"@en ;
@@ -198,7 +204,8 @@ household gods that must be carried to a new homeland."""@en ;
 throughout the journey as the dynastic stake and the embodied future for whose sake the founding
 mission is undertaken."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Ally .
+    monomyth:embodiesArchetype monomyth:Ally ;
+    owl:sameAs wd:Q655566 .
 
 <aeneid/characters/tiberinus> a monomyth:Character ;
     rdfs:label "Tiberinus"@en ;
@@ -206,7 +213,8 @@ mission is undertaken."""@en ;
 Latin war and confirms that the journey has reached its prophesied terminus, directing him upstream
 to the Arcadian settlement that will become his crucial ally."""@en ;
     monomyth:characterOf <aeneid/monomyths/aeneas-journey> ;
-    monomyth:embodiesArchetype monomyth:Mentor .
+    monomyth:embodiesArchetype monomyth:Mentor ;
+    owl:sameAs wd:Q937512 .
 
 # --- Stage Realizations ---------------
 
