@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 
 <body>
 
@@ -57,6 +62,7 @@
         Begin the Journey
         <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M7 1v12M1 7l6 6 6-6" />
+          <path d="M7 1v12M1 7l6 6 6-6" />
         </svg>
       </a>
     </div>
@@ -78,6 +84,8 @@
         <div class="reveal reveal-delay-1">
           <div class="section-prose">
             <p>
+              In 1949, Joseph Campbell published <strong><em>The Hero with a Thousand Faces</em></strong>, arguing that
+              the
               In 1949, Joseph Campbell published <strong><em>The Hero with a Thousand Faces</em></strong>, arguing that
               the
               world's myths share a single narrative skeleton&mdash;the monomyth. A hero ventures from the ordinary
@@ -102,9 +110,13 @@
               <span class="step-num">01</span>
               <span class="step-text"><strong>Study Campbell's framework</strong> &mdash; The 17 stages across three
                 acts, the archetypal roles, and the spatial logic of ordinary vs. special worlds.</span>
+              <span class="step-text"><strong>Study Campbell's framework</strong> &mdash; The 17 stages across three
+                acts, the archetypal roles, and the spatial logic of ordinary vs. special worlds.</span>
             </li>
             <li>
               <span class="step-num">02</span>
+              <span class="step-text"><strong>Design the ontology</strong> &mdash; Model classes, properties, and
+                relationships in OWL, with reified patterns for archetype assignment and fit quality.</span>
               <span class="step-text"><strong>Design the ontology</strong> &mdash; Model classes, properties, and
                 relationships in OWL, with reified patterns for archetype assignment and fit quality.</span>
             </li>
@@ -112,9 +124,13 @@
               <span class="step-num">03</span>
               <span class="step-text"><strong>Instantiate knowledge graphs</strong> &mdash; For each narrative, create
                 stage realizations with prose descriptions, fit assessments, and Wikidata links.</span>
+              <span class="step-text"><strong>Instantiate knowledge graphs</strong> &mdash; For each narrative, create
+                stage realizations with prose descriptions, fit assessments, and Wikidata links.</span>
             </li>
             <li>
               <span class="step-num">04</span>
+              <span class="step-text"><strong>Query and compare</strong> &mdash; Use SPARQL to analyze patterns across
+                works, finding universals and divergences in the monomyth structure.</span>
               <span class="step-text"><strong>Query and compare</strong> &mdash; Use SPARQL to analyze patterns across
                 works, finding universals and divergences in the monomyth structure.</span>
             </li>
@@ -122,52 +138,12 @@
         </div>
 
         <div class="reveal reveal-delay-2">
-          <div class="about-stat-group">
-            <div class="about-stat">
-              <div class="number">17</div>
-              <div class="label">Stages Modeled</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">11</div>
-              <div class="label">Archetypes</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">3</div>
-              <div class="label">Acts</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">6</div>
-              <div class="label">Fit Qualities</div>
-            </div>
-          </div>
-
-          <div
-            style="margin-top: 40px; padding: 28px; background: var(--bg-card); border: 1px solid rgba(122, 92, 20, 0.15);">
-            <div
-              style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-dim); margin-bottom: 16px;">
-              Technologies</div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">OWL
-                2</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">RDF
-                / Turtle</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SPARQL</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Wikidata</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Schema.org</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Dublin
-                Core</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SKOS</span>
-              <span
-                style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Python</span>
-            </div>
-          </div>
+          <blockquote class="conclusion-quote">
+            "The hero ventures forth from the world of common day into a region of supernatural wonder:
+            fabulous forces are there encountered and a decisive victory is won: the hero comes back from
+            this mysterious adventure with the power to bestow boons on his fellow man."
+            <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -187,14 +163,22 @@
             <p>
               The ontology defines a reusable vocabulary at <code
                 style="font-size:0.85em; color:var(--gold-dim);">monomyth#</code> that captures the deep structure of
+              The ontology defines a reusable vocabulary at <code
+                style="font-size:0.85em; color:var(--gold-dim);">monomyth#</code> that captures the deep structure of
               Campbell's monomyth. At its heart is the <strong>StageRealization</strong> pattern&mdash;the concrete
+              manifestation of an abstract stage in a specific narrative&mdash;which enables meaningful cross-work
+              comparison.
               manifestation of an abstract stage in a specific narrative&mdash;which enables meaningful cross-work
               comparison.
             </p>
             <p>
               Characters are linked to archetypes through reified <strong>ArchetypeRoles</strong> that can shift across
               stages,
+              Characters are linked to archetypes through reified <strong>ArchetypeRoles</strong> that can shift across
+              stages,
               acknowledging that a Mentor in Act I may become a Shadow by Act III. Each stage realization carries a
+              <strong>FitQuality</strong> assessment on a six-point scale from <em>Inverted</em> to <em>Perfect
+                Fit</em>,
               <strong>FitQuality</strong> assessment on a six-point scale from <em>Inverted</em> to <em>Perfect
                 Fit</em>,
               grounding literary analysis in structured, queryable data.
@@ -239,6 +223,9 @@
         <div
           style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold-dim); margin-bottom: 24px;">
           Core Classes</div>
+        <div
+          style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold-dim); margin-bottom: 24px;">
+          Core Classes</div>
       </div>
 
       <div class="ontology-classes">
@@ -247,10 +234,14 @@
           <div class="class-name">Narrative Work</div>
           <div class="class-desc">A story, novel, epic, film, or other narrative. Linked to external identifiers via
             owl:sameAs for Wikidata integration.</div>
+          <div class="class-desc">A story, novel, epic, film, or other narrative. Linked to external identifiers via
+            owl:sameAs for Wikidata integration.</div>
         </div>
         <div class="class-card reveal reveal-delay-1">
           <div class="class-prefix">monomyth:MonomythInstance</div>
           <div class="class-name">Monomyth Instance</div>
+          <div class="class-desc">A specific hero's journey within a work. One work may contain multiple instances for
+            different characters.</div>
           <div class="class-desc">A specific hero's journey within a work. One work may contain multiple instances for
             different characters.</div>
         </div>
@@ -259,10 +250,14 @@
           <div class="class-name">Stage Realization</div>
           <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative,
             with fit quality and prose description.</div>
+          <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative,
+            with fit quality and prose description.</div>
         </div>
         <div class="class-card reveal">
           <div class="class-prefix">monomyth:Character</div>
           <div class="class-name">Character</div>
+          <div class="class-desc">A character within a narrative, linked to archetypes through reified ArchetypeRole
+            assignments that can shift across stages.</div>
           <div class="class-desc">A character within a narrative, linked to archetypes through reified ArchetypeRole
             assignments that can shift across stages.</div>
         </div>
@@ -271,10 +266,14 @@
           <div class="class-name">Archetype</div>
           <div class="class-desc">A recurring character role: Hero, Mentor, Herald, Threshold Guardian, Shadow,
             Shapeshifter, Trickster, and more.</div>
+          <div class="class-desc">A recurring character role: Hero, Mentor, Herald, Threshold Guardian, Shadow,
+            Shapeshifter, Trickster, and more.</div>
         </div>
         <div class="class-card reveal reveal-delay-2">
           <div class="class-prefix">monomyth:FitQuality</div>
           <div class="class-name">Fit Quality</div>
+          <div class="class-desc">A six-point scale from Inverted (0) through Absent, Weak, Moderate, Strong, to Perfect
+            Fit (5) for assessing stage mappings.</div>
           <div class="class-desc">A six-point scale from Inverted (0) through Absent, Weak, Moderate, Strong, to Perfect
             Fit (5) for assessing stage mappings.</div>
         </div>
@@ -283,16 +282,22 @@
           <div class="class-name">Narrative World</div>
           <div class="class-desc">A distinct realm within the story&mdash;ordinary world, special world&mdash;modeling
             the spatial logic of the journey.</div>
+          <div class="class-desc">A distinct realm within the story&mdash;ordinary world, special world&mdash;modeling
+            the spatial logic of the journey.</div>
         </div>
         <div class="class-card reveal reveal-delay-1">
           <div class="class-prefix">monomyth:Threshold</div>
           <div class="class-name">Threshold</div>
           <div class="class-desc">A boundary between narrative worlds. Connected to worlds via connectsWorld, guarded by
             Threshold Guardian archetypes.</div>
+          <div class="class-desc">A boundary between narrative worlds. Connected to worlds via connectsWorld, guarded by
+            Threshold Guardian archetypes.</div>
         </div>
         <div class="class-card reveal reveal-delay-2">
           <div class="class-prefix">monomyth:SymbolicElement</div>
           <div class="class-name">Symbolic Element</div>
+          <div class="class-desc">Objects, places, or events carrying symbolic weight&mdash;red pills, white rabbits,
+            golden fleeces&mdash;with annotated meanings.</div>
           <div class="class-desc">Objects, places, or events carrying symbolic weight&mdash;red pills, white rabbits,
             golden fleeces&mdash;with annotated meanings.</div>
         </div>
@@ -333,6 +338,8 @@
               </div>
               <span class="tag tag-movie">Movie</span>
             </div>
+            <div class="work-desc">Neo's awakening from simulated reality maps almost perfectly to the monomyth. 8
+              characters, 7 symbolic elements, 3 narrative worlds, and full Wikidata integration.</div>
             <div class="work-desc">Neo's awakening from simulated reality maps almost perfectly to the monomyth. 8
               characters, 7 symbolic elements, 3 narrative worlds, and full Wikidata integration.</div>
             <div class="fit-bar">
@@ -379,6 +386,9 @@
             <div class="work-desc">Campbell's own primary example. Odysseus's decade-long return from Troy fits the
               monomyth with near-perfect precision&mdash;arguably the archetype from which the archetype was drawn.
             </div>
+            <div class="work-desc">Campbell's own primary example. Odysseus's decade-long return from Troy fits the
+              monomyth with near-perfect precision&mdash;arguably the archetype from which the archetype was drawn.
+            </div>
             <div class="fit-bar">
               <div class="segment filled strong"></div>
               <div class="segment filled moderate"></div>
@@ -420,6 +430,9 @@
               </div>
               <span class="tag tag-book">Novel</span>
             </div>
+            <div class="work-desc">Arguably the purest ancient monomyth. The boon is lost so something deeper can be
+              found&mdash;Gilgamesh returns without immortality but with wisdom, inverting the expected reward
+              structure.</div>
             <div class="work-desc">Arguably the purest ancient monomyth. The boon is lost so something deeper can be
               found&mdash;Gilgamesh returns without immortality but with wisdom, inverting the expected reward
               structure.</div>
@@ -881,6 +894,7 @@
       <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
           <path d="M6 6l12 12M18 6L6 18" />
+          <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
       <div class="kg-modal-header">
@@ -1218,6 +1232,7 @@
     <div class="kg-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="kgModalWaltermittyTitle">
       <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18" />
           <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
@@ -1640,6 +1655,7 @@
       <button class="kg-modal-close" type="button" aria-label="Close details" data-close-modal>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
           <path d="M6 6l12 12M18 6L6 18" />
+          <path d="M6 6l12 12M18 6L6 18" />
         </svg>
       </button>
       <div class="kg-modal-header">
@@ -1844,9 +1860,9 @@
         <div class="section-divider"></div>
       </div>
 
-      <div class="conclusion-grid">
+      <div style="display: flex; flex-direction: column; gap: 64px;">
         <div class="reveal reveal-delay-1">
-          <div class="section-prose">
+          <div class="section-prose" style="max-width: 100%;">
             <p>
               Across four millennia of storytelling&mdash;from Sumerian clay tablets to digital cinema&mdash;the
               monomyth endures not as a rigid template but as a gravitational center. Some narratives orbit it
@@ -1861,23 +1877,124 @@
               culture, era, and author navigated the same deep structure of departure, ordeal, and return.
             </p>
           </div>
-
-          <ul class="future-list">
-            <li>Extend the ontology with temporal properties and thematic classes</li>
-            <li>Build SPARQL endpoints for cross-work comparative queries</li>
-            <li>Create interactive visualizations of journey patterns</li>
-            <li>Formalize remaining prose breakdowns as full knowledge graphs</li>
-            <li>Link stage realizations across works with SKOS mappings</li>
-          </ul>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <blockquote class="conclusion-quote">
-            "The hero ventures forth from the world of common day into a region of supernatural wonder:
-            fabulous forces are there encountered and a decisive victory is won: the hero comes back from
-            this mysterious adventure with the power to bestow boons on his fellow man."
-            <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
-          </blockquote>
+          <div class="horizons-grid">
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 8V4H8"></path>
+                <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                <path d="M2 14h2"></path>
+                <path d="M20 14h2"></path>
+                <path d="M15 13v2"></path>
+                <path d="M9 13v2"></path>
+              </svg>
+              <div class="class-name">LLMs use for reuse</div>
+              <div class="class-desc">To rapidly scale the population of our ontology without sacrificing structural
+                integrity,
+                we employed an LLM-assisted knowledge grounding technique using Claude and Gemini. By supplying our
+                baseline OWL ontology
+                alongside a "gold-standard" exemplar (The Matrix), we created a short prompt to draft new narrative
+                knowledge graphs.
+                The results provided a fascinating case study in LLM limitations. For newer or less famous works,
+                analytical accuracy
+                plummeted as the models confidently hallucinated plot points to force a fit into Campbell's framework.
+                Conversely, while the models
+                easily generated accurate structural skeletons for famous works, this success must be carefully weighed
+                against their severe
+                memorization bias toward heavily duplicated bestsellers (as noted in the data archaeology study <em>
+                  Speak, Memory, Chang et al., 2023</em>).
+                Because of this, LLM generation serves only as a first-pass scaffolding, requiring a mandatory
+                human-in-the-loop revision process.
+                While AI can successfully identify literal, <code>PerfectFit</code> structural matches, human
+                researchers must step in to manually
+                revise the qualitative nuances of the narrative. Specifically, mapping divergences demands deep,
+                context-aware critical appraisal.
+                The AI can build the graph's syntactic skeleton, but identifying exactly why and how an author
+                deliberately subverted an archetype
+                remains a distinctly human intellectual exercise.</div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"></circle>
+                <circle cx="6" cy="6" r="3"></circle>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                <line x1="6" y1="9" x2="6" y2="21"></line>
+              </svg>
+              <div class="class-name">Meta-convergence</div>
+              <div class="class-desc">Although our Monomyth ontology
+                doesn't explicitly reuse <code>creon:MetaConvergence</code>, it inherently executes
+                its core mechanism.
+                CreOn defines meta-convergence as the critical appraisal of a creative product's divergence against
+                expected background knowledge to make it functionally or aesthetically effective.
+                Our framework performs this function by using Campbell's monomyth as the structural baseline, while
+                applying specific divergence classes (<code>monomyth:NarrativeDivergence</code>,
+                <code>monomyth:SequentialDivergence</code>, and <code>monomyth:SemioticDivergence</code>)
+                to evaluate creative departures. Both models view these deviations as deliberate, meaningful choices
+                rather than simple errors. To formally implement this connection in the future,
+                we could map our <code>monomyth:FitQuality</code> scores and <code>monomyth:divergenceRationale</code>
+                descriptions directly to the <code>creon:MetaConvergence</code> class.
+              </div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                <path d="M12 12V8"></path>
+              </svg>
+              <div class="class-name">Framework expansion</div>
+              <div class="class-desc">The ultimate extensibility of this project lies in the potential to expand our
+                foundational schema to transcend the structural limitations of Joseph Campbell's original model.
+                By integrating frameworks like Maureen Murdock’s <em>The Heroine’s Journey</em> and Kim Hudson’s <em>The
+                  Virgin’s Promise</em> into our ontology.ttl, we could broaden the graph's analytical power
+                to capture deeply internal, relational, and socially disruptive narrative arcs. While Campbell’s
+                monomyth maps an outward quest of conquest into the unknown, encoding these alternative frameworks
+                would allow us to query entirely different narrative. Murdock provides a potential "feminine
+                counter-arc" that tracks an inward descent to integrate split psychic polarities,
+                while Hudson’s model captures transformation born from radical self-expression against a conformist
+                community.
+                Ultimately, by formalizing these alternative structures as linked data in the future, we could empower
+                the ontology to successfully process genres that the traditional monomyth struggles
+                with, proving that narratives prioritizing authenticity and inner balance are just as structurally
+                rigorous as tales of external triumph.</div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              <div class="class-name">Potential research</div>
+              <div class="class-desc">By populating this OWL ontology with diverse narrative knowledge graphs in the
+                future,
+                we could transition literary analysis into computable data. This would enable us to formulate complex
+                research
+                questions that query divergences across multiple cultural axes. We could run SPARQL queries to discover,
+                for instance,
+                how the <code>monomyth:SemioticDivergence</code> shifts from literal magic to psychological trauma
+                across centuries
+                of storytelling, or whether authors of different genders systematically invert specific archetypes.
+                Specifically, the structured nature of this dataset would allow researchers to track narrative shifts
+                over <strong>time</strong>
+                (mapping historical trends and the evolution of specific divergences), across <strong>space</strong>
+                (contrasting Western and Eastern
+                structural traditions), through distinct <strong>media</strong> (comparing structural constraints in
+                literature, film, comics, and music),
+                and across <strong>gender</strong> (analyzing how the gender of the author or protagonist dictates
+                specific divergences).
+                Ultimately, this framework has the potential to transition the Monomyth from a static literary theory
+                into a dynamic,
+                quantitative research tool, ready to reveal exactly how modern culture bends ancient mythologies to
+                reflect its own realities.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1901,11 +2018,15 @@
           <div class="role">Ontology Design</div>
           <div class="bio">Responsible for the OWL ontology architecture, class hierarchies, and property design
             grounding Campbell's framework in formal semantics.</div>
+          <div class="bio">Responsible for the OWL ontology architecture, class hierarchies, and property design
+            grounding Campbell's framework in formal semantics.</div>
         </div>
         <div class="team-card reveal reveal-delay-1">
           <div class="team-avatar">TM</div>
           <div class="name">Nicol D'Amelio</div>
           <div class="role">Knowledge Engineering</div>
+          <div class="bio">Built the knowledge graph instantiations, mapping narratives to the ontology with stage
+            realizations, fit assessments, and Wikidata integration.</div>
           <div class="bio">Built the knowledge graph instantiations, mapping narratives to the ontology with stage
             realizations, fit assessments, and Wikidata integration.</div>
         </div>
@@ -1915,11 +2036,15 @@
           <div class="role">Literary Analysis</div>
           <div class="bio">Conducted the narrative analyses, producing 17-stage prose breakdowns and fit quality
             assessments for each work in the corpus.</div>
+          <div class="bio">Conducted the narrative analyses, producing 17-stage prose breakdowns and fit quality
+            assessments for each work in the corpus.</div>
         </div>
         <div class="team-card reveal reveal-delay-3">
           <div class="team-avatar">TM</div>
           <div class="name">Martina Uccheddu</div>
           <div class="role">Data Visualization</div>
+          <div class="bio">Designed the web presentation and interactive visualizations, translating RDF graph
+            structures into accessible, explorable interfaces.</div>
           <div class="bio">Designed the web presentation and interactive visualizations, translating RDF graph
             structures into accessible, explorable interfaces.</div>
         </div>
@@ -1941,8 +2066,14 @@
               stroke-linejoin="round" fill="none" aria-hidden="true">
               <path
                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-          </a>
+              <a class="github-link" href="https://github.com/metamuses/monomyth" target="_blank" rel="noopener"
+                aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.1" stroke-linecap="round"
+                  stroke-linejoin="round" fill="none" aria-hidden="true">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </a>
         </li>
       </ul>
       <div class="footer-copy">&copy; 2026 &middot; CC BY-SA 4.0</div>
