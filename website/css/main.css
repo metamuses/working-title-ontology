@@ -529,6 +529,18 @@ body::before {
   margin-bottom: 72px;
 }
 
+.ontology-classes-panel {
+  margin-top: 120px;
+}
+
+.ontology-classes-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--gold-dim);
+  margin-bottom: 24px;
+}
+
 .ontology-classes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1073,6 +1085,10 @@ body.modal-open {
 
   .ontology-classes {
     grid-template-columns: 1fr;
+  }
+
+  .ontology-classes-panel {
+    margin-top: 0;
   }
 
   .kg-grid {
