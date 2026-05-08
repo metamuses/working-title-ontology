@@ -43,10 +43,10 @@
       <div class="hero-radial"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-label">A Formal OWL Ontology</div>
+      <div class="hero-label">An OWL Ontology for the Monomyth framework</div>
       <h1 class="hero-title">The Hero with a<br><em>Thousand Graphs</em></h1>
       <p class="hero-subtitle">
-        Mapping Joseph Campbell's monomyth as a computable knowledge structure&mdash;<br>
+        Mapping Joseph Campbell’s monomyth as a computable knowledge structure,<br>
         from ancient epics to modern cinema.
       </p>
       <a href="#about" class="hero-cta">
@@ -73,76 +73,71 @@
       <div class="about-grid">
         <div class="reveal reveal-delay-1">
           <div class="section-prose">
-            <p>
-              In 1949, Joseph Campbell published <strong><em>The Hero with a Thousand Faces</em></strong>, arguing that the
-              world's myths share a single narrative skeleton&mdash;the monomyth. A hero ventures from the ordinary
-              world into a region of supernatural wonder, wins a decisive victory, and returns transformed.
-            </p>
-            <p>
-              This project takes Campbell's framework and encodes it as a <strong>formal OWL ontology</strong>
-              serialized in Turtle (TTL). Every stage, archetype, threshold, and symbolic element becomes a precisely
-              defined class or property in a machine-readable vocabulary, enabling systematic comparison across
-              thousands of years of storytelling.
-            </p>
-            <p>
-              By building <strong>knowledge graphs</strong> for individual narratives&mdash;from Gilgamesh to
-              The Matrix&mdash;we can run SPARQL queries to discover which stories fit Campbell's template
-              perfectly and where the pattern breaks down, revealing as much about narrative diversity as
-              about narrative universals.
-            </p>
+            <p>In 1949, Joseph Campbell published <em>The Hero with a Thousand Faces</em>, a work of <strong>comparative mythology</strong> arguing that heroic myths across cultures, from Sumerian descents to Promethean cycles, betray a single generative sequence he termed the <strong>monomyth</strong>: a departure, an initiation, and a return, each threshold marking a transformation in the hero's ontological status.</p>
+
+            <p>Campbell's framework was shaped decisively by Carl Jung's theory of <strong>archetypes</strong>, which posited recurring mythological figures as expressions of a collective unconscious transcending individual experience. Campbell gave this psychological machinery a narratological armature, mapping psychic individuation onto the plane of story, a map contemporary filmmakers and game designers still reach for, whether consciously or through convergent intuition.</p>
+
+            <p>What makes the monomyth compelling as an object of formal study is the tension between its <strong>claim to universality</strong> and the <strong>irreducible particularity</strong> of any given narrative. Every story read through Campbell's stages also resists that reading at determinate points, producing divergences and inversions that constitute the most analytically productive sites of inquiry. It is this <strong>generative friction</strong>, the gap between the structural template and its concrete realization, that invites a rigorous, systematic treatment capable of capturing both the pattern and its deformations.</p>
           </div>
 
           <ol class="methodology-list">
             <li>
               <span class="step-num">01</span>
-              <span class="step-text"><strong>Study Campbell's framework</strong> &mdash; The 17 stages across three acts, the archetypal roles, and the spatial logic of ordinary vs. special worlds.</span>
+              <span class="step-text"><strong>Universal narrative grammar</strong> &mdash; Beneath the surface variety of world mythologies lies a single recurring pattern, the monomyth: a three-act arc of departure, initiation, and return.</span>
             </li>
             <li>
               <span class="step-num">02</span>
-              <span class="step-text"><strong>Design the ontology</strong> &mdash; Model classes, properties, and relationships in OWL, with reified patterns for archetype assignment and fit quality.</span>
+              <span class="step-text"><strong>Shared vocabulary</strong> &mdash; Archetypes populate the journey, two worlds define its spatial logic, a threshold divides them, trials test the hero's transformation, and a boon rewards the return.</span>
             </li>
             <li>
               <span class="step-num">03</span>
-              <span class="step-text"><strong>Instantiate knowledge graphs</strong> &mdash; For each narrative, create stage realizations with prose descriptions, fit assessments, and Wikidata links.</span>
-            </li>
-            <li>
-              <span class="step-num">04</span>
-              <span class="step-text"><strong>Query and compare</strong> &mdash; Use SPARQL to analyze patterns across works, finding universals and divergences in the monomyth structure.</span>
+              <span class="step-text"><strong>Variation as structure</strong> &mdash; Each narrative reshapes, inverts, or omits stages: the symbolic vocabulary changes across cultures and media, but the underlying transformative pattern persists through its own deformations.</span>
             </li>
           </ol>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <div class="about-stat-group">
-            <div class="about-stat">
-              <div class="number">17</div>
-              <div class="label">Stages Modeled</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">11</div>
-              <div class="label">Archetypes</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">3</div>
-              <div class="label">Acts</div>
-            </div>
-            <div class="about-stat">
-              <div class="number">6</div>
-              <div class="label">Fit Qualities</div>
-            </div>
-          </div>
+          <blockquote class="about-quote">
+            “The hero ventures forth from the world of common day into a region of supernatural wonder:
+            fabulous forces are there encountered and a decisive victory is won: the hero comes back from
+            this mysterious adventure with the power to bestow boons on his fellow man.”
+            <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
+          </blockquote>
 
-          <div style="margin-top: 40px; padding: 28px; background: var(--bg-card); border: 1px solid rgba(122, 92, 20, 0.15);">
-            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-dim); margin-bottom: 16px;">Technologies</div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">OWL 2</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">RDF / Turtle</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SPARQL</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Wikidata</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Schema.org</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Dublin Core</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">SKOS</span>
-              <span style="font-size: 0.78rem; padding: 6px 14px; border: 1px solid rgba(122,92,20,0.2); color: var(--text-secondary);">Python</span>
+          <div class="about-stat-group about-stages-group">
+            <div class="about-stat about-stages-box">
+              <div class="about-stages-act">I. Departure</div>
+              <ol class="about-stages-list" start="1">
+                <li>The Call to Adventure</li>
+                <li>Refusal of the Call</li>
+                <li>Supernatural Aid</li>
+                <li>The Crossing of the First Threshold</li>
+                <li>The Belly of the Whale</li>
+              </ol>
+            </div>
+
+            <div class="about-stat about-stages-box">
+              <div class="about-stages-act">II. Initiation</div>
+              <ol class="about-stages-list" start="6">
+                <li>The Road of Trials</li>
+                <li>The Meeting with the Goddess</li>
+                <li>Woman as the Temptress</li>
+                <li>Atonement with the Father</li>
+                <li>Apotheosis</li>
+                <li>The Ultimate Boon</li>
+              </ol>
+            </div>
+
+            <div class="about-stat about-stages-box">
+              <div class="about-stages-act">III. Return</div>
+              <ol class="about-stages-list" start="12">
+                <li>Refusal of the Return</li>
+                <li>The Magic Flight</li>
+                <li>Rescue from Without</li>
+                <li>The Crossing of the Return Threshold</li>
+                <li>Master of the Two Worlds</li>
+                <li>Freedom to Live</li>
+              </ol>
             </div>
           </div>
         </div>
