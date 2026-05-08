@@ -151,10 +151,10 @@
     rdfs:label "Absent Meeting with the Goddess"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
     monomyth:stageRealizationOrder 7 ;
-    monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>, <walter-mitty/characters/cheryl> ;
-    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> .
-    monomyth:realizationDescription """Unlike traditional heroic narratives, Walter experiences no direct transformative union during this phase. Cheryl remains physically absent from the adventure, existing instead as an internalized source of courage and emotional orientation. Her influence shapes Walter’s decisions, but the narrative postpones any actual relational resolution, replacing the classical encounter with a deferred emotional possibility."""@en ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> ;
+    monomyth:realizationDescription """Unlike traditional heroic narratives, Walter experiences no direct transformative union during this phase. Cheryl remains physically absent from the adventure, existing instead as an internalized source of courage and emotional orientation. Her influence shapes Walter’s decisions, but the narrative postpones any actual relational resolution, replacing the classical encounter with a deferred emotional possibility."""@en .
 
 <walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
     rdfs:label "Volcanic retreat"@en ;
