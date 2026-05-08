@@ -387,13 +387,28 @@ into her new life."""@en .
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
-    monomyth:realizationDescription "She reflects on driving through Sacramento for the first time. She now holds both worlds—the New York of her aspirations and the Sacramento of her identity—simultaneously. She realizes that the place she hated is the foundation of who she is, achieving an equilibrium between her two identities."@en .
+    monomyth:realizationDescription """In her voicemail, Christine shares with her mother the memory 
+of driving through Sacramento for the first time, a moment she couldn't share with her when it 
+happened because the two weren't speaking. By emotionally describing the new-found specific beauty of 
+her hometown while standing on a New York sidewalk, she effectively brings one world into the other. 
+She achieves an equilibrium and holds both realms simultaneously, valuing her roots precisely because 
+she now has the distance to see them clearly in her new life stage."""@en ;
+    monomyth:fitNote """Christine becomes the 'Master of Two Worlds' by realizing that her identity 
+isn't a choice between Sacramento and New York, but an integration of both. The wisdom she gains is 
+the ability to move freely between her memories and her ambitions."""@en .
 
 <lady-bird/stages/thank-you> a monomyth:StageRealization ;
-    rdfs:label "Gratefulness"@en ;
+    rdfs:label "Thank you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
-    monomyth:realizationDescription "The journey concludes with a simple 'Thank you.' Christine has moved from adolescent ungratefulness to adult awareness. She is free to live her life in New York because she has finally acknowledged and accepted the sacrifices of her parents and the value of her home."@en .
+    monomyth:realizationDescription """The voicemail and the journey conclude with a simple, resonant 
+'Thank you', signaling Christine's release from the combative ego of her adolescent identity, which 
+had been the core of her journey. She is no longer a hero in flight from her origins, but an adult 
+existing fully in the present, recognizing her parents' sacrifices as the quiet, vital infrastructure 
+of her own life. This gratitude is what allows her to live freely now, in a new reality but with a 
+clear heart."""@en .
 
 # --- Narrative Divergences ----------------------
 
@@ -498,4 +513,3 @@ with her mother, she can now willingly return to her birth name, turning a refus
 into a mature embrace of her identity."""@en .
 
 
-# finisci modeling personaggi e poi stages, con mia scaletta data a gemini x divergence e description finale
