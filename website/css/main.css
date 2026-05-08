@@ -1032,15 +1032,43 @@ body.modal-open {
 .fit-bar.fit-bar-large {
   gap: 4px;
   margin-top: 56px;
-  margin-bottom: 10px;
+  margin-bottom: 52px;
 }
 
 .fit-bar.fit-bar-large .segment {
-  height: 11px;
+  height: 18px;
+  overflow: visible;
 }
+
+/* Quality label under each segment in fit-bar-large */
+.fit-bar.fit-bar-large .segment::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform-origin: 100% 0;
+  transform: translateX(-100%) rotate(-45deg);
+  font-family: var(--font-body);
+  font-size: 0.48rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.45;
+  color: var(--text-muted);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.fit-bar.fit-bar-large .segment.strong::after  { content: 'Strong'; }
+.fit-bar.fit-bar-large .segment.perfect::after { content: 'Perfect'; }
+.fit-bar.fit-bar-large .segment.moderate::after{ content: 'Moderate'; }
+.fit-bar.fit-bar-large .segment.weak::after    { content: 'Weak'; }
+.fit-bar.fit-bar-large .segment.absent::after  { content: 'Absent'; }
+.fit-bar.fit-bar-large .segment.inverted::after{ content: 'Inverted'; }
 
 .fit-label.fit-label-large {
   font-size: 0.76rem;
+  margin-top: 4px;
 }
 
 .kg-modal-meta {
