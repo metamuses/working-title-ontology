@@ -1162,19 +1162,36 @@ code {
 }
 
 .team-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 1px solid var(--gold-dim);
-  margin: 0 auto 20px;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: var(--gold);
-  background: var(--gold-faint);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s ease, filter 0.4s ease;
+  --base-scale: 1;
+  transform: scale(var(--base-scale));
+}
+
+.team-avatar img.img-scale-up {
+  --base-scale: 1.25;
+}
+
+.team-card:hover .team-avatar {
+  transform: translateY(-8px);
+}
+
+.team-card:hover .team-avatar img {
+  transform: scale(calc(var(--base-scale) * 1.15));
+  filter: drop-shadow(0 12px 20px rgba(30, 21, 8, 0.2));
 }
 
 .team-card .name {
