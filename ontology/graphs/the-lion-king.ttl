@@ -20,6 +20,7 @@
     dcterms:created "1994"^^xsd:gYear ;
     dcterms:creator "Roger Allers",
         "Rob Minkoff" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Animation"@en,
         "Drama"@en,
         "Musical"@en ;
@@ -29,7 +30,7 @@
 after the murder of his father, must reclaim his identity and his kingdom from the uncle who usurped
 them both."""@en .
 
-# --- Monomyth Expression --------------
+# --- Monomyth Expressions --------------
 
 <the-lion-king/monomyths/simba-journey> a monomyth:MonomythExpression ;
     rdfs:label "Simba's Hero's Journey in The Lion King"@en ;
