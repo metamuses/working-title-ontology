@@ -23,14 +23,14 @@
     schema:genre "Action-Adventure"@en,
         "Fantasy"@en ;
     owl:sameAs wd:Q213911 ;
-    monomyth:interpretedBy <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:interpretedBy <ocarina-of-time/monomyths/link-journey> ;
     rdfs:comment """A 1998 action-adventure video game in which a boy raised among forest children
 is drawn into a quest across time to prevent the king of evil from claiming an ancient relic of
 divine power."""@en .
 
 # --- Monomyth Expressions --------------
 
-<ocarina-of-time/monomyths/links-journey> a monomyth:MonomythExpression ;
+<ocarina-of-time/monomyths/link-journey> a monomyth:MonomythExpression ;
     rdfs:label "Link's Hero's Journey in Ocarina of Time"@en ;
     rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
 narrative of 'The Legend of Zelda: Ocarina of Time', focusing on the character Link's journey."""@en ;
@@ -69,8 +69,8 @@ narrative of 'The Legend of Zelda: Ocarina of Time', focusing on the character L
     rdfs:comment """A boy raised among the Kokiri of the forest who discovers he is Hylian by birth,
 destined to become the Hero of Time and wield the Master Sword against the forces of
 darkness."""@en ;
-    monomyth:heroOf <ocarina-of-time/monomyths/links-journey> ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:heroOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Hero .
 
 <ocarina-of-time/characters/princess-zelda> a monomyth:Character ;
@@ -78,7 +78,7 @@ darkness."""@en ;
     rdfs:comment """The princess of Hyrule who possesses prophetic visions of the kingdom's fate and
 later disguises herself as Sheik, a Sheikah warrior, to guide Link through his adult quest while
 evading Ganondorf's pursuit."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Shapeshifter .
 
@@ -87,7 +87,7 @@ evading Ganondorf's pursuit."""@en ;
     rdfs:comment """The Gerudo king who seeks the Triforce to dominate Hyrule, whose ambition drives
 the central conflict and whose corruption transforms the kingdom during the seven years of Link's
 sealed sleep."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow .
 
 <ocarina-of-time/characters/navi> a monomyth:Character ;
@@ -95,7 +95,7 @@ sealed sleep."""@en ;
     rdfs:comment """A fairy dispatched by the Great Deku Tree to accompany Link, serving as his
 constant companion, guide, and the visible sign that he finally belongs among the fairy-bonded
 Kokiri."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Herald,
         monomyth:Ally .
 
@@ -104,7 +104,7 @@ Kokiri."""@en ;
     rdfs:comment """The ancient guardian spirit of Kokiri Forest who summons Link, reveals the first
 fragment of his destiny, and dies entrusting him with the Kokiri Emerald and the charge to seek
 Princess Zelda."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Herald .
 
@@ -113,21 +113,21 @@ Princess Zelda."""@en ;
     rdfs:comment """The Sage of Light who watches over the Sacred Realm and greets Link upon his
 awakening after seven years, explaining what has befallen Hyrule and commissioning the quest to
 awaken the remaining sages."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor .
 
 <ocarina-of-time/characters/saria> a monomyth:Character ;
     rdfs:label "Saria"@en ;
     rdfs:comment """Link's closest friend among the Kokiri, who bids him farewell at the forest
 bridge and later awakens as the Sage of the Forest Temple."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:Ally .
 
 <ocarina-of-time/characters/impa> a monomyth:Character ;
     rdfs:label "Impa"@en ;
     rdfs:comment """Zelda's Sheikah guardian who escorts Link safely out of Hyrule Castle, teaches
 him Zelda's Lullaby, and later awakens as the Sage of the Shadow Temple."""@en ;
-    monomyth:characterOf <ocarina-of-time/monomyths/links-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian,
         monomyth:Ally .
 
