@@ -61,21 +61,29 @@ The full knowledge graph is available at [monomyth.metamuses.org/graph/](https:/
 
 Analyzed works include:
 
-* **The Oedipus myth**: a classical myth about a king whose attempt to escape
-prophecy leads him toward the discovery of his own hidden guilt.
+* **Oedipus**: a classical myth about a king whose attempt to escape prophecy
+leads him toward the discovery of his own hidden guilt.
+* **Aeneid**: a Latin epic poem about Aeneas's journey from the ruins of
+Troy toward the foundation of a new destiny in Italy.
 * **Rostam's Seven Labours**: an episode from the Persian *Shahnameh* about the
 hero Rostam overcoming seven trials to rescue the Iranian king Kay Kāvus.
+* **Orlando Furioso**: a chivalric epic poem about love, madness, war and
+knightly adventure in the world of Charlemagne's paladins.
 * **The Call of the Wild**: a novel about a domesticated dog taken into the
 brutal world of the Klondike, where he gradually returns to a wilder state.
 * **Batman: Year One**: a comic book arc about Bruce Wayne's first year as
 Batman and James Gordon's struggle against corruption in Gotham City.
 * **The Lion King**: an animated coming-of-age film about a young lion prince
 who must confront his past and reclaim his kingdom.
-* **The Matrix**: a science-fiction film about a hacker who discovers that
-reality is a simulated world controlled by machines.
+* **The Legend of Zelda: Ocarina of Time**: a fantasy adventure game where a
+young hero travels through time and battles evil to save Hyrule from darkness.
+* **The Matrix**: a sci-fi thriller about a hacker who discovers humanity is
+trapped inside a machine-controlled simulation hiding reality.
 * **The Secret Life of Walter Mitty**: a film about an ordinary man whose
 imagined adventures become a real journey of courage, discovery, and
 self-transformation.
+* **Lady Bird**: a sharp, heartfelt coming-of-age story about a Sacramento high
+school senior navigating adolescence, family tensions, and self-discovery.
 * **SABLE, fABLE**: a music album by Bon Iver that explores emotional fracture,
 intimacy, renewal, and the passage from darkness toward connection.
 
