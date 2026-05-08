@@ -153,8 +153,8 @@
     monomyth:stageRealizationOrder 7 ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>, <walter-mitty/characters/cheryl> ;
-    monomyth:realizationDescription """Unlike traditional heroic narratives, Walter experiences no direct transformative union during this phase. Cheryl remains physically absent from the adventure, existing instead as an internalized source of courage and emotional orientation. Her influence shapes Walter’s decisions, but the narrative postpones any actual relational resolution, replacing the classical encounter with a deferred emotional possibility."""@en ;
     monomyth:hasNarrativeDivergence <walter-mitty/divergences/narrative/absent-goddess-focus-on-mentor> .
+    monomyth:realizationDescription """Unlike traditional heroic narratives, Walter experiences no direct transformative union during this phase. Cheryl remains physically absent from the adventure, existing instead as an internalized source of courage and emotional orientation. Her influence shapes Walter’s decisions, but the narrative postpones any actual relational resolution, replacing the classical encounter with a deferred emotional possibility."""@en ;
 
 <walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
     rdfs:label "Volcanic retreat"@en ;
@@ -333,12 +333,12 @@ More importantly, the encounter shifts the meaning of the entire journey. The tr
 <walter-mitty/divergences/semiotic/corporate-aid> a monomyth:SemioticDivergence ;
     monomyth:divergenceOf <walter-mitty/stages/clues-and-encouragement> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
-    monomyth:divergenceRationale """A corporate gift replaces traditional mythic talismans."""@en .
+    monomyth:divergenceRationale """A simple gift replaces traditional mythic talismans."""@en .
 
 <walter-mitty/divergences/semiotic/domestic-guide> a monomyth:SemioticDivergence ;
     monomyth:divergenceOf <walter-mitty/stages/mothers-clue> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
-    monomyth:divergenceRationale """The guide is the hero's mother using domestic artifacts as clues."""@en .
+    monomyth:divergenceRationale """The guide is the hero's mother being present to help him and remind him of the event that he has missed regarding the clues, due to being in his head and immaginations."""@en .
 
 <walter-mitty/divergences/semiotic/artist-as-father> a monomyth:SemioticDivergence ;
     monomyth:divergenceOf <walter-mitty/stages/the-ghost-cat> ;
