@@ -530,7 +530,11 @@ body::before {
 }
 
 .ontology-classes-panel {
-  margin-top: 120px;
+  margin-top: 30px;
+}
+
+.ontology-iri-box {
+  margin-bottom: 120px;
 }
 
 .ontology-classes-label {
@@ -539,6 +543,32 @@ body::before {
   letter-spacing: 0.3em;
   color: var(--gold-dim);
   margin-bottom: 24px;
+}
+
+.ontology-iri-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.ontology-iri-value::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.ontology-iri-value:hover::after,
+.ontology-iri-value:focus-visible::after {
+  width: 100%;
 }
 
 .ontology-classes {
@@ -1089,6 +1119,10 @@ body.modal-open {
 
   .ontology-classes-panel {
     margin-top: 0;
+  }
+
+  .ontology-iri-box {
+    margin-bottom: 50px;
   }
 
   .kg-grid {
