@@ -421,6 +421,59 @@ body::before {
   letter-spacing: 0.08em;
 }
 
+.about-stages-group {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.about-stages-box {
+  padding: 28px;
+}
+
+.about-stages-title {
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 20px;
+}
+
+.about-stages-act {
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+
+.about-stages-list {
+  margin-left: 1.2rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.about-stages-list li + li {
+  margin-top: 6px;
+}
+
+.about-stages-list strong {
+  color: var(--text-primary);
+}
+
+@media (min-width: 901px) {
+  .about-stages-list {
+    column-count: 2;
+    column-gap: 18px;
+  }
+
+  .about-stages-list li {
+    break-inside: avoid;
+  }
+}
 .methodology-list {
   list-style: none;
   margin-top: 32px;
