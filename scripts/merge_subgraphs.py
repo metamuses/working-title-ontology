@@ -28,6 +28,7 @@ SUBGRAPHS_DIR = ROOT_DIR / "ontology" / "graphs"
 # List subgraphs in merge order.
 SUBGRAPH_FILES = [
     "the-call-of-the-wild.ttl",
+    "the-lion-king.ttl",
     "the-matrix.ttl",
 ]
 

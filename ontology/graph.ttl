@@ -15,7 +15,7 @@
 various narrative works across different time periods, cultures, and media."""@en ;
     dcterms:creator "Tommaso Barbato",
         "Nicol D'Amelio",
-        "Maryam Dadras",
+        "Maryam Dadrasrazi",
         "Martina Uccheddu" ;
     dcterms:conformsTo <https://monomyth.metamuses.org/ontology> ;
     void:vocabulary <https://monomyth.metamuses.org/ontology> ;

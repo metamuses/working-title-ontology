@@ -1,0 +1,527 @@
+@base <https://monomyth.metamuses.org/graph/> .
+@prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# ==============================================================================
+# THE LEGEND OF ZELDA: OCARINA OF TIME (Video Game, 1998)
+# ==============================================================================
+
+<ocarina-of-time> a monomyth:NarrativeWork,
+        schema:VideoGame ;
+    rdfs:label "The Legend of Zelda: Ocarina of Time"@en ;
+    dcterms:title "The Legend of Zelda: Ocarina of Time"@en ;
+    dcterms:created "1998"^^xsd:gYear ;
+    dcterms:creator "Shigeru Miyamoto",
+        "Eiji Aonuma" ;
+    schema:genre "Action-Adventure"@en,
+        "Fantasy"@en ;
+    owl:sameAs wd:Q213911 ;
+    monomyth:interpretedBy <ocarina-of-time/monomyths/link-journey> ;
+    rdfs:comment """A 1998 action-adventure video game in which a boy raised among forest children
+is drawn into a quest across time to prevent the king of evil from claiming an ancient relic of
+divine power."""@en .
+
+# --- Monomyth Expressions --------------
+
+<ocarina-of-time/monomyths/link-journey> a monomyth:MonomythExpression ;
+    rdfs:label "Link's Hero's Journey in Ocarina of Time"@en ;
+    rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
+narrative of 'The Legend of Zelda: Ocarina of Time', focusing on the character Link's journey."""@en ;
+    monomyth:interprets <ocarina-of-time> ;
+    monomyth:hasHero <ocarina-of-time/characters/link> ;
+    monomyth:hasCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda>,
+        <ocarina-of-time/characters/ganondorf>,
+        <ocarina-of-time/characters/navi>,
+        <ocarina-of-time/characters/the-great-deku-tree>,
+        <ocarina-of-time/characters/rauru>,
+        <ocarina-of-time/characters/saria>,
+        <ocarina-of-time/characters/impa> ;
+    monomyth:hasStageRealization <ocarina-of-time/stages/the-boy-without-a-fairy>,
+        <ocarina-of-time/stages/the-hero-does-not-hesitate>,
+        <ocarina-of-time/stages/the-future-depends-upon-thee>,
+        <ocarina-of-time/stages/beyond-the-forest>,
+        <ocarina-of-time/stages/a-fairy-and-a-green-stone>,
+        <ocarina-of-time/stages/stones-and-sages>,
+        <ocarina-of-time/stages/seven-lost-years>,
+        <ocarina-of-time/stages/a-quest-without-temptation>,
+        <ocarina-of-time/stages/you-are-not-a-kokiri>,
+        <ocarina-of-time/stages/the-seventh-sage>,
+        <ocarina-of-time/stages/the-light-arrows>,
+        <ocarina-of-time/stages/the-hero-presses-on>,
+        <ocarina-of-time/stages/the-tower-comes-down>,
+        <ocarina-of-time/stages/six-sages-as-one>,
+        <ocarina-of-time/stages/lay-the-master-sword-to-rest>,
+        <ocarina-of-time/stages/child-and-hero>,
+        <ocarina-of-time/stages/through-the-courtyard-window> .
+
+# --- Characters -----------------------
+
+<ocarina-of-time/characters/link> a monomyth:Character ;
+    rdfs:label "Link"@en ;
+    rdfs:comment """A boy raised among the Kokiri of the forest who discovers he is Hylian by birth,
+destined to become the Hero of Time and wield the Master Sword against the forces of
+darkness."""@en ;
+    monomyth:heroOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Hero .
+
+<ocarina-of-time/characters/princess-zelda> a monomyth:Character ;
+    rdfs:label "Princess Zelda (Sheik)"@en ;
+    rdfs:comment """The princess of Hyrule who possesses prophetic visions of the kingdom's fate and
+later disguises herself as Sheik, a Sheikah warrior, to guide Link through his adult quest while
+evading Ganondorf's pursuit."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor,
+        monomyth:Shapeshifter .
+
+<ocarina-of-time/characters/ganondorf> a monomyth:Character ;
+    rdfs:label "Ganondorf"@en ;
+    rdfs:comment """The Gerudo king who seeks the Triforce to dominate Hyrule, whose ambition drives
+the central conflict and whose corruption transforms the kingdom during the seven years of Link's
+sealed sleep."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Shadow .
+
+<ocarina-of-time/characters/navi> a monomyth:Character ;
+    rdfs:label "Navi"@en ;
+    rdfs:comment """A fairy dispatched by the Great Deku Tree to accompany Link, serving as his
+constant companion, guide, and the visible sign that he finally belongs among the fairy-bonded
+Kokiri."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Herald,
+        monomyth:Ally .
+
+<ocarina-of-time/characters/the-great-deku-tree> a monomyth:Character ;
+    rdfs:label "The Great Deku Tree"@en ;
+    rdfs:comment """The ancient guardian spirit of Kokiri Forest who summons Link, reveals the first
+fragment of his destiny, and dies entrusting him with the Kokiri Emerald and the charge to seek
+Princess Zelda."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor,
+        monomyth:Herald .
+
+<ocarina-of-time/characters/rauru> a monomyth:Character ;
+    rdfs:label "Rauru"@en ;
+    rdfs:comment """The Sage of Light who watches over the Sacred Realm and greets Link upon his
+awakening after seven years, explaining what has befallen Hyrule and commissioning the quest to
+awaken the remaining sages."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Mentor .
+
+<ocarina-of-time/characters/saria> a monomyth:Character ;
+    rdfs:label "Saria"@en ;
+    rdfs:comment """Link's closest friend among the Kokiri, who bids him farewell at the forest
+bridge and later awakens as the Sage of the Forest Temple."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:Ally .
+
+<ocarina-of-time/characters/impa> a monomyth:Character ;
+    rdfs:label "Impa"@en ;
+    rdfs:comment """Zelda's Sheikah guardian who escorts Link safely out of Hyrule Castle, teaches
+him Zelda's Lullaby, and later awakens as the Sage of the Shadow Temple."""@en ;
+    monomyth:characterOf <ocarina-of-time/monomyths/link-journey> ;
+    monomyth:embodiesArchetype monomyth:ThresholdGuardian,
+        monomyth:Ally .
+
+# --- Stage Realizations ---------------
+
+<ocarina-of-time/stages/the-boy-without-a-fairy> a monomyth:StageRealization ;
+    rdfs:label "The boy without a fairy"@en ;
+    monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/navi>,
+        <ocarina-of-time/characters/the-great-deku-tree> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 1 ;
+    monomyth:realizationDescription """Link is the only child in Kokiri Forest without a guardian
+fairy, an absence that marks him as incomplete among his own people. The Great Deku Tree, dying from
+a curse placed by Ganondorf, sends the fairy Navi to summon Link to his side. The call arrives as
+both gift and burden: receiving Navi grants Link the belonging he has always lacked, but the summons
+leads directly into the Deku Tree's cursed interior and the revelation that dark forces threaten
+far beyond the forest."""@en .
+
+<ocarina-of-time/stages/the-hero-does-not-hesitate> a monomyth:StageRealization ;
+    rdfs:label "The hero does not hesitate"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 2 ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/absent-refusal> .
+
+<ocarina-of-time/stages/the-future-depends-upon-thee> a monomyth:StageRealization ;
+    rdfs:label "The future depends upon thee"@en ;
+    monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/navi>,
+        <ocarina-of-time/characters/the-great-deku-tree> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 3 ;
+    monomyth:realizationDescription """The Great Deku Tree, having been cleansed of the parasitic
+curse by Link, knows the effort has come too late to save him. With his final words he entrusts Link
+with the Kokiri Emerald, the first of three Spiritual Stones, and charges him to seek Princess
+Zelda at Hyrule Castle. Navi remains as a permanent companion, a living gift of guidance that will
+persist long after the guardian who dispatched her has withered to a hollow stump."""@en ;
+    monomyth:fitNote """The mentor dies in the act of commissioning the hero, compressing aid and
+bereavement into a single beat that propels Link forward through obligation rather than
+guidance."""@en .
+
+<ocarina-of-time/stages/beyond-the-forest> a monomyth:StageRealization ;
+    rdfs:label "Beyond the forest"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/saria> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 4 ;
+    monomyth:realizationDescription """Link crosses the log bridge at the edge of Kokiri Forest,
+where Saria is waiting. She gives him her Fairy Ocarina as a parting gift and says goodbye, knowing
+he will not return as the same person. The Kokiri believe that any of their kind who leaves the
+forest will die. Link steps off the bridge into Hyrule Field and the world opens around him, vast
+and exposed, the sheltering canopy replaced by open sky."""@en .
+
+<ocarina-of-time/stages/a-fairy-and-a-green-stone> a monomyth:StageRealization ;
+    rdfs:label "A fairy and a green stone"@en ;
+    monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda>,
+        <ocarina-of-time/characters/impa> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 5 ;
+    monomyth:realizationDescription """Link sneaks through the castle grounds and peers through a
+courtyard window to find Princess Zelda, who has been expecting him. She describes a prophetic
+dream: darkness engulfing Hyrule, and a figure from the forest bearing a fairy and a green stone
+appearing as a ray of light. Recognizing Link as that figure, she reveals Ganondorf's treachery and
+entrusts Link with the mission to collect the remaining Spiritual Stones before the Gerudo king can
+reach the Sacred Realm. Impa, Zelda's guardian, escorts Link safely out of the castle and teaches
+him Zelda's Lullaby, a melody that will open doors sealed by royal authority."""@en ;
+    monomyth:fitNote """Zelda functions as authorizing visionary rather than transcendent encounter,
+defining the quest before Link has faced any trial."""@en ;
+    monomyth:hasSequentialDivergence <ocarina-of-time/divergences/sequential/goddess-before-trials> .
+
+<ocarina-of-time/stages/stones-and-sages> a monomyth:StageRealization ;
+    rdfs:label "Stones and sages"@en ;
+    monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/navi> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 6 ;
+    monomyth:realizationDescription """As a child, Link ventures into Dodongo's Cavern beneath Death
+Mountain and into the belly of Lord Jabu-Jabu in Zora's Domain, earning the Goron Ruby and Zora's
+Sapphire to complement the Kokiri Emerald. Each trial demands new skills and yields an alliance with
+a people whose champion will later become a sage. After the seven-year seal, Link awakens as an
+adult and the trials deepen: the Forest Temple reclaims Saria as the Sage of Forest, the Fire
+Temple frees Darunia, the Water Temple rescues Ruto, the Shadow Temple liberates Impa, and the
+Spirit Temple awakens Nabooru. The trials bifurcate across the temporal divide, with childhood tests
+of resourcefulness giving way to adult confrontations with corruption, loss, and the consequences of
+Ganondorf's seven-year reign."""@en ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/bifurcated-trials> .
+
+<ocarina-of-time/stages/seven-lost-years> a monomyth:StageRealization ;
+    rdfs:label "Seven lost years"@en ;
+    monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/rauru> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 7 ;
+    monomyth:realizationDescription """Link places the three Spiritual Stones on the altar of the
+Temple of Time and plays the Song of Time on the Ocarina. The Door of Time opens, revealing the
+Master Sword in its pedestal. He draws the blade and the Sacred Realm swallows him whole. His body
+is too young to bear the sword's power, so the chamber seals him in enchanted sleep for seven years.
+When he awakens in the Chamber of Sages, Rauru greets a young man who went to sleep as a child. The
+boy who pulled the sword is gone; the adult who opens his eyes has no memory of the passage, only
+its result. Hyrule outside has fallen to Ganondorf, who entered the Sacred Realm through the door
+Link unwittingly opened for him."""@en ;
+    monomyth:fitNote """The most literal engulfment in the franchise: the hero is swallowed into
+sacred sleep, emerging physically transformed without any agency in the
+transformation."""@en ;
+    monomyth:hasSequentialDivergence <ocarina-of-time/divergences/sequential/whale-amid-trials> .
+
+<ocarina-of-time/stages/a-quest-without-temptation> a monomyth:StageRealization ;
+    rdfs:label "A quest without temptation"@en ;
+    monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 8 ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/temptress-absent> .
+
+<ocarina-of-time/stages/you-are-not-a-kokiri> a monomyth:StageRealization ;
+    rdfs:label "You are not a Kokiri"@en ;
+    monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 9 ;
+    monomyth:realizationDescription """After completing the Forest Temple and returning to Kokiri
+Forest, Link finds a young sapling growing where the Great Deku Tree once stood. The Deku Tree
+Sprout greets him and reveals what the original guardian never told him: Link is not Kokiri but
+Hylian, brought to the forest as an infant by his wounded mother during a great war and entrusted to
+the Deku Tree's care before she died. The deepest truth about who he is arrives not as a test of
+worthiness but as a quiet disclosure, offered by the gentle successor to a dead
+guardian."""@en ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/revelation-not-confrontation> .
+
+<ocarina-of-time/stages/the-seventh-sage> a monomyth:StageRealization ;
+    rdfs:label "The seventh sage"@en ;
+    monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 10 ;
+    monomyth:realizationDescription """With all five temple sages awakened, Sheik summons Link to the
+Temple of Time and reveals herself as Princess Zelda, the seventh and final sage. She confirms
+Link's identity as the Hero of Time and explains the full structure of the Triforce, which split
+upon Ganondorf's touch: Courage chose Link, Wisdom chose Zelda, and Power remained with Ganondorf.
+The hero's destiny, scattered across seven years of fragmented revelation, crystallizes into a
+single coherent picture. Link stands in the temple as the fully recognized bearer of the Triforce of
+Courage, his role no longer prophesied but declared."""@en ;
+    monomyth:fitNote """Realization arrives through external declaration and narrative convergence
+rather than contemplative transcendence or a moment of divine stillness."""@en .
+
+<ocarina-of-time/stages/the-light-arrows> a monomyth:StageRealization ;
+    rdfs:label "The light arrows"@en ;
+    monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda>,
+        <ocarina-of-time/characters/ganondorf> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 11 ;
+    monomyth:realizationDescription """Zelda bestows the Light Arrows upon Link, the sacred weapon
+capable of piercing Ganondorf's dark power. The gift is immediate and urgent: moments after the
+transfer, Ganondorf encases Zelda in a crystal prison and takes her to his tower, transforming the
+boon's delivery into the precipitating act of the final confrontation. The six sages channel their
+combined power to create a rainbow bridge spanning the chasm to Ganondorf's fortress, opening the
+path that only the fully equipped hero can walk."""@en ;
+    monomyth:fitNote """The boon is bestowed rather than seized, arriving as Zelda's gift in the
+moment before her capture rather than as the prize of completed trials."""@en .
+
+<ocarina-of-time/stages/the-hero-presses-on> a monomyth:StageRealization ;
+    rdfs:label "The hero presses on"@en ;
+    monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:hasFitQuality monomyth:AbsentFit ;
+    monomyth:stageRealizationOrder 12 ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/return-refusal-absent> .
+
+<ocarina-of-time/stages/the-tower-comes-down> a monomyth:StageRealization ;
+    rdfs:label "The tower comes down"@en ;
+    monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 13 ;
+    monomyth:realizationDescription """Ganondorf is defeated atop his tower but triggers its collapse
+with his final act of spite. Link and Zelda race downward through crumbling corridors, Zelda using
+her power to unseal iron barriers while the structure disintegrates around them. Flames, falling
+stone, and reanimated guardians block the descent. They emerge at the base moments before the tower
+crashes into rubble, only to hear something stir beneath the wreckage: Ganondorf, drawing on the
+Triforce of Power, transforms into the monstrous Ganon and rises from the ruins for a final
+confrontation."""@en .
+
+<ocarina-of-time/stages/six-sages-as-one> a monomyth:StageRealization ;
+    rdfs:label "Six sages as one"@en ;
+    monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda>,
+        <ocarina-of-time/characters/rauru>,
+        <ocarina-of-time/characters/saria> ;
+    monomyth:hasFitQuality monomyth:StrongFit ;
+    monomyth:stageRealizationOrder 14 ;
+    monomyth:realizationDescription """Link drives the Master Sword into Ganon's skull and Zelda
+channels the power of the six awakened sages to bind him. Together they seal Ganondorf into the
+Sacred Realm, a prison sustained not by the hero's strength alone but by a collective sacred
+authority that no single warrior could supply. Ganondorf, raging against the seal, swears to break
+free and destroy their descendants, but the binding holds."""@en ;
+    monomyth:fitNote """The sages' intervention completes what the hero's sword began; the sealing
+requires collective sacred authority beyond any individual's reach."""@en .
+
+<ocarina-of-time/stages/lay-the-master-sword-to-rest> a monomyth:StageRealization ;
+    rdfs:label "Lay the Master Sword to rest"@en ;
+    monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda> ;
+    monomyth:hasFitQuality monomyth:PerfectFit ;
+    monomyth:stageRealizationOrder 15 ;
+    monomyth:realizationDescription """Zelda takes back the Ocarina of Time and plays the Song of
+Time to send Link back to his childhood, closing the circle that opened when he first drew the
+Master Sword. The adult world dissolves around him. Link returns to the Temple of Time as a child,
+the sword resting again in its pedestal, Navi departing through a window into light. He stands alone
+in the temple, carrying the memory of a future that has been unmade."""@en ;
+    monomyth:hasSemioticDivergence <ocarina-of-time/divergences/semiotic/temporal-return> .
+
+<ocarina-of-time/stages/child-and-hero> a monomyth:StageRealization ;
+    rdfs:label "Child and hero"@en ;
+    monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 16 ;
+    monomyth:realizationDescription """Link has traversed both the child era and the adult era,
+the ordinary Hyrule and the Sacred Realm, carrying within a small body the experiential knowledge
+of a completed hero's journey. Yet the mastery is entirely private. The adult timeline has been
+erased, the people he saved do not remember being saved, and the two worlds he bridged now exist
+only in his memory. He walks through Hyrule Castle Town as a child among children, unrecognized and
+unrecognizable."""@en ;
+    monomyth:fitNote """Link's mastery is experiential and private: he has traversed both eras but
+can demonstrate this to no one, since the adult timeline has been erased."""@en ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/private-mastery> .
+
+<ocarina-of-time/stages/through-the-courtyard-window> a monomyth:StageRealization ;
+    rdfs:label "Through the courtyard window"@en ;
+    monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:involvesCharacter <ocarina-of-time/characters/link>,
+        <ocarina-of-time/characters/princess-zelda> ;
+    monomyth:hasFitQuality monomyth:ModerateFit ;
+    monomyth:stageRealizationOrder 17 ;
+    monomyth:realizationDescription """Link walks through the castle grounds and peers through the
+courtyard window to find Zelda again, exactly as he did at the journey's beginning, before any of it
+happened. She turns and sees a boy with a fairy and a green stone. Whether she recognizes him,
+whether the meeting will unfold differently this time, the narrative does not say. The ending mirrors
+the opening almost exactly, but the symmetry is deceptive: one of the two figures standing in that
+courtyard carries the weight of an entire erased future, and the other does not yet know there is
+anything to carry."""@en ;
+    monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/bittersweet-freedom> .
+
+# --- Narrative Divergences ------------
+
+<ocarina-of-time/divergences/narrative/absent-refusal> a monomyth:NarrativeDivergence ;
+    rdfs:label "Absent refusal divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/the-hero-does-not-hesitate> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheCall ;
+    monomyth:divergenceRationale """Link moves from call to action without psychological resistance.
+The Kokiri child who has yearned for a fairy receives one and immediately answers the summons. Mido's
+physical blockade at the forest path requires obtaining a sword and shield, but this functions as a
+mechanical gate rather than an expression of the hero's doubt or fear. The narrative's opening invests
+in spatial wonder rather than existential hesitation, reflecting a design where the child
+protagonist's eagerness is the point: in a world where Link has always been the outsider, the call
+is the first moment of belonging, and refusing it would contradict everything the character has
+silently endured."""@en .
+
+<ocarina-of-time/divergences/narrative/bifurcated-trials> a monomyth:NarrativeDivergence ;
+    rdfs:label "Bifurcated trials divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/stones-and-sages> ;
+    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
+    monomyth:divergenceRationale """Link's trials divide across a temporal rupture that fundamentally
+alters their character and stakes. The child phase presents three dungeon quests to gather Spiritual
+Stones, each testing courage and resourcefulness within a familiar Hyrule. The seven-year seal then
+intervenes, and when trials resume, the hero is physically transformed, the kingdom corrupted, and
+each temple now demands the awakening of a sage whose power is needed to confront Ganondorf. The two
+phases share a structural function but differ in tone, difficulty, and narrative weight: preparation
+in the first, genuine confrontation with darkness in the second. This bifurcation creates a
+developmental arc within what is formally a single stage, turning it into a before-and-after portrait
+of the same hero measured against the same world at different scales of maturity and
+peril."""@en .
+
+<ocarina-of-time/divergences/narrative/temptress-absent> a monomyth:NarrativeDivergence ;
+    rdfs:label "Absent temptress divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/a-quest-without-temptation> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """The quest offers no sustained moment of temptation, seduction, or
+invitation to abandon the journey for comfort or desire. Lon Lon Ranch and its pastoral tranquility
+present the closest structural candidate, yet Malon functions as a friend rather than a figure of
+dangerous attraction, and the ranch remains an optional interlude rather than a narrative test of
+resolve. The absence reflects both the protagonist's youth and the narrative's design: Link is a
+child thrust into responsibility without the psychological complexity that temptation requires, and
+even as an adult his single-mindedness is presented as a virtue rather than a limitation to be
+tested. The stage's function finds no purchase in a narrative where the ordinary world has been
+destroyed and no comfortable alternative remains to lure the hero away from his
+path."""@en .
+
+<ocarina-of-time/divergences/narrative/revelation-not-confrontation> a monomyth:NarrativeDivergence ;
+    rdfs:label "Revelation rather than confrontation divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/you-are-not-a-kokiri> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """Link's encounter with the father archetype arrives as passive
+disclosure rather than active confrontation. The Deku Tree Sprout simply tells Link what has always
+been true: he is Hylian, not Kokiri, placed in the forest as an infant by his dying mother during
+a great war and entrusted to the guardian tree's care. There is no dramatic standoff, no test of
+worthiness imposed by a paternal authority, no crisis of submission or defiance. The deepest truth
+about the hero's identity is delivered gently by a sapling grown where a great tree once stood,
+lending the moment an elegiac quality that substitutes quiet grief for the awe and terror that
+typically mark this stage. The father figure itself has already died; what remains is not authority
+but memory, and the reckoning is less a confrontation with power than an acceptance of
+orphanhood."""@en .
+
+<ocarina-of-time/divergences/narrative/return-refusal-absent> a monomyth:NarrativeDivergence ;
+    rdfs:label "Absent return refusal divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/the-hero-presses-on> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """Link transitions directly from defeating Ganon to the sages'
+sealing ritual without hesitation or reluctance to leave the special world behind. The narrative's
+momentum carries the hero forward through castle collapse and final confrontation without pause, and
+the decision to return is ultimately made for Link by Zelda rather than by him, removing the
+psychological space where reluctance could arise. The absence is structurally reinforced by the
+medium itself: after the climactic battle, control shifts to cutscene and the hero's agency is
+temporarily suspended precisely when the archetype would expect an internal reckoning with the
+prospect of return."""@en .
+
+<ocarina-of-time/divergences/narrative/private-mastery> a monomyth:NarrativeDivergence ;
+    rdfs:label "Private mastery divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/child-and-hero> ;
+    monomyth:divergesFrom monomyth:MasterOfTheTwoWorlds ;
+    monomyth:divergenceRationale """The hero has genuinely traversed both temporal worlds and the
+Sacred Realm between them, yet the time-travel return erases the public dimension of that mastery.
+In the restored child timeline, no one witnessed Link's adult deeds, the sages were never awakened,
+and the kingdom never fell. Link possesses experiential knowledge of both eras but cannot demonstrate,
+share, or leverage it. This transforms the archetype from a state of demonstrated dual-world fluency
+into an entirely interior condition: the hero masters two worlds that no longer coexist, making the
+mastery real but invisible, a private achievement that the surrounding community has no framework to
+recognize or validate."""@en .
+
+<ocarina-of-time/divergences/narrative/bittersweet-freedom> a monomyth:NarrativeDivergence ;
+    rdfs:label "Bittersweet freedom divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/through-the-courtyard-window> ;
+    monomyth:divergesFrom monomyth:FreedomToLive ;
+    monomyth:divergenceRationale """Zelda restores Link's childhood, but the gift carries an
+unresolved weight. The hero returns to a moment before the quest began, standing again before the
+princess, yet he carries within him the memory of a future now erased: friendships forged in temples,
+battles survived, a world saved that will never know it needed saving. The freedom is genuine in that
+Link has been released from the burden of the Hero of Time, but it is shadowed by a loneliness that
+the narrative acknowledges without resolving. Rather than the serene transcendence or liberated
+purposefulness that typically marks this stage, the ending offers a more melancholy reading: the
+hero's reward is the chance to live an ordinary life whose full meaning only he will ever
+understand."""@en .
+
+# --- Sequential Divergences -----------
+
+<ocarina-of-time/divergences/sequential/goddess-before-trials> a monomyth:SequentialDivergence ;
+    rdfs:label "Goddess before trials divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/a-fairy-and-a-green-stone> ;
+    monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
+    monomyth:divergenceRationale """The encounter with the luminous feminine arrives before the trials
+rather than after them. Zelda appears in the castle courtyard almost immediately after Link enters
+Hyrule, making her the figure who defines and authorizes the quest rather than the one who greets the
+hero at its midpoint. By placing the prophetic princess at the journey's outset, the narrative
+establishes her as the quest-giver whose vision the hero must validate through subsequent action,
+transforming the encounter from a moment of earned transcendence into one of commission, and shifting
+its function from culmination to catalyst."""@en .
+
+<ocarina-of-time/divergences/sequential/whale-amid-trials> a monomyth:SequentialDivergence ;
+    rdfs:label "Engulfment amid trials divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/seven-lost-years> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
+    monomyth:divergenceRationale """The symbolic death and rebirth arrives not at the close of the
+departure act but embedded within the trials themselves, splitting them into two distinct halves.
+Link pulls the Master Sword after completing the child-era dungeon sequence, and the seven-year seal
+that follows constitutes the engulfment at the heart of this archetype. By placing it midway through
+the trials rather than before them, the narrative creates a structural hinge: everything before the
+seal is preparation undertaken in innocence, everything after is confrontation undertaken with
+knowledge of what has been lost. The displacement turns a threshold between acts into a pivot within
+the central act itself."""@en .
+
+# --- Semiotic Divergences -------------
+
+<ocarina-of-time/divergences/semiotic/temporal-return> a monomyth:SemioticDivergence ;
+    rdfs:label "Temporal return threshold divergence"@en ;
+    monomyth:divergenceOf <ocarina-of-time/stages/lay-the-master-sword-to-rest> ;
+    monomyth:divergesFrom monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:divergenceRationale """The return threshold is crossed through time rather than space.
+Zelda uses the Ocarina of Time to send Link backward seven years, dissolving the boundary between
+his adult heroic identity and his childhood self. Where the archetype envisions a hero physically
+re-entering the ordinary world carrying new wisdom, this narrative achieves the return by rewinding
+the world itself around the hero, making the threshold a temporal membrane rather than a spatial
+border. The semiotic shift has profound consequences: the hero does not bring wisdom back to a
+waiting community, because the community never experienced the crisis from which he saved them. The
+sign of return looks identical to the sign of departure, a child standing in a courtyard, but its
+meaning has been wholly transformed by what only the hero remembers."""@en .

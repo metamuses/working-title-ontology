@@ -83,7 +83,7 @@ intimacy, renewal, and the passage from darkness toward connection.
 
 - [Tommaso Barbato](https://github.com/epistrephein)
 - [Nicol D'Amelio](https://github.com/nicoldamelio)
-- [Maryam Dadras](https://github.com/Maryamdadras)
+- [Maryam Dadrasrazi](https://github.com/Maryamdadras)
 - [Martina Uccheddu](https://github.com/martinaucch)
 
 ## License
