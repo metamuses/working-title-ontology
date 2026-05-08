@@ -99,6 +99,119 @@ function parseTTL(text) {
   return stageMap;
 }
 
+// ── Batman-specific parser ──────────────────────────────────────────────────
+// Batman: Year One has two journeys sharing stageRealizationOrder 1-17.
+// We hardcode the stage IRI slugs for each journey in the correct order,
+// then build two clean stage maps from the parsed TTL data.
+
+const BATMAN_BASE = 'batman-year-one/stages/';
+
+// Stage IRI slugs in order 1-17 for each journey
+const BATMAN_BRUCE_SLUGS = [
+  'the-train-to-gotham',        // 1
+  'i-am-not-ready',             // 2
+  'the-bat-at-the-window',      // 3
+  'the-dinner-party-ambush',    // 4
+  'the-tenement-siege',         // 5
+  'the-distributed-trials',     // 6
+  'encounter-with-selina',      // 7
+  'the-absent-temptation',      // 8
+  'the-absent-atonement',       // 9
+  'the-absent-apotheosis',      // 10
+  'the-bridge-rescue',          // 11
+  'refusal-of-the-return',      // 12
+  'the-magic-flight',           // 13
+  'rescue-from-without',        // 14
+  'crossing-the-return-threshold', // 15
+  'master-of-two-worlds',       // 16
+  'freedom-to-live',            // 17
+];
+
+const BATMAN_GORDON_SLUGS = [
+  'arrival-in-gotham',          // 1
+  'waiting-to-report',          // 2
+  'the-absent-aid',             // 3
+  'the-beating',                // 4
+  'beating-flass',              // 5
+  'the-honest-cop-trials',      // 6
+  'the-intellectual-equal',     // 7
+  'the-extramarital-affair',    // 8
+  'confession-to-barbara',      // 9
+  'family-man',                 // 10
+  'the-bridge-alliance',        // 11
+  'refusal-of-the-return',      // 12
+  'the-magic-flight',           // 13
+  'rescue-from-without',        // 14
+  'crossing-the-return-threshold', // 15
+  'master-of-two-worlds',       // 16
+  'freedom-to-live',            // 17
+];
+
+function parseBatmanTTL(text) {
+  const blocks = text.split(/\n(?=<)/);
+
+  // Step 1: build divergence IRI → { label, rationale }
+  const divergenceInfo = {};
+  const divTypes  = ['SemioticDivergence', 'NarrativeDivergence', 'SequentialDivergence'];
+  const typeToKey = { SemioticDivergence: 'semiotic', NarrativeDivergence: 'narrative', SequentialDivergence: 'sequential' };
+
+  for (const block of blocks) {
+    let divType = null;
+    for (const dt of divTypes) { if (block.includes(`monomyth:${dt}`)) { divType = dt; break; } }
+    if (!divType) continue;
+    const iriMatch = block.match(/^<([^>]+)>/);
+    if (!iriMatch) continue;
+    const labelMatch     = block.match(/rdfs:label\s+"([^"]+)"/);
+    const rationaleMatch = block.match(/monomyth:divergenceRationale\s+"""([\s\S]*?)"""@en/);
+    divergenceInfo[iriMatch[1]] = {
+      label:     labelMatch     ? labelMatch[1]                                  : iriMatch[1].split('/').pop(),
+      rationale: rationaleMatch ? rationaleMatch[1].replace(/\s+/g, ' ').trim() : null,
+    };
+  }
+
+  // Step 2: build slug → stageData lookup from all StageRealization blocks
+  const slugData = {};
+  for (const block of blocks) {
+    if (!block.includes('monomyth:StageRealization')) continue;
+    const iriMatch = block.match(/^<([^>]+)>/);
+    if (!iriMatch) continue;
+    const fullIri = iriMatch[1]; // e.g. batman-year-one/stages/the-train-to-gotham
+    const slug    = fullIri.replace(BATMAN_BASE, '');
+    const entry   = {};
+
+    const labelMatch = block.match(/rdfs:label\s+"([^"]+)"@en/);
+    if (labelMatch) entry.label = labelMatch[1];
+
+    const descMatch = block.match(/monomyth:realizationDescription\s+"""([\s\S]*?)"""@en/);
+    if (descMatch) entry.description = descMatch[1].replace(/\s+/g, ' ').trim();
+
+    const divPredicates = [
+      { pred: 'hasSequentialDivergence', key: 'sequential' },
+      { pred: 'hasNarrativeDivergence',  key: 'narrative'  },
+      { pred: 'hasSemioticDivergence',   key: 'semiotic'   },
+    ];
+    for (const { pred, key } of divPredicates) {
+      const m = block.match(new RegExp(`monomyth:${pred}\\s+<([^>]+)>`));
+      if (m && divergenceInfo[m[1]]) {
+        entry[key] = { label: divergenceInfo[m[1]].label, rationale: divergenceInfo[m[1]].rationale };
+      }
+    }
+    slugData[slug] = entry;
+  }
+
+  // Step 3: assemble ordered stage maps from the hardcoded slug lists
+  function buildMap(slugList) {
+    const map = {};
+    slugList.forEach((slug, idx) => {
+      map[idx + 1] = slugData[slug] || {};
+    });
+    return map;
+  }
+
+  return [buildMap(BATMAN_BRUCE_SLUGS), buildMap(BATMAN_GORDON_SLUGS)];
+}
+
+
 // ── Fetch & cache TTL ───────────────────────────────────────────────────────
 async function getDivergenceData(modalId) {
   if (divergenceCache[modalId]) return divergenceCache[modalId];
@@ -107,10 +220,16 @@ async function getDivergenceData(modalId) {
   const filename = MODAL_TTL_MAP[modalId];
   if (!filename) return null;
 
+  const isBatman = modalId === 'kg-modal-batman';
+
   fetchPromises[modalId] = fetch(`${TTL_BASE_PATH}${filename}`)
     .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.text(); })
-    .then(text => { const d = parseTTL(text); divergenceCache[modalId] = d; return d; })
-    .catch(err => { console.warn('[divergence-tooltips]', err); return null; });
+    .then(text => {
+      const d = isBatman ? parseBatmanTTL(text) : parseTTL(text);
+      divergenceCache[modalId] = d;
+      return d;
+    })
+    .catch(err => { console.warn('[modals-enhancer]', err); return null; });
 
   return fetchPromises[modalId];
 }
@@ -214,70 +333,79 @@ function closePanel(panel, segments) {
 // ── Wire up a modal ─────────────────────────────────────────────────────────
 function wireModal(modal) {
   const modalId     = modal.id;
-  const fitBarLarge = modal.querySelector('.fit-bar.fit-bar-large');
-  if (!fitBarLarge) return;
+  const isBatman    = modalId === 'kg-modal-batman';
 
   // Pre-fetch TTL
   getDivergenceData(modalId);
 
-  const segments   = [...fitBarLarge.querySelectorAll('.segment')];
-  const panel      = createDetailPanel(fitBarLarge);
-  let   activeIdx  = null;
+  // For batman: wire each fit-bar to its own stage map index.
+  // For all others: wire the single fit-bar to the single stage map.
+  const fitBars = isBatman
+    ? [...modal.querySelectorAll('.fit-bar.fit-bar-large')]
+    : [modal.querySelector('.fit-bar.fit-bar-large')].filter(Boolean);
 
-  // Close button
-  panel.querySelector('.stage-detail-close').addEventListener('click', () => {
-    closePanel(panel, segments);
-    activeIdx = null;
-  });
+  if (!fitBars.length) return;
 
-  // ── Segment click → stage detail ──────────────────────────────────────────
-  segments.forEach((segment, idx) => {
-    segment.style.cursor = 'pointer';
-    const stageOrder = idx + 1;
+  fitBars.forEach((fitBarLarge, barIdx) => {
+    const segments  = [...fitBarLarge.querySelectorAll('.segment')];
+    const panel     = createDetailPanel(fitBarLarge);
+    let   activeIdx = null;
 
-    segment.addEventListener('click', async (e) => {
-      // Don't trigger if clicking a div-icon (those have their own tooltip)
-      if (e.target.classList.contains('div-icon')) return;
-
-      const data = await getDivergenceData(modalId);
-
-      if (activeIdx === idx && panel.classList.contains('open')) {
-        // Same segment clicked again → close
-        closePanel(panel, segments);
-        activeIdx = null;
-        return;
-      }
-
-      // Highlight active segment
-      segments.forEach(s => s.classList.remove('segment-active'));
-      segment.classList.add('segment-active');
-      activeIdx = idx;
-
-      openPanel(panel, stageOrder, data ? data[stageOrder] : null);
+    // Close button
+    panel.querySelector('.stage-detail-close').addEventListener('click', () => {
+      closePanel(panel, segments);
+      activeIdx = null;
     });
-  });
 
-  // ── Divergence icon hover → tooltip ───────────────────────────────────────
-  fitBarLarge.querySelectorAll('.div-icon').forEach(icon => {
-    let divType = null;
-    if (icon.classList.contains('sequential'))     divType = 'sequential';
-    else if (icon.classList.contains('narrative')) divType = 'narrative';
-    else if (icon.classList.contains('semiotic'))  divType = 'semiotic';
-    if (!divType) return;
+    // ── Segment click → stage detail ────────────────────────────────────────
+    segments.forEach((segment, idx) => {
+      segment.style.cursor = 'pointer';
+      const stageOrder = idx + 1;
 
-    const segment    = icon.closest('.segment');
-    const stageOrder = segments.indexOf(segment) + 1;
+      segment.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('div-icon')) return;
 
-    icon.addEventListener('mouseenter', async () => {
-      const data      = await getDivergenceData(modalId);
-      const stageDivs = data ? data[stageOrder] : null;
-      const divInfo   = stageDivs ? stageDivs[divType] : null;
-      showTooltip(icon, TYPE_LABELS[divType],
-        divInfo ? divInfo.label    : TYPE_LABELS[divType],
-        divInfo ? divInfo.rationale : null
-      );
+        const rawData   = await getDivergenceData(modalId);
+        // For batman rawData is an array [bruceMap, gordonMap]; otherwise it's a plain map
+        const stageMap  = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
+
+        if (activeIdx === idx && panel.classList.contains('open')) {
+          closePanel(panel, segments);
+          activeIdx = null;
+          return;
+        }
+
+        segments.forEach(s => s.classList.remove('segment-active'));
+        segment.classList.add('segment-active');
+        activeIdx = idx;
+
+        openPanel(panel, stageOrder, stageMap ? stageMap[stageOrder] : null);
+      });
     });
-    icon.addEventListener('mouseleave', hideTooltip);
+
+    // ── Divergence icon hover → tooltip ─────────────────────────────────────
+    fitBarLarge.querySelectorAll('.div-icon').forEach(icon => {
+      let divType = null;
+      if (icon.classList.contains('sequential'))     divType = 'sequential';
+      else if (icon.classList.contains('narrative')) divType = 'narrative';
+      else if (icon.classList.contains('semiotic'))  divType = 'semiotic';
+      if (!divType) return;
+
+      const segment    = icon.closest('.segment');
+      const stageOrder = segments.indexOf(segment) + 1;
+
+      icon.addEventListener('mouseenter', async () => {
+        const rawData   = await getDivergenceData(modalId);
+        const stageMap  = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
+        const stageDivs = stageMap ? stageMap[stageOrder] : null;
+        const divInfo   = stageDivs ? stageDivs[divType] : null;
+        showTooltip(icon, TYPE_LABELS[divType],
+          divInfo ? divInfo.label    : TYPE_LABELS[divType],
+          divInfo ? divInfo.rationale : null
+        );
+      });
+      icon.addEventListener('mouseleave', hideTooltip);
+    });
   });
 }
 
