@@ -828,6 +828,33 @@ body::before {
   background: #962d21;
 }
 
+/* Divergence Icons */
+.divergences-container {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column-reverse; /* stack from bottom up */
+  gap: 2px;
+  align-items: center;
+}
+
+.div-icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 14px;
+  line-height: 1;
+  color: var(--gold-dim);
+  opacity: 0.6;
+  display: block;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.fit-bar.fit-bar-large .div-icon {
+  font-size: 16px;
+}
+
 .kg-card .fit-label {
   font-size: 0.72rem;
   color: var(--text-muted);
@@ -1004,7 +1031,7 @@ body.modal-open {
 
 .fit-bar.fit-bar-large {
   gap: 4px;
-  margin-top: 16px;
+  margin-top: 56px;
   margin-bottom: 10px;
 }
 
