@@ -1162,8 +1162,8 @@ code {
 }
 
 .team-avatar {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 16px;
   display: flex;
   align-items: center;
@@ -1215,6 +1215,32 @@ code {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.team-social a {
+  color: var(--text-muted);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-social a:hover {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.team-social svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ========================================================================
