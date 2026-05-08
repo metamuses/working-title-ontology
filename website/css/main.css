@@ -1021,18 +1021,6 @@ body.modal-open {
   font-size: 0.76rem;
 }
 
-.kg-modal-meta {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.kg-modal-meta-item {
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  border: 1px solid rgba(122, 92, 20, 0.16);
-  padding: 10px 12px;
-}
 
 /* ========================================================================
    CONCLUSION SECTION
