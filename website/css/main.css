@@ -363,6 +363,34 @@ body::before {
   margin-top: 48px;
 }
 
+.about-quote {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  padding-left: 24px;
+  border-left: 2px solid var(--gold-dim);
+  margin-top: 16px;
+}
+
+@media (min-width: 901px) {
+  .about-quote {
+    margin-top: clamp(36px, 3.5vw, 56px);
+    margin-bottom: clamp(72px, 6vw, 108px);
+  }
+}
+
+.about-quote cite {
+  display: block;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-top: 20px;
+  font-family: var(--font-body);
+}
+
 .about-stat-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -868,27 +896,6 @@ body.modal-open {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
-}
-
-.conclusion-quote {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.5;
-  color: var(--ink);
-  padding-left: 24px;
-  border-left: 2px solid var(--gold-dim);
-  margin-top: 16px;
-}
-
-.conclusion-quote cite {
-  display: block;
-  font-size: 0.85rem;
-  font-style: normal;
-  color: var(--text-muted);
-  margin-top: 20px;
-  font-family: var(--font-body);
 }
 
 .future-list {
