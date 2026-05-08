@@ -476,7 +476,7 @@ body::before {
   color: var(--text-secondary);
 }
 
-.about-stages-list li + li {
+.about-stages-list li+li {
   margin-top: 6px;
 }
 
@@ -494,6 +494,7 @@ body::before {
     break-inside: avoid;
   }
 }
+
 .methodology-list {
   list-style: none;
   margin-top: 32px;
@@ -1046,33 +1047,66 @@ body.modal-open {
   background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
 }
 
-.conclusion-grid {
+.horizons-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.future-list {
-  list-style: none;
-  margin-top: 32px;
-}
-
-.future-list li {
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(122, 92, 20, 0.1);
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: baseline;
   gap: 12px;
 }
 
-.future-list li::before {
-  content: '→';
+.class-card {
+  background: var(--bg-card);
+  padding: 32px;
+  transition: background 0.3s ease;
+}
+
+.class-card:hover {
+  background: var(--bg-card-hover);
+}
+
+.horizons-card {
+  padding: 24px;
+  position: relative;
+}
+
+.horizons-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 32px;
+  height: 32px;
   color: var(--gold-dim);
-  font-size: 0.85rem;
-  flex-shrink: 0;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.class-card .class-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.horizons-card .class-name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.class-card .class-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--gold);
+  font-size: 0.9em;
 }
 
 /* ========================================================================
@@ -1336,6 +1370,12 @@ body.modal-open {
   }
 
   .kg-modal-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .horizons-grid {
     grid-template-columns: 1fr;
   }
 }

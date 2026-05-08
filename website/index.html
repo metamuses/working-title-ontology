@@ -1840,9 +1840,9 @@
         <div class="section-divider"></div>
       </div>
 
-      <div class="conclusion-grid">
+      <div style="display: flex; flex-direction: column; gap: 64px;">
         <div class="reveal reveal-delay-1">
-          <div class="section-prose">
+          <div class="section-prose" style="max-width: 100%;">
             <p>
               Across four millennia of storytelling&mdash;from Sumerian clay tablets to digital cinema&mdash;the
               monomyth endures not as a rigid template but as a gravitational center. Some narratives orbit it
@@ -1857,23 +1857,124 @@
               culture, era, and author navigated the same deep structure of departure, ordeal, and return.
             </p>
           </div>
-
-          <ul class="future-list">
-            <li>Extend the ontology with temporal properties and thematic classes</li>
-            <li>Build SPARQL endpoints for cross-work comparative queries</li>
-            <li>Create interactive visualizations of journey patterns</li>
-            <li>Formalize remaining prose breakdowns as full knowledge graphs</li>
-            <li>Link stage realizations across works with SKOS mappings</li>
-          </ul>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <blockquote class="conclusion-quote">
-            "The hero ventures forth from the world of common day into a region of supernatural wonder:
-            fabulous forces are there encountered and a decisive victory is won: the hero comes back from
-            this mysterious adventure with the power to bestow boons on his fellow man."
-            <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
-          </blockquote>
+          <div class="horizons-grid">
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 8V4H8"></path>
+                <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                <path d="M2 14h2"></path>
+                <path d="M20 14h2"></path>
+                <path d="M15 13v2"></path>
+                <path d="M9 13v2"></path>
+              </svg>
+              <div class="class-name">LLMs use for reuse</div>
+              <div class="class-desc">To rapidly scale the population of our ontology without sacrificing structural
+                integrity,
+                we employed an LLM-assisted knowledge grounding technique using Claude and Gemini. By supplying our
+                baseline OWL ontology
+                alongside a "gold-standard" exemplar (The Matrix), we created a short prompt to draft new narrative
+                knowledge graphs.
+                The results provided a fascinating case study in LLM limitations. For newer or less famous works,
+                analytical accuracy
+                plummeted as the models confidently hallucinated plot points to force a fit into Campbell's framework.
+                Conversely, while the models
+                easily generated accurate structural skeletons for famous works, this success must be carefully weighed
+                against their severe
+                memorization bias toward heavily duplicated bestsellers (as noted in the data archaeology study <em>
+                  Speak, Memory, Chang et al., 2023</em>).
+                Because of this, LLM generation serves only as a first-pass scaffolding, requiring a mandatory
+                human-in-the-loop revision process.
+                While AI can successfully identify literal, <code>PerfectFit</code> structural matches, human
+                researchers must step in to manually
+                revise the qualitative nuances of the narrative. Specifically, mapping divergences demands deep,
+                context-aware critical appraisal.
+                The AI can build the graph's syntactic skeleton, but identifying exactly why and how an author
+                deliberately subverted an archetype
+                remains a distinctly human intellectual exercise.</div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="18" r="3"></circle>
+                <circle cx="6" cy="6" r="3"></circle>
+                <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                <line x1="6" y1="9" x2="6" y2="21"></line>
+              </svg>
+              <div class="class-name">Meta-convergence</div>
+              <div class="class-desc">Although our Monomyth ontology
+                doesn't explicitly reuse <code>creon:MetaConvergence</code>, it inherently executes
+                its core mechanism.
+                CreOn defines meta-convergence as the critical appraisal of a creative product's divergence against
+                expected background knowledge to make it functionally or aesthetically effective.
+                Our framework performs this function by using Campbell's monomyth as the structural baseline, while
+                applying specific divergence classes (<code>monomyth:NarrativeDivergence</code>,
+                <code>monomyth:SequentialDivergence</code>, and <code>monomyth:SemioticDivergence</code>)
+                to evaluate creative departures. Both models view these deviations as deliberate, meaningful choices
+                rather than simple errors. To formally implement this connection in the future,
+                we could map our <code>monomyth:FitQuality</code> scores and <code>monomyth:divergenceRationale</code>
+                descriptions directly to the <code>creon:MetaConvergence</code> class.
+              </div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                <path d="M12 12V8"></path>
+              </svg>
+              <div class="class-name">Framework expansion</div>
+              <div class="class-desc">The ultimate extensibility of this project lies in the potential to expand our
+                foundational schema to transcend the structural limitations of Joseph Campbell's original model.
+                By integrating frameworks like Maureen Murdock’s <em>The Heroine’s Journey</em> and Kim Hudson’s <em>The
+                  Virgin’s Promise</em> into our ontology.ttl, we could broaden the graph's analytical power
+                to capture deeply internal, relational, and socially disruptive narrative arcs. While Campbell’s
+                monomyth maps an outward quest of conquest into the unknown, encoding these alternative frameworks
+                would allow us to query entirely different narrative. Murdock provides a potential "feminine
+                counter-arc" that tracks an inward descent to integrate split psychic polarities,
+                while Hudson’s model captures transformation born from radical self-expression against a conformist
+                community.
+                Ultimately, by formalizing these alternative structures as linked data in the future, we could empower
+                the ontology to successfully process genres that the traditional monomyth struggles
+                with, proving that narratives prioritizing authenticity and inner balance are just as structurally
+                rigorous as tales of external triumph.</div>
+            </div>
+            <div class="class-card horizons-card">
+              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              <div class="class-name">Potential research</div>
+              <div class="class-desc">By populating this OWL ontology with diverse narrative knowledge graphs in the
+                future,
+                we could transition literary analysis into computable data. This would enable us to formulate complex
+                research
+                questions that query divergences across multiple cultural axes. We could run SPARQL queries to discover,
+                for instance,
+                how the <code>monomyth:SemioticDivergence</code> shifts from literal magic to psychological trauma
+                across centuries
+                of storytelling, or whether authors of different genders systematically invert specific archetypes.
+                Specifically, the structured nature of this dataset would allow researchers to track narrative shifts
+                over <strong>time</strong>
+                (mapping historical trends and the evolution of specific divergences), across <strong>space</strong>
+                (contrasting Western and Eastern
+                structural traditions), through distinct <strong>media</strong> (comparing structural constraints in
+                literature, film, comics, and music),
+                and across <strong>gender</strong> (analyzing how the gender of the author or protagonist dictates
+                specific divergences).
+                Ultimately, this framework has the potential to transition the Monomyth from a static literary theory
+                into a dynamic,
+                quantitative research tool, ready to reveal exactly how modern culture bends ancient mythologies to
+                reflect its own realities.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
