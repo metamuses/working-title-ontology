@@ -48,7 +48,7 @@ through his union with Bradamante."""@en ;
         <orlando-furioso/characters/hippogriff>,
         <orlando-furioso/characters/astolfo>,
         <orlando-furioso/characters/charlemagne> ;
-    monomyth:hasStageRealization <orlando-furioso/stages/flight-from-albracca>,
+    monomyth:hasStageRealization <orlando-furioso/stages/carried-away-from-albracca>,
         <orlando-furioso/stages/enchanted-delays>,
         <orlando-furioso/stages/melissas-ring>,
         <orlando-furioso/stages/departure-from-logistilla>,
@@ -157,8 +157,8 @@ Ruggiero after the hero's conversion and defection from the Saracen sphere."""@e
 
 # --- Stage Realizations ---------------
 
-<orlando-furioso/stages/flight-from-albracca> a monomyth:StageRealization ;
-    rdfs:label "Flight from Albracca"@en ;
+<orlando-furioso/stages/carried-away-from-albracca> a monomyth:StageRealization ;
+    rdfs:label "Carried away from Albracca"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/hippogriff> ;
@@ -167,9 +167,9 @@ Ruggiero after the hero's conversion and defection from the Saracen sphere."""@e
     monomyth:realizationDescription """During the chaos of war around Albracca, Ruggiero loses control
 of the Hippogriff and is violently carried away through the sky into unknown territories. This forced
 displacement abruptly tears him out of the ordinary rhythm of martial conflict and introduces him into
-Ariosto's wider universe of enchantment, wandering, and destiny. The involuntary flight initiates the
-hero's separation from stable identity and begins his long passage through magical and spiritual
-transformation."""@en .
+Ariosto's wider universe of enchantment, wandering, and destiny."""@en ;
+    monomyth:fitNote """The involuntary flight led by the hippogriff initiates the hero's separation 
+from stable identity and begins his long passage through magical and spiritual transformation."""@en .
 
 <orlando-furioso/stages/enchanted-delays> a monomyth:StageRealization ;
     rdfs:label "Enchanted Delays"@en ;
