@@ -749,6 +749,11 @@ body::before {
   border-color: var(--gold-dim);
 }
 
+.tag-game {
+  color: var(--accent-orange);
+  border-color: rgba(189, 94, 16, 0.35);
+}
+
 .tag-book {
   color: var(--accent-teal);
   border-color: rgba(42, 104, 88, 0.3);
