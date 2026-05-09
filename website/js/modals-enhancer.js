@@ -314,12 +314,12 @@ function createDetailPanel(fitBar) {
   return panel;
 }
 
-function openPanel(panel, order, stageData) {
+function openPanel(panel, order, total, stageData) {
   const kicker = panel.querySelector('.stage-detail-kicker');
   const title  = panel.querySelector('.stage-detail-title');
   const body   = panel.querySelector('.stage-detail-body');
 
-  kicker.textContent = `Stage ${order} of 17`;
+  kicker.textContent = `Stage ${order} of ${total}`;
   title.textContent  = stageData?.label       || `Stage ${order}`;
   body.textContent   = stageData?.description || 'No description available for this stage.';
 
@@ -383,7 +383,7 @@ function wireModal(modal) {
         segment.classList.add('segment-active');
         activeIdx = idx;
 
-        openPanel(panel, stageOrder, stageMap ? stageMap[stageOrder] : null);
+        openPanel(panel, stageOrder, segments.length, stageMap ? stageMap[stageOrder] : null);
       });
     });
 
