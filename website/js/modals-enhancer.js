@@ -19,6 +19,7 @@ const MODAL_TTL_MAP = {
   'kg-modal-sablefable':   'sableFable.ttl',
   'kg-modal-ladybird':     'lady-bird.ttl',
   'kg-modal-aeneid':       'aeneid.ttl',
+  'kg-modal-Zelda':         'ocarina-of-time.ttl',
 };
 
 const TTL_BASE_PATH = '../ontology/graphs/';
@@ -331,6 +332,8 @@ function closePanel(panel, segments) {
 }
 
 // ── Wire up a modal ─────────────────────────────────────────────────────────
+function isMobile() { return window.innerWidth <= 600; }
+
 function wireModal(modal) {
   const modalId     = modal.id;
   const isBatman    = modalId === 'kg-modal-batman';
@@ -357,12 +360,13 @@ function wireModal(modal) {
       activeIdx = null;
     });
 
-    // ── Segment click → stage detail ────────────────────────────────────────
+    // ── Segment click → stage detail (desktop only) ──────────────────────────
     segments.forEach((segment, idx) => {
       segment.style.cursor = 'pointer';
       const stageOrder = idx + 1;
 
       segment.addEventListener('click', async (e) => {
+        if (isMobile()) return;  // no interaction on mobile
         if (e.target.classList.contains('div-icon')) return;
 
         const rawData   = await getDivergenceData(modalId);
@@ -383,8 +387,9 @@ function wireModal(modal) {
       });
     });
 
-    // ── Divergence icon hover → tooltip ─────────────────────────────────────
+    // ── Divergence icon hover → tooltip (desktop only) ──────────────────
     fitBarLarge.querySelectorAll('.div-icon').forEach(icon => {
+      if (isMobile()) return;  // no hover tooltips on mobile
       let divType = null;
       if (icon.classList.contains('sequential'))     divType = 'sequential';
       else if (icon.classList.contains('narrative')) divType = 'narrative';

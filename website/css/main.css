@@ -1607,6 +1607,33 @@ code {
   .kg-modal-meta {
     grid-template-columns: 1fr;
   }
+
+  /* ── Mobile: Stage Fit Profile — view-only, no interaction ── */
+
+  /* Disable clicks on every segment bar */
+  .fit-bar.fit-bar-large .segment {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  /* Icons visible but non-interactive on mobile */
+  .fit-bar.fit-bar-large .div-icon {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+
+  /* Prevent stage-detail panel from appearing */
+  .stage-detail-panel,
+  .stage-detail-panel.open {
+    display: none !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+  }
+
+  /* Suppress the divergence tooltip */
+  #div-tooltip {
+    display: none !important;
+  }
 }
 
 @media (max-width: 900px) {
