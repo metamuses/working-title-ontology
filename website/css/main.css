@@ -1146,6 +1146,12 @@ body.modal-open {
     gap: 48px;
   }
 
+  .footer-inner { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+  .footer-brand-row { flex-direction: column; align-items: center; gap: 8px; }
+  .footer-links { justify-content: center; }
+  .footer-inline-links { justify-content: center; }
+  .footer-copy { justify-self: auto; }
+
   .ontology-classes {
     grid-template-columns: 1fr;
   }
@@ -1182,10 +1188,6 @@ body.modal-open {
 @media (max-width: 600px) {
   .about-stat-group { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
-  .footer-brand-row { flex-direction: column; align-items: center; gap: 8px; }
-  .footer-links { justify-content: center; }
-  .footer-inline-links { justify-content: center; }
   .kg-modal-dialog { padding: 18px; }
   .kg-modal-title { font-size: 1.7rem; }
   .kg-modal-meta { grid-template-columns: 1fr; }
