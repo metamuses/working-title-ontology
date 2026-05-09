@@ -1024,6 +1024,35 @@ body.modal-open {
   color: var(--gold-dim);
 }
 
+.footer-brand-row {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+}
+
+.footer-inline-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer-inline-links li + li::before {
+  content: "\00b7";
+  margin-right: 8px;
+  color: var(--text-muted);
+}
+
+.footer-inline-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-inline-links a:hover { color: var(--gold); }
+
 .footer-links {
   display: flex;
   gap: 24px;
@@ -1150,7 +1179,9 @@ body.modal-open {
   .about-stat-group { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-brand-row { flex-direction: column; align-items: center; gap: 8px; }
   .footer-links { justify-content: center; }
+  .footer-inline-links { justify-content: center; }
   .kg-modal-dialog { padding: 18px; }
   .kg-modal-title { font-size: 1.7rem; }
   .kg-modal-meta { grid-template-columns: 1fr; }
