@@ -363,6 +363,34 @@ body::before {
   margin-top: 48px;
 }
 
+.about-quote {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+  padding-left: 24px;
+  border-left: 2px solid var(--gold-dim);
+  margin-top: 16px;
+}
+
+@media (min-width: 901px) {
+  .about-quote {
+    margin-top: clamp(36px, 3.5vw, 56px);
+    margin-bottom: clamp(72px, 6vw, 108px);
+  }
+}
+
+.about-quote cite {
+  display: block;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-top: 20px;
+  font-family: var(--font-body);
+}
+
 .about-stat-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -393,6 +421,59 @@ body::before {
   letter-spacing: 0.08em;
 }
 
+.about-stages-group {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.about-stages-box {
+  padding: 28px;
+}
+
+.about-stages-title {
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 20px;
+}
+
+.about-stages-act {
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dim);
+  margin-bottom: 12px;
+}
+
+.about-stages-list {
+  margin-left: 1.2rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.about-stages-list li + li {
+  margin-top: 6px;
+}
+
+.about-stages-list strong {
+  color: var(--text-primary);
+}
+
+@media (min-width: 901px) {
+  .about-stages-list {
+    column-count: 2;
+    column-gap: 18px;
+  }
+
+  .about-stages-list li {
+    break-inside: avoid;
+  }
+}
 .methodology-list {
   list-style: none;
   margin-top: 32px;
@@ -868,27 +949,6 @@ body.modal-open {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
-}
-
-.conclusion-quote {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.5;
-  color: var(--ink);
-  padding-left: 24px;
-  border-left: 2px solid var(--gold-dim);
-  margin-top: 16px;
-}
-
-.conclusion-quote cite {
-  display: block;
-  font-size: 0.85rem;
-  font-style: normal;
-  color: var(--text-muted);
-  margin-top: 20px;
-  font-family: var(--font-body);
 }
 
 .future-list {

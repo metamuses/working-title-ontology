@@ -19,6 +19,7 @@
     dcterms:title "Lady Bird"@en ;
     dcterms:created "2017"^^xsd:gYear ;
     dcterms:creator "Greta Gerwig" ;
+    schema:countryOfOrigin wd:Q30 ;
     schema:genre "Coming-of-age"@en, 
         "Comedy-Drama"@en ;
     owl:sameAs wd:Q27480769 ;
