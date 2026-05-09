@@ -9,24 +9,25 @@
 
 // ── Modal ID → TTL filename mapping ────────────────────────────────────────
 const MODAL_TTL_MAP = {
-  'kg-modal-matrix':       'the-matrix.ttl',
-  'kg-modal-lion-king':    'the-lion-king.ttl',
+  'kg-modal-matrix': 'the-matrix.ttl',
+  'kg-modal-lion-king': 'the-lion-king.ttl',
   'kg-modal-call-of-wild': 'the-call-of-the-wild.ttl',
-  'kg-modal-Rostam':       'rostam-haft-khan.ttl',
-  'kg-modal-waltermitty':  'walter-mitty.ttl',
-  'kg-modal-batman':       'batman.ttl',
-  'kg-modal-oedipus':      'oedipus.ttl',
-  'kg-modal-sablefable':   'sableFable.ttl',
-  'kg-modal-ladybird':     'lady-bird.ttl',
-  'kg-modal-aeneid':       'aeneid.ttl',
-  'kg-modal-Zelda':         'ocarina-of-time.ttl',
+  'kg-modal-Rostam': 'rostam-haft-khan.ttl',
+  'kg-modal-waltermitty': 'walter-mitty.ttl',
+  'kg-modal-batman': 'batman.ttl',
+  'kg-modal-oedipus': 'oedipus.ttl',
+  'kg-modal-sablefable': 'sableFable.ttl',
+  'kg-modal-ladybird': 'lady-bird.ttl',
+  'kg-modal-aeneid': 'aeneid.ttl',
+  'kg-modal-Zelda': 'ocarina-of-time.ttl',
+  'kg-modal-orlando': 'orlando-furioso.ttl',
 };
 
 const TTL_BASE_PATH = '../ontology/graphs/';
 
 // Cache: modalId → parsed stageMap
 const divergenceCache = {};
-const fetchPromises   = {};
+const fetchPromises = {};
 
 // ── TTL Parser ──────────────────────────────────────────────────────────────
 function parseTTL(text) {
@@ -36,8 +37,8 @@ function parseTTL(text) {
   const divergenceInfo = {};
   const divTypes = ['SemioticDivergence', 'NarrativeDivergence', 'SequentialDivergence'];
   const typeToKey = {
-    'SemioticDivergence':   'semiotic',
-    'NarrativeDivergence':  'narrative',
+    'SemioticDivergence': 'semiotic',
+    'NarrativeDivergence': 'narrative',
     'SequentialDivergence': 'sequential',
   };
 
@@ -54,13 +55,13 @@ function parseTTL(text) {
     if (!iriMatch) continue;
     const iri = iriMatch[1];
 
-    const labelMatch    = block.match(/rdfs:label\s+"([^"]+)"/);
+    const labelMatch = block.match(/rdfs:label\s+"([^"]+)"/);
     const rationaleMatch = block.match(/monomyth:divergenceRationale\s+"""([\s\S]*?)"""@en/);
 
     divergenceInfo[iri] = {
-      type:      typeToKey[divType],
-      label:     labelMatch     ? labelMatch[1]                                   : iri.split('/').pop(),
-      rationale: rationaleMatch ? rationaleMatch[1].replace(/\s+/g, ' ').trim()  : null,
+      type: typeToKey[divType],
+      label: labelMatch ? labelMatch[1] : iri.split('/').pop(),
+      rationale: rationaleMatch ? rationaleMatch[1].replace(/\s+/g, ' ').trim() : null,
     };
   }
 
@@ -84,11 +85,11 @@ function parseTTL(text) {
     // Divergences
     const divPredicates = [
       { pred: 'hasSequentialDivergence', key: 'sequential' },
-      { pred: 'hasNarrativeDivergence',  key: 'narrative'  },
-      { pred: 'hasSemioticDivergence',   key: 'semiotic'   },
+      { pred: 'hasNarrativeDivergence', key: 'narrative' },
+      { pred: 'hasSemioticDivergence', key: 'semiotic' },
     ];
     for (const { pred, key } of divPredicates) {
-      const re    = new RegExp(`monomyth:${pred}\\s+<([^>]+)>`);
+      const re = new RegExp(`monomyth:${pred}\\s+<([^>]+)>`);
       const match = block.match(re);
       if (match) {
         const info = divergenceInfo[match[1]];
@@ -153,7 +154,7 @@ function parseBatmanTTL(text) {
 
   // Step 1: build divergence IRI → { label, rationale }
   const divergenceInfo = {};
-  const divTypes  = ['SemioticDivergence', 'NarrativeDivergence', 'SequentialDivergence'];
+  const divTypes = ['SemioticDivergence', 'NarrativeDivergence', 'SequentialDivergence'];
   const typeToKey = { SemioticDivergence: 'semiotic', NarrativeDivergence: 'narrative', SequentialDivergence: 'sequential' };
 
   for (const block of blocks) {
@@ -162,10 +163,10 @@ function parseBatmanTTL(text) {
     if (!divType) continue;
     const iriMatch = block.match(/^<([^>]+)>/);
     if (!iriMatch) continue;
-    const labelMatch     = block.match(/rdfs:label\s+"([^"]+)"/);
+    const labelMatch = block.match(/rdfs:label\s+"([^"]+)"/);
     const rationaleMatch = block.match(/monomyth:divergenceRationale\s+"""([\s\S]*?)"""@en/);
     divergenceInfo[iriMatch[1]] = {
-      label:     labelMatch     ? labelMatch[1]                                  : iriMatch[1].split('/').pop(),
+      label: labelMatch ? labelMatch[1] : iriMatch[1].split('/').pop(),
       rationale: rationaleMatch ? rationaleMatch[1].replace(/\s+/g, ' ').trim() : null,
     };
   }
@@ -177,8 +178,8 @@ function parseBatmanTTL(text) {
     const iriMatch = block.match(/^<([^>]+)>/);
     if (!iriMatch) continue;
     const fullIri = iriMatch[1]; // e.g. batman-year-one/stages/the-train-to-gotham
-    const slug    = fullIri.replace(BATMAN_BASE, '');
-    const entry   = {};
+    const slug = fullIri.replace(BATMAN_BASE, '');
+    const entry = {};
 
     const labelMatch = block.match(/rdfs:label\s+"([^"]+)"@en/);
     if (labelMatch) entry.label = labelMatch[1];
@@ -188,8 +189,8 @@ function parseBatmanTTL(text) {
 
     const divPredicates = [
       { pred: 'hasSequentialDivergence', key: 'sequential' },
-      { pred: 'hasNarrativeDivergence',  key: 'narrative'  },
-      { pred: 'hasSemioticDivergence',   key: 'semiotic'   },
+      { pred: 'hasNarrativeDivergence', key: 'narrative' },
+      { pred: 'hasSemioticDivergence', key: 'semiotic' },
     ];
     for (const { pred, key } of divPredicates) {
       const m = block.match(new RegExp(`monomyth:${pred}\\s+<([^>]+)>`));
@@ -216,7 +217,7 @@ function parseBatmanTTL(text) {
 // ── Fetch & cache TTL ───────────────────────────────────────────────────────
 async function getDivergenceData(modalId) {
   if (divergenceCache[modalId]) return divergenceCache[modalId];
-  if (fetchPromises[modalId])   return fetchPromises[modalId];
+  if (fetchPromises[modalId]) return fetchPromises[modalId];
 
   const filename = MODAL_TTL_MAP[modalId];
   if (!filename) return null;
@@ -236,7 +237,7 @@ async function getDivergenceData(modalId) {
 }
 
 // ── Tooltip ─────────────────────────────────────────────────────────────────
-let tooltip  = null;
+let tooltip = null;
 let hideTimer = null;
 
 function createTooltip() {
@@ -254,25 +255,25 @@ function createTooltip() {
 
 function showTooltip(icon, typeLabel, label, rationale) {
   clearTimeout(hideTimer);
-  tooltip.querySelector('.div-tooltip-type').textContent  = typeLabel;
+  tooltip.querySelector('.div-tooltip-type').textContent = typeLabel;
   tooltip.querySelector('.div-tooltip-label').textContent = label;
-  tooltip.querySelector('.div-tooltip-body').textContent  = rationale || 'No rationale available.';
+  tooltip.querySelector('.div-tooltip-body').textContent = rationale || 'No rationale available.';
 
   tooltip.style.opacity = '0';
   tooltip.style.display = 'block';
 
-  const rect  = icon.getBoundingClientRect();
-  const ttW   = 420;
-  let   left  = rect.left + window.scrollX + rect.width / 2 - ttW / 2;
-  let   top   = rect.top  + window.scrollY - 8;
+  const rect = icon.getBoundingClientRect();
+  const ttW = 420;
+  let left = rect.left + window.scrollX + rect.width / 2 - ttW / 2;
+  let top = rect.top + window.scrollY - 8;
 
   left = Math.max(8, Math.min(left, window.innerWidth - ttW - 8));
-  tooltip.style.left  = `${left}px`;
-  tooltip.style.top   = `${top}px`;
+  tooltip.style.left = `${left}px`;
+  tooltip.style.top = `${top}px`;
   tooltip.style.width = `${ttW}px`;
 
   requestAnimationFrame(() => {
-    tooltip.style.opacity   = '1';
+    tooltip.style.opacity = '1';
     tooltip.style.transform = 'translateY(-100%) translateY(-12px)';
   });
 }
@@ -280,7 +281,7 @@ function showTooltip(icon, typeLabel, label, rationale) {
 function hideTooltip() {
   hideTimer = setTimeout(() => {
     if (tooltip) {
-      tooltip.style.opacity   = '0';
+      tooltip.style.opacity = '0';
       tooltip.style.transform = 'translateY(-100%) translateY(-8px)';
       setTimeout(() => { tooltip.style.display = 'none'; }, 250);
     }
@@ -289,8 +290,8 @@ function hideTooltip() {
 
 const TYPE_LABELS = {
   sequential: 'Sequential Divergence',
-  narrative:  'Narrative Divergence',
-  semiotic:   'Semiotic Divergence',
+  narrative: 'Narrative Divergence',
+  semiotic: 'Semiotic Divergence',
 };
 
 // ── Stage Detail Panel ──────────────────────────────────────────────────────
@@ -316,12 +317,12 @@ function createDetailPanel(fitBar) {
 
 function openPanel(panel, order, total, stageData) {
   const kicker = panel.querySelector('.stage-detail-kicker');
-  const title  = panel.querySelector('.stage-detail-title');
-  const body   = panel.querySelector('.stage-detail-body');
+  const title = panel.querySelector('.stage-detail-title');
+  const body = panel.querySelector('.stage-detail-body');
 
   kicker.textContent = `Stage ${order} of ${total}`;
-  title.textContent  = stageData?.label       || `Stage ${order}`;
-  body.textContent   = stageData?.description || 'No description available for this stage.';
+  title.textContent = stageData?.label || `Stage ${order}`;
+  body.textContent = stageData?.description || 'No description available for this stage.';
 
   panel.classList.add('open');
 }
@@ -335,8 +336,8 @@ function closePanel(panel, segments) {
 function isMobile() { return window.innerWidth <= 600; }
 
 function wireModal(modal) {
-  const modalId     = modal.id;
-  const isBatman    = modalId === 'kg-modal-batman';
+  const modalId = modal.id;
+  const isBatman = modalId === 'kg-modal-batman';
 
   // Pre-fetch TTL
   getDivergenceData(modalId);
@@ -350,9 +351,9 @@ function wireModal(modal) {
   if (!fitBars.length) return;
 
   fitBars.forEach((fitBarLarge, barIdx) => {
-    const segments  = [...fitBarLarge.querySelectorAll('.segment')];
-    const panel     = createDetailPanel(fitBarLarge);
-    let   activeIdx = null;
+    const segments = [...fitBarLarge.querySelectorAll('.segment')];
+    const panel = createDetailPanel(fitBarLarge);
+    let activeIdx = null;
 
     // Close button
     panel.querySelector('.stage-detail-close').addEventListener('click', () => {
@@ -369,9 +370,9 @@ function wireModal(modal) {
         if (isMobile()) return;  // no interaction on mobile
         if (e.target.classList.contains('div-icon')) return;
 
-        const rawData   = await getDivergenceData(modalId);
+        const rawData = await getDivergenceData(modalId);
         // For batman rawData is an array [bruceMap, gordonMap]; otherwise it's a plain map
-        const stageMap  = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
+        const stageMap = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
 
         if (activeIdx === idx && panel.classList.contains('open')) {
           closePanel(panel, segments);
@@ -391,21 +392,21 @@ function wireModal(modal) {
     fitBarLarge.querySelectorAll('.div-icon').forEach(icon => {
       if (isMobile()) return;  // no hover tooltips on mobile
       let divType = null;
-      if (icon.classList.contains('sequential'))     divType = 'sequential';
+      if (icon.classList.contains('sequential')) divType = 'sequential';
       else if (icon.classList.contains('narrative')) divType = 'narrative';
-      else if (icon.classList.contains('semiotic'))  divType = 'semiotic';
+      else if (icon.classList.contains('semiotic')) divType = 'semiotic';
       if (!divType) return;
 
-      const segment    = icon.closest('.segment');
+      const segment = icon.closest('.segment');
       const stageOrder = segments.indexOf(segment) + 1;
 
       icon.addEventListener('mouseenter', async () => {
-        const rawData   = await getDivergenceData(modalId);
-        const stageMap  = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
+        const rawData = await getDivergenceData(modalId);
+        const stageMap = isBatman ? (rawData ? rawData[barIdx] : null) : rawData;
         const stageDivs = stageMap ? stageMap[stageOrder] : null;
-        const divInfo   = stageDivs ? stageDivs[divType] : null;
+        const divInfo = stageDivs ? stageDivs[divType] : null;
         showTooltip(icon, TYPE_LABELS[divType],
-          divInfo ? divInfo.label    : TYPE_LABELS[divType],
+          divInfo ? divInfo.label : TYPE_LABELS[divType],
           divInfo ? divInfo.rationale : null
         );
       });
