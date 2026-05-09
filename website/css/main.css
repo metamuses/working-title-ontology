@@ -248,7 +248,7 @@ body::before {
   display: none;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 768px) {
   .desktop-break { display: inline; }
 }
 
