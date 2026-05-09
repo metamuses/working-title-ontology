@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -26,6 +26,24 @@ jobs:
           for graph in ontology/graphs/*.ttl; do
             rapper -i turtle -c "$graph"
           done
+  test:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          cache: 'pip'
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Check RDF issues
+        run: python scripts/check_rdf_issues.py
+      - name: Check RDF inverses
+        run: python scripts/check_rdf_inverses.py
+      - name: Check RDF entities
+        run: python scripts/check_rdf_entities.py
   deploy:
     runs-on: ubuntu-latest
     needs: test
