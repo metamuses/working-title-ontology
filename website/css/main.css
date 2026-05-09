@@ -1014,8 +1014,8 @@ body.modal-open {
 .footer-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
@@ -1074,18 +1074,21 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   color: var(--gold-light);
+  line-height: 0;
 }
 
 .github-link svg {
   width: 32px;
   height: 32px;
   stroke: currentColor;
+  display: block;
   transform: translateY(8px);
 }
 
 .footer-copy {
   font-size: 0.75rem;
   color: var(--text-muted);
+  justify-self: end;
 }
 
 /* ========================================================================
