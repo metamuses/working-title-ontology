@@ -102,16 +102,11 @@ body::before {
   gap: 10px;
 }
 
-.navbar-brand .glyph {
+.navbar-brand .brand-mark {
   width: 28px;
   height: 28px;
-  border: 1.5px solid var(--gold);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  letter-spacing: 0;
+  flex: 0 0 auto;
+  color: var(--gold);
 }
 
 .nav-links {
