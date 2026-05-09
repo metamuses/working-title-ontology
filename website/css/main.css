@@ -244,6 +244,14 @@ body::before {
   animation: fadeUp 0.8s ease 0.8s forwards;
 }
 
+.desktop-break {
+  display: none;
+}
+
+@media (min-width: 1001px) {
+  .desktop-break { display: inline; }
+}
+
 .hero-cta {
   display: inline-flex;
   align-items: center;
@@ -375,13 +383,6 @@ body::before {
   margin-top: 16px;
 }
 
-@media (min-width: 901px) {
-  .about-quote {
-    margin-top: clamp(36px, 3.5vw, 56px);
-    margin-bottom: clamp(72px, 6vw, 108px);
-  }
-}
-
 .about-quote cite {
   display: block;
   font-size: 0.85rem;
@@ -472,6 +473,11 @@ body::before {
 
   .about-stages-list li {
     break-inside: avoid;
+  }
+
+  .about-quote {
+    margin-top: clamp(36px, 3.5vw, 56px);
+    margin-bottom: clamp(72px, 6vw, 108px);
   }
 }
 .methodology-list {
