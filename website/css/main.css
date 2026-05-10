@@ -1365,6 +1365,11 @@ body.modal-open {
   position: relative;
 }
 
+.horizons-card.class-card:hover {
+  background: var(--bg-card);
+  cursor: default;
+}
+
 .horizons-icon {
   position: absolute;
   top: 24px;
