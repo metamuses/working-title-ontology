@@ -92,7 +92,7 @@ server {
     }
 
     # ===== SPARQL ===========================
-    location = /sparql {
+    location ~ ^/sparql/?$ {
         return 302 https://triplydb.com/epistrephein/monomyth/sparql;
     }
 
