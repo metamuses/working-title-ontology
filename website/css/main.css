@@ -552,106 +552,52 @@ body::before {
   margin-bottom: 72px;
 }
 
-.ontology-diagram {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
+.ontology-classes-panel {
+  margin-top: 30px;
 }
 
-.journey-circle {
-  width: 340px;
-  height: 340px;
-  border: 1px solid var(--gold-dim);
-  border-radius: 50%;
-  position: relative;
+.ontology-iri-box {
+  margin-bottom: 120px;
 }
 
-.journey-circle::before {
-  content: '';
-  position: absolute;
-  inset: 20px;
-  border: 1px solid rgba(122, 92, 20, 0.2);
-  border-radius: 50%;
-}
-
-.journey-circle::after {
-  content: '';
-  position: absolute;
-  inset: 44px;
-  border: 1px dashed rgba(122, 92, 20, 0.12);
-  border-radius: 50%;
-}
-
-.circle-label {
-  position: absolute;
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--gold);
-  white-space: nowrap;
-}
-
-.circle-label.departure {
-  top: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle-label.initiation {
-  bottom: 20%;
-  right: -20px;
-  transform: rotate(0deg);
-}
-
-.circle-label.return {
-  bottom: 20%;
-  left: -10px;
-}
-
-.circle-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.circle-center .glyph {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: var(--gold);
-  margin-bottom: 4px;
-}
-
-.circle-center .caption {
-  font-size: 0.65rem;
+.ontology-classes-label {
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
+  letter-spacing: 0.3em;
+  color: var(--gold-dim);
+  margin-bottom: 24px;
 }
 
-.stage-dot {
+.ontology-iri-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.ontology-iri-value::after {
+  content: '';
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
 }
 
-.stage-dot.dim {
-  background: var(--gold-dim);
-  width: 4px;
-  height: 4px;
+.ontology-iri-value:hover::after,
+.ontology-iri-value:focus-visible::after {
+  width: 100%;
 }
 
 .ontology-classes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
-  margin-top: 48px;
 }
 
 .class-card {
@@ -1548,6 +1494,14 @@ code {
     grid-template-columns: 1fr;
   }
 
+  .ontology-classes-panel {
+    margin-top: 0;
+  }
+
+  .ontology-iri-box {
+    margin-bottom: 50px;
+  }
+
   .kg-grid {
     grid-template-columns: 1fr;
   }
@@ -1567,14 +1521,6 @@ code {
     grid-template-columns: 1fr;
   }
 
-  .ontology-diagram {
-    min-height: 320px;
-  }
-
-  .journey-circle {
-    width: 280px;
-    height: 280px;
-  }
 }
 
 @media (max-width: 600px) {

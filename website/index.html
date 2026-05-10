@@ -100,7 +100,7 @@
             </p>
           </div>
 
-          <ol class="methodology-list">
+          <ol class="methodology-list reveal">
             <li>
               <span class="step-num">01</span>
               <span class="step-text"><strong>Universal narrative grammar</strong> &mdash; Beneath the surface variety
@@ -122,7 +122,7 @@
           </ol>
         </div>
 
-        <div class="reveal reveal-delay-2">
+        <div class="reveal">
           <blockquote class="about-quote">
             “The hero ventures forth from the world of common day into a region of supernatural wonder:
             fabulous forces are there encountered and a decisive victory is won: the hero comes back from
@@ -130,8 +130,9 @@
             <cite>— Joseph Campbell, <em>The Hero with a Thousand Faces</em> (1949)</cite>
           </blockquote>
 
+          <div class="ontology-classes-label reveal">Stages of the Hero&rsquo;s Journey</div>
           <div class="about-stat-group about-stages-group">
-            <div class="about-stat about-stages-box">
+            <div class="about-stat about-stages-box reveal">
               <div class="about-stages-act">I. Departure</div>
               <ol class="about-stages-list" start="1">
                 <li>The Call to Adventure</li>
@@ -142,7 +143,7 @@
               </ol>
             </div>
 
-            <div class="about-stat about-stages-box">
+            <div class="about-stat about-stages-box reveal reveal-delay-1">
               <div class="about-stages-act">II. Initiation</div>
               <ol class="about-stages-list" start="6">
                 <li>The Road of Trials</li>
@@ -154,7 +155,7 @@
               </ol>
             </div>
 
-            <div class="about-stat about-stages-box">
+            <div class="about-stat about-stages-box reveal reveal-delay-2">
               <div class="about-stages-act">III. Return</div>
               <ol class="about-stages-list" start="12">
                 <li>Refusal of the Return</li>
@@ -183,116 +184,76 @@
           <div class="section-divider"></div>
           <div class="section-prose">
             <p>
-              The ontology defines a reusable vocabulary at <code
-                style="font-size:0.85em; color:var(--gold-dim);">monomyth#</code> that captures the deep structure of
-              Campbell's monomyth. At its heart is the <strong>StageRealization</strong> pattern&mdash;the concrete
-              manifestation of an abstract stage in a specific narrative&mdash;which enables meaningful cross-work
-              comparison.
+              The ontology defines a <strong>reusable vocabulary</strong> at <code style="font-size:0.85em; color:var(--gold-dim);">monomyth:</code> that captures the deep structure of Campbell's monomyth. Expressed in OWL and serialized as Turtle, it models the seventeen stages across three acts, the archetypal roles that populate the journey, and the evaluative apparatus needed to assess how faithfully (or how creatively) any given narrative instantiates the pattern. Every analytical judgment, from the quality of a stage's manifestation to the rationale behind a departure from the template, is represented as a first-class, queryable entity rather than a background assumption.
             </p>
             <p>
-              Characters are linked to archetypes through reified <strong>ArchetypeRoles</strong> that can shift across
-              stages,
-              acknowledging that a Mentor in Act I may become a Shadow by Act III. Each stage realization carries a
-              <strong>FitQuality</strong> assessment on a six-point scale from <em>Inverted</em> to <em>Perfect
-                Fit</em>,
-              grounding literary analysis in structured, queryable data.
+              The central modeling pattern is the <strong>MonomythExpression</strong>, a reification of the interpretive act itself: the structured reading of a particular narrative work through Campbell's lens. Each expression anchors a constellation of <strong>StageRealizations</strong>, the concrete manifestations of abstract stages within that narrative. A realization carries a prose description of the narrative moment it captures, a position in the story's own sequence (which may diverge from the canonical ordering), and a <strong>FitQuality</strong> assessment on a six-point scale ranging from <em>Perfect Fit</em> through <em>Strong</em>, <em>Moderate</em>, and <em>Weak</em> to <em>Absent</em> and <em>Inverted</em>, each backed by a numeric score and an optional analytical note.
+            </p>
+            <p>
+              The treatment of characters draws on <strong>Christopher Vogler</strong>'s <em>The Writer's Journey</em>, a screenwriting manual that deliberately translates Campbell's mythological archetypes into a practical dramaturgy of recurring roles. The ontology formalizes it through the <code style="font-size:0.85em; color:var(--gold-dim);">embodiesArchetype</code> property, linking characters to <strong>archetypal roles</strong> while acknowledging their productive instability: a figure who operates as Mentor in one stage may reveal itself as Shadow in another, and the graph preserves this fluidity as structured, traversable data.
+            </p>
+            <p>
+              Where the alignment between a narrative and the monomyth template is imperfect, the ontology does not simply record the gap: it models the nature of the departure through three orthogonal divergence classes, all subclasses of CREON's <code style="font-size:0.85em; color:var(--gold-dim);">ProductDivergence</code>. A <strong>NarrativeDivergence</strong> captures what happens when a stage is absent, subverted, compressed, or redistributed across multiple narrative moments. A <strong>SequentialDivergence</strong> marks when a stage occurs and whether the narrative has displaced it from its canonical position for dramatic or thematic effect. A <strong>SemioticDivergence</strong> traces how the stage is expressed, underlying the shift in sign systems (from sacred to secular, from mythic to technological, from external threat to internal state) through which the same structural function is realized in a different cultural or medial vocabulary. Each divergence carries a prose rationale documenting the artistic purpose behind the departure, making explicit that imperfect fit is itself an object of analysis, often the most revealing one.
+            </p>
+            <p>
+              Formalizing a hermeneutic tradition into computational structure risks flattening the very interpretive richness it seeks to preserve. This ontology addresses this tension by treating <strong>deviation as constitutive</strong>: conformity and subversion, presence and absence, canonical order and displacement are granted equal analytical weight. The deeper question it encodes is how a pattern largely unchanged for millennia has generated such radically diverse stories, and how each creative departure, every inversion or omission, is itself a meaningful act.
             </p>
           </div>
         </div>
 
-        <div class="ontology-diagram reveal reveal-delay-1">
-          <div class="journey-circle">
-            <!-- Stage dots positioned around the circle -->
-            <div class="stage-dot" style="top: 4%; left: 50%;"></div>
-            <div class="stage-dot dim" style="top: 8%; left: 67%;"></div>
-            <div class="stage-dot" style="top: 16%; left: 80%;"></div>
-            <div class="stage-dot dim" style="top: 28%; left: 90%;"></div>
-            <div class="stage-dot" style="top: 42%; left: 95%;"></div>
-            <div class="stage-dot dim" style="top: 56%; left: 94%;"></div>
-            <div class="stage-dot" style="top: 68%; left: 88%;"></div>
-            <div class="stage-dot dim" style="top: 78%; left: 78%;"></div>
-            <div class="stage-dot" style="top: 86%; left: 65%;"></div>
-            <div class="stage-dot dim" style="top: 90%; left: 50%;"></div>
-            <div class="stage-dot" style="top: 88%; left: 36%;"></div>
-            <div class="stage-dot dim" style="top: 82%; left: 22%;"></div>
-            <div class="stage-dot" style="top: 72%; left: 12%;"></div>
-            <div class="stage-dot dim" style="top: 58%; left: 5%;"></div>
-            <div class="stage-dot" style="top: 44%; left: 4%;"></div>
-            <div class="stage-dot dim" style="top: 30%; left: 9%;"></div>
-            <div class="stage-dot" style="top: 18%; left: 20%;"></div>
-
-            <div class="circle-label departure">Departure</div>
-            <div class="circle-label initiation">Initiation</div>
-            <div class="circle-label return">Return</div>
-
-            <div class="circle-center">
-              <div class="glyph">⟳</div>
-              <div class="caption">17 stages</div>
+        <div class="reveal reveal-delay-1 ontology-classes-panel">
+          <div class="about-stat about-stages-box ontology-iri-box">
+            <div class="about-stages-act">Monomyth Ontology IRI</div>
+            <a class="ontology-iri-value" href="https://monomyth.metamuses.org/ontology#" target="_blank" rel="noopener noreferrer">https://monomyth.metamuses.org/ontology#</a>
+          </div>
+          <div class="ontology-classes-label">Core Classes</div>
+          <div class="ontology-classes">
+            <div class="class-card reveal">
+              <div class="class-prefix">monomyth:NarrativeWork</div>
+              <div class="class-name">Narrative Work</div>
+              <div class="class-desc">A story, novel, epic, film, or other narrative that can be analyzed through the monomyth framework. Linked to external identifiers via owl:sameAs for Wikidata integration.</div>
+            </div>
+            <div class="class-card reveal reveal-delay-1">
+              <div class="class-prefix">monomyth:MonomythExpression</div>
+              <div class="class-name">Monomyth Expression</div>
+              <div class="class-desc">A specific realization of the monomyth structure within a particular narrative work. One work may contain multiple expressions for different characters.</div>
+            </div>
+            <div class="class-card reveal">
+              <div class="class-prefix">monomyth:Character</div>
+              <div class="class-name">Character</div>
+              <div class="class-desc">A character within a specific narrative work, linked to archetypes and involved in stage realizations across the journey.</div>
+            </div>
+            <div class="class-card reveal reveal-delay-1">
+              <div class="class-prefix">monomyth:Archetype</div>
+              <div class="class-name">Archetype</div>
+              <div class="class-desc">A recurring character role based on Vogler's adaptation of Campbell: Hero, Mentor, Herald, Threshold Guardian, Shadow, Shapeshifter, Trickster, and Ally.</div>
+            </div>
+            <div class="class-card reveal">
+              <div class="class-prefix">monomyth:StageRealization</div>
+              <div class="class-name">Stage Realization</div>
+              <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative, with fit quality, prose description, and ordering.</div>
+            </div>
+            <div class="class-card reveal reveal-delay-1">
+              <div class="class-prefix">monomyth:FitQuality</div>
+              <div class="class-name">Fit Quality</div>
+              <div class="class-desc">A six-point scale from InvertedFit through AbsentFit, WeakFit, ModerateFit, StrongFit, to PerfectFit for assessing stage mappings.</div>
+            </div>
+            <div class="class-card reveal">
+              <div class="class-prefix">monomyth:NarrativeDivergence</div>
+              <div class="class-name">Narrative Divergence</div>
+              <div class="class-desc">A creative departure from the expected monomyth pattern, formalizing the insight that imperfect alignments are not failures of fit but potential acts of deliberate artistic choice.</div>
+            </div>
+            <div class="class-card reveal reveal-delay-1">
+              <div class="class-prefix">monomyth:SequentialDivergence</div>
+              <div class="class-name">Sequential Divergence</div>
+              <div class="class-desc">A structural departure from the expected ordering of monomyth stages, occurring when a narrative realizes a stage earlier or later than its canonical position.</div>
+            </div>
+            <div class="class-card reveal">
+              <div class="class-prefix">monomyth:SemioticDivergence</div>
+              <div class="class-name">Semiotic Divergence</div>
+              <div class="class-desc">A divergence in the sign system through which a stage is expressed, where the cultural or figurative vehicle changes while structural function is preserved.</div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="reveal">
-        <div
-          style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.3em; color:var(--gold-dim); margin-bottom: 24px;">
-          Core Classes</div>
-      </div>
-
-      <div class="ontology-classes">
-        <div class="class-card reveal">
-          <div class="class-prefix">monomyth:NarrativeWork</div>
-          <div class="class-name">Narrative Work</div>
-          <div class="class-desc">A story, novel, epic, film, or other narrative. Linked to external identifiers via
-            owl:sameAs for Wikidata integration.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-1">
-          <div class="class-prefix">monomyth:MonomythInstance</div>
-          <div class="class-name">Monomyth Instance</div>
-          <div class="class-desc">A specific hero's journey within a work. One work may contain multiple instances for
-            different characters.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-2">
-          <div class="class-prefix">monomyth:StageRealization</div>
-          <div class="class-name">Stage Realization</div>
-          <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative,
-            with fit quality and prose description.</div>
-        </div>
-        <div class="class-card reveal">
-          <div class="class-prefix">monomyth:Character</div>
-          <div class="class-name">Character</div>
-          <div class="class-desc">A character within a narrative, linked to archetypes through reified ArchetypeRole
-            assignments that can shift across stages.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-1">
-          <div class="class-prefix">monomyth:Archetype</div>
-          <div class="class-name">Archetype</div>
-          <div class="class-desc">A recurring character role: Hero, Mentor, Herald, Threshold Guardian, Shadow,
-            Shapeshifter, Trickster, and more.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-2">
-          <div class="class-prefix">monomyth:FitQuality</div>
-          <div class="class-name">Fit Quality</div>
-          <div class="class-desc">A six-point scale from Inverted (0) through Absent, Weak, Moderate, Strong, to Perfect
-            Fit (5) for assessing stage mappings.</div>
-        </div>
-        <div class="class-card reveal">
-          <div class="class-prefix">monomyth:NarrativeWorld</div>
-          <div class="class-name">Narrative World</div>
-          <div class="class-desc">A distinct realm within the story&mdash;ordinary world, special world&mdash;modeling
-            the spatial logic of the journey.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-1">
-          <div class="class-prefix">monomyth:Threshold</div>
-          <div class="class-name">Threshold</div>
-          <div class="class-desc">A boundary between narrative worlds. Connected to worlds via connectsWorld, guarded by
-            Threshold Guardian archetypes.</div>
-        </div>
-        <div class="class-card reveal reveal-delay-2">
-          <div class="class-prefix">monomyth:SymbolicElement</div>
-          <div class="class-name">Symbolic Element</div>
-          <div class="class-desc">Objects, places, or events carrying symbolic weight&mdash;red pills, white rabbits,
-            golden fleeces&mdash;with annotated meanings.</div>
         </div>
       </div>
     </div>
@@ -2867,7 +2828,7 @@
           </a>
         </li>
       </ul>
-      <div class="footer-copy">&copy; 2026 &middot; CC BY-SA 4.0</div>
+      <div class="footer-copy">&copy; 2026 &middot; CC BY 4.0</div>
     </div>
   </footer>
 
