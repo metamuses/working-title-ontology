@@ -446,18 +446,21 @@ remain in a safe, defeated state."""@en .
 # --- Sequential Divergences -----------
 
 <walter-mitty/divergences/sequential/premature-return> a monomyth:SequentialDivergence ;
+    rdfs:label "Premature Return divergence (volcanic eruption)"@en ;
     monomyth:divergenceOf <walter-mitty/stages/volcanic-retreat> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
     monomyth:divergenceRationale """A physical return occurs halfway through the journey due to
 external failure, interrupting the canonical sequence."""@en .
 
 <walter-mitty/divergences/sequential/early-refusal-of-life> a monomyth:SequentialDivergence ;
+    rdfs:label "Early Refusal of Life divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/discarded-wallet> ;
     monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
     monomyth:divergenceRationale """The hero refuses his new identity early because he perceives his
 first attempt as a failure."""@en .
 
 <walter-mitty/divergences/sequential/delayed-physical-attainment> a monomyth:SequentialDivergence ;
+    rdfs:label "Delayed Physical Attainment divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/recovery-of-the-physical-boon> ;
     monomyth:divergesFrom monomyth:TheUltimateBoon ;
     monomyth:divergenceRationale """The physical Boon is retrieved after the internal transformation
@@ -466,17 +469,20 @@ is complete, reversing the typical acquisition sequence."""@en .
 # --- Semiotic Divergences -------------
 
 <walter-mitty/divergences/semiotic/call-as-professional-crisis> a monomyth:SemioticDivergence ;
+    rdfs:label "Call as Professional Crisis divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/negative-25-missing> ;
     monomyth:divergesFrom monomyth:TheCallToAdventure ;
     monomyth:divergenceRationale """The call is expressed through a corporate crisis involving the
 transition from print to digital media."""@en .
 
 <walter-mitty/divergences/semiotic/corporate-aid> a monomyth:SemioticDivergence ;
+    rdfs:label "Corporate Aid divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/clues-and-encouragement> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
     monomyth:divergenceRationale """A simple gift replaces traditional mythic talismans."""@en .
 
 <walter-mitty/divergences/semiotic/domestic-guide> a monomyth:SemioticDivergence ;
+    rdfs:label "Domestic Guide divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/mothers-clue> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
     monomyth:divergenceRationale """The guide is the hero's mother being present to help him and
@@ -484,12 +490,14 @@ remind him of the event that he has missed regarding the clues, due to being in 
 immaginations."""@en .
 
 <walter-mitty/divergences/semiotic/artist-as-father> a monomyth:SemioticDivergence ;
+    rdfs:label "Artist as Father divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/the-ghost-cat> ;
     monomyth:divergesFrom monomyth:AtonementWithTheFather ;
     monomyth:divergenceRationale """The Father is a secular artist; atonement is achieved through
 shared professional respect."""@en .
 
 <walter-mitty/divergences/semiotic/bureaucratic-flight> a monomyth:SemioticDivergence ;
+    rdfs:label "Bureaucratic Flight divergence"@en ;
     monomyth:divergenceOf <walter-mitty/stages/airport-security> ;
     monomyth:divergesFrom monomyth:TheMagicFlight ;
     monomyth:divergenceRationale """The Magic Flight is expressed through the modern struggle of
