@@ -28,7 +28,7 @@
 between Charlemagne's Christian paladins and the Saracen armies while constantly interrupting and
 interweaving multiple narrative threads centered on heroes such as Orlando, Ruggiero, Bradamante,
 and Astolfo."""@en .
-    
+
 # --- Monomyth Expressions --------------
 
 <orlando-furioso/monomyths/ruggiero-journey> a monomyth:MonomythExpression ;
@@ -98,7 +98,8 @@ captivity and magical illusion, she represents the most complete temptation away
 and dynastic destiny."""@en ;
     monomyth:characterOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter,
-        monomyth:Shadow .
+        monomyth:Shadow ;
+    owl:sameAs wd:Q3609002 .
 
 <orlando-furioso/characters/melissa> a monomyth:Character ;
     rdfs:label "Melissa"@en ;
@@ -170,7 +171,7 @@ displacement abruptly tears him out of the ordinary rhythm of martial conflict a
 Ariosto's wider universe of enchantment, wandering, and destiny."""@en ;
     monomyth:fitNote """The call is enacted as literal physical abduction rather than as invitation,
 omen, or summons, which gives it an unusual coercive force absent from most monomyth manifestations.
-The involuntary flight led by the hippogriff initiates the hero's separation from stable identity and 
+The involuntary flight led by the hippogriff initiates the hero's separation from stable identity and
 begins his long passage through magical and spiritual transformation."""@en .
 
 <orlando-furioso/stages/enchanted-delays> a monomyth:StageRealization ;
@@ -197,8 +198,8 @@ him."""@en ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizationDescription """Within Alcina's enchanted island where the Hippogryph deposits
-him, Ruggiero abandons martial honor and heroic purpose to live in sensual luxury under the spell of 
-the sorceress. The enchantress reduces the hero to a passive object of pleasure, isolating him from 
+him, Ruggiero abandons martial honor and heroic purpose to live in sensual luxury under the spell of
+the sorceress. The enchantress reduces the hero to a passive object of pleasure, isolating him from
 memory, duty, and destiny while concealing the monstrous reality beneath her seductive beauty. Here,
 erotic enchantment itself becomes the mechanism threatening to erase the hero's transformative path."""@en ;
     monomyth:hasSequentialDivergence <orlando-furioso/divergences/sequential/temptress-before-trials> .
@@ -227,9 +228,9 @@ toward his destined transformation."""@en ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizationDescription """After escaping Alcina's island, Ruggiero reaches the rational
 and disciplined realm of Logistilla, where he receives instruction regarding virtue, self-control,
-and destiny and also learns to control the Hippogryph. His departure from this protected environment 
-marks the decisive threshold crossing into Ariosto's unstable world of wandering adventures, martial 
-tests, and dynastic responsibility. The hero leaves behind passive enchantment and begins acting within 
+and destiny and also learns to control the Hippogryph. His departure from this protected environment
+marks the decisive threshold crossing into Ariosto's unstable world of wandering adventures, martial
+tests, and dynastic responsibility. The hero leaves behind passive enchantment and begins acting within
 the larger historical movement of the poem."""@en .
 
 <orlando-furioso/stages/atlantes-palace> a monomyth:StageRealization ;
@@ -241,10 +242,10 @@ the larger historical movement of the poem."""@en .
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizationDescription """Inside Atlante's enchanted palace, knights endlessly pursue
 phantoms corresponding to their deepest desires while losing all stable orientation and identity.
-Ruggiero enters the palace having glimpsed an apparition of Bradamante within its corridors, and loses 
-himself entirely in the labyrinth of his own longing. The hero becomes absorbed into this closed system 
-of illusion where time, purpose, and heroic progress collapse into repetition. The palace functions 
-as a symbolic dissolution of the self, temporarily swallowing the hero inside a magical labyrinth from 
+Ruggiero enters the palace having glimpsed an apparition of Bradamante within its corridors, and loses
+himself entirely in the labyrinth of his own longing. The hero becomes absorbed into this closed system
+of illusion where time, purpose, and heroic progress collapse into repetition. The palace functions
+as a symbolic dissolution of the self, temporarily swallowing the hero inside a magical labyrinth from
 which genuine transformation can occur only through escape and disillusionment."""@en ;
     monomyth:hasNarrativeDivergence <orlando-furioso/divergences/narrative/paternal-imprisonment> .
 
@@ -269,12 +270,12 @@ accepting the risks of destiny rather than remaining suspended within paternal c
         <orlando-furioso/characters/astolfo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 8 ;
-    monomyth:realizationDescription """Astolfo frees Ruggiero from Atlante's castle and the hero's 
-journey can start again. Across dozens of cantos, Ruggiero passes through an immense series of duels, 
-rescues, voyages, magical confrontations, and knightly ordeals dispersed throughout Ariosto's fragmented 
-narrative structure. Each episode tests a different aspect of his identity: martial courage, loyalty, 
-erotic discipline, and spiritual direction. Rather than forming a linear sequence, these trials 
-accumulate through interruption and narrative suspension, gradually constructing the hero's readiness 
+    monomyth:realizationDescription """Astolfo frees Ruggiero from Atlante's castle and the hero's
+journey can start again. Across dozens of cantos, Ruggiero passes through an immense series of duels,
+rescues, voyages, magical confrontations, and knightly ordeals dispersed throughout Ariosto's fragmented
+narrative structure. Each episode tests a different aspect of his identity: martial courage, loyalty,
+erotic discipline, and spiritual direction. Rather than forming a linear sequence, these trials
+accumulate through interruption and narrative suspension, gradually constructing the hero's readiness
 for dynastic and religious transformation."""@en .
 
 <orlando-furioso/stages/bradamante-destiny> a monomyth:StageRealization ;
@@ -285,15 +286,15 @@ for dynastic and religious transformation."""@en .
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:realizationDescription """Along all the trials, the hero is occasionally reunited with
-his love interest. The recurring reunions between Ruggiero and Bradamante collectively constitute 
-the hero's encounter with the feminine principle that gives direction and ultimate meaning to his 
-journey. Bradamante is not a passive beloved awaiting rescue but a formidable warrior who has herself 
-descended into Merlin's cave and received the prophetic vision of their future dynasty. Through her, 
-Ruggiero perceives not only personal love but a transpersonal destiny, since the founding of the Este 
+his love interest. The recurring reunions between Ruggiero and Bradamante collectively constitute
+the hero's encounter with the feminine principle that gives direction and ultimate meaning to his
+journey. Bradamante is not a passive beloved awaiting rescue but a formidable warrior who has herself
+descended into Merlin's cave and received the prophetic vision of their future dynasty. Through her,
+Ruggiero perceives not only personal love but a transpersonal destiny, since the founding of the Este
 lineage depends entirely on his successful transformation."""@en ;
-    monomyth:fitNote """The Meeting with the Goddess is not realized through a single decisive 
-encounter but through multiple interrupted reunions between Ruggiero and Bradamante dispersed across 
-the poem's battles and adventures. Ariosto's technique of entrelacement fragments the stage into 
+    monomyth:fitNote """The Meeting with the Goddess is not realized through a single decisive
+encounter but through multiple interrupted reunions between Ruggiero and Bradamante dispersed across
+the poem's battles and adventures. Ariosto's technique of entrelacement fragments the stage into
 recurring moments of encounter, separation, and rediscovery."""@en ;
     monomyth:hasSemioticDivergence <orlando-furioso/divergences/semiotic/warrior-goddess> .
 
@@ -307,9 +308,9 @@ recurring moments of encounter, separation, and rediscovery."""@en ;
 toward Christian conversion and dynastic destiny, Ruggiero continually postpones his definitive return
 from enchantment and ambiguity. His hesitation unfolds across numerous cantos through detours,
 interruptions, and deferred decisions that slow the transition from Saracen knight to Christian founder."""@en ;
-    monomyth:fitNote """The refusal emerges not as a single dramatic rejection but as a prolonged 
-resistance to irreversible transformation. Ruggiero delays reaching the transformative threshold itself 
-through a long accumulation of interruptions, enchantments, and postponed decisions of which he is 
+    monomyth:fitNote """The refusal emerges not as a single dramatic rejection but as a prolonged
+resistance to irreversible transformation. Ruggiero delays reaching the transformative threshold itself
+through a long accumulation of interruptions, enchantments, and postponed decisions of which he is
 not always directly responsable."""@en ;
     monomyth:hasSequentialDivergence <orlando-furioso/divergences/sequential/refusal-before-apotheosis> .
 
@@ -351,10 +352,10 @@ becomes dynastic destiny, historical legitimation, and metaphysical rebirth."""@
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 13 ;
-    monomyth:realizationDescription """The union in marriage between Ruggiero and Bradamante produces 
-a boon that extends beyond the hero's private fulfillment and into the future history of an entire 
-civilization. Their marriage establishes the mythical origin of the Este dynasty celebrated by 
-Ariosto's poem, transforming the hero's personal journey into the foundation of political continuity, 
+    monomyth:realizationDescription """The union in marriage between Ruggiero and Bradamante produces
+a boon that extends beyond the hero's private fulfillment and into the future history of an entire
+civilization. Their marriage establishes the mythical origin of the Este dynasty celebrated by
+Ariosto's poem, transforming the hero's personal journey into the foundation of political continuity,
 noble lineage, and collective cultural identity."""@en .
 
 <orlando-furioso/stages/flight-from-saracens> a monomyth:StageRealization ;
@@ -363,15 +364,15 @@ noble lineage, and collective cultural identity."""@en .
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 14 ;
-    monomyth:realizationDescription """After his baptism, Ruggiero must sever himself physically and 
-legally from the Saracen world that defined his identity. His withdrawal from their camp is not a 
-sudden magical escape, but a painful break from shared loyalty and military belonging. This departure 
-is enabled by a providential structure: the Saracen leader truce-breaking releases Ruggiero from his 
-oath of fealty. What appears as “magic” is instead the moral failure of his former leader, which 
+    monomyth:realizationDescription """After his baptism, Ruggiero must sever himself physically and
+legally from the Saracen world that defined his identity. His withdrawal from their camp is not a
+sudden magical escape, but a painful break from shared loyalty and military belonging. This departure
+is enabled by a providential structure: the Saracen leader truce-breaking releases Ruggiero from his
+oath of fealty. What appears as "magic" is instead the moral failure of his former leader, which
 dissolves his obligations and opens the path back to the Christian world."""@en ;
-    monomyth:fitNote """The Magic Flight for Ruggiero doesn't concearn any physical chase but is 
-instead realised at the level of juridical and moral severance rather than physical flight, and its 
-'magic' is entirely structural — the providential dissolution of the oath rather than any literal 
+    monomyth:fitNote """The Magic Flight for Ruggiero doesn't concearn any physical chase but is
+instead realised at the level of juridical and moral severance rather than physical flight, and its
+'magic' is entirely structural — the providential dissolution of the oath rather than any literal
 enchantment."""@en .
 
 <orlando-furioso/stages/defection-to-christendom> a monomyth:StageRealization ;
@@ -381,14 +382,14 @@ enchantment."""@en .
         <orlando-furioso/characters/charlemagne> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 15 ;
-    monomyth:realizationDescription """Ruggiero’s passage to the Christian side marks the full 
-crossing of the return threshold: a public defection and entry into the order of Christian knights. 
-This is not merely a change of allegiance but a translation of his Saracen martial identity into a 
-new theological and cultural register, where he appears as both convert and supreme exemplar. The 
-threshold itself is civilizational rather than physical, requiring him to carry his transformed self 
-wholly into a new historical role shaped by Merlin’s prophecy. By definitively abandoning his former 
-side, he reintegrates the experiences of wandering, enchantment, and crisis into a stable identity 
-recognized by Charlemagne’s world, completing the passage from divided existence to unified purpose."""@en .
+    monomyth:realizationDescription """Ruggiero's passage to the Christian side marks the full
+crossing of the return threshold: a public defection and entry into the order of Christian knights.
+This is not merely a change of allegiance but a translation of his Saracen martial identity into a
+new theological and cultural register, where he appears as both convert and supreme exemplar. The
+threshold itself is civilizational rather than physical, requiring him to carry his transformed self
+wholly into a new historical role shaped by Merlin's prophecy. By definitively abandoning his former
+side, he reintegrates the experiences of wandering, enchantment, and crisis into a stable identity
+recognized by Charlemagne's world, completing the passage from divided existence to unified purpose."""@en .
 
 <orlando-furioso/stages/knight-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Knight of the Two Worlds"@en ;
@@ -434,24 +435,24 @@ mirrors the poem's recursive and labyrinthine form."""@en .
     rdfs:label "Paternal Imprisonment divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/atlantes-palace> ;
     monomyth:divergesFrom monomyth:TheBellyOfTheWhale ;
-    monomyth:divergenceRationale """The Belly of the Whale is usually an impersonal abyss initiating 
-the hero into symbolic death. In Orlando Furioso, however, Atlante's enchanted palace is a paternal 
-prison built out of protective love rather than cosmic fate or malice. Ruggiero's symbolic death 
-therefore becomes psychological rather than cosmic: he must free himself not from an external darkness 
-but from the foster-father's protective control that has shaped and confined his identity since 
+    monomyth:divergenceRationale """The Belly of the Whale is usually an impersonal abyss initiating
+the hero into symbolic death. In Orlando Furioso, however, Atlante's enchanted palace is a paternal
+prison built out of protective love rather than cosmic fate or malice. Ruggiero's symbolic death
+therefore becomes psychological rather than cosmic: he must free himself not from an external darkness
+but from the foster-father's protective control that has shaped and confined his identity since
 childhood."""@en .
 
 <orlando-furioso/divergences/narrative/dispersed-rescue> a monomyth:NarrativeDivergence ;
     rdfs:label "Dispersed Rescue divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/bradamantes-rescues> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
-    monomyth:divergenceRationale """This stage subverts the 'Rescue from Without' by transforming a 
-singular narrative event into a dispersed, structural motif. While Campbell’s model envisions a final, 
-definitive intervention to pull the hero home, Ruggiero’s rescue is fragmented across the entire epic, 
-reflecting the 'entrelacement' structure of the poem. Each time the hero falls into enchantment or 
-loses his path due to his own passivity, Bradamante or her surrogate Melissa must intervene. The 
-'Rescue' thus loses its character as a final threshold crossing and becomes a constant, corrective 
-cycle of retrieval, highlighting a hero who is perpetually slipping away from his destiny and a 
+    monomyth:divergenceRationale """This stage subverts the 'Rescue from Without' by transforming a
+singular narrative event into a dispersed, structural motif. While Campbell's model envisions a final,
+definitive intervention to pull the hero home, Ruggiero's rescue is fragmented across the entire epic,
+reflecting the 'entrelacement' structure of the poem. Each time the hero falls into enchantment or
+loses his path due to his own passivity, Bradamante or her surrogate Melissa must intervene. The
+'Rescue' thus loses its character as a final threshold crossing and becomes a constant, corrective
+cycle of retrieval, highlighting a hero who is perpetually slipping away from his destiny and a
 heroine who functions as his necessary external conscience."""@en .
 
 <orlando-furioso/divergences/narrative/freedom-through-dynasty> a monomyth:NarrativeDivergence ;
@@ -470,22 +471,22 @@ to shadow the apparent closure of the poem."""@en .
     rdfs:label "Temptress before Trials divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/alcinas-seduction> ;
     monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """In Campbell's canonical sequence, Woman as the Temptress appears 
-late in the Initiation act, after the hero has already undergone trials and encountered the Goddess. 
-In Orlando Furioso, however, the Alcina episode occurs almost immediately after the Call to Adventure, 
-before Ruggiero has achieved any heroic stability or encountered Bradamante. Ariosto deliberately 
-inverts the sequence so that the hero's first encounter with the feminine is seductive dissolution 
-rather than spiritual fulfillment, portraying Ruggiero as a hero initially trapped in enchantment and 
+    monomyth:divergenceRationale """In Campbell's canonical sequence, Woman as the Temptress appears
+late in the Initiation act, after the hero has already undergone trials and encountered the Goddess.
+In Orlando Furioso, however, the Alcina episode occurs almost immediately after the Call to Adventure,
+before Ruggiero has achieved any heroic stability or encountered Bradamante. Ariosto deliberately
+inverts the sequence so that the hero's first encounter with the feminine is seductive dissolution
+rather than spiritual fulfillment, portraying Ruggiero as a hero initially trapped in enchantment and
 dependent on external rescue rather than earned mastery."""@en .
 
 <orlando-furioso/divergences/sequential/aid-after-temptation> a monomyth:SequentialDivergence ;
     rdfs:label "Aid after Temptation divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/melissas-ring> ;
     monomyth:divergesFrom monomyth:SupernaturalAid ;
-    monomyth:divergenceRationale """In Campbell's monomyth, Supernatural Aid appears before the hero's 
-trials, preparing him for the journey ahead. In Orlando Furioso, however, Melissa's intervention arrives 
-only after Ruggiero has already fallen into Alcina's enchantment and enacted a prolonged refusal of 
-destiny. The aid therefore functions not as preparation but as rescue: the magic ring becomes a remedy 
+    monomyth:divergenceRationale """In Campbell's monomyth, Supernatural Aid appears before the hero's
+trials, preparing him for the journey ahead. In Orlando Furioso, however, Melissa's intervention arrives
+only after Ruggiero has already fallen into Alcina's enchantment and enacted a prolonged refusal of
+destiny. The aid therefore functions not as preparation but as rescue: the magic ring becomes a remedy
 for collapse rather than a tool for future trials, but it allows the hero to resume the journey to his
 transformation."""@en .
 
@@ -493,36 +494,36 @@ transformation."""@en .
     rdfs:label "Atonement before Trials divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/breaking-from-atlante> ;
     monomyth:divergesFrom monomyth:AtonementWithTheFather ;
-    monomyth:divergenceRationale """Typically, the Atonement with the Father stage typically serves 
-as the spiritual climax of the Initiation act, occurring after the hero has been tempered and purified 
-by the Road of Trials. As for Ruggiero's journey, his confrontation with Atlante's paternal authority 
-— and the subsequent dissolution of the magician's protective enchantments — occurs early in the 
-narrative sequence. This break from the father figure acts as a prerequisite that enables the 
-'Wandering Adventures' to begin, rather than being the reward for completing them. Ariosto thus 
-reorders the sequence so that the hero's liberation from paternal control is the starting point of 
+    monomyth:divergenceRationale """Typically, the Atonement with the Father stage typically serves
+as the spiritual climax of the Initiation act, occurring after the hero has been tempered and purified
+by the Road of Trials. As for Ruggiero's journey, his confrontation with Atlante's paternal authority
+— and the subsequent dissolution of the magician's protective enchantments — occurs early in the
+narrative sequence. This break from the father figure acts as a prerequisite that enables the
+'Wandering Adventures' to begin, rather than being the reward for completing them. Ariosto thus
+reorders the sequence so that the hero's liberation from paternal control is the starting point of
 his independent knightly development rather than its final initiation."""@en .
 
 <orlando-furioso/divergences/sequential/refusal-before-apotheosis> a monomyth:SequentialDivergence ;
     rdfs:label "Refusal before Apotheosis divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/delayed-conversion> ;
     monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
-    monomyth:divergenceRationale """The Refusal of the Return normally follows the Apotheosis and 
-Ultimate Boon, when the hero resists re-entering ordinary life after transcendence. In Ruggiero’s case, 
-however, this sequence is displaced: his prolonged delay occurs before both baptism and the attainment 
-of the Boon. He refuses not the return from enlightenment, but the movement toward it, postponing the 
-transformation that would lead to conversion and marriage. What he clings to is not transcendence but 
+    monomyth:divergenceRationale """The Refusal of the Return normally follows the Apotheosis and
+Ultimate Boon, when the hero resists re-entering ordinary life after transcendence. In Ruggiero's case,
+however, this sequence is displaced: his prolonged delay occurs before both baptism and the attainment
+of the Boon. He refuses not the return from enlightenment, but the movement toward it, postponing the
+transformation that would lead to conversion and marriage. What he clings to is not transcendence but
 his existing Saracen identity, so the refusal becomes a resistance to ascent rather than descent."""@en .
 
 <orlando-furioso/divergences/sequential/rescue-before-apotheosis> a monomyth:SequentialDivergence ;
     rdfs:label "Rescue before Apotheosis divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/bradamantes-rescues> ;
     monomyth:divergesFrom monomyth:RescueFromWithout ;
-    monomyth:divergenceRationale """In the standard monomythic sequence, the 'Rescue from Without' 
-occurs during the Return, serving to support a hero who has already achieved enlightenment or the 
-ultimate boon but is too exhausted or unwilling to cross back into the ordinary world. Ariosto 
-radically displaces this stage by making the rescue a recurring necessity long before Ruggiero’s 
-spiritual 'Apotheosis'. This reordering is central to the poem’s thematic focus on human frailty and 
-the power of love, as Ruggiero cannot reach his divine transformation on his own will but requires 
+    monomyth:divergenceRationale """In the standard monomythic sequence, the 'Rescue from Without'
+occurs during the Return, serving to support a hero who has already achieved enlightenment or the
+ultimate boon but is too exhausted or unwilling to cross back into the ordinary world. Ariosto
+radically displaces this stage by making the rescue a recurring necessity long before Ruggiero's
+spiritual 'Apotheosis'. This reordering is central to the poem's thematic focus on human frailty and
+the power of love, as Ruggiero cannot reach his divine transformation on his own will but requires
 multiple 'rescues' from Bradamante and Melissa."""@en .
 
 # --- Semiotic Divergences -------------
@@ -531,12 +532,12 @@ multiple 'rescues' from Bradamante and Melissa."""@en .
     rdfs:label "Warrior Goddess divergence"@en ;
     monomyth:divergenceOf <orlando-furioso/stages/bradamante-destiny> ;
     monomyth:divergesFrom monomyth:TheMeetingWithTheGoddess ;
-    monomyth:divergenceRationale """Campbell’s Meeting with the Goddess draws on the idea of the 
-divine feminine as cosmic totality, where her love reveals unity beneath division. In 'Orlando 
-Furioso', this role is reworked in Bradamante: a warrior knight who fights, wins duels, and pursues 
-Ruggiero with equal determination. Her love is unconditional in Campbell’s sense, as she never abandons 
-their destined union, but it is expressed through martial agency rather than nurturing receptivity. 
-Renaissance chivalric tradition thus replaces the sacred goddess with the female heroine, preserving 
+    monomyth:divergenceRationale """Campbell's Meeting with the Goddess draws on the idea of the
+divine feminine as cosmic totality, where her love reveals unity beneath division. In 'Orlando
+Furioso', this role is reworked in Bradamante: a warrior knight who fights, wins duels, and pursues
+Ruggiero with equal determination. Her love is unconditional in Campbell's sense, as she never abandons
+their destined union, but it is expressed through martial agency rather than nurturing receptivity.
+Renaissance chivalric tradition thus replaces the sacred goddess with the female heroine, preserving
 the structure of the archetype while transforming its semiotic form."""@en .
 
 <orlando-furioso/divergences/semiotic/religious-apotheosis> a monomyth:SemioticDivergence ;
@@ -548,4 +549,3 @@ cosmic consciousness, or metaphysical transcendence. Ariosto translates this tra
 into the specifically Christian language of baptism, conversion, and sacramental rebirth. The hero's
 spiritual ascent is therefore expressed not through universal mythology but through the religious and
 political semiotics of Renaissance Christendom."""@en .
-
