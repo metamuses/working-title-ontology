@@ -235,7 +235,8 @@ granting them the 'elixir' of vision and life."""@en .
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
-    monomyth:realizationDescription """Rostam shows no hesitation in returning; he views the demon realm of Mazanderan as a land of filth and sorcery. His duty to Iran and the King necessitates an immediate exit to restore the legitimate order at home, leaving no room for a desire to stay in the supernatural realm."""@en .
+    monomyth:realizationDescription """Rostam shows no hesitation in returning; he views the demon realm of Mazanderan as a land of filth and sorcery. 
+His duty to Iran and the King necessitates an immediate exit to restore the legitimate order at home, leaving no room for a desire to stay in the supernatural realm."""@en .
 
 <rostam-haft-khan/stages/15-flight-final-war> a monomyth:StageRealization ;
     monomyth:stageRealizationOrder 15 ;
