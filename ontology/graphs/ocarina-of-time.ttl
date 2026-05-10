@@ -20,6 +20,7 @@
     dcterms:created "1998"^^xsd:gYear ;
     dcterms:creator "Shigeru Miyamoto",
         "Eiji Aonuma" ;
+    schema:countryOfOrigin wd:Q17 ;
     schema:genre "Action-Adventure"@en,
         "Fantasy"@en ;
     owl:sameAs wd:Q213911 ;
