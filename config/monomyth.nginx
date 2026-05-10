@@ -60,6 +60,15 @@ server {
     }
 
     # ===== GRAPH ============================
+    # serve subgraphs TTL for website modals
+    location ~ ^/graphs/(.+\.ttl)$ {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=3600";
+        default_type text/turtle;
+
+        try_files /ontology/graphs/$1 =404;
+    }
+
     # redirect /graph to /graph/
     location = /graph {
       return 301 /graph/;

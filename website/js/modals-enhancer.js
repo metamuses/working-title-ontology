@@ -4,7 +4,9 @@
 //   • Hovering a .div-icon → tooltip with divergence rationale
 //   • Clicking a .segment  → expandable panel with stage realization description
 //
-// TTL files are expected at: ../ontology/graphs/<filename>
+// TTL files are expected at:
+//   - /graphs/<filename> (production)
+//   - ../ontology/graphs/<filename> (local fallback)
 // ──────────────────────────────────────────────────────────────────────────
 
 // ── Modal ID → TTL filename mapping ────────────────────────────────────────
@@ -23,7 +25,7 @@ const MODAL_TTL_MAP = {
   'kg-modal-orlando': 'orlando-furioso.ttl',
 };
 
-const TTL_BASE_PATH = '../ontology/graphs/';
+const TTL_BASE_PATHS = ['/graphs/', '../ontology/graphs/'];
 
 // Cache: modalId → parsed stageMap
 const divergenceCache = {};
@@ -224,8 +226,19 @@ async function getDivergenceData(modalId) {
 
   const isBatman = modalId === 'kg-modal-batman';
 
-  fetchPromises[modalId] = fetch(`${TTL_BASE_PATH}${filename}`)
-    .then(r => { if (!r.ok) throw new Error(`${r.status}`); return r.text(); })
+  fetchPromises[modalId] = (async () => {
+    let lastErr = null;
+    for (const basePath of TTL_BASE_PATHS) {
+      try {
+        const r = await fetch(`${basePath}${filename}`);
+        if (!r.ok) throw new Error(`${r.status}`);
+        return await r.text();
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error('Unable to fetch TTL');
+  })()
     .then(text => {
       const d = isBatman ? parseBatmanTTL(text) : parseTTL(text);
       divergenceCache[modalId] = d;
