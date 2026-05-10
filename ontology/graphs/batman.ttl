@@ -157,6 +157,7 @@ forgiveness."""@en ;
     owl:sameAs wd:Q48893069 .
 
 # --- Stage Realizations ---------------
+
 <batman-year-one/stages/the-train-to-gotham> a monomyth:StageRealization ;
     rdfs:label "The Train to Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
@@ -465,75 +466,6 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
     monomyth:stageRealizationOrder 17 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
 
-# --- Sequential Divergences ----------------------
-
-<batman-year-one/divergences/sequential/distributed-sequence> a monomyth:SequentialDivergence ;
-    rdfs:label "Distributed Road of Trials"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-distributed-trials> ;
-    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
-    monomyth:divergenceRationale """The Road of Trials is realized as a distributed series of events,
-rather than a single linear stage following the Departure. This sequential overlap allows the trials
-to act as the catalyst for the hero's transformation while simultaneously serving as the initiatory
-tests of his new identity."""@en .
-
-<batman-year-one/divergences/sequential/the-catalyst-inversion> a monomyth:SequentialDivergence ;
-    rdfs:label "The Catalyst Inversion (Belly Before Threshold)"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-beating> ,
-                          <batman-year-one/stages/beating-flass> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ,
-                          monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:divergenceRationale """In Campbell's traditional framework, the hero crosses the
-threshold into the unknown and is subsequently swallowed into the Belly of the Whale. In Gordon's
-Neo-Noir journey, this sequence is inverted. He is first ambushed and 'swallowed' by the corrupt
-system (The Beating). This traumatic 'black moment' acts as the necessary catalyst for his
-metamorphosis, forcing him to proactively cross the threshold by hunting down his guardian (Flass)
-to solidify his rebirth as an active combatant."""@en .
-
-# --- Semiotic Divergences ----------------------
-
-<batman-year-one/divergences/semiotic/secular-realism> a monomyth:SemioticDivergence ;
-    rdfs:label "Neo-Noir Secularization"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham> ,
-        <batman-year-one/stages/the-bat-at-the-window> ,
-        <batman-year-one/stages/the-dinner-party-ambush> ,
-        <batman-year-one/stages/the-tenement-siege> ,
-        <batman-year-one/stages/the-extramarital-affair> ,
-        <batman-year-one/stages/confession-to-barbara> ;
-    monomyth:divergesFrom monomyth:TheCallToAdventure ,
-        monomyth:SupernaturalAid ,
-        monomyth:TheCrossingOfTheFirstThreshold ,
-        monomyth:TheBellyOfTheWhale ,
-        monomyth:WomanAsTheTemptress ,
-        monomyth:AtonementWithTheFather ;
-    monomyth:divergenceRationale """Across both Bruce Wayne's and Jim Gordon's journeys, Campbell's
-traditional mythic signifiers (magic, monsters, sirens, and cosmic gods) are radically translated
-into grounded, Neo-Noir realism. For Bruce, magical aids become totemic animals and monster bellies
-become industrial tenements. For Gordon, the 'Temptress' is not a magical siren but the mundane,
-destructive reality of an extramarital affair, and the 'Atonement with the Father' replaces a cosmic
-deity with a corrupt Police Commissioner. The structural functions of the myth remain perfectly
-intact, but the semiotic vocabulary is entirely secular, psychological, and systemic."""@en .
-
-<batman-year-one/divergences/semiotic/semiotic-dehumanization> a monomyth:SemioticDivergence ;
-    rdfs:label "The Symbol as an Immune Agent"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-absent-temptation> ;
-    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
-    monomyth:divergenceRationale """In Campbell's model, the hero must resist the 'odor
-of the flesh.' The stage of the Temptress is absent for Batman. While Selina Kyle possesses
-all the archetypal traits of a Temptress, Bruce is immune because he has split his identity: Batman
-is a semiotic device, not a man, and symbols cannot be tempted. By constituting himself as a
-non-negotiable sign (Batman) rather than a person, he makes the category of temptation 'malformed.'
-You cannot seduce a symbol that has no negotiable interiority."""@en .
-
-<batman-year-one/divergences/semiotic/the-human-elixir> a monomyth:SemioticDivergence ;
-    rdfs:label "Alliance as the Ultimate Boon"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-bridge-rescue> ;
-    monomyth:divergesFrom monomyth:TheUltimateBoon ;
-    monomyth:divergenceRationale """In classical myth, the Boon is often an object like the Holy
-Grail. In this grounded noir setting, the 'Grail' is semiotically shifted to a social contract: the
-alliance between Batman and Gordon. The 'power to restore fertility' is literalized as saving a
-child—the city's next generation—from the Roman's influence, representing a systemic victory over
-corruption rather than a magical one."""@en .
-
 # --- Narrative Divergences ----------------------
 
 <batman-year-one/divergences/narrative/premature-start-refusal> a monomyth:NarrativeDivergence ;
@@ -626,3 +558,72 @@ beginning."""@en .
 universe (the helper). In the Neo-Noir paradigm, the universe is indifferent or actively malignant.
 The narrative strips away the 'Supernatural Aid' to emphasize the hero's absolute moral and physical
 isolation; the honest cop must survive without a safety net."""@en .
+
+# --- Sequential Divergences ----------------------
+
+<batman-year-one/divergences/sequential/distributed-sequence> a monomyth:SequentialDivergence ;
+    rdfs:label "Distributed Road of Trials"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/the-distributed-trials> ;
+    monomyth:divergesFrom monomyth:TheRoadOfTrials ;
+    monomyth:divergenceRationale """The Road of Trials is realized as a distributed series of events,
+rather than a single linear stage following the Departure. This sequential overlap allows the trials
+to act as the catalyst for the hero's transformation while simultaneously serving as the initiatory
+tests of his new identity."""@en .
+
+<batman-year-one/divergences/sequential/the-catalyst-inversion> a monomyth:SequentialDivergence ;
+    rdfs:label "The Catalyst Inversion (Belly Before Threshold)"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/the-beating> ,
+        <batman-year-one/stages/beating-flass> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ,
+        monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:divergenceRationale """In Campbell's traditional framework, the hero crosses the
+threshold into the unknown and is subsequently swallowed into the Belly of the Whale. In Gordon's
+Neo-Noir journey, this sequence is inverted. He is first ambushed and 'swallowed' by the corrupt
+system (The Beating). This traumatic 'black moment' acts as the necessary catalyst for his
+metamorphosis, forcing him to proactively cross the threshold by hunting down his guardian (Flass)
+to solidify his rebirth as an active combatant."""@en .
+
+# --- Semiotic Divergences ----------------------
+
+<batman-year-one/divergences/semiotic/secular-realism> a monomyth:SemioticDivergence ;
+    rdfs:label "Neo-Noir Secularization"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham> ,
+        <batman-year-one/stages/the-bat-at-the-window> ,
+        <batman-year-one/stages/the-dinner-party-ambush> ,
+        <batman-year-one/stages/the-tenement-siege> ,
+        <batman-year-one/stages/the-extramarital-affair> ,
+        <batman-year-one/stages/confession-to-barbara> ;
+    monomyth:divergesFrom monomyth:TheCallToAdventure ,
+        monomyth:SupernaturalAid ,
+        monomyth:TheCrossingOfTheFirstThreshold ,
+        monomyth:TheBellyOfTheWhale ,
+        monomyth:WomanAsTheTemptress ,
+        monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """Across both Bruce Wayne's and Jim Gordon's journeys, Campbell's
+traditional mythic signifiers (magic, monsters, sirens, and cosmic gods) are radically translated
+into grounded, Neo-Noir realism. For Bruce, magical aids become totemic animals and monster bellies
+become industrial tenements. For Gordon, the 'Temptress' is not a magical siren but the mundane,
+destructive reality of an extramarital affair, and the 'Atonement with the Father' replaces a cosmic
+deity with a corrupt Police Commissioner. The structural functions of the myth remain perfectly
+intact, but the semiotic vocabulary is entirely secular, psychological, and systemic."""@en .
+
+<batman-year-one/divergences/semiotic/semiotic-dehumanization> a monomyth:SemioticDivergence ;
+    rdfs:label "The Symbol as an Immune Agent"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/the-absent-temptation> ;
+    monomyth:divergesFrom monomyth:WomanAsTheTemptress ;
+    monomyth:divergenceRationale """In Campbell's model, the hero must resist the 'odor
+of the flesh.' The stage of the Temptress is absent for Batman. While Selina Kyle possesses
+all the archetypal traits of a Temptress, Bruce is immune because he has split his identity: Batman
+is a semiotic device, not a man, and symbols cannot be tempted. By constituting himself as a
+non-negotiable sign (Batman) rather than a person, he makes the category of temptation 'malformed.'
+You cannot seduce a symbol that has no negotiable interiority."""@en .
+
+<batman-year-one/divergences/semiotic/the-human-elixir> a monomyth:SemioticDivergence ;
+    rdfs:label "Alliance as the Ultimate Boon"@en ;
+    monomyth:divergenceOf <batman-year-one/stages/the-bridge-rescue> ;
+    monomyth:divergesFrom monomyth:TheUltimateBoon ;
+    monomyth:divergenceRationale """In classical myth, the Boon is often an object like the Holy
+Grail. In this grounded noir setting, the 'Grail' is semiotically shifted to a social contract: the
+alliance between Batman and Gordon. The 'power to restore fertility' is literalized as saving a
+child—the city's next generation—from the Roman's influence, representing a systemic victory over
+corruption rather than a magical one."""@en .
