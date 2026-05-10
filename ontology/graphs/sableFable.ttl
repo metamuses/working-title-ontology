@@ -2,13 +2,14 @@
 @prefix monomyth: <https://monomyth.metamuses.org/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
-# SABLE, fABLE (Album, 2025)
+# SABLE, fABLE (Music Album, 2025)
 # ==============================================================================
 
 <sable-fable> a monomyth:NarrativeWork,
@@ -323,7 +324,61 @@ his Refusal of the Call. His focus shifts outward to pure connection ('Cause you
 acting as a conduit for love without attachment to the guilt of his past."""@en ;
     monomyth:hasSemioticDivergence <sable-fable/divergences/semiotic/psychological-internalization> .
 
+# --- Narrative Divergences ----------------------
+
+<sable-fable/divergences/narrative/the-gentle-refusal> a monomyth:NarrativeDivergence ;
+    rdfs:label "The Gentle Refusal"@en ;
+    monomyth:divergenceOf <sable-fable/stages/lingering-in-the-sanctuary> ;
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
+    monomyth:divergenceRationale """Typically, the Refusal of the Return is an active rebellion
+against returning to humanity. Here, it is a much gentler, understandable psychological reaction.
+After years of suffering, the hero simply wants to press pause ('We can just keep it here for now')
+to savor his hard-won peace before facing whatever comes next."""@en .
+
+<sable-fable/divergences/narrative/internalized-authority> a monomyth:NarrativeDivergence ;
+    rdfs:label "Internalized Authority Divergence"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-absent-father> ;
+    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
+    monomyth:divergenceRationale """In classical mythology, the hero's ego-death is triggered by
+an encounter with a terrifying Father-figure. In modern psychological narratives, this external
+projection is stripped away. The hero's battle is entirely with the Shadow (their own reflection)
+and the Temptress (the urge to regress). Because the hero acts as their own ultimate judge and
+punisher (as seen in the guilt of 'S P E Y S I D E'), an external 'Atonement' stage is rendered
+narratively obsolete; reconciliation must be achieved through self-forgiveness rather than cosmic
+approval."""@en .
+
+# --- Sequential Divergences ----------------------
+
+<sable-fable/divergences/sequential/healing-sequence-inversion> a monomyth:SequentialDivergence ;
+    rdfs:label "The Trauma Sequence Inversion"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-violent-spree>,
+        <sable-fable/stages/the-plea-for-forgiveness>,
+        <sable-fable/stages/accepting-the-change> ;
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:divergenceRationale """In Campbell's canonical framework, the hero receives
+Supernatural Aid, Crosses the Threshold, and then is swallowed into the Belly of the Whale.
+In this autobiographical album about mental health, the sequence is inverted. The hero is already
+trapped in the 'Belly' of his own anxiety and guilt (S P E Y S I D E). The Supernatural Aid
+(the forgiveness of loved ones) must arrive while he is in the abyss.
+This aid gives him the strength to finally Cross the Threshold (AWARDS SEASON) out of his darkness
+and into the active phase of healing."""@en .
+
+<sable-fable/divergences/sequential/the-pink-cloud-sequence> a monomyth:SequentialDivergence ;
+    rdfs:label "The 'Pink Cloud' Sequence Inversion"@en ;
+    monomyth:divergenceOf <sable-fable/stages/the-blissful-rest>,
+        <sable-fable/stages/the-temptation-to-regress> ;
+    monomyth:divergesFrom monomyth:Apotheosis ;
+    monomyth:divergenceRationale """In Campbell's canonical ordering, Apotheosis follows the Atonement
+with the Father and the Temptress. In this autobiographical narrative of mental health recovery,
+the sequence is inverted to reflect the 'Pink Cloud' phenomenon. The hero experiences a premature
+Apotheosis immediately following the Meeting with the Goddess, soaring into a state of blissful rest
+before he has actually done the hard work of unlearning his trauma. This premature peak makes the
+subsequent crash into the Temptress stage ('Day One') inevitable and structurally devastating."""@en .
+
 # --- Semiotic Divergences ----------------------
+
 <sable-fable/divergences/semiotic/psychological-internalization> a monomyth:SemioticDivergence ;
     rdfs:label "Psychological Internalization"@en ;
     monomyth:divergenceOf <sable-fable/stages/the-intrusive-call> ,
@@ -385,56 +440,3 @@ boundary back into the mortal realm, where magic fades. In this autobiographical
 threshold is both geographical (moving from Wisconsin to California) and relational. The 'magic'
 that threatens to fade is the blissful, effortless love of the Goddess/Apotheosis stage, which must
 now survive the mundane, corrosive elements of time, distance, and emotional 'decay'."""@en .
-
-# --- Sequential Divergences ----------------------
-
-<sable-fable/divergences/sequential/healing-sequence-inversion> a monomyth:SequentialDivergence ;
-    rdfs:label "The Trauma Sequence Inversion"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-violent-spree>,
-        <sable-fable/stages/the-plea-for-forgiveness>,
-        <sable-fable/stages/accepting-the-change> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale,
-        monomyth:SupernaturalAid,
-        monomyth:TheCrossingOfTheFirstThreshold ;
-    monomyth:divergenceRationale """In Campbell's canonical framework, the hero receives
-Supernatural Aid, Crosses the Threshold, and then is swallowed into the Belly of the Whale.
-In this autobiographical album about mental health, the sequence is inverted. The hero is already
-trapped in the 'Belly' of his own anxiety and guilt (S P E Y S I D E). The Supernatural Aid
-(the forgiveness of loved ones) must arrive while he is in the abyss.
-This aid gives him the strength to finally Cross the Threshold (AWARDS SEASON) out of his darkness
-and into the active phase of healing."""@en .
-
-<sable-fable/divergences/sequential/the-pink-cloud-sequence> a monomyth:SequentialDivergence ;
-    rdfs:label "The 'Pink Cloud' Sequence Inversion"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-blissful-rest>,
-        <sable-fable/stages/the-temptation-to-regress> ;
-    monomyth:divergesFrom monomyth:Apotheosis ;
-    monomyth:divergenceRationale """In Campbell's canonical ordering, Apotheosis follows the Atonement
-with the Father and the Temptress. In this autobiographical narrative of mental health recovery,
-the sequence is inverted to reflect the 'Pink Cloud' phenomenon. The hero experiences a premature
-Apotheosis immediately following the Meeting with the Goddess, soaring into a state of blissful rest
-before he has actually done the hard work of unlearning his trauma. This premature peak makes the
-subsequent crash into the Temptress stage ('Day One') inevitable and structurally devastating."""@en .
-
-# --- Narrative Divergences ----------------------
-
-<sable-fable/divergences/narrative/the-gentle-refusal> a monomyth:NarrativeDivergence ;
-    rdfs:label "The Gentle Refusal"@en ;
-    monomyth:divergenceOf <sable-fable/stages/lingering-in-the-sanctuary> ;
-    monomyth:divergesFrom monomyth:RefusalOfTheReturn ;
-    monomyth:divergenceRationale """Typically, the Refusal of the Return is an active rebellion
-against returning to humanity. Here, it is a much gentler, understandable psychological reaction.
-After years of suffering, the hero simply wants to press pause ('We can just keep it here for now')
-to savor his hard-won peace before facing whatever comes next."""@en .
-
-<sable-fable/divergences/narrative/internalized-authority> a monomyth:NarrativeDivergence ;
-    rdfs:label "Internalized Authority Divergence"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-absent-father> ;
-    monomyth:divergesFrom monomyth:AtonementWithTheFather ;
-    monomyth:divergenceRationale """In classical mythology, the hero's ego-death is triggered by
-an encounter with a terrifying Father-figure. In modern psychological narratives, this external
-projection is stripped away. The hero's battle is entirely with the Shadow (their own reflection)
-and the Temptress (the urge to regress). Because the hero acts as their own ultimate judge and
-punisher (as seen in the guilt of 'S P E Y S I D E'), an external 'Atonement' stage is rendered
-narratively obsolete; reconciliation must be achieved through self-forgiveness rather than cosmic
-approval."""@en .

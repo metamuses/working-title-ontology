@@ -1194,6 +1194,162 @@ body.modal-open {
   gap: 12px;
 }
 
+/* -----------------------------------------------------------------------
+   Conclusion rethought layout: prose topics + sticky research card
+   ----------------------------------------------------------------------- */
+.conclusion-horizons {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.conclusion-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.conclusion-topic .ontology-classes-label {
+  margin-bottom: 16px;
+}
+
+.conclusion-topic-body {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.conclusion-topic-body p + p {
+  margin-top: 1.2em;
+}
+
+.conclusion-side-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.conclusion-side-cards .horizons-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.conclusion-side-cards .class-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.card-questions-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.card-questions-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(122, 92, 20, 0.12);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card-questions-list li:last-child {
+  border-bottom: none;
+}
+
+.card-questions-list .question-icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 1.1rem;
+  color: var(--gold-dim);
+  margin-top: 3px;
+  flex-shrink: 0;
+  display: inline-block;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.card-questions-list .question-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.card-questions-list .question-text strong {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.question-answer {
+  margin-top: 12px;
+  background: rgba(122, 92, 20, 0.04);
+  border-left: 2px solid var(--gold-dim);
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.answer-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-dim);
+  margin-bottom: 2px;
+}
+
+.answer-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-family: var(--font-display);
+}
+
+.sparql-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-decoration: none;
+  background: rgba(122, 92, 20, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.sparql-link:hover {
+  background: rgba(122, 92, 20, 0.15);
+  transform: translateX(2px);
+}
+
+.sparql-icon {
+  width: 14px !important;
+  height: 14px !important;
+  stroke: var(--gold) !important;
+  stroke-width: 2.5;
+  fill: none !important;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
 .class-card {
   background: var(--bg-card);
   padding: 32px;
@@ -1269,6 +1425,8 @@ code {
   padding: 40px 32px;
   text-align: center;
   transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .team-card:hover {
@@ -1520,7 +1678,7 @@ code {
   .about-grid,
   .ontology-intro,
   .kg-header,
-  .conclusion-grid {
+  .conclusion-horizons {
     grid-template-columns: 1fr;
     gap: 48px;
   }

@@ -79,7 +79,7 @@
     <div class="section-inner">
       <div class="reveal">
         <div class="section-label">About the Project</div>
-        <h2 class="section-title">Formalizing the <em>Hero's Journey</em></h2>
+        <h2 class="section-title">Formalizing the <em>Hero’s Journey</em></h2>
         <div class="section-divider"></div>
       </div>
 
@@ -2504,150 +2504,205 @@
         <div class="reveal reveal-delay-1">
           <div class="section-prose" style="max-width: 100%;">
             <p>
-              Across four millennia of storytelling&mdash;from Sumerian clay tablets to digital cinema&mdash;the
-              monomyth endures not as a rigid template but as a gravitational center. Some narratives orbit it
-              closely; others achieve their power precisely by breaking away. The ontology captures both: a
-              <strong>Perfect Fit</strong> and an <strong>Inverted</strong> score are equally informative.
+              The monomyth functions not as a prescriptive template, but as a structural baseline across diverse narrative histories.
+              While certain works align strictly with this framework, others derive their aesthetic or narrative efficacy through
+              deliberate divergence from the expected archetype.
+            </p>
+
+            <p>
+              Formalizing Campbell’s framework in OWL bridges literary analysis and computational semantics, establishing a model
+              for the <strong>computable humanities</strong>. This approach preserves narrative complexity while enabling systematic,
+              scalable comparison. Consequently, the resulting knowledge graphs act as analytical instruments, formalizing how specific
+              cultural and authorial contexts navigate the underlying mechanics of departure, ordeal, and return.
             </p>
             <p>
-              By formalizing Campbell's framework in OWL, we gain something neither pure literary criticism nor
-              pure computer science could achieve alone: a <strong>computable humanities</strong> that respects the
-              irreducible richness of narrative while enabling systematic comparison at scale. The knowledge graphs
-              are not reductions of great stories&mdash;they are lenses, each one revealing how a particular
-              culture, era, and author navigated the same deep structure of departure, ordeal, and return.
+              However, the instantiation of these knowledge graphs also highlighted the inherent subjectivity of structural mapping.
+              During the peer-review phase, it became evident that aligning a narrative to a formalized framework is not a purely
+              mechanical extraction. Because researchers evaluate source material through differing critical and analytical paradigms,
+              defining a structural fit constitutes an active, interpretive appraisal of the text.
+            </p>
+            <p>
+              This interpretive variance manifested directly in the execution of the ontology’s technical architecture. For example, to
+              formalize a missing stage, some researchers consistently paired a <code>monomyth:AbsentFit</code> with an explicit <code>monomyth:NarrativeDivergence</code>,
+              while others treated the <code>AbsentFit</code> itself as a functionally complete ontological statement. Similarly, when a singular
+              thematic subversion impacted multiple stages, certain modelers mapped a single divergence node to several stages,
+              whereas others instantiated distinct divergences or omitted redundant links. Ultimately, these methodological deviations
+              underscore a fundamental characteristic of semantic modeling in the humanities: while an ontology provides a rigorous,
+              standardized schema, the resulting semantic data inherently encodes the critical choices of the human annotator.
             </p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-2">
-          <div class="horizons-grid">
-            <div class="class-card horizons-card">
-              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 8V4H8"></path>
-                <rect x="4" y="8" width="16" height="12" rx="2"></rect>
-                <path d="M2 14h2"></path>
-                <path d="M20 14h2"></path>
-                <path d="M15 13v2"></path>
-                <path d="M9 13v2"></path>
-              </svg>
-              <div class="class-name">LLMs use for reuse</div>
-              <div class="class-desc">
-                <p>
-                  To rapidly scale the population of our ontology without sacrificing structural integrity,
-                  we employed an LLM-assisted knowledge grounding technique using Claude and Gemini. By supplying our
-                  baseline OWL ontology alongside a "gold-standard" exemplar (<em>The Matrix</em>), we created a short
-                  prompt to draft new narrative knowledge graphs.
-                </p>
+          <div class="conclusion-horizons">
 
-                <p>
-                  The results provided a fascinating case study in LLM limitations. For newer or less famous works,
-                  analytical accuracy plummeted as the models confidently hallucinated plot points to force a fit into
-                  Campbell's framework. Conversely, while the models easily generated accurate structural skeletons for
-                  famous
-                  works, this success must be carefully weighed against their severe memorization bias toward heavily
-                  duplicated bestsellers (as noted in the data archaeology study <em>Speak, Memory</em>, Chang et al.,
-                  2023).
-                  To explicitly illustrate this baseline capability on highly represented media, we preserved one
-                  dataset exactly
-                  as generated by the AI: the knowledge graph for the video game <strong><em>The Legend of Zelda:
-                      Ocarina of
-                      Time</em></strong> was created entirely using Claude with zero human revision.
-                </p>
+            <!-- Left: labeled paragraphs -->
+            <div class="conclusion-topics">
 
-                <p>
-                  However, because of the aforementioned limitations, LLM generation for all other works serves only as
-                  a
-                  first-pass scaffolding, requiring a mandatory <strong>human-in-the-loop</strong> revision process.
-                  While AI
-                  can successfully identify literal, <code>PerfectFit</code> structural matches, human researchers must
-                  step in
-                  to manually revise the qualitative nuances of the narrative. Specifically, mapping divergences demands
-                  deep,
-                  context-aware critical appraisal. The AI can build the graph's syntactic skeleton, but identifying
-                  exactly
-                  <em>why</em> and <em>how</em> an author deliberately subverted an archetype remains a distinctly human
-                  intellectual exercise.
-                </p>
+              <div class="conclusion-topic">
+                <div class="ontology-classes-label">Future implementations: formalizing Meta-Convergence</div>
+                <div class="conclusion-topic-body">
+                  <p>
+                    Although our Monomyth ontology doesn't explicitly reuse <code>creon:MetaConvergence</code>, it
+                    inherently executes its core mechanism. CreOn defines meta-convergence as the critical appraisal of
+                    a creative product's divergence against expected background knowledge to make it functionally or
+                    aesthetically effective. Our framework performs this function by using Campbell's monomyth as the
+                    structural baseline, while applying specific divergence classes
+                    (<code>monomyth:NarrativeDivergence</code>, <code>monomyth:SequentialDivergence</code>, and
+                    <code>monomyth:SemioticDivergence</code>) to evaluate creative departures. Both models view these
+                    deviations as deliberate, meaningful choices rather than simple errors. To formally implement this
+                    connection in the future, we could map our <code>monomyth:FitQuality</code> scores and
+                    <code>monomyth:divergenceRationale</code> descriptions directly to the
+                    <code>creon:MetaConvergence</code> class.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="class-card horizons-card">
-              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18" cy="18" r="3"></circle>
-                <circle cx="6" cy="6" r="3"></circle>
-                <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
-                <line x1="6" y1="9" x2="6" y2="21"></line>
-              </svg>
-              <div class="class-name">Meta-convergence</div>
-              <div class="class-desc">Although our Monomyth ontology
-                doesn't explicitly reuse <code>creon:MetaConvergence</code>, it inherently executes
-                its core mechanism.
-                CreOn defines meta-convergence as the critical appraisal of a creative product's divergence against
-                expected background knowledge to make it functionally or aesthetically effective.
-                Our framework performs this function by using Campbell's monomyth as the structural baseline, while
-                applying specific divergence classes (<code>monomyth:NarrativeDivergence</code>,
-                <code>monomyth:SequentialDivergence</code>, and <code>monomyth:SemioticDivergence</code>)
-                to evaluate creative departures. Both models view these deviations as deliberate, meaningful choices
-                rather than simple errors. To formally implement this connection in the future,
-                we could map our <code>monomyth:FitQuality</code> scores and <code>monomyth:divergenceRationale</code>
-                descriptions directly to the <code>creon:MetaConvergence</code> class.
+
+              <div class="conclusion-topic">
+                <div class="ontology-classes-label">Expanding the paradigm: beyond Campbell's Monomyth</div>
+                <div class="conclusion-topic-body">
+                  <p>
+                    The ultimate extensibility of this project lies in the potential to expand our foundational schema
+                    to transcend the structural limitations of Joseph Campbell's original model. By integrating
+                    frameworks like Maureen Murdock's <em>The Heroine's Journey</em> and Kim Hudson's <em>The Virgin's
+                    Promise</em> into our ontology.ttl, we could broaden the graph's analytical power to capture deeply
+                    internal, relational, and socially disruptive narrative arcs. While Campbell's monomyth maps an
+                    outward quest of conquest into the unknown, encoding these alternative frameworks would allow us to
+                    query entirely different narrative. Murdock provides a potential "feminine counter-arc" that tracks
+                    inward descent to integrate split psychic polarities, while Hudson's model captures
+                    transformation born from radical self-expression against a conformist community.
+                    Ultimately, by formalizing these alternative structures as linked data in the future, we could
+                    empower the ontology to successfully process genres that the traditional monomyth struggles with,
+                    proving that narratives prioritizing authenticity and inner balance are just as structurally rigorous
+                    as tales of external triumph.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="class-card horizons-card">
-              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="16" y="16" width="6" height="6" rx="1"></rect>
-                <rect x="2" y="16" width="6" height="6" rx="1"></rect>
-                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
-                <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
-                <path d="M12 12V8"></path>
-              </svg>
-              <div class="class-name">Framework expansion</div>
-              <div class="class-desc">The ultimate extensibility of this project lies in the potential to expand our
-                foundational schema to transcend the structural limitations of Joseph Campbell's original model.
-                By integrating frameworks like Maureen Murdock’s <em>The Heroine’s Journey</em> and Kim Hudson’s <em>The
-                  Virgin’s Promise</em> into our ontology.ttl, we could broaden the graph's analytical power
-                to capture deeply internal, relational, and socially disruptive narrative arcs. While Campbell’s
-                monomyth maps an outward quest of conquest into the unknown, encoding these alternative frameworks
-                would allow us to query entirely different narrative. Murdock provides a potential "feminine
-                counter-arc" that tracks an inward descent to integrate split psychic polarities,
-                while Hudson’s model captures transformation born from radical self-expression against a conformist
-                community.
-                Ultimately, by formalizing these alternative structures as linked data in the future, we could empower
-                the ontology to successfully process genres that the traditional monomyth struggles
-                with, proving that narratives prioritizing authenticity and inner balance are just as structurally
-                rigorous as tales of external triumph.</div>
-            </div>
-            <div class="class-card horizons-card">
-              <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-              </svg>
-              <div class="class-name">Potential research</div>
-              <div class="class-desc">By populating this OWL ontology with diverse narrative knowledge graphs in the
-                future,
-                we could transition literary analysis into computable data. This would enable us to formulate complex
-                research
-                questions that query divergences across multiple cultural axes. We could run SPARQL queries to discover,
-                for instance,
-                how the <code>monomyth:SemioticDivergence</code> shifts from literal magic to psychological trauma
-                across centuries
-                of storytelling, or whether authors of different genders systematically invert specific archetypes.
-                Specifically, the structured nature of this dataset would allow researchers to track narrative shifts
-                over <strong>time</strong>
-                (mapping historical trends and the evolution of specific divergences), across <strong>space</strong>
-                (contrasting Western and Eastern
-                structural traditions), through distinct <strong>media</strong> (comparing structural constraints in
-                literature, film, comics, and music),
-                and across <strong>gender</strong> (analyzing how the gender of the author or protagonist dictates
-                specific divergences).
-                Ultimately, this framework has the potential to transition the Monomyth from a static literary theory
-                into a dynamic,
-                quantitative research tool, ready to reveal exactly how modern culture bends ancient mythologies to
-                reflect its own realities.
+
+              <div class="conclusion-topic">
+                <div class="ontology-classes-label">Potential research: querying the Monomyth</div>
+                <div class="conclusion-topic-body">
+                  <p>
+                    By populating the knowledge graphs with diverse narrative in the future, would enable us to formulate complex research
+                    questions that query divergences across multiple cultural axes.
+                  </p>
+                  <p>
+                    We could run SPARQL queries to discover, for instance, how the
+                    <code>monomyth:SemioticDivergence</code> shifts from literal magic to psychological trauma across
+                    centuries of storytelling, or whether authors of different genders systematically invert specific
+                    archetypes. Specifically, the structured nature of this dataset would allow researchers to track
+                    narrative shifts over <strong>time</strong> (mapping historical trends and the evolution of specific
+                    divergences), across <strong>space</strong> (contrasting Western and Eastern structural traditions),
+                    through distinct <strong>media</strong> (comparing structural constraints in literature, film, comics,
+                    and music), and across <strong>gender</strong> (analyzing how the gender of the author or protagonist
+                    dictates specific divergences).
+                  </p>
+                  <p>
+                    Ultimately, this framework has the potential to transition the Monomyth from a static literary theory
+                    into a dynamic, quantitative research tool, ready to reveal exactly how modern culture bends ancient
+                    mythologies to reflect its own realities.
+                  </p>
+                </div>
               </div>
+
+            </div>
+
+            <!-- Right Column: Two stacked cards -->
+            <div class="conclusion-side-cards">
+
+              <!-- Card 1: LLM Assisted Modeling -->
+              <div class="class-card horizons-card conclusion-topic-card">
+                <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 8V4H8"></path>
+                  <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                  <path d="M2 14h2"></path>
+                  <path d="M20 14h2"></path>
+                  <path d="M15 13v2"></path>
+                  <path d="M9 13v2"></path>
+                </svg>
+                <div class="class-name">Scaling the graph: LLM-Assisted modeling</div>
+                <div class="class-desc">
+                  <p>
+                    To rapidly scale the population of our ontology without sacrificing structural integrity,
+                    we employed an LLM-assisted knowledge grounding technique using Claude and Gemini. By supplying our
+                    baseline OWL ontology alongside a "gold-standard" exemplar (<em>The Matrix</em>), we created a short
+                    prompt to draft new narrative knowledge graphs.
+                  </p>
+                  <p>
+                    The results provided a fascinating case study in LLM limitations. For newer or less famous works,
+                    analytical accuracy plummeted as the models confidently hallucinated plot points to force a fit into
+                    Campbell's framework.
+                  </p>
+                  <p>
+                    Ultimately, LLM generation serves as a first-pass scaffolding, requiring <strong>human-in-the-loop</strong> revision. The AI can build the graph's syntactic skeleton, but identifying <em>why</em> an author deliberately subverted an archetype remains a human intellectual exercise.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2: The Monomyth in action -->
+              <div class="class-card horizons-card conclusion-research-card">
+                <svg class="horizons-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+                <div class="class-name">The Monomyth in action</div>
+                <div class="class-desc">
+                  <ul class="card-questions-list">
+                    <li>
+                      <span class="question-icon material-symbols-outlined">help</span>
+                      <div class="question-content">
+                        <span class="question-text">Which monomyth stage remains the most stable and consistent across its realizations?</span>
+                        <div class="question-answer">
+                          <div class="answer-main">
+                            <span class="answer-label">Result</span>
+                            <span class="answer-value">The Crossing of The First Threshold. Because crossing into the unknown is a fundamental prerequisite for both the plot's
+                              momentum and the hero's growth, this stage's core function remains intact even when authors heavily subvert its traditional tropes.</span>
+                          </div>
+                          <a href="https://api.triplydb.com/s/ShckpQF3l" target="_blank" class="sparql-link">
+                            <svg class="sparql-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            <span>Check on SPARQL endpoint</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="question-icon material-symbols-outlined">help</span>
+                      <div class="question-content">
+                        <span class="question-text">Which monomyht stage is the most mutable and exposed to divergences?</span>
+                        <div class="question-answer">
+                          <div class="answer-main">
+                            <span class="answer-label">Result</span>
+                            <span class="answer-value">Woman as the Temptress. The stage  frequently diverges because it reflects shifting cultural morals about gender and sexuality, rather than essential plot mechanics.</span>
+                          </div>
+                          <a href="https://api.triplydb.com/s/6xdh8kNPG" target="_blank" class="sparql-link">
+                            <svg class="sparql-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            <span>Check on SPARQL endpoint</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <span class="question-icon material-symbols-outlined">help</span>
+                      <div class="question-content">
+                        <span class="question-text">Which stage is most narratively variable, revealing greater conceptual flexibility across works?</span>
+                        <div class="question-answer">
+                          <div class="answer-main">
+                            <span class="answer-label">Result</span>
+                            <span class="answer-value">Refusal of the Return. This stage is highly flexible because, having achieved ultimate spiritual fulfillment, the hero simply loses the motivation to go back to the ordinary world.</span>
+                          </div>
+                          <a href="https://api.triplydb.com/s/C0LZH0n6W" target="_blank" class="sparql-link">
+                            <svg class="sparql-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            <span>Check on SPARQL endpoint</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
