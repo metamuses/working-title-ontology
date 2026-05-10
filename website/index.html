@@ -25,12 +25,12 @@
     <div class="navbar-inner">
       <a href="#hero" class="navbar-brand">
         <svg class="brand-mark" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="14" cy="14" r="12.5" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.2"/>
-          <path d="M14 3.8v20.4M4.2 14h19.6" stroke="currentColor" stroke-opacity="0.28" stroke-width="1"/>
-          <path d="M14 4.4A9.6 9.6 0 0 1 23.6 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          <path d="M23.6 14A9.6 9.6 0 0 1 14 23.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          <path d="M14 23.6A9.6 9.6 0 0 1 4.4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-          <circle cx="14" cy="14" r="2.1" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="14" cy="14" r="12.5" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.2" />
+          <path d="M14 3.8v20.4M4.2 14h19.6" stroke="currentColor" stroke-opacity="0.28" stroke-width="1" />
+          <path d="M14 4.4A9.6 9.6 0 0 1 23.6 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M23.6 14A9.6 9.6 0 0 1 14 23.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M14 23.6A9.6 9.6 0 0 1 4.4 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <circle cx="14" cy="14" r="2.1" stroke="currentColor" stroke-width="1.3" />
         </svg>
         Monomyth
       </a>
@@ -191,19 +191,54 @@
           <div class="section-divider"></div>
           <div class="section-prose">
             <p>
-              The ontology defines a <strong>reusable vocabulary</strong> at <code style="font-size:0.85em; color:var(--gold-dim);">monomyth:</code> that captures the deep structure of Campbell's monomyth. Expressed in OWL and serialized as Turtle, it models the seventeen stages across three acts, the archetypal roles that populate the journey, and the evaluative apparatus needed to assess how faithfully (or how creatively) any given narrative instantiates the pattern. Every analytical judgment, from the quality of a stage's manifestation to the rationale behind a departure from the template, is represented as a first-class, queryable entity rather than a background assumption.
+              The ontology defines a <strong>reusable vocabulary</strong> at <code
+                style="font-size:0.85em; color:var(--gold-dim);">monomyth:</code> that captures the deep structure of
+              Campbell's monomyth. Expressed in OWL and serialized as Turtle, it models the seventeen stages across
+              three acts, the archetypal roles that populate the journey, and the evaluative apparatus needed to assess
+              how faithfully (or how creatively) any given narrative instantiates the pattern. Every analytical
+              judgment, from the quality of a stage's manifestation to the rationale behind a departure from the
+              template, is represented as a first-class, queryable entity rather than a background assumption.
             </p>
             <p>
-              The central modeling pattern is the <strong>MonomythExpression</strong>, a reification of the interpretive act itself: the structured reading of a particular narrative work through Campbell's lens. Each expression anchors a constellation of <strong>StageRealizations</strong>, the concrete manifestations of abstract stages within that narrative. A realization carries a prose description of the narrative moment it captures, a position in the story's own sequence (which may diverge from the canonical ordering), and a <strong>FitQuality</strong> assessment on a six-point scale ranging from <em>Perfect Fit</em> through <em>Strong</em>, <em>Moderate</em>, and <em>Weak</em> to <em>Absent</em> and <em>Inverted</em>, each backed by a numeric score and an optional analytical note.
+              The central modeling pattern is the <strong>MonomythExpression</strong>, a reification of the interpretive
+              act itself: the structured reading of a particular narrative work through Campbell's lens. Each expression
+              anchors a constellation of <strong>StageRealizations</strong>, the concrete manifestations of abstract
+              stages within that narrative. A realization carries a prose description of the narrative moment it
+              captures, a position in the story's own sequence (which may diverge from the canonical ordering), and a
+              <strong>FitQuality</strong> assessment on a six-point scale ranging from <em>Perfect Fit</em> through
+              <em>Strong</em>, <em>Moderate</em>, and <em>Weak</em> to <em>Absent</em> and <em>Inverted</em>, each
+              backed by a numeric score and an optional analytical note.
             </p>
             <p>
-              The treatment of characters draws on <strong>Christopher Vogler</strong>'s <em>The Writer's Journey</em>, a screenwriting manual that deliberately translates Campbell's mythological archetypes into a practical dramaturgy of recurring roles. The ontology formalizes it through the <code style="font-size:0.85em; color:var(--gold-dim);">embodiesArchetype</code> property, linking characters to <strong>archetypal roles</strong> while acknowledging their productive instability: a figure who operates as Mentor in one stage may reveal itself as Shadow in another, and the graph preserves this fluidity as structured, traversable data.
+              The treatment of characters draws on <strong>Christopher Vogler</strong>'s <em>The Writer's Journey</em>,
+              a screenwriting manual that deliberately translates Campbell's mythological archetypes into a practical
+              dramaturgy of recurring roles. The ontology formalizes it through the <code
+                style="font-size:0.85em; color:var(--gold-dim);">embodiesArchetype</code> property, linking characters
+              to <strong>archetypal roles</strong> while acknowledging their productive instability: a figure who
+              operates as Mentor in one stage may reveal itself as Shadow in another, and the graph preserves this
+              fluidity as structured, traversable data.
             </p>
             <p>
-              Where the alignment between a narrative and the monomyth template is imperfect, the ontology does not simply record the gap: it models the nature of the departure through three orthogonal divergence classes, all subclasses of CREON's <code style="font-size:0.85em; color:var(--gold-dim);">ProductDivergence</code>. A <strong>NarrativeDivergence</strong> captures what happens when a stage is absent, subverted, compressed, or redistributed across multiple narrative moments. A <strong>SequentialDivergence</strong> marks when a stage occurs and whether the narrative has displaced it from its canonical position for dramatic or thematic effect. A <strong>SemioticDivergence</strong> traces how the stage is expressed, underlying the shift in sign systems (from sacred to secular, from mythic to technological, from external threat to internal state) through which the same structural function is realized in a different cultural or medial vocabulary. Each divergence carries a prose rationale documenting the artistic purpose behind the departure, making explicit that imperfect fit is itself an object of analysis, often the most revealing one.
+              Where the alignment between a narrative and the monomyth template is imperfect, the ontology does not
+              simply record the gap: it models the nature of the departure through three orthogonal divergence classes,
+              all subclasses of CREON's <code style="font-size:0.85em; color:var(--gold-dim);">ProductDivergence</code>.
+              A <strong>NarrativeDivergence</strong> captures what happens when a stage is absent, subverted,
+              compressed, or redistributed across multiple narrative moments. A <strong>SequentialDivergence</strong>
+              marks when a stage occurs and whether the narrative has displaced it from its canonical position for
+              dramatic or thematic effect. A <strong>SemioticDivergence</strong> traces how the stage is expressed,
+              underlying the shift in sign systems (from sacred to secular, from mythic to technological, from external
+              threat to internal state) through which the same structural function is realized in a different cultural
+              or medial vocabulary. Each divergence carries a prose rationale documenting the artistic purpose behind
+              the departure, making explicit that imperfect fit is itself an object of analysis, often the most
+              revealing one.
             </p>
             <p>
-              Formalizing a hermeneutic tradition into computational structure risks flattening the very interpretive richness it seeks to preserve. This ontology addresses this tension by treating <strong>deviation as constitutive</strong>: conformity and subversion, presence and absence, canonical order and displacement are granted equal analytical weight. The deeper question it encodes is how a pattern largely unchanged for millennia has generated such radically diverse stories, and how each creative departure, every inversion or omission, is itself a meaningful act.
+              Formalizing a hermeneutic tradition into computational structure risks flattening the very interpretive
+              richness it seeks to preserve. This ontology addresses this tension by treating <strong>deviation as
+                constitutive</strong>: conformity and subversion, presence and absence, canonical order and displacement
+              are granted equal analytical weight. The deeper question it encodes is how a pattern largely unchanged for
+              millennia has generated such radically diverse stories, and how each creative departure, every inversion
+              or omission, is itself a meaningful act.
             </p>
           </div>
         </div>
@@ -211,54 +246,65 @@
         <div class="reveal reveal-delay-1 ontology-classes-panel">
           <div class="about-stat about-stages-box ontology-iri-box">
             <div class="about-stages-act">Monomyth Ontology IRI</div>
-            <a class="ontology-iri-value" href="https://monomyth.metamuses.org/ontology#" target="_blank" rel="noopener">https://monomyth.metamuses.org/ontology#</a>
+            <a class="ontology-iri-value" href="https://monomyth.metamuses.org/ontology#" target="_blank"
+              rel="noopener">https://monomyth.metamuses.org/ontology#</a>
           </div>
           <div class="ontology-classes-label">Core Classes</div>
           <div class="ontology-classes">
             <div class="class-card reveal">
               <div class="class-prefix">monomyth:NarrativeWork</div>
               <div class="class-name">Narrative Work</div>
-              <div class="class-desc">A story, novel, epic, film, or other narrative that can be analyzed through the monomyth framework. Linked to external identifiers via owl:sameAs for Wikidata integration.</div>
+              <div class="class-desc">A story, novel, epic, film, or other narrative that can be analyzed through the
+                monomyth framework. Linked to external identifiers via owl:sameAs for Wikidata integration.</div>
             </div>
             <div class="class-card reveal reveal-delay-1">
               <div class="class-prefix">monomyth:MonomythExpression</div>
               <div class="class-name">Monomyth Expression</div>
-              <div class="class-desc">A specific realization of the monomyth structure within a particular narrative work. One work may contain multiple expressions for different characters.</div>
+              <div class="class-desc">A specific realization of the monomyth structure within a particular narrative
+                work. One work may contain multiple expressions for different characters.</div>
             </div>
             <div class="class-card reveal">
               <div class="class-prefix">monomyth:Character</div>
               <div class="class-name">Character</div>
-              <div class="class-desc">A character within a specific narrative work, linked to archetypes and involved in stage realizations across the journey.</div>
+              <div class="class-desc">A character within a specific narrative work, linked to archetypes and involved in
+                stage realizations across the journey.</div>
             </div>
             <div class="class-card reveal reveal-delay-1">
               <div class="class-prefix">monomyth:Archetype</div>
               <div class="class-name">Archetype</div>
-              <div class="class-desc">A recurring character role based on Vogler's adaptation of Campbell: Hero, Mentor, Herald, Threshold Guardian, Shadow, Shapeshifter, Trickster, and Ally.</div>
+              <div class="class-desc">A recurring character role based on Vogler's adaptation of Campbell: Hero, Mentor,
+                Herald, Threshold Guardian, Shadow, Shapeshifter, Trickster, and Ally.</div>
             </div>
             <div class="class-card reveal">
               <div class="class-prefix">monomyth:StageRealization</div>
               <div class="class-name">Stage Realization</div>
-              <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a narrative, with fit quality, prose description, and ordering.</div>
+              <div class="class-desc">The key modeling pattern: how an abstract stage concretely manifests in a
+                narrative, with fit quality, prose description, and ordering.</div>
             </div>
             <div class="class-card reveal reveal-delay-1">
               <div class="class-prefix">monomyth:FitQuality</div>
               <div class="class-name">Fit Quality</div>
-              <div class="class-desc">A six-point scale from InvertedFit through AbsentFit, WeakFit, ModerateFit, StrongFit, to PerfectFit for assessing stage mappings.</div>
+              <div class="class-desc">A six-point scale from InvertedFit through AbsentFit, WeakFit, ModerateFit,
+                StrongFit, to PerfectFit for assessing stage mappings.</div>
             </div>
             <div class="class-card reveal">
               <div class="class-prefix">monomyth:NarrativeDivergence</div>
               <div class="class-name">Narrative Divergence</div>
-              <div class="class-desc">A creative departure from the expected monomyth pattern, formalizing the insight that imperfect alignments are not failures of fit but potential acts of deliberate artistic choice.</div>
+              <div class="class-desc">A creative departure from the expected monomyth pattern, formalizing the insight
+                that imperfect alignments are not failures of fit but potential acts of deliberate artistic choice.
+              </div>
             </div>
             <div class="class-card reveal reveal-delay-1">
               <div class="class-prefix">monomyth:SequentialDivergence</div>
               <div class="class-name">Sequential Divergence</div>
-              <div class="class-desc">A structural departure from the expected ordering of monomyth stages, occurring when a narrative realizes a stage earlier or later than its canonical position.</div>
+              <div class="class-desc">A structural departure from the expected ordering of monomyth stages, occurring
+                when a narrative realizes a stage earlier or later than its canonical position.</div>
             </div>
             <div class="class-card reveal">
               <div class="class-prefix">monomyth:SemioticDivergence</div>
               <div class="class-name">Semiotic Divergence</div>
-              <div class="class-desc">A divergence in the sign system through which a stage is expressed, where the cultural or figurative vehicle changes while structural function is preserved.</div>
+              <div class="class-desc">A divergence in the sign system through which a stage is expressed, where the
+                cultural or figurative vehicle changes while structural function is preserved.</div>
             </div>
           </div>
         </div>
@@ -278,12 +324,13 @@
           <div class="section-divider"></div>
         </div>
         <div class="reveal reveal-delay-1">
-          <div class="section-prose">
-            <p>
-              Each narrative is instantiated as a knowledge graph following the ontology pattern: characters,
-              worlds, thresholds, symbolic elements, and all 17 stage realizations with fit quality assessments.
-              Works range from complete RDF graphs to prose breakdowns awaiting formalization.
-            </p>
+          <div class="about-stat about-stages-box">
+            <div class="about-stages-act">Monomyth Knowledge Graph</div>
+            <a class="ontology-iri-value" href="https://monomyth.metamuses.org/graph/" target="_blank"
+              rel="noopener">https://monomyth.metamuses.org/graph/</a>
+            <div class="about-stages-act" style="margin-top: 24px;">Monomyth SPARQL Endpoint</div>
+            <a class="ontology-iri-value" href="https://monomyth.metamuses.org/sparql" target="_blank"
+              rel="noopener">https://monomyth.metamuses.org/sparql</a>
           </div>
         </div>
       </div>
@@ -299,8 +346,7 @@
               </div>
               <span class="tag tag-movie">Movie</span>
             </div>
-            <div class="work-desc">Neo's awakening from simulated reality maps almost perfectly to the monomyth. 8
-              characters, 7 symbolic elements, 3 narrative worlds, and full Wikidata integration.</div>
+            <div class="work-desc">A 1999 science fiction film in which a computer hacker discovers that reality as he knows it is a simulated world created by machines to subjugate humanity.</div>
             <div class="fit-bar">
               <div class="segment filled strong"></div>
               <div class="segment filled strong"></div>
@@ -342,9 +388,7 @@
               </div>
               <span class="tag tag-movie">Animated Movie</span>
             </div>
-            <div class="work-desc">Campbell's own primary example. Odysseus's decade-long return from Troy fits the
-              monomyth with near-perfect precision&mdash;arguably the archetype from which the archetype was drawn.
-            </div>
+            <div class="work-desc">A Disney animated film from 1994 in which a young lion prince, exiled by guilt and deception after the murder of his father, must reclaim his identity and his kingdom from the uncle who usurped them both.</div>
             <div class="fit-bar">
               <div class="segment filled strong"></div>
               <div class="segment filled moderate"></div>
@@ -386,9 +430,7 @@
               </div>
               <span class="tag tag-book">Novel</span>
             </div>
-            <div class="work-desc">Arguably the purest ancient monomyth. The boon is lost so something deeper can be
-              found&mdash;Gilgamesh returns without immortality but with wisdom, inverting the expected reward
-              structure.</div>
+            <div class="work-desc">A 1903 novel in which a domesticated dog is stolen from a California estate and sold into the Klondike Gold Rush sled dog trade, where the progressive stripping away of civilization awakens an ancestral wildness that ultimately claims him entirely.</div>
             <div class="fit-bar">
               <div class="segment filled strong"></div>
               <div class="segment filled moderate"></div>
@@ -410,7 +452,7 @@
             </div>
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>1 Weak, 1 Inverted, 2 Absent</span>
+              <span>2 Absent, 1 Inverted, 1 Weak</span>
             </div>
             <div class="meta-title">Divergences</div>
             <div class="meta-row">
@@ -429,9 +471,12 @@
               </div>
               <span class="tag tag-book">Epic Poem</span>
             </div>
-            <div class="work-desc">The Seven Labors of Rostam (Persian: هفت‌خان رستم, romanized: Haft Khān-e Rostam) are
-              seven heroic trials undertaken by the legendary Iranian hero Rostam in Shahnameh, written by Ferdowsi, to
-              rescue King Kay Kavus.</div>
+            <div class="work-desc">
+              The Seven Labors of Rostam (Persian: هفت‌خان رستم, romanized: Haft Khān-e Rostam) from Ferdowsi’s
+              Shahnameh follows the Persian hero Rostam as he undertakes seven deadly trials to rescue King Kay Kavus
+              from the demon-land of Mazandaran. Blending mythical creatures, divine intervention, and heroic combat,
+              the story stands as one of the greatest heroic journeys in Persian literature.
+            </div>
             <div class="fit-bar">
               <div class="segment filled perfect"></div>
               <div class="segment filled absent"></div>
@@ -456,7 +501,7 @@
 
             <div class="fit-label">
               <span>19 stages mapped</span>
-              <span>4 Absent, 0 Inverted</span>
+              <span>4 Absent</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -477,9 +522,10 @@
               </div>
               <span class="tag tag-movie">Movie</span>
             </div>
-            <div class="work-desc">A man living a dull life dreams up romantic and action-filled scenarios in order to
-              escape from monotony. When his own job is threatened, he sets out on a real romantic and action-packed
-              journey.
+            <div class="work-desc"> In <i>The Secret Life of Walter Mitty</i> (2013), Walter, a quiet employee at
+              <i>Life</i> magazine, embarks on a global journey to find a missing photograph and its elusive
+              photographer. Leaving behind his routine life and constant daydreams, he gradually overcomes fear and
+              insecurity, discovering confidence, purpose, and the extraordinary hidden within ordinary life.
             </div>
             <div class="fit-bar">
               <div class="segment filled strong"></div>
@@ -506,7 +552,7 @@
 
             <div class="fit-label">
               <span>20 stages mapped</span>
-              <span>1 Absent, 1 Inverted</span>
+              <span>1 Absent, 1 Inverted, 1 Weak</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -554,7 +600,7 @@
 
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>9 Absent, 0 Inverted</span>
+              <span>9 Absent, 1 Weak</span>
             </div>
 
             <div class="meta-title">Jim Gordon's journey</div>
@@ -580,7 +626,7 @@
 
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>7 Absent, 0 Inverted</span>
+              <span>7 Absent</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -628,7 +674,7 @@
 
             <div class="fit-label">
               <span>18 stages mapped</span>
-              <span>0 Absent, 4 Inverted</span>
+              <span>4 Inverted, 4 Weak</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -647,7 +693,7 @@
                 <div class="work-title">SABLE, fABLE</div>
                 <div class="work-author">Bon Iver, 2025</div>
               </div>
-              <span class="tag tag-album">Album</span>
+              <span class="tag tag-music">Album</span>
             </div>
             <div class="work-desc">An autobiographical double-EP/album narrating Justin Vernon's journey from a
               period of intense anxiety, isolation, and guilt (SABLE,) into a renewed era of love, peace, and
@@ -676,7 +722,7 @@
 
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>1 Absent, 0 Inverted</span>
+              <span>1 Absent</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -721,7 +767,7 @@
             </div>
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>0 Absent, 2 Inverted</span>
+              <span>2 Inverted</span>
             </div>
             <div class="meta-title">Divergences</div>
             <div class="meta-row">
@@ -765,7 +811,7 @@
             </div>
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>0 Absent, 1 Inverted</span>
+              <span>1 Inverted</span>
             </div>
             <div class="meta-title">Divergences</div>
             <div class="meta-row">
@@ -811,7 +857,7 @@
 
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>3 Absent, 0 Inverted</span>
+              <span>3 Absent</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -859,7 +905,6 @@
 
             <div class="fit-label">
               <span>17 stages mapped</span>
-              <span>0 Absent, 0 Inverted</span>
             </div>
 
             <div class="meta-title">Divergences</div>
@@ -898,13 +943,27 @@
           </div>
         </div>
         <div class="kg-modal-author">The Wachowskis, 1999</div>
-        <p class="kg-modal-summary">Placeholder extended analysis focused on the shifted boon outcome and
-          wisdom-oriented return logic.</p>
+        <p class="kg-modal-summary">
+          Released on the cusp of the new millennium, <em>The Matrix</em> captures an era of <strong>ontological anxiety</strong> fueled by the digital frontier 
+          and the suspicion that reality is a construct. The film aligns precisely with the hero’s transition from a sterile mundane world into a hidden reality. 
+          Neo’s guides provide a catalyst, but the aid he receives undergoes a crucial <strong>epistemic shift</strong>: his help is privileged information revealing 
+          the world as a simulation, reflecting the late-90s view of hackers as modern shamans.
+          <br>
+          The strongest alignment lies in the rigorous testing Neo undergoes once extracted. This mirrors the classic road of tests perfectly; the hero must unlearn 
+          physical limitations to master a new environment. These trials emphasize the <strong>sovereignty of the mind</strong> over the body, treating systemic mastery as a spiritual evolution.
+          <br>
+          The work departs in its depiction of temptation. The distraction is not a person but the seductive comfort of <strong>systemic ignorance</strong>. Through Cypher, the narrative 
+          weighs painful truth against a corporate simulation, reflecting the new millennium's fears of totalizing consumer culture. The final transcendence is re-signified through a 
+          <strong>digital apotheosis</strong>, where divinity is the total manipulation of code.
+          <br>
+          The journey concludes by subverting the homecoming. Neo cannot return to a society that was always a lie. Instead, he masters the system to offer liberation, shifting the 
+          circular monomyth toward an <strong>evolutionary trajectory</strong>. Once the veil is lifted, there is no "normal" home — only the mission to dismantle the artificial.
+        </p>
       </div>
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Neo's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled perfect"></div>
             <div class="segment filled perfect"></div>
@@ -959,16 +1018,6 @@
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1018,7 +1067,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Simba's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -1083,20 +1132,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>2 Absent, 1 Inverted</span>
+            <span>2 Inverted</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1148,7 +1187,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Buck's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -1218,20 +1257,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>1 Weak, 1 Inverted, 2 Absent</span>
+            <span>2 Absent, 1 Inverted, 1 Weak</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1290,7 +1319,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Rostam's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled perfect"></div>
             <div class="segment filled absent">
@@ -1353,20 +1382,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>19 stages mapped</span>
-            <span>4 Absent, 0 Inverted</span>
+            <span>4 Absent</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1422,7 +1441,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Walter's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -1491,20 +1510,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>20 stages mapped</span>
-            <span>1 Absent, 1 Inverted</span>
+            <span>1 Absent, 1 Inverted, 1 Weak</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1531,43 +1540,28 @@
         <div class="kg-modal-author">Frank Miller, 1987</div>
         <div class="kg-modal-summary">
           <p>
-            <em>Batman: Year One</em> arrived in 1987 as a landmark comic arc, reimagining the superhero origin through
-            the gritty, cynical lens of a Neo-Noir crime thriller. Its monomyth realization is fascinating for its
-            <strong>secular realism</strong>. The traditional heroic narrative is stripped of its cosmic realms and
-            magical talismans, mapped instead onto a decaying urban landscape. Campbell’s supernatural interventions are
-            entirely replaced by material grit: the Supernatural Aid is internalized as a totemic animal crashing
-            through a window, and the Belly of the Whale is localized not in a monster's stomach, but in an abandoned,
-            firebombed tenement or a brutal alleyway beating by corrupt cops. This shift replaces the epic fantasy of
-            the hero's journey with the violent, systemic language of institutional corruption.
-            What makes the narrative structurally brilliant is its treatment of the hero's agency and identity. Batman's
-            journey fundamentally diverges from Campbell’s framework through his <strong>proactive aggression</strong>.
-            He is not a hesitant hero who refuses the call out of fear; his "refusal" is merely a premature, disastrous
-            plunge into the mission before his methods are perfected. Furthermore, he does not ask for passage from
-            Threshold Guardians—he violently ambushes Gotham's elite in their own dining room. Most distinctly, Batman
-            entirely bypasses the Temptress stage through semiotic dehumanization. Because Bruce has split his identity
-            to become a pure, incorruptible symbol of fear, he is immune to earthly seductions. You cannot tempt a sign
-            that possesses no negotiable interiority.
-            To maintain the adult, grounded tension required by the monomyth without compromising Batman’s symbolic
-            purity, the narrative relies on a brilliant <strong>dual-journey structure</strong>. The burden of human
-            frailty—specifically the Temptress stage—is displaced onto the co-protagonist, Jim Gordon, whose
-            extramarital affair with Sarah Essen serves as the worldly attachment threatening his moral crusade. These
-            two parallel journeys operate independently until they converge at the climax. In this secularized world,
-            the Ultimate Boon cannot be a stolen elixir or a holy grail. Instead, the boon is a social contract. By
-            saving Gordon's infant son on a bridge, Batman secures a clandestine alliance. Each man functions as the
-            hero of his own story while serving as the Ultimate Boon in the other's, forging the vital partnership
-            needed to survive a city without magic.
-            Crucially, because this is an origin story, the narrative features a <strong>truncated arc</strong>,
-            deliberately excising Campbell’s entire third act (The Return) for both heroes. There is no Magic Flight or
-            Crossing of the Return Threshold because the "ordinary world" they left behind no longer exists. The journey
-            concludes precisely at the moment their new identities are forged and their alliance is struck, serving as a
-            dark prologue rather than a completed, cyclical return.
+            <em>Batman: Year One</em> (1987) reimagines the superhero origin as Neo-Noir crime fiction, secularizing 
+            Campbell’s monomyth through <strong>urban realism</strong>. Cosmic realms and magical talismans are replaced by Gotham’s institutional 
+            decay: <em>Supernatural Aid</em> becomes Bruce Wayne’s internalized bat-symbol, triggered by the animal crashing through his window,
+            while the <em>Belly of the Whale</em> is localized in firebombed tenements and savage beatings by corrupt police. The heroic 
+            journey is thus translated into the violent language of systemic corruption rather than epic fantasy. 
+            <br>
+            Structurally, the narrative diverges sharply from Campbell through Batman’s agency. <strong>Bruce</strong> is never a reluctant hero refusing the call; 
+            his “refusal” is instead a premature, failed attempt at vigilantism before refining his methods. Likewise, he does not 
+            negotiate with Threshold Guardians — he invades Gotham’s elite and terrorizes them directly. Most crucially, Batman bypasses 
+            the Temptress stage entirely through <strong>semiotic dehumanization</strong>: Bruce fractures his identity into an incorruptible symbol of 
+            fear, a sign with no negotiable interiority and therefore no susceptibility to earthly seduction. 
+            <br> To preserve human vulnerability, the story displaces the Temptress function onto co-protagonist <strong>Jim Gordon</strong>, whose affair with Sarah Essen threatens his moral 
+            crusade. Their parallel journeys converge when Batman saves Gordon’s infant son, making the <em>Ultimate Boon</em> not a grail or 
+            elixir but a social contract: a clandestine alliance between two damaged men. 
+            <br> Because it is an origin story, the arc deliberately <strong>omits Campbell’s Return</strong>; there is no restored ordinary world, only the forging of identities and partnership.
           </p>
         </div>
       </div>
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Bruce Wayne's journey stage realization's fit</p>
+          <p>Stage realizations' fit in Bruce Wayne's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -1659,12 +1653,12 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>9 Absent, 0 Inverted</span>
+            <span>9 Absent, 1 Weak</span>
           </div>
         </section>
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Jim Gordon's journey stage realization's fit</p>
+          <p>Stage realizations' fit in Jim Gordon's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong"></div>
             <div class="segment filled strong"></div>
@@ -1730,21 +1724,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>7 Absent, 0 Inverted</span>
+            <span>7 Absent</span>
           </div>
         </section>
 
-
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1800,7 +1783,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Oedipus's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled perfect"></div>
             <div class="segment filled strong">
@@ -1863,20 +1846,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>18 stages mapped</span>
-            <span>0 Absent, 4 Inverted</span>
+            <span>4 Inverted, 4 Weak</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -1894,48 +1867,38 @@
         <div class="kg-modal-title-row">
           <h3 class="kg-modal-title" id="kgModalSablefableTitle">SABLE, fABLE</h3>
           <div class="kg-modal-tags">
-            <span class="tag tag-album">Album</span>
+            <span class="tag tag-music">Album</span>
             <a href="https://github.com/metamuses/monomyth/blob/main/ontology/graphs/sableFable.ttl"
-              class="tag tag-album kg-modal-repo-link" target="_blank" title="View Knowledge Graph on GitHub">Go to
+              class="tag tag-music kg-modal-repo-link" target="_blank" title="View Knowledge Graph on GitHub">Go to
               Knowledge Graph</a>
           </div>
         </div>
         <div class="kg-modal-author">Bon Iver, 2025</div>
-        <p class="kg-modal-summary"><em>SABLE, fABLE</em> arrived in 2025 as an intimate double-EP, reflecting
-          contemporary indie folk's deep preoccupation with mental health and the mechanics of self-forgiveness.
-          Its monomyth realization is fascinating not for its mythic scale, but for its <strong>radical
-            internalization</strong>. The traditional heroic narrative is compressed into a deeply isolated,
-          psychological
-          autobiography featuring only three characters: the hero, his mirrored reflection, and his romantic partner.
-          Campbell’s cosmic realms and supernatural interventions are entirely stripped away.
-          Instead, the journey's semiotic vehicle is <strong>secular psychology</strong>. Intrusive thoughts serve as
-          the Herald, paralyzing fear of change becomes the Refusal, and the Belly of the Whale is localized
-          not in a monster's stomach, but in the suffocating guilt of a "violent spree" of self-sabotage in Key West.
-          This shift replaces the epic fantasy of the hero's journey with the modern, intimate
-          language of trauma recovery and therapeutic unlearning. What makes the album structurally brilliant is how it
-          reframes mythic threats as <strong>psychological regressions</strong>. The monsters Vernon battles
-          are his own impulses to retreat into a familiar, isolated melancholy. The traditional Road of Trials is
-          transformed from physical ordeals into the exhausting emotional labor of vulnerability—the
-          terrifying act of allowing oneself to be witnessed in pain. Because the hero's wound is self-inflicted, the
-          ultimate boon cannot be a stolen elixir or a conquered throne. Rather, the boon is
-          translated into <strong>emotional capacity</strong>: the hard-won ability to hold space for someone else's
-          pain ("give me your worry") after years of being entirely consumed by his own. The mastery of the
-          "two worlds" becomes a geographic and mental equilibrium, forcing the hero to balance the isolated, snowy
-          depression of his past (<em>SABLE</em>,) with the communal, sunlit warmth of his present (<em>fABLE</em>).
-          Equally distinctive is the album’s treatment of <strong>love as the ultimate grounding force</strong>,
-          fundamentally diverging from Campbell’s mystical framework. In classical myth, figures like the Goddess
-          or the Supernatural Aid offer cosmic elevation, mystical marriage, or divine transcendence. In SABLE, fABLE,
-          these divine signifiers are secularized into a human partner whose defining heroic trait is simply staying
-          put. Apotheosis is not achieved through ascending to godhood, but through the profound, earthly relief of a
-          shared "walk home," while the Rescue from Without is delivered through a steadfast chorus promising, "I won't
-          move." Love, in this framework, is not a mystical reward but a <strong>secular anchor</strong>—the vital,
-          human tether that pulls the hero out of his spiraling intellect and back into the present moment, allowing him
-          to finally achieve the freedom to live with "no more shame."</p>
+        <p class="kg-modal-summary">
+          <em>SABLE, fABLE</em> (2025) reimagines Campbell’s monomyth through radical <strong>psychological intimacy</strong> rather than mythic scale. 
+          The heroic journey is compressed into an isolated autobiography centered on only three figures: the hero, his mirrored self, 
+          and his romantic partner. Cosmic realms and supernatural forces vanish entirely, replaced by the <strong>secular language of therapy 
+          and trauma recovery</strong>. 
+          <br>
+          Intrusive thoughts become the <em>Herald</em>, fear of change functions as the Refusal, and the <em>Belly of the Whale</em> 
+          is relocated to the suffocating guilt of a self-destructive “violent spree” in Key West. Mythic conflict is thus internalized 
+          into psychological regression. <strong>Vernon’s monsters</strong> are his impulses toward familiar isolation and melancholy, while the <em>Road of 
+          Trials</em> becomes the exhausting emotional labor of vulnerability: allowing oneself to be seen in pain. 
+          <br>
+          Because the wound is self-inflicted, the <em>Ultimate Boon</em> cannot be a grail or throne, but emotional capacity itself — the ability to “give me your worry” 
+          after years of being consumed by personal anguish. Mastery of the “two worlds” becomes both geographic and mental equilibrium, 
+          balancing the snowy isolation of <strong>SABLE</strong>, with the communal warmth of <strong>fABLE</strong>. 
+          <br>
+          The album further diverges from Campbell by secularizing <strong>divine love</strong>. Rather than mystical transcendence, salvation comes through a partner whose defining heroic act is simply remaining present. 
+          <em>Apotheosis</em> is not godhood but the earthly relief of a shared “walk home,” while the <em>Rescue from Without</em> arrives through the promise, 
+          “I won’t move.” Love becomes not a cosmic reward, but a human anchor pulling the hero from spiraling introspection toward a life with
+           “no more shame.”
+        </p>
       </div>
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Justin Vernon's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -2029,20 +1992,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>1 Absent, 0 Inverted</span>
+            <span>1 Absent</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -2106,7 +2059,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Christine's journey.</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled moderate">
               <div class="divergences-container">
@@ -2158,20 +2111,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>0 Absent, 2 Inverted</span>
+            <span>2 Inverted</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -2196,13 +2139,27 @@
           </div>
         </div>
         <div class="kg-modal-author">Virgil, 19 BC</div>
-        <p class="kg-modal-summary">Placeholder extended analysis focused on the shifted boon outcome and
-          wisdom-oriented return logic.</p>
+        <p class="kg-modal-summary">
+          Virgil’s <em>Aeneid</em> occupies a singular place in the monomyth tradition because it consciously functions as the founding myth of an 
+          existing political order, reshaping Campbell’s sequence while preserving its deep grammar. The poem opens inside the <strong>dissolving 
+          darkness</strong> that should arrive later, with the storm at sea presented as condition rather than climax, while the hero’s journey is reconstructed 
+          etrospectively through Aeneas’s own narration. The summons appears only when Mercury intervenes at Carthage, after the temptress 
+          episode has nearly concluded the story. This Homeric <em>in medias res</em> structure disrupts the sequence without erasing it.<br>
+          The strongest archetypal alignment occurs with <strong>Anchises in the Elysian fields</strong>, where paternal authority defines the hero’s 
+          identity with unmatched formal completeness. Yet the encounter is transformed tonally: instead of a threatening patriarch, Anchises weeps, 
+          embraces, and instructs. Authority becomes revelation, reflecting Augustan ideals of <strong>filial pietas</strong> and Stoic-Platonic cosmology.<br>
+          Virgil’s greatest deviations center on feminine archetypes. The goddess figure is dispersed across Venus, Creusa, and Lavinia, whose burning hair 
+          marks her as a <strong>dynastic cipher</strong> rather than an agent of personal transformation. Dido embodies the temptress archetype with unusual 
+          clarity, but in displaced order, which gives her tragedy overwhelming dramatic force.<br>
+          Most striking is the ending’s inversion. The hero, who should transcend fear and attachment, instead kills Turnus in fury, the final image tracking his 
+          soul fleeing beneath the shades. After Actium and the proscriptions, <strong>the cost of foundation could not be sublimated into peace</strong>, and Virgil 
+          refuses the consoling closure the monomyth traditionally promises.
+        </p>
       </div>
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Aeneas's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong">
               <div class="divergences-container">
@@ -2276,20 +2233,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>1 Absent, 1 Inverted</span>
+            <span>1 Inverted</span>
           </div>
         </section>
 
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
       </div>
     </div>
   </div>
@@ -2397,19 +2344,10 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>3 Absent, 0 Inverted</span>
+            <span>3 Absent</span>
           </div>
         </section>
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
+        
       </div>
     </div>
   </div>
@@ -2465,7 +2403,7 @@
       <div class="kg-modal-grid">
         <section class="kg-modal-section kg-modal-section-full">
           <h4>Stage Fit Profile</h4>
-          <p>Placeholder stage notes for strong alignment with targeted moderate slots.</p>
+          <p>Stage realizations' fit in Ruggiero's journey</p>
           <div class="fit-bar fit-bar-large">
             <div class="segment filled strong"></div>
 
@@ -2544,19 +2482,9 @@
           </div>
           <div class="fit-label fit-label-large">
             <span>17 stages mapped</span>
-            <span>0 Absent, 0 Inverted</span>
           </div>
         </section>
-        <section class="kg-modal-section">
-          <h4>Archetypal Dynamics</h4>
-          <p>Placeholder role-mapping detail across gods, companions, and homecoming figures.</p>
-          <p>Placeholder text for confidence notes and citation mapping.</p>
-        </section>
-        <section class="kg-modal-section">
-          <h4>Modeling Notes</h4>
-          <p>Placeholder data-model decisions for oral-tradition variants.</p>
-          <p>Placeholder follow-up tasks for alternate recension support.</p>
-        </section>
+      
       </div>
     </div>
   </div>
