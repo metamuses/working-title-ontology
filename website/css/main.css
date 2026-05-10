@@ -697,8 +697,8 @@ body::before {
 }
 
 .tag-game {
-  color: var(--accent-orange);
-  border-color: rgba(189, 94, 16, 0.35);
+  color: #372a70;
+  border-color: #372a70;
 }
 
 .tag-book {
@@ -707,18 +707,18 @@ body::before {
 }
 
 .tag-play {
-  color: var(--text-muted);
-  border-color: rgba(138, 120, 96, 0.35);
+  color: rgba(189, 94, 16, 1);
+  border-color: rgba(189, 94, 16, 1);
 }
 
 .tag-comic {
-  color: var(--text-muted);
-  border-color: rgba(138, 120, 96, 0.35);
+  color: #962d21;
+  border-color: #962d21;
 }
 
 .tag-music {
-  color: var(--text-muted);
-  border-color: rgba(138, 120, 96, 0.35);
+  color: #1a1008;
+  border-color: #1a1008;
 }
 
 .kg-card .work-title {
