@@ -1334,9 +1334,12 @@ body.modal-open {
 }
 
 .sparql-link svg {
-  width: 12px;
-  height: 12px;
+  width: 14px !important;
+  height: 14px !important;
+  stroke: currentColor !important;
   stroke-width: 2.5;
+  fill: none !important;
+  flex-shrink: 0;
 }
 
 
