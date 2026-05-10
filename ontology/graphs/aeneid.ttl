@@ -5,12 +5,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
-# THE AENEID (Epic Poem, 19 BCE)
+# AENEID (Epic Poem, 19 BCE)
 # ==============================================================================
 
 <aeneid> a monomyth:NarrativeWork,
@@ -19,6 +18,7 @@
     dcterms:title "Aeneid"@en ;
     dcterms:created "-0018"^^xsd:gYear ;
     dcterms:creator "Publius Vergilius Maro" ;
+    schema:countryOfOrigin wd:Q38 ;
     schema:genre "Epic Poetry"@en,
         "Mythological Literature"@en ;
     owl:sameAs wd:Q60220 ;

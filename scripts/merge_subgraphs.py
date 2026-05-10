@@ -27,9 +27,18 @@ SUBGRAPHS_DIR = ROOT_DIR / "ontology" / "graphs"
 
 # List subgraphs in merge order.
 SUBGRAPH_FILES = [
+    "oedipus.ttl",
+    "aeneid.ttl",
+    "rostam-haft-khan.ttl",
+    "orlando-furioso.ttl",
     "the-call-of-the-wild.ttl",
+    "batman.ttl",
     "the-lion-king.ttl",
+    "ocarina-of-time.ttl",
     "the-matrix.ttl",
+    "walter-mitty.ttl",
+    "lady-bird.ttl",
+    "sableFable.ttl",
 ]
 
 # Define the separator between subgraphs
