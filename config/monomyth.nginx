@@ -91,6 +91,11 @@ server {
         try_files /ontology/graph.ttl =404;
     }
 
+    # ===== SPARQL ===========================
+    location ~ ^/sparql/?$ {
+        return 302 https://triplydb.com/epistrephein/monomyth/sparql;
+    }
+
     # ===== WEBSITE ==========================
     location / {
         alias /var/www/monomyth.metamuses.org/website/;
