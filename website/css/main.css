@@ -1253,6 +1253,13 @@ body.modal-open {
   align-items: flex-start;
 }
 
+.question-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
 .card-questions-list li:last-child {
   border-bottom: none;
 }
@@ -1274,6 +1281,62 @@ body.modal-open {
 .card-questions-list .question-text strong {
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+.question-answer {
+  margin-top: 12px;
+  background: rgba(122, 92, 20, 0.04);
+  border-left: 2px solid var(--gold-dim);
+  padding: 10px 14px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.answer-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-dim);
+  margin-bottom: 2px;
+}
+
+.answer-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-family: var(--font-display);
+}
+
+.sparql-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-decoration: none;
+  background: rgba(122, 92, 20, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.sparql-link:hover {
+  background: rgba(122, 92, 20, 0.15);
+  transform: translateX(2px);
+}
+
+.sparql-link svg {
+  width: 12px;
+  height: 12px;
+  stroke-width: 2.5;
 }
 
 
