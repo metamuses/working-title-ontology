@@ -10,7 +10,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # ==============================================================================
-# OEDIPUS REX & OEDIPUS AT COLONUS (Greek Tragedies)
+# OEDIPUS REX & OEDIPUS AT COLONUS (Tragedies, ~400 BCE)
 # ==============================================================================
 
 <oedipus-myth> a monomyth:NarrativeWork ;
