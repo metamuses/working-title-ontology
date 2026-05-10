@@ -49,8 +49,7 @@ mapping, especially where the relationship between the story and the monomyth
 requires nuance rather than simple classification.
 
 ## Graphical framework
-![Alt text](graphical_framework/ontology.png)
-
+![Monomyth Ontology Graphical Framework](https://raw.githubusercontent.com/metamuses/monomyth/refs/heads/main/graphical_framework/ontology.png)
 ## Knowledge graphs
 
 The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
