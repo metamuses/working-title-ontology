@@ -1266,10 +1266,12 @@ body.modal-open {
 
 .card-questions-list .question-icon {
   font-family: 'Material Symbols Outlined';
-  font-size: 1.0rem;
+  font-size: 1.1rem;
   color: var(--gold-dim);
   margin-top: 3px;
   flex-shrink: 0;
+  display: inline-block;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 .card-questions-list .question-text {
@@ -1333,13 +1335,15 @@ body.modal-open {
   transform: translateX(2px);
 }
 
-.sparql-link svg {
+.sparql-icon {
   width: 14px !important;
   height: 14px !important;
-  stroke: currentColor !important;
+  stroke: var(--gold) !important;
   stroke-width: 2.5;
   fill: none !important;
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 
