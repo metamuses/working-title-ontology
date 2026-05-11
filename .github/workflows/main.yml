@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+    tags:
+      - 'v*'
 
 concurrency:
-  group: deploy-${{ github.ref }}
+  group: deploy
   cancel-in-progress: true
 
 jobs:
