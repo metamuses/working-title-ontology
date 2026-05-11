@@ -67,8 +67,8 @@ Analyzed works include:
 prophecy leads him toward the discovery of his own hidden guilt.
 * **Aeneid**: a Latin epic poem about Aeneas's journey from the ruins of
 Troy toward the foundation of a new destiny in Italy.
-* **Rostam's Seven Labours**: an episode from the Persian *Shahnameh* about the
-hero Rostam overcoming seven trials to rescue the Iranian king Kay Kāvus.
+* **Rostam and the Seven Labors**: an episode from the Persian *Shahnameh* about
+the hero Rostam overcoming seven trials to rescue the Iranian king Kay Kāvus.
 * **Orlando Furioso**: a chivalric epic poem about love, madness, war and
 knightly adventure in the world of Charlemagne's paladins.
 * **The Call of the Wild**: a novel about a domesticated dog taken into the

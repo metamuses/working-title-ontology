@@ -67,42 +67,51 @@ from a negative assets manager to a courageous and self-discovering individual."
 
 <walter-mitty/characters/walter> a monomyth:Character ;
     rdfs:label "Walter Mitty"@en ;
-    rdfs:comment "The protagonist of the story, a negative assets manager at Life magazine who embarks on a journey to find a missing photograph through which he goes through the self-discovery journey"@en ;
+    rdfs:comment """The protagonist of the story, a negative assets manager at Life magazine who
+embarks on a journey to find a missing photograph through which he goes through the self-discovery
+journey."""@en ;
     monomyth:heroOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Hero .
 
 <walter-mitty/characters/sean> a monomyth:Character ;
     rdfs:label "Sean O'Connell"@en ;
-    rdfs:comment "The protagonist's idol, a famous photographer who embarks on a journey to find a rare snow leopard and is a mentor to Walter in his journey  to teach him about the quintessence of life, photography and adventure. He is also a herald to Walter in his journey."@en ;
+    rdfs:comment """The protagonist's idol, a famous photographer who embarks on a journey to find a
+rare snow leopard and is a mentor to Walter in his journey  to teach him about the quintessence of
+life, photography and adventure. He is also a herald to Walter in his journey."""@en ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Herald .
 
 <walter-mitty/characters/cheryl> a monomyth:Character ;
     rdfs:label "Cheryl Melhoff"@en ;
-    rdfs:comment "Walter's coworker and love interest, who encourages his journey of self-discovery through the imaginations of her by Walter in his daydreams."@en ;
+    rdfs:comment """Walter's coworker and love interest, who encourages his journey of self-discovery
+through the imaginations of her by Walter in his daydreams."""@en ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Mentor .
 
 <walter-mitty/characters/ted> a monomyth:Character ;
     rdfs:label "Ted Hendricks"@en ;
-    rdfs:comment "The antagonist of the story, who threatens Walter's job at Life magazine by digitizing the magazine which causes lot's of employees to lose their job's, Walter being one of them."@en ;
+    rdfs:comment """The antagonist of the story, who threatens Walter's job at Life magazine by
+digitizing the magazine which causes lot's of employees to lose their job's, Walter being one of
+them."""@en ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:ThresholdGuardian .
 
 <walter-mitty/characters/mother> a monomyth:Character ;
     rdfs:label "Edna Mitty"@en ;
-    rdfs:comment "Walter's mother, who provides external encouragement through her words especially when Walter goes through daydreaming episodes."@en ;
+    rdfs:comment """Walter's mother, who provides external encouragement through her words especially
+when Walter goes through daydreaming episodes."""@en ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Herald .
 
 <walter-mitty/characters/todd> a monomyth:Character ;
     rdfs:label "Todd Maher"@en ;
-    rdfs:comment "The eHarmony representative who provides external encouragement, to Walter by helping him analyzing his achievements in reality instead of daydreams."@en ;
+    rdfs:comment """The eHarmony representative who provides external encouragement, to Walter by
+helping him analyzing his achievements in reality instead of daydreams."""@en ;
     monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
     monomyth:embodiesArchetype monomyth:Ally .
 

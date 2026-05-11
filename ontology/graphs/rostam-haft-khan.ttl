@@ -14,7 +14,7 @@
 
 <rostam-haft-khan> a monomyth:NarrativeWork,
         schema:Book ;
-    rdfs:label "Rostam and the Seven Labors (Haft Khan)"@en ;
+    rdfs:label "Rostam and the Seven Labors"@en ;
     dcterms:title "Rostam and the Seven Labors"@en ;
     dcterms:creator "Ferdowsi" ;
     dcterms:created "1010"^^xsd:gYear ;
@@ -66,7 +66,8 @@ Demon in Mazandaran."""@en .
 
 <rostam-haft-khan/characters/rostam> a monomyth:Character ;
     rdfs:label "Rostam"@en ;
-    rdfs:comment "Rostam is the greatest hero of Persian mythology, known for his strength, courage, and loyalty to the Persian kings and above all his love and patriotism for Iran."@en ;
+    rdfs:comment """Rostam is the greatest hero of Persian mythology, known for his strength,
+courage, and loyalty to the Persian kings and above all his love and patriotism for Iran."""@en ;
     monomyth:heroOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Hero ;
@@ -74,34 +75,38 @@ Demon in Mazandaran."""@en .
 
 <rostam-haft-khan/characters/rakhsh> a monomyth:Character ;
     rdfs:label "Rakhsh"@en ;
-    rdfs:comment "Rakhsh is the horse of Rostam, famous for his strength, loyalty and courage."@en ;
+    rdfs:comment """Rakhsh is the horse of Rostam, famous for his strength, loyalty and courage."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Ally ;
     owl:sameAs wd:Q630911 .
 
 <rostam-haft-khan/characters/zal> a monomyth:Character ;
     rdfs:label "Zal"@en ;
-    rdfs:comment "Zal is the father of Rostam, known for his wisdom, his white hair and his guidance to Rostam and Iran's kings."@en ;
+    rdfs:comment """Zal is the father of Rostam, known for his wisdom, his white hair and his
+guidance to Rostam and Iran's kings."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor ;
     owl:sameAs wd:Q144903 .
 
 <rostam-haft-khan/characters/kay-kavus> a monomyth:Character ;
     rdfs:label "Kay Kavus"@en ;
-    rdfs:comment "Kay Kavus is the king of Iran, known for his arrogance and impulsiveness and is the one who decides to invade Mazandaran although everyone advises him against it."@en ;
+    rdfs:comment """Kay Kavus is the king of Iran, known for his arrogance and impulsiveness and is
+the one who decides to invade Mazandaran although everyone advises him against it."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
+    monomyth:embodiesArchetype monomyth:Herald ;
     owl:sameAs wd:Q1338913 .
 
 <rostam-haft-khan/characters/white-demon> a monomyth:Character ;
     rdfs:label "The White Demon (Div-e Sepid)"@en ;
-    rdfs:comment "The White Demon is the antagonist of the story, who is the leader of the demons of Mazandaran and the one who imprisons Kay Kavus and turns him blind."@en ;
+    rdfs:comment """The White Demon is the antagonist of the story, who is the leader of the demons
+of Mazandaran and the one who imprisons Kay Kavus and turns him blind."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow ;
     owl:sameAs wd:Q1632732 .
 
 <rostam-haft-khan/characters/olad> a monomyth:Character ;
     rdfs:label "Olad Deev"@en ;
-    rdfs:comment "A demon champion who becomes an Ally after being conquered by Rostam."@en ;
+    rdfs:comment """A demon champion who becomes an Ally after being conquered by Rostam."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:embodiesArchetype monomyth:Shapeshifter,
         monomyth:Ally,
@@ -109,10 +114,11 @@ Demon in Mazandaran."""@en .
 
 <rostam-haft-khan/characters/witch> a monomyth:Character ;
     rdfs:label "The Sorceress"@en ;
-    rdfs:comment "The Sorceress is a witch who tries to stop Rostam on his journey, but he defeats her and her demons by revealing her true identity."@en ;
+    rdfs:comment """The Sorceress is a witch who tries to stop Rostam on his journey, but he defeats
+her and her demons by revealing her true identity."""@en ;
     monomyth:characterOf <rostam-haft-khan/monomyths/rostam-journey> ;
-    monomyth:embodiesArchetype monomyth:Shapeshifter, 
-    monomyth:Shadow ;
+    monomyth:embodiesArchetype monomyth:Shapeshifter,
+        monomyth:Shadow ;
     owl:sameAs wd:Q1616828 .
 
 # --- Stage Realizations ---------------
