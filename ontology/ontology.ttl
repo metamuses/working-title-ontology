@@ -287,13 +287,15 @@ compose its structure."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:StageRealization .
 
-monomyth:belongsToAct a owl:ObjectProperty ;
+monomyth:belongsToAct a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "belongs to act"@en ;
     rdfs:comment """Associates a stage with the act to which it belongs."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range monomyth:Act .
 
-monomyth:followsStage a owl:ObjectProperty ;
+monomyth:followsStage a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "follows stage"@en ;
     rdfs:comment """Indicates the sequential ordering of stages within the monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
@@ -319,7 +321,8 @@ monomyth:embodiesArchetype a owl:ObjectProperty ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:Archetype .
 
-monomyth:realizesStage a owl:ObjectProperty ;
+monomyth:realizesStage a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "realizes stage"@en ;
     rdfs:comment """Links a concrete narrative moment to the abstract monomyth stage it
 instantiates."""@en ;
@@ -333,7 +336,8 @@ stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:Character .
 
-monomyth:hasFitQuality a owl:ObjectProperty ;
+monomyth:hasFitQuality a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "has fit quality"@en ;
     rdfs:comment """Associates a stage realization with an evaluation of how well it fits the
 corresponding monomyth stage."""@en ;
@@ -389,7 +393,8 @@ monomyth:divergenceOf a owl:ObjectProperty ;
 # DATA PROPERTIES
 # ==============================================================================
 
-monomyth:actOrder a owl:DatatypeProperty ;
+monomyth:actOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "act order"@en ;
     rdfs:comment """The sequential position of an act in the three-act structure (1-3)."""@en ;
     rdfs:domain monomyth:Act ;
@@ -402,7 +407,8 @@ monomyth:actOrder a owl:DatatypeProperty ;
         )
     ] .
 
-monomyth:stageOrder a owl:DatatypeProperty ;
+monomyth:stageOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "stage order"@en ;
     rdfs:comment """The sequential position of a stage in the seventeen-stage monomyth (1-17)."""@en ;
     rdfs:domain monomyth:Stage ;
@@ -415,7 +421,8 @@ monomyth:stageOrder a owl:DatatypeProperty ;
         )
     ] .
 
-monomyth:fitScore a owl:DatatypeProperty ;
+monomyth:fitScore a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "fit score"@en ;
     rdfs:comment """Numeric score for fit quality (-1 = inverted, 0 = absent, 1 = weak, 2 = moderate,
 3 = strong, 4 = perfect)."""@en ;
@@ -442,7 +449,8 @@ monomyth:realizationDescription a owl:DatatypeProperty ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
-monomyth:stageRealizationOrder a owl:DatatypeProperty ;
+monomyth:stageRealizationOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "stage realization order"@en ;
     rdfs:comment """The position at which this stage realization factually occurs in the narrative's
 own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across
