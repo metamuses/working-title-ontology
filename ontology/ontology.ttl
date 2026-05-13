@@ -31,40 +31,120 @@ monomyth:NarrativeWork a owl:Class ;
     rdfs:subClassOf creon:CreativeProduct ;
     rdfs:label "Narrative Work"@en ;
     rdfs:comment """A story, novel, epic, film, or other narrative that can be analyzed through the
-monomyth framework."""@en .
+monomyth framework."""@en ;
+    owl:disjointWith monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:MonomythExpression a owl:Class ;
     rdfs:label "Monomyth Expression"@en ;
     rdfs:comment """A specific realization of the monomyth structure within a particular narrative
-work."""@en .
+work."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Act a owl:Class ;
     rdfs:label "Act"@en ;
     rdfs:comment """One of the three major phases of the monomyth, based on Joseph Campbell's
-framework."""@en .
+framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Stage a owl:Class ;
     rdfs:label "Stage"@en ;
     rdfs:comment """One of the seventeen stages of the monomyth, based on Joseph Campbell's
-framework."""@en .
+framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Character a owl:Class ;
     rdfs:label "Character"@en ;
-    rdfs:comment """A character within a specific narrative work."""@en .
+    rdfs:comment """A character within a specific narrative work."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Archetype a owl:Class ;
     rdfs:label "Archetype"@en ;
     rdfs:comment """A recurring character role in the monomyth structure, based on Christopher
-Vogler's adaptation of Campbell's framework."""@en .
+Vogler's adaptation of Campbell's framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:StageRealization a owl:Class ;
     rdfs:label "Stage Realization"@en ;
     rdfs:comment """The concrete manifestation of a monomyth stage within a specific narrative work.
-Links a stage archetype to its particular narrative content."""@en .
+Links a stage archetype to its particular narrative content."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:FitQuality a owl:Class ;
     rdfs:label "Fit Quality"@en ;
-    rdfs:comment """An assessment of how well a narrative stage maps onto the monomyth archetype."""@en .
+    rdfs:comment """An assessment of how well a narrative stage maps onto the monomyth archetype."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:NarrativeDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -93,7 +173,17 @@ to the stage realizations they characterize, the ontology enables richer analysi
 alone. It allows the documentation of why a narrative diverges, what artistic or thematic purpose
 the divergence serves, and how patterns of divergence cluster across works, genres, and periods,
 distinguishing narratives that systematically subvert specific acts or stages from those that
-faithfully preserve them, and capturing the creative rationale behind each departure."""@en .
+faithfully preserve them, and capturing the creative rationale behind each departure."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:SequentialDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -114,7 +204,17 @@ displaced in sequence; conversely, a stage in its canonical position may diverge
 semiotically. The three divergence types are orthogonal and composable on the same stage
 realization, each capturing a dimension of narrative craft that the other two cannot express, and
 together making explicit the distinction between what a narrative says at each stage, the signs
-through which it says it, and when it chooses to say it."""@en .
+through which it says it, and when it chooses to say it."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:SemioticDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -139,7 +239,17 @@ signs a narrative selects to encode the archetypal structure. This captures a di
 evolution that neither fit quality nor structural reordering can express: the gradual, culturally
 determined drift in how stories signify the same underlying transformative pattern, making explicit
 the distinction between the monomyth's deep grammar and the surface language each narrative
-speaks."""@en .
+speaks."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence .
 
 # ==============================================================================
 # OBJECT PROPERTIES
