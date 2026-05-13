@@ -10,6 +10,8 @@ server {
     access_log /var/log/nginx/monomyth.metamuses.org.access.log;
     error_log  /var/log/nginx/monomyth.metamuses.org.error.log;
 
+    error_page 404 /404.html;
+
     ssl_certificate /etc/nginx/certs/monomyth.metamuses.org/fullchain.pem;
     ssl_trusted_certificate /etc/nginx/certs/monomyth.metamuses.org/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/monomyth.metamuses.org/key.pem;
