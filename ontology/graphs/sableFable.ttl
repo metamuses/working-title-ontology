@@ -398,21 +398,21 @@ subsequent crash into the Temptress stage ('Day One') inevitable and structurall
 
 <sable-fable/divergences/semiotic/psychological-internalization> a monomyth:SemioticDivergence ;
     rdfs:label "Psychological Internalization"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-intrusive-call> ,
-        <sable-fable/stages/fear-of-change> ,
-        <sable-fable/stages/the-violent-spree> ,
-        <sable-fable/stages/the-psychological-trials> ,
-        <sable-fable/stages/the-emotional-capacity> ,
-        <sable-fable/stages/the-perilous-retreat> ,
-        <sable-fable/stages/the-equilibrium> ,
+    monomyth:divergenceOf <sable-fable/stages/the-intrusive-call>,
+        <sable-fable/stages/fear-of-change>,
+        <sable-fable/stages/the-violent-spree>,
+        <sable-fable/stages/the-psychological-trials>,
+        <sable-fable/stages/the-emotional-capacity>,
+        <sable-fable/stages/the-perilous-retreat>,
+        <sable-fable/stages/the-equilibrium>,
         <sable-fable/stages/no-more-shame> ;
-    monomyth:divergesFrom monomyth:TheCallToAdventure ,
-        monomyth:RefusalOfTheCall ,
-        monomyth:TheBellyOfTheWhale ,
-        monomyth:TheRoadOfTrials ,
-        monomyth:TheUltimateBoon ,
-        monomyth:TheMagicFlight ,
-        monomyth:MasterOfTheTwoWorlds ,
+    monomyth:divergesFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheUltimateBoon,
+        monomyth:TheMagicFlight,
+        monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive ;
     monomyth:divergenceRationale """Across the album, traditional mythic elements involving physical
 threats, magical realms, or external monsters are completely internalized. The 'unknown' is the
@@ -423,13 +423,13 @@ achievement of emotional empathy, mental equilibrium, and living free from the s
 
 <sable-fable/divergences/semiotic/the-secular-anchor> a monomyth:SemioticDivergence ;
     rdfs:label "The Secular Anchor (Loved Ones as Mythic Forces)"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-plea-for-forgiveness> ,
-        <sable-fable/stages/the-peaceful-love> ,
-        <sable-fable/stages/the-blissful-rest> ,
+    monomyth:divergenceOf <sable-fable/stages/the-plea-for-forgiveness>,
+        <sable-fable/stages/the-peaceful-love>,
+        <sable-fable/stages/the-blissful-rest>,
         <sable-fable/stages/the-lifeline> ;
-    monomyth:divergesFrom monomyth:SupernaturalAid ,
-        monomyth:TheMeetingWithTheGoddess ,
-        monomyth:Apotheosis ,
+    monomyth:divergesFrom monomyth:SupernaturalAid,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:Apotheosis,
         monomyth:RescueFromWithout ;
     monomyth:divergenceRationale """In classical mythology, the hero is aided, elevated, or rescued
 by supernatural entities, wizards, or cosmic deities. In this autobiographical framework, these

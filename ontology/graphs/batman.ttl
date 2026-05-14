@@ -123,7 +123,7 @@ persona of Batman to fight crime, serving as the primary hero and an eventual al
 <batman-year-one/characters/commissioner-loeb> a monomyth:Character ;
     rdfs:label "Commissioner Loeb"@en ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey> ,
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
         <batman-year-one/monomyths/jim-gordon-journey> ;
     rdfs:comment "The head of the corrupt GCPD infrastructure."@en ;
     owl:sameAs wd:Q3000468 .
@@ -151,7 +151,7 @@ persona of Batman to fight crime, serving as the primary hero and an eventual al
 <batman-year-one/characters/barbara-gordon> a monomyth:Character;
     rdfs:label "Barbara Eileen Gordon"@en ;
     monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Mentor , monomyth:Ally ;
+    monomyth:embodiesArchetype monomyth:Mentor, monomyth:Ally ;
     rdfs:comment """Jim Gordon's wife and moral compass, providing him the emotional wisdom and
 forgiveness."""@en ;
     owl:sameAs wd:Q48893069 .
@@ -567,17 +567,17 @@ keeping the hero grounded in a material world of pain, corruption, and tactical 
 
 <batman-year-one/divergences/narrative/origin-as-stasis> a monomyth:NarrativeDivergence ;
     rdfs:label "Origin Narrative Constraint"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return> ,
-        <batman-year-one/stages/the-magic-flight> ,
-        <batman-year-one/stages/rescue-from-without> ,
-        <batman-year-one/stages/crossing-the-return-threshold> ,
-        <batman-year-one/stages/master-of-two-worlds> ,
+    monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return>,
+        <batman-year-one/stages/the-magic-flight>,
+        <batman-year-one/stages/rescue-from-without>,
+        <batman-year-one/stages/crossing-the-return-threshold>,
+        <batman-year-one/stages/master-of-two-worlds>,
         <batman-year-one/stages/freedom-to-live> ;
-    monomyth:divergesFrom monomyth:RefusalOfTheReturn ,
-        monomyth:TheMagicFlight ,
-        monomyth:RescueFromWithout ,
-        monomyth:TheCrossingOfTheReturnThreshold ,
-        monomyth:MasterOfTheTwoWorlds ,
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive ;
     monomyth:divergenceRationale """The Return act is logically impossible within the scope of an
 origin story. The narrative ends precisely at the moment the hero achieves his identity, serving as
@@ -606,9 +606,9 @@ tests of his new identity."""@en .
 
 <batman-year-one/divergences/sequential/the-catalyst-inversion> a monomyth:SequentialDivergence ;
     rdfs:label "The Catalyst Inversion (Belly Before Threshold)"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-beating> ,
+    monomyth:divergenceOf <batman-year-one/stages/the-beating>,
         <batman-year-one/stages/beating-flass> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ,
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale,
         monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:divergenceRationale """In Campbell's traditional framework, the hero crosses the
 threshold into the unknown and is subsequently swallowed into the Belly of the Whale. In Gordon's
@@ -621,17 +621,17 @@ to solidify his rebirth as an active combatant."""@en .
 
 <batman-year-one/divergences/semiotic/secular-realism> a monomyth:SemioticDivergence ;
     rdfs:label "Neo-Noir Secularization"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham> ,
-        <batman-year-one/stages/the-bat-at-the-window> ,
-        <batman-year-one/stages/the-dinner-party-ambush> ,
-        <batman-year-one/stages/the-tenement-siege> ,
-        <batman-year-one/stages/the-extramarital-affair> ,
+    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham>,
+        <batman-year-one/stages/the-bat-at-the-window>,
+        <batman-year-one/stages/the-dinner-party-ambush>,
+        <batman-year-one/stages/the-tenement-siege>,
+        <batman-year-one/stages/the-extramarital-affair>,
         <batman-year-one/stages/confession-to-barbara> ;
-    monomyth:divergesFrom monomyth:TheCallToAdventure ,
-        monomyth:SupernaturalAid ,
-        monomyth:TheCrossingOfTheFirstThreshold ,
-        monomyth:TheBellyOfTheWhale ,
-        monomyth:WomanAsTheTemptress ,
+    monomyth:divergesFrom monomyth:TheCallToAdventure,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:WomanAsTheTemptress,
         monomyth:AtonementWithTheFather ;
     monomyth:divergenceRationale """Across both Bruce Wayne's and Jim Gordon's journeys, Campbell's
 traditional mythic signifiers (magic, monsters, sirens, and cosmic gods) are radically translated
