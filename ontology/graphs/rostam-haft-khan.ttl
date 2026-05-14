@@ -127,6 +127,7 @@ her and her demons by revealing her true identity."""@en ;
     rdfs:label "The Plea from Mazandaran"@en ;
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus>,
         <rostam-haft-khan/characters/white-demon>,
         <rostam-haft-khan/characters/zal> ;
@@ -141,6 +142,7 @@ begging for Rostam to come and save the army and the crown."""@en .
     rdfs:label "Rostam's Immediate Acceptance"@en ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """The narrative contains no hesitation or refusal. Rostam,
@@ -152,6 +154,7 @@ psychological conflict, making refusal structurally incompatible with the narrat
     rdfs:label "Zal's Gifts and Rakhsh's Loyalty"@en ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/zal>,
         <rostam-haft-khan/characters/rakhsh> ;
@@ -166,6 +169,7 @@ fight alongside his master."""@en .
     rdfs:label "The Edge of Mazandaran"@en ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:realizationDescription """Rostam leaves the Iranian court and enters the borderlands
@@ -177,6 +181,7 @@ a two-day journey in twelve hours."""@en .
     rdfs:label "Sleep in the Lion's Lair"@en ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/vulnerability-sleep> ;
@@ -189,6 +194,7 @@ his human awareness is completely suspended."""@en .
     rdfs:label "The Lion, the Ram, and the Dragon's Attack"@en ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -204,6 +210,7 @@ its scales."""@en .
     rdfs:label "Absence of a Feminine Archetype"@en ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/witch> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
@@ -216,6 +223,7 @@ figure of illusion and danger, reflecting the epic's moral polarity rather than 
     rdfs:label "The Sorceress's Deception"@en ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/witch> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -229,6 +237,7 @@ her true, hideous form. Rostam lassos the demon-witch and cleaves her in half wi
     rdfs:label "Captivity and Conquest of Olad"@en ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/rakhsh>,
         <rostam-haft-khan/characters/olad> ;
@@ -245,6 +254,7 @@ the White Demon's cave."""@en .
     rdfs:label "The Defeat of Arzhang"@en ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/olad> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -258,6 +268,7 @@ army, causing 12,000 demons to flee in panic."""@en .
     rdfs:label "Releasing Kay Kavus from the Pit"@en ;
     monomyth:stageRealizationOrder 11 ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -271,6 +282,7 @@ setting the stage for the final confrontation."""@en .
     rdfs:label "The Death of the White Demon"@en ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/white-demon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -283,6 +295,7 @@ slams him down, cutting out his liver and heart."""@en .
     rdfs:label "The Restoration of Sight"@en ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -294,6 +307,7 @@ the King and the entire Iranian army is restored, granting them the 'elixir' of 
     rdfs:label "Immediate Departure from Mazandaran"@en ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """Rostam shows no hesitation in returning; he views the demon
@@ -305,6 +319,7 @@ supernatural realm."""@en .
     rdfs:label "Defeat of the King of Mazandaran"@en ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/king-stone-war> ;
@@ -317,6 +332,7 @@ mace until the King is forced to revert to human form."""@en .
     rdfs:label "Rostam's Self-Rescue"@en ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """As the 'World-Champion', Rostam is the source of rescue for
@@ -327,6 +343,7 @@ journey out of Mazanderan is secured through his own military might and dominanc
     rdfs:label "The Victorious Return to Iran"@en ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -339,6 +356,7 @@ rightful Shah and the return of their champion."""@en .
     rdfs:label "Fulfillment of the Promise to Olad"@en ;
     monomyth:stageRealizationOrder 18 ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/olad> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -352,6 +370,7 @@ Iranian court."""@en .
     rdfs:label "The Celebration of Victory"@en ;
     monomyth:stageRealizationOrder 19 ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;

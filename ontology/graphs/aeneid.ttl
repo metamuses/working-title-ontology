@@ -221,6 +221,7 @@ to the Arcadian settlement that will become his crucial ally."""@en ;
 <aeneid/stages/the-storm-on-the-libyan-coast> a monomyth:StageRealization ;
     rdfs:label "The storm on the Libyan coast"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/juno> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -242,6 +243,7 @@ function is fully present, but its precipitating events lie outside the narrated
 <aeneid/stages/a-second-troy-rising-from-the-sand> a monomyth:StageRealization ;
     rdfs:label "A second Troy rising from the sand"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido>,
         <aeneid/characters/iulus> ;
@@ -261,6 +263,7 @@ of an adopted court."""@en .
 <aeneid/stages/the-cave-and-the-pyre> a monomyth:StageRealization ;
     rdfs:label "The cave and the pyre"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido>,
         <aeneid/characters/juno>,
@@ -282,6 +285,7 @@ burning is the last sight Carthage offers the departing fleet."""@en ;
 <aeneid/stages/italiam-non-sponte-sequor> a monomyth:StageRealization ;
     rdfs:label "Italiam non sponte sequor"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/mercury>,
         <aeneid/characters/dido>,
@@ -305,6 +309,7 @@ the Penates, prefigured by Creusa, arrives here in unmistakable form."""@en ;
 <aeneid/stages/loosing-the-cables> a monomyth:StageRealization ;
     rdfs:label "Loosing the cables"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -322,6 +327,7 @@ not yet known but committed to without further hesitation."""@en .
 <aeneid/stages/games-and-the-helmsman-lost> a monomyth:StageRealization ;
     rdfs:label "Games and the helmsman lost"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -345,6 +351,7 @@ realization."""@en .
 <aeneid/stages/facilis-descensus-averno> a monomyth:StageRealization ;
     rdfs:label "Facilis descensus Averno"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/cumaean-sibyl> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -365,6 +372,7 @@ would be impossible at every stage of its unfolding."""@en ;
 <aeneid/stages/the-fields-of-mourning-and-beyond> a monomyth:StageRealization ;
     rdfs:label "The fields of mourning and beyond"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises>,
         <aeneid/characters/cumaean-sibyl>,
@@ -391,6 +399,7 @@ warranting a semiotic divergence."""@en ;
 <aeneid/stages/the-soul-fields-and-the-doctrine-of-return> a monomyth:StageRealization ;
     rdfs:label "The soul-fields and the doctrine of return"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -411,6 +420,7 @@ intelligibility."""@en ;
 <aeneid/stages/the-parade-of-roman-souls> a monomyth:StageRealization ;
     rdfs:label "The parade of Roman souls"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises>,
         <aeneid/characters/iulus> ;
@@ -432,6 +442,7 @@ disclosure."""@en ;
 <aeneid/stages/this-is-the-land> a monomyth:StageRealization ;
     rdfs:label "This is the land"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/iulus>,
         <aeneid/characters/tiberinus> ;
@@ -457,6 +468,7 @@ homecoming pattern that this poem shares with all foundation narratives."""@en ;
 <aeneid/stages/the-foreign-bridegroom-foretold> a monomyth:StageRealization ;
     rdfs:label "The foreign bridegroom foretold"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/lavinia>,
         <aeneid/characters/latinus> ;
@@ -485,6 +497,7 @@ without the relational presence the canonical stage assumes."""@en ;
 <aeneid/stages/the-grief-that-stalls-the-campaign> a monomyth:StageRealization ;
     rdfs:label "The grief that stalls the campaign"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/pallas>,
         <aeneid/characters/evander> ;
@@ -509,6 +522,7 @@ the bodies the founding has required."""@en ;
 <aeneid/stages/the-shield-and-the-etruscan-fleet> a monomyth:StageRealization ;
     rdfs:label "The shield and the Etruscan fleet"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/venus>,
         <aeneid/characters/evander>,
@@ -530,6 +544,7 @@ guardians but toward the embattled camp with the means of its rescue."""@en ;
 <aeneid/stages/the-mother-and-the-dittany> a monomyth:StageRealization ;
     rdfs:label "The mother and the dittany"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/venus>,
         <aeneid/characters/iulus> ;
@@ -549,6 +564,7 @@ ended in Trojan defeat and the founding labour would have been lost in its final
 <aeneid/stages/the-imperium-bestowed> a monomyth:StageRealization ;
     rdfs:label "The imperium bestowed"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/latinus>,
         <aeneid/characters/iulus>,
@@ -571,6 +587,7 @@ done."""@en .
 <aeneid/stages/the-belt-of-pallas-and-the-buried-blade> a monomyth:StageRealization ;
     rdfs:label "The belt of Pallas and the buried blade"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/turnus>,
         <aeneid/characters/pallas> ;

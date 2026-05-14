@@ -160,6 +160,7 @@ Ruggiero after the hero's conversion and defection from the Saracen sphere."""@e
 <orlando-furioso/stages/carried-away-from-albracca> a monomyth:StageRealization ;
     rdfs:label "Carried away from Albracca"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/hippogriff> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -176,6 +177,7 @@ begins his long passage through magical and spiritual transformation."""@en .
 <orlando-furioso/stages/enchanted-delays> a monomyth:StageRealization ;
     rdfs:label "Enchanted Delays"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/alcina>,
         <orlando-furioso/characters/atlante> ;
@@ -192,6 +194,7 @@ him."""@en ;
 <orlando-furioso/stages/alcinas-seduction> a monomyth:StageRealization ;
     rdfs:label "Alcina's Seduction"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/alcina> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -206,6 +209,7 @@ erotic enchantment itself becomes the mechanism threatening to erase the hero's 
 <orlando-furioso/stages/melissas-ring> a monomyth:StageRealization ;
     rdfs:label "Melissa's Ring"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/melissa> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -221,6 +225,7 @@ toward his destined transformation."""@en ;
 <orlando-furioso/stages/departure-from-logistilla> a monomyth:StageRealization ;
     rdfs:label "Departure from Logistilla"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/logistilla> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -235,6 +240,7 @@ the larger historical movement of the poem."""@en .
 <orlando-furioso/stages/atlantes-palace> a monomyth:StageRealization ;
     rdfs:label "Atlante's Palace"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/atlante> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -251,6 +257,7 @@ which genuine transformation can occur only through escape and disillusionment."
 <orlando-furioso/stages/breaking-from-atlante> a monomyth:StageRealization ;
     rdfs:label "Breaking from Atlante"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/atlante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -265,6 +272,7 @@ accepting the risks of destiny rather than remaining suspended within paternal c
 <orlando-furioso/stages/wandering-adventures> a monomyth:StageRealization ;
     rdfs:label "Wandering Adventures"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/astolfo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -280,6 +288,7 @@ for dynastic and religious transformation."""@en .
 <orlando-furioso/stages/bradamante-destiny> a monomyth:StageRealization ;
     rdfs:label "Bradamante's Destiny"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -300,6 +309,7 @@ recurring moments of encounter, separation, and rediscovery."""@en ;
 <orlando-furioso/stages/delayed-conversion> a monomyth:StageRealization ;
     rdfs:label "Delayed Conversion"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -316,6 +326,7 @@ not always directly responsable."""@en ;
 <orlando-furioso/stages/bradamantes-rescues> a monomyth:StageRealization ;
     rdfs:label "Bradamante's Rescues"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante>,
         <orlando-furioso/characters/melissa> ;
@@ -332,6 +343,7 @@ therefore operates as a sustained corrective force distributed throughout the na
 <orlando-furioso/stages/baptism-and-conversion> a monomyth:StageRealization ;
     rdfs:label "Baptism and Conversion"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante>,
         <orlando-furioso/characters/charlemagne> ;
@@ -347,6 +359,7 @@ becomes dynastic destiny, historical legitimation, and metaphysical rebirth."""@
 <orlando-furioso/stages/este-foundation> a monomyth:StageRealization ;
     rdfs:label "Este Foundation"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -360,6 +373,7 @@ noble lineage, and collective cultural identity."""@en .
 <orlando-furioso/stages/flight-from-saracens> a monomyth:StageRealization ;
     rdfs:label "Flight from the Saracen camp"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 14 ;
@@ -377,6 +391,7 @@ enchantment."""@en .
 <orlando-furioso/stages/defection-to-christendom> a monomyth:StageRealization ;
     rdfs:label "Defection to Christendom"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/charlemagne> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -393,6 +408,7 @@ recognized by Charlemagne's world, completing the passage from divided existence
 <orlando-furioso/stages/knight-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Knight of the Two Worlds"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -406,6 +422,7 @@ other."""@en .
 <orlando-furioso/stages/dynastic-peace> a monomyth:StageRealization ;
     rdfs:label "Dynastic Peace"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;

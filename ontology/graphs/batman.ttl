@@ -161,6 +161,7 @@ forgiveness."""@en ;
 <batman-year-one/stages/the-train-to-gotham> a monomyth:StageRealization ;
     rdfs:label "The Train to Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -172,6 +173,7 @@ is internal: the trauma of his parents' death and the decaying state of the city
     rdfs:label "Disastrous East End Surveillance Mission"@en ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizationDescription """During his training, Bruce hesitates, feeling
@@ -185,6 +187,7 @@ he lacks the proper method to strike fear into his enemies."""@en ;
 <batman-year-one/stages/the-bat-at-the-window> a monomyth:StageRealization ;
     rdfs:label "The Bat"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -197,6 +200,7 @@ his vigilante identity."""@en ;
 <batman-year-one/stages/the-dinner-party-ambush> a monomyth:StageRealization ;
     rdfs:label "The Dinner Party Ambush"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/carmine-falcone>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -213,6 +217,7 @@ to operate in a zone of magnified power where ordinary rules are suspended."""@e
 <batman-year-one/stages/the-tenement-siege> a monomyth:StageRealization ;
     rdfs:label "The Tenement Siege"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/commissioner-loeb> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -227,6 +232,7 @@ identity—the urban myth of the Batman—to emerge from the rubble."""@en ;
 <batman-year-one/stages/the-distributed-trials> a monomyth:StageRealization ;
     rdfs:label "The Distributed Road of Trials"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -242,6 +248,7 @@ essential ally needed to survive the trials ahead."""@en ;
 <batman-year-one/stages/encounter-with-selina> a monomyth:StageRealization ;
     rdfs:label "The Encounter with Selina Kyle"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/selina-kyle> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -256,6 +263,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-temptation> a monomyth:StageRealization ;
     rdfs:label "The Absent Temptation of the Symbol"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/semiotic-dehumanization> ;
@@ -264,6 +272,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-atonement> a monomyth:StageRealization ;
     rdfs:label "The Absent Atonement of the Orphan"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/the-orphan-sovereignty> .
@@ -271,6 +280,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-apotheosis> a monomyth:StageRealization ;
     rdfs:label "The Absent Apotheosis"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/noir-materialism> .
@@ -278,6 +288,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-bridge-rescue> a monomyth:StageRealization ;
     rdfs:label "The Bridge Rescue"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/jim-gordon>;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -292,6 +303,7 @@ hero's mission can now truly begin with the support of the law."""@en ;
 <batman-year-one/stages/arrival-in-gotham> a monomyth:StageRealization ;
     rdfs:label "Arrival in Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -304,6 +316,7 @@ Commissioner Loeb and witnessing Detective Flass brutalize a teenager."""@en .
 <batman-year-one/stages/waiting-to-report> a monomyth:StageRealization ;
     rdfs:label "Waiting to Report"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -315,6 +328,7 @@ Flass tells him to relax and adapt to the system, summarizing Gordon's passive s
 <batman-year-one/stages/the-absent-aid> a monomyth:StageRealization ;
     rdfs:label "The Absent Supernatural Aid"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -323,6 +337,7 @@ Flass tells him to relax and adapt to the system, summarizing Gordon's passive s
 <batman-year-one/stages/the-beating> a monomyth:StageRealization ;
     rdfs:label "The Beating"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -337,6 +352,7 @@ and self-annihilation, setting the stage for his metamorphosis."""@en ;
 <batman-year-one/stages/beating-flass> a monomyth:StageRealization ;
     rdfs:label "Beating Flass"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -350,6 +366,7 @@ behind the familiar safety of playing by the rules and fully enters the brutal w
 <batman-year-one/stages/the-honest-cop-trials> a monomyth:StageRealization ;
     rdfs:label "The Honest Cop Trials"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
@@ -360,6 +377,7 @@ navigating Loeb's orders to hunt down the vigilante Batman."""@en .
 <batman-year-one/stages/the-intellectual-equal> a monomyth:StageRealization ;
     rdfs:label "Meeting Sarah Essen"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/sarah-essen> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -374,6 +392,7 @@ the World.' For Gordon, who is alienated by the corrupt department, she represen
 <batman-year-one/stages/the-extramarital-affair> a monomyth:StageRealization ;
     rdfs:label "The Affair and Blackmail"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/sarah-essen>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -388,6 +407,7 @@ Loeb the leverage needed to blackmail him."""@en ;
 <batman-year-one/stages/confession-to-barbara> a monomyth:StageRealization ;
     rdfs:label "Confession and Atonement"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/barbara-gordon>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -402,6 +422,7 @@ of his power and undergoes a moral rebirth."""@en ;
 <batman-year-one/stages/family-man> a monomyth:StageRealization ;
     rdfs:label "The family man"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/barbara-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -413,6 +434,7 @@ family bliss."""@en .
 <batman-year-one/stages/the-bridge-alliance> a monomyth:StageRealization ;
     rdfs:label "The Bridge Alliance"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -427,6 +449,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
     rdfs:label "Absent Refusal of the Return"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -434,6 +458,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
     rdfs:label "Absent Magic Flight"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -441,6 +467,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
     rdfs:label "Absent Rescue from Without"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -448,6 +476,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
     rdfs:label "Absent Crossing of the Return Threshold"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -455,6 +485,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Absent Master of Two Worlds"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -462,6 +494,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
     rdfs:label "Absent Freedom to Live"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .

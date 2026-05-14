@@ -108,6 +108,7 @@ brings the dogs to the brink of death and precipitates Buck's rescue by Thornton
 <the-call-of-the-wild/stages/stolen-from-sun-and-soft-living> a monomyth:StageRealization ;
     rdfs:label "Stolen from sun and soft living"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -124,6 +125,7 @@ abduction rather than summons, giving Buck no agency in the disruption."""@en ;
 <the-call-of-the-wild/stages/a-red-eyed-devil> a monomyth:StageRealization ;
     rdfs:label "A red-eyed devil"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -137,6 +139,7 @@ is a lawgiver to be obeyed, though not necessarily conciliated."""@en ;
 <the-call-of-the-wild/stages/the-law-of-club-and-fang> a monomyth:StageRealization ;
     rdfs:label "The law of club and fang"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/francois> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -151,6 +154,7 @@ survival belongs to those who learn its grammar quickly and adapt without sentim
 <the-call-of-the-wild/stages/that-first-day-on-the-dyea-beach> a monomyth:StageRealization ;
     rdfs:label "That first day on the Dyea beach"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/spitz>,
         <the-call-of-the-wild/characters/francois> ;
@@ -166,6 +170,7 @@ conclusion."""@en .
 <the-call-of-the-wild/stages/where-had-the-snow-surface-gone> a monomyth:StageRealization ;
     rdfs:label "Where had the snow-surface gone?"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -180,6 +185,7 @@ they claw their way back to the surface each morning."""@en .
 <the-call-of-the-wild/stages/the-dominant-primordial-beast> a monomyth:StageRealization ;
     rdfs:label "The dominant primordial beast"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/spitz>,
         <the-call-of-the-wild/characters/francois>,
@@ -198,6 +204,7 @@ underneath."""@en .
 <the-call-of-the-wild/stages/love-genuine-and-true> a monomyth:StageRealization ;
     rdfs:label "Love genuine and true"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton>,
         <the-call-of-the-wild/characters/hal> ;
@@ -216,6 +223,7 @@ thousand-dollar wager by breaking a half-ton sled free from the ice by sheer pul
 <the-call-of-the-wild/stages/the-call-sounding-in-the-forest> a monomyth:StageRealization ;
     rdfs:label "The call sounding in the depths of the forest"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -232,6 +240,7 @@ in place is not comfort or ignorance but the purest bond he possesses."""@en ;
 <the-call-of-the-wild/stages/the-hairy-man-crouching-by-the-fire> a monomyth:StageRealization ;
     rdfs:label "The hairy man crouching by the fire"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -251,6 +260,7 @@ visionary deepening."""@en ;
 <the-call-of-the-wild/stages/patient-as-the-wild-itself> a monomyth:StageRealization ;
     rdfs:label "Patient as the wild itself"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -266,6 +276,7 @@ animal who entered the hunt but something more complete."""@en .
 <the-call-of-the-wild/stages/the-blood-longing> a monomyth:StageRealization ;
     rdfs:label "The blood-longing"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -283,6 +294,7 @@ the journey has been making him."""@en ;
 <the-call-of-the-wild/stages/the-last-tie-was-broken> a monomyth:StageRealization ;
     rdfs:label "The last tie was broken"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -295,6 +307,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/the-trail-runs-only-forward> a monomyth:StageRealization ;
     rdfs:label "The trail runs only forward"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/absent-flight> .
@@ -302,6 +315,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/no-voice-calls-him-back> a monomyth:StageRealization ;
     rdfs:label "No voice calls him back"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/absent-rescue> .
@@ -309,6 +323,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/the-ghost-dog> a monomyth:StageRealization ;
     rdfs:label "The Ghost Dog"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
@@ -324,6 +339,7 @@ phantom, a rumour, a figure of dread."""@en ;
 <the-call-of-the-wild/stages/a-spectral-beast-of-enormous-size> a monomyth:StageRealization ;
     rdfs:label "Fear and mystery"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -338,6 +354,7 @@ simply, irreducibly present in both, one as flesh and one as story."""@en ;
 <the-call-of-the-wild/stages/running-at-the-head-of-the-pack> a monomyth:StageRealization ;
     rdfs:label "Running at the head of the pack"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;

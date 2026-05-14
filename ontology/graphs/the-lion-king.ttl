@@ -131,6 +131,7 @@ alternative way of life during his years in exile."""@en ;
 <the-lion-king/stages/everything-the-light-touches> a monomyth:StageRealization ;
     rdfs:label "Everything the light touches"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -146,6 +147,7 @@ summons."""@en ;
 <the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> a monomyth:StageRealization ;
     rdfs:label "The great kings will always be there to guide you"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -162,6 +164,7 @@ ghostly vision that completes the circuit between mortal teaching and ancestral 
 <the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
     rdfs:label "What have you done?"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar>,
         <the-lion-king/characters/mufasa> ;
@@ -178,6 +181,7 @@ Simba's eagerness into shame and his birthright into a burden he believes he has
 <the-lion-king/stages/run-away-and-never-return> a monomyth:StageRealization ;
     rdfs:label "Run away and never return"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -192,6 +196,7 @@ simply end, and the emptiness beyond offers no welcome and no promise."""@en .
 <the-lion-king/stages/youre-an-outcast-thats-great-so-are-we> a monomyth:StageRealization ;
     rdfs:label "You're an outcast, that's great, so are we"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
@@ -208,6 +213,7 @@ forgotten."""@en .
 <the-lion-king/stages/hakuna-matata> a monomyth:StageRealization ;
     rdfs:label "Hakuna Matata"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
@@ -225,6 +231,7 @@ return more difficult, not less."""@en ;
 <the-lion-king/stages/can-you-feel-the-love-tonight> a monomyth:StageRealization ;
     rdfs:label "Can you feel the love tonight"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -240,6 +247,7 @@ grew up with, and that the kingdom he abandoned still needs him."""@en ;
 <the-lion-king/stages/youre-not-the-simba-i-remember> a monomyth:StageRealization ;
     rdfs:label "You're not the Simba I remember"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -263,6 +271,7 @@ where he is."""@en ;
 <the-lion-king/stages/i-cant-go-back> a monomyth:StageRealization ;
     rdfs:label "I can't go back"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -278,6 +287,7 @@ genuine and deeply felt, rooted in a lie he has carried since childhood."""@en ;
 <the-lion-king/stages/remember-who-you-are> a monomyth:StageRealization ;
     rdfs:label "Remember who you are"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa>,
         <the-lion-king/characters/rafiki> ;
@@ -302,6 +312,7 @@ narrative vehicle converge most completely."""@en .
 <the-lion-king/stages/i-know-what-i-have-to-do> a monomyth:StageRealization ;
     rdfs:label "I know what I have to do"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/rafiki> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -317,6 +328,7 @@ to run."""@en .
 <the-lion-king/stages/were-going-to-fight-your-uncle-for-this> a monomyth:StageRealization ;
     rdfs:label "We're going to fight your uncle for this?"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -335,6 +347,7 @@ bleached bone, the kingdom's decay a visible measure of how long the hero's abse
 <the-lion-king/stages/simba-you-have-to-help-us> a monomyth:StageRealization ;
     rdfs:label "Simba, you have to help us"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -353,6 +366,7 @@ of his divided life are willing to unite behind his cause."""@en .
 <the-lion-king/stages/tell-them-the-truth> a monomyth:StageRealization ;
     rdfs:label "Tell them the truth"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -370,6 +384,7 @@ that the kingdom's betrayal is made visible to all."""@en ;
 <the-lion-king/stages/it-is-time> a monomyth:StageRealization ;
     rdfs:label "It is time"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/rafiki> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -386,6 +401,7 @@ return."""@en .
 <the-lion-king/stages/a-kings-time-rises-and-falls-like-the-sun> a monomyth:StageRealization ;
     rdfs:label "A king's time rises and falls like the sun"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -400,6 +416,7 @@ returned as the equilibrium point between them, neither denying his exile nor be
 <the-lion-king/stages/the-circle-of-life> a monomyth:StageRealization ;
     rdfs:label "The Circle of Life"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/rafiki> ;
