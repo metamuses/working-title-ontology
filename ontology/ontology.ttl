@@ -323,6 +323,14 @@ monomyth:embodiesArchetype a owl:ObjectProperty ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:Archetype .
 
+monomyth:stageRealizationOf a owl:ObjectProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "stage realization of"@en ;
+    rdfs:comment """Links a stage realization to the monomyth expression it belongs to."""@en ;
+    owl:inverseOf monomyth:hasStageRealization ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:MonomythExpression .
+
 monomyth:realizesStage a owl:ObjectProperty,
         owl:FunctionalProperty ;
     rdfs:label "realizes stage"@en ;
