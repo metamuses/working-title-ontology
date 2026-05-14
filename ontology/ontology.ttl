@@ -295,7 +295,9 @@ monomyth:belongsToAct a owl:ObjectProperty,
     rdfs:range monomyth:Act .
 
 monomyth:followsStage a owl:ObjectProperty,
-        owl:FunctionalProperty ;
+        owl:FunctionalProperty,
+        owl:IrreflexiveProperty,
+        owl:AsymmetricProperty ;
     rdfs:label "follows stage"@en ;
     rdfs:comment """Indicates the sequential ordering of stages within the monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
