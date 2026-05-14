@@ -1023,59 +1023,59 @@ monomyth:Ally a monomyth:Archetype ;
 monomyth:PerfectFit a monomyth:FitQuality ;
     rdfs:label "Perfect Fit"@en ;
     rdfs:comment """The narrative maps onto the monomyth stage with precision."""@en ;
+    monomyth:fitScore 4 ;
     owl:differentFrom monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 4 .
+        monomyth:InvertedFit .
 
 monomyth:StrongFit a monomyth:FitQuality ;
     rdfs:label "Strong Fit"@en ;
     rdfs:comment """The narrative clearly manifests the stage with minor variations."""@en ;
+    monomyth:fitScore 3 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 3 .
+        monomyth:InvertedFit .
 
 monomyth:ModerateFit a monomyth:FitQuality ;
     rdfs:label "Moderate Fit"@en ;
     rdfs:comment """The stage is recognizable but requires some interpretive reframing."""@en ;
+    monomyth:fitScore 2 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 2 .
+        monomyth:InvertedFit .
 
 monomyth:WeakFit a monomyth:FitQuality ;
     rdfs:label "Weak Fit"@en ;
     rdfs:comment """The stage is only loosely or partially present."""@en ;
+    monomyth:fitScore 1 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 1 .
+        monomyth:InvertedFit .
 
 monomyth:AbsentFit a monomyth:FitQuality ;
     rdfs:label "Absent Fit"@en ;
     rdfs:comment """The stage is not meaningfully present in the narrative."""@en ;
+    monomyth:fitScore 0 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 0 .
+        monomyth:InvertedFit .
 
 monomyth:InvertedFit a monomyth:FitQuality ;
     rdfs:label "Inverted Fit"@en ;
     rdfs:comment """The stage is present but deliberately reversed or subverted."""@en ;
+    monomyth:fitScore -1 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
-        monomyth:AbsentFit ;
-    monomyth:fitScore -1 .
+        monomyth:AbsentFit .
