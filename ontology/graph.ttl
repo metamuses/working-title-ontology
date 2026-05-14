@@ -220,6 +220,7 @@ and then shifts to a tearful supplicant when driven by the desperation of the co
 <oedipus-myth/stages/the-oracle-prophecy> a monomyth:StageRealization ;
     rdfs:label "The Oracle's Prophecy"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/oracle-of-delphi> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -233,6 +234,7 @@ mother. This horrifying revelation shatters his secure world, setting the tragic
 <oedipus-myth/stages/apollos-guidance> a monomyth:StageRealization ;
     rdfs:label "Apollo's Guidance"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/oracle-of-delphi> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -252,6 +254,7 @@ sacred transformation."""@en ;
 <oedipus-myth/stages/flee-from-corinth> a monomyth:StageRealization ;
     rdfs:label "Flee from Corinth"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -265,6 +268,7 @@ the very act of fleeing is what delivers him directly into the path of the proph
 <oedipus-myth/stages/the-triple-crossroads> a monomyth:StageRealization ;
     rdfs:label "The Triple Crossroads"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/laius> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -279,6 +283,7 @@ the first part of the prophecy is fulfilled"""@en .
 <oedipus-myth/stages/riddle-of-the-sphinx> a monomyth:StageRealization ;
     rdfs:label "Riddle of the Sphinx"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/the-sphinx>,
         <oedipus-myth/characters/jocasta> ;
@@ -294,6 +299,7 @@ second part of the prophecy."""@en .
 <oedipus-myth/stages/search-for-the-regicide> a monomyth:StageRealization ;
     rdfs:label "Search for the Regicide"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
@@ -306,6 +312,7 @@ brings him closer to the destructive truth of his own identity."""@en .
 <oedipus-myth/stages/reveal-it-all-to-me> a monomyth:StageRealization ;
     rdfs:label "Reveal it all to me!"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/teiresias> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -320,6 +327,7 @@ himself is the polluter and murderer of Laius."""@en ;
 <oedipus-myth/stages/dont-concearn-yourself-with-prophecies> a monomyth:StageRealization ;
     rdfs:label "Don't concearn yourself with prophecies!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -339,6 +347,7 @@ torment; hers is therefore an innocent temptation to choose peace of mind."""@en
 <oedipus-myth/stages/he-is-the-regicide> a monomyth:StageRealization ;
     rdfs:label "He is the regicide"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/jocasta> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -354,6 +363,7 @@ true biological father."""@en ;
 <oedipus-myth/stages/it-all-came-true> a monomyth:StageRealization ;
     rdfs:label "It all came true!"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/old-servant> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -369,6 +379,7 @@ who has unknowingly shared his bed with his own mother."""@en ;
 <oedipus-myth/stages/the-self-blinding> a monomyth:StageRealization ;
     rdfs:label "The Self-Blinding"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 11 ;
@@ -383,6 +394,7 @@ face the darkness of his actions in an internal reckoning that he was previously
 <oedipus-myth/stages/plea-for-exile> a monomyth:StageRealization ;
     rdfs:label "Plea for Exile"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/creon> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
@@ -396,6 +408,7 @@ plague, as predicted by Apollo. """@en ;
 <oedipus-myth/stages/exodus-from-thebes> a monomyth:StageRealization ;
     rdfs:label "Exodus from Thebes"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 13 ;
@@ -412,6 +425,7 @@ prophecy, using the solitude of his exile to reconcile his identity with his tra
 <oedipus-myth/stages/the-guiding-daughter> a monomyth:StageRealization ;
     rdfs:label "The Guiding Daughter"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/antigone> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -429,6 +443,7 @@ transition to a new reality."""@en .
 <oedipus-myth/stages/the-sacred-grove> a monomyth:StageRealization ;
     rdfs:label "Arrival at the Sacred Grove of Colonus"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/theseus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -448,6 +463,7 @@ structure necessary for the hero's return to a community."""@en .
 <oedipus-myth/stages/ismenes-news> a monomyth:StageRealization ;
     rdfs:label "Ismene's News from Thebes"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/ismene> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -467,6 +483,7 @@ to move securely toward his final, fated reality."""@en ;
 <oedipus-myth/stages/trouble-from-thebes> a monomyth:StageRealization ;
     rdfs:label "Trouble from Thebes"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/creon>,
         <oedipus-myth/characters/polyneices>,
@@ -487,6 +504,7 @@ the heavy gravity of his origins."""@en ;
 <oedipus-myth/stages/transfiguration-at-colonus> a monomyth:StageRealization ;
     rdfs:label "The Transfiguration at Colonus"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <oedipus-myth/monomyths/oedipus-journey> ;
     monomyth:involvesCharacter <oedipus-myth/characters/oedipus>,
         <oedipus-myth/characters/theseus> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
@@ -829,6 +847,7 @@ to the Arcadian settlement that will become his crucial ally."""@en ;
 <aeneid/stages/the-storm-on-the-libyan-coast> a monomyth:StageRealization ;
     rdfs:label "The storm on the Libyan coast"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/juno> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -850,6 +869,7 @@ function is fully present, but its precipitating events lie outside the narrated
 <aeneid/stages/a-second-troy-rising-from-the-sand> a monomyth:StageRealization ;
     rdfs:label "A second Troy rising from the sand"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido>,
         <aeneid/characters/iulus> ;
@@ -869,6 +889,7 @@ of an adopted court."""@en .
 <aeneid/stages/the-cave-and-the-pyre> a monomyth:StageRealization ;
     rdfs:label "The cave and the pyre"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido>,
         <aeneid/characters/juno>,
@@ -890,6 +911,7 @@ burning is the last sight Carthage offers the departing fleet."""@en ;
 <aeneid/stages/italiam-non-sponte-sequor> a monomyth:StageRealization ;
     rdfs:label "Italiam non sponte sequor"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/mercury>,
         <aeneid/characters/dido>,
@@ -913,6 +935,7 @@ the Penates, prefigured by Creusa, arrives here in unmistakable form."""@en ;
 <aeneid/stages/loosing-the-cables> a monomyth:StageRealization ;
     rdfs:label "Loosing the cables"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/dido> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -930,6 +953,7 @@ not yet known but committed to without further hesitation."""@en .
 <aeneid/stages/games-and-the-helmsman-lost> a monomyth:StageRealization ;
     rdfs:label "Games and the helmsman lost"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -953,6 +977,7 @@ realization."""@en .
 <aeneid/stages/facilis-descensus-averno> a monomyth:StageRealization ;
     rdfs:label "Facilis descensus Averno"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/cumaean-sibyl> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -973,6 +998,7 @@ would be impossible at every stage of its unfolding."""@en ;
 <aeneid/stages/the-fields-of-mourning-and-beyond> a monomyth:StageRealization ;
     rdfs:label "The fields of mourning and beyond"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises>,
         <aeneid/characters/cumaean-sibyl>,
@@ -999,6 +1025,7 @@ warranting a semiotic divergence."""@en ;
 <aeneid/stages/the-soul-fields-and-the-doctrine-of-return> a monomyth:StageRealization ;
     rdfs:label "The soul-fields and the doctrine of return"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1019,6 +1046,7 @@ intelligibility."""@en ;
 <aeneid/stages/the-parade-of-roman-souls> a monomyth:StageRealization ;
     rdfs:label "The parade of Roman souls"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/anchises>,
         <aeneid/characters/iulus> ;
@@ -1040,6 +1068,7 @@ disclosure."""@en ;
 <aeneid/stages/this-is-the-land> a monomyth:StageRealization ;
     rdfs:label "This is the land"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/iulus>,
         <aeneid/characters/tiberinus> ;
@@ -1065,6 +1094,7 @@ homecoming pattern that this poem shares with all foundation narratives."""@en ;
 <aeneid/stages/the-foreign-bridegroom-foretold> a monomyth:StageRealization ;
     rdfs:label "The foreign bridegroom foretold"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/lavinia>,
         <aeneid/characters/latinus> ;
@@ -1093,6 +1123,7 @@ without the relational presence the canonical stage assumes."""@en ;
 <aeneid/stages/the-grief-that-stalls-the-campaign> a monomyth:StageRealization ;
     rdfs:label "The grief that stalls the campaign"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/pallas>,
         <aeneid/characters/evander> ;
@@ -1117,6 +1148,7 @@ the bodies the founding has required."""@en ;
 <aeneid/stages/the-shield-and-the-etruscan-fleet> a monomyth:StageRealization ;
     rdfs:label "The shield and the Etruscan fleet"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/venus>,
         <aeneid/characters/evander>,
@@ -1138,6 +1170,7 @@ guardians but toward the embattled camp with the means of its rescue."""@en ;
 <aeneid/stages/the-mother-and-the-dittany> a monomyth:StageRealization ;
     rdfs:label "The mother and the dittany"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/venus>,
         <aeneid/characters/iulus> ;
@@ -1157,6 +1190,7 @@ ended in Trojan defeat and the founding labour would have been lost in its final
 <aeneid/stages/the-imperium-bestowed> a monomyth:StageRealization ;
     rdfs:label "The imperium bestowed"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/latinus>,
         <aeneid/characters/iulus>,
@@ -1179,6 +1213,7 @@ done."""@en .
 <aeneid/stages/the-belt-of-pallas-and-the-buried-blade> a monomyth:StageRealization ;
     rdfs:label "The belt of Pallas and the buried blade"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <aeneid/monomyths/aeneas-journey> ;
     monomyth:involvesCharacter <aeneid/characters/aeneas>,
         <aeneid/characters/turnus>,
         <aeneid/characters/pallas> ;
@@ -1577,6 +1612,7 @@ her and her demons by revealing her true identity."""@en ;
     rdfs:label "The Plea from Mazandaran"@en ;
     monomyth:stageRealizationOrder 1 ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/kay-kavus>,
         <rostam-haft-khan/characters/white-demon>,
         <rostam-haft-khan/characters/zal> ;
@@ -1591,6 +1627,7 @@ begging for Rostam to come and save the army and the crown."""@en .
     rdfs:label "Rostam's Immediate Acceptance"@en ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """The narrative contains no hesitation or refusal. Rostam,
@@ -1602,6 +1639,7 @@ psychological conflict, making refusal structurally incompatible with the narrat
     rdfs:label "Zal's Gifts and Rakhsh's Loyalty"@en ;
     monomyth:stageRealizationOrder 3 ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/zal>,
         <rostam-haft-khan/characters/rakhsh> ;
@@ -1616,6 +1654,7 @@ fight alongside his master."""@en .
     rdfs:label "The Edge of Mazandaran"@en ;
     monomyth:stageRealizationOrder 4 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>, <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:realizationDescription """Rostam leaves the Iranian court and enters the borderlands
@@ -1627,6 +1666,7 @@ a two-day journey in twelve hours."""@en .
     rdfs:label "Sleep in the Lion's Lair"@en ;
     monomyth:stageRealizationOrder 5 ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasSemioticDivergence <rostam-haft-khan/divergences/semiotic/vulnerability-sleep> ;
@@ -1639,6 +1679,7 @@ his human awareness is completely suspended."""@en .
     rdfs:label "The Lion, the Ram, and the Dragon's Attack"@en ;
     monomyth:stageRealizationOrder 6 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/rakhsh> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1654,6 +1695,7 @@ its scales."""@en .
     rdfs:label "Absence of a Feminine Archetype"@en ;
     monomyth:stageRealizationOrder 7 ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/witch> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
@@ -1666,6 +1708,7 @@ figure of illusion and danger, reflecting the epic's moral polarity rather than 
     rdfs:label "The Sorceress's Deception"@en ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/witch> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1679,6 +1722,7 @@ her true, hideous form. Rostam lassos the demon-witch and cleaves her in half wi
     rdfs:label "Captivity and Conquest of Olad"@en ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/rakhsh>,
         <rostam-haft-khan/characters/olad> ;
@@ -1695,6 +1739,7 @@ the White Demon's cave."""@en .
     rdfs:label "The Defeat of Arzhang"@en ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/olad> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1708,6 +1753,7 @@ army, causing 12,000 demons to flee in panic."""@en .
     rdfs:label "Releasing Kay Kavus from the Pit"@en ;
     monomyth:stageRealizationOrder 11 ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1721,6 +1767,7 @@ setting the stage for the final confrontation."""@en .
     rdfs:label "The Death of the White Demon"@en ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/white-demon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -1733,6 +1780,7 @@ slams him down, cutting out his liver and heart."""@en .
     rdfs:label "The Restoration of Sight"@en ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -1744,6 +1792,7 @@ the King and the entire Iranian army is restored, granting them the 'elixir' of 
     rdfs:label "Immediate Departure from Mazandaran"@en ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """Rostam shows no hesitation in returning; he views the demon
@@ -1755,6 +1804,7 @@ supernatural realm."""@en .
     rdfs:label "Defeat of the King of Mazandaran"@en ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:hasNarrativeDivergence <rostam-haft-khan/divergences/narrative/king-stone-war> ;
@@ -1767,6 +1817,7 @@ mace until the King is forced to revert to human form."""@en .
     rdfs:label "Rostam's Self-Rescue"@en ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:realizationDescription """As the 'World-Champion', Rostam is the source of rescue for
@@ -1777,6 +1828,7 @@ journey out of Mazanderan is secured through his own military might and dominanc
     rdfs:label "The Victorious Return to Iran"@en ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -1789,6 +1841,7 @@ rightful Shah and the return of their champion."""@en .
     rdfs:label "Fulfillment of the Promise to Olad"@en ;
     monomyth:stageRealizationOrder 18 ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/olad> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -1802,6 +1855,7 @@ Iranian court."""@en .
     rdfs:label "The Celebration of Victory"@en ;
     monomyth:stageRealizationOrder 19 ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <rostam-haft-khan/monomyths/rostam-journey> ;
     monomyth:involvesCharacter <rostam-haft-khan/characters/rostam>,
         <rostam-haft-khan/characters/kay-kavus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -2032,6 +2086,7 @@ Ruggiero after the hero's conversion and defection from the Saracen sphere."""@e
 <orlando-furioso/stages/carried-away-from-albracca> a monomyth:StageRealization ;
     rdfs:label "Carried away from Albracca"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/hippogriff> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2048,6 +2103,7 @@ begins his long passage through magical and spiritual transformation."""@en .
 <orlando-furioso/stages/enchanted-delays> a monomyth:StageRealization ;
     rdfs:label "Enchanted Delays"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/alcina>,
         <orlando-furioso/characters/atlante> ;
@@ -2064,6 +2120,7 @@ him."""@en ;
 <orlando-furioso/stages/alcinas-seduction> a monomyth:StageRealization ;
     rdfs:label "Alcina's Seduction"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/alcina> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -2078,6 +2135,7 @@ erotic enchantment itself becomes the mechanism threatening to erase the hero's 
 <orlando-furioso/stages/melissas-ring> a monomyth:StageRealization ;
     rdfs:label "Melissa's Ring"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/melissa> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -2093,6 +2151,7 @@ toward his destined transformation."""@en ;
 <orlando-furioso/stages/departure-from-logistilla> a monomyth:StageRealization ;
     rdfs:label "Departure from Logistilla"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/logistilla> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2107,6 +2166,7 @@ the larger historical movement of the poem."""@en .
 <orlando-furioso/stages/atlantes-palace> a monomyth:StageRealization ;
     rdfs:label "Atlante's Palace"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/atlante> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -2123,6 +2183,7 @@ which genuine transformation can occur only through escape and disillusionment."
 <orlando-furioso/stages/breaking-from-atlante> a monomyth:StageRealization ;
     rdfs:label "Breaking from Atlante"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/atlante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2137,6 +2198,7 @@ accepting the risks of destiny rather than remaining suspended within paternal c
 <orlando-furioso/stages/wandering-adventures> a monomyth:StageRealization ;
     rdfs:label "Wandering Adventures"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/astolfo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2152,6 +2214,7 @@ for dynastic and religious transformation."""@en .
 <orlando-furioso/stages/bradamante-destiny> a monomyth:StageRealization ;
     rdfs:label "Bradamante's Destiny"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2172,6 +2235,7 @@ recurring moments of encounter, separation, and rediscovery."""@en ;
 <orlando-furioso/stages/delayed-conversion> a monomyth:StageRealization ;
     rdfs:label "Delayed Conversion"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -2188,6 +2252,7 @@ not always directly responsable."""@en ;
 <orlando-furioso/stages/bradamantes-rescues> a monomyth:StageRealization ;
     rdfs:label "Bradamante's Rescues"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante>,
         <orlando-furioso/characters/melissa> ;
@@ -2204,6 +2269,7 @@ therefore operates as a sustained corrective force distributed throughout the na
 <orlando-furioso/stages/baptism-and-conversion> a monomyth:StageRealization ;
     rdfs:label "Baptism and Conversion"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante>,
         <orlando-furioso/characters/charlemagne> ;
@@ -2219,6 +2285,7 @@ becomes dynastic destiny, historical legitimation, and metaphysical rebirth."""@
 <orlando-furioso/stages/este-foundation> a monomyth:StageRealization ;
     rdfs:label "Este Foundation"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2232,6 +2299,7 @@ noble lineage, and collective cultural identity."""@en .
 <orlando-furioso/stages/flight-from-saracens> a monomyth:StageRealization ;
     rdfs:label "Flight from the Saracen camp"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 14 ;
@@ -2249,6 +2317,7 @@ enchantment."""@en .
 <orlando-furioso/stages/defection-to-christendom> a monomyth:StageRealization ;
     rdfs:label "Defection to Christendom"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/charlemagne> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2265,6 +2334,7 @@ recognized by Charlemagne's world, completing the passage from divided existence
 <orlando-furioso/stages/knight-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Knight of the Two Worlds"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -2278,6 +2348,7 @@ other."""@en .
 <orlando-furioso/stages/dynastic-peace> a monomyth:StageRealization ;
     rdfs:label "Dynastic Peace"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <orlando-furioso/monomyths/ruggiero-journey> ;
     monomyth:involvesCharacter <orlando-furioso/characters/ruggiero>,
         <orlando-furioso/characters/bradamante> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -2522,6 +2593,7 @@ brings the dogs to the brink of death and precipitates Buck's rescue by Thornton
 <the-call-of-the-wild/stages/stolen-from-sun-and-soft-living> a monomyth:StageRealization ;
     rdfs:label "Stolen from sun and soft living"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -2538,6 +2610,7 @@ abduction rather than summons, giving Buck no agency in the disruption."""@en ;
 <the-call-of-the-wild/stages/a-red-eyed-devil> a monomyth:StageRealization ;
     rdfs:label "A red-eyed devil"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -2551,6 +2624,7 @@ is a lawgiver to be obeyed, though not necessarily conciliated."""@en ;
 <the-call-of-the-wild/stages/the-law-of-club-and-fang> a monomyth:StageRealization ;
     rdfs:label "The law of club and fang"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/francois> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2565,6 +2639,7 @@ survival belongs to those who learn its grammar quickly and adapt without sentim
 <the-call-of-the-wild/stages/that-first-day-on-the-dyea-beach> a monomyth:StageRealization ;
     rdfs:label "That first day on the Dyea beach"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/spitz>,
         <the-call-of-the-wild/characters/francois> ;
@@ -2580,6 +2655,7 @@ conclusion."""@en .
 <the-call-of-the-wild/stages/where-had-the-snow-surface-gone> a monomyth:StageRealization ;
     rdfs:label "Where had the snow-surface gone?"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -2594,6 +2670,7 @@ they claw their way back to the surface each morning."""@en .
 <the-call-of-the-wild/stages/the-dominant-primordial-beast> a monomyth:StageRealization ;
     rdfs:label "The dominant primordial beast"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/spitz>,
         <the-call-of-the-wild/characters/francois>,
@@ -2612,6 +2689,7 @@ underneath."""@en .
 <the-call-of-the-wild/stages/love-genuine-and-true> a monomyth:StageRealization ;
     rdfs:label "Love genuine and true"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton>,
         <the-call-of-the-wild/characters/hal> ;
@@ -2630,6 +2708,7 @@ thousand-dollar wager by breaking a half-ton sled free from the ice by sheer pul
 <the-call-of-the-wild/stages/the-call-sounding-in-the-forest> a monomyth:StageRealization ;
     rdfs:label "The call sounding in the depths of the forest"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2646,6 +2725,7 @@ in place is not comfort or ignorance but the purest bond he possesses."""@en ;
 <the-call-of-the-wild/stages/the-hairy-man-crouching-by-the-fire> a monomyth:StageRealization ;
     rdfs:label "The hairy man crouching by the fire"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -2665,6 +2745,7 @@ visionary deepening."""@en ;
 <the-call-of-the-wild/stages/patient-as-the-wild-itself> a monomyth:StageRealization ;
     rdfs:label "Patient as the wild itself"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -2680,6 +2761,7 @@ animal who entered the hunt but something more complete."""@en .
 <the-call-of-the-wild/stages/the-blood-longing> a monomyth:StageRealization ;
     rdfs:label "The blood-longing"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck>,
         <the-call-of-the-wild/characters/john-thornton> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -2697,6 +2779,7 @@ the journey has been making him."""@en ;
 <the-call-of-the-wild/stages/the-last-tie-was-broken> a monomyth:StageRealization ;
     rdfs:label "The last tie was broken"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -2709,6 +2792,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/the-trail-runs-only-forward> a monomyth:StageRealization ;
     rdfs:label "The trail runs only forward"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/absent-flight> .
@@ -2716,6 +2800,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/no-voice-calls-him-back> a monomyth:StageRealization ;
     rdfs:label "No voice calls him back"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasNarrativeDivergence <the-call-of-the-wild/divergences/narrative/absent-rescue> .
@@ -2723,6 +2808,7 @@ threshold between worlds. Buck joins the pack and runs."""@en ;
 <the-call-of-the-wild/stages/the-ghost-dog> a monomyth:StageRealization ;
     rdfs:label "The Ghost Dog"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
@@ -2738,6 +2824,7 @@ phantom, a rumour, a figure of dread."""@en ;
 <the-call-of-the-wild/stages/a-spectral-beast-of-enormous-size> a monomyth:StageRealization ;
     rdfs:label "Fear and mystery"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -2752,6 +2839,7 @@ simply, irreducibly present in both, one as flesh and one as story."""@en ;
 <the-call-of-the-wild/stages/running-at-the-head-of-the-pack> a monomyth:StageRealization ;
     rdfs:label "Running at the head of the pack"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <the-call-of-the-wild/monomyths/buck-journey> ;
     monomyth:involvesCharacter <the-call-of-the-wild/characters/buck> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
@@ -3039,7 +3127,7 @@ persona of Batman to fight crime, serving as the primary hero and an eventual al
 <batman-year-one/characters/commissioner-loeb> a monomyth:Character ;
     rdfs:label "Commissioner Loeb"@en ;
     monomyth:embodiesArchetype monomyth:ThresholdGuardian ;
-    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey> ,
+    monomyth:characterOf <batman-year-one/monomyths/bruce-wayne-journey>,
         <batman-year-one/monomyths/jim-gordon-journey> ;
     rdfs:comment "The head of the corrupt GCPD infrastructure."@en ;
     owl:sameAs wd:Q3000468 .
@@ -3067,7 +3155,7 @@ persona of Batman to fight crime, serving as the primary hero and an eventual al
 <batman-year-one/characters/barbara-gordon> a monomyth:Character;
     rdfs:label "Barbara Eileen Gordon"@en ;
     monomyth:characterOf <batman-year-one/monomyths/jim-gordon-journey> ;
-    monomyth:embodiesArchetype monomyth:Mentor , monomyth:Ally ;
+    monomyth:embodiesArchetype monomyth:Mentor, monomyth:Ally ;
     rdfs:comment """Jim Gordon's wife and moral compass, providing him the emotional wisdom and
 forgiveness."""@en ;
     owl:sameAs wd:Q48893069 .
@@ -3077,6 +3165,7 @@ forgiveness."""@en ;
 <batman-year-one/stages/the-train-to-gotham> a monomyth:StageRealization ;
     rdfs:label "The Train to Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -3088,6 +3177,7 @@ is internal: the trauma of his parents' death and the decaying state of the city
     rdfs:label "Disastrous East End Surveillance Mission"@en ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:realizationDescription """During his training, Bruce hesitates, feeling
@@ -3101,6 +3191,7 @@ he lacks the proper method to strike fear into his enemies."""@en ;
 <batman-year-one/stages/the-bat-at-the-window> a monomyth:StageRealization ;
     rdfs:label "The Bat"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -3113,6 +3204,7 @@ his vigilante identity."""@en ;
 <batman-year-one/stages/the-dinner-party-ambush> a monomyth:StageRealization ;
     rdfs:label "The Dinner Party Ambush"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/carmine-falcone>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -3129,6 +3221,7 @@ to operate in a zone of magnified power where ordinary rules are suspended."""@e
 <batman-year-one/stages/the-tenement-siege> a monomyth:StageRealization ;
     rdfs:label "The Tenement Siege"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/commissioner-loeb> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -3143,6 +3236,7 @@ identity—the urban myth of the Batman—to emerge from the rubble."""@en ;
 <batman-year-one/stages/the-distributed-trials> a monomyth:StageRealization ;
     rdfs:label "The Distributed Road of Trials"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3158,6 +3252,7 @@ essential ally needed to survive the trials ahead."""@en ;
 <batman-year-one/stages/encounter-with-selina> a monomyth:StageRealization ;
     rdfs:label "The Encounter with Selina Kyle"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/selina-kyle> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -3172,6 +3267,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-temptation> a monomyth:StageRealization ;
     rdfs:label "The Absent Temptation of the Symbol"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:hasSemioticDivergence <batman-year-one/divergences/semiotic/semiotic-dehumanization> ;
@@ -3180,6 +3276,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-atonement> a monomyth:StageRealization ;
     rdfs:label "The Absent Atonement of the Orphan"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 9 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/the-orphan-sovereignty> .
@@ -3187,6 +3284,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-absent-apotheosis> a monomyth:StageRealization ;
     rdfs:label "The Absent Apotheosis"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 10 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/noir-materialism> .
@@ -3194,6 +3292,7 @@ mission, not for a person."""@en ;
 <batman-year-one/stages/the-bridge-rescue> a monomyth:StageRealization ;
     rdfs:label "The Bridge Rescue"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/bruce-wayne>,
         <batman-year-one/characters/jim-gordon>;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3208,6 +3307,7 @@ hero's mission can now truly begin with the support of the law."""@en ;
 <batman-year-one/stages/arrival-in-gotham> a monomyth:StageRealization ;
     rdfs:label "Arrival in Gotham"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -3220,6 +3320,7 @@ Commissioner Loeb and witnessing Detective Flass brutalize a teenager."""@en .
 <batman-year-one/stages/waiting-to-report> a monomyth:StageRealization ;
     rdfs:label "Waiting to Report"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3231,6 +3332,7 @@ Flass tells him to relax and adapt to the system, summarizing Gordon's passive s
 <batman-year-one/stages/the-absent-aid> a monomyth:StageRealization ;
     rdfs:label "The Absent Supernatural Aid"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -3239,6 +3341,7 @@ Flass tells him to relax and adapt to the system, summarizing Gordon's passive s
 <batman-year-one/stages/the-beating> a monomyth:StageRealization ;
     rdfs:label "The Beating"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -3253,6 +3356,7 @@ and self-annihilation, setting the stage for his metamorphosis."""@en ;
 <batman-year-one/stages/beating-flass> a monomyth:StageRealization ;
     rdfs:label "Beating Flass"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/detective-flass> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -3266,6 +3370,7 @@ behind the familiar safety of playing by the rules and fully enters the brutal w
 <batman-year-one/stages/the-honest-cop-trials> a monomyth:StageRealization ;
     rdfs:label "The Honest Cop Trials"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
@@ -3276,6 +3381,7 @@ navigating Loeb's orders to hunt down the vigilante Batman."""@en .
 <batman-year-one/stages/the-intellectual-equal> a monomyth:StageRealization ;
     rdfs:label "Meeting Sarah Essen"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/sarah-essen> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3290,6 +3396,7 @@ the World.' For Gordon, who is alienated by the corrupt department, she represen
 <batman-year-one/stages/the-extramarital-affair> a monomyth:StageRealization ;
     rdfs:label "The Affair and Blackmail"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/sarah-essen>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -3304,6 +3411,7 @@ Loeb the leverage needed to blackmail him."""@en ;
 <batman-year-one/stages/confession-to-barbara> a monomyth:StageRealization ;
     rdfs:label "Confession and Atonement"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/barbara-gordon>,
         <batman-year-one/characters/commissioner-loeb> ;
@@ -3318,6 +3426,7 @@ of his power and undergoes a moral rebirth."""@en ;
 <batman-year-one/stages/family-man> a monomyth:StageRealization ;
     rdfs:label "The family man"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/barbara-gordon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3329,6 +3438,7 @@ family bliss."""@en .
 <batman-year-one/stages/the-bridge-alliance> a monomyth:StageRealization ;
     rdfs:label "The Bridge Alliance"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:involvesCharacter <batman-year-one/characters/jim-gordon>,
         <batman-year-one/characters/bruce-wayne> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -3343,6 +3453,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/refusal-of-the-return> a monomyth:StageRealization ;
     rdfs:label "Absent Refusal of the Return"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3350,6 +3462,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/the-magic-flight> a monomyth:StageRealization ;
     rdfs:label "Absent Magic Flight"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 13 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3357,6 +3471,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/rescue-from-without> a monomyth:StageRealization ;
     rdfs:label "Absent Rescue from Without"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3364,6 +3480,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/crossing-the-return-threshold> a monomyth:StageRealization ;
     rdfs:label "Absent Crossing of the Return Threshold"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 15 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3371,6 +3489,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/master-of-two-worlds> a monomyth:StageRealization ;
     rdfs:label "Absent Master of Two Worlds"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 16 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3378,6 +3498,8 @@ the hope and leverage necessary to finally cleanse Gotham's corrupt system."""@e
 <batman-year-one/stages/freedom-to-live> a monomyth:StageRealization ;
     rdfs:label "Absent Freedom to Live"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <batman-year-one/monomyths/bruce-wayne-journey>,
+        <batman-year-one/monomyths/jim-gordon-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 17 ;
     monomyth:hasNarrativeDivergence <batman-year-one/divergences/narrative/origin-as-stasis> .
@@ -3449,17 +3571,17 @@ keeping the hero grounded in a material world of pain, corruption, and tactical 
 
 <batman-year-one/divergences/narrative/origin-as-stasis> a monomyth:NarrativeDivergence ;
     rdfs:label "Origin Narrative Constraint"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return> ,
-        <batman-year-one/stages/the-magic-flight> ,
-        <batman-year-one/stages/rescue-from-without> ,
-        <batman-year-one/stages/crossing-the-return-threshold> ,
-        <batman-year-one/stages/master-of-two-worlds> ,
+    monomyth:divergenceOf <batman-year-one/stages/refusal-of-the-return>,
+        <batman-year-one/stages/the-magic-flight>,
+        <batman-year-one/stages/rescue-from-without>,
+        <batman-year-one/stages/crossing-the-return-threshold>,
+        <batman-year-one/stages/master-of-two-worlds>,
         <batman-year-one/stages/freedom-to-live> ;
-    monomyth:divergesFrom monomyth:RefusalOfTheReturn ,
-        monomyth:TheMagicFlight ,
-        monomyth:RescueFromWithout ,
-        monomyth:TheCrossingOfTheReturnThreshold ,
-        monomyth:MasterOfTheTwoWorlds ,
+    monomyth:divergesFrom monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive ;
     monomyth:divergenceRationale """The Return act is logically impossible within the scope of an
 origin story. The narrative ends precisely at the moment the hero achieves his identity, serving as
@@ -3488,9 +3610,9 @@ tests of his new identity."""@en .
 
 <batman-year-one/divergences/sequential/the-catalyst-inversion> a monomyth:SequentialDivergence ;
     rdfs:label "The Catalyst Inversion (Belly Before Threshold)"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-beating> ,
+    monomyth:divergenceOf <batman-year-one/stages/the-beating>,
         <batman-year-one/stages/beating-flass> ;
-    monomyth:divergesFrom monomyth:TheBellyOfTheWhale ,
+    monomyth:divergesFrom monomyth:TheBellyOfTheWhale,
         monomyth:TheCrossingOfTheFirstThreshold ;
     monomyth:divergenceRationale """In Campbell's traditional framework, the hero crosses the
 threshold into the unknown and is subsequently swallowed into the Belly of the Whale. In Gordon's
@@ -3503,17 +3625,17 @@ to solidify his rebirth as an active combatant."""@en .
 
 <batman-year-one/divergences/semiotic/secular-realism> a monomyth:SemioticDivergence ;
     rdfs:label "Neo-Noir Secularization"@en ;
-    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham> ,
-        <batman-year-one/stages/the-bat-at-the-window> ,
-        <batman-year-one/stages/the-dinner-party-ambush> ,
-        <batman-year-one/stages/the-tenement-siege> ,
-        <batman-year-one/stages/the-extramarital-affair> ,
+    monomyth:divergenceOf <batman-year-one/stages/the-train-to-gotham>,
+        <batman-year-one/stages/the-bat-at-the-window>,
+        <batman-year-one/stages/the-dinner-party-ambush>,
+        <batman-year-one/stages/the-tenement-siege>,
+        <batman-year-one/stages/the-extramarital-affair>,
         <batman-year-one/stages/confession-to-barbara> ;
-    monomyth:divergesFrom monomyth:TheCallToAdventure ,
-        monomyth:SupernaturalAid ,
-        monomyth:TheCrossingOfTheFirstThreshold ,
-        monomyth:TheBellyOfTheWhale ,
-        monomyth:WomanAsTheTemptress ,
+    monomyth:divergesFrom monomyth:TheCallToAdventure,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:WomanAsTheTemptress,
         monomyth:AtonementWithTheFather ;
     monomyth:divergenceRationale """Across both Bruce Wayne's and Jim Gordon's journeys, Campbell's
 traditional mythic signifiers (magic, monsters, sirens, and cosmic gods) are radically translated
@@ -3668,6 +3790,7 @@ alternative way of life during his years in exile."""@en ;
 <the-lion-king/stages/everything-the-light-touches> a monomyth:StageRealization ;
     rdfs:label "Everything the light touches"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3683,6 +3806,7 @@ summons."""@en ;
 <the-lion-king/stages/the-great-kings-will-always-be-there-to-guide-you> a monomyth:StageRealization ;
     rdfs:label "The great kings will always be there to guide you"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -3699,6 +3823,7 @@ ghostly vision that completes the circuit between mortal teaching and ancestral 
 <the-lion-king/stages/what-have-you-done> a monomyth:StageRealization ;
     rdfs:label "What have you done?"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar>,
         <the-lion-king/characters/mufasa> ;
@@ -3715,6 +3840,7 @@ Simba's eagerness into shame and his birthright into a burden he believes he has
 <the-lion-king/stages/run-away-and-never-return> a monomyth:StageRealization ;
     rdfs:label "Run away and never return"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3729,6 +3855,7 @@ simply end, and the emptiness beyond offers no welcome and no promise."""@en .
 <the-lion-king/stages/youre-an-outcast-thats-great-so-are-we> a monomyth:StageRealization ;
     rdfs:label "You're an outcast, that's great, so are we"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
@@ -3745,6 +3872,7 @@ forgotten."""@en .
 <the-lion-king/stages/hakuna-matata> a monomyth:StageRealization ;
     rdfs:label "Hakuna Matata"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/timon>,
         <the-lion-king/characters/pumbaa> ;
@@ -3762,6 +3890,7 @@ return more difficult, not less."""@en ;
 <the-lion-king/stages/can-you-feel-the-love-tonight> a monomyth:StageRealization ;
     rdfs:label "Can you feel the love tonight"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3777,6 +3906,7 @@ grew up with, and that the kingdom he abandoned still needs him."""@en ;
 <the-lion-king/stages/youre-not-the-simba-i-remember> a monomyth:StageRealization ;
     rdfs:label "You're not the Simba I remember"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -3800,6 +3930,7 @@ where he is."""@en ;
 <the-lion-king/stages/i-cant-go-back> a monomyth:StageRealization ;
     rdfs:label "I can't go back"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3815,6 +3946,7 @@ genuine and deeply felt, rooted in a lie he has carried since childhood."""@en ;
 <the-lion-king/stages/remember-who-you-are> a monomyth:StageRealization ;
     rdfs:label "Remember who you are"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/mufasa>,
         <the-lion-king/characters/rafiki> ;
@@ -3839,6 +3971,7 @@ narrative vehicle converge most completely."""@en .
 <the-lion-king/stages/i-know-what-i-have-to-do> a monomyth:StageRealization ;
     rdfs:label "I know what I have to do"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/rafiki> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3854,6 +3987,7 @@ to run."""@en .
 <the-lion-king/stages/were-going-to-fight-your-uncle-for-this> a monomyth:StageRealization ;
     rdfs:label "We're going to fight your uncle for this?"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -3872,6 +4006,7 @@ bleached bone, the kingdom's decay a visible measure of how long the hero's abse
 <the-lion-king/stages/simba-you-have-to-help-us> a monomyth:StageRealization ;
     rdfs:label "Simba, you have to help us"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/timon>,
@@ -3890,6 +4025,7 @@ of his divided life are willing to unite behind his cause."""@en .
 <the-lion-king/stages/tell-them-the-truth> a monomyth:StageRealization ;
     rdfs:label "Tell them the truth"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/scar> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -3907,6 +4043,7 @@ that the kingdom's betrayal is made visible to all."""@en ;
 <the-lion-king/stages/it-is-time> a monomyth:StageRealization ;
     rdfs:label "It is time"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/rafiki> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -3923,6 +4060,7 @@ return."""@en .
 <the-lion-king/stages/a-kings-time-rises-and-falls-like-the-sun> a monomyth:StageRealization ;
     rdfs:label "A king's time rises and falls like the sun"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -3937,6 +4075,7 @@ returned as the equilibrium point between them, neither denying his exile nor be
 <the-lion-king/stages/the-circle-of-life> a monomyth:StageRealization ;
     rdfs:label "The Circle of Life"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <the-lion-king/monomyths/simba-journey> ;
     monomyth:involvesCharacter <the-lion-king/characters/simba>,
         <the-lion-king/characters/nala>,
         <the-lion-king/characters/rafiki> ;
@@ -4259,6 +4398,7 @@ him Zelda's Lullaby, and later awakens as the Sage of the Shadow Temple."""@en ;
 <ocarina-of-time/stages/the-boy-without-a-fairy> a monomyth:StageRealization ;
     rdfs:label "The boy without a fairy"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi>,
         <ocarina-of-time/characters/the-great-deku-tree> ;
@@ -4274,6 +4414,7 @@ far beyond the forest."""@en .
 <ocarina-of-time/stages/the-hero-does-not-hesitate> a monomyth:StageRealization ;
     rdfs:label "The hero does not hesitate"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/absent-refusal> .
@@ -4281,6 +4422,7 @@ far beyond the forest."""@en .
 <ocarina-of-time/stages/the-future-depends-upon-thee> a monomyth:StageRealization ;
     rdfs:label "The future depends upon thee"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi>,
         <ocarina-of-time/characters/the-great-deku-tree> ;
@@ -4298,6 +4440,7 @@ guidance."""@en .
 <ocarina-of-time/stages/beyond-the-forest> a monomyth:StageRealization ;
     rdfs:label "Beyond the forest"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/saria> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4311,6 +4454,7 @@ and exposed, the sheltering canopy replaced by open sky."""@en .
 <ocarina-of-time/stages/a-fairy-and-a-green-stone> a monomyth:StageRealization ;
     rdfs:label "A fairy and a green stone"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/impa> ;
@@ -4330,6 +4474,7 @@ defining the quest before Link has faced any trial."""@en ;
 <ocarina-of-time/stages/stones-and-sages> a monomyth:StageRealization ;
     rdfs:label "Stones and sages"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -4348,6 +4493,7 @@ Ganondorf's seven-year reign."""@en ;
 <ocarina-of-time/stages/seven-lost-years> a monomyth:StageRealization ;
     rdfs:label "Seven lost years"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/rauru> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4368,6 +4514,7 @@ transformation."""@en ;
 <ocarina-of-time/stages/a-quest-without-temptation> a monomyth:StageRealization ;
     rdfs:label "A quest without temptation"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/temptress-absent> .
@@ -4375,6 +4522,7 @@ transformation."""@en ;
 <ocarina-of-time/stages/you-are-not-a-kokiri> a monomyth:StageRealization ;
     rdfs:label "You are not a Kokiri"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -4390,6 +4538,7 @@ guardian."""@en ;
 <ocarina-of-time/stages/the-seventh-sage> a monomyth:StageRealization ;
     rdfs:label "The seventh sage"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -4407,6 +4556,7 @@ rather than contemplative transcendence or a moment of divine stillness."""@en .
 <ocarina-of-time/stages/the-light-arrows> a monomyth:StageRealization ;
     rdfs:label "The light arrows"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/ganondorf> ;
@@ -4424,6 +4574,7 @@ moment before her capture rather than as the prize of completed trials."""@en .
 <ocarina-of-time/stages/the-hero-presses-on> a monomyth:StageRealization ;
     rdfs:label "The hero presses on"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/return-refusal-absent> .
@@ -4431,6 +4582,7 @@ moment before her capture rather than as the prize of completed trials."""@en .
 <ocarina-of-time/stages/the-tower-comes-down> a monomyth:StageRealization ;
     rdfs:label "The tower comes down"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4446,6 +4598,7 @@ confrontation."""@en .
 <ocarina-of-time/stages/six-sages-as-one> a monomyth:StageRealization ;
     rdfs:label "Six sages as one"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/rauru>,
@@ -4463,6 +4616,7 @@ requires collective sacred authority beyond any individual's reach."""@en .
 <ocarina-of-time/stages/lay-the-master-sword-to-rest> a monomyth:StageRealization ;
     rdfs:label "Lay the Master Sword to rest"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4477,6 +4631,7 @@ in the temple, carrying the memory of a future that has been unmade."""@en ;
 <ocarina-of-time/stages/child-and-hero> a monomyth:StageRealization ;
     rdfs:label "Child and hero"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -4493,6 +4648,7 @@ can demonstrate this to no one, since the adult timeline has been erased."""@en 
 <ocarina-of-time/stages/through-the-courtyard-window> a monomyth:StageRealization ;
     rdfs:label "Through the courtyard window"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -4772,6 +4928,7 @@ Nebuchadnezzar, providing support to Neo and others during their missions."""@en
 <the-matrix/stages/follow-the-white-rabbit> a monomyth:StageRealization ;
     rdfs:label "Follow the white rabbit"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4783,6 +4940,7 @@ to a club, where Trinity tells him she knows the answer to the question driving 
 <the-matrix/stages/i-cant-do-this> a monomyth:StageRealization ;
     rdfs:label "I can't do this"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus>,
         <the-matrix/characters/agent-smith> ;
@@ -4795,6 +4953,7 @@ immediately captured by Agent Smith, interrogated, and implanted with a tracking
 <the-matrix/stages/let-me-tell-you-why-youre-here> a monomyth:StageRealization ;
     rdfs:label "Let me tell you why you're here"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus>,
         <the-matrix/characters/trinity> ;
@@ -4808,6 +4967,7 @@ another chance at understanding his destiny, bringing him to Morpheus."""@en ;
 <the-matrix/stages/all-im-offering-is-the-truth> a monomyth:StageRealization ;
     rdfs:label "All I'm offering is the truth"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4819,6 +4979,7 @@ his arm, and he wakes in a pod in the real world. There is no going back."""@en 
 <the-matrix/stages/welcome-to-the-real-world> a monomyth:StageRealization ;
     rdfs:label "Welcome to the real world"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -4830,6 +4991,7 @@ in the pod; Neo is reborn fragile and overwhelmed."""@en .
 <the-matrix/stages/fear-doubt-and-disbelief> a monomyth:StageRealization ;
     rdfs:label "Fear, doubt, and disbelief"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus>,
         <the-matrix/characters/tank> ;
@@ -4844,6 +5006,7 @@ him."""@en .
 <the-matrix/stages/the-oracle-will-see-you-now> a monomyth:StageRealization ;
     rdfs:label "The Oracle will see you now"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/the-oracle>,
         <the-matrix/characters/morpheus> ;
@@ -4858,6 +5021,7 @@ through sacrifice and choice."""@en .
 <the-matrix/stages/ignorance-is-bliss> a monomyth:StageRealization ;
     rdfs:label "Ignorance is bliss"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/cypher>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -4876,6 +5040,7 @@ rather than a direct seduction of the hero."""@en ;
 <the-matrix/stages/there-is-no-spoon> a monomyth:StageRealization ;
     rdfs:label "There is no spoon"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/morpheus>,
         <the-matrix/characters/trinity>,
@@ -4890,6 +5055,7 @@ discipleship, claiming autonomous authority not against Morpheus but through loy
 <the-matrix/stages/hes-beginning-to-believe> a monomyth:StageRealization ;
     rdfs:label "He's beginning to believe"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -4905,6 +5071,7 @@ ready for another one and hence must escape for now."""@en ;
 <the-matrix/stages/mr-wizard-get-me-out-of-here> a monomyth:StageRealization ;
     rdfs:label "Mr. Wizard, get me out of here!"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/tank> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -4920,6 +5087,7 @@ that even emergent power requires external support to translate into survival.""
 <the-matrix/stages/the-man-i-loved-would-be-the-one> a monomyth:StageRealization ;
     rdfs:label "The man I loved would be the One"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/trinity> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -4936,6 +5104,7 @@ being believed in before one can fully believe."""@en ;
 <the-matrix/stages/he-is-the-one> a monomyth:StageRealization ;
     rdfs:label "He is the One"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo>,
         <the-matrix/characters/agent-smith> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -4951,6 +5120,7 @@ survives."""@en .
 <the-matrix/stages/system-failure> a monomyth:StageRealization ;
     rdfs:label "System failure"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 14 ;
     monomyth:hasNarrativeDivergence <the-matrix/divergences/narrative/awakening-not-homecoming> .
@@ -4958,6 +5128,7 @@ survives."""@en .
 <the-matrix/stages/i-can-feel-you-now> a monomyth:StageRealization ;
     rdfs:label "I can feel you now"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 15 ;
@@ -4971,6 +5142,7 @@ effectively dissolved as he's now free to move between both realms at will."""@e
 <the-matrix/stages/i-came-here-to-tell-you-how-its-going-to-begin> a monomyth:StageRealization ;
     rdfs:label "I came here to tell you how it's going to begin"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -4985,6 +5157,7 @@ the film only gestures toward it in the closing moments rather than depicting it
 <the-matrix/stages/where-we-go-from-there-is-a-choice-i-leave-to-you> a monomyth:StageRealization ;
     rdfs:label "Where we go from there is a choice I leave to you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <the-matrix/monomyths/neo-journey> ;
     monomyth:involvesCharacter <the-matrix/characters/neo> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
@@ -5110,14 +5283,14 @@ seduction."""@en .
     schema:genre "Adventure"@en,
         "Drama"@en ;
     owl:sameAs wd:Q3522637 ;
-    monomyth:interpretedBy <walter-mitty/monomyths/walters-journey> ;
+    monomyth:interpretedBy <walter-mitty/monomyths/walter-journey> ;
     rdfs:comment """A 2013 film where a negative assets manager at Life magazine, prone to vivid
 daydreams, embarks on a global quest to find a missing photograph, ultimately discovering his own
 courage and identity."""@en .
 
 # --- Monomyth Expressions --------------
 
-<walter-mitty/monomyths/walters-journey> a monomyth:MonomythExpression ;
+<walter-mitty/monomyths/walter-journey> a monomyth:MonomythExpression ;
     rdfs:label "Walter Mitty's Hero's Journey"@en ;
     rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
 narrative of 'The Secret Life of Walter Mitty', focusing on the character Walter Mitty's journey
@@ -5158,8 +5331,8 @@ from a negative assets manager to a courageous and self-discovering individual."
     rdfs:comment """The protagonist of the story, a negative assets manager at Life magazine who
 embarks on a journey to find a missing photograph through which he goes through the self-discovery
 journey."""@en ;
-    monomyth:heroOf <walter-mitty/monomyths/walters-journey> ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:heroOf <walter-mitty/monomyths/walter-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Hero .
 
 <walter-mitty/characters/sean> a monomyth:Character ;
@@ -5167,7 +5340,7 @@ journey."""@en ;
     rdfs:comment """The protagonist's idol, a famous photographer who embarks on a journey to find a
 rare snow leopard and is a mentor to Walter in his journey  to teach him about the quintessence of
 life, photography and adventure. He is also a herald to Walter in his journey."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Herald .
 
@@ -5175,7 +5348,7 @@ life, photography and adventure. He is also a herald to Walter in his journey.""
     rdfs:label "Cheryl Melhoff"@en ;
     rdfs:comment """Walter's coworker and love interest, who encourages his journey of self-discovery
 through the imaginations of her by Walter in his daydreams."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Mentor .
 
@@ -5184,7 +5357,7 @@ through the imaginations of her by Walter in his daydreams."""@en ;
     rdfs:comment """The antagonist of the story, who threatens Walter's job at Life magazine by
 digitizing the magazine which causes lot's of employees to lose their job's, Walter being one of
 them."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:ThresholdGuardian .
 
@@ -5192,7 +5365,7 @@ them."""@en ;
     rdfs:label "Edna Mitty"@en ;
     rdfs:comment """Walter's mother, who provides external encouragement through her words especially
 when Walter goes through daydreaming episodes."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Herald .
 
@@ -5200,7 +5373,7 @@ when Walter goes through daydreaming episodes."""@en ;
     rdfs:label "Todd Maher"@en ;
     rdfs:comment """The eHarmony representative who provides external encouragement, to Walter by
 helping him analyzing his achievements in reality instead of daydreams."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally .
 
 # --- Stage Realizations ---------------
@@ -5208,6 +5381,7 @@ helping him analyzing his achievements in reality instead of daydreams."""@en ;
 <walter-mitty/stages/negative-25-missing> a monomyth:StageRealization ;
     rdfs:label "Negative 25 is missing"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted>,
         <walter-mitty/characters/sean> ;
@@ -5230,6 +5404,7 @@ responsibility into a crisis that threatens both his career and the symbolic clo
 <walter-mitty/stages/daydream-retreat> a monomyth:StageRealization ;
     rdfs:label "Daydream retreat"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -5247,6 +5422,7 @@ fantasies function as protection against action."""@en ;
 <walter-mitty/stages/clues-and-encouragement> a monomyth:StageRealization ;
     rdfs:label "Clues and encouragement"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl>,
         <walter-mitty/characters/sean> ;
@@ -5265,6 +5441,7 @@ bureaucratic problem into an interpretable trail."""@en ;
 <walter-mitty/stages/flight-to-greenland> a monomyth:StageRealization ;
     rdfs:label "Flight to Greenland"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -5277,6 +5454,7 @@ cataloguing other people's adventures to beginning his own."""@en .
 <walter-mitty/stages/the-helicopter-leap> a monomyth:StageRealization ;
     rdfs:label "The Helicopter Leap"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5295,6 +5473,7 @@ passive self."""@en ;
 <walter-mitty/stages/iceland-trek> a monomyth:StageRealization ;
     rdfs:label "Iceland trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5311,6 +5490,7 @@ seen, he remains just out of reach."""@en .
 <walter-mitty/stages/absent-meeting-with-goddess> a monomyth:StageRealization ;
     rdfs:label "Absent Meeting with the Goddess"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
@@ -5325,6 +5505,7 @@ the classical encounter with a deferred emotional possibility."""@en ;
 <walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
     rdfs:label "Volcanic retreat"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -5339,6 +5520,7 @@ imposes it, disrupting the heroic trajectory before resolution can be achieved."
 <walter-mitty/stages/fired-and-defeated> a monomyth:StageRealization ;
     rdfs:label "Fired and defeated"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted>,
         <walter-mitty/characters/cheryl> ;
@@ -5356,6 +5538,7 @@ passivity and abandon the transformation he had begun."""@en ;
 <walter-mitty/stages/discarded-wallet> a monomyth:StageRealization ;
     rdfs:label "Discarding the wallet"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother>,
         <walter-mitty/characters/sean> ;
@@ -5370,6 +5553,7 @@ and his inability to recognize that the quest has already transformed him."""@en
 <walter-mitty/stages/mothers-clue> a monomyth:StageRealization ;
     rdfs:label "Mother's clue"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother>,
         <walter-mitty/characters/sean> ;
@@ -5394,6 +5578,7 @@ clarity and purpose."""@en ;
 <walter-mitty/stages/himalayan-trek> a monomyth:StageRealization ;
     rdfs:label "Himalayan trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -5405,6 +5590,7 @@ forward, demonstrating the practical confidence he has acquired through experien
 <walter-mitty/stages/the-ghost-cat> a monomyth:StageRealization ;
     rdfs:label "The Ghost Cat"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5419,6 +5605,7 @@ respect, marking a subtle but profound shift in Walter's self-understanding."""@
 <walter-mitty/stages/leopard-lesson> a monomyth:StageRealization ;
     rdfs:label "Leopard lesson"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5432,6 +5619,7 @@ dissolves Walter's need for fantasy as compensation for absence from life."""@en
 <walter-mitty/stages/conceptual-boon> a monomyth:StageRealization ;
     rdfs:label "Conceptual Boon"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5449,6 +5637,7 @@ quest: the conceptual boon."""@en .
 <walter-mitty/stages/airport-security> a monomyth:StageRealization ;
     rdfs:label "Airport security"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/todd> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -5465,6 +5654,7 @@ bureaucratic resistance transformed into recognition of genuine growth."""@en ;
 <walter-mitty/stages/recovery-of-the-physical-boon> a monomyth:StageRealization ;
     rdfs:label "Recovery of the Negative"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -5479,6 +5669,7 @@ meaning."""@en ;
 <walter-mitty/stages/return-to-life> a monomyth:StageRealization ;
     rdfs:label "Return to Life"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5491,6 +5682,7 @@ original world as a fundamentally changed person."""@en .
 <walter-mitty/stages/quintessence-of-life> a monomyth:StageRealization ;
     rdfs:label "Quintessence of Life"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl>,
         <walter-mitty/characters/sean> ;
@@ -5505,6 +5697,7 @@ validates Walter's journey by showing that the extraordinary had always existed 
 <walter-mitty/stages/walking-with-cheryl> a monomyth:StageRealization ;
     rdfs:label "Walking with Cheryl"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:stageRealizationOrder 20 ;
@@ -5739,6 +5932,7 @@ of where she comes from."""@en ;
 <lady-bird/stages/i-hate-california> a monomyth:StageRealization ;
     rdfs:label "I hate California"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -5752,6 +5946,7 @@ socioeconomic and geographic boundaries."""@en ;
 <lady-bird/stages/my-name-is-lady-bird> a monomyth:StageRealization ;
     rdfs:label "My name is Lady Bird"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -5766,6 +5961,7 @@ left her geographic home."""@en ;
 <lady-bird/stages/scholarships-aid> a monomyth:StageRealization ;
     rdfs:label "The Scholarships' Aid"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/sister-sarah> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -5780,6 +5976,7 @@ the necessary hope of institutional support to continue her journey of self-real
 <lady-bird/stages/applying-to-east-coast-schools> a monomyth:StageRealization ;
     rdfs:label "Applying to East Coast schools"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -5796,6 +5993,7 @@ actively deciding her own path rather than passing through a literal gate."""@en
 <lady-bird/stages/ill-figure-it-out> a monomyth:StageRealization ;
     rdfs:label "I'll figure it out"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -5808,6 +6006,7 @@ away, leaving her in the dark until she can figure out who she is supposed to be
 <lady-bird/stages/growing-pains> a monomyth:StageRealization ;
     rdfs:label "The Growing Pains"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/julie>,
         <lady-bird/characters/danny>,
@@ -5829,6 +6028,7 @@ social mistakes and the 'growing pains' of hurting people she loves. """@en .
 <lady-bird/stages/dads-help> a monomyth:StageRealization ;
     rdfs:label "Dad's Help"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/larry> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -5844,6 +6044,7 @@ mother."""@en ;
 <lady-bird/stages/never-enough> a monomyth:StageRealization ;
     rdfs:label "Whatever we give you is never enough!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/marion> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -5861,6 +6062,7 @@ hero's ambition before she can even leave."""@en ;
 <lady-bird/stages/added-to-waitlist> a monomyth:StageRealization ;
     rdfs:label "Added to Waitlist"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/julie> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -5880,6 +6082,7 @@ future, finding the strength to be her 'true self' before the final leap away fr
 <lady-bird/stages/im-18> a monomyth:StageRealization ;
     rdfs:label "I'm 18!"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -5898,6 +6101,7 @@ California life. The 'Boon' is simply the concrete opportunity to leave."""@en .
 <lady-bird/stages/moving-to-nyc> a monomyth:StageRealization ;
     rdfs:label "Moving to New York City"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/larry>,
         <lady-bird/characters/marion> ;
@@ -5917,6 +6121,7 @@ maturity is tested by her ability to endure maternal disapproval while moving fo
 <lady-bird/stages/i-wish-you-liked-me> a monomyth:StageRealization ;
     rdfs:label "I wish you liked me"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/marion> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -5934,6 +6139,7 @@ who shaped her."""@en ;
 <lady-bird/stages/my-name-is-christine> a monomyth:StageRealization ;
     rdfs:label "My name is Christine"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 13 ;
@@ -5949,6 +6155,7 @@ hard to escape from."""@en ;
 <lady-bird/stages/sunday-mess> a monomyth:StageRealization ;
     rdfs:label "Sunday Mess in NYC"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 14 ;
@@ -5966,6 +6173,7 @@ her representing the very traditions she once rejected but now needs to reunite 
 <lady-bird/stages/calling-home> a monomyth:StageRealization ;
     rdfs:label "Calling Home"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 15 ;
@@ -5982,6 +6190,7 @@ into her new life."""@en .
 <lady-bird/stages/emotional-in-sacramento> a monomyth:StageRealization ;
     rdfs:label "Did you feel emotional the first time you drove in Sacramento?"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -5998,6 +6207,7 @@ the ability to move freely between her memories and her ambitions."""@en .
 <lady-bird/stages/thank-you> a monomyth:StageRealization ;
     rdfs:label "Thank you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;
@@ -6184,6 +6394,7 @@ acceptance (fABLE)."""@en .
 <sable-fable/stages/the-intrusive-call> a monomyth:StageRealization ;
     rdfs:label "THINGS BEHIND THINGS BEHIND THINGS (Verse 1)"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-reflection> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -6199,6 +6410,7 @@ his own layered trauma."""@en ;
 <sable-fable/stages/fear-of-change> a monomyth:StageRealization ;
     rdfs:label "THINGS BEHIND THINGS BEHIND THINGS (Verse 2)"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -6214,6 +6426,7 @@ ignore."""@en ;
 <sable-fable/stages/the-violent-spree> a monomyth:StageRealization ;
     rdfs:label "S P E Y S I D E (Verse 1-3)"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 3 ;
@@ -6228,6 +6441,7 @@ over his 'violent spree' of self-sabotage, destroying relationships and shooting
 <sable-fable/stages/the-plea-for-forgiveness> a monomyth:StageRealization ;
     rdfs:label "S P E Y S I D E (Verse 4)"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -6242,6 +6456,7 @@ psychological assurance he needs to survive the darkness and prepare for the thr
 <sable-fable/stages/accepting-the-change> a monomyth:StageRealization ;
     rdfs:label "AWARDS SEASONS"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -6255,6 +6470,7 @@ paralyzing guilt of his past into the unknown sphere of acceptance and recovery.
 <sable-fable/stages/the-psychological-trials> a monomyth:StageRealization ;
     rdfs:label "SHORT STORY"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 6 ;
@@ -6272,6 +6488,7 @@ thirst are sweet' because they represent the essential, cyclical work of emotion
 <sable-fable/stages/the-peaceful-love> a monomyth:StageRealization ;
     rdfs:label "Everything Is Peaceful Love"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -6288,6 +6505,7 @@ marriage, completing his transition into a peaceful harbor."""@en ;
 <sable-fable/stages/the-blissful-rest> a monomyth:StageRealization ;
     rdfs:label "Walk Home"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -6303,6 +6521,7 @@ the 'happiness, shock, and excitement' of learning to walk."""@en ;
 <sable-fable/stages/the-temptation-to-regress> a monomyth:StageRealization ;
     rdfs:label "Day One"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -6319,6 +6538,7 @@ transcendent work of true recovery."""@en ;
 <sable-fable/stages/the-absent-father> a monomyth:StageRealization ;
     rdfs:label "The Absent Atonement"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -6327,6 +6547,7 @@ transcendent work of true recovery."""@en ;
 <sable-fable/stages/the-emotional-capacity> a monomyth:StageRealization ;
     rdfs:label "From (Verse 1-2)"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -6342,6 +6563,7 @@ him from a person consumed by his own trauma into a source of healing for anothe
 <sable-fable/stages/lingering-in-the-sanctuary> a monomyth:StageRealization ;
     rdfs:label "From (Bridge and Chorus)"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -6355,6 +6577,7 @@ to cling to this realm of blissful discovery and delay the passage of time."""@e
 <sable-fable/stages/the-perilous-retreat> a monomyth:StageRealization ;
     rdfs:label "I'll be there (Verse 1-2)"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 13 ;
@@ -6369,6 +6592,7 @@ perilous push forward to maintain his healing."""@en ;
 <sable-fable/stages/the-lifeline> a monomyth:StageRealization ;
     rdfs:label "I'll be there (Chorus)"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -6384,6 +6608,7 @@ traveler safely home."""@en ;
 <sable-fable/stages/the-weight-of-the-world> a monomyth:StageRealization ;
     rdfs:label "If only i could wait"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -6400,6 +6625,7 @@ real world ('We'll decay in other ways now')."""@en ;
 <sable-fable/stages/the-equilibrium> a monomyth:StageRealization ;
     rdfs:label "There's a Rhythm (Verse 1-2)"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -6415,6 +6641,7 @@ healing."""@en ;
 <sable-fable/stages/no-more-shame> a monomyth:StageRealization ;
     rdfs:label "There's a Rhythm (Verse 3)"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <sable-fable/monomyths/justin-vernon-journey> ;
     monomyth:involvesCharacter <sable-fable/characters/justin-vernon>,
         <sable-fable/characters/the-new-love> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -6484,21 +6711,21 @@ subsequent crash into the Temptress stage ('Day One') inevitable and structurall
 
 <sable-fable/divergences/semiotic/psychological-internalization> a monomyth:SemioticDivergence ;
     rdfs:label "Psychological Internalization"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-intrusive-call> ,
-        <sable-fable/stages/fear-of-change> ,
-        <sable-fable/stages/the-violent-spree> ,
-        <sable-fable/stages/the-psychological-trials> ,
-        <sable-fable/stages/the-emotional-capacity> ,
-        <sable-fable/stages/the-perilous-retreat> ,
-        <sable-fable/stages/the-equilibrium> ,
+    monomyth:divergenceOf <sable-fable/stages/the-intrusive-call>,
+        <sable-fable/stages/fear-of-change>,
+        <sable-fable/stages/the-violent-spree>,
+        <sable-fable/stages/the-psychological-trials>,
+        <sable-fable/stages/the-emotional-capacity>,
+        <sable-fable/stages/the-perilous-retreat>,
+        <sable-fable/stages/the-equilibrium>,
         <sable-fable/stages/no-more-shame> ;
-    monomyth:divergesFrom monomyth:TheCallToAdventure ,
-        monomyth:RefusalOfTheCall ,
-        monomyth:TheBellyOfTheWhale ,
-        monomyth:TheRoadOfTrials ,
-        monomyth:TheUltimateBoon ,
-        monomyth:TheMagicFlight ,
-        monomyth:MasterOfTheTwoWorlds ,
+    monomyth:divergesFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheUltimateBoon,
+        monomyth:TheMagicFlight,
+        monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive ;
     monomyth:divergenceRationale """Across the album, traditional mythic elements involving physical
 threats, magical realms, or external monsters are completely internalized. The 'unknown' is the
@@ -6509,13 +6736,13 @@ achievement of emotional empathy, mental equilibrium, and living free from the s
 
 <sable-fable/divergences/semiotic/the-secular-anchor> a monomyth:SemioticDivergence ;
     rdfs:label "The Secular Anchor (Loved Ones as Mythic Forces)"@en ;
-    monomyth:divergenceOf <sable-fable/stages/the-plea-for-forgiveness> ,
-        <sable-fable/stages/the-peaceful-love> ,
-        <sable-fable/stages/the-blissful-rest> ,
+    monomyth:divergenceOf <sable-fable/stages/the-plea-for-forgiveness>,
+        <sable-fable/stages/the-peaceful-love>,
+        <sable-fable/stages/the-blissful-rest>,
         <sable-fable/stages/the-lifeline> ;
-    monomyth:divergesFrom monomyth:SupernaturalAid ,
-        monomyth:TheMeetingWithTheGoddess ,
-        monomyth:Apotheosis ,
+    monomyth:divergesFrom monomyth:SupernaturalAid,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:Apotheosis,
         monomyth:RescueFromWithout ;
     monomyth:divergenceRationale """In classical mythology, the hero is aided, elevated, or rescued
 by supernatural entities, wizards, or cosmic deities. In this autobiographical framework, these

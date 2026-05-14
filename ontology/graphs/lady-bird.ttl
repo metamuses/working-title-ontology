@@ -141,6 +141,7 @@ of where she comes from."""@en ;
 <lady-bird/stages/i-hate-california> a monomyth:StageRealization ;
     rdfs:label "I hate California"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 1 ;
@@ -154,6 +155,7 @@ socioeconomic and geographic boundaries."""@en ;
 <lady-bird/stages/my-name-is-lady-bird> a monomyth:StageRealization ;
     rdfs:label "My name is Lady Bird"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 2 ;
@@ -168,6 +170,7 @@ left her geographic home."""@en ;
 <lady-bird/stages/scholarships-aid> a monomyth:StageRealization ;
     rdfs:label "The Scholarships' Aid"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/sister-sarah> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -182,6 +185,7 @@ the necessary hope of institutional support to continue her journey of self-real
 <lady-bird/stages/applying-to-east-coast-schools> a monomyth:StageRealization ;
     rdfs:label "Applying to East Coast schools"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -198,6 +202,7 @@ actively deciding her own path rather than passing through a literal gate."""@en
 <lady-bird/stages/ill-figure-it-out> a monomyth:StageRealization ;
     rdfs:label "I'll figure it out"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 5 ;
@@ -210,6 +215,7 @@ away, leaving her in the dark until she can figure out who she is supposed to be
 <lady-bird/stages/growing-pains> a monomyth:StageRealization ;
     rdfs:label "The Growing Pains"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/julie>,
         <lady-bird/characters/danny>,
@@ -231,6 +237,7 @@ social mistakes and the 'growing pains' of hurting people she loves. """@en .
 <lady-bird/stages/dads-help> a monomyth:StageRealization ;
     rdfs:label "Dad's Help"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/larry> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -246,6 +253,7 @@ mother."""@en ;
 <lady-bird/stages/never-enough> a monomyth:StageRealization ;
     rdfs:label "Whatever we give you is never enough!"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/marion> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -263,6 +271,7 @@ hero's ambition before she can even leave."""@en ;
 <lady-bird/stages/added-to-waitlist> a monomyth:StageRealization ;
     rdfs:label "Added to Waitlist"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/julie> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -282,6 +291,7 @@ future, finding the strength to be her 'true self' before the final leap away fr
 <lady-bird/stages/im-18> a monomyth:StageRealization ;
     rdfs:label "I'm 18!"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 10 ;
@@ -300,6 +310,7 @@ California life. The 'Boon' is simply the concrete opportunity to leave."""@en .
 <lady-bird/stages/moving-to-nyc> a monomyth:StageRealization ;
     rdfs:label "Moving to New York City"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/larry>,
         <lady-bird/characters/marion> ;
@@ -319,6 +330,7 @@ maturity is tested by her ability to endure maternal disapproval while moving fo
 <lady-bird/stages/i-wish-you-liked-me> a monomyth:StageRealization ;
     rdfs:label "I wish you liked me"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird>,
         <lady-bird/characters/marion> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -336,6 +348,7 @@ who shaped her."""@en ;
 <lady-bird/stages/my-name-is-christine> a monomyth:StageRealization ;
     rdfs:label "My name is Christine"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:InvertedFit ;
     monomyth:stageRealizationOrder 13 ;
@@ -351,6 +364,7 @@ hard to escape from."""@en ;
 <lady-bird/stages/sunday-mess> a monomyth:StageRealization ;
     rdfs:label "Sunday Mess in NYC"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 14 ;
@@ -368,6 +382,7 @@ her representing the very traditions she once rejected but now needs to reunite 
 <lady-bird/stages/calling-home> a monomyth:StageRealization ;
     rdfs:label "Calling Home"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 15 ;
@@ -384,6 +399,7 @@ into her new life."""@en .
 <lady-bird/stages/emotional-in-sacramento> a monomyth:StageRealization ;
     rdfs:label "Did you feel emotional the first time you drove in Sacramento?"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -400,6 +416,7 @@ the ability to move freely between her memories and her ambitions."""@en .
 <lady-bird/stages/thank-you> a monomyth:StageRealization ;
     rdfs:label "Thank you"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <lady-bird/monomyths/christine-journey> ;
     monomyth:involvesCharacter <lady-bird/characters/lady-bird> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 17 ;

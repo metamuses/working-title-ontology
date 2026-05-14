@@ -136,6 +136,7 @@ him Zelda's Lullaby, and later awakens as the Sage of the Shadow Temple."""@en ;
 <ocarina-of-time/stages/the-boy-without-a-fairy> a monomyth:StageRealization ;
     rdfs:label "The boy without a fairy"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi>,
         <ocarina-of-time/characters/the-great-deku-tree> ;
@@ -151,6 +152,7 @@ far beyond the forest."""@en .
 <ocarina-of-time/stages/the-hero-does-not-hesitate> a monomyth:StageRealization ;
     rdfs:label "The hero does not hesitate"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 2 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/absent-refusal> .
@@ -158,6 +160,7 @@ far beyond the forest."""@en .
 <ocarina-of-time/stages/the-future-depends-upon-thee> a monomyth:StageRealization ;
     rdfs:label "The future depends upon thee"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi>,
         <ocarina-of-time/characters/the-great-deku-tree> ;
@@ -175,6 +178,7 @@ guidance."""@en .
 <ocarina-of-time/stages/beyond-the-forest> a monomyth:StageRealization ;
     rdfs:label "Beyond the forest"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/saria> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -188,6 +192,7 @@ and exposed, the sheltering canopy replaced by open sky."""@en .
 <ocarina-of-time/stages/a-fairy-and-a-green-stone> a monomyth:StageRealization ;
     rdfs:label "A fairy and a green stone"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/impa> ;
@@ -207,6 +212,7 @@ defining the quest before Link has faced any trial."""@en ;
 <ocarina-of-time/stages/stones-and-sages> a monomyth:StageRealization ;
     rdfs:label "Stones and sages"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/navi> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -225,6 +231,7 @@ Ganondorf's seven-year reign."""@en ;
 <ocarina-of-time/stages/seven-lost-years> a monomyth:StageRealization ;
     rdfs:label "Seven lost years"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/rauru> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -245,6 +252,7 @@ transformation."""@en ;
 <ocarina-of-time/stages/a-quest-without-temptation> a monomyth:StageRealization ;
     rdfs:label "A quest without temptation"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 8 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/temptress-absent> .
@@ -252,6 +260,7 @@ transformation."""@en ;
 <ocarina-of-time/stages/you-are-not-a-kokiri> a monomyth:StageRealization ;
     rdfs:label "You are not a Kokiri"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 9 ;
@@ -267,6 +276,7 @@ guardian."""@en ;
 <ocarina-of-time/stages/the-seventh-sage> a monomyth:StageRealization ;
     rdfs:label "The seventh sage"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -284,6 +294,7 @@ rather than contemplative transcendence or a moment of divine stillness."""@en .
 <ocarina-of-time/stages/the-light-arrows> a monomyth:StageRealization ;
     rdfs:label "The light arrows"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/ganondorf> ;
@@ -301,6 +312,7 @@ moment before her capture rather than as the prize of completed trials."""@en .
 <ocarina-of-time/stages/the-hero-presses-on> a monomyth:StageRealization ;
     rdfs:label "The hero presses on"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
     monomyth:stageRealizationOrder 12 ;
     monomyth:hasNarrativeDivergence <ocarina-of-time/divergences/narrative/return-refusal-absent> .
@@ -308,6 +320,7 @@ moment before her capture rather than as the prize of completed trials."""@en .
 <ocarina-of-time/stages/the-tower-comes-down> a monomyth:StageRealization ;
     rdfs:label "The tower comes down"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -323,6 +336,7 @@ confrontation."""@en .
 <ocarina-of-time/stages/six-sages-as-one> a monomyth:StageRealization ;
     rdfs:label "Six sages as one"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda>,
         <ocarina-of-time/characters/rauru>,
@@ -340,6 +354,7 @@ requires collective sacred authority beyond any individual's reach."""@en .
 <ocarina-of-time/stages/lay-the-master-sword-to-rest> a monomyth:StageRealization ;
     rdfs:label "Lay the Master Sword to rest"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -354,6 +369,7 @@ in the temple, carrying the memory of a future that has been unmade."""@en ;
 <ocarina-of-time/stages/child-and-hero> a monomyth:StageRealization ;
     rdfs:label "Child and hero"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -370,6 +386,7 @@ can demonstrate this to no one, since the adult timeline has been erased."""@en 
 <ocarina-of-time/stages/through-the-courtyard-window> a monomyth:StageRealization ;
     rdfs:label "Through the courtyard window"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <ocarina-of-time/monomyths/link-journey> ;
     monomyth:involvesCharacter <ocarina-of-time/characters/link>,
         <ocarina-of-time/characters/princess-zelda> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;

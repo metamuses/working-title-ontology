@@ -68,7 +68,7 @@ for filename in SUBGRAPH_FILES:
 
     # Skip missing subgraphs
     if not path.exists():
-        continue
+        sys.exit(f"Error: Subgraph file {filename} does not exist")
 
     print(f"Appending {path.relative_to(ROOT_DIR)}")
 

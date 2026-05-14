@@ -22,14 +22,14 @@
     schema:genre "Adventure"@en,
         "Drama"@en ;
     owl:sameAs wd:Q3522637 ;
-    monomyth:interpretedBy <walter-mitty/monomyths/walters-journey> ;
+    monomyth:interpretedBy <walter-mitty/monomyths/walter-journey> ;
     rdfs:comment """A 2013 film where a negative assets manager at Life magazine, prone to vivid
 daydreams, embarks on a global quest to find a missing photograph, ultimately discovering his own
 courage and identity."""@en .
 
 # --- Monomyth Expressions --------------
 
-<walter-mitty/monomyths/walters-journey> a monomyth:MonomythExpression ;
+<walter-mitty/monomyths/walter-journey> a monomyth:MonomythExpression ;
     rdfs:label "Walter Mitty's Hero's Journey"@en ;
     rdfs:comment """A specific interpretation of the monomyth structure as it is realized in the
 narrative of 'The Secret Life of Walter Mitty', focusing on the character Walter Mitty's journey
@@ -70,8 +70,8 @@ from a negative assets manager to a courageous and self-discovering individual."
     rdfs:comment """The protagonist of the story, a negative assets manager at Life magazine who
 embarks on a journey to find a missing photograph through which he goes through the self-discovery
 journey."""@en ;
-    monomyth:heroOf <walter-mitty/monomyths/walters-journey> ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:heroOf <walter-mitty/monomyths/walter-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Hero .
 
 <walter-mitty/characters/sean> a monomyth:Character ;
@@ -79,7 +79,7 @@ journey."""@en ;
     rdfs:comment """The protagonist's idol, a famous photographer who embarks on a journey to find a
 rare snow leopard and is a mentor to Walter in his journey  to teach him about the quintessence of
 life, photography and adventure. He is also a herald to Walter in his journey."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Mentor,
         monomyth:Herald .
 
@@ -87,7 +87,7 @@ life, photography and adventure. He is also a herald to Walter in his journey.""
     rdfs:label "Cheryl Melhoff"@en ;
     rdfs:comment """Walter's coworker and love interest, who encourages his journey of self-discovery
 through the imaginations of her by Walter in his daydreams."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Mentor .
 
@@ -96,7 +96,7 @@ through the imaginations of her by Walter in his daydreams."""@en ;
     rdfs:comment """The antagonist of the story, who threatens Walter's job at Life magazine by
 digitizing the magazine which causes lot's of employees to lose their job's, Walter being one of
 them."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Shadow,
         monomyth:ThresholdGuardian .
 
@@ -104,7 +104,7 @@ them."""@en ;
     rdfs:label "Edna Mitty"@en ;
     rdfs:comment """Walter's mother, who provides external encouragement through her words especially
 when Walter goes through daydreaming episodes."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally,
         monomyth:Herald .
 
@@ -112,7 +112,7 @@ when Walter goes through daydreaming episodes."""@en ;
     rdfs:label "Todd Maher"@en ;
     rdfs:comment """The eHarmony representative who provides external encouragement, to Walter by
 helping him analyzing his achievements in reality instead of daydreams."""@en ;
-    monomyth:characterOf <walter-mitty/monomyths/walters-journey> ;
+    monomyth:characterOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:embodiesArchetype monomyth:Ally .
 
 # --- Stage Realizations ---------------
@@ -120,6 +120,7 @@ helping him analyzing his achievements in reality instead of daydreams."""@en ;
 <walter-mitty/stages/negative-25-missing> a monomyth:StageRealization ;
     rdfs:label "Negative 25 is missing"@en ;
     monomyth:realizesStage monomyth:TheCallToAdventure ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted>,
         <walter-mitty/characters/sean> ;
@@ -142,6 +143,7 @@ responsibility into a crisis that threatens both his career and the symbolic clo
 <walter-mitty/stages/daydream-retreat> a monomyth:StageRealization ;
     rdfs:label "Daydream retreat"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheCall ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
@@ -159,6 +161,7 @@ fantasies function as protection against action."""@en ;
 <walter-mitty/stages/clues-and-encouragement> a monomyth:StageRealization ;
     rdfs:label "Clues and encouragement"@en ;
     monomyth:realizesStage monomyth:SupernaturalAid ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl>,
         <walter-mitty/characters/sean> ;
@@ -177,6 +180,7 @@ bureaucratic problem into an interpretable trail."""@en ;
 <walter-mitty/stages/flight-to-greenland> a monomyth:StageRealization ;
     rdfs:label "Flight to Greenland"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheFirstThreshold ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
     monomyth:stageRealizationOrder 4 ;
@@ -189,6 +193,7 @@ cataloguing other people's adventures to beginning his own."""@en .
 <walter-mitty/stages/the-helicopter-leap> a monomyth:StageRealization ;
     rdfs:label "The Helicopter Leap"@en ;
     monomyth:realizesStage monomyth:TheBellyOfTheWhale ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -207,6 +212,7 @@ passive self."""@en ;
 <walter-mitty/stages/iceland-trek> a monomyth:StageRealization ;
     rdfs:label "Iceland trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -223,6 +229,7 @@ seen, he remains just out of reach."""@en .
 <walter-mitty/stages/absent-meeting-with-goddess> a monomyth:StageRealization ;
     rdfs:label "Absent Meeting with the Goddess"@en ;
     monomyth:realizesStage monomyth:TheMeetingWithTheGoddess ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:hasFitQuality monomyth:AbsentFit ;
@@ -237,6 +244,7 @@ the classical encounter with a deferred emotional possibility."""@en ;
 <walter-mitty/stages/volcanic-retreat> a monomyth:StageRealization ;
     rdfs:label "Volcanic retreat"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:WeakFit ;
@@ -251,6 +259,7 @@ imposes it, disrupting the heroic trajectory before resolution can be achieved."
 <walter-mitty/stages/fired-and-defeated> a monomyth:StageRealization ;
     rdfs:label "Fired and defeated"@en ;
     monomyth:realizesStage monomyth:WomanAsTheTemptress ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted>,
         <walter-mitty/characters/cheryl> ;
@@ -268,6 +277,7 @@ passivity and abandon the transformation he had begun."""@en ;
 <walter-mitty/stages/discarded-wallet> a monomyth:StageRealization ;
     rdfs:label "Discarding the wallet"@en ;
     monomyth:realizesStage monomyth:RefusalOfTheReturn ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother>,
         <walter-mitty/characters/sean> ;
@@ -282,6 +292,7 @@ and his inability to recognize that the quest has already transformed him."""@en
 <walter-mitty/stages/mothers-clue> a monomyth:StageRealization ;
     rdfs:label "Mother's clue"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother>,
         <walter-mitty/characters/sean> ;
@@ -306,6 +317,7 @@ clarity and purpose."""@en ;
 <walter-mitty/stages/himalayan-trek> a monomyth:StageRealization ;
     rdfs:label "Himalayan trek"@en ;
     monomyth:realizesStage monomyth:TheRoadOfTrials ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
     monomyth:stageRealizationOrder 12 ;
@@ -317,6 +329,7 @@ forward, demonstrating the practical confidence he has acquired through experien
 <walter-mitty/stages/the-ghost-cat> a monomyth:StageRealization ;
     rdfs:label "The Ghost Cat"@en ;
     monomyth:realizesStage monomyth:AtonementWithTheFather ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -331,6 +344,7 @@ respect, marking a subtle but profound shift in Walter's self-understanding."""@
 <walter-mitty/stages/leopard-lesson> a monomyth:StageRealization ;
     rdfs:label "Leopard lesson"@en ;
     monomyth:realizesStage monomyth:Apotheosis ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -344,6 +358,7 @@ dissolves Walter's need for fantasy as compensation for absence from life."""@en
 <walter-mitty/stages/conceptual-boon> a monomyth:StageRealization ;
     rdfs:label "Conceptual Boon"@en ;
     monomyth:realizesStage monomyth:TheUltimateBoon ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/sean> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -361,6 +376,7 @@ quest: the conceptual boon."""@en .
 <walter-mitty/stages/airport-security> a monomyth:StageRealization ;
     rdfs:label "Airport security"@en ;
     monomyth:realizesStage monomyth:TheMagicFlight ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/todd> ;
     monomyth:hasFitQuality monomyth:ModerateFit ;
     monomyth:stageRealizationOrder 16 ;
@@ -377,6 +393,7 @@ bureaucratic resistance transformed into recognition of genuine growth."""@en ;
 <walter-mitty/stages/recovery-of-the-physical-boon> a monomyth:StageRealization ;
     rdfs:label "Recovery of the Negative"@en ;
     monomyth:realizesStage monomyth:RescueFromWithout ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/mother> ;
     monomyth:hasFitQuality monomyth:PerfectFit ;
@@ -391,6 +408,7 @@ meaning."""@en ;
 <walter-mitty/stages/return-to-life> a monomyth:StageRealization ;
     rdfs:label "Return to Life"@en ;
     monomyth:realizesStage monomyth:TheCrossingOfTheReturnThreshold ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/ted> ;
     monomyth:hasFitQuality monomyth:StrongFit ;
@@ -403,6 +421,7 @@ original world as a fundamentally changed person."""@en .
 <walter-mitty/stages/quintessence-of-life> a monomyth:StageRealization ;
     rdfs:label "Quintessence of Life"@en ;
     monomyth:realizesStage monomyth:MasterOfTheTwoWorlds ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl>,
         <walter-mitty/characters/sean> ;
@@ -417,6 +436,7 @@ validates Walter's journey by showing that the extraordinary had always existed 
 <walter-mitty/stages/walking-with-cheryl> a monomyth:StageRealization ;
     rdfs:label "Walking with Cheryl"@en ;
     monomyth:realizesStage monomyth:FreedomToLive ;
+    monomyth:stageRealizationOf <walter-mitty/monomyths/walter-journey> ;
     monomyth:involvesCharacter <walter-mitty/characters/walter>,
         <walter-mitty/characters/cheryl> ;
     monomyth:stageRealizationOrder 20 ;
