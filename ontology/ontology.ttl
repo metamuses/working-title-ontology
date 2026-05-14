@@ -14,10 +14,10 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell."""@en ;
         "Nicol D'Amelio",
         "Maryam Dadrasrazi",
         "Martina Uccheddu" ;
-    owl:versionInfo "1.1" ;
-    owl:versionIRI <https://monomyth.metamuses.org/1.1/ontology.ttl> ;
-    dcterms:created "2026-05-14"^^xsd:date ;
-    dcterms:modified "2026-05-14"^^xsd:date ;
+    owl:versionInfo "1.0" ;
+    owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
+    dcterms:created "2026-05-13"^^xsd:date ;
+    dcterms:modified "2026-05-13"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:seeAlso <https://monomyth.metamuses.org>,
