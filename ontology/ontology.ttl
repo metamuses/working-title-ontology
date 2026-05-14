@@ -31,40 +31,120 @@ monomyth:NarrativeWork a owl:Class ;
     rdfs:subClassOf creon:CreativeProduct ;
     rdfs:label "Narrative Work"@en ;
     rdfs:comment """A story, novel, epic, film, or other narrative that can be analyzed through the
-monomyth framework."""@en .
+monomyth framework."""@en ;
+    owl:disjointWith monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:MonomythExpression a owl:Class ;
     rdfs:label "Monomyth Expression"@en ;
     rdfs:comment """A specific realization of the monomyth structure within a particular narrative
-work."""@en .
+work."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Act a owl:Class ;
     rdfs:label "Act"@en ;
     rdfs:comment """One of the three major phases of the monomyth, based on Joseph Campbell's
-framework."""@en .
+framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Stage a owl:Class ;
     rdfs:label "Stage"@en ;
     rdfs:comment """One of the seventeen stages of the monomyth, based on Joseph Campbell's
-framework."""@en .
+framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Character a owl:Class ;
     rdfs:label "Character"@en ;
-    rdfs:comment """A character within a specific narrative work."""@en .
+    rdfs:comment """A character within a specific narrative work."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:Archetype a owl:Class ;
     rdfs:label "Archetype"@en ;
     rdfs:comment """A recurring character role in the monomyth structure, based on Christopher
-Vogler's adaptation of Campbell's framework."""@en .
+Vogler's adaptation of Campbell's framework."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:StageRealization a owl:Class ;
     rdfs:label "Stage Realization"@en ;
     rdfs:comment """The concrete manifestation of a monomyth stage within a specific narrative work.
-Links a stage archetype to its particular narrative content."""@en .
+Links a stage archetype to its particular narrative content."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:FitQuality a owl:Class ;
     rdfs:label "Fit Quality"@en ;
-    rdfs:comment """An assessment of how well a narrative stage maps onto the monomyth archetype."""@en .
+    rdfs:comment """An assessment of how well a narrative stage maps onto the monomyth archetype."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:NarrativeDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -93,7 +173,17 @@ to the stage realizations they characterize, the ontology enables richer analysi
 alone. It allows the documentation of why a narrative diverges, what artistic or thematic purpose
 the divergence serves, and how patterns of divergence cluster across works, genres, and periods,
 distinguishing narratives that systematically subvert specific acts or stages from those that
-faithfully preserve them, and capturing the creative rationale behind each departure."""@en .
+faithfully preserve them, and capturing the creative rationale behind each departure."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:SequentialDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:SequentialDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -114,7 +204,17 @@ displaced in sequence; conversely, a stage in its canonical position may diverge
 semiotically. The three divergence types are orthogonal and composable on the same stage
 realization, each capturing a dimension of narrative craft that the other two cannot express, and
 together making explicit the distinction between what a narrative says at each stage, the signs
-through which it says it, and when it chooses to say it."""@en .
+through which it says it, and when it chooses to say it."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SemioticDivergence .
 
 monomyth:SemioticDivergence a owl:Class ;
     rdfs:subClassOf creon:ProductDivergence ;
@@ -139,7 +239,17 @@ signs a narrative selects to encode the archetypal structure. This captures a di
 evolution that neither fit quality nor structural reordering can express: the gradual, culturally
 determined drift in how stories signify the same underlying transformative pattern, making explicit
 the distinction between the monomyth's deep grammar and the surface language each narrative
-speaks."""@en .
+speaks."""@en ;
+    owl:disjointWith monomyth:NarrativeWork,
+        monomyth:MonomythExpression,
+        monomyth:Act,
+        monomyth:Stage,
+        monomyth:Character,
+        monomyth:Archetype,
+        monomyth:StageRealization,
+        monomyth:FitQuality,
+        monomyth:NarrativeDivergence,
+        monomyth:SequentialDivergence .
 
 # ==============================================================================
 # OBJECT PROPERTIES
@@ -177,13 +287,17 @@ compose its structure."""@en ;
     rdfs:domain monomyth:MonomythExpression ;
     rdfs:range monomyth:StageRealization .
 
-monomyth:belongsToAct a owl:ObjectProperty ;
+monomyth:belongsToAct a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "belongs to act"@en ;
     rdfs:comment """Associates a stage with the act to which it belongs."""@en ;
     rdfs:domain monomyth:Stage ;
     rdfs:range monomyth:Act .
 
-monomyth:followsStage a owl:ObjectProperty ;
+monomyth:followsStage a owl:ObjectProperty,
+        owl:FunctionalProperty,
+        owl:IrreflexiveProperty,
+        owl:AsymmetricProperty ;
     rdfs:label "follows stage"@en ;
     rdfs:comment """Indicates the sequential ordering of stages within the monomyth."""@en ;
     rdfs:domain monomyth:Stage ;
@@ -209,7 +323,16 @@ monomyth:embodiesArchetype a owl:ObjectProperty ;
     rdfs:domain monomyth:Character ;
     rdfs:range monomyth:Archetype .
 
-monomyth:realizesStage a owl:ObjectProperty ;
+monomyth:stageRealizationOf a owl:ObjectProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "stage realization of"@en ;
+    rdfs:comment """Links a stage realization to the monomyth expression it belongs to."""@en ;
+    owl:inverseOf monomyth:hasStageRealization ;
+    rdfs:domain monomyth:StageRealization ;
+    rdfs:range monomyth:MonomythExpression .
+
+monomyth:realizesStage a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "realizes stage"@en ;
     rdfs:comment """Links a concrete narrative moment to the abstract monomyth stage it
 instantiates."""@en ;
@@ -223,7 +346,8 @@ stage."""@en ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range monomyth:Character .
 
-monomyth:hasFitQuality a owl:ObjectProperty ;
+monomyth:hasFitQuality a owl:ObjectProperty,
+        owl:FunctionalProperty ;
     rdfs:label "has fit quality"@en ;
     rdfs:comment """Associates a stage realization with an evaluation of how well it fits the
 corresponding monomyth stage."""@en ;
@@ -279,7 +403,8 @@ monomyth:divergenceOf a owl:ObjectProperty ;
 # DATA PROPERTIES
 # ==============================================================================
 
-monomyth:actOrder a owl:DatatypeProperty ;
+monomyth:actOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "act order"@en ;
     rdfs:comment """The sequential position of an act in the three-act structure (1-3)."""@en ;
     rdfs:domain monomyth:Act ;
@@ -292,7 +417,8 @@ monomyth:actOrder a owl:DatatypeProperty ;
         )
     ] .
 
-monomyth:stageOrder a owl:DatatypeProperty ;
+monomyth:stageOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "stage order"@en ;
     rdfs:comment """The sequential position of a stage in the seventeen-stage monomyth (1-17)."""@en ;
     rdfs:domain monomyth:Stage ;
@@ -305,7 +431,8 @@ monomyth:stageOrder a owl:DatatypeProperty ;
         )
     ] .
 
-monomyth:fitScore a owl:DatatypeProperty ;
+monomyth:fitScore a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "fit score"@en ;
     rdfs:comment """Numeric score for fit quality (-1 = inverted, 0 = absent, 1 = weak, 2 = moderate,
 3 = strong, 4 = perfect)."""@en ;
@@ -332,7 +459,8 @@ monomyth:realizationDescription a owl:DatatypeProperty ;
     rdfs:domain monomyth:StageRealization ;
     rdfs:range xsd:string .
 
-monomyth:stageRealizationOrder a owl:DatatypeProperty ;
+monomyth:stageRealizationOrder a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
     rdfs:label "stage realization order"@en ;
     rdfs:comment """The position at which this stage realization factually occurs in the narrative's
 own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across
@@ -374,19 +502,38 @@ focusing specifically on the motivation for the departure."""@en ;
 
 monomyth:Departure a monomyth:Act ;
     rdfs:label "Departure"@en ;
-    rdfs:comment """The first act: the hero leaves the ordinary world."""@en ;
-    monomyth:actOrder 1 .
+    rdfs:comment """The first act of the monomyth, in which the hero is called away from the
+familiar world and, through a series of encounters with refusal, aid, and threshold crossing,
+commits to the journey that will transform them. Campbell frames departure as a sequence of
+psychological and narrative events, from the disruption of equilibrium through the call, to the
+gathering of resolve and resources, to the irreversible crossing that commits the hero to
+transformation. What follows this act is no longer the hero's old life but a new order of
+experience."""@en ;
+    monomyth:actOrder 1 ;
+    owl:differentFrom monomyth:Initiation,
+        monomyth:Return .
 
 monomyth:Initiation a monomyth:Act ;
     rdfs:label "Initiation"@en ;
-    rdfs:comment """The second act: the hero undergoes trials and transformation in the special
-world."""@en ;
-    monomyth:actOrder 2 .
+    rdfs:comment """The central act of the monomyth, in which the hero undergoes trials, encounters
+figures of profound power, and achieves the transformation that is the journey's purpose. Initiation
+occupies the space between threshold crossings: the hero has entered the extraordinary world but has
+not yet returned. The act's stages trace an arc from ordeal through revelation to the acquisition of
+the boon that will ultimately be carried back."""@en ;
+    monomyth:actOrder 2 ;
+    owl:differentFrom monomyth:Departure,
+        monomyth:Return .
 
 monomyth:Return a monomyth:Act ;
     rdfs:label "Return"@en ;
-    rdfs:comment """The third act: the hero returns to the ordinary world, transformed."""@en ;
-    monomyth:actOrder 3 .
+    rdfs:comment """The closing movement of the hero's journey, in which the transformation achieved
+during initiation must survive contact with the world the hero originally left. Campbell's return
+stages register the tension between the extraordinary knowledge the hero now carries and the
+ordinary conditions to which they must reconcile it. The act completes the monomyth's circular
+structure, restoring the hero to the starting world but in an fundamentally altered state."""@en ;
+    monomyth:actOrder 3 ;
+    owl:differentFrom monomyth:Departure,
+        monomyth:Initiation .
 
 # --- The Seventeen Stages -------------
 
@@ -395,7 +542,23 @@ monomyth:TheCallToAdventure a monomyth:Stage ;
     rdfs:comment """The hero receives a summons through a sign, messenger, or sudden rupture in the
 ordinary world that signals the beginning of a journey toward an as-yet-unknown transformation."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
-    monomyth:stageOrder 1 .
+    monomyth:stageOrder 1 ;
+    owl:differentFrom monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:RefusalOfTheCall a monomyth:Stage ;
     rdfs:label "Refusal of the Call"@en ;
@@ -403,7 +566,23 @@ monomyth:RefusalOfTheCall a monomyth:Stage ;
 refuses the summons, revealing the weight of what must be sacrificed to cross into the unknown."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 2 ;
-    monomyth:followsStage monomyth:TheCallToAdventure .
+    monomyth:followsStage monomyth:TheCallToAdventure ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:SupernaturalAid a monomyth:Stage ;
     rdfs:label "Supernatural Aid"@en ;
@@ -411,7 +590,23 @@ monomyth:SupernaturalAid a monomyth:Stage ;
 appears to equip the hero with talismans, wisdom, or assurance before the threshold is crossed."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 3 ;
-    monomyth:followsStage monomyth:RefusalOfTheCall .
+    monomyth:followsStage monomyth:RefusalOfTheCall ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage ;
     rdfs:label "The Crossing of the First Threshold"@en ;
@@ -419,7 +614,23 @@ monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage ;
 known world, entering a sphere of magnified power where the ordinary rules no longer apply."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 4 ;
-    monomyth:followsStage monomyth:SupernaturalAid .
+    monomyth:followsStage monomyth:SupernaturalAid ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheBellyOfTheWhale a monomyth:Stage ;
     rdfs:label "The Belly of the Whale"@en ;
@@ -427,7 +638,23 @@ monomyth:TheBellyOfTheWhale a monomyth:Stage ;
 self, from which, if survived, a new and transformed identity begins to emerge."""@en ;
     monomyth:belongsToAct monomyth:Departure ;
     monomyth:stageOrder 5 ;
-    monomyth:followsStage monomyth:TheCrossingOfTheFirstThreshold .
+    monomyth:followsStage monomyth:TheCrossingOfTheFirstThreshold ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheRoadOfTrials a monomyth:Stage ;
     rdfs:label "The Road of Trials"@en ;
@@ -436,7 +663,23 @@ strip away illusions and forge the strength, wisdom, and character required for 
 ahead."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 6 ;
-    monomyth:followsStage monomyth:TheBellyOfTheWhale .
+    monomyth:followsStage monomyth:TheBellyOfTheWhale ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheMeetingWithTheGoddess a monomyth:Stage ;
     rdfs:label "The Meeting with the Goddess"@en ;
@@ -444,7 +687,23 @@ monomyth:TheMeetingWithTheGoddess a monomyth:Stage ;
 dimension, whose unconditional love reveals the deepest ground of existence itself."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 7 ;
-    monomyth:followsStage monomyth:TheRoadOfTrials .
+    monomyth:followsStage monomyth:TheRoadOfTrials ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:WomanAsTheTemptress a monomyth:Stage ;
     rdfs:label "Woman as the Temptress"@en ;
@@ -453,7 +712,23 @@ seduction that threatens to arrest the journey and bind consciousness to the tra
 the transcendent."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 8 ;
-    monomyth:followsStage monomyth:TheMeetingWithTheGoddess .
+    monomyth:followsStage monomyth:TheMeetingWithTheGoddess ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:AtonementWithTheFather a monomyth:Stage ;
     rdfs:label "Atonement with the Father"@en ;
@@ -462,7 +737,23 @@ father-figure who both judges and initiates, and must be annihilated and reborn 
 that encounter."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 9 ;
-    monomyth:followsStage monomyth:WomanAsTheTemptress .
+    monomyth:followsStage monomyth:WomanAsTheTemptress ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:Apotheosis a monomyth:Stage ;
     rdfs:label "Apotheosis"@en ;
@@ -471,7 +762,23 @@ knowledge or blissful rest beyond all categories of being, dwelling momentarily 
 before returning."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 10 ;
-    monomyth:followsStage monomyth:AtonementWithTheFather .
+    monomyth:followsStage monomyth:AtonementWithTheFather ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheUltimateBoon a monomyth:Stage ;
     rdfs:label "The Ultimate Boon"@en ;
@@ -480,7 +787,23 @@ fire, or wisdom that holds the power to restore life, fertility, or illumination
 behind."""@en ;
     monomyth:belongsToAct monomyth:Initiation ;
     monomyth:stageOrder 11 ;
-    monomyth:followsStage monomyth:Apotheosis .
+    monomyth:followsStage monomyth:Apotheosis ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:RefusalOfTheReturn a monomyth:Stage ;
     rdfs:label "Refusal of the Return"@en ;
@@ -488,7 +811,23 @@ monomyth:RefusalOfTheReturn a monomyth:Stage ;
 mundane world, clinging to the realm of discovery rather than bearing its fruits back to humanity."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 12 ;
-    monomyth:followsStage monomyth:TheUltimateBoon .
+    monomyth:followsStage monomyth:TheUltimateBoon ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheMagicFlight a monomyth:Stage ;
     rdfs:label "The Magic Flight"@en ;
@@ -496,7 +835,23 @@ monomyth:TheMagicFlight a monomyth:Stage ;
 navigating a perilous retreat that itself becomes a test of the transformation newly won."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 13 ;
-    monomyth:followsStage monomyth:RefusalOfTheReturn .
+    monomyth:followsStage monomyth:RefusalOfTheReturn ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:RescueFromWithout a monomyth:Stage ;
     rdfs:label "Rescue from Without"@en ;
@@ -504,7 +859,23 @@ monomyth:RescueFromWithout a monomyth:Stage ;
 reaches across the threshold to draw the exhausted or reluctant traveller back into human society."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 14 ;
-    monomyth:followsStage monomyth:TheMagicFlight .
+    monomyth:followsStage monomyth:TheMagicFlight ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage ;
     rdfs:label "The Crossing of the Return Threshold"@en ;
@@ -512,7 +883,23 @@ monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage ;
 wisdom of the deep experience into terms that a community bound by time and form can receive."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 15 ;
-    monomyth:followsStage monomyth:RescueFromWithout .
+    monomyth:followsStage monomyth:RescueFromWithout ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:MasterOfTheTwoWorlds,
+        monomyth:FreedomToLive .
 
 monomyth:MasterOfTheTwoWorlds a monomyth:Stage ;
     rdfs:label "Master of the Two Worlds"@en ;
@@ -521,7 +908,23 @@ equilibrium to hold both realms simultaneously, neither clinging to the transcen
 the mundane."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 16 ;
-    monomyth:followsStage monomyth:TheCrossingOfTheReturnThreshold .
+    monomyth:followsStage monomyth:TheCrossingOfTheReturnThreshold ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:FreedomToLive .
 
 monomyth:FreedomToLive a monomyth:Stage ;
     rdfs:label "Freedom to Live"@en ;
@@ -529,101 +932,173 @@ monomyth:FreedomToLive a monomyth:Stage ;
 the present moment as a conduit of the life-force who neither clings to nor flees from existence."""@en ;
     monomyth:belongsToAct monomyth:Return ;
     monomyth:stageOrder 17 ;
-    monomyth:followsStage monomyth:MasterOfTheTwoWorlds .
+    monomyth:followsStage monomyth:MasterOfTheTwoWorlds ;
+    owl:differentFrom monomyth:TheCallToAdventure,
+        monomyth:RefusalOfTheCall,
+        monomyth:SupernaturalAid,
+        monomyth:TheCrossingOfTheFirstThreshold,
+        monomyth:TheBellyOfTheWhale,
+        monomyth:TheRoadOfTrials,
+        monomyth:TheMeetingWithTheGoddess,
+        monomyth:WomanAsTheTemptress,
+        monomyth:AtonementWithTheFather,
+        monomyth:Apotheosis,
+        monomyth:TheUltimateBoon,
+        monomyth:RefusalOfTheReturn,
+        monomyth:TheMagicFlight,
+        monomyth:RescueFromWithout,
+        monomyth:TheCrossingOfTheReturnThreshold,
+        monomyth:MasterOfTheTwoWorlds .
 
 # --- Character Archetypes -------------
 
 monomyth:Hero a monomyth:Archetype ;
     rdfs:label "Hero"@en ;
-    rdfs:comment """The protagonist who undergoes the journey and transformation."""@en .
+    rdfs:comment """The protagonist who undergoes the journey and transformation."""@en ;
+    owl:differentFrom monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:Mentor a monomyth:Archetype ;
     rdfs:label "Mentor"@en ;
-    rdfs:comment """The guide or teacher who provides the hero with knowledge, tools, or confidence."""@en .
+    rdfs:comment """The guide or teacher who provides the hero with knowledge, tools, or confidence."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:ThresholdGuardian a monomyth:Archetype ;
     rdfs:label "Threshold Guardian"@en ;
-    rdfs:comment """A figure who tests the hero at the boundary of a new world or stage."""@en .
+    rdfs:comment """A figure who tests the hero at the boundary of a new world or stage."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:Herald a monomyth:Archetype ;
     rdfs:label "Herald"@en ;
-    rdfs:comment """The figure or force that announces the call to the adventure."""@en .
+    rdfs:comment """The figure or force that announces the call to the adventure."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:Shapeshifter a monomyth:Archetype ;
     rdfs:label "Shapeshifter"@en ;
-    rdfs:comment """A figure whose loyalty or nature is ambiguous and shifting."""@en .
+    rdfs:comment """A figure whose loyalty or nature is ambiguous and shifting."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shadow,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:Shadow a monomyth:Archetype ;
     rdfs:label "Shadow"@en ;
     rdfs:comment """The antagonist or dark mirror of the hero, representing repressed qualities or
-external opposition."""@en .
+external opposition."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Trickster,
+        monomyth:Ally .
 
 monomyth:Trickster a monomyth:Archetype ;
     rdfs:label "Trickster"@en ;
-    rdfs:comment """A figure who provides comic relief, disruption, or catalytic chaos."""@en .
+    rdfs:comment """A figure who provides comic relief, disruption, or catalytic chaos."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Ally .
 
 monomyth:Ally a monomyth:Archetype ;
     rdfs:label "Ally"@en ;
-    rdfs:comment """A companion who supports the hero through the journey."""@en .
+    rdfs:comment """A companion who supports the hero through the journey."""@en ;
+    owl:differentFrom monomyth:Hero,
+        monomyth:Mentor,
+        monomyth:ThresholdGuardian,
+        monomyth:Herald,
+        monomyth:Shapeshifter,
+        monomyth:Shadow,
+        monomyth:Trickster .
 
 # --- Fit Quality Values ---------------
 
 monomyth:PerfectFit a monomyth:FitQuality ;
     rdfs:label "Perfect Fit"@en ;
     rdfs:comment """The narrative maps onto the monomyth stage with precision."""@en ;
+    monomyth:fitScore 4 ;
     owl:differentFrom monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 4 .
+        monomyth:InvertedFit .
 
 monomyth:StrongFit a monomyth:FitQuality ;
     rdfs:label "Strong Fit"@en ;
     rdfs:comment """The narrative clearly manifests the stage with minor variations."""@en ;
+    monomyth:fitScore 3 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 3 .
+        monomyth:InvertedFit .
 
 monomyth:ModerateFit a monomyth:FitQuality ;
     rdfs:label "Moderate Fit"@en ;
     rdfs:comment """The stage is recognizable but requires some interpretive reframing."""@en ;
+    monomyth:fitScore 2 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:WeakFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 2 .
+        monomyth:InvertedFit .
 
 monomyth:WeakFit a monomyth:FitQuality ;
     rdfs:label "Weak Fit"@en ;
     rdfs:comment """The stage is only loosely or partially present."""@en ;
+    monomyth:fitScore 1 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:AbsentFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 1 .
+        monomyth:InvertedFit .
 
 monomyth:AbsentFit a monomyth:FitQuality ;
     rdfs:label "Absent Fit"@en ;
     rdfs:comment """The stage is not meaningfully present in the narrative."""@en ;
+    monomyth:fitScore 0 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
-        monomyth:InvertedFit ;
-    monomyth:fitScore 0 .
+        monomyth:InvertedFit .
 
 monomyth:InvertedFit a monomyth:FitQuality ;
     rdfs:label "Inverted Fit"@en ;
     rdfs:comment """The stage is present but deliberately reversed or subverted."""@en ;
+    monomyth:fitScore -1 ;
     owl:differentFrom monomyth:PerfectFit,
         monomyth:StrongFit,
         monomyth:ModerateFit,
         monomyth:WeakFit,
-        monomyth:AbsentFit ;
-    monomyth:fitScore -1 .
+        monomyth:AbsentFit .
