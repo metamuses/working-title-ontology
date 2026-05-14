@@ -502,22 +502,35 @@ focusing specifically on the motivation for the departure."""@en ;
 
 monomyth:Departure a monomyth:Act ;
     rdfs:label "Departure"@en ;
-    rdfs:comment """The first act: the hero leaves the ordinary world."""@en ;
+    rdfs:comment """The first act of the monomyth, in which the hero is called away from the
+familiar world and, through a series of encounters with refusal, aid, and threshold crossing,
+commits to the journey that will transform them. Campbell frames departure as a sequence of
+psychological and narrative events, from the disruption of equilibrium through the call, to the
+gathering of resolve and resources, to the irreversible crossing that commits the hero to
+transformation. What follows this act is no longer the hero's old life but a new order of
+experience."""@en ;
     monomyth:actOrder 1 ;
     owl:differentFrom monomyth:Initiation,
         monomyth:Return .
 
 monomyth:Initiation a monomyth:Act ;
     rdfs:label "Initiation"@en ;
-    rdfs:comment """The second act: the hero undergoes trials and transformation in the special
-world."""@en ;
+    rdfs:comment """The central act of the monomyth, in which the hero undergoes trials, encounters
+figures of profound power, and achieves the transformation that is the journey's purpose. Initiation
+occupies the space between threshold crossings: the hero has entered the extraordinary world but has
+not yet returned. The act's stages trace an arc from ordeal through revelation to the acquisition of
+the boon that will ultimately be carried back."""@en ;
     monomyth:actOrder 2 ;
     owl:differentFrom monomyth:Departure,
         monomyth:Return .
 
 monomyth:Return a monomyth:Act ;
     rdfs:label "Return"@en ;
-    rdfs:comment """The third act: the hero returns to the ordinary world, transformed."""@en ;
+    rdfs:comment """The closing movement of the hero's journey, in which the transformation achieved
+during initiation must survive contact with the world the hero originally left. Campbell's return
+stages register the tension between the extraordinary knowledge the hero now carries and the
+ordinary conditions to which they must reconcile it. The act completes the monomyth's circular
+structure, restoring the hero to the starting world but in an fundamentally altered state."""@en ;
     monomyth:actOrder 3 ;
     owl:differentFrom monomyth:Departure,
         monomyth:Initiation .
