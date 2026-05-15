@@ -18,7 +18,7 @@ const MODAL_TTL_MAP = {
   'kg-modal-waltermitty': 'walter-mitty.ttl',
   'kg-modal-batman': 'batman.ttl',
   'kg-modal-oedipus': 'oedipus.ttl',
-  'kg-modal-sablefable': 'sableFable.ttl',
+  'kg-modal-sable-fable': 'sable-fable.ttl',
   'kg-modal-ladybird': 'lady-bird.ttl',
   'kg-modal-aeneid': 'aeneid.ttl',
   'kg-modal-Zelda': 'ocarina-of-time.ttl',

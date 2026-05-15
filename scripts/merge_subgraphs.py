@@ -38,7 +38,7 @@ SUBGRAPH_FILES = [
     "the-matrix.ttl",
     "walter-mitty.ttl",
     "lady-bird.ttl",
-    "sableFable.ttl",
+    "sable-fable.ttl",
 ]
 
 # Define the separator between subgraphs
