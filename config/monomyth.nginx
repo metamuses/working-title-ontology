@@ -61,16 +61,17 @@ server {
         try_files /ontology/ontology.ttl =404;
     }
 
-    # ===== GRAPH ============================
-    # serve subgraphs TTL for website modals
-    location ~ ^/graphs/(.+\.ttl)$ {
+    # ===== SUBGRAPHS ============================
+    # serve subgraphs files with local hosting
+    location ~ ^/subgraphs/(.+\.ttl)$ {
         add_header Access-Control-Allow-Origin *;
         add_header Cache-Control "public, max-age=3600";
         default_type text/turtle;
 
-        try_files /ontology/graphs/$1 =404;
+        try_files /graph/subgraphs/$1 =404;
     }
 
+    # ===== GRAPH ============================
     # redirect /graph to /graph/
     location = /graph {
       return 301 /graph/;
@@ -90,7 +91,7 @@ server {
         add_header Cache-Control "public, max-age=7776000";
         default_type text/turtle;
 
-        rewrite ^/([0-9]+\.[0-9]+)/graph\.ttl$ /ontology/v$1/graph.ttl break;
+        rewrite ^/([0-9]+\.[0-9]+)/graph\.ttl$ /graph/v$1/graph.ttl break;
     }
 
     # serve main graph endpoint
@@ -99,7 +100,7 @@ server {
         add_header Cache-Control "public, max-age=3600";
         default_type text/turtle;
 
-        try_files /ontology/graph.ttl =404;
+        try_files /graph/graph.ttl =404;
     }
 
     # ===== SPARQL ===========================

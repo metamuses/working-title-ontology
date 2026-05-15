@@ -4,7 +4,7 @@
 Check Turtle graph files for ontology vocabulary consistency.
 
 The script loads ontology/ontology.ttl to discover declared ontology terms,
-then loads every .ttl file under ontology/graphs/ and validates Turtle syntax.
+then loads every .ttl file under graph/subgraphs/ and validates Turtle syntax.
 
 It reports three kinds of issues:
 - Unknown predicates: ontology predicates used in graphs but not declared as properties
@@ -30,7 +30,7 @@ from rdflib.plugins.parsers.notation3 import BadSyntax
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 ONTOLOGY_FILE = ROOT_DIR / "ontology" / "ontology.ttl"
-GRAPH_DIR = ROOT_DIR / "ontology" / "graphs"
+SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
 
 ONTOLOGY_URI = "https://monomyth.metamuses.org/ontology#"
 
@@ -113,7 +113,7 @@ used_predicates = {}
 used_classes = {}
 used_object_terms = {}
 
-for graph_file in sorted(GRAPH_DIR.glob("**/*.ttl")):
+for graph_file in sorted(SUBGRAPHS_DIR.glob("**/*.ttl")):
     print(f"Loading {graph_file}")
 
     file_graph = Graph()

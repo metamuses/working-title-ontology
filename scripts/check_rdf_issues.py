@@ -3,7 +3,7 @@
 """
 Check Turtle graph files for RDF consistency issues.
 
-The script loads every .ttl file under ontology/graphs/, validates Turtle
+The script loads every .ttl file under graph/subgraphs/, validates Turtle
 syntax, and inspects local resources belonging to the configured BASE_URI.
 
 It reports two kinds of issues:
@@ -23,7 +23,7 @@ from rdflib.plugins.parsers.notation3 import BadSyntax
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 # Define the directory containing Turtle graph files
-GRAPHS_DIR = ROOT_DIR / "ontology" / "graphs"
+SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
 
 # Define the URI prefix used to identify local project resources
 BASE_URI = "https://monomyth.metamuses.org/graph/"
@@ -31,8 +31,8 @@ BASE_URI = "https://monomyth.metamuses.org/graph/"
 # Create the RDF graph that will contain all parsed triples
 g = Graph()
 
-# Load every Turtle file in the graphs directory
-for ttl_file in sorted(GRAPHS_DIR.glob("**/*.ttl")):
+# Load every Turtle file in the subgraphs directory
+for ttl_file in sorted(SUBGRAPHS_DIR.glob("**/*.ttl")):
     print(f"Loading {ttl_file}")
 
     # Stop immediately if any Turtle file has invalid syntax

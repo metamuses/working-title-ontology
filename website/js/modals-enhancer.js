@@ -5,8 +5,8 @@
 //   • Clicking a .segment  → expandable panel with stage realization description
 //
 // TTL files are expected at:
-//   - /graphs/<filename> (production)
-//   - ../ontology/graphs/<filename> (local fallback)
+//   - /subgraphs/<filename> (production)
+//   - ../graph/subgraphs/<filename> (local fallback)
 // ──────────────────────────────────────────────────────────────────────────
 
 // ── Modal ID → TTL filename mapping ────────────────────────────────────────
@@ -25,7 +25,7 @@ const MODAL_TTL_MAP = {
   'kg-modal-orlando': 'orlando-furioso.ttl',
 };
 
-const TTL_BASE_PATHS = ['/graphs/', '../ontology/graphs/'];
+const TTL_BASE_PATHS = ['/subgraphs/', '../graph/subgraphs/'];
 
 // Cache: modalId → parsed stageMap
 const divergenceCache = {};
