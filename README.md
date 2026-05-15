@@ -1,7 +1,5 @@
 # The Monomyth Ontology
 
-Group project for the Knowledge Representation and Extraction 2024/25 course.
-
 The site of the project is live at [monomyth.metamuses.org](https://monomyth.metamuses.org).
 
 The **Monomyth Ontology** is an RDF/OWL ontology for modeling narrative works
@@ -49,6 +47,7 @@ mapping, especially where the relationship between the story and the monomyth
 requires nuance rather than simple classification.
 
 ![Monomyth Ontology Graffoo](https://raw.githubusercontent.com/metamuses/monomyth/refs/heads/main/graffoo/ontology.png)
+
 ## Knowledge graphs
 
 The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
