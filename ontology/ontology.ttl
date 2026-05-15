@@ -451,13 +451,13 @@ monomyth:fitNote a owl:DatatypeProperty ;
     rdfs:comment """An annotation explaining nuances, tensions, or interpretive choices in the stage
 mapping."""@en ;
     rdfs:domain monomyth:StageRealization ;
-    rdfs:range xsd:string .
+    rdfs:range rdfs:Literal .
 
 monomyth:realizationDescription a owl:DatatypeProperty ;
     rdfs:label "realization description"@en ;
     rdfs:comment """A prose description of how a stage is realized in a specific narrative."""@en ;
     rdfs:domain monomyth:StageRealization ;
-    rdfs:range xsd:string .
+    rdfs:range rdfs:Literal .
 
 monomyth:stageRealizationOrder a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -492,7 +492,7 @@ monomyth:divergenceRationale a owl:DatatypeProperty ;
 behind a divergence from the monomyth template. Complements a fit note on a stage realization by
 focusing specifically on the motivation for the departure."""@en ;
     rdfs:domain creon:ProductDivergence ;
-    rdfs:range xsd:string .
+    rdfs:range rdfs:Literal .
 
 # ==============================================================================
 # NAMED INDIVIDUALS

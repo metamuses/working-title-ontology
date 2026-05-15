@@ -3,9 +3,9 @@
 """
 Merge selected Turtle subgraph files into the main project graph.
 
-The script preserves the header/prefix section of ontology/graph.ttl, removes
+The script preserves the header/prefix section of graph/graph.ttl, removes
 any previously merged graph body, then appends the body of each configured
-subgraph from ontology/graphs/.
+subgraph from graph/subgraphs/.
 
 Each subgraph is expected to contain a prefix/header section followed by a
 blank line and then its graph triples. Only the content after the first blank
@@ -22,11 +22,11 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 # Define the main graph and subgraphs paths
-MAIN_GRAPH = ROOT_DIR / "ontology" / "graph.ttl"
-SUBGRAPHS_DIR = ROOT_DIR / "ontology" / "graphs"
+MAIN_GRAPH = ROOT_DIR / "graph" / "graph.ttl"
+SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
 
 # List subgraphs in merge order.
-SUBGRAPH_FILES = [
+SUBGRAPHS = [
     "oedipus.ttl",
     "aeneid.ttl",
     "rostam-haft-khan.ttl",
@@ -38,7 +38,7 @@ SUBGRAPH_FILES = [
     "the-matrix.ttl",
     "walter-mitty.ttl",
     "lady-bird.ttl",
-    "sableFable.ttl",
+    "sable-fable.ttl",
 ]
 
 # Define the separator between subgraphs
@@ -63,7 +63,7 @@ else:
 # Collect subgraph bodies before rewriting the main graph
 subgraph_bodies = []
 
-for filename in SUBGRAPH_FILES:
+for filename in SUBGRAPHS:
     path = SUBGRAPHS_DIR / filename
 
     # Skip missing subgraphs

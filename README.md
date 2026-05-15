@@ -1,7 +1,5 @@
 # The Monomyth Ontology
 
-Group project for the Knowledge Representation and Extraction 2024/25 course.
-
 The site of the project is live at [monomyth.metamuses.org](https://monomyth.metamuses.org).
 
 The **Monomyth Ontology** is an RDF/OWL ontology for modeling narrative works
@@ -30,14 +28,14 @@ The most important components are:
 novel, or other narrative form.
 * **Monomyth Expression**: the specific interpretation of a narrative work
 through the hero's journey framework.
-* **Acts and Stages**: the three broad phases of the monomyth, Departure,
+* **Acts** and **Stages**: the three broad phases of the monomyth, Departure,
 Initiation, and Return, articulated through Campbell's seventeen stages.
 * **Stage Realizations**: the concrete moments in a story where a monomyth stage
 is realized, described, evaluated, and placed in the narrative sequence.
-* **Characters and Archetypes**: the figures involved in the journey, connected
-to functional roles such as hero, mentor, herald, shadow, ally, trickster, or
-threshold guardian, based on Christopher Vogler's adaptation for screenwriting
-of Campbell's work.
+* **Characters** and **Archetypes**: the figures involved in the journey,
+connected to functional roles such as hero, mentor, herald, shadow, ally,
+trickster, or threshold guardian, based on Christopher Vogler's adaptation for
+screenwriting of Campbell's work.
 * **Fit Qualities**: a graded vocabulary for expressing how closely a narrative
 moment corresponds to a monomyth stage, from perfect alignment to weak, absent,
 or inverted realization.
@@ -48,8 +46,8 @@ forms of variation.
 mapping, especially where the relationship between the story and the monomyth
 requires nuance rather than simple classification.
 
-## Graphical framework
-![Monomyth Ontology Graphical Framework](https://raw.githubusercontent.com/metamuses/monomyth/refs/heads/main/graphical_framework/ontology.png)
+![Monomyth Ontology Graffoo](https://raw.githubusercontent.com/metamuses/monomyth/refs/heads/main/graffoo/ontology.png)
+
 ## Knowledge graphs
 
 The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
@@ -63,7 +61,7 @@ ontology.
 
 Analyzed works include:
 
-* **Oedipus Myth**: a classical myth about a king whose attempt to escape
+* **Oedipus**: a classical myth about a king whose attempt to escape
 prophecy leads him toward the discovery of his own hidden guilt.
 * **Aeneid**: a Latin epic poem about Aeneas's journey from the ruins of
 Troy toward the foundation of a new destiny in Italy.

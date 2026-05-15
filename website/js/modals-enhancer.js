@@ -5,8 +5,8 @@
 //   • Clicking a .segment  → expandable panel with stage realization description
 //
 // TTL files are expected at:
-//   - /graphs/<filename> (production)
-//   - ../ontology/graphs/<filename> (local fallback)
+//   - /subgraphs/<filename> (production)
+//   - ../graph/subgraphs/<filename> (local fallback)
 // ──────────────────────────────────────────────────────────────────────────
 
 // ── Modal ID → TTL filename mapping ────────────────────────────────────────
@@ -14,18 +14,18 @@ const MODAL_TTL_MAP = {
   'kg-modal-matrix': 'the-matrix.ttl',
   'kg-modal-lion-king': 'the-lion-king.ttl',
   'kg-modal-call-of-wild': 'the-call-of-the-wild.ttl',
-  'kg-modal-Rostam': 'rostam-haft-khan.ttl',
+  'kg-modal-rostam': 'rostam-haft-khan.ttl',
   'kg-modal-waltermitty': 'walter-mitty.ttl',
   'kg-modal-batman': 'batman.ttl',
   'kg-modal-oedipus': 'oedipus.ttl',
-  'kg-modal-sablefable': 'sableFable.ttl',
+  'kg-modal-sable-fable': 'sable-fable.ttl',
   'kg-modal-ladybird': 'lady-bird.ttl',
   'kg-modal-aeneid': 'aeneid.ttl',
-  'kg-modal-Zelda': 'ocarina-of-time.ttl',
+  'kg-modal-zelda': 'ocarina-of-time.ttl',
   'kg-modal-orlando': 'orlando-furioso.ttl',
 };
 
-const TTL_BASE_PATHS = ['/graphs/', '../ontology/graphs/'];
+const TTL_BASE_PATHS = ['/subgraphs/', '../graph/subgraphs/'];
 
 // Cache: modalId → parsed stageMap
 const divergenceCache = {};

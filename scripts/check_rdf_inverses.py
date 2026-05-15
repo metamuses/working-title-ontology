@@ -5,7 +5,7 @@ Check Turtle graph files for inverse property consistency.
 
 The script loads ontology/ontology.ttl to discover owl:inverseOf declarations
 and rdfs:subPropertyOf relationships, then loads every .ttl file under
-ontology/graphs/ and validates Turtle syntax.
+graph/subgraphs/ and validates Turtle syntax.
 
 It checks that every use of a property with an inverse is mirrored by the
 corresponding inverse triple. Subproperties are handled automatically, so a
@@ -29,7 +29,7 @@ import sys
 ROOT_DIR = Path(__file__).resolve().parent.parent
 
 ONTOLOGY_FILE = ROOT_DIR / "ontology" / "ontology.ttl"
-GRAPH_DIR = ROOT_DIR / "ontology" / "graphs"
+SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
 
 MONOMYTH = Namespace("https://monomyth.metamuses.org/ontology#")
 
@@ -92,7 +92,7 @@ parse_turtle_file(ontology, ONTOLOGY_FILE)
 
 data = Graph()
 
-for ttl in sorted(GRAPH_DIR.glob("**/*.ttl")):
+for ttl in sorted(SUBGRAPHS_DIR.glob("**/*.ttl")):
     print(f"Loading {ttl}")
     parse_turtle_file(data, ttl)
 

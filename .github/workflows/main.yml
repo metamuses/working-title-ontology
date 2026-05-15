@@ -22,11 +22,11 @@ jobs:
       - name: Validate ontology TTL
         run: rapper -i turtle ontology/ontology.ttl -c
       - name: Validate knowledge graph TTL
-        run: rapper -i turtle ontology/graph.ttl -c
-      - name: Validate individual graphs TTLs
+        run: rapper -i turtle graph/graph.ttl -c
+      - name: Validate individual subgraphs TTLs
         run: |
-          for graph in ontology/graphs/*.ttl; do
-            rapper -i turtle -c "$graph"
+          for subgraph in graph/subgraphs/*.ttl; do
+            rapper -i turtle -c "$subgraph"
           done
   test:
     runs-on: ubuntu-latest
@@ -63,12 +63,14 @@ jobs:
             git fetch --tags --prune && \
             git reset --hard @{upstream} && \
             git clean -d --force"
-      - name: Generate versioned ontology files
+      - name: Generate versioned ontology and graph files
         run: |
           ssh -p${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
             "cd ${{ secrets.SSH_WORKING_DIR }} && \
             for tag in \$(git tag --sort=version:refname); do
               mkdir -p ontology/\$tag
+              mkdir -p graph/\$tag
+
               git show \$tag:ontology/ontology.ttl > ontology/\$tag/ontology.ttl
-              git show \$tag:ontology/graph.ttl > ontology/\$tag/graph.ttl
+              git show \$tag:graph/graph.ttl > graph/\$tag/graph.ttl
             done"

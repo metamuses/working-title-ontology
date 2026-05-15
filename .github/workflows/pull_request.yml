@@ -16,11 +16,11 @@ jobs:
       - name: Validate ontology TTL
         run: rapper -i turtle ontology/ontology.ttl -c
       - name: Validate knowledge graph TTL
-        run: rapper -i turtle ontology/graph.ttl -c
-      - name: Validate individual graphs TTLs
+        run: rapper -i turtle graph/graph.ttl -c
+      - name: Validate individual subgraphs TTLs
         run: |
-          for graph in ontology/graphs/*.ttl; do
-            rapper -i turtle -c "$graph"
+          for subgraph in graph/subgraphs/*.ttl; do
+            rapper -i turtle -c "$subgraph"
           done
 
   check-rdf-issues:
