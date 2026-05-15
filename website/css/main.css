@@ -1220,6 +1220,11 @@ body.modal-open {
   line-height: 1.85;
 }
 
+.conclusion-topic-body strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
 .conclusion-topic-body p + p {
   margin-top: 1.2em;
 }
