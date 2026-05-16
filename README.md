@@ -1,7 +1,5 @@
 # The Monomyth Ontology
 
-The site of the project is live at [monomyth.metamuses.org](https://monomyth.metamuses.org).
-
 The **Monomyth Ontology** is an RDF/OWL ontology for modeling narrative works
 through **Joseph Campbell**'s theory of the hero's journey, developed in *The
 Hero with a Thousand Faces* (1949) within the broader field of comparative
@@ -11,9 +9,9 @@ gains some form of knowledge or power, and returns changed. This project uses
 that framework to study how different works **repeat, adapt, or challenge**
 inherited mythic structures across cultures, genres, and historical periods.
 
-## Ontology design
+The site of the project is live at [monomyth.metamuses.org](https://monomyth.metamuses.org).
 
-The ontology is available at [monomyth.metamuses.org/ontology](https://monomyth.metamuses.org/ontology).
+## Ontology design
 
 The ontology is designed to model the monomyth as an interpretive structure that
 can be applied to individual narrative works. Its core idea is to separate the
@@ -21,6 +19,8 @@ abstract pattern of the hero's journey from the concrete way that pattern
 appears in a specific story. This makes it possible to compare narratives
 without reducing them to the same template: each work can follow, adapt, weaken,
 invert, displace, or omit parts of the Campbellian structure.
+
+The ontology is available at [monomyth.metamuses.org/ontology](https://monomyth.metamuses.org/ontology).
 
 The most important components are:
 
@@ -50,14 +50,14 @@ requires nuance rather than simple classification.
 
 ## Knowledge graphs
 
-The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
-
 The repository also includes example knowledge graphs that apply the ontology to
 specific narrative works. Each graph uses the monomyth framework to describe how
 a story realizes, adapts, displaces, or resists the stages of the hero's
 journey. These examples are intended both as case studies in comparative
 narrative analysis and as practical models for creating new graphs with the
 ontology.
+
+The full knowledge graph is available at [monomyth.metamuses.org/graph/](https://monomyth.metamuses.org/graph/).
 
 Analyzed works include:
 
@@ -86,6 +86,11 @@ self-transformation.
 school senior navigating adolescence, family tensions, and self-discovery.
 * **SABLE, fABLE**: a music album by Bon Iver that explores emotional fracture,
 intimacy, renewal, and the passage from darkness toward connection.
+
+## Acknowledgments
+
+This work was developed as a group project for the "Knowledge Representation and
+Extraction" course (2024/25) at University of Bologna.
 
 ## Team members
 

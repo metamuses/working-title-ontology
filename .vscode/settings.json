@@ -1,3 +1,7 @@
 {
-  "liveServer.settings.root": "/website"
+  "liveServer.settings.root": "/website",
+  "[turtle]": {
+        "editor.rulers": [100],
+        "editor.wordWrap": "off"
+    },
 }

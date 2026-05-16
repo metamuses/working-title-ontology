@@ -61,16 +61,6 @@ server {
         try_files /ontology/ontology.ttl =404;
     }
 
-    # ===== SUBGRAPHS ============================
-    # serve subgraphs files with local hosting
-    location ~ ^/subgraphs/(.+\.ttl)$ {
-        add_header Access-Control-Allow-Origin *;
-        add_header Cache-Control "public, max-age=3600";
-        default_type text/turtle;
-
-        try_files /graph/subgraphs/$1 =404;
-    }
-
     # ===== GRAPH ============================
     # redirect /graph to /graph/
     location = /graph {
@@ -103,12 +93,24 @@ server {
         try_files /graph/graph.ttl =404;
     }
 
+    # ===== SUBGRAPHS ============================
+    # serve subgraphs files at /subgraphs/
+    location ~ ^/subgraphs/(.+\.ttl)$ {
+        add_header Access-Control-Allow-Origin *;
+        add_header Cache-Control "public, max-age=3600";
+        default_type text/turtle;
+
+        try_files /graph/subgraphs/$1 =404;
+    }
+
     # ===== SPARQL ===========================
+    # redirect /sparql to external SPARQL endpoint
     location ~ ^/sparql/?$ {
         return 302 https://triplydb.com/epistrephein/monomyth/sparql;
     }
 
     # ===== WEBSITE ==========================
+    # serve main static website
     location / {
         alias /var/www/monomyth.metamuses.org/website/;
 
