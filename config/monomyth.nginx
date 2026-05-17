@@ -94,7 +94,17 @@ server {
     }
 
     # ===== SUBGRAPHS ============================
-    # serve subgraphs files at /subgraphs/
+    # don't serve the /subgraphs path itself
+    location = /subgraphs {
+        return 404;
+    }
+
+    # don't serve any subpath of /subgraphs
+    location /subgraphs/ {
+        return 404;
+    }
+
+    # only serve existing .ttl files
     location ~ ^/subgraphs/(.+\.ttl)$ {
         add_header Access-Control-Allow-Origin *;
         add_header Cache-Control "public, max-age=3600";
@@ -104,9 +114,23 @@ server {
     }
 
     # ===== SPARQL ===========================
-    # redirect /sparql to external SPARQL endpoint
-    location ~ ^/sparql/?$ {
-        return 302 https://triplydb.com/epistrephein/monomyth/sparql;
+    # proxy /sparql to Triply SPARQL endpoint
+    location = /sparql {
+        proxy_pass https://api.triplydb.com/datasets/epistrephein/monomyth/sparql;
+
+        proxy_ssl_server_name on;
+        proxy_set_header Host api.triplydb.com;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        proxy_redirect off;
+    }
+
+    # redirect /explore to Triply dataset landing page
+    location ~ ^/explore/?$ {
+        return 302 https://triplydb.com/epistrephein/monomyth/;
     }
 
     # ===== WEBSITE ==========================
