@@ -687,7 +687,7 @@ body::before {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  padding: 4px 10px;
+  padding: 4px 15px;
   border: 1px solid;
   white-space: nowrap;
 }
