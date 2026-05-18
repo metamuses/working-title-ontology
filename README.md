@@ -20,7 +20,8 @@ appears in a specific story. This makes it possible to compare narratives
 without reducing them to the same template: each work can follow, adapt, weaken,
 invert, displace, or omit parts of the Campbellian structure.
 
-The ontology is available at [monomyth.metamuses.org/ontology](https://monomyth.metamuses.org/ontology).
+The ontology is available at [monomyth.metamuses.org/ontology](https://monomyth.metamuses.org/ontology).  
+The full documentation is available at [monomyth.metamuses.org/docs](https://monomyth.metamuses.org/docs).
 
 The most important components are:
 

@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Monomyth Ontology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --sidebar-bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --border-color: #222222;
+            --card-bg: #ffffff;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --tag-class: #dc2626;
+            --tag-op: #2563eb;
+            --tag-dp: #16a34a;
+            --tag-ni: #7c3aed;
+            --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 28px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            display: flex;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -webkit-font-smoothing: antialiased;
+        }
+        .metadata-value { overflow-wrap: anywhere; word-break: break-word; }
+
+        code {
+            background: #f1f5f9;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0;
+            font-size: 0.9em;
+            border: 1px solid var(--border-color);
+            word-break: break-all;
+            overflow-wrap: anywhere;
+        }
+
+        /* Sidebar */
+        nav {
+            width: 300px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            background: var(--sidebar-bg);
+            border-right: 2px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        nav h2 { font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.5rem; font-weight: 700; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        nav li { margin-bottom: 0.5rem; }
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid transparent;
+            transition: all 0.15s ease;
+            font-weight: 500;
+        }
+        nav a:hover { background: #f1f5f9; border: 1px solid var(--border-color); color: var(--primary-color); }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 0rem 5rem;
+            max-width: 1000px;
+        }
+
+        header { margin-bottom: 5rem; }
+        header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: -0.02em; border-bottom: 4px solid var(--border-color); padding-bottom: 1rem; }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 1rem 2rem;
+            background: var(--card-bg);
+            padding: 2rem;
+            border: 2px solid var(--border-color);
+            font-size: 0.85rem;
+            box-shadow: 4px 4px 0 var(--border-color);
+        }
+        .metadata-label { font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+
+        section { margin-bottom: 6rem; }
+        section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .entity-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 4px 4px 0 var(--border-color);
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            position: relative;
+        }
+        .entity-card:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--border-color); }
+        .entity-card.entity-preview-highlight {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .overview-link:hover,
+        .overview-link.is-hovering {
+            background: #e2e8f0 !important;
+            border-color: var(--text-main) !important;
+        }
+
+        .entity-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .entity-title { font-size: 1.3rem; font-weight: 700; margin: 0; }
+        .entity-anchor {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.15s ease;
+            font-size: 1rem;
+            line-height: 1;
+        }
+        .entity-anchor:hover {
+            color: var(--text-main);
+        }
+        .material-symbols-outlined {
+            font-family: "Material Symbols Outlined";
+            font-weight: normal;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: "liga";
+            -webkit-font-smoothing: antialiased;
+        }
+        .entity-iri { font-size: 0.75rem; color: var(--text-muted); word-break: break-all; margin-bottom: 1.5rem; display: block; }
+
+        .tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid var(--border-color);
+            color: white;
+            text-transform: uppercase;
+        }
+        .tag-c { background: var(--tag-class); }
+        .tag-op { background: var(--tag-op); }
+        .tag-dp { background: var(--tag-dp); }
+        .tag-ni { background: var(--tag-ni); }
+
+        .entity-comment { margin-bottom: 2rem; font-size: 0.95rem; }
+
+        /* Property rows - using flex to keep items close */
+        .property-row { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.85rem; margin-bottom: 0.5rem; padding: 0.5rem 0; border-bottom: 1px dashed #ccc; }
+        .property-row:last-child { border-bottom: none; }
+        .property-label { font-weight: 700; color: var(--text-muted); text-transform: uppercase; width: 140px; flex-shrink: 0; }
+        .property-value { flex-grow: 1; min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+        .property-value a { color: var(--primary-color); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; transition: all 0.15s; }
+        .property-value a:hover { border-bottom: 1px solid var(--primary-color); }
+
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border: 2px solid var(--border-color); box-shadow: 4px 4px 0 var(--border-color); margin-bottom: 2rem; }
+        th, td { padding: 1rem; text-align: left; border: 1px solid var(--border-color); }
+        th { background: #f1f5f9; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+
+        .back-to-top { font-size: 0.75rem; color: var(--text-muted); text-decoration: none; font-weight: 700; text-transform: uppercase; border: 1px solid transparent; padding: 0.2rem 0.5rem; transition: all 0.15s; }
+        .back-to-top:hover { border: 1px solid var(--border-color); color: var(--text-main); background: #f1f5f9; }
+
+        /* Mobile Header */
+        .mobile-header {
+            display: none;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            border-bottom: 2px solid var(--border-color);
+            padding: 1rem 1.5rem;
+            z-index: 100;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-toggle {
+            background: white;
+            border: 2px solid var(--border-color);
+            color: var(--text-main);
+            cursor: pointer;
+            padding: 0.4rem 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 0 var(--border-color);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .menu-toggle:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--border-color); }
+
+        .nav-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 140;
+            backdrop-filter: blur(2px);
+        }
+
+        @media (max-width: 768px) {
+            html { scroll-padding-top: 80px; }
+            body { flex-direction: column; }
+            .mobile-header { display: flex; }
+            .entity-anchor { display: none; }
+            nav {
+                position: fixed;
+                left: -300px;
+                top: 0;
+                width: 300px;
+                height: 100vh;
+                z-index: 150;
+                transition: left 0.3s ease;
+                box-shadow: 4px 0 0 var(--border-color);
+            }
+            nav.open { left: 0; }
+            .nav-backdrop.open { display: block; }
+            main { padding: 1rem 1.5rem; width: 100%; max-width: none; overflow-x: hidden; }
+            header { margin-bottom: 3rem; }
+            header h1 { font-size: 1.8rem; }
+            .metadata-grid { grid-template-columns: 1fr; padding: 1.5rem; }
+            section h2 { font-size: 1.25rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+            .entity-card { padding: 1.5rem; }
+            .property-row { flex-direction: column; gap: 0.25rem; }
+            .property-label { width: auto; }
+            table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-backdrop" id="backdrop"></div>
+
+<div class="mobile-header">
+    <button class="menu-toggle" id="menuToggle">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        MENU
+    </button>
+    <span style="font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">monomyth</span>
+</div>
+
+<nav id="sidebar">
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#metadata">HOME</a></li>
+        <li><a href="#namespaces">1. NAMESPACES</a></li>
+        <li><a href="#overview">2. OVERVIEW</a></li>
+        <li><a href="#classes">3. CLASSES</a></li>
+        <li><a href="#object-properties">4. OBJECT PROPERTIES</a></li>
+        <li><a href="#data-properties">5. DATA PROPERTIES</a></li>
+        <li><a href="#individuals">6. INDIVIDUALS</a></li>
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('backdrop');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('open');
+            backdrop.classList.toggle('open');
+            document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        backdrop.addEventListener('click', toggleMenu);
+
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) toggleMenu();
+            });
+        });
+
+        const clearOverviewHighlights = () => {
+            document.querySelectorAll('.entity-preview-highlight').forEach(card => {
+                card.classList.remove('entity-preview-highlight');
+            });
+            document.querySelectorAll('.overview-link.is-hovering').forEach(link => {
+                link.classList.remove('is-hovering');
+            });
+        };
+
+        document.querySelectorAll('.overview-link').forEach(link => {
+            const targetId = link.dataset.target;
+            if (!targetId) return;
+            const targetCard = document.getElementById(targetId);
+            if (!targetCard) return;
+
+            link.addEventListener('mouseenter', () => {
+                clearOverviewHighlights();
+                link.classList.add('is-hovering');
+                targetCard.classList.add('entity-preview-highlight');
+            });
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('is-hovering');
+                targetCard.classList.remove('entity-preview-highlight');
+            });
+            link.addEventListener('focus', () => {
+                clearOverviewHighlights();
+                link.classList.add('is-hovering');
+                targetCard.classList.add('entity-preview-highlight');
+            });
+            link.addEventListener('blur', () => {
+                link.classList.remove('is-hovering');
+                targetCard.classList.remove('entity-preview-highlight');
+            });
+            link.addEventListener('click', () => {
+                clearOverviewHighlights();
+                link.classList.add('is-hovering');
+                targetCard.classList.add('entity-preview-highlight');
+                setTimeout(() => {
+                    link.classList.remove('is-hovering');
+                    targetCard.classList.remove('entity-preview-highlight');
+                }, 1400);
+            });
+        });
+    });
+</script>
+
+<main>
+    <header id="metadata">
+        <h1>The Monomyth Ontology</h1>
+        <p class="entity-comment">An ontology for representing the Monomyth narrative structure and related
+concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
+        <div class="metadata-grid">
+            <div class="metadata-label">IRI</div><div class="metadata-value"><code>https://monomyth.metamuses.org/ontology#</code></div>
+            <div class="metadata-label">Version</div><div class="metadata-value">1.1</div>
+            <div class="metadata-label">Version IRI</div><div class="metadata-value"><a href="https://monomyth.metamuses.org/1.1/ontology.ttl">https://monomyth.metamuses.org/1.1/ontology.ttl</a></div>
+            <div class="metadata-label">Prior Version</div><div class="metadata-value"><a href="https://monomyth.metamuses.org/1.0/ontology.ttl">https://monomyth.metamuses.org/1.0/ontology.ttl</a></div>
+            <div class="metadata-label">Creators</div><div class="metadata-value">Tommaso Barbato<br>Nicol D'Amelio<br>Maryam Dadrasrazi<br>Martina Uccheddu</div>
+            <div class="metadata-label">Created</div><div class="metadata-value">2026-05-13</div>
+            <div class="metadata-label">Modified</div><div class="metadata-value">2026-05-15</div>
+            <div class="metadata-label">License</div><div class="metadata-value"><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div>
+            <div class="metadata-label">Publisher</div><div class="metadata-value"><a href="https://github.com/metamuses">https://github.com/metamuses</a></div>
+            <div class="metadata-label">See Also</div><div class="metadata-value"><a href="https://monomyth.metamuses.org">https://monomyth.metamuses.org</a><br> <a href="https://github.com/metamuses/monomyth">https://github.com/metamuses/monomyth</a><br></div>
+        </div>
+    </header>
+
+    <section id="namespaces">
+        <h2>1. Namespaces <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <table>
+            <thead><tr><th>Prefix</th><th>IRI</th></tr></thead>
+            <tbody>
+                <tr><td>monomyth</td><td><code>https://monomyth.metamuses.org/ontology#</code></td></tr>
+                <tr><td>creon</td><td><code>http://www.ontologydesignpatterns.org/ont/creativity/creon.owl#</code></td></tr>
+                <tr><td>dcterms</td><td><code>http://purl.org/dc/terms/</code></td></tr>
+                <tr><td>owl</td><td><code>http://www.w3.org/2002/07/owl#</code></td></tr>
+                <tr><td>rdf</td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
+                <tr><td>rdfs</td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+                <tr><td>vann</td><td><code>http://purl.org/vocab/vann/</code></td></tr>
+                <tr><td>xsd</td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="overview">
+        <h2>2. Overview <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <div class="metadata-grid" style="display: block;">
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase;">Classes</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a class="overview-link" data-target="NarrativeWork" href="#NarrativeWork" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Narrative Work</a> <a class="overview-link" data-target="MonomythExpression" href="#MonomythExpression" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Monomyth Expression</a> <a class="overview-link" data-target="Act" href="#Act" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Act</a> <a class="overview-link" data-target="Stage" href="#Stage" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Stage</a> <a class="overview-link" data-target="Character" href="#Character" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Character</a> <a class="overview-link" data-target="Archetype" href="#Archetype" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Archetype</a> <a class="overview-link" data-target="StageRealization" href="#StageRealization" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Stage Realization</a> <a class="overview-link" data-target="FitQuality" href="#FitQuality" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Fit Quality</a> <a class="overview-link" data-target="NarrativeDivergence" href="#NarrativeDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Narrative Divergence</a> <a class="overview-link" data-target="SequentialDivergence" href="#SequentialDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Sequential Divergence</a> <a class="overview-link" data-target="SemioticDivergence" href="#SemioticDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Semiotic Divergence</a>
+                </div>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase;">Object Properties</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a class="overview-link" data-target="interpretedBy" href="#interpretedBy" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">interpreted by</a> <a class="overview-link" data-target="interprets" href="#interprets" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">interprets</a> <a class="overview-link" data-target="hasHero" href="#hasHero" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has hero</a> <a class="overview-link" data-target="hasCharacter" href="#hasCharacter" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has character</a> <a class="overview-link" data-target="hasStageRealization" href="#hasStageRealization" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has stage realization</a> <a class="overview-link" data-target="belongsToAct" href="#belongsToAct" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">belongs to act</a> <a class="overview-link" data-target="followsStage" href="#followsStage" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">follows stage</a> <a class="overview-link" data-target="heroOf" href="#heroOf" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">hero of</a> <a class="overview-link" data-target="characterOf" href="#characterOf" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">character of</a> <a class="overview-link" data-target="embodiesArchetype" href="#embodiesArchetype" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">embodies archetype</a> <a class="overview-link" data-target="stageRealizationOf" href="#stageRealizationOf" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">stage realization of</a> <a class="overview-link" data-target="realizesStage" href="#realizesStage" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">realizes stage</a> <a class="overview-link" data-target="involvesCharacter" href="#involvesCharacter" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">involves character</a> <a class="overview-link" data-target="hasFitQuality" href="#hasFitQuality" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has fit quality</a> <a class="overview-link" data-target="hasDivergence" href="#hasDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has divergence</a> <a class="overview-link" data-target="hasNarrativeDivergence" href="#hasNarrativeDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has narrative divergence</a> <a class="overview-link" data-target="hasSequentialDivergence" href="#hasSequentialDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has sequential divergence</a> <a class="overview-link" data-target="hasSemioticDivergence" href="#hasSemioticDivergence" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">has semiotic divergence</a> <a class="overview-link" data-target="divergesFrom" href="#divergesFrom" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">diverges from</a> <a class="overview-link" data-target="divergenceOf" href="#divergenceOf" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">divergence of</a>
+                </div>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase;">Data Properties</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a class="overview-link" data-target="actOrder" href="#actOrder" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">act order</a> <a class="overview-link" data-target="stageOrder" href="#stageOrder" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">stage order</a> <a class="overview-link" data-target="fitScore" href="#fitScore" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">fit score</a> <a class="overview-link" data-target="fitNote" href="#fitNote" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">fit note</a> <a class="overview-link" data-target="realizationDescription" href="#realizationDescription" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">realization description</a> <a class="overview-link" data-target="stageRealizationOrder" href="#stageRealizationOrder" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">stage realization order</a> <a class="overview-link" data-target="divergenceRationale" href="#divergenceRationale" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">divergence rationale</a>
+                </div>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase;">Individuals</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <a class="overview-link" data-target="Departure" href="#Departure" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Departure</a> <a class="overview-link" data-target="Initiation" href="#Initiation" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Initiation</a> <a class="overview-link" data-target="Return" href="#Return" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Return</a> <a class="overview-link" data-target="TheCallToAdventure" href="#TheCallToAdventure" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Call to Adventure</a> <a class="overview-link" data-target="RefusalOfTheCall" href="#RefusalOfTheCall" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Refusal of the Call</a> <a class="overview-link" data-target="SupernaturalAid" href="#SupernaturalAid" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Supernatural Aid</a> <a class="overview-link" data-target="TheCrossingOfTheFirstThreshold" href="#TheCrossingOfTheFirstThreshold" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Crossing of the First Threshold</a> <a class="overview-link" data-target="TheBellyOfTheWhale" href="#TheBellyOfTheWhale" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Belly of the Whale</a> <a class="overview-link" data-target="TheRoadOfTrials" href="#TheRoadOfTrials" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Road of Trials</a> <a class="overview-link" data-target="TheMeetingWithTheGoddess" href="#TheMeetingWithTheGoddess" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Meeting with the Goddess</a> <a class="overview-link" data-target="WomanAsTheTemptress" href="#WomanAsTheTemptress" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Woman as the Temptress</a> <a class="overview-link" data-target="AtonementWithTheFather" href="#AtonementWithTheFather" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Atonement with the Father</a> <a class="overview-link" data-target="Apotheosis" href="#Apotheosis" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Apotheosis</a> <a class="overview-link" data-target="TheUltimateBoon" href="#TheUltimateBoon" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Ultimate Boon</a> <a class="overview-link" data-target="RefusalOfTheReturn" href="#RefusalOfTheReturn" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Refusal of the Return</a> <a class="overview-link" data-target="TheMagicFlight" href="#TheMagicFlight" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Magic Flight</a> <a class="overview-link" data-target="RescueFromWithout" href="#RescueFromWithout" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Rescue from Without</a> <a class="overview-link" data-target="TheCrossingOfTheReturnThreshold" href="#TheCrossingOfTheReturnThreshold" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">The Crossing of the Return Threshold</a> <a class="overview-link" data-target="MasterOfTheTwoWorlds" href="#MasterOfTheTwoWorlds" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Master of the Two Worlds</a> <a class="overview-link" data-target="FreedomToLive" href="#FreedomToLive" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Freedom to Live</a> <a class="overview-link" data-target="Hero" href="#Hero" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Hero</a> <a class="overview-link" data-target="Mentor" href="#Mentor" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Mentor</a> <a class="overview-link" data-target="ThresholdGuardian" href="#ThresholdGuardian" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Threshold Guardian</a> <a class="overview-link" data-target="Herald" href="#Herald" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Herald</a> <a class="overview-link" data-target="Shapeshifter" href="#Shapeshifter" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Shapeshifter</a> <a class="overview-link" data-target="Shadow" href="#Shadow" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Shadow</a> <a class="overview-link" data-target="Trickster" href="#Trickster" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Trickster</a> <a class="overview-link" data-target="Ally" href="#Ally" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Ally</a> <a class="overview-link" data-target="PerfectFit" href="#PerfectFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Perfect Fit</a> <a class="overview-link" data-target="StrongFit" href="#StrongFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Strong Fit</a> <a class="overview-link" data-target="ModerateFit" href="#ModerateFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Moderate Fit</a> <a class="overview-link" data-target="WeakFit" href="#WeakFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Weak Fit</a> <a class="overview-link" data-target="AbsentFit" href="#AbsentFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Absent Fit</a> <a class="overview-link" data-target="InvertedFit" href="#InvertedFit" style="border:1px solid var(--border-color); background:white; padding: 0.25rem 0.75rem; font-size: 0.85rem; text-decoration:none; color:var(--text-main); box-shadow: 2px 2px 0 var(--border-color);">Inverted Fit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="classes">
+        <h2>3. Classes <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+
+        <div id="NarrativeWork" class="entity-card">
+            <a class="entity-anchor" href="#NarrativeWork" aria-label="Link to Narrative Work" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Narrative Work</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#NarrativeWork</div>
+            <p class="entity-comment">A story, novel, epic, film, or other narrative that can be analyzed through the monomyth framework.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Super-classes</div><div class="property-value"><a href="#CreativeProduct">CreativeProduct</a></div></div>
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="MonomythExpression" class="entity-card">
+            <a class="entity-anchor" href="#MonomythExpression" aria-label="Link to Monomyth Expression" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Monomyth Expression</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#MonomythExpression</div>
+            <p class="entity-comment">A specific realization of the monomyth structure within a particular narrative work.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="Act" class="entity-card">
+            <a class="entity-anchor" href="#Act" aria-label="Link to Act" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Act</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Act</div>
+            <p class="entity-comment">One of the three major phases of the monomyth, based on Joseph Campbell's framework.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="Stage" class="entity-card">
+            <a class="entity-anchor" href="#Stage" aria-label="Link to Stage" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Stage</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Stage</div>
+            <p class="entity-comment">One of the seventeen stages of the monomyth, based on Joseph Campbell's framework.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="Character" class="entity-card">
+            <a class="entity-anchor" href="#Character" aria-label="Link to Character" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Character</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Character</div>
+            <p class="entity-comment">A character within a specific narrative work.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="Archetype" class="entity-card">
+            <a class="entity-anchor" href="#Archetype" aria-label="Link to Archetype" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Archetype</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Archetype</div>
+            <p class="entity-comment">A recurring character role in the monomyth structure, based on Christopher Vogler's adaptation of Campbell's framework.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="StageRealization" class="entity-card">
+            <a class="entity-anchor" href="#StageRealization" aria-label="Link to Stage Realization" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Stage Realization</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#StageRealization</div>
+            <p class="entity-comment">The concrete manifestation of a monomyth stage within a specific narrative work. Links a stage archetype to its particular narrative content.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="FitQuality" class="entity-card">
+            <a class="entity-anchor" href="#FitQuality" aria-label="Link to Fit Quality" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Fit Quality</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#FitQuality</div>
+            <p class="entity-comment">An assessment of how well a narrative stage maps onto the monomyth archetype.</p>
+            <div class="entity-properties">
+
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="NarrativeDivergence" class="entity-card">
+            <a class="entity-anchor" href="#NarrativeDivergence" aria-label="Link to Narrative Divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Narrative Divergence</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#NarrativeDivergence</div>
+            <p class="entity-comment">A creative departure from the expected monomyth pattern at a given stage, concerning the quality, presence, or structural role of the stage's manifestation within a specific narrative work. Narrative divergence formalizes the insight that imperfect alignments between a narrative and the monomyth template are not failures of fit but potential acts of deliberate artistic choice.<br><br>The monomyth ontology assesses every stage realization through a fit quality scale ranging from perfect alignment to complete absence or inversion. Narrative divergence operates in the space below perfect fit: when a stage is absent, the narrative has chosen silence where Campbell expects action; when a stage is inverted, the narrative has deliberately reversed the archetype's expected meaning; when a stage is weak or moderate, the narrative may have dispersed the stage's function across multiple moments, compressed it into a subordinate beat, merged it with an adjacent stage, or otherwise reshaped its dramatic weight. Each of these departures carries creative intent and thematic significance that a numeric fit score alone cannot capture.<br><br>Where sequential divergence concerns when a stage occurs in the narrative's order, and semiotic divergence concerns the conceptual vocabulary through which it is expressed, narrative divergence concerns what actually happens: whether the stage is present at all, whether it fulfills or subverts its archetypal function, and how the narrative's specific dramatic choices depart from the pattern Campbell describes. By explicitly modeling all three departure types as first-class entities linked to the stage realizations they characterize, the ontology enables richer analysis than fit scoring alone. It allows the documentation of why a narrative diverges, what artistic or thematic purpose the divergence serves, and how patterns of divergence cluster across works, genres, and periods, distinguishing narratives that systematically subvert specific acts or stages from those that faithfully preserve them, and capturing the creative rationale behind each departure.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Super-classes</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#SequentialDivergence">SequentialDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="SequentialDivergence" class="entity-card">
+            <a class="entity-anchor" href="#SequentialDivergence" aria-label="Link to Sequential Divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Sequential Divergence</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#SequentialDivergence</div>
+            <p class="entity-comment">A structural departure from the expected ordering of monomyth stages, occurring when a narrative realizes a stage earlier or later than its canonical position in Campbell's seventeen-stage sequence.<br><br>Where narrative divergence concerns the quality of a stage's manifestation, sequential divergence concerns its placement within the temporal architecture of the story. Campbell's model implies a fixed progression and a determinate order within each act, but many narratives rearrange this sequence for dramatic, thematic, or structural reasons: an Apotheosis may occur as the penultimate event rather than at the midpoint of Initiation, or a Refusal of the Call may surface retroactively through flashback rather than immediately following the Call to Adventure.<br><br>A stage may be a Perfect Fit in content, faithful in its semiotic register, yet significantly displaced in sequence; conversely, a stage in its canonical position may diverge narratively or semiotically. The three divergence types are orthogonal and composable on the same stage realization, each capturing a dimension of narrative craft that the other two cannot express, and together making explicit the distinction between what a narrative says at each stage, the signs through which it says it, and when it chooses to say it.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Super-classes</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+            </div>
+        </div>
+
+        <div id="SemioticDivergence" class="entity-card">
+            <a class="entity-anchor" href="#SemioticDivergence" aria-label="Link to Semiotic Divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Semiotic Divergence</h3>
+                <span class="tag tag-c">Class</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#SemioticDivergence</div>
+            <p class="entity-comment">A divergence in the sign system through which a monomyth stage is expressed, occurring when the cultural, ontological, or figurative vehicle of a stage changes while its structural function within the hero's journey is preserved. Campbell's stage names encode specific semiotic assumptions rooted in comparative mythology and mid-twentieth-century cosmology: they presuppose particular kinds of agents (divine, patriarchal, gendered), particular ontological registers (the sacred, the supernatural, the numinous), and particular directions of force (external threat, external aid, external authority).<br><br>As narratives evolve across cultures, periods, and media, these signifiers are systematically replaced while the signified, the dramatic function each stage performs in the transformation of the hero, endures. Sacred agents become secular ones, external forces become internal states, gendered roles are recast or dissolved, and cosmological frameworks shift from the mythic to the psychological, the political, or the technological.<br><br>Where narrative divergence concerns what happens at a stage, and sequential divergence concerns when it happens, semiotic divergence concerns the conceptual vocabulary through which it happens: the signs a narrative selects to encode the archetypal structure. This captures a dimension of narrative evolution that neither fit quality nor structural reordering can express: the gradual, culturally determined drift in how stories signify the same underlying transformative pattern, making explicit the distinction between the monomyth's deep grammar and the surface language each narrative speaks.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Super-classes</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+
+                <div class="property-row"><div class="property-label">Disjoint with</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a>, <a href="#MonomythExpression">MonomythExpression</a>, <a href="#Act">Act</a>, <a href="#Stage">Stage</a>, <a href="#Character">Character</a>, <a href="#Archetype">Archetype</a>, <a href="#StageRealization">StageRealization</a>, <a href="#FitQuality">FitQuality</a>, <a href="#NarrativeDivergence">NarrativeDivergence</a>, <a href="#SequentialDivergence">SequentialDivergence</a></div></div>
+            </div>
+        </div>
+        </section>
+    <section id="object-properties">
+        <h2>4. Object Properties <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <div id="interpretedBy" class="entity-card">
+            <a class="entity-anchor" href="#interpretedBy" aria-label="Link to interpreted by" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">interpreted by</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#interpretedBy</div>
+            <p class="entity-comment">Links a narrative work to the monomyth expression that interprets it.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#interprets">interprets</a></div></div>
+            </div>
+        </div>
+
+        <div id="interprets" class="entity-card">
+            <a class="entity-anchor" href="#interprets" aria-label="Link to interprets" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">interprets</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#interprets</div>
+            <p class="entity-comment">Links a monomyth expression to the narrative work it interprets.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#NarrativeWork">NarrativeWork</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasHero" class="entity-card">
+            <a class="entity-anchor" href="#hasHero" aria-label="Link to has hero" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has hero</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasHero</div>
+            <p class="entity-comment">The character whose journey is being traced through the monomyth.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Character">Character</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasCharacter" class="entity-card">
+            <a class="entity-anchor" href="#hasCharacter" aria-label="Link to has character" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has character</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasCharacter</div>
+            <p class="entity-comment">Links a monomyth expression to any character involved in the narrative.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Character">Character</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasStageRealization" class="entity-card">
+            <a class="entity-anchor" href="#hasStageRealization" aria-label="Link to has stage realization" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has stage realization</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasStageRealization</div>
+            <p class="entity-comment">Associates a monomyth expression with the specific stage realizations that compose its structure.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="belongsToAct" class="entity-card">
+            <a class="entity-anchor" href="#belongsToAct" aria-label="Link to belongs to act" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">belongs to act</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#belongsToAct</div>
+            <p class="entity-comment">Associates a stage with the act to which it belongs.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Characteristics</div><div class="property-value">Functional</div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Act">Act</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="followsStage" class="entity-card">
+            <a class="entity-anchor" href="#followsStage" aria-label="Link to follows stage" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">follows stage</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#followsStage</div>
+            <p class="entity-comment">Indicates the sequential ordering of stages within the monomyth.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Characteristics</div><div class="property-value">Functional, Asymmetric, Irreflexive</div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="heroOf" class="entity-card">
+            <a class="entity-anchor" href="#heroOf" aria-label="Link to hero of" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">hero of</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#heroOf</div>
+            <p class="entity-comment">Links a character to the monomyth expression in which they are the hero.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Character">Character</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasHero">hasHero</a></div></div>
+            </div>
+        </div>
+
+        <div id="characterOf" class="entity-card">
+            <a class="entity-anchor" href="#characterOf" aria-label="Link to character of" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">character of</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#characterOf</div>
+            <p class="entity-comment">Links a character to the monomyth expression in which they are involved.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Character">Character</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasCharacter">hasCharacter</a></div></div>
+            </div>
+        </div>
+
+        <div id="embodiesArchetype" class="entity-card">
+            <a class="entity-anchor" href="#embodiesArchetype" aria-label="Link to embodies archetype" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">embodies archetype</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#embodiesArchetype</div>
+            <p class="entity-comment">Links a character to the archetype they embody in a narrative.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Character">Character</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="stageRealizationOf" class="entity-card">
+            <a class="entity-anchor" href="#stageRealizationOf" aria-label="Link to stage realization of" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">stage realization of</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#stageRealizationOf</div>
+            <p class="entity-comment">Links a stage realization to the monomyth expression it belongs to.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#MonomythExpression">MonomythExpression</a></div></div>
+                <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasStageRealization">hasStageRealization</a></div></div>
+            </div>
+        </div>
+
+        <div id="realizesStage" class="entity-card">
+            <a class="entity-anchor" href="#realizesStage" aria-label="Link to realizes stage" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">realizes stage</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#realizesStage</div>
+            <p class="entity-comment">Links a concrete narrative moment to the abstract monomyth stage it instantiates.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Characteristics</div><div class="property-value">Functional</div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="involvesCharacter" class="entity-card">
+            <a class="entity-anchor" href="#involvesCharacter" aria-label="Link to involves character" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">involves character</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#involvesCharacter</div>
+            <p class="entity-comment">Indicates the particular character(s) involved in the realization of a monomyth stage.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Character">Character</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasFitQuality" class="entity-card">
+            <a class="entity-anchor" href="#hasFitQuality" aria-label="Link to has fit quality" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has fit quality</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasFitQuality</div>
+            <p class="entity-comment">Associates a stage realization with an evaluation of how well it fits the corresponding monomyth stage.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Characteristics</div><div class="property-value">Functional</div></div>
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasDivergence" class="entity-card">
+            <a class="entity-anchor" href="#hasDivergence" aria-label="Link to has divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has divergence</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasDivergence</div>
+            <p class="entity-comment">Generic superproperty linking a stage realization to any divergence. The specific subproperties can be used for typed queries.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasNarrativeDivergence" class="entity-card">
+            <a class="entity-anchor" href="#hasNarrativeDivergence" aria-label="Link to has narrative divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has narrative divergence</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasNarrativeDivergence</div>
+            <p class="entity-comment">Links a stage realization to a narrative divergence describing how the narrative departs from the expected monomyth pattern in content, quality, or structure at this stage.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#NarrativeDivergence">NarrativeDivergence</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasSequentialDivergence" class="entity-card">
+            <a class="entity-anchor" href="#hasSequentialDivergence" aria-label="Link to has sequential divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has sequential divergence</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasSequentialDivergence</div>
+            <p class="entity-comment">Links a stage realization to a sequential divergence describing how the stage occurs out of its canonical monomyth ordering.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#SequentialDivergence">SequentialDivergence</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="hasSemioticDivergence" class="entity-card">
+            <a class="entity-anchor" href="#hasSemioticDivergence" aria-label="Link to has semiotic divergence" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">has semiotic divergence</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#hasSemioticDivergence</div>
+            <p class="entity-comment">Links a stage realization to a semiotic divergence describing how the narrative departs from the expected monomyth pattern in its choice of signs and symbols to express the stage.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#SemioticDivergence">SemioticDivergence</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="divergesFrom" class="entity-card">
+            <a class="entity-anchor" href="#divergesFrom" aria-label="Link to diverges from" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">diverges from</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#divergesFrom</div>
+            <p class="entity-comment">Links a divergence to the stage it departs from.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+            </div>
+        </div>
+
+        <div id="divergenceOf" class="entity-card">
+            <a class="entity-anchor" href="#divergenceOf" aria-label="Link to divergence of" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">divergence of</h3>
+                <span class="tag tag-op">Object Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#divergenceOf</div>
+            <p class="entity-comment">Links a divergence to the stage realization where the departure occurs.</p>
+            <div class="entity-properties">
+
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Inverse of</div><div class="property-value"><a href="#hasDivergence">hasDivergence</a></div></div>
+            </div>
+        </div>
+        </section><section id="data-properties"><h2>5. Data Properties <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <div id="actOrder" class="entity-card">
+            <a class="entity-anchor" href="#actOrder" aria-label="Link to act order" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">act order</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#actOrder</div>
+            <p class="entity-comment">The sequential position of an act in the three-act structure (1-3).</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Act">Act</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">ne308d25ab0254684ad24b911443251c3b1</div></div>
+            </div>
+        </div>
+
+        <div id="stageOrder" class="entity-card">
+            <a class="entity-anchor" href="#stageOrder" aria-label="Link to stage order" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">stage order</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#stageOrder</div>
+            <p class="entity-comment">The sequential position of a stage in the seventeen-stage monomyth (1-17).</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">ne308d25ab0254684ad24b911443251c3b6</div></div>
+            </div>
+        </div>
+
+        <div id="fitScore" class="entity-card">
+            <a class="entity-anchor" href="#fitScore" aria-label="Link to fit score" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">fit score</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#fitScore</div>
+            <p class="entity-comment">Numeric score for fit quality (-1 = inverted, 0 = absent, 1 = weak, 2 = moderate, 3 = strong, 4 = perfect).</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">ne308d25ab0254684ad24b911443251c3b11</div></div>
+            </div>
+        </div>
+
+        <div id="fitNote" class="entity-card">
+            <a class="entity-anchor" href="#fitNote" aria-label="Link to fit note" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">fit note</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#fitNote</div>
+            <p class="entity-comment">An annotation explaining nuances, tensions, or interpretive choices in the stage mapping.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">Literal</div></div>
+            </div>
+        </div>
+
+        <div id="realizationDescription" class="entity-card">
+            <a class="entity-anchor" href="#realizationDescription" aria-label="Link to realization description" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">realization description</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#realizationDescription</div>
+            <p class="entity-comment">A prose description of how a stage is realized in a specific narrative.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">Literal</div></div>
+            </div>
+        </div>
+
+        <div id="stageRealizationOrder" class="entity-card">
+            <a class="entity-anchor" href="#stageRealizationOrder" aria-label="Link to stage realization order" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">stage realization order</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#stageRealizationOrder</div>
+            <p class="entity-comment">The position at which this stage realization factually occurs in the narrative's own sequence. Expressed as a positive integer starting from 1, forming a continuous sequence across all realizations in a MonomythInstance.<br><br>The canonical monomyth defines 17 stages ordered 1-17 via stageOrder on Stage individuals. When a narrative realizes each stage exactly once in canonical order, stageRealizationOrder values will mirror stageOrder forming a complete parallel sequence to the monomyth framework. When they differ, a SequentialDivergence instance should be attached via hasSequentialDivergence to document the rationale for the displacement.<br><br>The sequence may extend beyond 17 when a narrative realizes the same stage more than once, whether as isolated repeated moments or as entire recurring blocks of consecutive stages. Each repetition is a separate StageRealization instance with its own stageRealizationOrder value, hasFitQuality assessment, and realizationDescription. This allows the ontology to capture cyclical, recursive, or episodic narrative structures without conflating distinct dramatic moments that instantiate the same archetypal stage.<br><br>For stages assessed as Absent (FitQuality), the stageRealizationOrder still records the position in the narrative's sequence where the absent stage would structurally belong, preserving continuity. This ensures that the full narrative ordering is always reconstructible from stageRealizationOrder values alone, without gaps.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#StageRealization">StageRealization</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">positiveInteger</div></div>
+            </div>
+        </div>
+
+        <div id="divergenceRationale" class="entity-card">
+            <a class="entity-anchor" href="#divergenceRationale" aria-label="Link to divergence rationale" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">divergence rationale</h3>
+                <span class="tag tag-dp">Data Prop</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#divergenceRationale</div>
+            <p class="entity-comment">A prose description of the artistic, thematic, structural, or sequential purpose behind a divergence from the monomyth template. Complements a fit note on a stage realization by focusing specifically on the motivation for the departure.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Domain</div><div class="property-value"><a href="#ProductDivergence">ProductDivergence</a></div></div>
+                <div class="property-row"><div class="property-label">Range</div><div class="property-value">Literal</div></div>
+            </div>
+        </div>
+        </section><section id="individuals"><h2>6. Individuals <a href="#metadata" class="back-to-top">TOP &uarr;</a></h2>
+        <div id="Departure" class="entity-card">
+            <a class="entity-anchor" href="#Departure" aria-label="Link to Departure" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Departure</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Departure</div>
+            <p class="entity-comment">The first act of the monomyth, in which the hero is called away from the familiar world and, through a series of encounters with refusal, aid, and threshold crossing, commits to the journey that will transform them. Campbell frames departure as a sequence of psychological and narrative events, from the disruption of equilibrium through the call, to the gathering of resolve and resources, to the irreversible crossing that commits the hero to transformation. What follows this act is no longer the hero's old life but a new order of experience.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+            </div>
+        </div>
+
+        <div id="Initiation" class="entity-card">
+            <a class="entity-anchor" href="#Initiation" aria-label="Link to Initiation" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Initiation</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Initiation</div>
+            <p class="entity-comment">The central act of the monomyth, in which the hero undergoes trials, encounters figures of profound power, and achieves the transformation that is the journey's purpose. Initiation occupies the space between threshold crossings: the hero has entered the extraordinary world but has not yet returned. The act's stages trace an arc from ordeal through revelation to the acquisition of the boon that will ultimately be carried back.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+            </div>
+        </div>
+
+        <div id="Return" class="entity-card">
+            <a class="entity-anchor" href="#Return" aria-label="Link to Return" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Return</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Return</div>
+            <p class="entity-comment">The closing movement of the hero's journey, in which the transformation achieved during initiation must survive contact with the world the hero originally left. Campbell's return stages register the tension between the extraordinary knowledge the hero now carries and the ordinary conditions to which they must reconcile it. The act completes the monomyth's circular structure, restoring the hero to the starting world but in an fundamentally altered state.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheCallToAdventure" class="entity-card">
+            <a class="entity-anchor" href="#TheCallToAdventure" aria-label="Link to The Call to Adventure" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Call to Adventure</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheCallToAdventure</div>
+            <p class="entity-comment">The hero receives a summons through a sign, messenger, or sudden rupture in the ordinary world that signals the beginning of a journey toward an as-yet-unknown transformation.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="RefusalOfTheCall" class="entity-card">
+            <a class="entity-anchor" href="#RefusalOfTheCall" aria-label="Link to Refusal of the Call" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Refusal of the Call</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#RefusalOfTheCall</div>
+            <p class="entity-comment">Faced with the enormity of the journey ahead, the hero hesitates or outright refuses the summons, revealing the weight of what must be sacrificed to cross into the unknown.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="SupernaturalAid" class="entity-card">
+            <a class="entity-anchor" href="#SupernaturalAid" aria-label="Link to Supernatural Aid" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Supernatural Aid</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#SupernaturalAid</div>
+            <p class="entity-comment">A protective figure such as a wizard, crone, ferryman, or divine messenger appears to equip the hero with talismans, wisdom, or assurance before the threshold is crossed.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheCrossingOfTheFirstThreshold" class="entity-card">
+            <a class="entity-anchor" href="#TheCrossingOfTheFirstThreshold" aria-label="Link to The Crossing of the First Threshold" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Crossing of the First Threshold</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheCrossingOfTheFirstThreshold</div>
+            <p class="entity-comment">The hero commits to the adventure and passes beyond the familiar boundary of the known world, entering a sphere of magnified power where the ordinary rules no longer apply.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheBellyOfTheWhale" class="entity-card">
+            <a class="entity-anchor" href="#TheBellyOfTheWhale" aria-label="Link to The Belly of the Whale" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Belly of the Whale</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheBellyOfTheWhale</div>
+            <p class="entity-comment">The hero is swallowed into an unknown darkness as a symbolic death of the former self, from which, if survived, a new and transformed identity begins to emerge.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheRoadOfTrials" class="entity-card">
+            <a class="entity-anchor" href="#TheRoadOfTrials" aria-label="Link to The Road of Trials" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Road of Trials</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheRoadOfTrials</div>
+            <p class="entity-comment">The hero undergoes a series of tests, ordeals, and encounters that progressively strip away illusions and forge the strength, wisdom, and character required for the supreme ordeal ahead.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheMeetingWithTheGoddess" class="entity-card">
+            <a class="entity-anchor" href="#TheMeetingWithTheGoddess" aria-label="Link to The Meeting with the Goddess" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Meeting with the Goddess</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheMeetingWithTheGoddess</div>
+            <p class="entity-comment">The hero encounters an embodiment of totality in its fullest and most nurturing dimension, whose unconditional love reveals the deepest ground of existence itself.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="WomanAsTheTemptress" class="entity-card">
+            <a class="entity-anchor" href="#WomanAsTheTemptress" aria-label="Link to Woman as the Temptress" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Woman as the Temptress</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#WomanAsTheTemptress</div>
+            <p class="entity-comment">Confronted with desire, comfort, or worldly attachment, the hero faces a seduction that threatens to arrest the journey and bind consciousness to the transient rather than the transcendent.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="AtonementWithTheFather" class="entity-card">
+            <a class="entity-anchor" href="#AtonementWithTheFather" aria-label="Link to Atonement with the Father" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Atonement with the Father</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#AtonementWithTheFather</div>
+            <p class="entity-comment">The hero confronts the ultimate authority of the inner world in the father-figure who both judges and initiates, and must be annihilated and reborn in the crucible of that encounter.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="Apotheosis" class="entity-card">
+            <a class="entity-anchor" href="#Apotheosis" aria-label="Link to Apotheosis" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Apotheosis</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Apotheosis</div>
+            <p class="entity-comment">Stripped of all ego-bound limitation, the hero achieves a state of divine knowledge or blissful rest beyond all categories of being, dwelling momentarily in the eternal before returning.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheUltimateBoon" class="entity-card">
+            <a class="entity-anchor" href="#TheUltimateBoon" aria-label="Link to The Ultimate Boon" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Ultimate Boon</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheUltimateBoon</div>
+            <p class="entity-comment">The hero attains the supreme goal of the quest in the form of an elixir, grail, fire, or wisdom that holds the power to restore life, fertility, or illumination to the world left behind.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="RefusalOfTheReturn" class="entity-card">
+            <a class="entity-anchor" href="#RefusalOfTheReturn" aria-label="Link to Refusal of the Return" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Refusal of the Return</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#RefusalOfTheReturn</div>
+            <p class="entity-comment">Having tasted transcendence or bliss, the hero is reluctant to re-enter the mundane world, clinging to the realm of discovery rather than bearing its fruits back to humanity.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheMagicFlight" class="entity-card">
+            <a class="entity-anchor" href="#TheMagicFlight" aria-label="Link to The Magic Flight" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Magic Flight</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheMagicFlight</div>
+            <p class="entity-comment">The hero escapes from the inner world, sometimes aided and sometimes pursued, navigating a perilous retreat that itself becomes a test of the transformation newly won.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="RescueFromWithout" class="entity-card">
+            <a class="entity-anchor" href="#RescueFromWithout" aria-label="Link to Rescue from Without" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Rescue from Without</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#RescueFromWithout</div>
+            <p class="entity-comment">When the hero cannot return alone, a guide or community from the ordinary world reaches across the threshold to draw the exhausted or reluctant traveller back into human society.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="TheCrossingOfTheReturnThreshold" class="entity-card">
+            <a class="entity-anchor" href="#TheCrossingOfTheReturnThreshold" aria-label="Link to The Crossing of the Return Threshold" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">The Crossing of the Return Threshold</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#TheCrossingOfTheReturnThreshold</div>
+            <p class="entity-comment">The hero must re-enter the world of common day and find a way to translate the wisdom of the deep experience into terms that a community bound by time and form can receive.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="MasterOfTheTwoWorlds" class="entity-card">
+            <a class="entity-anchor" href="#MasterOfTheTwoWorlds" aria-label="Link to Master of the Two Worlds" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Master of the Two Worlds</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#MasterOfTheTwoWorlds</div>
+            <p class="entity-comment">Having moved freely between the mortal and divine, the hero achieves the equilibrium to hold both realms simultaneously, neither clinging to the transcendent nor enslaved by the mundane.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="FreedomToLive" class="entity-card">
+            <a class="entity-anchor" href="#FreedomToLive" aria-label="Link to Freedom to Live" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Freedom to Live</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#FreedomToLive</div>
+            <p class="entity-comment">Released from fear of death and attachment to outcome, the hero lives fully in the present moment as a conduit of the life-force who neither clings to nor flees from existence.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+            </div>
+        </div>
+
+        <div id="Hero" class="entity-card">
+            <a class="entity-anchor" href="#Hero" aria-label="Link to Hero" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Hero</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Hero</div>
+            <p class="entity-comment">The protagonist who undergoes the journey and transformation.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Mentor" class="entity-card">
+            <a class="entity-anchor" href="#Mentor" aria-label="Link to Mentor" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Mentor</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Mentor</div>
+            <p class="entity-comment">The guide or teacher who provides the hero with knowledge, tools, or confidence.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="ThresholdGuardian" class="entity-card">
+            <a class="entity-anchor" href="#ThresholdGuardian" aria-label="Link to Threshold Guardian" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Threshold Guardian</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#ThresholdGuardian</div>
+            <p class="entity-comment">A figure who tests the hero at the boundary of a new world or stage.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Herald" class="entity-card">
+            <a class="entity-anchor" href="#Herald" aria-label="Link to Herald" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Herald</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Herald</div>
+            <p class="entity-comment">The figure or force that announces the call to the adventure.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Shapeshifter" class="entity-card">
+            <a class="entity-anchor" href="#Shapeshifter" aria-label="Link to Shapeshifter" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Shapeshifter</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Shapeshifter</div>
+            <p class="entity-comment">A figure whose loyalty or nature is ambiguous and shifting.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Shadow" class="entity-card">
+            <a class="entity-anchor" href="#Shadow" aria-label="Link to Shadow" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Shadow</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Shadow</div>
+            <p class="entity-comment">The antagonist or dark mirror of the hero, representing repressed qualities or external opposition.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Trickster" class="entity-card">
+            <a class="entity-anchor" href="#Trickster" aria-label="Link to Trickster" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Trickster</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Trickster</div>
+            <p class="entity-comment">A figure who provides comic relief, disruption, or catalytic chaos.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="Ally" class="entity-card">
+            <a class="entity-anchor" href="#Ally" aria-label="Link to Ally" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Ally</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#Ally</div>
+            <p class="entity-comment">A companion who supports the hero through the journey.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+            </div>
+        </div>
+
+        <div id="PerfectFit" class="entity-card">
+            <a class="entity-anchor" href="#PerfectFit" aria-label="Link to Perfect Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Perfect Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#PerfectFit</div>
+            <p class="entity-comment">The narrative maps onto the monomyth stage with precision.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+
+        <div id="StrongFit" class="entity-card">
+            <a class="entity-anchor" href="#StrongFit" aria-label="Link to Strong Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Strong Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#StrongFit</div>
+            <p class="entity-comment">The narrative clearly manifests the stage with minor variations.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+
+        <div id="ModerateFit" class="entity-card">
+            <a class="entity-anchor" href="#ModerateFit" aria-label="Link to Moderate Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Moderate Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#ModerateFit</div>
+            <p class="entity-comment">The stage is recognizable but requires some interpretive reframing.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+
+        <div id="WeakFit" class="entity-card">
+            <a class="entity-anchor" href="#WeakFit" aria-label="Link to Weak Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Weak Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#WeakFit</div>
+            <p class="entity-comment">The stage is only loosely or partially present.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+
+        <div id="AbsentFit" class="entity-card">
+            <a class="entity-anchor" href="#AbsentFit" aria-label="Link to Absent Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Absent Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#AbsentFit</div>
+            <p class="entity-comment">The stage is not meaningfully present in the narrative.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+
+        <div id="InvertedFit" class="entity-card">
+            <a class="entity-anchor" href="#InvertedFit" aria-label="Link to Inverted Fit" title="Link to this entity"><span class="material-symbols-outlined">link</span></a>
+            <div class="entity-header">
+                <h3 class="entity-title">Inverted Fit</h3>
+                <span class="tag tag-ni">Individual</span>
+            </div>
+            <div class="entity-iri">https://monomyth.metamuses.org/ontology#InvertedFit</div>
+            <p class="entity-comment">The stage is present but deliberately reversed or subverted.</p>
+            <div class="entity-properties">
+                <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+            </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
