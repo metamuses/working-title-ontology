@@ -499,7 +499,8 @@ focusing specifically on the motivation for the departure."""@en ;
 
 # --- The Three Acts -------------------
 
-monomyth:Departure a monomyth:Act ;
+monomyth:Departure a monomyth:Act,
+        owl:NamedIndividual ;
     rdfs:label "Departure"@en ;
     rdfs:comment """The first act of the monomyth, in which the hero is called away from the
 familiar world and, through a series of encounters with refusal, aid, and threshold crossing,
@@ -512,7 +513,8 @@ experience."""@en ;
     owl:differentFrom monomyth:Initiation,
         monomyth:Return .
 
-monomyth:Initiation a monomyth:Act ;
+monomyth:Initiation a monomyth:Act,
+        owl:NamedIndividual ;
     rdfs:label "Initiation"@en ;
     rdfs:comment """The central act of the monomyth, in which the hero undergoes trials, encounters
 figures of profound power, and achieves the transformation that is the journey's purpose. Initiation
@@ -523,7 +525,8 @@ the boon that will ultimately be carried back."""@en ;
     owl:differentFrom monomyth:Departure,
         monomyth:Return .
 
-monomyth:Return a monomyth:Act ;
+monomyth:Return a monomyth:Act,
+        owl:NamedIndividual ;
     rdfs:label "Return"@en ;
     rdfs:comment """The closing movement of the hero's journey, in which the transformation achieved
 during initiation must survive contact with the world the hero originally left. Campbell's return
@@ -536,7 +539,8 @@ structure, restoring the hero to the starting world but in an fundamentally alte
 
 # --- The Seventeen Stages -------------
 
-monomyth:TheCallToAdventure a monomyth:Stage ;
+monomyth:TheCallToAdventure a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Call to Adventure"@en ;
     rdfs:comment """The hero receives a summons through a sign, messenger, or sudden rupture in the
 ordinary world that signals the beginning of a journey toward an as-yet-unknown transformation."""@en ;
@@ -559,7 +563,8 @@ ordinary world that signals the beginning of a journey toward an as-yet-unknown 
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:RefusalOfTheCall a monomyth:Stage ;
+monomyth:RefusalOfTheCall a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Refusal of the Call"@en ;
     rdfs:comment """Faced with the enormity of the journey ahead, the hero hesitates or outright
 refuses the summons, revealing the weight of what must be sacrificed to cross into the unknown."""@en ;
@@ -583,7 +588,8 @@ refuses the summons, revealing the weight of what must be sacrificed to cross in
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:SupernaturalAid a monomyth:Stage ;
+monomyth:SupernaturalAid a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Supernatural Aid"@en ;
     rdfs:comment """A protective figure such as a wizard, crone, ferryman, or divine messenger
 appears to equip the hero with talismans, wisdom, or assurance before the threshold is crossed."""@en ;
@@ -607,7 +613,8 @@ appears to equip the hero with talismans, wisdom, or assurance before the thresh
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage ;
+monomyth:TheCrossingOfTheFirstThreshold a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Crossing of the First Threshold"@en ;
     rdfs:comment """The hero commits to the adventure and passes beyond the familiar boundary of the
 known world, entering a sphere of magnified power where the ordinary rules no longer apply."""@en ;
@@ -631,7 +638,8 @@ known world, entering a sphere of magnified power where the ordinary rules no lo
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheBellyOfTheWhale a monomyth:Stage ;
+monomyth:TheBellyOfTheWhale a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Belly of the Whale"@en ;
     rdfs:comment """The hero is swallowed into an unknown darkness as a symbolic death of the former
 self, from which, if survived, a new and transformed identity begins to emerge."""@en ;
@@ -655,7 +663,8 @@ self, from which, if survived, a new and transformed identity begins to emerge."
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheRoadOfTrials a monomyth:Stage ;
+monomyth:TheRoadOfTrials a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Road of Trials"@en ;
     rdfs:comment """The hero undergoes a series of tests, ordeals, and encounters that progressively
 strip away illusions and forge the strength, wisdom, and character required for the supreme ordeal
@@ -680,7 +689,8 @@ ahead."""@en ;
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheMeetingWithTheGoddess a monomyth:Stage ;
+monomyth:TheMeetingWithTheGoddess a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Meeting with the Goddess"@en ;
     rdfs:comment """The hero encounters an embodiment of totality in its fullest and most nurturing
 dimension, whose unconditional love reveals the deepest ground of existence itself."""@en ;
@@ -704,7 +714,8 @@ dimension, whose unconditional love reveals the deepest ground of existence itse
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:WomanAsTheTemptress a monomyth:Stage ;
+monomyth:WomanAsTheTemptress a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Woman as the Temptress"@en ;
     rdfs:comment """Confronted with desire, comfort, or worldly attachment, the hero faces a
 seduction that threatens to arrest the journey and bind consciousness to the transient rather than
@@ -729,7 +740,8 @@ the transcendent."""@en ;
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:AtonementWithTheFather a monomyth:Stage ;
+monomyth:AtonementWithTheFather a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Atonement with the Father"@en ;
     rdfs:comment """The hero confronts the ultimate authority of the inner world in the
 father-figure who both judges and initiates, and must be annihilated and reborn in the crucible of
@@ -754,7 +766,8 @@ that encounter."""@en ;
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:Apotheosis a monomyth:Stage ;
+monomyth:Apotheosis a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Apotheosis"@en ;
     rdfs:comment """Stripped of all ego-bound limitation, the hero achieves a state of divine
 knowledge or blissful rest beyond all categories of being, dwelling momentarily in the eternal
@@ -779,7 +792,8 @@ before returning."""@en ;
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheUltimateBoon a monomyth:Stage ;
+monomyth:TheUltimateBoon a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Ultimate Boon"@en ;
     rdfs:comment """The hero attains the supreme goal of the quest in the form of an elixir, grail,
 fire, or wisdom that holds the power to restore life, fertility, or illumination to the world left
@@ -804,7 +818,8 @@ behind."""@en ;
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:RefusalOfTheReturn a monomyth:Stage ;
+monomyth:RefusalOfTheReturn a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Refusal of the Return"@en ;
     rdfs:comment """Having tasted transcendence or bliss, the hero is reluctant to re-enter the
 mundane world, clinging to the realm of discovery rather than bearing its fruits back to humanity."""@en ;
@@ -828,7 +843,8 @@ mundane world, clinging to the realm of discovery rather than bearing its fruits
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheMagicFlight a monomyth:Stage ;
+monomyth:TheMagicFlight a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Magic Flight"@en ;
     rdfs:comment """The hero escapes from the inner world, sometimes aided and sometimes pursued,
 navigating a perilous retreat that itself becomes a test of the transformation newly won."""@en ;
@@ -852,7 +868,8 @@ navigating a perilous retreat that itself becomes a test of the transformation n
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:RescueFromWithout a monomyth:Stage ;
+monomyth:RescueFromWithout a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Rescue from Without"@en ;
     rdfs:comment """When the hero cannot return alone, a guide or community from the ordinary world
 reaches across the threshold to draw the exhausted or reluctant traveller back into human society."""@en ;
@@ -876,7 +893,8 @@ reaches across the threshold to draw the exhausted or reluctant traveller back i
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage ;
+monomyth:TheCrossingOfTheReturnThreshold a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "The Crossing of the Return Threshold"@en ;
     rdfs:comment """The hero must re-enter the world of common day and find a way to translate the
 wisdom of the deep experience into terms that a community bound by time and form can receive."""@en ;
@@ -900,7 +918,8 @@ wisdom of the deep experience into terms that a community bound by time and form
         monomyth:MasterOfTheTwoWorlds,
         monomyth:FreedomToLive .
 
-monomyth:MasterOfTheTwoWorlds a monomyth:Stage ;
+monomyth:MasterOfTheTwoWorlds a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Master of the Two Worlds"@en ;
     rdfs:comment """Having moved freely between the mortal and divine, the hero achieves the
 equilibrium to hold both realms simultaneously, neither clinging to the transcendent nor enslaved by
@@ -925,7 +944,8 @@ the mundane."""@en ;
         monomyth:TheCrossingOfTheReturnThreshold,
         monomyth:FreedomToLive .
 
-monomyth:FreedomToLive a monomyth:Stage ;
+monomyth:FreedomToLive a monomyth:Stage,
+        owl:NamedIndividual ;
     rdfs:label "Freedom to Live"@en ;
     rdfs:comment """Released from fear of death and attachment to outcome, the hero lives fully in
 the present moment as a conduit of the life-force who neither clings to nor flees from existence."""@en ;
@@ -951,7 +971,8 @@ the present moment as a conduit of the life-force who neither clings to nor flee
 
 # --- Character Archetypes -------------
 
-monomyth:Hero a monomyth:Archetype ;
+monomyth:Hero a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Hero"@en ;
     rdfs:comment """The protagonist who undergoes the journey and transformation."""@en ;
     owl:differentFrom monomyth:Mentor,
@@ -962,7 +983,8 @@ monomyth:Hero a monomyth:Archetype ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:Mentor a monomyth:Archetype ;
+monomyth:Mentor a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Mentor"@en ;
     rdfs:comment """The guide or teacher who provides the hero with knowledge, tools, or confidence."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -973,7 +995,8 @@ monomyth:Mentor a monomyth:Archetype ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:ThresholdGuardian a monomyth:Archetype ;
+monomyth:ThresholdGuardian a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Threshold Guardian"@en ;
     rdfs:comment """A figure who tests the hero at the boundary of a new world or stage."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -984,7 +1007,8 @@ monomyth:ThresholdGuardian a monomyth:Archetype ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:Herald a monomyth:Archetype ;
+monomyth:Herald a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Herald"@en ;
     rdfs:comment """The figure or force that announces the call to the adventure."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -995,7 +1019,8 @@ monomyth:Herald a monomyth:Archetype ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:Shapeshifter a monomyth:Archetype ;
+monomyth:Shapeshifter a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Shapeshifter"@en ;
     rdfs:comment """A figure whose loyalty or nature is ambiguous and shifting."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -1006,7 +1031,8 @@ monomyth:Shapeshifter a monomyth:Archetype ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:Shadow a monomyth:Archetype ;
+monomyth:Shadow a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Shadow"@en ;
     rdfs:comment """The antagonist or dark mirror of the hero, representing repressed qualities or
 external opposition."""@en ;
@@ -1018,7 +1044,8 @@ external opposition."""@en ;
         monomyth:Trickster,
         monomyth:Ally .
 
-monomyth:Trickster a monomyth:Archetype ;
+monomyth:Trickster a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Trickster"@en ;
     rdfs:comment """A figure who provides comic relief, disruption, or catalytic chaos."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -1029,7 +1056,8 @@ monomyth:Trickster a monomyth:Archetype ;
         monomyth:Shadow,
         monomyth:Ally .
 
-monomyth:Ally a monomyth:Archetype ;
+monomyth:Ally a monomyth:Archetype,
+        owl:NamedIndividual ;
     rdfs:label "Ally"@en ;
     rdfs:comment """A companion who supports the hero through the journey."""@en ;
     owl:differentFrom monomyth:Hero,
@@ -1042,7 +1070,8 @@ monomyth:Ally a monomyth:Archetype ;
 
 # --- Fit Quality Values ---------------
 
-monomyth:PerfectFit a monomyth:FitQuality ;
+monomyth:PerfectFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Perfect Fit"@en ;
     rdfs:comment """The narrative maps onto the monomyth stage with precision."""@en ;
     monomyth:fitScore 4 ;
@@ -1052,7 +1081,8 @@ monomyth:PerfectFit a monomyth:FitQuality ;
         monomyth:AbsentFit,
         monomyth:InvertedFit .
 
-monomyth:StrongFit a monomyth:FitQuality ;
+monomyth:StrongFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Strong Fit"@en ;
     rdfs:comment """The narrative clearly manifests the stage with minor variations."""@en ;
     monomyth:fitScore 3 ;
@@ -1062,7 +1092,8 @@ monomyth:StrongFit a monomyth:FitQuality ;
         monomyth:AbsentFit,
         monomyth:InvertedFit .
 
-monomyth:ModerateFit a monomyth:FitQuality ;
+monomyth:ModerateFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Moderate Fit"@en ;
     rdfs:comment """The stage is recognizable but requires some interpretive reframing."""@en ;
     monomyth:fitScore 2 ;
@@ -1072,7 +1103,8 @@ monomyth:ModerateFit a monomyth:FitQuality ;
         monomyth:AbsentFit,
         monomyth:InvertedFit .
 
-monomyth:WeakFit a monomyth:FitQuality ;
+monomyth:WeakFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Weak Fit"@en ;
     rdfs:comment """The stage is only loosely or partially present."""@en ;
     monomyth:fitScore 1 ;
@@ -1082,7 +1114,8 @@ monomyth:WeakFit a monomyth:FitQuality ;
         monomyth:AbsentFit,
         monomyth:InvertedFit .
 
-monomyth:AbsentFit a monomyth:FitQuality ;
+monomyth:AbsentFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Absent Fit"@en ;
     rdfs:comment """The stage is not meaningfully present in the narrative."""@en ;
     monomyth:fitScore 0 ;
@@ -1092,7 +1125,8 @@ monomyth:AbsentFit a monomyth:FitQuality ;
         monomyth:WeakFit,
         monomyth:InvertedFit .
 
-monomyth:InvertedFit a monomyth:FitQuality ;
+monomyth:InvertedFit a monomyth:FitQuality,
+        owl:NamedIndividual ;
     rdfs:label "Inverted Fit"@en ;
     rdfs:comment """The stage is present but deliberately reversed or subverted."""@en ;
     monomyth:fitScore -1 ;
