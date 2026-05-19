@@ -535,6 +535,7 @@ function createDetailPanel(fitBar) {
       </button>
       <div class="stage-detail-kicker"></div>
       <div class="stage-detail-title"></div>
+      <div class="stage-detail-realizes-stage"></div>
       <div class="stage-detail-body"></div>
     </div>
     <div class="stage-detail-divergences" hidden></div>
@@ -579,11 +580,19 @@ function renderStageDivergences(container, stageData) {
 function openDetailPanel(panel, order, total, stageData) {
   const kicker = panel.querySelector('.stage-detail-kicker');
   const title = panel.querySelector('.stage-detail-title');
+  const realizesStage = panel.querySelector('.stage-detail-realizes-stage');
   const body = panel.querySelector('.stage-detail-body');
   const divergences = panel.querySelector('.stage-detail-divergences');
 
   kicker.textContent = `Stage ${order} of ${total}`;
   title.textContent = stageData?.label || `Stage ${order}`;
+  if (stageData?.realizesStageLabel) {
+    realizesStage.textContent = stageData.realizesStageLabel;
+    realizesStage.hidden = false;
+  } else {
+    realizesStage.textContent = '';
+    realizesStage.hidden = true;
+  }
   body.textContent = stageData?.description || 'No description available for this stage.';
   renderStageDivergences(divergences, stageData);
 

@@ -31,6 +31,7 @@ from rdflib.namespace import RDF, RDFS
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
+ONTOLOGY_FILE = ROOT_DIR / "ontology" / "ontology.ttl"
 OUTPUT_JSON = ROOT_DIR / "website" / "data" / "modal_data.json"
 
 MONOMYTH = Namespace("https://monomyth.metamuses.org/ontology#")
@@ -55,6 +56,7 @@ PRED_STAGE_REALIZATION = MONOMYTH.StageRealization
 PRED_STAGE_REALIZATION_OF = MONOMYTH.stageRealizationOf
 PRED_STAGE_REALIZATION_ORDER = MONOMYTH.stageRealizationOrder
 PRED_REALIZATION_DESCRIPTION = MONOMYTH.realizationDescription
+PRED_REALIZES_STAGE = MONOMYTH.realizesStage
 PRED_DIVERGENCE_RATIONALE = MONOMYTH.divergenceRationale
 
 PRED_HAS_NARRATIVE_DIVERGENCE = MONOMYTH.hasNarrativeDivergence
@@ -108,6 +110,36 @@ def parse_order(graph: Graph, stage_iri: URIRef) -> int | None:
     return None
 
 
+def stage_term_value(graph: Graph, stage_term_iri: URIRef) -> str:
+    """Return compact QName or fallback tail for a canonical stage URI."""
+    if not isinstance(stage_term_iri, URIRef):
+        return str(stage_term_iri)
+
+    normalized = graph.namespace_manager.normalizeUri(stage_term_iri)
+
+    if normalized and ":" in normalized:
+        return normalized
+
+    return iri_tail(str(stage_term_iri))
+
+
+def collect_ontology_stage_labels() -> dict[str, str]:
+    """Load ontology stage labels keyed by stage URI string."""
+    if not ONTOLOGY_FILE.exists():
+        sys.exit(f"Error: missing ontology file {ONTOLOGY_FILE}")
+
+    ontology_graph = Graph()
+    ontology_graph.parse(ONTOLOGY_FILE, format="turtle")
+
+    stage_labels: dict[str, str] = {}
+    for stage_iri in ontology_graph.subjects(RDF.type, MONOMYTH.Stage):
+        label = literal_value(ontology_graph, stage_iri, RDFS.label)
+        if label:
+            stage_labels[str(stage_iri)] = label
+
+    return stage_labels
+
+
 def collect_divergence_data(graph: Graph) -> dict[str, dict[str, str | None]]:
     """Build divergence metadata lookup keyed by divergence IRI string."""
     divergences: dict[str, dict[str, str | None]] = {}
@@ -134,6 +166,7 @@ def build_stage_payload(
     graph: Graph,
     stage_iri: URIRef,
     divergence_lookup: dict[str, dict[str, str | None]],
+    ontology_stage_labels: dict[str, str],
 ) -> dict[str, object]:
     """Build one stage payload used in the modal data JSON output."""
     payload: dict[str, object] = {
@@ -142,6 +175,14 @@ def build_stage_payload(
             literal_value(graph, stage_iri, PRED_REALIZATION_DESCRIPTION)
         ),
     }
+
+    for realized_stage_iri in graph.objects(stage_iri, PRED_REALIZES_STAGE):
+        stage_uri = str(realized_stage_iri)
+        payload["realizesStage"] = stage_term_value(graph, realized_stage_iri)
+        payload["realizesStageLabel"] = (
+            ontology_stage_labels.get(stage_uri) or iri_tail(stage_uri)
+        )
+        break
 
     for divergence_key, divergence_predicate in STAGE_DIVERGENCE_PREDICATES:
         for divergence_iri in graph.objects(stage_iri, divergence_predicate):
@@ -160,6 +201,7 @@ def build_stage_payload(
 def collect_expression_stages(
     graph: Graph,
     divergence_lookup: dict[str, dict[str, str | None]],
+    ontology_stage_labels: dict[str, str],
 ) -> dict[str, dict[int, dict[str, object]]]:
     """Group stages by monomyth expression and stage order."""
     expression_stages: dict[str, dict[int, dict[str, object]]] = {}
@@ -169,7 +211,12 @@ def collect_expression_stages(
         if stage_order is None:
             continue
 
-        stage_payload = build_stage_payload(graph, stage_iri, divergence_lookup)
+        stage_payload = build_stage_payload(
+            graph,
+            stage_iri,
+            divergence_lookup,
+            ontology_stage_labels,
+        )
         for expression_iri in graph.objects(stage_iri, PRED_STAGE_REALIZATION_OF):
             expression_key = str(expression_iri)
             expression_stages.setdefault(expression_key, {})[
@@ -179,7 +226,10 @@ def collect_expression_stages(
     return expression_stages
 
 
-def build_modal_payload(ttl_filename: str) -> dict[str, object]:
+def build_modal_payload(
+    ttl_filename: str,
+    ontology_stage_labels: dict[str, str],
+) -> dict[str, object]:
     """Parse a single subgraph and convert it into modal-friendly data JSON."""
     ttl_path = SUBGRAPHS_DIR / ttl_filename
     if not ttl_path.exists():
@@ -189,7 +239,11 @@ def build_modal_payload(ttl_filename: str) -> dict[str, object]:
     graph.parse(ttl_path, format="turtle")
 
     divergence_lookup = collect_divergence_data(graph)
-    expression_stages = collect_expression_stages(graph, divergence_lookup)
+    expression_stages = collect_expression_stages(
+        graph,
+        divergence_lookup,
+        ontology_stage_labels,
+    )
 
     journeys = []
     expression_iris = sorted(
@@ -221,10 +275,14 @@ def build_modal_payload(ttl_filename: str) -> dict[str, object]:
 
 
 modals: dict[str, dict[str, object]] = {}
+ONTOLOGY_STAGE_LABELS = collect_ontology_stage_labels()
 
 for modal_id, modal_ttl_filename in MODAL_TTL_MAP.items():
     print(f"Parsing graph/subgraphs/{modal_ttl_filename}")
-    modals[modal_id] = build_modal_payload(modal_ttl_filename)
+    modals[modal_id] = build_modal_payload(
+        modal_ttl_filename,
+        ONTOLOGY_STAGE_LABELS,
+    )
 
 output = {
     "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
