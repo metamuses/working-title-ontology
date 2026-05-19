@@ -1,0 +1,215 @@
+#!/usr/bin/env python3
+
+"""Generate website modal stage data from Turtle subgraphs."""
+
+from __future__ import annotations
+
+import json
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+from rdflib import Graph, Namespace, URIRef
+from rdflib.namespace import RDF, RDFS
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
+OUTPUT_JSON = ROOT_DIR / "website" / "data" / "modal-stage-data.json"
+
+MONOMYTH = Namespace("https://monomyth.metamuses.org/ontology#")
+
+MODAL_TTL_MAP = {
+    "kg-modal-matrix": "the-matrix.ttl",
+    "kg-modal-lion-king": "the-lion-king.ttl",
+    "kg-modal-call-of-wild": "the-call-of-the-wild.ttl",
+    "kg-modal-rostam": "rostam-haft-khan.ttl",
+    "kg-modal-waltermitty": "walter-mitty.ttl",
+    "kg-modal-batman": "batman.ttl",
+    "kg-modal-oedipus": "oedipus.ttl",
+    "kg-modal-sable-fable": "sable-fable.ttl",
+    "kg-modal-ladybird": "lady-bird.ttl",
+    "kg-modal-aeneid": "aeneid.ttl",
+    "kg-modal-zelda": "ocarina-of-time.ttl",
+    "kg-modal-orlando": "orlando-furioso.ttl",
+}
+
+PRED_MONOMYTH_EXPRESSION = MONOMYTH.MonomythExpression
+PRED_STAGE_REALIZATION = MONOMYTH.StageRealization
+PRED_STAGE_REALIZATION_OF = MONOMYTH.stageRealizationOf
+PRED_STAGE_REALIZATION_ORDER = MONOMYTH.stageRealizationOrder
+PRED_REALIZATION_DESCRIPTION = MONOMYTH.realizationDescription
+PRED_DIVERGENCE_RATIONALE = MONOMYTH.divergenceRationale
+
+PRED_HAS_NARRATIVE_DIVERGENCE = MONOMYTH.hasNarrativeDivergence
+PRED_HAS_SEQUENTIAL_DIVERGENCE = MONOMYTH.hasSequentialDivergence
+PRED_HAS_SEMIOTIC_DIVERGENCE = MONOMYTH.hasSemioticDivergence
+
+PRED_NARRATIVE_DIVERGENCE = MONOMYTH.NarrativeDivergence
+PRED_SEQUENTIAL_DIVERGENCE = MONOMYTH.SequentialDivergence
+PRED_SEMIOTIC_DIVERGENCE = MONOMYTH.SemioticDivergence
+
+DIVERGENCE_TYPES = {
+    PRED_NARRATIVE_DIVERGENCE: "narrative",
+    PRED_SEQUENTIAL_DIVERGENCE: "sequential",
+    PRED_SEMIOTIC_DIVERGENCE: "semiotic",
+}
+
+STAGE_DIVERGENCE_PREDICATES = (
+    ("narrative", PRED_HAS_NARRATIVE_DIVERGENCE),
+    ("sequential", PRED_HAS_SEQUENTIAL_DIVERGENCE),
+    ("semiotic", PRED_HAS_SEMIOTIC_DIVERGENCE),
+)
+
+
+def normalize_text(value: str | None) -> str | None:
+    """Collapse whitespace so multiline literals become compact sentences."""
+    if value is None:
+        return None
+    return " ".join(value.split())
+
+
+def iri_tail(iri: str) -> str:
+    """Return a readable fallback from an IRI string."""
+    parts = iri.rstrip("/").split("/")
+    return parts[-1] if parts else iri
+
+
+def literal_value(graph: Graph, subject: URIRef, predicate: URIRef) -> str | None:
+    """Return the first literal object value for a subject/predicate pair."""
+    for obj in graph.objects(subject, predicate):
+        return str(obj)
+    return None
+
+
+def parse_order(graph: Graph, stage_iri: URIRef) -> int | None:
+    """Read a numeric stage order from a stage realization node."""
+    for obj in graph.objects(stage_iri, PRED_STAGE_REALIZATION_ORDER):
+        try:
+            return int(obj)
+        except (TypeError, ValueError):
+            return None
+    return None
+
+
+def collect_divergence_data(graph: Graph) -> dict[str, dict[str, str | None]]:
+    """Build divergence metadata lookup keyed by divergence IRI string."""
+    divergences: dict[str, dict[str, str | None]] = {}
+
+    for divergence_type_iri, divergence_key in DIVERGENCE_TYPES.items():
+        for divergence_iri in graph.subjects(RDF.type, divergence_type_iri):
+            iri_str = str(divergence_iri)
+            label = literal_value(graph, divergence_iri, RDFS.label) or iri_tail(iri_str)
+            rationale = normalize_text(literal_value(graph, divergence_iri, PRED_DIVERGENCE_RATIONALE))
+            divergences[iri_str] = {
+                "type": divergence_key,
+                "label": label,
+                "rationale": rationale,
+            }
+
+    return divergences
+
+
+def build_stage_payload(
+    graph: Graph,
+    stage_iri: URIRef,
+    divergence_lookup: dict[str, dict[str, str | None]],
+) -> dict[str, object]:
+    """Build one stage payload used in the modal JSON output."""
+    payload: dict[str, object] = {
+        "label": literal_value(graph, stage_iri, RDFS.label),
+        "description": normalize_text(literal_value(graph, stage_iri, PRED_REALIZATION_DESCRIPTION)),
+    }
+
+    for divergence_key, divergence_predicate in STAGE_DIVERGENCE_PREDICATES:
+        for divergence_iri in graph.objects(stage_iri, divergence_predicate):
+            divergence_data = divergence_lookup.get(str(divergence_iri))
+            if divergence_data is None:
+                continue
+            payload[divergence_key] = {
+                "label": divergence_data["label"],
+                "rationale": divergence_data["rationale"],
+            }
+            break
+
+    return payload
+
+
+def collect_expression_stages(
+    graph: Graph,
+    divergence_lookup: dict[str, dict[str, str | None]],
+) -> dict[str, dict[int, dict[str, object]]]:
+    """Group stages by monomyth expression and stage order."""
+    expression_stages: dict[str, dict[int, dict[str, object]]] = {}
+
+    for stage_iri in graph.subjects(RDF.type, PRED_STAGE_REALIZATION):
+        stage_order = parse_order(graph, stage_iri)
+        if stage_order is None:
+            continue
+
+        stage_payload = build_stage_payload(graph, stage_iri, divergence_lookup)
+        for expression_iri in graph.objects(stage_iri, PRED_STAGE_REALIZATION_OF):
+            expression_key = str(expression_iri)
+            expression_stages.setdefault(expression_key, {})[stage_order] = stage_payload
+
+    return expression_stages
+
+
+def build_modal_payload(ttl_filename: str) -> dict[str, object]:
+    """Parse a single subgraph and convert it into modal-friendly JSON data."""
+    ttl_path = SUBGRAPHS_DIR / ttl_filename
+    if not ttl_path.exists():
+        sys.exit(f"Error: missing subgraph file {ttl_path}")
+
+    graph = Graph()
+    graph.parse(ttl_path, format="turtle")
+
+    divergence_lookup = collect_divergence_data(graph)
+    expression_stages = collect_expression_stages(graph, divergence_lookup)
+
+    journeys = []
+    expression_iris = sorted(str(iri) for iri in graph.subjects(RDF.type, PRED_MONOMYTH_EXPRESSION))
+
+    for expression_iri in expression_iris:
+        stage_map = expression_stages.get(expression_iri, {})
+        ordered_stages: dict[str, dict[str, object]] = {}
+        for stage_order in sorted(stage_map):
+            ordered_stages[str(stage_order)] = stage_map[stage_order]
+
+        journeys.append(
+            {
+                "id": expression_iri,
+                "label": literal_value(graph, URIRef(expression_iri), RDFS.label) or iri_tail(expression_iri),
+                "stages": ordered_stages,
+            }
+        )
+
+    if not journeys:
+        sys.exit(f"Error: no monomyth expressions found in {ttl_path}")
+
+    return {
+        "ttlFile": ttl_filename,
+        "journeys": journeys,
+    }
+
+
+def main() -> None:
+    """Generate JSON for all configured modals."""
+    modals: dict[str, dict[str, object]] = {}
+
+    for modal_id, ttl_filename in MODAL_TTL_MAP.items():
+        print(f"Parsing graph/subgraphs/{ttl_filename}")
+        modals[modal_id] = build_modal_payload(ttl_filename)
+
+    output = {
+        "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
+        "modals": modals,
+    }
+
+    OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+    OUTPUT_JSON.write_text(f"{json.dumps(output, indent=2)}\n", encoding="utf-8")
+
+    print(f"\nWrote modal stage data to {OUTPUT_JSON.relative_to(ROOT_DIR)}")
+
+
+if __name__ == "__main__":
+    main()

@@ -476,3 +476,234 @@ if (bgCanvas) {
   });
 
 } // end bgCanvas guard
+
+// ── Modal Stage Data Enhancer (JSON-backed) ────────────────────────────────
+const MODAL_STAGE_DATA_PATHS = [
+  '/data/modal-stage-data.json',
+  './data/modal-stage-data.json',
+];
+
+const TYPE_LABELS = {
+  sequential: 'Sequential Divergence',
+  narrative: 'Narrative Divergence',
+  semiotic: 'Semiotic Divergence',
+};
+
+let modalStageDataCache = null;
+let modalStageDataPromise = null;
+
+async function loadModalStageData() {
+  if (modalStageDataCache) return modalStageDataCache;
+  if (modalStageDataPromise) return modalStageDataPromise;
+
+  modalStageDataPromise = (async () => {
+    let lastError = null;
+    for (const path of MODAL_STAGE_DATA_PATHS) {
+      try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`${response.status}`);
+        const data = await response.json();
+        modalStageDataCache = data;
+        return data;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    throw lastError || new Error('Unable to fetch modal stage data');
+  })().catch(error => {
+    console.warn('[modal-stage-data]', error);
+    return null;
+  });
+
+  return modalStageDataPromise;
+}
+
+function getModalJourneys(data, modalId) {
+  if (!data || !data.modals || !data.modals[modalId]) return [];
+  const journeys = data.modals[modalId].journeys;
+  return Array.isArray(journeys) ? journeys : [];
+}
+
+let divergenceTooltip = null;
+let tooltipHideTimer = null;
+
+function createDivergenceTooltip() {
+  if (divergenceTooltip) return;
+  divergenceTooltip = document.createElement('div');
+  divergenceTooltip.id = 'div-tooltip';
+  divergenceTooltip.setAttribute('role', 'tooltip');
+  divergenceTooltip.innerHTML = `
+    <div class="div-tooltip-type"></div>
+    <div class="div-tooltip-label"></div>
+    <div class="div-tooltip-body"></div>
+  `;
+  document.body.appendChild(divergenceTooltip);
+}
+
+function showDivergenceTooltip(icon, typeLabel, label, rationale) {
+  clearTimeout(tooltipHideTimer);
+  divergenceTooltip.querySelector('.div-tooltip-type').textContent = typeLabel;
+  divergenceTooltip.querySelector('.div-tooltip-label').textContent = label;
+  divergenceTooltip.querySelector('.div-tooltip-body').textContent = rationale || 'No rationale available.';
+
+  divergenceTooltip.style.opacity = '0';
+  divergenceTooltip.style.display = 'block';
+
+  const rect = icon.getBoundingClientRect();
+  const tooltipWidth = 420;
+  let left = rect.left + window.scrollX + rect.width / 2 - tooltipWidth / 2;
+  const top = rect.top + window.scrollY - 8;
+
+  left = Math.max(8, Math.min(left, window.innerWidth - tooltipWidth - 8));
+  divergenceTooltip.style.left = `${left}px`;
+  divergenceTooltip.style.top = `${top}px`;
+  divergenceTooltip.style.width = `${tooltipWidth}px`;
+
+  requestAnimationFrame(() => {
+    divergenceTooltip.style.opacity = '1';
+    divergenceTooltip.style.transform = 'translateY(-100%) translateY(-12px)';
+  });
+}
+
+function hideDivergenceTooltip() {
+  tooltipHideTimer = setTimeout(() => {
+    if (!divergenceTooltip) return;
+    divergenceTooltip.style.opacity = '0';
+    divergenceTooltip.style.transform = 'translateY(-100%) translateY(-8px)';
+    setTimeout(() => {
+      divergenceTooltip.style.display = 'none';
+    }, 250);
+  }, 120);
+}
+
+function createDetailPanel(fitBar) {
+  const panel = document.createElement('div');
+  panel.className = 'stage-detail-panel';
+  panel.innerHTML = `
+    <div class="stage-detail-inner">
+      <button class="stage-detail-close" aria-label="Close stage detail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="stage-detail-kicker"></div>
+      <div class="stage-detail-title"></div>
+      <div class="stage-detail-body"></div>
+    </div>
+  `;
+  fitBar.parentNode.insertBefore(panel, fitBar.nextSibling);
+  return panel;
+}
+
+function openDetailPanel(panel, order, total, stageData) {
+  const kicker = panel.querySelector('.stage-detail-kicker');
+  const title = panel.querySelector('.stage-detail-title');
+  const body = panel.querySelector('.stage-detail-body');
+
+  kicker.textContent = `Stage ${order} of ${total}`;
+  title.textContent = stageData?.label || `Stage ${order}`;
+  body.textContent = stageData?.description || 'No description available for this stage.';
+
+  panel.classList.add('open');
+}
+
+function closeDetailPanel(panel, segments) {
+  panel.classList.remove('open');
+  if (segments) segments.forEach(segment => segment.classList.remove('segment-active'));
+}
+
+function isMobileViewport() {
+  return window.innerWidth <= 600;
+}
+
+function wireModalStageData(modal) {
+  const fitBars = [...modal.querySelectorAll('.fit-bar.fit-bar-large')];
+  if (!fitBars.length) return;
+
+  // Trigger data fetch once so first interaction is typically warm.
+  loadModalStageData();
+
+  fitBars.forEach((fitBar, fitBarIndex) => {
+    const segments = [...fitBar.querySelectorAll('.segment')];
+    const panel = createDetailPanel(fitBar);
+    let activeIndex = null;
+
+    panel.querySelector('.stage-detail-close').addEventListener('click', () => {
+      closeDetailPanel(panel, segments);
+      activeIndex = null;
+    });
+
+    segments.forEach((segment, segmentIndex) => {
+      segment.style.cursor = 'pointer';
+      const stageOrder = segmentIndex + 1;
+
+      segment.addEventListener('click', async event => {
+        if (isMobileViewport()) return;
+        if (event.target.classList.contains('div-icon')) return;
+
+        const data = await loadModalStageData();
+        const journeys = getModalJourneys(data, modal.id);
+        const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
+        const stageData = stageMap ? stageMap[String(stageOrder)] : null;
+
+        if (activeIndex === segmentIndex && panel.classList.contains('open')) {
+          closeDetailPanel(panel, segments);
+          activeIndex = null;
+          return;
+        }
+
+        segments.forEach(item => item.classList.remove('segment-active'));
+        segment.classList.add('segment-active');
+        activeIndex = segmentIndex;
+
+        openDetailPanel(panel, stageOrder, segments.length, stageData);
+      });
+    });
+
+    fitBar.querySelectorAll('.div-icon').forEach(icon => {
+      if (isMobileViewport()) return;
+
+      let divergenceType = null;
+      if (icon.classList.contains('sequential')) divergenceType = 'sequential';
+      else if (icon.classList.contains('narrative')) divergenceType = 'narrative';
+      else if (icon.classList.contains('semiotic')) divergenceType = 'semiotic';
+      if (!divergenceType) return;
+
+      const segment = icon.closest('.segment');
+      const stageOrder = segments.indexOf(segment) + 1;
+
+      icon.addEventListener('mouseenter', async () => {
+        const data = await loadModalStageData();
+        const journeys = getModalJourneys(data, modal.id);
+        const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
+        const stageData = stageMap ? stageMap[String(stageOrder)] : null;
+        const divergenceInfo = stageData ? stageData[divergenceType] : null;
+        showDivergenceTooltip(
+          icon,
+          TYPE_LABELS[divergenceType],
+          divergenceInfo ? divergenceInfo.label : TYPE_LABELS[divergenceType],
+          divergenceInfo ? divergenceInfo.rationale : null
+        );
+      });
+      icon.addEventListener('mouseleave', hideDivergenceTooltip);
+    });
+  });
+}
+
+function initModalStageEnhancer() {
+  const modals = [...document.querySelectorAll('.kg-modal')];
+  if (!modals.length) return;
+
+  createDivergenceTooltip();
+
+  modals.forEach(modal => {
+    const observer = new MutationObserver(() => {
+      if (modal.getAttribute('aria-hidden') !== 'false') return;
+      wireModalStageData(modal);
+      observer.disconnect();
+    });
+    observer.observe(modal, { attributes: true });
+  });
+}
+
+initModalStageEnhancer();
