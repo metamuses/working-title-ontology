@@ -626,6 +626,7 @@ function wireModalData(modal) {
   // Trigger data fetch once so first interaction is typically warm.
   loadModalData();
   const stageControllers = [];
+  let lastActiveController = null;
 
   fitBars.forEach((fitBar, fitBarIndex) => {
     const segments = [...fitBar.querySelectorAll('.segment')];
@@ -645,7 +646,11 @@ function wireModalData(modal) {
       controller.activeIndex = null;
     });
 
-    controller.activateStage = async (segmentIndex, toggleSame = false) => {
+    controller.activateStage = async (
+      segmentIndex,
+      toggleSame = false,
+      setAsLastActive = true
+    ) => {
       if (segmentIndex < 0 || segmentIndex >= segments.length) return;
 
       const stageOrder = segmentIndex + 1;
@@ -667,6 +672,7 @@ function wireModalData(modal) {
       segments.forEach(item => item.classList.remove('segment-active'));
       segments[segmentIndex].classList.add('segment-active');
       controller.activeIndex = segmentIndex;
+      if (setAsLastActive) lastActiveController = controller;
       openDetailPanel(panel, stageOrder, segments.length, stageData);
     };
 
@@ -680,7 +686,7 @@ function wireModalData(modal) {
     stageControllers.push(controller);
 
     if (segments.length > 0) {
-      void controller.activateStage(0);
+      void controller.activateStage(0, false, false);
     }
   });
 
@@ -714,15 +720,27 @@ function wireModalData(modal) {
     if (!stageControllers.length) return;
     event.preventDefault();
 
-    const currentController = stageControllers.find(
-      item => item.activeIndex !== null && item.panel.classList.contains('open')
-    ) || stageControllers[0];
+    const currentController = (
+      lastActiveController
+      && lastActiveController.activeIndex !== null
+      && lastActiveController.panel.classList.contains('open')
+    )
+      ? lastActiveController
+      : (
+        stageControllers.find(
+          item => item.activeIndex !== null && item.panel.classList.contains('open')
+        ) || stageControllers[0]
+      );
 
     if (currentController.activeIndex === null) {
       if (event.key === 'ArrowRight') {
-        await currentController.activateStage(0);
+        await currentController.activateStage(0, false, true);
       } else {
-        await currentController.activateStage(currentController.segments.length - 1);
+        await currentController.activateStage(
+          currentController.segments.length - 1,
+          false,
+          true
+        );
       }
       return;
     }
@@ -732,7 +750,7 @@ function wireModalData(modal) {
       0,
       Math.min(currentController.activeIndex + delta, currentController.segments.length - 1)
     );
-    await currentController.activateStage(nextIndex);
+    await currentController.activateStage(nextIndex, false, true);
   });
 }
 
