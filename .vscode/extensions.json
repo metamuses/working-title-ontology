@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "ritwickdey.LiveServer"
+    "ritwickdey.LiveServer",
+    "stardog-union.stardog-rdf-grammars"
   ]
 }

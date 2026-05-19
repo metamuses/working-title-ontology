@@ -90,8 +90,9 @@ intimacy, renewal, and the passage from darkness toward connection.
 
 ## Acknowledgments
 
-This work was developed as a group project for the "Knowledge Representation and
-Extraction" course (2024/25) at University of Bologna.
+This work was developed as a group project for the _Knowledge Representation and
+Extraction_ 2024/25 course within the Master's degree in _Digital Humanities and
+Digital Knowledge_ at University of Bologna.
 
 ## Team members
 
