@@ -477,10 +477,9 @@ if (bgCanvas) {
 
 } // end bgCanvas guard
 
-// ── Modal Stage Data Enhancer (JSON-backed) ────────────────────────────────
-const MODAL_STAGE_DATA_PATHS = [
-  '/data/modal-stage-data.json',
-  './data/modal-stage-data.json',
+// ── Modal Data Enhancer (JSON-backed) ───────────────────────────────────────
+const MODAL_DATA_PATHS = [
+  '/data/modal_data.json',
 ];
 
 const DIVERGENCE_TYPES = [
@@ -489,33 +488,33 @@ const DIVERGENCE_TYPES = [
   { key: 'semiotic', label: 'Semiotic Divergence' },
 ];
 
-let modalStageDataCache = null;
-let modalStageDataPromise = null;
+let modalDataCache = null;
+let modalDataPromise = null;
 
-async function loadModalStageData() {
-  if (modalStageDataCache) return modalStageDataCache;
-  if (modalStageDataPromise) return modalStageDataPromise;
+async function loadModalData() {
+  if (modalDataCache) return modalDataCache;
+  if (modalDataPromise) return modalDataPromise;
 
-  modalStageDataPromise = (async () => {
+  modalDataPromise = (async () => {
     let lastError = null;
-    for (const path of MODAL_STAGE_DATA_PATHS) {
+    for (const path of MODAL_DATA_PATHS) {
       try {
         const response = await fetch(path);
         if (!response.ok) throw new Error(`${response.status}`);
         const data = await response.json();
-        modalStageDataCache = data;
+        modalDataCache = data;
         return data;
       } catch (error) {
         lastError = error;
       }
     }
-    throw lastError || new Error('Unable to fetch modal stage data');
+    throw lastError || new Error('Unable to fetch modal data');
   })().catch(error => {
-    console.warn('[modal-stage-data]', error);
+    console.warn('[modal-data]', error);
     return null;
   });
 
-  return modalStageDataPromise;
+  return modalDataPromise;
 }
 
 function getModalJourneys(data, modalId) {
@@ -596,7 +595,7 @@ function closeDetailPanel(panel, segments) {
   if (segments) segments.forEach(segment => segment.classList.remove('segment-active'));
 }
 
-function normalizeFitSection(section) {
+function normalizeModalFitSection(section) {
   if (!section || section.dataset.fitSectionNormalized === 'true') return;
 
   const heading = section.querySelector('h4');
@@ -611,16 +610,16 @@ function normalizeFitSection(section) {
   section.dataset.fitSectionNormalized = 'true';
 }
 
-function wireModalStageData(modal) {
+function wireModalData(modal) {
   const fitBars = [...modal.querySelectorAll('.fit-bar.fit-bar-large')];
   if (!fitBars.length) return;
 
   // Trigger data fetch once so first interaction is typically warm.
-  loadModalStageData();
+  loadModalData();
 
   fitBars.forEach((fitBar, fitBarIndex) => {
     const segments = [...fitBar.querySelectorAll('.segment')];
-    normalizeFitSection(fitBar.closest('.kg-modal-section'));
+    normalizeModalFitSection(fitBar.closest('.kg-modal-section'));
     const panel = createDetailPanel(fitBar);
     let activeIndex = null;
 
@@ -634,7 +633,7 @@ function wireModalStageData(modal) {
       const stageOrder = segmentIndex + 1;
 
       segment.addEventListener('click', async () => {
-        const data = await loadModalStageData();
+        const data = await loadModalData();
         const journeys = getModalJourneys(data, modal.id);
         const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
         const stageData = stageMap ? stageMap[String(stageOrder)] : null;
@@ -655,18 +654,18 @@ function wireModalStageData(modal) {
   });
 }
 
-function initModalStageEnhancer() {
+function initModalDataEnhancer() {
   const modals = [...document.querySelectorAll('.kg-modal')];
   if (!modals.length) return;
 
   modals.forEach(modal => {
     const observer = new MutationObserver(() => {
       if (modal.getAttribute('aria-hidden') !== 'false') return;
-      wireModalStageData(modal);
+      wireModalData(modal);
       observer.disconnect();
     });
     observer.observe(modal, { attributes: true });
   });
 }
 
-initModalStageEnhancer();
+initModalDataEnhancer();

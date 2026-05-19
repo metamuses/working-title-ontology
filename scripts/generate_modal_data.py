@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-"""Generate website modal stage data from Turtle subgraphs."""
-
-from __future__ import annotations
+"""Generate website modal data from Turtle subgraphs."""
 
 import json
 import sys
@@ -14,7 +12,7 @@ from rdflib.namespace import RDF, RDFS
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SUBGRAPHS_DIR = ROOT_DIR / "graph" / "subgraphs"
-OUTPUT_JSON = ROOT_DIR / "website" / "data" / "modal-stage-data.json"
+OUTPUT_JSON = ROOT_DIR / "website" / "data" / "modal_data.json"
 
 MONOMYTH = Namespace("https://monomyth.metamuses.org/ontology#")
 
@@ -98,8 +96,12 @@ def collect_divergence_data(graph: Graph) -> dict[str, dict[str, str | None]]:
     for divergence_type_iri, divergence_key in DIVERGENCE_TYPES.items():
         for divergence_iri in graph.subjects(RDF.type, divergence_type_iri):
             iri_str = str(divergence_iri)
-            label = literal_value(graph, divergence_iri, RDFS.label) or iri_tail(iri_str)
-            rationale = normalize_text(literal_value(graph, divergence_iri, PRED_DIVERGENCE_RATIONALE))
+            label = literal_value(graph, divergence_iri, RDFS.label) or iri_tail(
+                iri_str
+            )
+            rationale = normalize_text(
+                literal_value(graph, divergence_iri, PRED_DIVERGENCE_RATIONALE)
+            )
             divergences[iri_str] = {
                 "type": divergence_key,
                 "label": label,
@@ -114,10 +116,12 @@ def build_stage_payload(
     stage_iri: URIRef,
     divergence_lookup: dict[str, dict[str, str | None]],
 ) -> dict[str, object]:
-    """Build one stage payload used in the modal JSON output."""
+    """Build one stage payload used in the modal data JSON output."""
     payload: dict[str, object] = {
         "label": literal_value(graph, stage_iri, RDFS.label),
-        "description": normalize_text(literal_value(graph, stage_iri, PRED_REALIZATION_DESCRIPTION)),
+        "description": normalize_text(
+            literal_value(graph, stage_iri, PRED_REALIZATION_DESCRIPTION)
+        ),
     }
 
     for divergence_key, divergence_predicate in STAGE_DIVERGENCE_PREDICATES:
@@ -149,13 +153,15 @@ def collect_expression_stages(
         stage_payload = build_stage_payload(graph, stage_iri, divergence_lookup)
         for expression_iri in graph.objects(stage_iri, PRED_STAGE_REALIZATION_OF):
             expression_key = str(expression_iri)
-            expression_stages.setdefault(expression_key, {})[stage_order] = stage_payload
+            expression_stages.setdefault(expression_key, {})[
+                stage_order
+            ] = stage_payload
 
     return expression_stages
 
 
 def build_modal_payload(ttl_filename: str) -> dict[str, object]:
-    """Parse a single subgraph and convert it into modal-friendly JSON data."""
+    """Parse a single subgraph and convert it into modal-friendly data JSON."""
     ttl_path = SUBGRAPHS_DIR / ttl_filename
     if not ttl_path.exists():
         sys.exit(f"Error: missing subgraph file {ttl_path}")
@@ -167,7 +173,9 @@ def build_modal_payload(ttl_filename: str) -> dict[str, object]:
     expression_stages = collect_expression_stages(graph, divergence_lookup)
 
     journeys = []
-    expression_iris = sorted(str(iri) for iri in graph.subjects(RDF.type, PRED_MONOMYTH_EXPRESSION))
+    expression_iris = sorted(
+        str(iri) for iri in graph.subjects(RDF.type, PRED_MONOMYTH_EXPRESSION)
+    )
 
     for expression_iri in expression_iris:
         stage_map = expression_stages.get(expression_iri, {})
@@ -178,7 +186,8 @@ def build_modal_payload(ttl_filename: str) -> dict[str, object]:
         journeys.append(
             {
                 "id": expression_iri,
-                "label": literal_value(graph, URIRef(expression_iri), RDFS.label) or iri_tail(expression_iri),
+                "label": literal_value(graph, URIRef(expression_iri), RDFS.label)
+                or iri_tail(expression_iri),
                 "stages": ordered_stages,
             }
         )
@@ -192,24 +201,18 @@ def build_modal_payload(ttl_filename: str) -> dict[str, object]:
     }
 
 
-def main() -> None:
-    """Generate JSON for all configured modals."""
-    modals: dict[str, dict[str, object]] = {}
+modals: dict[str, dict[str, object]] = {}
 
-    for modal_id, ttl_filename in MODAL_TTL_MAP.items():
-        print(f"Parsing graph/subgraphs/{ttl_filename}")
-        modals[modal_id] = build_modal_payload(ttl_filename)
+for modal_id, modal_ttl_filename in MODAL_TTL_MAP.items():
+    print(f"Parsing graph/subgraphs/{modal_ttl_filename}")
+    modals[modal_id] = build_modal_payload(modal_ttl_filename)
 
-    output = {
-        "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
-        "modals": modals,
-    }
+output = {
+    "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
+    "modals": modals,
+}
 
-    OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_JSON.write_text(f"{json.dumps(output, indent=2)}\n", encoding="utf-8")
+OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+OUTPUT_JSON.write_text(f"{json.dumps(output, indent=2)}\n", encoding="utf-8")
 
-    print(f"\nWrote modal stage data to {OUTPUT_JSON.relative_to(ROOT_DIR)}")
-
-
-if __name__ == "__main__":
-    main()
+print(f"\nWrote modal data to {OUTPUT_JSON.relative_to(ROOT_DIR)}")
