@@ -23,7 +23,6 @@ change.
 
 import json
 import sys
-from datetime import UTC, datetime
 from pathlib import Path
 
 from rdflib import Graph, Namespace, URIRef
@@ -179,9 +178,9 @@ def build_stage_payload(
     for realized_stage_iri in graph.objects(stage_iri, PRED_REALIZES_STAGE):
         stage_uri = str(realized_stage_iri)
         payload["realizesStage"] = stage_term_value(graph, realized_stage_iri)
-        payload["realizesStageLabel"] = (
-            ontology_stage_labels.get(stage_uri) or iri_tail(stage_uri)
-        )
+        payload["realizesStageLabel"] = ontology_stage_labels.get(
+            stage_uri
+        ) or iri_tail(stage_uri)
         break
 
     for divergence_key, divergence_predicate in STAGE_DIVERGENCE_PREDICATES:
@@ -284,10 +283,7 @@ for modal_id, modal_ttl_filename in MODAL_TTL_MAP.items():
         ONTOLOGY_STAGE_LABELS,
     )
 
-output = {
-    "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
-    "modals": modals,
-}
+output = modals
 
 OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT_JSON.write_text(f"{json.dumps(output, indent=2)}\n", encoding="utf-8")

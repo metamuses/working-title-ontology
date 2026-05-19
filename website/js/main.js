@@ -518,8 +518,8 @@ async function loadModalData() {
 }
 
 function getModalJourneys(data, modalId) {
-  if (!data || !data.modals || !data.modals[modalId]) return [];
-  const journeys = data.modals[modalId].journeys;
+  if (!data || !data[modalId]) return [];
+  const journeys = data[modalId].journeys;
   return Array.isArray(journeys) ? journeys : [];
 }
 
