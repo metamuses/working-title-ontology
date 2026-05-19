@@ -625,41 +625,95 @@ function wireModalData(modal) {
 
   // Trigger data fetch once so first interaction is typically warm.
   loadModalData();
+  const stageControllers = [];
 
   fitBars.forEach((fitBar, fitBarIndex) => {
     const segments = [...fitBar.querySelectorAll('.segment')];
     normalizeModalFitSection(fitBar.closest('.kg-modal-section'));
     const panel = createDetailPanel(fitBar);
-    let activeIndex = null;
+    const controller = {
+      activeIndex: null,
+      segments,
+      panel,
+      activateStage: null,
+    };
 
     panel.querySelector('.stage-detail-close').addEventListener('click', () => {
       closeDetailPanel(panel, segments);
-      activeIndex = null;
+      controller.activeIndex = null;
     });
+
+    controller.activateStage = async (segmentIndex, toggleSame = false) => {
+      if (segmentIndex < 0 || segmentIndex >= segments.length) return;
+
+      const stageOrder = segmentIndex + 1;
+      if (
+        toggleSame
+        && controller.activeIndex === segmentIndex
+        && panel.classList.contains('open')
+      ) {
+        closeDetailPanel(panel, segments);
+        controller.activeIndex = null;
+        return;
+      }
+
+      const data = await loadModalData();
+      const journeys = getModalJourneys(data, modal.id);
+      const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
+      const stageData = stageMap ? stageMap[String(stageOrder)] : null;
+
+      segments.forEach(item => item.classList.remove('segment-active'));
+      segments[segmentIndex].classList.add('segment-active');
+      controller.activeIndex = segmentIndex;
+      openDetailPanel(panel, stageOrder, segments.length, stageData);
+    };
 
     segments.forEach((segment, segmentIndex) => {
       segment.style.cursor = 'pointer';
-      const stageOrder = segmentIndex + 1;
-
       segment.addEventListener('click', async () => {
-        const data = await loadModalData();
-        const journeys = getModalJourneys(data, modal.id);
-        const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
-        const stageData = stageMap ? stageMap[String(stageOrder)] : null;
-
-        if (activeIndex === segmentIndex && panel.classList.contains('open')) {
-          closeDetailPanel(panel, segments);
-          activeIndex = null;
-          return;
-        }
-
-        segments.forEach(item => item.classList.remove('segment-active'));
-        segment.classList.add('segment-active');
-        activeIndex = segmentIndex;
-
-        openDetailPanel(panel, stageOrder, segments.length, stageData);
+        await controller.activateStage(segmentIndex, true);
       });
     });
+
+    stageControllers.push(controller);
+  });
+
+  document.addEventListener('keydown', async event => {
+    if (modal.getAttribute('aria-hidden') !== 'false') return;
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+
+    const targetTag = event.target?.tagName?.toLowerCase();
+    if (
+      targetTag === 'input'
+      || targetTag === 'textarea'
+      || targetTag === 'select'
+      || event.target?.isContentEditable
+    ) {
+      return;
+    }
+
+    if (!stageControllers.length) return;
+    event.preventDefault();
+
+    const currentController = stageControllers.find(
+      item => item.activeIndex !== null && item.panel.classList.contains('open')
+    ) || stageControllers[0];
+
+    if (currentController.activeIndex === null) {
+      if (event.key === 'ArrowRight') {
+        await currentController.activateStage(0);
+      } else {
+        await currentController.activateStage(currentController.segments.length - 1);
+      }
+      return;
+    }
+
+    const delta = event.key === 'ArrowRight' ? 1 : -1;
+    const nextIndex = Math.max(
+      0,
+      Math.min(currentController.activeIndex + delta, currentController.segments.length - 1)
+    );
+    await currentController.activateStage(nextIndex);
   });
 }
 
