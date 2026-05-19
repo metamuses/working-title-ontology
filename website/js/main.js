@@ -483,11 +483,11 @@ const MODAL_STAGE_DATA_PATHS = [
   './data/modal-stage-data.json',
 ];
 
-const TYPE_LABELS = {
-  sequential: 'Sequential Divergence',
-  narrative: 'Narrative Divergence',
-  semiotic: 'Semiotic Divergence',
-};
+const DIVERGENCE_TYPES = [
+  { key: 'sequential', label: 'Sequential Divergence' },
+  { key: 'narrative', label: 'Narrative Divergence' },
+  { key: 'semiotic', label: 'Semiotic Divergence' },
+];
 
 let modalStageDataCache = null;
 let modalStageDataPromise = null;
@@ -524,58 +524,6 @@ function getModalJourneys(data, modalId) {
   return Array.isArray(journeys) ? journeys : [];
 }
 
-let divergenceTooltip = null;
-let tooltipHideTimer = null;
-
-function createDivergenceTooltip() {
-  if (divergenceTooltip) return;
-  divergenceTooltip = document.createElement('div');
-  divergenceTooltip.id = 'div-tooltip';
-  divergenceTooltip.setAttribute('role', 'tooltip');
-  divergenceTooltip.innerHTML = `
-    <div class="div-tooltip-type"></div>
-    <div class="div-tooltip-label"></div>
-    <div class="div-tooltip-body"></div>
-  `;
-  document.body.appendChild(divergenceTooltip);
-}
-
-function showDivergenceTooltip(icon, typeLabel, label, rationale) {
-  clearTimeout(tooltipHideTimer);
-  divergenceTooltip.querySelector('.div-tooltip-type').textContent = typeLabel;
-  divergenceTooltip.querySelector('.div-tooltip-label').textContent = label;
-  divergenceTooltip.querySelector('.div-tooltip-body').textContent = rationale || 'No rationale available.';
-
-  divergenceTooltip.style.opacity = '0';
-  divergenceTooltip.style.display = 'block';
-
-  const rect = icon.getBoundingClientRect();
-  const tooltipWidth = 420;
-  let left = rect.left + window.scrollX + rect.width / 2 - tooltipWidth / 2;
-  const top = rect.top + window.scrollY - 8;
-
-  left = Math.max(8, Math.min(left, window.innerWidth - tooltipWidth - 8));
-  divergenceTooltip.style.left = `${left}px`;
-  divergenceTooltip.style.top = `${top}px`;
-  divergenceTooltip.style.width = `${tooltipWidth}px`;
-
-  requestAnimationFrame(() => {
-    divergenceTooltip.style.opacity = '1';
-    divergenceTooltip.style.transform = 'translateY(-100%) translateY(-12px)';
-  });
-}
-
-function hideDivergenceTooltip() {
-  tooltipHideTimer = setTimeout(() => {
-    if (!divergenceTooltip) return;
-    divergenceTooltip.style.opacity = '0';
-    divergenceTooltip.style.transform = 'translateY(-100%) translateY(-8px)';
-    setTimeout(() => {
-      divergenceTooltip.style.display = 'none';
-    }, 250);
-  }, 120);
-}
-
 function createDetailPanel(fitBar) {
   const panel = document.createElement('div');
   panel.className = 'stage-detail-panel';
@@ -590,19 +538,55 @@ function createDetailPanel(fitBar) {
       <div class="stage-detail-title"></div>
       <div class="stage-detail-body"></div>
     </div>
+    <div class="stage-detail-divergences" hidden></div>
   `;
   fitBar.parentNode.insertBefore(panel, fitBar.nextSibling);
   return panel;
+}
+
+function renderStageDivergences(container, stageData) {
+  container.replaceChildren();
+
+  const divergenceItems = DIVERGENCE_TYPES.filter(({ key }) => Boolean(stageData?.[key]));
+  if (!divergenceItems.length) {
+    container.hidden = true;
+    return;
+  }
+
+  divergenceItems.forEach(({ key, label }) => {
+    const divergenceData = stageData[key];
+    const item = document.createElement('article');
+    item.className = 'stage-divergence-item';
+
+    const type = document.createElement('div');
+    type.className = 'stage-divergence-type';
+    type.textContent = label;
+
+    const title = document.createElement('div');
+    title.className = 'stage-divergence-title';
+    title.textContent = divergenceData?.label || label;
+
+    const rationale = document.createElement('div');
+    rationale.className = 'stage-divergence-body';
+    rationale.textContent = divergenceData?.rationale || 'No rationale available.';
+
+    item.append(type, title, rationale);
+    container.appendChild(item);
+  });
+
+  container.hidden = false;
 }
 
 function openDetailPanel(panel, order, total, stageData) {
   const kicker = panel.querySelector('.stage-detail-kicker');
   const title = panel.querySelector('.stage-detail-title');
   const body = panel.querySelector('.stage-detail-body');
+  const divergences = panel.querySelector('.stage-detail-divergences');
 
   kicker.textContent = `Stage ${order} of ${total}`;
   title.textContent = stageData?.label || `Stage ${order}`;
   body.textContent = stageData?.description || 'No description available for this stage.';
+  renderStageDivergences(divergences, stageData);
 
   panel.classList.add('open');
 }
@@ -612,8 +596,19 @@ function closeDetailPanel(panel, segments) {
   if (segments) segments.forEach(segment => segment.classList.remove('segment-active'));
 }
 
-function isMobileViewport() {
-  return window.innerWidth <= 600;
+function normalizeFitSection(section) {
+  if (!section || section.dataset.fitSectionNormalized === 'true') return;
+
+  const heading = section.querySelector('h4');
+  const fitLabel = section.querySelector('.fit-label.fit-label-large');
+  if (heading && fitLabel) heading.insertAdjacentElement('afterend', fitLabel);
+
+  const fitDescription = [...section.querySelectorAll('p')].find(
+    paragraph => /^\s*Stage realizations' fit\b/i.test(paragraph.textContent || '')
+  );
+  if (fitDescription) fitDescription.remove();
+
+  section.dataset.fitSectionNormalized = 'true';
 }
 
 function wireModalStageData(modal) {
@@ -625,6 +620,7 @@ function wireModalStageData(modal) {
 
   fitBars.forEach((fitBar, fitBarIndex) => {
     const segments = [...fitBar.querySelectorAll('.segment')];
+    normalizeFitSection(fitBar.closest('.kg-modal-section'));
     const panel = createDetailPanel(fitBar);
     let activeIndex = null;
 
@@ -637,10 +633,7 @@ function wireModalStageData(modal) {
       segment.style.cursor = 'pointer';
       const stageOrder = segmentIndex + 1;
 
-      segment.addEventListener('click', async event => {
-        if (isMobileViewport()) return;
-        if (event.target.classList.contains('div-icon')) return;
-
+      segment.addEventListener('click', async () => {
         const data = await loadModalStageData();
         const journeys = getModalJourneys(data, modal.id);
         const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
@@ -659,42 +652,12 @@ function wireModalStageData(modal) {
         openDetailPanel(panel, stageOrder, segments.length, stageData);
       });
     });
-
-    fitBar.querySelectorAll('.div-icon').forEach(icon => {
-      if (isMobileViewport()) return;
-
-      let divergenceType = null;
-      if (icon.classList.contains('sequential')) divergenceType = 'sequential';
-      else if (icon.classList.contains('narrative')) divergenceType = 'narrative';
-      else if (icon.classList.contains('semiotic')) divergenceType = 'semiotic';
-      if (!divergenceType) return;
-
-      const segment = icon.closest('.segment');
-      const stageOrder = segments.indexOf(segment) + 1;
-
-      icon.addEventListener('mouseenter', async () => {
-        const data = await loadModalStageData();
-        const journeys = getModalJourneys(data, modal.id);
-        const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
-        const stageData = stageMap ? stageMap[String(stageOrder)] : null;
-        const divergenceInfo = stageData ? stageData[divergenceType] : null;
-        showDivergenceTooltip(
-          icon,
-          TYPE_LABELS[divergenceType],
-          divergenceInfo ? divergenceInfo.label : TYPE_LABELS[divergenceType],
-          divergenceInfo ? divergenceInfo.rationale : null
-        );
-      });
-      icon.addEventListener('mouseleave', hideDivergenceTooltip);
-    });
   });
 }
 
 function initModalStageEnhancer() {
   const modals = [...document.querySelectorAll('.kg-modal')];
   if (!modals.length) return;
-
-  createDivergenceTooltip();
 
   modals.forEach(modal => {
     const observer = new MutationObserver(() => {

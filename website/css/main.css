@@ -1022,68 +1022,10 @@ body.modal-open {
 
 .fit-label.fit-label-large {
   font-size: 0.76rem;
-  margin-top: 4px;
+  margin-top: 8px;
+  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
-}
-
-
-/* ========================================================================
-   DIVERGENCE TOOLTIP
-   ======================================================================== */
-#div-tooltip {
-  display: none;
-  position: absolute;
-  z-index: 9000;
-  width: 420px;
-  background: rgba(237, 230, 208, 0.97);
-  border: 1px solid var(--gold-dim);
-  padding: 10px 14px;
-  box-shadow: 0 8px 32px rgba(30, 21, 8, 0.18), 0 2px 8px rgba(30, 21, 8, 0.08);
-  pointer-events: none;
-  opacity: 0;
-  transform: translateY(-100%) translateY(-8px);
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  backdrop-filter: blur(8px);
-}
-
-#div-tooltip::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 10px;
-  height: 10px;
-  background: rgba(237, 230, 208, 0.97);
-  border-right: 1px solid var(--gold-dim);
-  border-bottom: 1px solid var(--gold-dim);
-}
-
-.div-tooltip-type {
-  font-family: var(--font-body);
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--gold-dim);
-  margin-bottom: 6px;
-}
-
-.div-tooltip-label {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--ink);
-  line-height: 1.3;
-  margin-bottom: 6px;
-}
-
-.div-tooltip-body {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
 }
 
 /* ========================================================================
@@ -1098,7 +1040,7 @@ body.modal-open {
 }
 
 .stage-detail-panel.open {
-  max-height: 600px;
+  max-height: 1200px;
   opacity: 1;
   margin-top: 8px;
 }
@@ -1162,6 +1104,45 @@ body.modal-open {
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.stage-detail-divergences {
+  background: rgba(122, 92, 20, 0.04);
+  border: 1px solid rgba(122, 92, 20, 0.14);
+  border-top: none;
+  padding: 14px 20px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.stage-divergence-item + .stage-divergence-item {
+  border-top: 1px solid rgba(122, 92, 20, 0.12);
+  padding-top: 10px;
+}
+
+.stage-divergence-type {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold-dim);
+  margin-bottom: 4px;
+}
+
+.stage-divergence-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.stage-divergence-body {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
 /* Active segment highlight */
@@ -1772,31 +1753,9 @@ code {
     padding: 2px 6px;
   }
 
-  /* ── Mobile: Stage Fit Profile — view-only, no interaction ── */
-
-  /* Disable clicks on every segment bar */
-  .fit-bar.fit-bar-large .segment {
-    pointer-events: none !important;
-    cursor: default !important;
-  }
-
-  /* Icons visible but non-interactive on mobile */
+  /* Icons stay visible but taps should target the stage segment container */
   .fit-bar.fit-bar-large .div-icon {
     pointer-events: none !important;
-    cursor: default !important;
-  }
-
-  /* Prevent stage-detail panel from appearing */
-  .stage-detail-panel,
-  .stage-detail-panel.open {
-    display: none !important;
-    max-height: 0 !important;
-    opacity: 0 !important;
-  }
-
-  /* Suppress the divergence tooltip */
-  #div-tooltip {
-    display: none !important;
   }
 }
 
