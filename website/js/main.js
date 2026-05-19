@@ -676,6 +676,10 @@ function wireModalData(modal) {
     });
 
     stageControllers.push(controller);
+
+    if (segments.length > 0) {
+      void controller.activateStage(0);
+    }
   });
 
   document.addEventListener('keydown', async event => {
