@@ -1,6 +1,25 @@
 #!/usr/bin/env python3
 
-"""Generate website modal data from Turtle subgraphs."""
+"""
+Generate website modal data from Turtle subgraphs.
+
+The script loads each configured .ttl file from graph/subgraphs/ and extracts
+the data needed by the website modal stage interaction:
+- Stage realization labels and realizationDescription text
+- Divergence labels and divergenceRationale text
+- Journey grouping via monomyth:MonomythExpression
+
+For each modal, output is grouped into one or more journeys (for example
+Batman's Bruce Wayne and Jim Gordon journeys), each keyed by stage order.
+
+The resulting JSON is written to website/data/modal_data.json and consumed
+client-side by website/js/main.js, so modal behavior no longer depends on
+runtime Turtle parsing in the browser.
+
+The operation is deterministic and idempotent: running the script multiple
+times produces the same JSON output as long as the source Turtle files do not
+change.
+"""
 
 import json
 import sys
