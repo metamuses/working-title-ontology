@@ -629,12 +629,14 @@ function wireModalData(modal) {
 
   fitBars.forEach((fitBar, fitBarIndex) => {
     const segments = [...fitBar.querySelectorAll('.segment')];
-    normalizeModalFitSection(fitBar.closest('.kg-modal-section'));
+    const section = fitBar.closest('.kg-modal-section');
+    normalizeModalFitSection(section);
     const panel = createDetailPanel(fitBar);
     const controller = {
       activeIndex: null,
       segments,
       panel,
+      section,
       activateStage: null,
     };
 
@@ -681,6 +683,19 @@ function wireModalData(modal) {
       void controller.activateStage(0);
     }
   });
+
+  void (async () => {
+    const data = await loadModalData();
+    const journeys = getModalJourneys(data, modal.id);
+
+    stageControllers.forEach((controller, index) => {
+      const expressionLabel = journeys[index]?.label || journeys[0]?.label;
+      if (!expressionLabel) return;
+
+      const heading = controller.section?.querySelector('h4');
+      if (heading) heading.textContent = expressionLabel;
+    });
+  })();
 
   document.addEventListener('keydown', async event => {
     if (modal.getAttribute('aria-hidden') !== 'false') return;
