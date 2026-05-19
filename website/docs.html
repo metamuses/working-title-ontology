@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Monomyth Ontology</title>
+    <title>Monomyth - Documentation</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -1033,6 +1034,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The first act of the monomyth, in which the hero is called away from the familiar world and, through a series of encounters with refusal, aid, and threshold crossing, commits to the journey that will transform them. Campbell frames departure as a sequence of psychological and narrative events, from the disruption of equilibrium through the call, to the gathering of resolve and resources, to the irreversible crossing that commits the hero to transformation. What follows this act is no longer the hero's old life but a new order of experience.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+                <div class="property-row"><div class="property-label">Act Order</div><div class="property-value">1</div></div>
+
+
+
+
             </div>
         </div>
 
@@ -1046,6 +1052,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The central act of the monomyth, in which the hero undergoes trials, encounters figures of profound power, and achieves the transformation that is the journey's purpose. Initiation occupies the space between threshold crossings: the hero has entered the extraordinary world but has not yet returned. The act's stages trace an arc from ordeal through revelation to the acquisition of the boon that will ultimately be carried back.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+                <div class="property-row"><div class="property-label">Act Order</div><div class="property-value">2</div></div>
+
+
+
+
             </div>
         </div>
 
@@ -1059,6 +1070,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The closing movement of the hero's journey, in which the transformation achieved during initiation must survive contact with the world the hero originally left. Campbell's return stages register the tension between the extraordinary knowledge the hero now carries and the ordinary conditions to which they must reconcile it. The act completes the monomyth's circular structure, restoring the hero to the starting world but in an fundamentally altered state.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Act">Act</a></div></div>
+                <div class="property-row"><div class="property-label">Act Order</div><div class="property-value">3</div></div>
+
+
+
+
             </div>
         </div>
 
@@ -1072,6 +1088,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero receives a summons through a sign, messenger, or sudden rupture in the ordinary world that signals the beginning of a journey toward an as-yet-unknown transformation.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Departure">Departure</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">1</div></div>
+
+
             </div>
         </div>
 
@@ -1085,6 +1106,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Faced with the enormity of the journey ahead, the hero hesitates or outright refuses the summons, revealing the weight of what must be sacrificed to cross into the unknown.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Departure">Departure</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">2</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheCallToAdventure">TheCallToAdventure</a></div></div>
+
             </div>
         </div>
 
@@ -1098,6 +1124,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">A protective figure such as a wizard, crone, ferryman, or divine messenger appears to equip the hero with talismans, wisdom, or assurance before the threshold is crossed.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Departure">Departure</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">3</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#RefusalOfTheCall">RefusalOfTheCall</a></div></div>
+
             </div>
         </div>
 
@@ -1111,6 +1142,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero commits to the adventure and passes beyond the familiar boundary of the known world, entering a sphere of magnified power where the ordinary rules no longer apply.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Departure">Departure</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">4</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#SupernaturalAid">SupernaturalAid</a></div></div>
+
             </div>
         </div>
 
@@ -1124,6 +1160,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero is swallowed into an unknown darkness as a symbolic death of the former self, from which, if survived, a new and transformed identity begins to emerge.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Departure">Departure</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">5</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheCrossingOfTheFirstThreshold">TheCrossingOfTheFirstThreshold</a></div></div>
+
             </div>
         </div>
 
@@ -1137,6 +1178,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero undergoes a series of tests, ordeals, and encounters that progressively strip away illusions and forge the strength, wisdom, and character required for the supreme ordeal ahead.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">6</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheBellyOfTheWhale">TheBellyOfTheWhale</a></div></div>
+
             </div>
         </div>
 
@@ -1150,6 +1196,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero encounters an embodiment of totality in its fullest and most nurturing dimension, whose unconditional love reveals the deepest ground of existence itself.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">7</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheRoadOfTrials">TheRoadOfTrials</a></div></div>
+
             </div>
         </div>
 
@@ -1163,6 +1214,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Confronted with desire, comfort, or worldly attachment, the hero faces a seduction that threatens to arrest the journey and bind consciousness to the transient rather than the transcendent.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">8</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheMeetingWithTheGoddess">TheMeetingWithTheGoddess</a></div></div>
+
             </div>
         </div>
 
@@ -1176,6 +1232,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero confronts the ultimate authority of the inner world in the father-figure who both judges and initiates, and must be annihilated and reborn in the crucible of that encounter.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">9</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#WomanAsTheTemptress">WomanAsTheTemptress</a></div></div>
+
             </div>
         </div>
 
@@ -1189,6 +1250,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Stripped of all ego-bound limitation, the hero achieves a state of divine knowledge or blissful rest beyond all categories of being, dwelling momentarily in the eternal before returning.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">10</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#AtonementWithTheFather">AtonementWithTheFather</a></div></div>
+
             </div>
         </div>
 
@@ -1202,6 +1268,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero attains the supreme goal of the quest in the form of an elixir, grail, fire, or wisdom that holds the power to restore life, fertility, or illumination to the world left behind.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Initiation">Initiation</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">11</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#Apotheosis">Apotheosis</a></div></div>
+
             </div>
         </div>
 
@@ -1215,6 +1286,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Having tasted transcendence or bliss, the hero is reluctant to re-enter the mundane world, clinging to the realm of discovery rather than bearing its fruits back to humanity.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">12</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheUltimateBoon">TheUltimateBoon</a></div></div>
+
             </div>
         </div>
 
@@ -1228,6 +1304,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero escapes from the inner world, sometimes aided and sometimes pursued, navigating a perilous retreat that itself becomes a test of the transformation newly won.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">13</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#RefusalOfTheReturn">RefusalOfTheReturn</a></div></div>
+
             </div>
         </div>
 
@@ -1241,6 +1322,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">When the hero cannot return alone, a guide or community from the ordinary world reaches across the threshold to draw the exhausted or reluctant traveller back into human society.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">14</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheMagicFlight">TheMagicFlight</a></div></div>
+
             </div>
         </div>
 
@@ -1254,6 +1340,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The hero must re-enter the world of common day and find a way to translate the wisdom of the deep experience into terms that a community bound by time and form can receive.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">15</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#RescueFromWithout">RescueFromWithout</a></div></div>
+
             </div>
         </div>
 
@@ -1267,6 +1358,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Having moved freely between the mortal and divine, the hero achieves the equilibrium to hold both realms simultaneously, neither clinging to the transcendent nor enslaved by the mundane.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">16</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#TheCrossingOfTheReturnThreshold">TheCrossingOfTheReturnThreshold</a></div></div>
+
             </div>
         </div>
 
@@ -1280,6 +1376,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">Released from fear of death and attachment to outcome, the hero lives fully in the present moment as a conduit of the life-force who neither clings to nor flees from existence.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Stage">Stage</a></div></div>
+
+                <div class="property-row"><div class="property-label">Belongs To Act</div><div class="property-value"><a href="#Return">Return</a></div></div>
+                <div class="property-row"><div class="property-label">Stage Order</div><div class="property-value">17</div></div>
+                <div class="property-row"><div class="property-label">Follows Stage</div><div class="property-value"><a href="#MasterOfTheTwoWorlds">MasterOfTheTwoWorlds</a></div></div>
+
             </div>
         </div>
 
@@ -1293,6 +1394,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The protagonist who undergoes the journey and transformation.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1306,6 +1412,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The guide or teacher who provides the hero with knowledge, tools, or confidence.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1319,6 +1430,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">A figure who tests the hero at the boundary of a new world or stage.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1332,6 +1448,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The figure or force that announces the call to the adventure.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1345,6 +1466,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">A figure whose loyalty or nature is ambiguous and shifting.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1358,6 +1484,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The antagonist or dark mirror of the hero, representing repressed qualities or external opposition.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1371,6 +1502,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">A figure who provides comic relief, disruption, or catalytic chaos.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1384,6 +1520,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">A companion who supports the hero through the journey.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#Archetype">Archetype</a></div></div>
+
+
+
+
+
             </div>
         </div>
 
@@ -1397,6 +1538,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The narrative maps onto the monomyth stage with precision.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">4</div></div>
             </div>
         </div>
 
@@ -1410,6 +1556,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The narrative clearly manifests the stage with minor variations.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">3</div></div>
             </div>
         </div>
 
@@ -1423,6 +1574,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The stage is recognizable but requires some interpretive reframing.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">2</div></div>
             </div>
         </div>
 
@@ -1436,6 +1592,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The stage is only loosely or partially present.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">1</div></div>
             </div>
         </div>
 
@@ -1449,6 +1610,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The stage is not meaningfully present in the narrative.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">0</div></div>
             </div>
         </div>
 
@@ -1462,6 +1628,11 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell.</p>
             <p class="entity-comment">The stage is present but deliberately reversed or subverted.</p>
             <div class="entity-properties">
                 <div class="property-row"><div class="property-label">Belongs to</div><div class="property-value"><a href="#FitQuality">FitQuality</a></div></div>
+
+
+
+
+                <div class="property-row"><div class="property-label">Fit Score</div><div class="property-value">-1</div></div>
             </div>
         </div>
       </section>
