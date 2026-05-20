@@ -558,7 +558,11 @@ body::before {
 }
 
 .ontology-iri-box {
-  margin-bottom: 120px;
+  margin-bottom: 20px;
+}
+
+.ontology-iri-box + .ontology-iri-box {
+  margin-bottom: 90px;
 }
 
 .ontology-classes-label {
@@ -1710,7 +1714,11 @@ code {
   }
 
   .ontology-iri-box {
-    margin-bottom: 50px;
+    margin-bottom: 16px;
+  }
+
+  .ontology-iri-box + .ontology-iri-box {
+    margin-bottom: 64px;
   }
 
   .kg-grid {
