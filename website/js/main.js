@@ -476,3 +476,296 @@ if (bgCanvas) {
   });
 
 } // end bgCanvas guard
+
+// ── Modal Data Enhancer (JSON-backed) ───────────────────────────────────────
+const MODAL_DATA_PATHS = [
+  '/data/modal_data.json',
+];
+
+const DIVERGENCE_TYPES = [
+  { key: 'sequential', label: 'Sequential Divergence' },
+  { key: 'narrative', label: 'Narrative Divergence' },
+  { key: 'semiotic', label: 'Semiotic Divergence' },
+];
+
+let modalDataCache = null;
+let modalDataPromise = null;
+
+async function loadModalData() {
+  if (modalDataCache) return modalDataCache;
+  if (modalDataPromise) return modalDataPromise;
+
+  modalDataPromise = (async () => {
+    let lastError = null;
+    for (const path of MODAL_DATA_PATHS) {
+      try {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`${response.status}`);
+        const data = await response.json();
+        modalDataCache = data;
+        return data;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+    throw lastError || new Error('Unable to fetch modal data');
+  })().catch(error => {
+    console.warn('[modal-data]', error);
+    return null;
+  });
+
+  return modalDataPromise;
+}
+
+function getModalJourneys(data, modalId) {
+  if (!data || !data[modalId]) return [];
+  const journeys = data[modalId].journeys;
+  return Array.isArray(journeys) ? journeys : [];
+}
+
+function createDetailPanel(fitBar) {
+  const panel = document.createElement('div');
+  panel.className = 'stage-detail-panel';
+  panel.innerHTML = `
+    <div class="stage-detail-inner">
+      <button class="stage-detail-close" aria-label="Close stage detail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div class="stage-detail-kicker"></div>
+      <div class="stage-detail-title"></div>
+      <div class="stage-detail-realizes-stage"></div>
+      <div class="stage-detail-body"></div>
+    </div>
+    <div class="stage-detail-divergences" hidden></div>
+  `;
+  fitBar.parentNode.insertBefore(panel, fitBar.nextSibling);
+  return panel;
+}
+
+function renderStageDivergences(container, stageData) {
+  container.replaceChildren();
+
+  const divergenceItems = DIVERGENCE_TYPES.filter(({ key }) => Boolean(stageData?.[key]));
+  if (!divergenceItems.length) {
+    container.hidden = true;
+    return;
+  }
+
+  divergenceItems.forEach(({ key, label }) => {
+    const divergenceData = stageData[key];
+    const item = document.createElement('article');
+    item.className = 'stage-divergence-item';
+
+    const type = document.createElement('div');
+    type.className = 'stage-divergence-type';
+    type.textContent = label;
+
+    const title = document.createElement('div');
+    title.className = 'stage-divergence-title';
+    title.textContent = divergenceData?.label || label;
+
+    const rationale = document.createElement('div');
+    rationale.className = 'stage-divergence-body';
+    rationale.textContent = divergenceData?.rationale || 'No rationale available.';
+
+    item.append(type, title, rationale);
+    container.appendChild(item);
+  });
+
+  container.hidden = false;
+}
+
+function openDetailPanel(panel, order, total, stageData) {
+  const kicker = panel.querySelector('.stage-detail-kicker');
+  const title = panel.querySelector('.stage-detail-title');
+  const realizesStage = panel.querySelector('.stage-detail-realizes-stage');
+  const body = panel.querySelector('.stage-detail-body');
+  const divergences = panel.querySelector('.stage-detail-divergences');
+
+  kicker.textContent = `Stage ${order} of ${total}`;
+  title.textContent = stageData?.label || `Stage ${order}`;
+  if (stageData?.realizesStageLabel) {
+    realizesStage.textContent = stageData.realizesStageLabel;
+    realizesStage.hidden = false;
+  } else {
+    realizesStage.textContent = '';
+    realizesStage.hidden = true;
+  }
+  body.textContent = stageData?.description || 'No description available for this stage.';
+  renderStageDivergences(divergences, stageData);
+
+  panel.classList.add('open');
+}
+
+function closeDetailPanel(panel, segments) {
+  panel.classList.remove('open');
+  if (segments) segments.forEach(segment => segment.classList.remove('segment-active'));
+}
+
+function normalizeModalFitSection(section) {
+  if (!section || section.dataset.fitSectionNormalized === 'true') return;
+
+  const heading = section.querySelector('h4');
+  const fitLabel = section.querySelector('.fit-label.fit-label-large');
+  if (heading && fitLabel) heading.insertAdjacentElement('afterend', fitLabel);
+
+  const fitDescription = [...section.querySelectorAll('p')].find(
+    paragraph => /^\s*Stage realizations' fit\b/i.test(paragraph.textContent || '')
+  );
+  if (fitDescription) fitDescription.remove();
+
+  section.dataset.fitSectionNormalized = 'true';
+}
+
+function wireModalData(modal) {
+  const fitBars = [...modal.querySelectorAll('.fit-bar.fit-bar-large')];
+  if (!fitBars.length) return;
+
+  // Trigger data fetch once so first interaction is typically warm.
+  loadModalData();
+  const stageControllers = [];
+  let lastActiveController = null;
+
+  fitBars.forEach((fitBar, fitBarIndex) => {
+    const segments = [...fitBar.querySelectorAll('.segment')];
+    const section = fitBar.closest('.kg-modal-section');
+    normalizeModalFitSection(section);
+    const panel = createDetailPanel(fitBar);
+    const controller = {
+      activeIndex: null,
+      segments,
+      panel,
+      section,
+      activateStage: null,
+    };
+
+    panel.querySelector('.stage-detail-close').addEventListener('click', () => {
+      closeDetailPanel(panel, segments);
+      controller.activeIndex = null;
+    });
+
+    controller.activateStage = async (
+      segmentIndex,
+      toggleSame = false,
+      setAsLastActive = true
+    ) => {
+      if (segmentIndex < 0 || segmentIndex >= segments.length) return;
+
+      const stageOrder = segmentIndex + 1;
+      if (
+        toggleSame
+        && controller.activeIndex === segmentIndex
+        && panel.classList.contains('open')
+      ) {
+        closeDetailPanel(panel, segments);
+        controller.activeIndex = null;
+        return;
+      }
+
+      const data = await loadModalData();
+      const journeys = getModalJourneys(data, modal.id);
+      const stageMap = (journeys[fitBarIndex] || journeys[0] || {}).stages || null;
+      const stageData = stageMap ? stageMap[String(stageOrder)] : null;
+
+      segments.forEach(item => item.classList.remove('segment-active'));
+      segments[segmentIndex].classList.add('segment-active');
+      controller.activeIndex = segmentIndex;
+      if (setAsLastActive) lastActiveController = controller;
+      openDetailPanel(panel, stageOrder, segments.length, stageData);
+    };
+
+    segments.forEach((segment, segmentIndex) => {
+      segment.style.cursor = 'pointer';
+      segment.addEventListener('click', async () => {
+        await controller.activateStage(segmentIndex, true);
+      });
+    });
+
+    stageControllers.push(controller);
+
+    if (segments.length > 0) {
+      void controller.activateStage(0, false, false);
+    }
+  });
+
+  void (async () => {
+    const data = await loadModalData();
+    const journeys = getModalJourneys(data, modal.id);
+
+    stageControllers.forEach((controller, index) => {
+      const expressionLabel = journeys[index]?.label || journeys[0]?.label;
+      if (!expressionLabel) return;
+
+      const heading = controller.section?.querySelector('h4');
+      if (heading) heading.textContent = expressionLabel;
+    });
+  })();
+
+  document.addEventListener('keydown', async event => {
+    if (modal.getAttribute('aria-hidden') !== 'false') return;
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+
+    const targetTag = event.target?.tagName?.toLowerCase();
+    if (
+      targetTag === 'input'
+      || targetTag === 'textarea'
+      || targetTag === 'select'
+      || event.target?.isContentEditable
+    ) {
+      return;
+    }
+
+    if (!stageControllers.length) return;
+    event.preventDefault();
+
+    const currentController = (
+      lastActiveController
+      && lastActiveController.activeIndex !== null
+      && lastActiveController.panel.classList.contains('open')
+    )
+      ? lastActiveController
+      : (
+        stageControllers.find(
+          item => item.activeIndex !== null && item.panel.classList.contains('open')
+        ) || stageControllers[0]
+      );
+
+    if (currentController.activeIndex === null) {
+      if (event.key === 'ArrowRight') {
+        await currentController.activateStage(0, false, true);
+      } else {
+        await currentController.activateStage(
+          currentController.segments.length - 1,
+          false,
+          true
+        );
+      }
+      return;
+    }
+
+    const delta = event.key === 'ArrowRight' ? 1 : -1;
+    const nextIndex = Math.max(
+      0,
+      Math.min(currentController.activeIndex + delta, currentController.segments.length - 1)
+    );
+    await currentController.activateStage(nextIndex, false, true);
+  });
+}
+
+function initModalDataEnhancer() {
+  const modals = [...document.querySelectorAll('.kg-modal')];
+  if (!modals.length) return;
+
+  modals.forEach(modal => {
+    const observer = new MutationObserver(() => {
+      if (modal.getAttribute('aria-hidden') !== 'false') return;
+      wireModalData(modal);
+      observer.disconnect();
+    });
+    observer.observe(modal, { attributes: true });
+  });
+}
+
+initModalDataEnhancer();
