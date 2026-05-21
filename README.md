@@ -49,7 +49,7 @@ requires nuance rather than simple classification.
 
 ![Monomyth Ontology Graffoo](https://raw.githubusercontent.com/metamuses/monomyth/refs/heads/main/graffoo/ontology.png)
 
-## Knowledge graphs
+## Knowledge Graph
 
 The repository also includes example knowledge graphs that apply the ontology to
 specific narrative works. Each graph uses the monomyth framework to describe how

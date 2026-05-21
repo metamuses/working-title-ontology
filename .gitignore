@@ -90,5 +90,6 @@ venv.bak/
 .vscode/
 
 # ===== PROJECT =====================
+catalog-v*.xml
 ontology/v*
 graph/v*

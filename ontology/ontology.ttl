@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://monomyth.metamuses.org/ontology> a owl:Ontology ;
@@ -14,14 +15,21 @@ concepts based on "The Hero with a Thousand Faces" by Joseph Campbell."""@en ;
         "Nicol D'Amelio",
         "Maryam Dadrasrazi",
         "Martina Uccheddu" ;
-    owl:versionInfo "1.0" ;
-    owl:versionIRI <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
+    owl:versionInfo "1.1" ;
+    owl:versionIRI <https://monomyth.metamuses.org/1.1/ontology.ttl> ;
+    owl:priorVersion <https://monomyth.metamuses.org/1.0/ontology.ttl> ;
+    vann:preferredNamespacePrefix "monomyth" ;
+    vann:preferredNamespaceUri "https://monomyth.metamuses.org/ontology#" ;
+    vann:example <https://monomyth.metamuses.org/graph/> ;
+    vann:changes <https://github.com/metamuses/monomyth/releases/tag/v1.1> ;
     dcterms:created "2026-05-13"^^xsd:date ;
-    dcterms:modified "2026-05-13"^^xsd:date ;
+    dcterms:modified "2026-05-21"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:seeAlso <https://monomyth.metamuses.org>,
+        <https://monomyth.metamuses.org/docs>,
         <https://github.com/metamuses/monomyth> .
+
 
 # ==============================================================================
 # CLASSES
@@ -251,6 +259,7 @@ speaks."""@en ;
         monomyth:NarrativeDivergence,
         monomyth:SequentialDivergence .
 
+
 # ==============================================================================
 # OBJECT PROPERTIES
 # ==============================================================================
@@ -398,6 +407,7 @@ monomyth:divergenceOf a owl:ObjectProperty ;
     rdfs:domain creon:ProductDivergence ;
     rdfs:range monomyth:StageRealization .
 
+
 # ==============================================================================
 # DATA PROPERTIES
 # ==============================================================================
@@ -492,6 +502,7 @@ behind a divergence from the monomyth template. Complements a fit note on a stag
 focusing specifically on the motivation for the departure."""@en ;
     rdfs:domain creon:ProductDivergence ;
     rdfs:range rdfs:Literal .
+
 
 # ==============================================================================
 # NAMED INDIVIDUALS

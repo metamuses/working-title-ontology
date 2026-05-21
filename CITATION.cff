@@ -1,0 +1,75 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  The Monomyth Ontology: a formal OWL vocabulary for
+  Campbell's Hero's Journey
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Tommaso
+    family-names: Barbato
+    email: tommaso.barbato@studio.unibo.it
+    affiliation: University of Bologna
+    orcid: 'https://orcid.org/0009-0007-0093-4304'
+  - given-names: Nicol
+    family-names: D'Amelio
+    email: nicol.damelio@studio.unibo.it
+    affiliation: University of Bologna
+    orcid: 'https://orcid.org/0009-0004-8197-6255'
+  - given-names: Maryam
+    family-names: Dadrasrazi
+    email: maryam.dadrasrazi@studio.unibo.it
+    affiliation: University of Bologna
+    orcid: 'https://orcid.org/0009-0005-9585-5662'
+  - given-names: Martina
+    family-names: Uccheddu
+    email: martina.uccheddu@studio.unibo.it
+    orcid: 'https://orcid.org/0009-0009-7090-3823'
+    affiliation: University of Bologna
+repository-code: 'https://github.com/metamuses/monomyth/'
+url: 'https://monomyth.metamuses.org'
+abstract: >-
+  Joseph Campbell's monomyth, the cyclical pattern of
+  departure, initiation, and return articulated in The Hero
+  with a Thousand Faces (1949), claims that a single
+  narrative grammar underlies heroic myths across cultures,
+  periods, and media. Yet the framework's analytical value
+  lies less in the stories that conform to it than in those
+  that resist, compress, invert, or displace its stages: the
+  most revealing readings emerge precisely where the fit is
+  imperfect. The Monomyth OWL ontology formalizes this
+  insight by treating divergence from the monomyth template
+  not as noise but as constitutive: it models the seventeen
+  canonical stages across three acts, eight archetypal
+  character roles drawn from Christopher Vogler's
+  dramaturgical adaptation, and a six-point fit quality
+  scale ranging from perfect alignment to deliberate
+  inversion. Three orthogonal divergence classes (narrative,
+  sequential, and semiotic) capture what changes when a
+  stage is absent or subverted, when it occurs out of its
+  expected order, and when the signs through which it is
+  expressed shift from the sacred to the secular, from the
+  external to the internal, or from one cultural vocabulary
+  to another. The interpretive act of reading a narrative
+  through Campbell's lens is reified as a structured,
+  queryable entity that anchors every analytical judgment
+  to the specific narrative moment it describes, turning
+  the relationship between an individual story and a
+  theoretical model of storytelling into a first-class
+  knowledge engineering object. An accompanying knowledge
+  graph instantiates the ontology across twelve works
+  spanning from Sophocles to modern cinema and videogames.
+keywords:
+  - monomyth
+  - hero's journey
+  - ontology
+  - Joseph Campbell
+  - OWL
+  - computational narratology
+license: CC-BY-4.0
+version: '1.1'
+date-released: '2026-05-21'

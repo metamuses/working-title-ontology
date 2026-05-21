@@ -9,7 +9,8 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://monomyth.metamuses.org/graph/> a void:Dataset ;
+<https://monomyth.metamuses.org/graph/> a owl:Ontology,
+        void:Dataset ;
     dcterms:title "The Monomyth Knowledge Graph"@en ;
     dcterms:description """A dataset representing the monomyth structure as it is realized in
 various narrative works across different time periods, cultures, and media."""@en ;
@@ -17,11 +18,16 @@ various narrative works across different time periods, cultures, and media."""@e
         "Nicol D'Amelio",
         "Maryam Dadrasrazi",
         "Martina Uccheddu" ;
-    dcterms:conformsTo <https://monomyth.metamuses.org/ontology> ;
+    owl:imports <https://monomyth.metamuses.org/1.1/ontology.ttl> ;
+    owl:versionInfo "1.1" ;
+    owl:versionIRI <https://monomyth.metamuses.org/1.1/graph.ttl> ;
+    owl:priorVersion <https://monomyth.metamuses.org/1.0/graph.ttl> ;
     void:vocabulary <https://monomyth.metamuses.org/ontology> ;
-    void:dataDump <https://monomyth.metamuses.org/1.0/graph.ttl> ;
+    void:dataDump <https://monomyth.metamuses.org/1.1/graph.ttl> ;
+    void:sparqlEndpoint <https://monomyth.metamuses.org/sparql> ;
+    void:uriSpace "https://monomyth.metamuses.org/graph/" ;
     dcterms:created "2026-05-13"^^xsd:date ;
-    dcterms:modified "2026-05-13"^^xsd:date ;
+    dcterms:modified "2026-05-21"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:publisher <https://github.com/metamuses> ;
     rdfs:seeAlso <https://monomyth.metamuses.org>,
